@@ -1,2 +1,4 @@
 aiohttp==3.8.5
 python-dotenv==1.0.0
+pytest-asyncio
+pytest
