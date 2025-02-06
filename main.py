@@ -7,10 +7,10 @@ import logging
 from dotenv import load_dotenv
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
+from exchanges.bitget import BitgetExchange
+from exchanges.bitstamp import BitstampExchange
 
-# Wczytujemy zmienne środowiskowe z pliku .env
 load_dotenv()
-
 logging.basicConfig(level=logging.INFO)
 
 async def get_common_pairs(exchange1, exchange2, session: aiohttp.ClientSession):
@@ -21,47 +21,42 @@ async def get_common_pairs(exchange1, exchange2, session: aiohttp.ClientSession)
 
 async def main():
     async with aiohttp.ClientSession() as session:
-        # Tworzymy instancje giełd z użyciem kluczy API pobranych ze zmiennych środowiskowych
-        binance = BinanceExchange(
-            api_key=os.getenv("BINANCE_API_KEY"),
-            secret=os.getenv("BINANCE_SECRET")
-        )
-        kucoin = KucoinExchange(
-            api_key=os.getenv("KUCOIN_API_KEY"),
-            secret=os.getenv("KUCOIN_SECRET")
-        )
+        # Tworzymy instancje giełd – pobieramy klucze API z .env, jeśli są wymagane
+        binance = BinanceExchange(api_key=os.getenv("BINANCE_API_KEY"), secret=os.getenv("BINANCE_SECRET"))
+        kucoin = KucoinExchange(api_key=os.getenv("KUCOIN_API_KEY"), secret=os.getenv("KUCOIN_SECRET"))
+        bitget = BitgetExchange(api_key=os.getenv("BITGET_API_KEY"), secret=os.getenv("BITGET_SECRET"))
+        bitstamp = BitstampExchange(api_key=os.getenv("BITSTAMP_API_KEY"), secret=os.getenv("BITSTAMP_SECRET"))
+        
+        # Przykład: wyznaczamy wspólne pary między Bitget a Bitstamp
+        common_pairs = await get_common_pairs(bitget, bitstamp, session)
+        logging.info(f"Wspólne pary między Bitget a Bitstamp: {common_pairs}")
 
-        # Wyznaczamy wspólne pary pomiędzy giełdami
-        common_pairs = await get_common_pairs(binance, kucoin, session)
-        logging.info(f"Wspólne pary między Binance a Kucoin: {common_pairs}")
-
+        # Dla każdej wspólnej pary pobieramy ceny i porównujemy je
         arbitrage_opportunities = []
-        # Dla każdej wspólnej pary pobieramy ceny i sprawdzamy, czy występuje okazja arbitrażowa
         for pair in common_pairs:
-            price_binance = await binance.get_price(pair, session)
-            price_kucoin = await kucoin.get_price(pair, session)
-            if price_binance is None or price_kucoin is None:
+            price_bitget = await bitget.get_price(pair, session)
+            price_bitstamp = await bitstamp.get_price(pair, session)
+            if price_bitget is None or price_bitstamp is None:
                 continue
 
-            # Obliczamy różnicę procentową
-            if price_binance < price_kucoin:
-                diff = ((price_kucoin - price_binance) / price_binance) * 100
+            if price_bitget < price_bitstamp:
+                diff = ((price_bitstamp - price_bitget) / price_bitget) * 100
                 arbitrage_opportunities.append({
                     "pair": pair,
-                    "buy": "Binance",
-                    "sell": "Kucoin",
-                    "price_buy": price_binance,
-                    "price_sell": price_kucoin,
+                    "buy": "Bitget",
+                    "sell": "Bitstamp",
+                    "price_buy": price_bitget,
+                    "price_sell": price_bitstamp,
                     "difference_percent": diff
                 })
-            elif price_kucoin < price_binance:
-                diff = ((price_binance - price_kucoin) / price_kucoin) * 100
+            elif price_bitstamp < price_bitget:
+                diff = ((price_bitget - price_bitstamp) / price_bitstamp) * 100
                 arbitrage_opportunities.append({
                     "pair": pair,
-                    "buy": "Kucoin",
-                    "sell": "Binance",
-                    "price_buy": price_kucoin,
-                    "price_sell": price_binance,
+                    "buy": "Bitstamp",
+                    "sell": "Bitget",
+                    "price_buy": price_bitstamp,
+                    "price_sell": price_bitget,
                     "difference_percent": diff
                 })
         
