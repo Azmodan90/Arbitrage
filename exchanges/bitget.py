@@ -1,5 +1,3 @@
-# exchanges/bitget.py
-
 import aiohttp
 import logging
 from .exchange import Exchange

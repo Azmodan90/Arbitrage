@@ -1,5 +1,3 @@
-# exchanges/binance.py
-
 import aiohttp
 import logging
 from .exchange import Exchange
@@ -10,7 +8,6 @@ class BinanceExchange(Exchange):
         try:
             async with session.get(url) as response:
                 data = await response.json()
-                # Pobieramy tylko pary, które są aktywne (status "TRADING")
                 pairs = [symbol['symbol'] for symbol in data.get("symbols", []) if symbol.get("status") == "TRADING"]
                 logging.info(f"Binance trading pairs: {pairs}")
                 return pairs

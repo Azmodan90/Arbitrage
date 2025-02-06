@@ -1,12 +1,10 @@
-# exchanges/exchange.py
-
 from abc import ABC, abstractmethod
 import aiohttp
 
 class Exchange(ABC):
     """
     Abstrakcyjna klasa reprezentująca interfejs giełdy.
-    Wszystkie konkretne implementacje (np. Binance, Bitget, Bitstamp)
+    Wszystkie konkretne implementacje (np. Binance, Bitget, Bitstamp, Kucoin)
     powinny dziedziczyć po tej klasie i implementować poniższe metody.
     """
     def __init__(self, api_key: str = None, secret: str = None):

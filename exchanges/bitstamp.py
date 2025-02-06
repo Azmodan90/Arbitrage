@@ -1,5 +1,3 @@
-# exchanges/bitstamp.py
-
 import aiohttp
 import logging
 from .exchange import Exchange
