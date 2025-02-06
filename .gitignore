@@ -1,0 +1,8 @@
+# Ignoruj plik konfiguracyjny z kluczami API
+.env
+
+# Przykładowo, ignoruj katalog z wirtualnym środowiskiem
+venv/
+
+# Inne pliki tymczasowe lub logi
+*.log

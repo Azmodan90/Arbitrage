@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"  # jeśli Twoja aplikacja korzysta z jakiegoś portu
+    environment:
+      - ENV_VAR=wartosc

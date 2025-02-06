@@ -1,0 +1,16 @@
+# .devcontainer/Dockerfile
+
+FROM python:3.11-slim
+
+# Instalujemy dodatkowe narzędzia, jeśli potrzebne
+RUN apt-get update && apt-get install -y gcc
+
+# Ustawiamy katalog roboczy
+WORKDIR /workspace
+
+# Instalujemy zależności
+COPY ../requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Kopiujemy resztę kodu (opcjonalnie, można też używać woluminów)
+COPY .. .
