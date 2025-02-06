@@ -6,26 +6,18 @@ import aiohttp
 class Exchange(ABC):
     """
     Abstrakcyjna klasa reprezentująca interfejs giełdy.
-    Wszystkie konkretne implementacje (np. Binance, Bitget, Bitstamp) powinny
-    dziedziczyć po tej klasie i implementować poniższe metody.
+    Wszystkie konkretne implementacje (np. Binance, Bitget, Bitstamp)
+    powinny dziedziczyć po tej klasie i implementować poniższe metody.
     """
-
-    def __init__(self, api_key: str, secret: str):
-        """
-        Inicjalizuje instancję giełdy z danymi uwierzytelniającymi.
-
-        :param api_key: Klucz API, używany do autoryzacji.
-        :param secret: Tajny klucz API.
-        """
+    def __init__(self, api_key: str = None, secret: str = None):
         self.api_key = api_key
         self.secret = secret
 
     @abstractmethod
     async def get_trading_pairs(self, session: aiohttp.ClientSession):
         """
-        Pobiera listę dostępnych par lub aktywów z giełdy.
-
-        :param session: Sesja aiohttp, używana do wykonywania zapytań HTTP.
+        Pobiera listę dostępnych par/aktywow z giełdy.
+        :param session: Sesja aiohttp do wykonywania zapytań HTTP.
         :return: Lista symboli par, np. ["BTCUSDT", "ETHUSDT", ...]
         """
         pass
@@ -34,9 +26,8 @@ class Exchange(ABC):
     async def get_price(self, pair: str, session: aiohttp.ClientSession):
         """
         Pobiera bieżącą cenę dla podanej pary.
-
         :param pair: Symbol lub para aktywów, np. "BTCUSDT".
-        :param session: Sesja aiohttp, używana do wykonywania zapytań HTTP.
+        :param session: Sesja aiohttp do wykonywania zapytań HTTP.
         :return: Cena aktywa jako liczba zmiennoprzecinkowa.
         """
         pass

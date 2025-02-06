@@ -10,8 +10,9 @@ class BinanceExchange(Exchange):
         try:
             async with session.get(url) as response:
                 data = await response.json()
-                # Pobieramy listę symboli, np. "BTCUSDT", "ETHUSDT", itp.
-                pairs = [symbol['symbol'] for symbol in data.get("symbols", [])]
+                # Pobieramy tylko pary, które są aktywne (status "TRADING")
+                pairs = [symbol['symbol'] for symbol in data.get("symbols", []) if symbol.get("status") == "TRADING"]
+                logging.info(f"Binance trading pairs: {pairs}")
                 return pairs
         except Exception as e:
             logging.error(f"Binance get_trading_pairs error: {e}")
@@ -23,6 +24,7 @@ class BinanceExchange(Exchange):
             async with session.get(url) as response:
                 data = await response.json()
                 price = float(data.get("price", 0))
+                logging.info(f"Binance price for {pair}: {price}")
                 return price
         except Exception as e:
             logging.error(f"Binance get_price error for {pair}: {e}")
