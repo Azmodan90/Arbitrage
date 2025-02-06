@@ -29,7 +29,7 @@ def normalize_symbol(symbol: str, exchange_name: str) -> str:
     symbol = symbol.upper()
     if exchange_name == "BitgetExchange":
         if symbol.endswith("_SPBL"):
-            symbol = symbol[:-5]
+            symbol = symbol[:-5]  # usuwa 5 znaków: "_SPBL"
     elif exchange_name == "KucoinExchange":
         symbol = symbol.replace("-", "")
     return symbol
@@ -37,7 +37,7 @@ def normalize_symbol(symbol: str, exchange_name: str) -> str:
 def calculate_difference(price1: float, price2: float) -> float:
     """
     Oblicza procentową różnicę między dwiema cenami względem niższej z nich.
-    Jeśli któraś cena wynosi 0, zwraca 0.0 i loguje błąd.
+    Jeśli któraś cena wynosi 0, loguje błąd i zwraca 0.0.
     """
     if price1 == 0 or price2 == 0:
         logging.error("Jedna z cen wynosi 0, pomijam obliczenia różnicy.")
@@ -89,7 +89,7 @@ async def main():
                 continue
 
             diff = calculate_difference(price_bitget, price_bitstamp)
-            if diff >= 1.0:
+            if diff >= 1.0:  # Próg 1%
                 if price_bitget < price_bitstamp:
                     arbitrage_opportunities.append({
                         "pair": norm,
