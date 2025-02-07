@@ -1,5 +1,3 @@
-# create_common_pairs.py
-
 import os
 import asyncio
 import aiohttp
@@ -49,9 +47,9 @@ async def create_all_common_pairs():
             logging.info(f"Przetwarzanie konfiguracji: {name1} - {name2}")
             pairs1 = trading_pairs_cache.get(name1, [])
             pairs2 = trading_pairs_cache.get(name2, [])
-            # TWÓRCIE MAPOWANIE: klucz to znormalizowany symbol, wartość to oryginalny symbol
-            mapping1 = {normalize_symbol(sym, name1): sym for sym in pairs1}
-            mapping2 = {normalize_symbol(sym, name2): sym for sym in pairs2}
+            # Mapowanie: znormalizowany symbol -> już oczyszczony symbol (używamy normalize_symbol dla obu giełd)
+            mapping1 = {normalize_symbol(sym, name1): normalize_symbol(sym, name1) for sym in pairs1}
+            mapping2 = {normalize_symbol(sym, name2): normalize_symbol(sym, name2) for sym in pairs2}
             # Obliczamy wspólne (znormalizowane) symbole
             common_norm = set(mapping1.keys()) & set(mapping2.keys())
             common_list = [(mapping1[norm], mapping2[norm], norm) for norm in common_norm]

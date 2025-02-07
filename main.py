@@ -5,7 +5,7 @@ import logging
 import json
 import itertools
 from dotenv import load_dotenv
-from create_common_pairs import create_all_common_pairs  # Import funkcji do tworzenia wspólnych par
+from create_common_pairs import create_all_common_pairs  # Import funkcji tworzenia wspólnych par
 from exchanges.binance import BinanceExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
@@ -13,17 +13,33 @@ from exchanges.kucoin import KucoinExchange
 # from exchanges.coinbase import CoinbaseExchange  # opcjonalnie
 from utils import normalize_symbol
 
-# Konfiguracja logowania – logi trafiają do konsoli oraz do pliku "app.log"
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler("app.log", encoding="utf-8")
-    ]
-)
-
+# Ładujemy zmienne środowiskowe
 load_dotenv()
+
+# Konfiguracja logowania:
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+# Handler logujący do konsoli
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+console_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+console_handler.setFormatter(console_formatter)
+logger.addHandler(console_handler)
+
+# Handler logujący wszystkie logi do pliku app.log
+file_handler = logging.FileHandler("app.log", encoding="utf-8")
+file_handler.setLevel(logging.INFO)
+file_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
+
+# Handler logujący wyłącznie błędy (ERROR i CRITICAL) do pliku error.log
+error_handler = logging.FileHandler("error.log", encoding="utf-8")
+error_handler.setLevel(logging.ERROR)
+error_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+error_handler.setFormatter(error_formatter)
+logger.addHandler(error_handler)
 
 # Mapowanie dostępnych giełd: klucz -> (nazwa, instancja)
 EXCHANGE_OPTIONS = {
@@ -41,21 +57,11 @@ def get_exchange_instance_by_name(name: str):
             return instance
     return None
 
-# Pomocnicza funkcja, która równolegle pobiera ceny dla jednej pary
-async def fetch_price_task(buy_exchange: str, sell_exchange: str, normalized: str,
-                             source_sym: str, dest_sym: str,
-                             current_instance, dest_instance, session: aiohttp.ClientSession):
-    price_source = await current_instance.get_price(source_sym, session)
-    price_dest = await dest_instance.get_price(dest_sym, session)
-    return (normalized, price_source, price_dest, buy_exchange, sell_exchange)
-
 async def simulate_arbitrage_from_common():
     """
     Symulacja arbitrażu przy użyciu listy wspólnych par zapisanej w pliku 'common_pairs_all.json'.
     Użytkownik wybiera giełdę źródłową (gdzie posiada środki), podaje dostępne środki oraz minimalny zysk.
     Następnie program przeszukuje konfiguracje i (symuluje) transakcje, aktualizując stan środków.
-    Zamiast pobierać ceny sekwencyjnie, dla każdej konfiguracji tworzona jest lista zadań, które są
-    uruchamiane równolegle.
     """
     filename = "common_pairs_all.json"
     if not os.path.exists(filename):
@@ -93,54 +99,56 @@ async def simulate_arbitrage_from_common():
 
     async with aiohttp.ClientSession() as session:
         while True:
-            tasks = []
+            opportunities = []
             # Przeglądamy wszystkie konfiguracje, w których występuje bieżąca giełda
             for config_key, pairs in common_pairs_all.items():
                 if current_exchange_name not in config_key:
                     continue
                 parts = config_key.split("-")
                 if parts[0] == current_exchange_name:
-                    # Obecna giełda jako pierwsza – docelowa to parts[1]
                     dest_name = parts[1]
-                    dest_instance = get_exchange_instance_by_name(dest_name)
                     for tup in pairs:
-                        source_sym = tup[0]  # już znormalizowany symbol dla bieżącej giełdy
-                        dest_sym = tup[1]    # już znormalizowany symbol dla docelowej giełdy
+                        source_sym = tup[0]  # symbole już oczyszczone (znormalizowane)
+                        dest_sym = tup[1]
                         normalized = tup[2]
-                        tasks.append(fetch_price_task(current_exchange_name, dest_name, normalized,
-                                                       source_sym, dest_sym,
-                                                       current_instance, dest_instance, session))
+                        price_source = await current_instance.get_price(source_sym, session)
+                        dest_instance = get_exchange_instance_by_name(dest_name)
+                        price_dest = await dest_instance.get_price(dest_sym, session)
+                        if price_source is None or price_dest is None:
+                            continue
+                        if price_source < price_dest:
+                            profit = funds * ((price_dest / price_source) - 1)
+                            if profit >= min_profit:
+                                opportunities.append({
+                                    "asset": normalized,
+                                    "buy_exchange": current_exchange_name,
+                                    "sell_exchange": dest_name,
+                                    "price_buy": price_source,
+                                    "price_sell": price_dest,
+                                    "profit": profit,
+                                })
                 elif parts[1] == current_exchange_name:
-                    # Obecna giełda jako druga – docelowa to parts[0]
                     dest_name = parts[0]
-                    dest_instance = get_exchange_instance_by_name(dest_name)
                     for tup in pairs:
-                        source_sym = tup[1]  # dla bieżącej giełdy (drugiej) używamy drugiego symbolu
+                        source_sym = tup[1]
                         dest_sym = tup[0]
                         normalized = tup[2]
-                        tasks.append(fetch_price_task(current_exchange_name, dest_name, normalized,
-                                                       source_sym, dest_sym,
-                                                       current_instance, dest_instance, session))
-            # Uruchamiamy wszystkie zadania równolegle
-            results = await asyncio.gather(*tasks, return_exceptions=True)
-            opportunities = []
-            for result in results:
-                if isinstance(result, Exception):
-                    continue
-                normalized, price_source, price_dest, buy_exchange, sell_exchange = result
-                if price_source is None or price_dest is None or price_source == 0 or price_dest == 0:
-                    continue
-                if price_source < price_dest:
-                    profit = funds * ((price_dest / price_source) - 1)
-                    if profit >= min_profit:
-                        opportunities.append({
-                            "asset": normalized,
-                            "buy_exchange": buy_exchange,
-                            "sell_exchange": sell_exchange,
-                            "price_buy": price_source,
-                            "price_sell": price_dest,
-                            "profit": profit,
-                        })
+                        price_source = await current_instance.get_price(source_sym, session)
+                        dest_instance = get_exchange_instance_by_name(dest_name)
+                        price_dest = await dest_instance.get_price(dest_sym, session)
+                        if price_source is None or price_dest is None:
+                            continue
+                        if price_source < price_dest:
+                            profit = funds * ((price_dest / price_source) - 1)
+                            if profit >= min_profit:
+                                opportunities.append({
+                                    "asset": normalized,
+                                    "buy_exchange": current_exchange_name,
+                                    "sell_exchange": dest_name,
+                                    "price_buy": price_source,
+                                    "price_sell": price_dest,
+                                    "profit": profit,
+                                })
             if opportunities:
                 best = max(opportunities, key=lambda x: x["profit"])
                 print("\nZnaleziono okazję arbitrażową:")
@@ -148,10 +156,8 @@ async def simulate_arbitrage_from_common():
                 print(f"  Kup na {best['buy_exchange']} po {best['price_buy']}")
                 print(f"  Sprzedaj na {best['sell_exchange']} po {best['price_sell']}")
                 print(f"  Szacowany zysk: {best['profit']:.2f}")
-                # Zakładamy wykorzystanie całej kwoty
                 funds = funds * (best["price_sell"] / best["price_buy"])
                 print(f"Transakcja przeprowadzona. Nowa kwota środków: {funds:.2f}")
-                # Aktualizacja – środki przechodzą na giełdę docelową
                 current_exchange_name = best["sell_exchange"]
                 current_instance = get_exchange_instance_by_name(current_exchange_name)
             else:
