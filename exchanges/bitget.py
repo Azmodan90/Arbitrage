@@ -38,11 +38,7 @@ class BitgetExchange(Exchange):
         Pobiera bieżącą cenę dla podanej pary z Bitget.
         Używamy endpointu:
           GET /api/spot/v1/market/ticker?symbol=<pair>
-        Jeśli API nie zwróci pola "last", to używamy pola "close".
         """
-        # Upewnij się, że symbol ma sufiks _SPBL – jeśli nie, dopisz go
-        if not pair.endswith("_SPBL"):
-            pair = f"{pair}_SPBL"
         url = f"{self.BASE_URL}/api/spot/v1/market/ticker?symbol={pair}"
         try:
             async with session.get(url) as response:
@@ -53,13 +49,16 @@ class BitgetExchange(Exchange):
                 if data.get("code") != "00000":
                     logging.error(f"Bitget get_price API error: {data.get('msg')} for {pair}")
                     return 0.0
-                data_field = data.get("data", {})
-                # Jeśli nie ma pola "last", spróbuj użyć pola "close"
-                price_str = data_field.get("last") or data_field.get("close")
+                # Próba pobrania ceny z pola "last"; jeśli brak – używamy "close"
+                price_str = data.get("data", {}).get("last")
                 if price_str is None:
-                    logging.error(f"Bitget get_price: brak pola 'last' lub 'close' dla {pair}. Pełna odpowiedź: {data}")
+                    price_str = data.get("data", {}).get("close")
+                if price_str is None:
+                    logging.error(f"Bitget get_price: brak ceny ('last' ani 'close') dla {pair}")
                     return 0.0
-                return float(price_str)
+                price = float(price_str)
+                logging.info(f"Bitget price for {pair}: {price}")
+                return price
         except Exception as e:
             logging.exception(f"Bitget get_price exception for {pair}: {e}")
             return 0.0

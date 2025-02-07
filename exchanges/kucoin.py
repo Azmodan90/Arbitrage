@@ -1,7 +1,8 @@
 # exchanges/kucoin.py
+
 import aiohttp
 import logging
-from .exchange import Exchange
+from exchanges.exchange import Exchange
 
 class KucoinExchange(Exchange):
     BASE_URL = "https://api.kucoin.com"
@@ -15,7 +16,7 @@ class KucoinExchange(Exchange):
                     return []
                 data = await response.json()
                 symbols = data.get("data", [])
-                # Zamiast 'trading' sprawdzamy, czy 'enableTrading' jest True.
+                # Usuń myślniki z symboli
                 pairs = [item["symbol"].replace("-", "") for item in symbols if item.get("enableTrading", False)]
                 logging.info(f"Kucoin trading pairs: {pairs}")
                 return pairs
@@ -39,8 +40,15 @@ class KucoinExchange(Exchange):
                     logging.error(f"Kucoin get_price HTTP error: {response.status} for {pair_formatted}")
                     return None
                 data = await response.json()
+                if data is None or data.get("data") is None:
+                    logging.error(f"Kucoin get_price error for {pair_formatted}: brak danych. Pełna odpowiedź: {data}")
+                    return None
                 price_str = data.get("data", {}).get("price", "0")
-                price = float(price_str)
+                try:
+                    price = float(price_str)
+                except ValueError:
+                    logging.error(f"Kucoin get_price error for {pair_formatted}: nieprawidłowa cena {price_str}")
+                    return None
                 logging.info(f"Kucoin price for {pair_formatted}: {price}")
                 return price
         except Exception as e:
