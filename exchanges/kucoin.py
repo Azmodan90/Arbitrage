@@ -15,8 +15,8 @@ class KucoinExchange(Exchange):
                     return []
                 data = await response.json()
                 symbols = data.get("data", [])
-                # Usuń myślniki – zakładamy, że chcemy np. BTCUSDT
-                pairs = [item["symbol"].replace("-", "") for item in symbols if item.get("trading", False)]
+                # Zamiast 'trading' sprawdzamy, czy 'enableTrading' jest True.
+                pairs = [item["symbol"].replace("-", "") for item in symbols if item.get("enableTrading", False)]
                 logging.info(f"Kucoin trading pairs: {pairs}")
                 return pairs
         except Exception as e:
@@ -24,7 +24,7 @@ class KucoinExchange(Exchange):
             return []
 
     async def get_price(self, pair: str, session: aiohttp.ClientSession):
-        # Jeśli symbol nie zawiera myślnika, zakładamy format np. BTCUSDT i wstawiamy myślnik
+        # Jeśli symbol nie zawiera myślnika, zakładamy format np. BTCUSDT i wstawiamy myślnik.
         if "-" not in pair:
             base = pair[:3]
             quote = pair[3:]
