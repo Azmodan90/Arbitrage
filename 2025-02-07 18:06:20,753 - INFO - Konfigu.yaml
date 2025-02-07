@@ -24,3 +24,19 @@
 2025-02-07 18:30:00,248 - INFO - Konfiguracja BitgetExchange-KucoinExchange: znaleziono 531 wspólnych par.
 2025-02-07 18:30:00,249 - INFO - Przetwarzanie konfiguracji: BitstampExchange - KucoinExchange
 2025-02-07 18:30:00,266 - INFO - Konfiguracja BitstampExchange-KucoinExchange: znaleziono 20 wspólnych par.
+
+
+
+
+2025-02-07 19:37:14,307 - INFO - Przetwarzanie konfiguracji: BinanceExchange - BitgetExchange
+2025-02-07 19:37:14,328 - INFO - Konfiguracja BinanceExchange-BitgetExchange: znaleziono 391 wspólnych par.
+2025-02-07 19:37:14,330 - INFO - Przetwarzanie konfiguracji: BinanceExchange - BitstampExchange
+2025-02-07 19:37:14,343 - INFO - Konfiguracja BinanceExchange-BitstampExchange: znaleziono 40 wspólnych par.
+2025-02-07 19:37:14,345 - INFO - Przetwarzanie konfiguracji: BinanceExchange - KucoinExchange
+2025-02-07 19:37:14,382 - INFO - Konfiguracja BinanceExchange-KucoinExchange: znaleziono 437 wspólnych par.
+2025-02-07 19:37:14,383 - INFO - Przetwarzanie konfiguracji: BitgetExchange - BitstampExchange
+2025-02-07 19:37:14,397 - INFO - Konfiguracja BitgetExchange-BitstampExchange: znaleziono 28 wspólnych par.
+2025-02-07 19:37:14,399 - INFO - Przetwarzanie konfiguracji: BitgetExchange - KucoinExchange
+2025-02-07 19:37:14,423 - INFO - Konfiguracja BitgetExchange-KucoinExchange: znaleziono 531 wspólnych par.
+2025-02-07 19:37:14,425 - INFO - Przetwarzanie konfiguracji: BitstampExchange - KucoinExchange
+2025-02-07 19:37:14,440 - INFO - Konfiguracja BitstampExchange-KucoinExchange: znaleziono 20 wspólnych par.
