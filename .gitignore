@@ -3,6 +3,3 @@
 
 # Przykładowo, ignoruj katalog z wirtualnym środowiskiem
 venv/
-
-# Inne pliki tymczasowe lub logi
-*.log
