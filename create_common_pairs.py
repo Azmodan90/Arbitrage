@@ -1,3 +1,4 @@
+# create_common_pairs.py
 import os
 import asyncio
 import aiohttp
@@ -29,8 +30,8 @@ async def create_all_common_pairs():
     """
     Pobiera listy dostępnych par (aktywów) dla każdej giełdy (rynek spot) tylko raz,
     a następnie wylicza wspólne pary dla każdej możliwej kombinacji giełd.
-    Po zakończeniu loguje, ile wspólnych par znaleziono dla każdej konfiguracji,
-    a wynik zapisuje do pliku 'common_pairs_all.json'.
+    Klucz wspólnej pary to znormalizowany symbol, a wartość to oryginalne symbole z danej giełdy.
+    Wynik zapisuje do pliku 'common_pairs_all.json' oraz loguje liczbę znalezionych par.
     """
     common_pairs_all = {}
     trading_pairs_cache = {}
@@ -47,17 +48,15 @@ async def create_all_common_pairs():
             logging.info(f"Przetwarzanie konfiguracji: {name1} - {name2}")
             pairs1 = trading_pairs_cache.get(name1, [])
             pairs2 = trading_pairs_cache.get(name2, [])
-            # Mapowanie: znormalizowany symbol -> już oczyszczony symbol (używamy normalize_symbol dla obu giełd)
-            mapping1 = {normalize_symbol(sym, name1): normalize_symbol(sym, name1) for sym in pairs1}
-            mapping2 = {normalize_symbol(sym, name2): normalize_symbol(sym, name2) for sym in pairs2}
-            # Obliczamy wspólne (znormalizowane) symbole
+            # Tworzymy mapowanie: klucz – znormalizowany symbol, wartość – oryginalny symbol
+            mapping1 = {normalize_symbol(sym, name1): sym for sym in pairs1}
+            mapping2 = {normalize_symbol(sym, name2): sym for sym in pairs2}
             common_norm = set(mapping1.keys()) & set(mapping2.keys())
             common_list = [(mapping1[norm], mapping2[norm], norm) for norm in common_norm]
             pair_key = f"{name1}-{name2}"
             common_pairs_all[pair_key] = common_list
             logging.info(f"Konfiguracja {pair_key}: znaleziono {len(common_list)} wspólnych par.")
 
-    # Zapisujemy wynik do pliku JSON
     filename = "common_pairs_all.json"
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(common_pairs_all, f, ensure_ascii=False, indent=4)
