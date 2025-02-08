@@ -1,67 +1,104 @@
-# arbitrage_strategy.py
+import os
 import asyncio
 import aiohttp
+import json
 import logging
-from utils import calculate_difference
+from dotenv import load_dotenv
+from exchanges.binance import BinanceExchange
+from exchanges.bitget import BitgetExchange
+from exchanges.bitstamp import BitstampExchange
+from exchanges.kucoin import KucoinExchange
+# from exchanges.coinbase import CoinbaseExchange  # opcjonalnie
 
-async def run_arbitrage(common_pairs, exchange_mapping, threshold: float = 1.0):
+load_dotenv()
+
+# Upewnij się, że folder log istnieje
+LOG_DIR = "log"
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
+
+# Mapowanie instancji giełd – używane przy pobieraniu cen
+EXCHANGE_OPTIONS = {
+    "BinanceExchange": BinanceExchange(api_key=os.getenv("BINANCE_API_KEY"), secret=os.getenv("BINANCE_SECRET")),
+    "BitgetExchange": BitgetExchange(api_key=os.getenv("BITGET_API_KEY"), secret=os.getenv("BITGET_SECRET")),
+    "BitstampExchange": BitstampExchange(api_key=os.getenv("BITSTAMP_API_KEY"), secret=os.getenv("BITSTAMP_SECRET")),
+    "KucoinExchange": KucoinExchange(api_key=os.getenv("KUCOIN_API_KEY"), secret=os.getenv("KUCOIN_SECRET"))
+    # "CoinbaseExchange": CoinbaseExchange(api_key=os.getenv("COINBASE_API_KEY"), secret=os.getenv("COINBASE_SECRET"))
+}
+
+# Przykładowe opłaty dla poszczególnych giełd (wartości procentowe jako ułamek dziesiętny)
+EXCHANGE_FEES = {
+    "BinanceExchange": 0.001,   # 0.1%
+    "BitgetExchange": 0.002,    # 0.2%
+    "BitstampExchange": 0.005,  # 0.5%
+    "KucoinExchange": 0.001     # 0.1%
+}
+
+async def fetch_price(session, exchange, symbol):
     """
-    Dla każdej wspólnej pary pobiera ceny z dwóch giełd i sprawdza, czy występuje okazja arbitrażowa.
-    
-    :param common_pairs: Lista krotek (symbol_ex1, symbol_ex2, normalized_symbol)
-    :param exchange_mapping: Słownik {nazwa_giełdy: instancja_giełdy} – dokładnie dla dwóch giełd.
-    :param threshold: Minimalna różnica procentowa, aby uznać okazję za arbitrażową.
+    Pobiera cenę dla danego symbolu z określonej giełdy.
+    Zakładamy, że obiekt exchange posiada metodę get_price(session, symbol).
     """
+    try:
+        price = await exchange.get_price(session, symbol)
+        return price
+    except Exception as e:
+        logging.error(f"Błąd pobierania ceny {symbol} na {exchange.__class__.__name__}: {e}")
+        return None
+
+async def find_arbitrage_opportunities():
+    """
+    Ładuje listę wspólnych par z pliku common_pairs_all.json.
+    Dla każdej konfiguracji giełd pobiera ceny aktywów i uwzględniając opłaty,
+    sprawdza, czy istnieje okazja arbitrażu (kupno taniej na jednej giełdzie i sprzedaż drożej na drugiej).
+    Wykryte okazje loguje.
+    """
+    filename = "common_pairs_all.json"
+    if not os.path.exists(filename):
+        logging.error("Plik common_pairs_all.json nie istnieje. Najpierw uruchom opcję 1.")
+        return
+
+    with open(filename, "r", encoding="utf-8") as f:
+        common_pairs_all = json.load(f)
+
     async with aiohttp.ClientSession() as session:
-        arbitrage_opportunities = []
-        for pair in common_pairs:
-            original_symbol_ex1, original_symbol_ex2, normalized_symbol = pair
-            # Załóżmy, że mamy dokładnie dwie giełdy:
-            exchange_names = list(exchange_mapping.keys())
-            if len(exchange_names) != 2:
-                logging.error("Strategia arbitrażu wspiera tylko dwie giełdy.")
-                return
-            exch1_name = exchange_names[0]
-            exch2_name = exchange_names[1]
-            exch1 = exchange_mapping[exch1_name]
-            exch2 = exchange_mapping[exch2_name]
+        # Przetwarzamy każdą konfigurację giełd (np. "BinanceExchange-BitgetExchange")
+        for config_key, common_list in common_pairs_all.items():
+            exchanges = config_key.split("-")
+            if len(exchanges) != 2:
+                logging.error(f"Nieprawidłowy format klucza konfiguracji: {config_key}")
+                continue
+            exch1_name, exch2_name = exchanges
+            exch1 = EXCHANGE_OPTIONS.get(exch1_name)
+            exch2 = EXCHANGE_OPTIONS.get(exch2_name)
+            fee1 = EXCHANGE_FEES.get(exch1_name, 0)
+            fee2 = EXCHANGE_FEES.get(exch2_name, 0)
 
-            # Pobieramy ceny równolegle
-            price1, price2 = await asyncio.gather(
-                exch1.get_price(original_symbol_ex1, session),
-                exch2.get_price(original_symbol_ex2, session)
-            )
-            logging.info(f"Ceny dla {normalized_symbol}: {exch1_name} ({original_symbol_ex1}) = {price1}, {exch2_name} ({original_symbol_ex2}) = {price2}")
-            if price1 is None or price2 is None or price1 == 0 or price2 == 0:
-                logging.error(f"Pomijam {normalized_symbol} z powodu błędnych danych cenowych.")
+            if not exch1 or not exch2:
+                logging.error(f"Brak instancji giełdy dla konfiguracji: {config_key}")
                 continue
 
-            diff = calculate_difference(price1, price2)
-            if diff >= threshold:
-                if price1 < price2:
-                    opp = {
-                        "pair": normalized_symbol,
-                        "buy": exch1_name,
-                        "sell": exch2_name,
-                        "price_buy": price1,
-                        "price_sell": price2,
-                        "difference_percent": diff
-                    }
-                    logging.info(f"Okazja arbitrażowa: Kup {normalized_symbol} na {exch1_name} po {price1}, sprzedaj na {exch2_name} po {price2} (różnica: {diff:.2f}%)")
-                else:
-                    opp = {
-                        "pair": normalized_symbol,
-                        "buy": exch2_name,
-                        "sell": exch1_name,
-                        "price_buy": price2,
-                        "price_sell": price1,
-                        "difference_percent": diff
-                    }
-                    logging.info(f"Okazja arbitrażowa: Kup {normalized_symbol} na {exch2_name} po {price2}, sprzedaj na {exch1_name} po {price1} (różnica: {diff:.2f}%)")
-                arbitrage_opportunities.append(opp)
-        if arbitrage_opportunities:
-            logging.info("Znalezione okazje arbitrażowe:")
-            for opp in arbitrage_opportunities:
-                logging.info(opp)
-        else:
-            logging.info("Brak okazji arbitrażowych.")
+            # Dla każdego wspólnego symbolu pobieramy ceny z obu giełd
+            for symbol_pair in common_list:
+                # symbol_pair: (symbol na giełdzie 1, symbol na giełdzie 2, normalized symbol)
+                symbol1, symbol2, norm_symbol = symbol_pair
+                price1 = await fetch_price(session, exch1, symbol1)
+                price2 = await fetch_price(session, exch2, symbol2)
+
+                if price1 is None or price2 is None:
+                    continue
+
+                # Uwzględniamy opłaty – przykładowo:
+                # Kupno na giełdzie 1 (opłata zwiększa koszt), sprzedaż na giełdzie 2 (opłata zmniejsza wartość)
+                effective_price1 = price1 * (1 + fee1)   # efektywna cena kupna na giełdzie 1
+                effective_price2 = price2 * (1 - fee2)       # efektywna cena sprzedaży na giełdzie 2
+
+                # Sprawdzenie okazji arbitrażu: czy kupno na jednej giełdzie + opłata jest tańsze niż sprzedaż na drugiej
+                if effective_price1 < price2:
+                    profit_percentage = ((price2 - effective_price1) / effective_price1) * 100
+                    logging.info(f"Arbitraż: Kup {symbol1} na {exch1_name} za {price1:.4f} (efektywnie {effective_price1:.4f}) "
+                                 f"i sprzedaj {symbol2} na {exch2_name} za {price2:.4f}. Zysk: {profit_percentage:.2f}%")
+                elif effective_price2 < price1:
+                    profit_percentage = ((price1 - effective_price2) / effective_price2) * 100
+                    logging.info(f"Arbitraż: Kup {symbol2} na {exch2_name} za {price2:.4f} (efektywnie {effective_price2:.4f}) "
+                                 f"i sprzedaj {symbol1} na {exch1_name} za {price1:.4f}. Zysk: {profit_percentage:.2f}%")

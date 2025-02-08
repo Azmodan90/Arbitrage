@@ -1,4 +1,3 @@
-# exchanges/bitget.py
 import aiohttp
 import logging
 from exchanges.exchange import Exchange
@@ -10,6 +9,7 @@ class BitgetExchange(Exchange):
         """
         Pobiera listę dostępnych par dla rynku spot z Bitget.
         Używamy endpointu: GET /api/spot/v1/public/products
+        Zwracamy listę słowników w formacie: {"symbol": <oryginalny symbol>, "base": <base>, "quote": <quote>}
         """
         url = f"{self.BASE_URL}/api/spot/v1/public/products"
         try:
@@ -18,14 +18,46 @@ class BitgetExchange(Exchange):
                     logging.error(f"Bitget get_trading_pairs HTTP error: {response.status}")
                     return []
                 data = await response.json()
-                if data.get("code") != "00000":
+                logging.info(f"Bitget get_trading_pairs response: {data}")
+                # Akceptujemy kody sukcesu "00000" lub "200"
+                if data.get("code") not in ["00000", "200"]:
                     logging.error(f"Bitget get_trading_pairs API error: {data.get('msg')}")
                     return []
                 pairs = []
+                known_quotes = ["USDT", "USD", "USDC", "EUR", "TRY", "BRL", "JPY", "TUSD", "FDUSD"]
                 for item in data.get("data", []):
-                    symbol = item.get("symbol")
-                    if symbol:
-                        pairs.append(symbol)
+                    raw_symbol = item.get("symbol")
+                    if raw_symbol:
+                        # Najpierw sprawdzamy, czy symbol zawiera separator (np. '-' lub '/')
+                        if '-' in raw_symbol:
+                            parts = raw_symbol.split('-')
+                        elif '/' in raw_symbol:
+                            parts = raw_symbol.split('/')
+                        else:
+                            # Używamy listy znanych kwotowanych walut, aby wyodrębnić część bazową
+                            parts = None
+                            for quote in known_quotes:
+                                if raw_symbol.endswith(quote) and len(raw_symbol) > len(quote):
+                                    base = raw_symbol[:-len(quote)]
+                                    parts = [base, quote]
+                                    break
+                            if not parts:
+                                # Jeżeli nie uda się rozpoznać, zwróć cały symbol jako base
+                                parts = [raw_symbol, ""]
+                        if len(parts) >= 2:
+                            pair_dict = {
+                                "symbol": raw_symbol,
+                                "base": parts[0],
+                                "quote": parts[1]
+                            }
+                            pairs.append(pair_dict)
+                        else:
+                            pairs.append({
+                                "symbol": raw_symbol,
+                                "base": raw_symbol,
+                                "quote": ""
+                            })
+                logging.info(f"Bitget trading pairs: {pairs}")
                 return pairs
         except Exception as e:
             logging.exception("Bitget get_trading_pairs exception", exc_info=e)
@@ -45,10 +77,9 @@ class BitgetExchange(Exchange):
                     logging.error(f"Bitget get_price HTTP error: {response.status} for {pair}")
                     return 0.0
                 data = await response.json()
-                if data.get("code") != "00000":
+                if data.get("code") not in ["00000", "200"]:
                     logging.error(f"Bitget get_price API error: {data.get('msg')} for {pair}")
                     return 0.0
-                # Jeśli nie ma pola "last", spróbujmy "close"
                 price_str = data.get("data", {}).get("last")
                 if price_str is None:
                     price_str = data.get("data", {}).get("close")

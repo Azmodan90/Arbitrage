@@ -12,10 +12,9 @@ from exchanges.kucoin import KucoinExchange
 # from exchanges.coinbase import CoinbaseExchange  # opcjonalnie
 from utils import normalize_symbol
 
-# Wczytanie zmiennych środowiskowych
 load_dotenv()
 
-# Konfiguracja logowania: wszystkie logi zapisywane są do folderu "log"
+# Upewnij się, że folder log istnieje
 LOG_DIR = "log"
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
@@ -53,8 +52,9 @@ async def create_all_common_pairs():
     """
     Pobiera listy dostępnych par (rynek spot) dla każdej giełdy tylko raz,
     a następnie wylicza wspólne pary dla każdej możliwej kombinacji giełd.
-    Klucz wspólnej pary to znormalizowany symbol, a wartość to krotka oryginalnych symboli z danej giełdy.
-    Przed zapisem do pliku 'common_pairs_all.json' usuwane są pary, których normalizowany symbol znajduje się na liście wyjątków.
+    Klucz wspólnej pary to znormalizowany symbol (uzyskany przez rozszerzoną funkcję normalize_symbol),
+    a wartość to krotka oryginalnych symboli z danej giełdy.
+    Przed zapisem do pliku 'common_pairs_all.json' usuwane są pary, których znormalizowany symbol znajduje się na liście wyjątków.
     """
     common_pairs_all = {}
     trading_pairs_cache = {}
