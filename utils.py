@@ -1,25 +1,33 @@
 # utils.py
 import logging
 
-def normalize_symbol(symbol: str, exchange_name: str) -> str:
+def normalize_symbol(asset_info, exchange_name: str) -> str:
     """
-    Normalizuje symbol do wspólnego formatu.
-    Przykładowo:
-      - Dla Bitget usuwa sufiks "_SPBL"
-      - Dla Kucoin usuwa myślniki
-      - Dodatkowo, jeżeli symbol (po wcześniejszej normalizacji) ma długość > 3 i kończy się na "C",
-        usuwamy tę literę – zakładając, że np. "XXXC" i "XXX" to ten sam projekt.
+    Normalizuje symbol do wspólnego formatu, sprawdzając także inne dane:
+    - Symbol
+    - Nazwę pełną
+    - Base i Quote asset
+    - Adres kontraktu (jeśli dostępny)
     """
-    symbol = symbol.upper()
+    if isinstance(asset_info, dict):
+        symbol = asset_info.get("symbol", "").upper()
+        full_name = asset_info.get("name", "").lower()
+        base_asset = asset_info.get("baseAsset", "").upper()
+        quote_asset = asset_info.get("quoteAsset", "").upper()
+        contract_address = asset_info.get("contractAddress", "").lower()
+    else:
+        symbol = str(asset_info).upper()
+        full_name = ""
+        base_asset = ""
+        quote_asset = ""
+        contract_address = ""
+
     if exchange_name.lower() == "bitgetexchange":
-        if symbol.endswith("_SPBL"):
-            symbol = symbol[:-5]
+        symbol = symbol.replace("_SPBL", "")
     elif exchange_name.lower() == "kucoinexchange":
         symbol = symbol.replace("-", "")
-    # Dodatkowa reguła: usuń końcowe "C" dla symboli dłuższych niż 3 znaki
-    if len(symbol) > 3 and symbol.endswith("C"):
-        symbol = symbol[:-1]
-    return symbol
+
+    return f"{symbol}-{full_name}-{base_asset}/{quote_asset}-{contract_address}"
 
 def calculate_difference(price1: float, price2: float) -> float:
     """
@@ -28,7 +36,4 @@ def calculate_difference(price1: float, price2: float) -> float:
     if price1 == 0 or price2 == 0:
         logging.error("Jedna z cen jest równa 0 – nie można obliczyć różnicy.")
         return 0.0
-    if price1 < price2:
-        return ((price2 - price1) / price1) * 100
-    else:
-        return ((price1 - price2) / price2) * 100
+    return abs(((price2 - price1) / price1) * 100)
