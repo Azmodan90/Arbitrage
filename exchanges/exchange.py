@@ -1,4 +1,3 @@
-# exchanges/exchange.py
 from abc import ABC, abstractmethod
 import aiohttp
 
@@ -10,13 +9,13 @@ class Exchange(ABC):
     @abstractmethod
     async def get_trading_pairs(self, session: aiohttp.ClientSession) -> list:
         """
-        Pobiera listę dostępnych par/aktywow z giełdy.
+        Powinno zwracać listę symboli (stringów) dostępnych na giełdzie, np. ["BTCUSDT", "ETHUSDT", ...].
         """
         pass
 
     @abstractmethod
-    async def get_price(self, pair: str, session: aiohttp.ClientSession) -> float:
+    async def get_price(self, symbol: str, session: aiohttp.ClientSession) -> float:
         """
-        Pobiera bieżącą cenę dla podanej pary.
+        Pobiera bieżącą cenę dla podanego symbolu.
         """
         pass
