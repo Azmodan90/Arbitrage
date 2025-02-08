@@ -7,6 +7,8 @@ def normalize_symbol(symbol: str, exchange_name: str) -> str:
     Przykładowo:
       - Dla Bitget usuwa sufiks "_SPBL"
       - Dla Kucoin usuwa myślniki
+      - Dodatkowo, jeżeli symbol (po wcześniejszej normalizacji) ma długość > 3 i kończy się na "C",
+        usuwamy tę literę – zakładając, że np. "XXXC" i "XXX" to ten sam projekt.
     """
     symbol = symbol.upper()
     if exchange_name.lower() == "bitgetexchange":
@@ -14,6 +16,9 @@ def normalize_symbol(symbol: str, exchange_name: str) -> str:
             symbol = symbol[:-5]
     elif exchange_name.lower() == "kucoinexchange":
         symbol = symbol.replace("-", "")
+    # Dodatkowa reguła: usuń końcowe "C" dla symboli dłuższych niż 3 znaki
+    if len(symbol) > 3 and symbol.endswith("C"):
+        symbol = symbol[:-1]
     return symbol
 
 def calculate_difference(price1: float, price2: float) -> float:

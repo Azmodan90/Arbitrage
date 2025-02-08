@@ -26,11 +26,29 @@ EXCHANGE_OPTIONS = {
     # "5": ("CoinbaseExchange", CoinbaseExchange(api_key=os.getenv("COINBASE_API_KEY"), secret=os.getenv("COINBASE_SECRET")))
 }
 
+def parse_pair(raw, exchange_name: str) -> dict:
+    """
+    Jeśli raw jest dict (np. z Binance), zwraca słownik z symbol, base, quote.
+    W przeciwnym razie (raw jest stringiem) zwraca dict z tylko symbolem.
+    """
+    if isinstance(raw, dict):
+        return {
+            "symbol": raw.get("symbol"),
+            "base": raw.get("base"),
+            "quote": raw.get("quote")
+        }
+    else:
+        return {
+            "symbol": raw,
+            "base": None,
+            "quote": None
+        }
+
 async def create_all_common_pairs():
     """
-    Pobiera listy dostępnych par (aktywów) dla każdej giełdy (rynek spot) tylko raz,
+    Pobiera listy dostępnych par dla każdej giełdy (rynek spot) tylko raz,
     a następnie wylicza wspólne pary dla każdej możliwej kombinacji giełd.
-    Klucz wspólnej pary to znormalizowany symbol, a wartość to oryginalne symbole z danej giełdy.
+    Dodatkowo – jeśli dostępne są dane base/quote – weryfikuje, czy tokeny to ten sam projekt.
     Wynik zapisuje do pliku 'common_pairs_all.json' oraz loguje liczbę znalezionych par.
     """
     common_pairs_all = {}
@@ -48,11 +66,21 @@ async def create_all_common_pairs():
             logging.info(f"Przetwarzanie konfiguracji: {name1} - {name2}")
             pairs1 = trading_pairs_cache.get(name1, [])
             pairs2 = trading_pairs_cache.get(name2, [])
-            # Tworzymy mapowanie: klucz – znormalizowany symbol, wartość – oryginalny symbol
-            mapping1 = {normalize_symbol(sym, name1): sym for sym in pairs1}
-            mapping2 = {normalize_symbol(sym, name2): sym for sym in pairs2}
+            # Tworzymy mapowanie: znormalizowany symbol -> dane (dict)
+            mapping1 = {normalize_symbol(parse_pair(sym, name1)["symbol"], name1): parse_pair(sym, name1) for sym in pairs1}
+            mapping2 = {normalize_symbol(parse_pair(sym, name2)["symbol"], name2): parse_pair(sym, name2) for sym in pairs2}
+            # Wyliczamy wspólne klucze
             common_norm = set(mapping1.keys()) & set(mapping2.keys())
-            common_list = [(mapping1[norm], mapping2[norm], norm) for norm in common_norm]
+            common_list = []
+            for norm in common_norm:
+                info1 = mapping1[norm]
+                info2 = mapping2[norm]
+                # Jeśli obie giełdy dostarczyły dodatkowe dane, sprawdzamy base/quote
+                if info1["base"] and info2["base"]:
+                    if info1["base"] != info2["base"] or info1["quote"] != info2["quote"]:
+                        # Jeśli różnią się – pomijamy tę parę
+                        continue
+                common_list.append((info1["symbol"], info2["symbol"], norm))
             pair_key = f"{name1}-{name2}"
             common_pairs_all[pair_key] = common_list
             logging.info(f"Konfiguracja {pair_key}: znaleziono {len(common_list)} wspólnych par.")

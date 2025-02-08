@@ -14,7 +14,14 @@ class BinanceExchange(Exchange):
                     logging.error(f"Binance get_trading_pairs HTTP error: {response.status}")
                     return []
                 data = await response.json()
-                pairs = [item["symbol"] for item in data.get("symbols", []) if item.get("status") == "TRADING"]
+                pairs = []
+                for item in data.get("symbols", []):
+                    if item.get("status") == "TRADING":
+                        pairs.append({
+                            "symbol": item["symbol"],
+                            "base": item.get("baseAsset"),
+                            "quote": item.get("quoteAsset")
+                        })
                 logging.info(f"Binance trading pairs: {pairs}")
                 return pairs
         except Exception as e:
