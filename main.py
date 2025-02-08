@@ -13,7 +13,7 @@ from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
 from exchanges.kucoin import KucoinExchange
 # from exchanges.coinbase import CoinbaseExchange  # opcjonalnie
-from utils import normalize_symbol
+from utils import normalize_symbol, calculate_difference
 
 load_dotenv()
 
@@ -33,7 +33,6 @@ all_handler.setLevel(logging.INFO)
 error_handler = logging.FileHandler("error.log", encoding="utf-8")
 error_handler.setLevel(logging.ERROR)
 
-# Ustawienie formatera
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 console_handler.setFormatter(formatter)
 all_handler.setFormatter(formatter)
@@ -71,8 +70,8 @@ async def simulate_arbitrage_from_common():
     """
     Symulacja arbitrażu przy użyciu listy wspólnych par zapisanej w pliku 'common_pairs_all.json'.
     Użytkownik wybiera giełdę źródłową (gdzie posiada środki), podaje dostępne środki oraz minimalny zysk.
-    Następnie program przeszukuje konfiguracje i (symuluje) transakcje, aktualizując stan środków.
-    Wykryte okazje są logowane do pliku arbitrage.log.
+    W tej wersji ceny dla wszystkich wspólnych par pobierane są równolegle, co minimalizuje opóźnienie.
+    Wykryte okazje arbitrażowe są logowane do pliku arbitrage.log.
     """
     filename = "common_pairs_all.json"
     if not os.path.exists(filename):
@@ -110,81 +109,71 @@ async def simulate_arbitrage_from_common():
 
     async with aiohttp.ClientSession() as session:
         while True:
-            opportunities = []
-            # Przeglądamy wszystkie konfiguracje, w których występuje bieżąca giełda
+            tasks = []      # Lista zadań do pobrania cen dla każdej pary
+            mapping = []    # Dla każdej pary zapamiętujemy (normalized_symbol, bieżąca giełda, docelowa giełda)
+            # Przeglądamy konfiguracje, w których występuje bieżąca giełda
             for config_key, pairs in common_pairs_all.items():
                 if current_exchange_name not in config_key:
                     continue
                 parts = config_key.split("-")
                 if parts[0] == current_exchange_name:
-                    # Obecna giełda jako pierwsza – docelowa to parts[1]
                     dest_name = parts[1]
+                    dest_instance = get_exchange_instance_by_name(dest_name)
                     for tup in pairs:
-                        source_sym = tup[0]
-                        dest_sym = tup[1]
-                        normalized = tup[2]
-                        price_source, price_dest = await asyncio.gather(
+                        source_sym, dest_sym, normalized = tup
+                        # Dodajemy zadanie zbierające obie ceny (jako awaitable Future)
+                        tasks.append(asyncio.gather(
                             current_instance.get_price(source_sym, session),
-                            get_exchange_instance_by_name(dest_name).get_price(dest_sym, session)
-                        )
-                        if price_source is None or price_dest is None or price_source == 0 or price_dest == 0:
-                            continue
-                        if price_source < price_dest:
-                            profit = funds * ((price_dest / price_source) - 1)
-                            if profit >= min_profit:
-                                opportunity = {
-                                    "asset": normalized,
-                                    "buy_exchange": current_exchange_name,
-                                    "sell_exchange": dest_name,
-                                    "price_buy": price_source,
-                                    "price_sell": price_dest,
-                                    "profit": profit,
-                                }
-                                opportunities.append(opportunity)
+                            dest_instance.get_price(dest_sym, session)
+                        ))
+                        mapping.append((normalized, current_exchange_name, dest_name))
                 elif parts[1] == current_exchange_name:
-                    # Obecna giełda jako druga – docelowa to parts[0]
                     dest_name = parts[0]
+                    dest_instance = get_exchange_instance_by_name(dest_name)
                     for tup in pairs:
-                        source_sym = tup[1]
-                        dest_sym = tup[0]
-                        normalized = tup[2]
-                        price_source, price_dest = await asyncio.gather(
+                        source_sym, dest_sym, normalized = tup
+                        tasks.append(asyncio.gather(
                             current_instance.get_price(source_sym, session),
-                            get_exchange_instance_by_name(dest_name).get_price(dest_sym, session)
-                        )
-                        if price_source is None or price_dest is None or price_source == 0 or price_dest == 0:
-                            continue
-                        if price_source < price_dest:
-                            profit = funds * ((price_dest / price_source) - 1)
-                            if profit >= min_profit:
-                                opportunity = {
-                                    "asset": normalized,
-                                    "buy_exchange": current_exchange_name,
-                                    "sell_exchange": dest_name,
-                                    "price_buy": price_source,
-                                    "price_sell": price_dest,
-                                    "profit": profit,
-                                }
-                                opportunities.append(opportunity)
+                            dest_instance.get_price(dest_sym, session)
+                        ))
+                        mapping.append((normalized, current_exchange_name, dest_name))
+            # Pobierz wszystkie ceny jednocześnie
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+            opportunities = []
+            for i, res in enumerate(results):
+                if isinstance(res, Exception):
+                    continue
+                try:
+                    price_source, price_dest = res
+                except Exception:
+                    continue
+                normalized, exch_source, exch_dest = mapping[i]
+                if price_source is None or price_dest is None or price_source == 0 or price_dest == 0:
+                    continue
+                if price_source < price_dest:
+                    profit = funds * ((price_dest / price_source) - 1)
+                    if profit >= min_profit:
+                        opportunities.append({
+                            "asset": normalized,
+                            "buy_exchange": current_exchange_name,
+                            "sell_exchange": exch_dest,
+                            "price_buy": price_source,
+                            "price_sell": price_dest,
+                            "profit": profit,
+                        })
             if opportunities:
                 best = max(opportunities, key=lambda x: x["profit"])
-                # Wypisujemy okazję arbitrażową na ekranie
                 print("\nZnaleziono okazję arbitrażową:")
                 print(f"  Asset: {best['asset']}")
                 print(f"  Kup na {best['buy_exchange']} po {best['price_buy']}")
                 print(f"  Sprzedaj na {best['sell_exchange']} po {best['price_sell']}")
                 print(f"  Szacowany zysk: {best['profit']:.2f}")
-                # Logujemy okazję arbitrażową do osobnego pliku (arbitrage.log)
                 arbitrage_logger.info(
-                    f"Arbitrage opportunity detected: Asset: {best['asset']}, "
-                    f"Buy on: {best['buy_exchange']} at {best['price_buy']}, "
-                    f"Sell on: {best['sell_exchange']} at {best['price_sell']}, "
-                    f"Profit: {best['profit']:.2f}"
+                    f"Arbitrage opportunity: Asset: {best['asset']}, Buy on: {best['buy_exchange']} at {best['price_buy']}, "
+                    f"Sell on: {best['sell_exchange']} at {best['price_sell']}, Profit: {best['profit']:.2f}"
                 )
-                # Zakładamy wykorzystanie całej kwoty
                 funds = funds * (best["price_sell"] / best["price_buy"])
                 print(f"Transakcja przeprowadzona. Nowa kwota środków: {funds:.2f}")
-                # Aktualizacja – środki trafiają na giełdę docelową
                 current_exchange_name = best["sell_exchange"]
                 current_instance = get_exchange_instance_by_name(current_exchange_name)
             else:
