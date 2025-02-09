@@ -13,7 +13,7 @@ def normalize_symbol(symbol, exchange_name: str) -> str:
     if isinstance(symbol, dict):
         symbol = symbol.get("symbol")
         if not symbol:
-            # Jeśli nie ma pola 'symbol', spróbuj połączyć base i quote
+            # Jeśli nie ma pola 'symbol', spróbuj połączyć pola "base" i "quote"
             base = symbol.get("base", "")
             quote = symbol.get("quote", "")
             symbol = base + quote
@@ -52,3 +52,12 @@ def normalize_symbol(symbol, exchange_name: str) -> str:
     if matches:
         return known_projects[matches[0]]
     return norm
+
+def calculate_difference(price1: float, price2: float) -> float:
+    """
+    Oblicza procentową różnicę między dwiema cenami względem ceny bazowej.
+    Jeśli cena bazowa (price1) wynosi 0, zwraca 0.0.
+    """
+    if price1 == 0:
+        return 0.0
+    return abs(((price2 - price1) / price1) * 100)
