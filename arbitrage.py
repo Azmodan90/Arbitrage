@@ -34,6 +34,15 @@ if not absurd_logger.hasHandlers():
     absurd_logger.setLevel(logging.INFO)
     absurd_logger.propagate = False
 
+def normalize_symbol(symbol):
+    """
+    Normalizuje symbol rynkowy, usuwając dodatkowe sufiksy po znaku dwukropka.
+    Przykładowo: "STPT/USDT:USDT" -> "STPT/USDT"
+    """
+    if ":" in symbol:
+        return symbol.split(":")[0]
+    return symbol
+
 class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
@@ -42,28 +51,34 @@ class PairArbitrageStrategy:
         self.pair_name = pair_name
 
     async def check_opportunity(self, asset):
-        # Jeśli asset jest dict, wyodrębniamy symbole dla obu giełd.
+        # Jeśli asset jest słownikiem, wyodrębniamy symbole zgodnie z mapowaniem.
         if isinstance(asset, dict):
-            # Zakładamy, że w pair_name pierwszy element odpowiada giełdzie źródłowej, a drugi giełdzie docelowej.
             ex_names = self.pair_name.split("-")
-            # Dla exchange1 (pierwszy) używamy pola "source", dla exchange2 (drugi) pola "dest"
+            # Dla exchange1 (pierwszy) używamy pola "source", a dla exchange2 (drugi) pola "dest"
             symbol_ex1 = asset.get("source") + "/USDT"
             symbol_ex2 = asset.get("dest") + "/USDT"
             arbitrage_logger.info(f"{self.pair_name} - Przekształcono mapowanie: {asset} -> {symbol_ex1} (dla {ex_names[0]}), {symbol_ex2} (dla {ex_names[1]})")
         else:
-            symbol_ex1 = asset
-            symbol_ex2 = asset
-
+            # Normalizujemy symbol – jeśli już zawiera sufiks, nie dopisujemy ponownie "/USDT"
+            normalized = normalize_symbol(asset)
+            # Jeśli symbol już kończy się na "/USDT", pozostawiamy go
+            if normalized.endswith("/USDT"):
+                symbol_ex1 = normalized
+                symbol_ex2 = normalized
+            else:
+                symbol_ex1 = normalized + "/USDT"
+                symbol_ex2 = normalized + "/USDT"
+        
         arbitrage_logger.info(f"{self.pair_name} - Sprawdzam okazje arbitrażowe dla symboli: {symbol_ex1} (ex1), {symbol_ex2} (ex2)")
         loop = asyncio.get_running_loop()
         
-        # Pobieranie danych z exchange1
+        # Pobieranie danych dla exchange1
         if hasattr(self.exchange1, 'fetch_ticker_limited'):
             task1 = asyncio.create_task(self.exchange1.fetch_ticker_limited(symbol_ex1))
         else:
             task1 = loop.run_in_executor(None, self.exchange1.fetch_ticker, symbol_ex1)
         
-        # Pobieranie danych z exchange2
+        # Pobieranie danych dla exchange2
         if hasattr(self.exchange2, 'fetch_ticker_limited'):
             task2 = asyncio.create_task(self.exchange2.fetch_ticker_limited(symbol_ex2))
         else:
