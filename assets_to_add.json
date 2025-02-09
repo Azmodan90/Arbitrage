@@ -1,0 +1,14 @@
+{
+  "kucoin-bitget": [
+    {
+      "source": "ARCSOL",
+      "dest": "ARC",
+      "normalized": "ARC/USDT"
+    },
+    {
+      "source": "ARCA",
+      "dest": "ARCA",
+      "normalized": "ARCA/USDT"
+    }
+  ]
+}
