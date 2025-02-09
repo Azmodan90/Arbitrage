@@ -16,14 +16,4 @@ class BinanceExchange:
             return ticker
         except Exception as e:
             print(f"Error fetching ticker from Binance: {e}")
-            return None
 
-    def create_order(self, symbol, order_type, side, amount, price=None):
-        try:
-            if order_type == 'market':
-                return self.exchange.create_market_order(symbol, side, amount)
-            elif order_type == 'limit':
-                return self.exchange.create_limit_order(symbol, side, amount, price)
-        except Exception as e:
-            print(f"Error creating order on Binance: {e}")
-            return None
