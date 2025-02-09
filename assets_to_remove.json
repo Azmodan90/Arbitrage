@@ -1,4 +1,5 @@
 {
   "kucoin-bitget": ["ARC"],
-  "binance-kucoin": ["ACE/USDT"]
+  "binance-kucoin": ["ACE/USDT"],
+  "kucoin-binance": ["TST/USDT"]
 }

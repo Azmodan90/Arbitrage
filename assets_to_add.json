@@ -11,11 +11,20 @@
       "normalized": "ARCA/USDT"
     }
 ],
+
 "binance-kucoin": [
   {
     "source": "ACE",
     "dest": "kACE",
     "normalized": "kACE/USDT"
+  }
+],
+
+"bitget-binance": [
+  {
+    "source": "TSTBSC",
+    "dest": "TST",
+    "normalized": "TST/USDT"
   }
 ]
 }
