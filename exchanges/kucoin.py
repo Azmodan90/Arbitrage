@@ -1,4 +1,3 @@
-#kucoin.py
 import ccxt
 from config import CONFIG
 
@@ -9,6 +8,7 @@ class KucoinExchange:
             'secret': CONFIG["KUCOIN_SECRET"],
             'enableRateLimit': True,
         })
+        self.fee_rate = 0.1
 
     def fetch_ticker(self, symbol):
         try:
@@ -17,7 +17,3 @@ class KucoinExchange:
         except Exception as e:
             print(f"Error fetching ticker from Kucoin: {e}")
             return None
-
-    # Metoda tworzenia zleceń nie jest obecnie wykorzystywana, gdyż logujemy jedynie okazje arbitrażu.
-    # def create_order(self, symbol, order_type, side, amount, price=None):
-    #     pass

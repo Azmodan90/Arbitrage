@@ -1,0 +1,134 @@
+2025-02-09 14:01:20,924 - INFO - Uruchamianie programu arbitrażowego
+2025-02-09 14:01:22,989 - INFO - Wybrano opcję rozpoczęcia arbitrażu
+2025-02-09 14:01:22,992 - INFO - Uruchamiam strategię arbitrażu...
+2025-02-09 14:01:22,993 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:23,012 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:28,535 - INFO - binance: pobrana cena = 95965.49
+2025-02-09 14:01:28,536 - INFO - kucoin: pobrana cena = 95955.0
+2025-02-09 14:01:28,537 - INFO - bitget: pobrana cena = 95954.72
+2025-02-09 14:01:28,538 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:29,541 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:29,542 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:29,888 - INFO - binance: pobrana cena = 95965.48
+2025-02-09 14:01:29,889 - INFO - kucoin: pobrana cena = 95956.2
+2025-02-09 14:01:29,889 - INFO - bitget: pobrana cena = 95973.18
+2025-02-09 14:01:29,890 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:30,892 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:30,902 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:31,245 - INFO - binance: pobrana cena = 95948.27
+2025-02-09 14:01:31,245 - INFO - kucoin: pobrana cena = 95962.8
+2025-02-09 14:01:31,245 - INFO - bitget: pobrana cena = 95973.18
+2025-02-09 14:01:31,246 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:32,248 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:32,249 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:32,582 - INFO - binance: pobrana cena = 95948.28
+2025-02-09 14:01:32,583 - INFO - kucoin: pobrana cena = 95952.2
+2025-02-09 14:01:32,583 - INFO - bitget: pobrana cena = 95973.18
+2025-02-09 14:01:32,584 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:33,586 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:33,588 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:33,917 - INFO - binance: pobrana cena = 95948.28
+2025-02-09 14:01:33,918 - INFO - kucoin: pobrana cena = 95952.2
+2025-02-09 14:01:33,918 - INFO - bitget: pobrana cena = 95973.18
+2025-02-09 14:01:33,919 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:34,921 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:34,923 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:35,242 - INFO - binance: pobrana cena = 95948.28
+2025-02-09 14:01:35,243 - INFO - kucoin: pobrana cena = 95952.1
+2025-02-09 14:01:35,243 - INFO - bitget: pobrana cena = 95973.18
+2025-02-09 14:01:35,244 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:36,246 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:36,247 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:36,577 - INFO - binance: pobrana cena = 95948.28
+2025-02-09 14:01:36,578 - INFO - kucoin: pobrana cena = 95944.8
+2025-02-09 14:01:36,579 - INFO - bitget: pobrana cena = 95954.74
+2025-02-09 14:01:36,579 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:37,581 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:37,583 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:37,944 - INFO - binance: pobrana cena = 95957.88
+2025-02-09 14:01:37,945 - INFO - kucoin: pobrana cena = 95944.8
+2025-02-09 14:01:37,945 - INFO - bitget: pobrana cena = 95954.74
+2025-02-09 14:01:37,946 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:38,948 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:38,949 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:39,281 - INFO - binance: pobrana cena = 95959.75
+2025-02-09 14:01:39,282 - INFO - kucoin: pobrana cena = 95957.8
+2025-02-09 14:01:39,282 - INFO - bitget: pobrana cena = 95954.75
+2025-02-09 14:01:39,283 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:40,285 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:40,286 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:40,617 - INFO - binance: pobrana cena = 95960.19
+2025-02-09 14:01:40,618 - INFO - kucoin: pobrana cena = 95974.8
+2025-02-09 14:01:40,618 - INFO - bitget: pobrana cena = 95970.89
+2025-02-09 14:01:40,619 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:41,621 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:41,623 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:41,940 - INFO - binance: pobrana cena = 95960.19
+2025-02-09 14:01:41,940 - INFO - kucoin: pobrana cena = 95974.8
+2025-02-09 14:01:41,941 - INFO - bitget: pobrana cena = 95970.89
+2025-02-09 14:01:41,941 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:42,944 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:42,946 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:43,288 - INFO - binance: pobrana cena = 95960.2
+2025-02-09 14:01:43,289 - INFO - kucoin: pobrana cena = 95974.8
+2025-02-09 14:01:43,289 - INFO - bitget: pobrana cena = 95970.88
+2025-02-09 14:01:43,290 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:44,293 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:44,295 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:44,645 - INFO - binance: pobrana cena = 95960.2
+2025-02-09 14:01:44,646 - INFO - kucoin: pobrana cena = 95958.8
+2025-02-09 14:01:44,646 - INFO - bitget: pobrana cena = 95970.88
+2025-02-09 14:01:44,646 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:45,648 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:45,650 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:45,954 - INFO - binance: pobrana cena = 95950.01
+2025-02-09 14:01:45,955 - INFO - kucoin: pobrana cena = 95958.8
+2025-02-09 14:01:45,955 - INFO - bitget: pobrana cena = 95969.59
+2025-02-09 14:01:45,956 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:46,956 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:46,958 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:47,369 - INFO - binance: pobrana cena = 95950.0
+2025-02-09 14:01:47,370 - INFO - kucoin: pobrana cena = 95953.0
+2025-02-09 14:01:47,371 - INFO - bitget: pobrana cena = 95969.01
+2025-02-09 14:01:47,371 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:48,373 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:48,375 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:48,708 - INFO - binance: pobrana cena = 95950.0
+2025-02-09 14:01:48,709 - INFO - kucoin: pobrana cena = 95953.0
+2025-02-09 14:01:48,709 - INFO - bitget: pobrana cena = 95962.25
+2025-02-09 14:01:48,710 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:49,712 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:49,714 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:50,031 - INFO - binance: pobrana cena = 95950.01
+2025-02-09 14:01:50,031 - INFO - kucoin: pobrana cena = 95953.0
+2025-02-09 14:01:50,031 - INFO - bitget: pobrana cena = 95962.25
+2025-02-09 14:01:50,032 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:51,034 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:51,036 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:51,351 - INFO - binance: pobrana cena = 95950.01
+2025-02-09 14:01:51,351 - INFO - kucoin: pobrana cena = 95953.1
+2025-02-09 14:01:51,352 - INFO - bitget: pobrana cena = 95958.9
+2025-02-09 14:01:51,352 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:52,354 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:52,357 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:52,674 - INFO - binance: pobrana cena = 95950.01
+2025-02-09 14:01:52,674 - INFO - kucoin: pobrana cena = 95953.1
+2025-02-09 14:01:52,675 - INFO - bitget: pobrana cena = 95958.9
+2025-02-09 14:01:52,675 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:53,678 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:53,679 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:54,033 - INFO - binance: pobrana cena = 95950.01
+2025-02-09 14:01:54,034 - INFO - kucoin: pobrana cena = 95953.1
+2025-02-09 14:01:54,035 - INFO - bitget: pobrana cena = 95958.89
+2025-02-09 14:01:54,035 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:55,037 - INFO - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 14:01:55,039 - INFO - Wysłano równoległe żądania do giełd.
+2025-02-09 14:01:55,349 - INFO - binance: pobrana cena = 95950.01
+2025-02-09 14:01:55,349 - INFO - kucoin: pobrana cena = 95953.1
+2025-02-09 14:01:55,350 - INFO - bitget: pobrana cena = 95958.89
+2025-02-09 14:01:55,350 - INFO - bitstamp: pobrana cena = 95814.0
+2025-02-09 14:01:56,023 - INFO - 
+Otrzymano sygnał SIGINT. Zatrzymywanie programu...
+2025-02-09 14:01:56,024 - INFO - Zadania anulowane
+2025-02-09 14:01:56,025 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown() running at /workspaces/Arbitrage/main.py:37> wait_for=<_GatheringFuture finished result=[CancelledError('')]>>

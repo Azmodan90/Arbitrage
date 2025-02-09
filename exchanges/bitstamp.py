@@ -1,4 +1,3 @@
-#bitstamp.py
 import ccxt
 from config import CONFIG
 
@@ -9,6 +8,8 @@ class BitstampExchange:
             'secret': CONFIG["BITSTAMP_SECRET"],
             'enableRateLimit': True,
         })
+        # Ustawiamy fee_rate – przykładowo 0.25%
+        self.fee_rate = 0.25
 
     def fetch_ticker(self, symbol):
         try:
@@ -17,7 +18,3 @@ class BitstampExchange:
         except Exception as e:
             print(f"Error fetching ticker from Bitstamp: {e}")
             return None
-
-    # Metoda tworzenia zleceń nie jest obecnie wykorzystywana.
-    # def create_order(self, symbol, order_type, side, amount, price=None):
-    #     pass
