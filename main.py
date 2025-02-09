@@ -28,18 +28,17 @@ def setup_logging():
 async def shutdown(signal_name, loop):
     logging.info(f"\nOtrzymano sygnał {signal_name}. Zatrzymywanie programu...")
     tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
+    logging.info("Anulowanie zadań: %s", tasks)
     for task in tasks:
         task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
-    await asyncio.sleep(0.1)
-    loop.stop()
+    await asyncio.sleep(0.2)
 
 def setup_signal_handlers(loop):
     for sig in (signal.SIGINT, signal.SIGTERM):
         loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
 
 async def run_arbitrage_for_all_pairs(exchanges):
-    # Ładowanie listy wspólnych aktywów z pliku JSON
     try:
         with open("common_assets.json", "r") as f:
             common_assets_data = json.load(f)
@@ -48,7 +47,6 @@ async def run_arbitrage_for_all_pairs(exchanges):
         return
 
     tasks = []
-    # Dla każdej pary giełd (klucz np. "binance-kucoin") uruchamiamy strategię arbitrażu
     for pair_key, assets in common_assets_data.items():
         if not assets:
             logging.info(f"Brak wspólnych aktywów dla pary {pair_key}")
@@ -81,13 +79,15 @@ def run_arbitrage(exchanges):
     except KeyboardInterrupt:
         logging.info("Program zatrzymany przez użytkownika (CTRL+C)")
     finally:
+        pending = asyncio.all_tasks(loop)
+        if pending:
+            loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
         loop.close()
 
 def main():
     setup_logging()
     logging.info("Uruchamianie programu arbitrażowego")
     
-    # Inicjalizacja instancji giełd
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),

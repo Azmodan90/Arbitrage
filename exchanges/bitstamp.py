@@ -8,7 +8,6 @@ class BitstampExchange:
             'secret': CONFIG["BITSTAMP_SECRET"],
             'enableRateLimit': True,
         })
-        # Ustawiamy fee_rate – przykładowo 0.25%
         self.fee_rate = 0.25
 
     def fetch_ticker(self, symbol):

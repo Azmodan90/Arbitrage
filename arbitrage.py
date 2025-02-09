@@ -1,4 +1,3 @@
-# arbitrage.py
 import asyncio
 import logging
 from config import CONFIG
@@ -30,7 +29,6 @@ class PairArbitrageStrategy:
                 else:
                     tickers[key] = price
                     logging.info(f"{self.pair_name} - {key}: pobrana cena = {price}")
-        # Jeśli dane z obu giełd nie są kompletne, pomijamy dany symbol
         if tickers.get('ex1') is None or tickers.get('ex2') is None:
             logging.warning(f"{self.pair_name} - Niedostateczne dane dla {symbol}, pomijam ten symbol.")
             return
