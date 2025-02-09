@@ -12,6 +12,7 @@ CONFIG = {
     "BITGET_SECRET": os.getenv("BITGET_SECRET"),
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
-    # Próg arbitrażu w procentach
-    "ARBITRAGE_THRESHOLD": 0.5,
+    
+    "ARBITRAGE_THRESHOLD": 0.5, # Próg arbitrażu w procentach
+    "ABSURD_THRESHOLD": 20,  # nowy próg absurdalnego zysku w procentach
 }

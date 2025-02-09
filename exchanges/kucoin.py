@@ -1,4 +1,5 @@
 import ccxt
+import asyncio
 from config import CONFIG
 
 class KucoinExchange:
@@ -9,6 +10,13 @@ class KucoinExchange:
             'enableRateLimit': True,
         })
         self.fee_rate = 0.1
+        # Ograniczenie liczby równoległych zapytań do 5
+        self.semaphore = asyncio.Semaphore(5)
+
+    async def fetch_ticker_limited(self, symbol):
+        async with self.semaphore:
+            loop = asyncio.get_running_loop()
+            return await loop.run_in_executor(None, self.exchange.fetch_ticker, symbol)
 
     def fetch_ticker(self, symbol):
         try:
