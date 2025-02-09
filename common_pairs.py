@@ -2,26 +2,34 @@ import os
 import ccxt
 import json
 import logging
-import itertools
-import requests
+import re
+import sys
+import signal
 from dotenv import load_dotenv
 
-# Konfiguracja logowania: logowanie do konsoli oraz do pliku "arbitrage.log"
+# Obsługa przerwania (CTRL+C)
+def signal_handler(sig, frame):
+    logging.info("Przerwanie przez użytkownika (CTRL+C). Kończenie programu.")
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
+
+# Konfiguracja logowania: logowanie do konsoli oraz do pliku "verified_assets.log"
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler("arbitrage.log", encoding="utf-8")
+        logging.FileHandler("verified_assets.log", encoding="utf-8")
     ]
 )
 
-logging.info("Program weryfikacji wspólnych aktywów dla każdej pary giełd został uruchomiony.")
+logging.info("Program tworzenia listy wspólnych aktywów został uruchomiony.")
 
 # Załaduj zmienne środowiskowe z pliku .env
 load_dotenv()
 
-# Konfiguracja giełd – pobieramy klucze API z pliku .env
+# Konfiguracja giełd – pobieramy klucze API z .env
 exchanges_config = {
     'binance': {
         'apiKey': os.getenv('BINANCE_API_KEY'),
@@ -41,7 +49,7 @@ exchanges_config = {
     },
 }
 
-# Inicjalizacja obiektów giełdowych przy użyciu CCXT
+# Inicjalizacja obiektów giełdowych
 exchanges = {}
 for name, config in exchanges_config.items():
     try:
@@ -59,124 +67,111 @@ for name, config in exchanges_config.items():
         logging.error(f"Błąd przy inicjalizacji {name}: {e}")
 
 def normalize_symbol(symbol: str) -> str:
-    """
-    Normalizuje symbol – zamienia myślniki na ukośniki i konwertuje do wielkich liter.
-    Np.: "BTC-USDT" -> "BTC/USDT"
-    """
+    """Zamienia myślniki na ukośniki i konwertuje do wielkich liter."""
     return symbol.replace('-', '/').upper()
+
+def normalize_id(market_id: str) -> str:
+    """Usuwa znaki niealfanumeryczne i konwertuje do małych liter."""
+    return re.sub(r'[^a-zA-Z0-9]', '', market_id).lower() if market_id else ''
 
 def build_exchange_market_dict(exchange: ccxt.Exchange) -> dict:
     """
-    Dla danej giełdy zwraca słownik:
-       znormalizowany symbol -> {'base': base_currency, 'quote': quote_currency}
+    Dla danej giełdy buduje słownik:
+      znormalizowany symbol -> {'base': base, 'quote': quote, 'id': normalized_id}
     """
     market_dict = {}
     for symbol, market in exchange.markets.items():
         norm_symbol = normalize_symbol(symbol)
         base = market.get('base', '').upper()
         quote = market.get('quote', '').upper()
-        market_dict[norm_symbol] = {'base': base, 'quote': quote}
+        market_id = market.get('id', '')
+        norm_market_id = normalize_id(market_id)
+        market_dict[norm_symbol] = {
+            'base': base,
+            'quote': quote,
+            'id': norm_market_id
+        }
     return market_dict
 
-# Funkcja pobierająca mapping z CoinGecko: symbol (np. "btc") -> coin id (np. "bitcoin")
-def build_coingecko_mapping() -> dict:
-    url = "https://api.coingecko.com/api/v3/coins/list"
+def load_assets(filename: str = "available_assets.json") -> dict:
+    """
+    Wczytuje listę aktywów dla każdej giełdy z pliku JSON.
+    """
     try:
-        response = requests.get(url)
-        coins = response.json()
-        mapping = {}
-        for coin in coins:
-            symbol = coin.get('symbol', '').lower()
-            mapping[symbol] = coin.get('id')
-        logging.info(f"Pobrano mapping CoinGecko: {len(mapping)} pozycji.")
-        return mapping
+        with open(filename, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        logging.info(f"Pobrano dane z pliku: {filename}")
+        return data
     except Exception as e:
-        logging.error(f"Błąd przy pobieraniu mappingu z CoinGecko: {e}")
+        logging.error(f"Błąd przy wczytywaniu danych z {filename}: {e}")
         return {}
 
-def verify_asset_for_pair(symbol: str, market_data1: dict, market_data2: dict, coingecko_mapping: dict) -> dict:
+def create_verified_common_assets():
     """
-    Dla danego symbolu (aktywa) porównuje dane techniczne z dwóch giełd.
-    Zwraca słownik z informacją o spójności danych (base i quote) oraz, jeśli spójne, CoinGecko id dla tokena bazowego.
+    Tworzy listę wspólnych aktywów, które są spójne pod względem danych technicznych (base, quote, id)
+    dla wszystkich giełd.
     """
-    base1 = market_data1.get(symbol, {}).get('base', '')
-    quote1 = market_data1.get(symbol, {}).get('quote', '')
-    base2 = market_data2.get(symbol, {}).get('base', '')
-    quote2 = market_data2.get(symbol, {}).get('quote', '')
-    
-    consistent = (base1 == base2 and quote1 == quote2)
-    result = {
-        'consistent_base_quote': consistent,
-        'base_values': [base1, base2],
-        'quote_values': [quote1, quote2]
-    }
-    
-    if consistent:
-        base_token = base1.lower()
-        coin_id = coingecko_mapping.get(base_token)
-        result['coingecko_id'] = coin_id
-        if coin_id:
-            logging.info(f"{symbol}: Spójne dane: base={base1}, quote={quote1} -> CoinGecko id: {coin_id}")
-        else:
-            logging.warning(f"{symbol}: Spójne dane, lecz nie znaleziono CoinGecko id dla base: {base1}")
-    else:
-        result['coingecko_id'] = None
-        logging.warning(f"{symbol}: Rozbieżność danych: base: [{base1}, {base2}], quote: [{quote1}, {quote2}]")
-    
-    return result
+    assets_data = load_assets("available_assets.json")
+    if not assets_data:
+        logging.error("Brak danych o aktywach. Kończenie programu.")
+        return
 
-def save_data_to_file(data: dict, filename: str):
-    """
-    Zapisuje dane do pliku JSON.
-    """
-    try:
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
-        logging.info(f"Dane zapisane do pliku: {filename}")
-    except Exception as e:
-        logging.error(f"Błąd podczas zapisu danych do pliku {filename}: {e}")
-
-def main():
-    # Budujemy słownik rynkowy dla każdej giełdy:
+    # Budujemy słownik rynkowy dla każdej giełdy
     market_data_by_exchange = {}
-    for exch_name, exch_obj in exchanges.items():
-        try:
-            market_data = build_exchange_market_dict(exch_obj)
-            market_data_by_exchange[exch_name] = market_data
-            logging.info(f"{exch_name}: przetworzono dane dla {len(market_data)} symboli.")
-        except Exception as e:
-            logging.error(f"Błąd przy przetwarzaniu danych dla {exch_name}: {e}")
-    
-    # Tworzymy mapping z CoinGecko
-    coingecko_mapping = build_coingecko_mapping()
+    for exch_name in assets_data.keys():
+        if exch_name in exchanges:
+            try:
+                market_data_by_exchange[exch_name] = build_exchange_market_dict(exchanges[exch_name])
+                logging.info(f"{exch_name}: przetworzono dane rynkowe dla {len(market_data_by_exchange[exch_name])} symboli.")
+            except Exception as e:
+                logging.error(f"Błąd przy przetwarzaniu danych giełdy {exch_name}: {e}")
+        else:
+            logging.warning(f"Giełda {exch_name} nie została zainicjalizowana.")
 
-    # Dla każdej pary giełd obliczamy wspólne aktywa i weryfikujemy dane techniczne
-    common_assets_by_pair = {}  # klucz: "ex1-ex2", wartość: { symbol: weryfikacja }
-    
-    for (ex1, data1), (ex2, data2) in itertools.combinations(market_data_by_exchange.items(), 2):
-        pair_key = f"{ex1}-{ex2}"
-        # Obliczamy wspólny zbiór symboli
-        common_symbols = set(data1.keys()).intersection(set(data2.keys()))
-        logging.info(f"{pair_key}: znaleziono {len(common_symbols)} wspólnych aktywów.")
-        pair_verification = {}
-        for symbol in sorted(common_symbols):
-            verification = verify_asset_for_pair(symbol, data1, data2, coingecko_mapping)
-            pair_verification[symbol] = verification
-        common_assets_by_pair[pair_key] = pair_verification
+    # Obliczamy wspólne aktywa – przecięcie symboli ze wszystkich giełd
+    all_sets = []
+    for exch, data in market_data_by_exchange.items():
+        all_sets.append(set(data.keys()))
+    if not all_sets:
+        logging.error("Nie znaleziono żadnych danych rynkowych.")
+        return
 
-    # Zapisujemy wyniki do pliku JSON
-    save_data_to_file(common_assets_by_pair, "common_assets_by_pair.json")
+    common_assets = set.intersection(*all_sets)
+    logging.info(f"Znaleziono {len(common_assets)} wspólnych aktywów (przed weryfikacją spójności).")
 
-    # Opcjonalnie: wyświetlamy wyniki na konsoli
-    for pair, verif_data in common_assets_by_pair.items():
-        print(f"\nPara giełd: {pair}")
-        for symbol, result in verif_data.items():
-            print(f"  {symbol}: spójność={result['consistent_base_quote']}, base={result['base_values']}, quote={result['quote_values']}, CoinGecko id={result.get('coingecko_id')}")
-    
-    logging.info("Program zakończył działanie pomyślnie.")
+    # Weryfikacja spójności danych technicznych dla każdego symbolu
+    verified_assets = {}
+    for symbol in common_assets:
+        bases = set()
+        quotes = set()
+        ids = set()
+        for exch, data in market_data_by_exchange.items():
+            asset = data.get(symbol)
+            if asset:
+                bases.add(asset.get('base', ''))
+                quotes.add(asset.get('quote', ''))
+                ids.add(asset.get('id', ''))
+        if len(bases) == 1 and len(quotes) == 1 and len(ids) == 1:
+            verified_assets[symbol] = {
+                'base': list(bases)[0],
+                'quote': list(quotes)[0],
+                'id': list(ids)[0]
+            }
+        else:
+            logging.warning(f"Symbol {symbol} niespójny: base={bases}, quote={quotes}, id={ids}")
+    logging.info(f"Zatwierdzono {len(verified_assets)} aktywów spośród {len(common_assets)} wspólnych.")
+
+    # Zapisujemy wyniki do pliku
+    try:
+        with open("verified_common_assets.json", "w", encoding="utf-8") as f:
+            json.dump(verified_assets, f, ensure_ascii=False, indent=4)
+        logging.info("Zapisano zweryfikowaną listę wspólnych aktywów do pliku 'verified_common_assets.json'.")
+    except Exception as e:
+        logging.error(f"Błąd podczas zapisu zweryfikowanych danych: {e}")
 
 if __name__ == "__main__":
     try:
-        main()
+        create_verified_common_assets()
+        logging.info("Program tworzenia listy wspólnych aktywów zakończył działanie pomyślnie.")
     except Exception as e:
         logging.critical(f"Krytyczny błąd: {e}")
