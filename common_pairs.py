@@ -165,7 +165,7 @@ def main():
         common_assets_by_pair[pair_key] = pair_verification
 
     # Zapisujemy wyniki do pliku JSON
-    save_data_to_file(common_assets_by_pair, "common_assets_by_pair_verified.json")
+    save_data_to_file(common_assets_by_pair, "common_assets_by_pair.json")
 
     # Opcjonalnie: wyświetlamy wyniki na konsoli
     for pair, verif_data in common_assets_by_pair.items():
