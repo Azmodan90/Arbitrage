@@ -1,0 +1,40 @@
+2025-02-09 17:39:41,935 - INFO - Uruchamianie programu arbitrażowego
+2025-02-09 17:39:44,335 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-09 17:39:44,336 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów
+2025-02-09 17:39:44,402 - INFO - Porównuję aktywa dla pary: binance - kucoin
+2025-02-09 17:39:44,403 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-09 17:39:50,169 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-09 17:39:52,353 - INFO - Wspólne aktywa dla BinanceExchange i KucoinExchange: 498 znalezione
+2025-02-09 17:39:52,354 - INFO - Porównuję aktywa dla pary: binance - bitget
+2025-02-09 17:39:52,355 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-09 17:39:52,356 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-09 17:39:55,245 - INFO - Wspólne aktywa dla BinanceExchange i BitgetExchange: 784 znalezione
+2025-02-09 17:39:55,246 - INFO - Porównuję aktywa dla pary: binance - bitstamp
+2025-02-09 17:39:55,247 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-09 17:39:55,247 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-09 17:39:55,800 - INFO - Wspólne aktywa dla BinanceExchange i BitstampExchange: 52 znalezione
+2025-02-09 17:39:55,801 - INFO - Porównuję aktywa dla pary: kucoin - bitget
+2025-02-09 17:39:55,802 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-09 17:39:55,803 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-09 17:39:55,804 - INFO - Wspólne aktywa dla KucoinExchange i BitgetExchange: 542 znalezione
+2025-02-09 17:39:55,805 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
+2025-02-09 17:39:55,805 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-09 17:39:55,806 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-09 17:39:55,807 - INFO - Wspólne aktywa dla KucoinExchange i BitstampExchange: 20 znalezione
+2025-02-09 17:39:55,807 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
+2025-02-09 17:39:55,808 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-09 17:39:55,808 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-09 17:39:55,809 - INFO - Wspólne aktywa dla BitgetExchange i BitstampExchange: 28 znalezione
+2025-02-09 17:39:55,822 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
+2025-02-09 17:39:55,823 - INFO - Para binance-kucoin ma 498 wspólnych aktywów.
+2025-02-09 17:39:55,823 - INFO - Para binance-bitget ma 784 wspólnych aktywów.
+2025-02-09 17:39:55,824 - INFO - Para binance-bitstamp ma 52 wspólnych aktywów.
+2025-02-09 17:39:55,824 - INFO - Para kucoin-bitget ma 542 wspólnych aktywów.
+2025-02-09 17:39:55,825 - INFO - Para kucoin-bitstamp ma 20 wspólnych aktywów.
+2025-02-09 17:39:55,825 - INFO - Para bitget-bitstamp ma 28 wspólnych aktywów.
+2025-02-09 17:40:01,986 - INFO - Wybrano opcję rozpoczęcia arbitrażu
+2025-02-09 17:40:29,011 - INFO - 
+Otrzymano sygnał SIGINT. Zatrzymywanie programu...
+2025-02-09 17:40:29,012 - INFO - Anulowanie zadań: [<Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:67> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:67> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:67> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:63> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:67> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:67> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:67> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>]
+2025-02-09 17:40:29,027 - INFO - Zadania anulowane
+2025-02-09 17:41:59,111 - INFO - Wyjście z programu

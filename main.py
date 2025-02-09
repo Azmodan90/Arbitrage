@@ -11,15 +11,12 @@ from arbitrage import PairArbitrageStrategy
 import common_assets
 
 def setup_logging():
+    # Konfiguracja logowania ogólnego - tylko do pliku app.log
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     if logger.hasHandlers():
         logger.handlers.clear()
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    console_handler.setFormatter(formatter)
-    logger.addHandler(console_handler)
     file_handler = logging.FileHandler('app.log', mode='a', encoding='utf-8')
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
@@ -32,7 +29,10 @@ async def shutdown(signal_name, loop):
     for task in tasks:
         task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
+    # Dodatkowa przerwa, aby dać czas na zakończenie generatorów asynchronicznych
     await asyncio.sleep(0.2)
+    # Zakończenie asynchronicznych generatorów
+    await loop.shutdown_asyncgens()
 
 def setup_signal_handlers(loop):
     for sig in (signal.SIGINT, signal.SIGTERM):
@@ -82,6 +82,7 @@ def run_arbitrage(exchanges):
         pending = asyncio.all_tasks(loop)
         if pending:
             loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
+            loop.run_until_complete(loop.shutdown_asyncgens())
         loop.close()
 
 def main():

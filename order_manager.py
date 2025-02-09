@@ -1,7 +1,5 @@
 import logging
 
-logging.basicConfig(level=logging.INFO)
-
 class OrderManager:
     def __init__(self):
         self.orders = []

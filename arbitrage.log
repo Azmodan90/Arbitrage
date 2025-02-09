@@ -1,0 +1,721 @@
+2025-02-09 17:40:01,993 - INFO - binance-kucoin - Uruchamiam strategię arbitrażu dla 498 aktywów.
+2025-02-09 17:40:01,993 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: KDA/USDT
+2025-02-09 17:40:02,002 - INFO - binance-bitget - Uruchamiam strategię arbitrażu dla 784 aktywów.
+2025-02-09 17:40:02,004 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: VINE/USDT:USDT
+2025-02-09 17:40:02,007 - INFO - binance-bitstamp - Uruchamiam strategię arbitrażu dla 52 aktywów.
+2025-02-09 17:40:02,009 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LINK/GBP
+2025-02-09 17:40:02,013 - INFO - kucoin-bitget - Uruchamiam strategię arbitrażu dla 542 aktywów.
+2025-02-09 17:40:02,016 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: EGP/USDT
+2025-02-09 17:40:02,021 - INFO - kucoin-bitstamp - Uruchamiam strategię arbitrażu dla 20 aktywów.
+2025-02-09 17:40:02,022 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: WBTC/BTC
+2025-02-09 17:40:02,025 - INFO - bitget-bitstamp - Uruchamiam strategię arbitrażu dla 28 aktywów.
+2025-02-09 17:40:02,025 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ADA/EUR
+2025-02-09 17:40:10,200 - INFO - kucoin-bitget - ex1: pobrana cena = 1.9677
+2025-02-09 17:40:10,206 - INFO - kucoin-bitget - ex2: pobrana cena = 1.961
+2025-02-09 17:40:10,212 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: KDA/USDT
+2025-02-09 17:40:10,286 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.6702
+2025-02-09 17:40:10,316 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.67048
+2025-02-09 17:40:10,322 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SUI/EUR
+2025-02-09 17:40:10,865 - INFO - kucoin-bitget - ex1: pobrana cena = 0.5371
+2025-02-09 17:40:10,872 - INFO - kucoin-bitget - ex2: pobrana cena = 0.5372
+2025-02-09 17:40:10,878 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: FLOW/USDT
+2025-02-09 17:40:11,029 - INFO - bitget-bitstamp - ex1: pobrana cena = 2.9584
+2025-02-09 17:40:11,092 - INFO - bitget-bitstamp - ex2: pobrana cena = 3.002
+2025-02-09 17:40:11,099 - INFO - bitget-bitstamp - Okazja arbitrażowa dla SUI/EUR: Kupno na BitgetExchange (cena: 2.9584, efektywna: 2.9614), sprzedaż na BitstampExchange (cena: 3.002, efektywna: 2.9945), zysk: 1.12%
+2025-02-09 17:40:11,197 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 17:40:11,509 - INFO - kucoin-bitget - ex1: pobrana cena = 0.4996
+2025-02-09 17:40:11,515 - INFO - kucoin-bitget - ex2: pobrana cena = 0.5
+2025-02-09 17:40:11,521 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ANIME/USDT
+2025-02-09 17:40:11,689 - INFO - bitget-bitstamp - ex1: pobrana cena = 96024.0
+2025-02-09 17:40:11,894 - INFO - bitget-bitstamp - ex2: pobrana cena = 96080.0
+2025-02-09 17:40:11,901 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LTC/EUR
+2025-02-09 17:40:11,915 - INFO - kucoin-bitstamp - ex1: pobrana cena = 1.0
+2025-02-09 17:40:11,921 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.9941
+2025-02-09 17:40:11,928 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 17:40:12,152 - INFO - kucoin-bitget - ex1: pobrana cena = 0.027226
+2025-02-09 17:40:12,158 - INFO - kucoin-bitget - ex2: pobrana cena = 0.0272
+2025-02-09 17:40:12,197 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: MOG/USDT
+2025-02-09 17:40:12,246 - INFO - bitget-bitstamp - ex1: pobrana cena = 104.68
+2025-02-09 17:40:12,253 - INFO - bitget-bitstamp - ex2: pobrana cena = 104.79
+2025-02-09 17:40:12,258 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: NEAR/EUR
+2025-02-09 17:40:12,587 - INFO - kucoin-bitstamp - ex1: pobrana cena = 95992.8
+2025-02-09 17:40:12,593 - INFO - kucoin-bitstamp - ex2: pobrana cena = 96080.0
+2025-02-09 17:40:12,668 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/EUR
+2025-02-09 17:40:12,683 - INFO - bitget-bitstamp - ex1: pobrana cena = 3.146
+2025-02-09 17:40:12,696 - INFO - bitget-bitstamp - ex2: pobrana cena = 3.16
+2025-02-09 17:40:12,702 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/BTC
+2025-02-09 17:40:12,728 - INFO - kucoin-bitget - ex1: pobrana cena = 8.37e-07
+2025-02-09 17:40:12,734 - INFO - kucoin-bitget - ex2: pobrana cena = 8.37e-07
+2025-02-09 17:40:12,740 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: KNC/USDT
+2025-02-09 17:40:13,035 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2572.79
+2025-02-09 17:40:13,041 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2560.0
+2025-02-09 17:40:13,049 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/BTC
+2025-02-09 17:40:13,056 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.0275
+2025-02-09 17:40:13,062 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.02752733
+2025-02-09 17:40:13,069 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/EUR
+2025-02-09 17:40:13,346 - INFO - kucoin-bitget - ex1: pobrana cena = 0.4197
+2025-02-09 17:40:13,352 - INFO - kucoin-bitget - ex2: pobrana cena = 0.4181
+2025-02-09 17:40:13,387 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ARC/USDT
+2025-02-09 17:40:13,495 - INFO - bitget-bitstamp - ex1: pobrana cena = 2561.91
+2025-02-09 17:40:13,501 - INFO - bitget-bitstamp - ex2: pobrana cena = 2560.0
+2025-02-09 17:40:13,510 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDC
+2025-02-09 17:40:13,517 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.02749
+2025-02-09 17:40:13,522 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.02752733
+2025-02-09 17:40:13,528 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ADA/BTC
+2025-02-09 17:40:13,940 - INFO - bitget-bitstamp - ex1: pobrana cena = 96004.54
+2025-02-09 17:40:13,946 - INFO - bitget-bitstamp - ex2: pobrana cena = 96034.0
+2025-02-09 17:40:13,953 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LTC/BTC
+2025-02-09 17:40:13,959 - INFO - kucoin-bitget - ex1: pobrana cena = 0.016
+2025-02-09 17:40:13,965 - INFO - kucoin-bitget - ex2: pobrana cena = 0.1708
+2025-02-09 17:40:13,971 - INFO - kucoin-bitget - Okazja arbitrażowa dla ARC/USDT: Kupno na KucoinExchange (cena: 0.016, efektywna: 0.0160), sprzedaż na BitgetExchange (cena: 0.1708, efektywna: 0.1706), zysk: 965.37%
+2025-02-09 17:40:13,998 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: XCAD/USDT
+2025-02-09 17:40:14,005 - INFO - kucoin-bitstamp - ex1: pobrana cena = 7.19e-06
+2025-02-09 17:40:14,011 - INFO - kucoin-bitstamp - ex2: pobrana cena = 7.12e-06
+2025-02-09 17:40:14,017 - INFO - kucoin-bitstamp - Okazja arbitrażowa dla ADA/BTC: Kupno na BitstampExchange (cena: 7.12e-06, efektywna: 0.0000), sprzedaż na KucoinExchange (cena: 7.19e-06, efektywna: 0.0000), zysk: 0.63%
+2025-02-09 17:40:14,023 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDC
+2025-02-09 17:40:14,346 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.00112
+2025-02-09 17:40:14,353 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.0011258
+2025-02-09 17:40:14,359 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/EUR
+2025-02-09 17:40:14,415 - INFO - kucoin-bitget - ex1: pobrana cena = 0.1107
+2025-02-09 17:40:14,421 - INFO - kucoin-bitget - ex2: pobrana cena = 0.1098
+2025-02-09 17:40:14,442 - INFO - kucoin-bitget - Okazja arbitrażowa dla XCAD/USDT: Kupno na BitgetExchange (cena: 0.1098, efektywna: 0.1099), sprzedaż na KucoinExchange (cena: 0.1107, efektywna: 0.1106), zysk: 0.62%
+2025-02-09 17:40:14,488 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ANYONE/USDT
+2025-02-09 17:40:14,654 - INFO - kucoin-bitstamp - ex1: pobrana cena = 96022.8
+2025-02-09 17:40:14,660 - INFO - kucoin-bitstamp - ex2: pobrana cena = 96034.0
+2025-02-09 17:40:14,677 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LTC/BTC
+2025-02-09 17:40:14,768 - INFO - bitget-bitstamp - ex1: pobrana cena = 93165.23
+2025-02-09 17:40:14,810 - INFO - bitget-bitstamp - ex2: pobrana cena = 93102.0
+2025-02-09 17:40:14,816 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SOL/EUR
+2025-02-09 17:40:14,945 - INFO - kucoin-bitget - ex1: pobrana cena = 0.634
+2025-02-09 17:40:14,963 - INFO - kucoin-bitget - ex2: pobrana cena = 0.641
+2025-02-09 17:40:15,001 - INFO - kucoin-bitget - Okazja arbitrażowa dla ANYONE/USDT: Kupno na KucoinExchange (cena: 0.634, efektywna: 0.6346), sprzedaż na BitgetExchange (cena: 0.641, efektywna: 0.6404), zysk: 0.90%
+2025-02-09 17:40:15,012 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: HOLD/USDT
+2025-02-09 17:40:15,266 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.001123
+2025-02-09 17:40:15,273 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.0011258
+2025-02-09 17:40:15,279 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/EUR
+2025-02-09 17:40:15,286 - INFO - bitget-bitstamp - ex1: pobrana cena = 194.46
+2025-02-09 17:40:15,292 - INFO - bitget-bitstamp - ex2: pobrana cena = 194.4909
+2025-02-09 17:40:15,298 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/USDT
+2025-02-09 17:40:15,464 - INFO - kucoin-bitget - ex1: pobrana cena = 1.534
+2025-02-09 17:40:15,470 - INFO - kucoin-bitget - ex2: pobrana cena = 1.546
+2025-02-09 17:40:15,475 - INFO - kucoin-bitget - Okazja arbitrażowa dla HOLD/USDT: Kupno na KucoinExchange (cena: 1.534, efektywna: 1.5355), sprzedaż na BitgetExchange (cena: 1.546, efektywna: 1.5445), zysk: 0.58%
+2025-02-09 17:40:15,481 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: FIDA/USDT
+2025-02-09 17:40:15,600 - WARNING - binance-bitstamp - Dla ex1 pobrana cena jest None, pomijam LINK/GBP
+2025-02-09 17:40:15,606 - INFO - binance-bitstamp - ex2: pobrana cena = 15.33
+2025-02-09 17:40:15,612 - WARNING - binance-bitstamp - Niedostateczne dane dla LINK/GBP, pomijam ten symbol.
+2025-02-09 17:40:15,618 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/GBP
+2025-02-09 17:40:15,661 - INFO - bitget-bitstamp - ex1: pobrana cena = 2.4088
+2025-02-09 17:40:15,667 - INFO - bitget-bitstamp - ex2: pobrana cena = 2.41025
+2025-02-09 17:40:15,668 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: AVAX/EUR
+2025-02-09 17:40:15,708 - INFO - kucoin-bitstamp - ex1: pobrana cena = 93219.14
+2025-02-09 17:40:15,714 - INFO - kucoin-bitstamp - ex2: pobrana cena = 93102.0
+2025-02-09 17:40:15,719 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/USDT
+2025-02-09 17:40:15,885 - INFO - kucoin-bitget - ex1: pobrana cena = 0.145
+2025-02-09 17:40:15,891 - INFO - kucoin-bitget - ex2: pobrana cena = 0.1451
+2025-02-09 17:40:15,897 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: RMV/USDT
+2025-02-09 17:40:15,933 - WARNING - binance-bitstamp - Dla ex1 pobrana cena jest None, pomijam ETH/GBP
+2025-02-09 17:40:15,939 - INFO - binance-bitstamp - ex2: pobrana cena = 2134.1
+2025-02-09 17:40:15,961 - WARNING - binance-bitstamp - Niedostateczne dane dla ETH/GBP, pomijam ten symbol.
+2025-02-09 17:40:15,979 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BCH/EUR
+2025-02-09 17:40:16,102 - INFO - bitget-bitstamp - ex1: pobrana cena = 24.14
+2025-02-09 17:40:16,108 - INFO - bitget-bitstamp - ex2: pobrana cena = 24.14543
+2025-02-09 17:40:16,154 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SHIB/EUR
+2025-02-09 17:40:16,161 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2.40852
+2025-02-09 17:40:16,167 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2.41025
+2025-02-09 17:40:16,176 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BCH/BTC
+2025-02-09 17:40:16,371 - INFO - binance-bitstamp - ex1: pobrana cena = 316.9
+2025-02-09 17:40:16,385 - INFO - binance-bitstamp - ex2: pobrana cena = 316.13
+2025-02-09 17:40:16,394 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: WBTC/BTC
+2025-02-09 17:40:16,401 - INFO - kucoin-bitget - ex1: pobrana cena = 0.004864
+2025-02-09 17:40:16,404 - INFO - kucoin-bitget - ex2: pobrana cena = 0.00484
+2025-02-09 17:40:16,410 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ORBS/USDT
+2025-02-09 17:40:16,511 - INFO - bitget-bitstamp - ex1: pobrana cena = 1.521e-05
+2025-02-09 17:40:16,516 - INFO - bitget-bitstamp - ex2: pobrana cena = 1.528e-05
+2025-02-09 17:40:16,528 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDT/EUR
+2025-02-09 17:40:16,586 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.003406
+2025-02-09 17:40:16,587 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.0033987
+2025-02-09 17:40:16,587 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDT/EUR
+2025-02-09 17:40:16,677 - INFO - binance-bitstamp - ex1: pobrana cena = 0.9983
+2025-02-09 17:40:16,678 - INFO - binance-bitstamp - ex2: pobrana cena = 0.9941
+2025-02-09 17:40:16,679 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ADA/EUR
+2025-02-09 17:40:16,764 - INFO - binance-kucoin - ex1: pobrana cena = 0.5366
+2025-02-09 17:40:16,765 - INFO - binance-kucoin - ex2: pobrana cena = 0.5371
+2025-02-09 17:40:16,765 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: EPX/USDT
+2025-02-09 17:40:16,802 - INFO - kucoin-bitget - ex1: pobrana cena = 0.02218
+2025-02-09 17:40:16,802 - INFO - kucoin-bitget - ex2: pobrana cena = 0.02213
+2025-02-09 17:40:16,803 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: SAND/USDT
+2025-02-09 17:40:16,842 - INFO - binance-bitget - ex1: pobrana cena = 0.10668
+2025-02-09 17:40:16,842 - INFO - binance-bitget - ex2: pobrana cena = 0.1067
+2025-02-09 17:40:16,843 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: KDA/USDT
+2025-02-09 17:40:16,850 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.9704
+2025-02-09 17:40:16,850 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.96959
+2025-02-09 17:40:16,851 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: PEPE/EUR
+2025-02-09 17:40:17,042 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.9704
+2025-02-09 17:40:17,042 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.96959
+2025-02-09 17:40:17,043 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: AAVE/BTC
+2025-02-09 17:40:17,161 - INFO - binance-bitget - ex1: pobrana cena = 0.5366
+2025-02-09 17:40:17,162 - INFO - binance-bitget - ex2: pobrana cena = 0.5362
+2025-02-09 17:40:17,163 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: MOVR/USDT:USDT
+2025-02-09 17:40:17,170 - INFO - bitget-bitstamp - ex1: pobrana cena = 9.18e-06
+2025-02-09 17:40:17,170 - INFO - bitget-bitstamp - ex2: pobrana cena = 9.2e-06
+2025-02-09 17:40:17,171 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: AAVE/BTC
+2025-02-09 17:40:17,241 - INFO - kucoin-bitget - ex1: pobrana cena = 0.38206
+2025-02-09 17:40:17,242 - INFO - kucoin-bitget - ex2: pobrana cena = 0.3819
+2025-02-09 17:40:17,242 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: LUCE/USDT
+2025-02-09 17:40:17,256 - WARNING - binance-kucoin - Dla ex1 pobrana cena jest None, pomijam EPX/USDT
+2025-02-09 17:40:17,257 - INFO - binance-kucoin - ex2: pobrana cena = 2.57e-05
+2025-02-09 17:40:17,257 - WARNING - binance-kucoin - Niedostateczne dane dla EPX/USDT, pomijam ten symbol.
+2025-02-09 17:40:17,258 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: XTZ/BTC
+2025-02-09 17:40:17,461 - INFO - binance-bitget - ex1: pobrana cena = 7.112
+2025-02-09 17:40:17,461 - INFO - binance-bitget - ex2: pobrana cena = 7.126
+2025-02-09 17:40:17,462 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ANIME/USDT
+2025-02-09 17:40:17,528 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.002534
+2025-02-09 17:40:17,529 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.00245428
+2025-02-09 17:40:17,530 - INFO - bitget-bitstamp - Okazja arbitrażowa dla AAVE/BTC: Kupno na BitstampExchange (cena: 0.00245428, efektywna: 0.0025), sprzedaż na BitgetExchange (cena: 0.002534, efektywna: 0.0025), zysk: 2.89%
+2025-02-09 17:40:17,531 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDT
+2025-02-09 17:40:17,531 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.00253
+2025-02-09 17:40:17,533 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.00245428
+2025-02-09 17:40:17,535 - INFO - kucoin-bitstamp - Okazja arbitrażowa dla AAVE/BTC: Kupno na BitstampExchange (cena: 0.00245428, efektywna: 0.0025), sprzedaż na KucoinExchange (cena: 0.00253, efektywna: 0.0025), zysk: 2.73%
+2025-02-09 17:40:17,536 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDT
+2025-02-09 17:40:17,726 - INFO - binance-kucoin - ex1: pobrana cena = 9.22e-06
+2025-02-09 17:40:17,727 - INFO - binance-kucoin - ex2: pobrana cena = 9.31e-06
+2025-02-09 17:40:17,728 - INFO - binance-kucoin - Okazja arbitrażowa dla XTZ/BTC: Kupno na BinanceExchange (cena: 9.22e-06, efektywna: 0.0000), sprzedaż na KucoinExchange (cena: 9.31e-06, efektywna: 0.0000), zysk: 0.77%
+2025-02-09 17:40:17,728 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: FLOW/USDT
+2025-02-09 17:40:17,733 - INFO - kucoin-bitget - ex1: pobrana cena = 0.00936
+2025-02-09 17:40:17,734 - INFO - kucoin-bitget - ex2: pobrana cena = 0.00934
+2025-02-09 17:40:17,734 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: STG/USDT
+2025-02-09 17:40:17,777 - INFO - binance-bitget - ex1: pobrana cena = 0.0272
+2025-02-09 17:40:17,778 - INFO - binance-bitget - ex2: pobrana cena = 0.0272
+2025-02-09 17:40:17,778 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: FLOW/USDT
+2025-02-09 17:40:17,831 - INFO - bitget-bitstamp - ex1: pobrana cena = 2639.27
+2025-02-09 17:40:17,832 - INFO - bitget-bitstamp - ex2: pobrana cena = 2657.6
+2025-02-09 17:40:17,832 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ONDO/EUR
+2025-02-09 17:40:17,919 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2639.45
+2025-02-09 17:40:17,920 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2657.6
+2025-02-09 17:40:17,920 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDC/USDT
+2025-02-09 17:40:18,097 - INFO - binance-bitget - ex1: pobrana cena = 0.499
+2025-02-09 17:40:18,097 - INFO - binance-bitget - ex2: pobrana cena = 0.4996
+2025-02-09 17:40:18,098 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: TON/USDT:USDT
+2025-02-09 17:40:18,162 - INFO - bitget-bitstamp - ex1: pobrana cena = 1.2924
+2025-02-09 17:40:18,164 - INFO - bitget-bitstamp - ex2: pobrana cena = 1.3266
+2025-02-09 17:40:18,164 - INFO - bitget-bitstamp - Okazja arbitrażowa dla ONDO/EUR: Kupno na BitgetExchange (cena: 1.2924, efektywna: 1.2937), sprzedaż na BitstampExchange (cena: 1.3266, efektywna: 1.3233), zysk: 2.29%
+2025-02-09 17:40:18,165 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LINK/EUR
+2025-02-09 17:40:18,165 - INFO - binance-kucoin - ex1: pobrana cena = 0.499
+2025-02-09 17:40:18,166 - INFO - binance-kucoin - ex2: pobrana cena = 0.4996
+2025-02-09 17:40:18,168 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: ANIME/USDT
+2025-02-09 17:40:18,169 - INFO - kucoin-bitget - ex1: pobrana cena = 0.2708
+2025-02-09 17:40:18,170 - INFO - kucoin-bitget - ex2: pobrana cena = 0.2702
+2025-02-09 17:40:18,171 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: STX/USDT
+2025-02-09 17:40:18,407 - INFO - binance-bitget - ex1: pobrana cena = 3.807
+2025-02-09 17:40:18,408 - INFO - binance-bitget - ex2: pobrana cena = 3.81
+2025-02-09 17:40:18,408 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ZETA/USDT:USDT
+2025-02-09 17:40:18,473 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.9996
+2025-02-09 17:40:18,474 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.99992
+2025-02-09 17:40:18,474 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDC
+2025-02-09 17:40:18,484 - INFO - bitget-bitstamp - ex1: pobrana cena = 18.17
+2025-02-09 17:40:18,484 - INFO - bitget-bitstamp - ex2: pobrana cena = 18.15
+2025-02-09 17:40:18,484 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDC/USDT
+2025-02-09 17:40:18,592 - INFO - kucoin-bitget - ex1: pobrana cena = 0.9002
+2025-02-09 17:40:18,593 - INFO - kucoin-bitget - ex2: pobrana cena = 0.898
+2025-02-09 17:40:18,593 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ANKR/USDT
+2025-02-09 17:40:18,633 - INFO - binance-kucoin - ex1: pobrana cena = 0.0272
+2025-02-09 17:40:18,633 - INFO - binance-kucoin - ex2: pobrana cena = 0.027178
+2025-02-09 17:40:18,634 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: KNC/USDT
+2025-02-09 17:40:18,713 - INFO - binance-bitget - ex1: pobrana cena = 0.3056
+2025-02-09 17:40:18,713 - INFO - binance-bitget - ex2: pobrana cena = 0.3056
+2025-02-09 17:40:18,714 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: AEVO/USDT:USDT
+2025-02-09 17:40:18,797 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.9998
+2025-02-09 17:40:18,798 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.99992
+2025-02-09 17:40:18,798 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDC
+2025-02-09 17:40:18,860 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2641.19
+2025-02-09 17:40:18,861 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2639.2
+2025-02-09 17:40:18,861 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LINK/BTC
+2025-02-09 17:40:19,035 - INFO - binance-bitget - ex1: pobrana cena = 0.1554
+2025-02-09 17:40:19,036 - INFO - binance-bitget - ex2: pobrana cena = 0.1555
+2025-02-09 17:40:19,036 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ARK/USDT
+2025-02-09 17:40:19,056 - INFO - binance-kucoin - ex1: pobrana cena = 0.4182
+2025-02-09 17:40:19,057 - INFO - binance-kucoin - ex2: pobrana cena = 0.4197
+2025-02-09 17:40:19,058 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: ONT/BTC
+2025-02-09 17:40:19,122 - INFO - bitget-bitstamp - ex1: pobrana cena = 2640.1
+2025-02-09 17:40:19,123 - INFO - bitget-bitstamp - ex2: pobrana cena = 2639.2
+2025-02-09 17:40:19,123 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LINK/BTC
+2025-02-09 17:40:19,124 - INFO - kucoin-bitget - ex1: pobrana cena = 0.02266
+2025-02-09 17:40:19,125 - INFO - kucoin-bitget - ex2: pobrana cena = 0.02268
+2025-02-09 17:40:19,127 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: GPS/USDT
+2025-02-09 17:40:19,322 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.00019453
+2025-02-09 17:40:19,322 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.00019085
+2025-02-09 17:40:19,323 - INFO - kucoin-bitstamp - Okazja arbitrażowa dla LINK/BTC: Kupno na BitstampExchange (cena: 0.00019085, efektywna: 0.0002), sprzedaż na KucoinExchange (cena: 0.00019453, efektywna: 0.0002), zysk: 1.57%
+2025-02-09 17:40:19,323 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDC/EUR
+2025-02-09 17:40:19,361 - INFO - binance-bitget - ex1: pobrana cena = 0.403
+2025-02-09 17:40:19,362 - INFO - binance-bitget - ex2: pobrana cena = 0.4033
+2025-02-09 17:40:19,362 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: BOME/USDT:USDT
+2025-02-09 17:40:19,455 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.0001944
+2025-02-09 17:40:19,456 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.00019085
+2025-02-09 17:40:19,456 - INFO - bitget-bitstamp - Okazja arbitrażowa dla LINK/BTC: Kupno na BitstampExchange (cena: 0.00019085, efektywna: 0.0002), sprzedaż na BitgetExchange (cena: 0.0001944, efektywna: 0.0002), zysk: 1.50%
+2025-02-09 17:40:19,456 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDC/EUR
+2025-02-09 17:40:19,472 - INFO - binance-bitstamp - ex1: pobrana cena = 0.669
+2025-02-09 17:40:19,472 - INFO - binance-bitstamp - ex2: pobrana cena = 0.67048
+2025-02-09 17:40:19,473 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SUI/EUR
+2025-02-09 17:40:19,507 - INFO - binance-kucoin - ex1: pobrana cena = 2e-06
+2025-02-09 17:40:19,507 - INFO - binance-kucoin - ex2: pobrana cena = 2.007e-06
+2025-02-09 17:40:19,508 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: FIDA/USDT
+2025-02-09 17:40:19,522 - INFO - kucoin-bitget - ex1: pobrana cena = 0.16615
+2025-02-09 17:40:19,523 - INFO - kucoin-bitget - ex2: pobrana cena = 0.16637
+2025-02-09 17:40:19,523 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: SWARMS/USDT
+2025-02-09 17:40:19,694 - INFO - binance-bitget - ex1: pobrana cena = 0.002055
+2025-02-09 17:40:19,695 - INFO - binance-bitget - ex2: pobrana cena = 0.002055
+2025-02-09 17:40:19,695 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: CTSI/USDT:USDT
+2025-02-09 17:40:19,752 - INFO - binance-bitstamp - ex1: pobrana cena = 2.963
+2025-02-09 17:40:19,752 - INFO - binance-bitstamp - ex2: pobrana cena = 3.002
+2025-02-09 17:40:19,753 - INFO - binance-bitstamp - Okazja arbitrażowa dla SUI/EUR: Kupno na BinanceExchange (cena: 2.963, efektywna: 2.9660), sprzedaż na BitstampExchange (cena: 3.002, efektywna: 2.9945), zysk: 0.96%
+2025-02-09 17:40:19,753 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 17:40:19,754 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.9702
+2025-02-09 17:40:19,757 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.96932
+2025-02-09 17:40:19,757 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XLM/BTC
+2025-02-09 17:40:19,769 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.9702
+2025-02-09 17:40:19,770 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.96932
+2025-02-09 17:40:19,770 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/BTC
+2025-02-09 17:40:19,950 - INFO - binance-kucoin - ex1: pobrana cena = 0.1449
+2025-02-09 17:40:19,951 - INFO - binance-kucoin - ex2: pobrana cena = 0.145
+2025-02-09 17:40:19,951 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: LDO/USDC
+2025-02-09 17:40:19,976 - INFO - kucoin-bitget - ex1: pobrana cena = 0.0476
+2025-02-09 17:40:19,976 - INFO - kucoin-bitget - ex2: pobrana cena = 0.04741
+2025-02-09 17:40:19,977 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ALPINE/USDT
+2025-02-09 17:40:20,018 - INFO - binance-bitget - ex1: pobrana cena = 0.1065
+2025-02-09 17:40:20,019 - INFO - binance-bitget - ex2: pobrana cena = 0.1065
+2025-02-09 17:40:20,019 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: NEXO/USDT
+2025-02-09 17:40:20,025 - INFO - binance-bitstamp - ex1: pobrana cena = 96005.88
+2025-02-09 17:40:20,026 - INFO - binance-bitstamp - ex2: pobrana cena = 96080.0
+2025-02-09 17:40:20,027 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: FTM/EUR
+2025-02-09 17:40:20,063 - INFO - bitget-bitstamp - ex1: pobrana cena = 2.513e-05
+2025-02-09 17:40:20,064 - INFO - bitget-bitstamp - ex2: pobrana cena = 2.513e-05
+2025-02-09 17:40:20,064 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: DOGE/EUR
+2025-02-09 17:40:20,196 - INFO - kucoin-bitstamp - ex1: pobrana cena = 3.312e-06
+2025-02-09 17:40:20,197 - INFO - kucoin-bitstamp - ex2: pobrana cena = 3.33e-06
+2025-02-09 17:40:20,197 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/BTC
+2025-02-09 17:40:20,315 - WARNING - binance-bitstamp - Dla ex1 pobrana cena jest None, pomijam FTM/EUR
+2025-02-09 17:40:20,316 - INFO - binance-bitstamp - ex2: pobrana cena = 0.4015
+2025-02-09 17:40:20,316 - WARNING - binance-bitstamp - Niedostateczne dane dla FTM/EUR, pomijam ten symbol.
+2025-02-09 17:40:20,317 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LTC/EUR
+2025-02-09 17:40:20,388 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.24426
+2025-02-09 17:40:20,389 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.244
+2025-02-09 17:40:20,389 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/EUR
+2025-02-09 17:40:20,424 - INFO - kucoin-bitget - ex1: pobrana cena = 1.04
+2025-02-09 17:40:20,425 - INFO - kucoin-bitget - ex2: pobrana cena = 1.023
+2025-02-09 17:40:20,425 - INFO - kucoin-bitget - Okazja arbitrażowa dla ALPINE/USDT: Kupno na BitgetExchange (cena: 1.023, efektywna: 1.0240), sprzedaż na KucoinExchange (cena: 1.04, efektywna: 1.0390), zysk: 1.46%
+2025-02-09 17:40:20,426 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: DMAIL/USDT
+2025-02-09 17:40:20,432 - INFO - binance-kucoin - ex1: pobrana cena = 1.495
+2025-02-09 17:40:20,432 - INFO - binance-kucoin - ex2: pobrana cena = 1.5076
+2025-02-09 17:40:20,432 - INFO - binance-kucoin - Okazja arbitrażowa dla LDO/USDC: Kupno na BinanceExchange (cena: 1.495, efektywna: 1.4965), sprzedaż na KucoinExchange (cena: 1.5076, efektywna: 1.5061), zysk: 0.64%
+2025-02-09 17:40:20,433 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: AMB/USDT
+2025-02-09 17:40:20,580 - INFO - binance-bitstamp - ex1: pobrana cena = 104.49
+2025-02-09 17:40:20,580 - INFO - binance-bitstamp - ex2: pobrana cena = 104.79
+2025-02-09 17:40:20,581 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: NEAR/EUR
+2025-02-09 17:40:20,644 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2.51e-05
+2025-02-09 17:40:20,645 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2.513e-05
+2025-02-09 17:40:20,645 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH2/ETH
+2025-02-09 17:40:20,701 - INFO - bitget-bitstamp - ex1: pobrana cena = 2.3355
+2025-02-09 17:40:20,702 - INFO - bitget-bitstamp - ex2: pobrana cena = 2.33604
+2025-02-09 17:40:20,703 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: WIF/EUR
+2025-02-09 17:40:20,724 - INFO - binance-bitget - ex1: pobrana cena = 1.316
+2025-02-09 17:40:20,725 - INFO - binance-bitget - ex2: pobrana cena = 1.316
+2025-02-09 17:40:20,725 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: QNT/USDT:USDT
+2025-02-09 17:40:20,839 - INFO - binance-bitstamp - ex1: pobrana cena = 3.152
+2025-02-09 17:40:20,839 - INFO - binance-bitstamp - ex2: pobrana cena = 3.16
+2025-02-09 17:40:20,840 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/BTC
+2025-02-09 17:40:20,870 - INFO - kucoin-bitget - ex1: pobrana cena = 0.1244
+2025-02-09 17:40:20,871 - INFO - kucoin-bitget - ex2: pobrana cena = 0.1249
+2025-02-09 17:40:20,871 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: NYM/USDT
+2025-02-09 17:40:20,880 - INFO - binance-kucoin - ex1: pobrana cena = 0.00412
+2025-02-09 17:40:20,881 - INFO - binance-kucoin - ex2: pobrana cena = 0.00413
+2025-02-09 17:40:20,881 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: SAND/USDT
+2025-02-09 17:40:21,003 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.664
+2025-02-09 17:40:21,005 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.675
+2025-02-09 17:40:21,006 - INFO - bitget-bitstamp - Okazja arbitrażowa dla WIF/EUR: Kupno na BitgetExchange (cena: 0.664, efektywna: 0.6647), sprzedaż na BitstampExchange (cena: 0.675, efektywna: 0.6733), zysk: 1.30%
+2025-02-09 17:40:21,079 - INFO - binance-bitget - ex1: pobrana cena = 87.09
+2025-02-09 17:40:21,080 - INFO - binance-bitget - ex2: pobrana cena = 87.08
+2025-02-09 17:40:21,081 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: SLERF/USDT:USDT
+2025-02-09 17:40:21,106 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.998
+2025-02-09 17:40:21,107 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.99909999
+2025-02-09 17:40:21,108 - INFO - binance-bitstamp - ex1: pobrana cena = 0.0275
+2025-02-09 17:40:21,109 - INFO - binance-bitstamp - ex2: pobrana cena = 0.02752733
+2025-02-09 17:40:21,110 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/EUR
+2025-02-09 17:40:21,306 - INFO - binance-kucoin - ex1: pobrana cena = 0.3818
+2025-02-09 17:40:21,307 - INFO - binance-kucoin - ex2: pobrana cena = 0.38206
+2025-02-09 17:40:21,308 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: STG/USDT
+2025-02-09 17:40:21,374 - INFO - binance-bitstamp - ex1: pobrana cena = 2564.03
+2025-02-09 17:40:21,375 - INFO - binance-bitstamp - ex2: pobrana cena = 2560.0
+2025-02-09 17:40:21,375 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ENJ/EUR
+2025-02-09 17:40:21,398 - INFO - kucoin-bitget - ex1: pobrana cena = 0.06212
+2025-02-09 17:40:21,398 - INFO - kucoin-bitget - ex2: pobrana cena = 0.062
+2025-02-09 17:40:21,399 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: FRED/USDT
+2025-02-09 17:40:21,403 - INFO - binance-bitget - ex1: pobrana cena = 0.1048
+2025-02-09 17:40:21,404 - INFO - binance-bitget - ex2: pobrana cena = 0.1049
+2025-02-09 17:40:21,404 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: CVC/USDT:USDT
+2025-02-09 17:40:21,613 - INFO - binance-kucoin - ex1: pobrana cena = 0.2702
+2025-02-09 17:40:21,614 - INFO - binance-kucoin - ex2: pobrana cena = 0.2708
+2025-02-09 17:40:21,615 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: STX/USDT
+2025-02-09 17:40:21,637 - WARNING - binance-bitstamp - Dla ex1 pobrana cena jest None, pomijam ENJ/EUR
+2025-02-09 17:40:21,638 - INFO - binance-bitstamp - ex2: pobrana cena = 0.15002
+2025-02-09 17:40:21,639 - WARNING - binance-bitstamp - Niedostateczne dane dla ENJ/EUR, pomijam ten symbol.
+2025-02-09 17:40:21,639 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/GBP
+2025-02-09 17:40:21,761 - WARNING - binance-bitget - Dla ex1 pobrana cena jest None, pomijam CVC/USDT:USDT
+2025-02-09 17:40:21,762 - INFO - binance-bitget - ex2: pobrana cena = 0.113
+2025-02-09 17:40:21,763 - WARNING - binance-bitget - Niedostateczne dane dla CVC/USDT:USDT, pomijam ten symbol.
+2025-02-09 17:40:21,763 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: LEVER/USDT
+2025-02-09 17:40:21,883 - INFO - kucoin-bitget - ex1: pobrana cena = 0.0031
+2025-02-09 17:40:21,884 - INFO - kucoin-bitget - ex2: pobrana cena = 0.00313
+2025-02-09 17:40:21,884 - INFO - kucoin-bitget - Okazja arbitrażowa dla FRED/USDT: Kupno na KucoinExchange (cena: 0.0031, efektywna: 0.0031), sprzedaż na BitgetExchange (cena: 0.00313, efektywna: 0.0031), zysk: 0.77%
+2025-02-09 17:40:21,885 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: LINK/BTC
+2025-02-09 17:40:21,901 - WARNING - binance-bitstamp - Dla ex1 pobrana cena jest None, pomijam BTC/GBP
+2025-02-09 17:40:21,902 - INFO - binance-bitstamp - ex2: pobrana cena = 77579.0
+2025-02-09 17:40:21,902 - WARNING - binance-bitstamp - Niedostateczne dane dla BTC/GBP, pomijam ten symbol.
+2025-02-09 17:40:21,902 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/GBP
+2025-02-09 17:40:22,008 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ADA/EUR
+2025-02-09 17:40:22,060 - INFO - binance-kucoin - ex1: pobrana cena = 0.899
+2025-02-09 17:40:22,060 - INFO - binance-kucoin - ex2: pobrana cena = 0.9002
+2025-02-09 17:40:22,060 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: ANKR/USDT
+2025-02-09 17:40:22,086 - INFO - binance-bitget - ex1: pobrana cena = 0.001212
+2025-02-09 17:40:22,086 - INFO - binance-bitget - ex2: pobrana cena = 0.00121
+2025-02-09 17:40:22,087 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: PEPE/USDC
+2025-02-09 17:40:22,109 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: WBTC/BTC
+2025-02-09 17:40:22,169 - WARNING - binance-bitstamp - Dla ex1 pobrana cena jest None, pomijam XRP/GBP
+2025-02-09 17:40:22,169 - INFO - binance-bitstamp - ex2: pobrana cena = 2.00101
+2025-02-09 17:40:22,170 - WARNING - binance-bitstamp - Niedostateczne dane dla XRP/GBP, pomijam ten symbol.
+2025-02-09 17:40:22,171 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ADA/BTC
+2025-02-09 17:40:22,314 - INFO - kucoin-bitget - ex1: pobrana cena = 0.00019453
+2025-02-09 17:40:22,315 - INFO - kucoin-bitget - ex2: pobrana cena = 0.0001944
+2025-02-09 17:40:22,315 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: USDC/EUR
+2025-02-09 17:40:22,316 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.6688
+2025-02-09 17:40:22,318 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.67048
+2025-02-09 17:40:22,319 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SUI/EUR
+2025-02-09 17:40:22,383 - INFO - binance-bitget - ex1: pobrana cena = 9.46e-06
+2025-02-09 17:40:22,383 - INFO - binance-bitget - ex2: pobrana cena = 9.46e-06
+2025-02-09 17:40:22,384 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: KNC/USDT
+2025-02-09 17:40:22,439 - INFO - binance-bitstamp - ex1: pobrana cena = 7.19e-06
+2025-02-09 17:40:22,440 - INFO - binance-bitstamp - ex2: pobrana cena = 7.12e-06
+2025-02-09 17:40:22,440 - INFO - binance-bitstamp - Okazja arbitrażowa dla ADA/BTC: Kupno na BitstampExchange (cena: 7.12e-06, efektywna: 0.0000), sprzedaż na BinanceExchange (cena: 7.19e-06, efektywna: 0.0000), zysk: 0.63%
+2025-02-09 17:40:22,441 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDC
+2025-02-09 17:40:22,501 - INFO - binance-kucoin - ex1: pobrana cena = 0.02268
+2025-02-09 17:40:22,501 - INFO - binance-kucoin - ex2: pobrana cena = 0.02266
+2025-02-09 17:40:22,502 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: ALPINE/USDT
+2025-02-09 17:40:22,511 - INFO - kucoin-bitstamp - ex1: pobrana cena = 1.0
+2025-02-09 17:40:22,511 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.9941
+2025-02-09 17:40:22,511 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 17:40:22,681 - INFO - bitget-bitstamp - ex1: pobrana cena = 2.9552
+2025-02-09 17:40:22,682 - INFO - bitget-bitstamp - ex2: pobrana cena = 3.002
+2025-02-09 17:40:22,682 - INFO - bitget-bitstamp - Okazja arbitrażowa dla SUI/EUR: Kupno na BitgetExchange (cena: 2.9552, efektywna: 2.9582), sprzedaż na BitstampExchange (cena: 3.002, efektywna: 2.9945), zysk: 1.23%
+2025-02-09 17:40:22,683 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 17:40:22,699 - INFO - binance-bitstamp - ex1: pobrana cena = 96031.98
+2025-02-09 17:40:22,700 - INFO - binance-bitstamp - ex2: pobrana cena = 96034.0
+2025-02-09 17:40:22,700 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: GRT/EUR
+2025-02-09 17:40:22,719 - INFO - binance-bitget - ex1: pobrana cena = 0.4182
+2025-02-09 17:40:22,720 - INFO - binance-bitget - ex2: pobrana cena = 0.4181
+2025-02-09 17:40:22,720 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ENJ/USDT:USDT
+2025-02-09 17:40:22,748 - INFO - kucoin-bitget - ex1: pobrana cena = 0.9702
+2025-02-09 17:40:22,748 - INFO - kucoin-bitget - ex2: pobrana cena = 0.9702
+2025-02-09 17:40:22,749 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: CELO/USDT
+2025-02-09 17:40:22,964 - INFO - binance-kucoin - ex1: pobrana cena = 1.02
+2025-02-09 17:40:22,965 - INFO - binance-kucoin - ex2: pobrana cena = 1.04
+2025-02-09 17:40:22,965 - INFO - binance-kucoin - Okazja arbitrażowa dla ALPINE/USDT: Kupno na BinanceExchange (cena: 1.02, efektywna: 1.0210), sprzedaż na KucoinExchange (cena: 1.04, efektywna: 1.0390), zysk: 1.76%
+2025-02-09 17:40:22,966 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: NEO/ETH
+2025-02-09 17:40:22,966 - INFO - binance-bitstamp - ex1: pobrana cena = 0.1279
+2025-02-09 17:40:22,968 - INFO - binance-bitstamp - ex2: pobrana cena = 0.1273
+2025-02-09 17:40:22,968 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LTC/BTC
+2025-02-09 17:40:22,980 - INFO - bitget-bitstamp - ex1: pobrana cena = 96023.01
+2025-02-09 17:40:22,980 - INFO - bitget-bitstamp - ex2: pobrana cena = 96080.0
+2025-02-09 17:40:22,981 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LTC/EUR
+2025-02-09 17:40:23,003 - INFO - kucoin-bitstamp - ex1: pobrana cena = 96008.7
+2025-02-09 17:40:23,003 - INFO - kucoin-bitstamp - ex2: pobrana cena = 96080.0
+2025-02-09 17:40:23,004 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/EUR
+2025-02-09 17:40:23,041 - INFO - binance-bitget - ex1: pobrana cena = 0.11795
+2025-02-09 17:40:23,042 - INFO - binance-bitget - ex2: pobrana cena = 0.1183
+2025-02-09 17:40:23,043 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: POL/USDC
+2025-02-09 17:40:23,203 - INFO - kucoin-bitget - ex1: pobrana cena = 0.4245
+2025-02-09 17:40:23,203 - INFO - kucoin-bitget - ex2: pobrana cena = 0.4246
+2025-02-09 17:40:23,204 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: BEER/USDT
+2025-02-09 17:40:23,249 - INFO - binance-bitstamp - ex1: pobrana cena = 0.001122
+2025-02-09 17:40:23,250 - INFO - binance-bitstamp - ex2: pobrana cena = 0.0011258
+2025-02-09 17:40:23,250 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XLM/EUR
+2025-02-09 17:40:23,301 - INFO - bitget-bitstamp - ex1: pobrana cena = 104.68
+2025-02-09 17:40:23,301 - INFO - bitget-bitstamp - ex2: pobrana cena = 104.79
+2025-02-09 17:40:23,302 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: NEAR/EUR
+2025-02-09 17:40:23,350 - INFO - binance-bitget - ex1: pobrana cena = 0.3075
+2025-02-09 17:40:23,351 - INFO - binance-bitget - ex2: pobrana cena = 0.3073
+2025-02-09 17:40:23,351 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: FIDA/USDT
+2025-02-09 17:40:23,404 - WARNING - binance-kucoin - Dla ex1 pobrana cena jest None, pomijam NEO/ETH
+2025-02-09 17:40:23,404 - INFO - binance-kucoin - ex2: pobrana cena = 0.004053
+2025-02-09 17:40:23,404 - WARNING - binance-kucoin - Niedostateczne dane dla NEO/ETH, pomijam ten symbol.
+2025-02-09 17:40:23,405 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: LINK/BTC
+2025-02-09 17:40:23,411 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2572.79
+2025-02-09 17:40:23,412 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2560.0
+2025-02-09 17:40:23,412 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/BTC
+2025-02-09 17:40:23,504 - INFO - binance-bitstamp - ex1: pobrana cena = 0.3088
+2025-02-09 17:40:23,505 - INFO - binance-bitstamp - ex2: pobrana cena = 0.30857
+2025-02-09 17:40:23,505 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ARB/EUR
+2025-02-09 17:40:23,600 - INFO - bitget-bitstamp - ex1: pobrana cena = 3.143
+2025-02-09 17:40:23,600 - INFO - bitget-bitstamp - ex2: pobrana cena = 3.16
+2025-02-09 17:40:23,601 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/BTC
+2025-02-09 17:40:23,632 - INFO - kucoin-bitget - ex1: pobrana cena = 5.93e-06
+2025-02-09 17:40:23,632 - INFO - kucoin-bitget - ex2: pobrana cena = 5.916e-06
+2025-02-09 17:40:23,633 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: MANEKI/USDT
+2025-02-09 17:40:23,877 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.02749
+2025-02-09 17:40:23,878 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.02752733
+2025-02-09 17:40:23,878 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ADA/BTC
+2025-02-09 17:40:23,911 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.0275
+2025-02-09 17:40:23,911 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.02752733
+2025-02-09 17:40:23,912 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/EUR
+2025-02-09 17:40:23,921 - INFO - binance-kucoin - ex1: pobrana cena = 0.0001947
+2025-02-09 17:40:23,921 - INFO - binance-kucoin - ex2: pobrana cena = 0.00019453
+2025-02-09 17:40:23,922 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: CELO/USDT
+2025-02-09 17:40:24,044 - INFO - binance-bitget - ex1: pobrana cena = 0.1449
+2025-02-09 17:40:24,044 - INFO - binance-bitget - ex2: pobrana cena = 0.1451
+2025-02-09 17:40:24,045 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: UXLINK/USDT:USDT
+2025-02-09 17:40:24,120 - INFO - kucoin-bitget - ex1: pobrana cena = 0.00194
+2025-02-09 17:40:24,121 - INFO - kucoin-bitget - ex2: pobrana cena = 0.00195
+2025-02-09 17:40:24,122 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 17:40:24,208 - INFO - binance-bitstamp - ex1: pobrana cena = 0.4389
+2025-02-09 17:40:24,208 - INFO - binance-bitstamp - ex2: pobrana cena = 0.4436
+2025-02-09 17:40:24,208 - INFO - binance-bitstamp - Okazja arbitrażowa dla ARB/EUR: Kupno na BinanceExchange (cena: 0.4389, efektywna: 0.4393), sprzedaż na BitstampExchange (cena: 0.4436, efektywna: 0.4425), zysk: 0.72%
+2025-02-09 17:40:24,209 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: YFI/EUR
+2025-02-09 17:40:24,252 - INFO - bitget-bitstamp - ex1: pobrana cena = 2560.64
+2025-02-09 17:40:24,253 - INFO - bitget-bitstamp - ex2: pobrana cena = 2560.0
+2025-02-09 17:40:24,254 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDC
+2025-02-09 17:40:24,321 - INFO - binance-kucoin - ex1: pobrana cena = 0.4246
+2025-02-09 17:40:24,321 - INFO - binance-kucoin - ex2: pobrana cena = 0.4245
+2025-02-09 17:40:24,322 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: LSK/ETH
+2025-02-09 17:40:24,341 - INFO - kucoin-bitstamp - ex1: pobrana cena = 7.19e-06
+2025-02-09 17:40:24,342 - INFO - kucoin-bitstamp - ex2: pobrana cena = 7.12e-06
+2025-02-09 17:40:24,342 - INFO - kucoin-bitstamp - Okazja arbitrażowa dla ADA/BTC: Kupno na BitstampExchange (cena: 7.12e-06, efektywna: 0.0000), sprzedaż na KucoinExchange (cena: 7.19e-06, efektywna: 0.0000), zysk: 0.63%
+2025-02-09 17:40:24,342 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDC
+2025-02-09 17:40:24,350 - INFO - binance-bitget - ex1: pobrana cena = 0.7141
+2025-02-09 17:40:24,350 - INFO - binance-bitget - ex2: pobrana cena = 0.7138
+2025-02-09 17:40:24,351 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: BICO/USDT:USDT
+2025-02-09 17:40:24,475 - WARNING - binance-bitstamp - Dla ex1 pobrana cena jest None, pomijam YFI/EUR
+2025-02-09 17:40:24,476 - INFO - binance-bitstamp - ex2: pobrana cena = 5549.5
+2025-02-09 17:40:24,476 - WARNING - binance-bitstamp - Niedostateczne dane dla YFI/EUR, pomijam ten symbol.
+2025-02-09 17:40:24,476 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/EUR
+2025-02-09 17:40:24,558 - INFO - kucoin-bitget - ex1: pobrana cena = 96011.7
+2025-02-09 17:40:24,558 - INFO - kucoin-bitget - ex2: pobrana cena = 96023.01
+2025-02-09 17:40:24,559 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: MAVIA/USDT
+2025-02-09 17:40:24,588 - INFO - bitget-bitstamp - ex1: pobrana cena = 96004.54
+2025-02-09 17:40:24,588 - INFO - bitget-bitstamp - ex2: pobrana cena = 96034.0
+2025-02-09 17:40:24,589 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LTC/BTC
+2025-02-09 17:40:24,653 - INFO - binance-bitget - ex1: pobrana cena = 0.1706
+2025-02-09 17:40:24,653 - INFO - binance-bitget - ex2: pobrana cena = 0.1708
+2025-02-09 17:40:24,654 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: VET/USDT:USDT
+2025-02-09 17:40:24,767 - INFO - kucoin-bitstamp - ex1: pobrana cena = 96022.8
+2025-02-09 17:40:24,767 - INFO - kucoin-bitstamp - ex2: pobrana cena = 96034.0
+2025-02-09 17:40:24,768 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LTC/BTC
+2025-02-09 17:40:24,768 - WARNING - binance-kucoin - Dla ex1 pobrana cena jest None, pomijam LSK/ETH
+2025-02-09 17:40:24,770 - INFO - binance-kucoin - ex2: pobrana cena = 0.0002732
+2025-02-09 17:40:24,770 - WARNING - binance-kucoin - Niedostateczne dane dla LSK/ETH, pomijam ten symbol.
+2025-02-09 17:40:24,771 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: BTC/USDT
+2025-02-09 17:40:24,906 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.001121
+2025-02-09 17:40:24,907 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.0011258
+2025-02-09 17:40:24,907 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/EUR
+2025-02-09 17:40:24,963 - INFO - binance-bitget - ex1: pobrana cena = 0.03258
+2025-02-09 17:40:24,964 - INFO - binance-bitget - ex2: pobrana cena = 0.032558
+2025-02-09 17:40:24,965 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: RDNT/USDT:USDT
+2025-02-09 17:40:24,997 - INFO - kucoin-bitget - ex1: pobrana cena = 0.2952
+2025-02-09 17:40:24,998 - INFO - kucoin-bitget - ex2: pobrana cena = 0.2947
+2025-02-09 17:40:24,998 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: HFT/USDT
+2025-02-09 17:40:25,182 - INFO - binance-bitstamp - ex1: pobrana cena = 93153.14
+2025-02-09 17:40:25,182 - INFO - binance-bitstamp - ex2: pobrana cena = 93102.0
+2025-02-09 17:40:25,183 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: DOT/EUR
+2025-02-09 17:40:25,215 - INFO - bitget-bitstamp - ex1: pobrana cena = 93165.23
+2025-02-09 17:40:25,215 - INFO - bitget-bitstamp - ex2: pobrana cena = 93102.0
+2025-02-09 17:40:25,216 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SOL/EUR
+2025-02-09 17:40:25,235 - INFO - binance-kucoin - ex1: pobrana cena = 96007.0
+2025-02-09 17:40:25,237 - INFO - binance-kucoin - ex2: pobrana cena = 96011.7
+2025-02-09 17:40:25,238 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: HFT/USDT
+2025-02-09 17:40:25,239 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.001123
+2025-02-09 17:40:25,240 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.0011258
+2025-02-09 17:40:25,240 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BTC/EUR
+2025-02-09 17:40:25,285 - INFO - binance-bitget - ex1: pobrana cena = 0.03108
+2025-02-09 17:40:25,285 - INFO - binance-bitget - ex2: pobrana cena = 0.03111
+2025-02-09 17:40:25,286 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: NTRN/USDT:USDT
+2025-02-09 17:40:25,438 - INFO - kucoin-bitget - ex1: pobrana cena = 0.1048
+2025-02-09 17:40:25,439 - INFO - kucoin-bitget - ex2: pobrana cena = 0.1046
+2025-02-09 17:40:25,440 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: TST/USDT
+2025-02-09 17:40:25,508 - INFO - bitget-bitstamp - ex1: pobrana cena = 194.3
+2025-02-09 17:40:25,508 - INFO - bitget-bitstamp - ex2: pobrana cena = 194.4909
+2025-02-09 17:40:25,509 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/USDT
+2025-02-09 17:40:25,608 - INFO - binance-bitget - ex1: pobrana cena = 0.1919
+2025-02-09 17:40:25,609 - INFO - binance-bitget - ex2: pobrana cena = 0.1921
+2025-02-09 17:40:25,610 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: SAND/USDT
+2025-02-09 17:40:25,658 - INFO - binance-kucoin - ex1: pobrana cena = 0.1046
+2025-02-09 17:40:25,659 - INFO - binance-kucoin - ex2: pobrana cena = 0.1048
+2025-02-09 17:40:25,660 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: TST/USDT
+2025-02-09 17:40:25,676 - INFO - kucoin-bitstamp - ex1: pobrana cena = 93219.14
+2025-02-09 17:40:25,677 - INFO - kucoin-bitstamp - ex2: pobrana cena = 93102.0
+2025-02-09 17:40:25,677 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/USDT
+2025-02-09 17:40:25,817 - INFO - bitget-bitstamp - ex1: pobrana cena = 2.4087
+2025-02-09 17:40:25,817 - INFO - bitget-bitstamp - ex2: pobrana cena = 2.41025
+2025-02-09 17:40:25,818 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: AVAX/EUR
+2025-02-09 17:40:25,865 - INFO - binance-bitstamp - ex1: pobrana cena = 4.639
+2025-02-09 17:40:25,866 - INFO - binance-bitstamp - ex2: pobrana cena = 4.632
+2025-02-09 17:40:25,866 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: GALA/EUR
+2025-02-09 17:40:25,924 - INFO - binance-bitget - ex1: pobrana cena = 0.3816
+2025-02-09 17:40:25,925 - INFO - binance-bitget - ex2: pobrana cena = 0.3817
+2025-02-09 17:40:25,925 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: STG/USDT
+2025-02-09 17:40:25,933 - INFO - kucoin-bitget - ex1: pobrana cena = 0.01279
+2025-02-09 17:40:25,934 - INFO - kucoin-bitget - ex2: pobrana cena = 0.01257
+2025-02-09 17:40:25,934 - INFO - kucoin-bitget - Okazja arbitrażowa dla TST/USDT: Kupno na BitgetExchange (cena: 0.01257, efektywna: 0.0126), sprzedaż na KucoinExchange (cena: 0.01279, efektywna: 0.0128), zysk: 1.55%
+2025-02-09 17:40:25,934 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ACH/USDT
+2025-02-09 17:40:26,131 - INFO - binance-kucoin - ex1: pobrana cena = 0.3067
+2025-02-09 17:40:26,136 - INFO - binance-kucoin - ex2: pobrana cena = 0.01279
+2025-02-09 17:40:26,136 - INFO - binance-kucoin - Okazja arbitrażowa dla TST/USDT: Kupno na KucoinExchange (cena: 0.01279, efektywna: 0.0128), sprzedaż na BinanceExchange (cena: 0.3067, efektywna: 0.3064), zysk: 2293.18%
+2025-02-09 17:40:26,137 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: ACH/USDT
+2025-02-09 17:40:26,137 - INFO - binance-bitstamp - ex1: pobrana cena = 0.02115
+2025-02-09 17:40:26,139 - INFO - binance-bitstamp - ex2: pobrana cena = 0.02167
+2025-02-09 17:40:26,139 - INFO - binance-bitstamp - Okazja arbitrażowa dla GALA/EUR: Kupno na BinanceExchange (cena: 0.02115, efektywna: 0.0212), sprzedaż na BitstampExchange (cena: 0.02167, efektywna: 0.0216), zysk: 2.10%
+2025-02-09 17:40:26,140 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SOL/EUR
+2025-02-09 17:40:26,140 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2.40849
+2025-02-09 17:40:26,142 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2.41025
+2025-02-09 17:40:26,142 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BCH/BTC
+2025-02-09 17:40:26,146 - INFO - bitget-bitstamp - ex1: pobrana cena = 24.16
+2025-02-09 17:40:26,146 - INFO - bitget-bitstamp - ex2: pobrana cena = 24.14543
+2025-02-09 17:40:26,147 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SHIB/EUR
+2025-02-09 17:40:26,233 - INFO - binance-bitget - ex1: pobrana cena = 0.2702
+2025-02-09 17:40:26,234 - INFO - binance-bitget - ex2: pobrana cena = 0.27
+2025-02-09 17:40:26,234 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: STX/USDT
+2025-02-09 17:40:26,361 - INFO - kucoin-bitget - ex1: pobrana cena = 0.029114
+2025-02-09 17:40:26,361 - INFO - kucoin-bitget - ex2: pobrana cena = 0.02911
+2025-02-09 17:40:26,362 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: UNI/USDT
+2025-02-09 17:40:26,415 - INFO - binance-bitstamp - ex1: pobrana cena = 194.27
+2025-02-09 17:40:26,415 - INFO - binance-bitstamp - ex2: pobrana cena = 194.4909
+2025-02-09 17:40:26,416 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: XRP/USDT
+2025-02-09 17:40:26,454 - INFO - bitget-bitstamp - ex1: pobrana cena = 1.523e-05
+2025-02-09 17:40:26,455 - INFO - bitget-bitstamp - ex2: pobrana cena = 1.528e-05
+2025-02-09 17:40:26,456 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDT/EUR
+2025-02-09 17:40:26,533 - INFO - binance-bitget - ex1: pobrana cena = 0.899
+2025-02-09 17:40:26,534 - INFO - binance-bitget - ex2: pobrana cena = 0.898
+2025-02-09 17:40:26,534 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ANKR/USDT
+2025-02-09 17:40:26,616 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.003406
+2025-02-09 17:40:26,617 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.0033987
+2025-02-09 17:40:26,617 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDT/EUR
+2025-02-09 17:40:26,675 - INFO - binance-bitstamp - ex1: pobrana cena = 2.4079
+2025-02-09 17:40:26,675 - INFO - binance-bitstamp - ex2: pobrana cena = 2.41025
+2025-02-09 17:40:26,676 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: AVAX/EUR
+2025-02-09 17:40:26,753 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.9704
+2025-02-09 17:40:26,754 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.96959
+2025-02-09 17:40:26,754 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: PEPE/EUR
+2025-02-09 17:40:26,809 - INFO - kucoin-bitget - ex1: pobrana cena = 9.2257
+2025-02-09 17:40:26,810 - INFO - kucoin-bitget - ex2: pobrana cena = 9.214
+2025-02-09 17:40:26,810 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: PEAQ/USDT
+2025-02-09 17:40:26,834 - INFO - binance-kucoin - ex1: pobrana cena = 0.02905
+2025-02-09 17:40:26,835 - INFO - binance-kucoin - ex2: pobrana cena = 0.029114
+2025-02-09 17:40:26,836 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: UNI/USDT
+2025-02-09 17:40:26,857 - INFO - binance-bitget - ex1: pobrana cena = 0.02268
+2025-02-09 17:40:26,858 - INFO - binance-bitget - ex2: pobrana cena = 0.02268
+2025-02-09 17:40:26,858 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: MORPHO/USDT:USDT
+2025-02-09 17:40:26,937 - INFO - binance-bitstamp - ex1: pobrana cena = 24.13
+2025-02-09 17:40:26,938 - INFO - binance-bitstamp - ex2: pobrana cena = 24.14543
+2025-02-09 17:40:26,938 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: CHZ/EUR
+2025-02-09 17:40:27,023 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.9704
+2025-02-09 17:40:27,023 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.96959
+2025-02-09 17:40:27,024 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: AAVE/BTC
+2025-02-09 17:40:27,054 - INFO - bitget-bitstamp - ex1: pobrana cena = 9.18e-06
+2025-02-09 17:40:27,054 - INFO - bitget-bitstamp - ex2: pobrana cena = 9.2e-06
+2025-02-09 17:40:27,055 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: AAVE/BTC
+2025-02-09 17:40:27,160 - INFO - binance-bitget - ex1: pobrana cena = 1.9732
+2025-02-09 17:40:27,160 - INFO - binance-bitget - ex2: pobrana cena = 1.9739
+2025-02-09 17:40:27,161 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: UMA/USDT:USDT
+2025-02-09 17:40:27,204 - WARNING - binance-bitstamp - Dla ex1 pobrana cena jest None, pomijam CHZ/EUR
+2025-02-09 17:40:27,205 - INFO - binance-bitstamp - ex2: pobrana cena = 0.05735
+2025-02-09 17:40:27,206 - WARNING - binance-bitstamp - Niedostateczne dane dla CHZ/EUR, pomijam ten symbol.
+2025-02-09 17:40:27,206 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BCH/BTC
+2025-02-09 17:40:27,265 - INFO - kucoin-bitget - ex1: pobrana cena = 0.2473
+2025-02-09 17:40:27,266 - INFO - kucoin-bitget - ex2: pobrana cena = 0.2474
+2025-02-09 17:40:27,267 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: NPC/USDT
+2025-02-09 17:40:27,358 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.002534
+2025-02-09 17:40:27,359 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.00245428
+2025-02-09 17:40:27,359 - INFO - bitget-bitstamp - Okazja arbitrażowa dla AAVE/BTC: Kupno na BitstampExchange (cena: 0.00245428, efektywna: 0.0025), sprzedaż na BitgetExchange (cena: 0.002534, efektywna: 0.0025), zysk: 2.89%
+2025-02-09 17:40:27,360 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDT
+2025-02-09 17:40:27,512 - INFO - binance-bitstamp - ex1: pobrana cena = 0.003391
+2025-02-09 17:40:27,513 - INFO - binance-bitstamp - ex2: pobrana cena = 0.0033987
+2025-02-09 17:40:27,513 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: SHIB/EUR
+2025-02-09 17:40:27,519 - INFO - binance-bitget - ex1: pobrana cena = 1.761
+2025-02-09 17:40:27,521 - INFO - binance-bitget - ex2: pobrana cena = 1.762
+2025-02-09 17:40:27,522 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ETHFI/USDT:USDT
+2025-02-09 17:40:27,523 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.00253
+2025-02-09 17:40:27,524 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.00245428
+2025-02-09 17:40:27,524 - INFO - kucoin-bitstamp - Okazja arbitrażowa dla AAVE/BTC: Kupno na BitstampExchange (cena: 0.00245428, efektywna: 0.0025), sprzedaż na KucoinExchange (cena: 0.00253, efektywna: 0.0025), zysk: 2.73%
+2025-02-09 17:40:27,525 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDT
+2025-02-09 17:40:27,544 - INFO - binance-kucoin - ex1: pobrana cena = 9.212
+2025-02-09 17:40:27,544 - INFO - binance-kucoin - ex2: pobrana cena = 9.2257
+2025-02-09 17:40:27,545 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: NKN/BTC
+2025-02-09 17:40:27,691 - INFO - bitget-bitstamp - ex1: pobrana cena = 2639.01
+2025-02-09 17:40:27,691 - INFO - bitget-bitstamp - ex2: pobrana cena = 2657.6
+2025-02-09 17:40:27,691 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ONDO/EUR
+2025-02-09 17:40:27,836 - INFO - binance-bitstamp - ex1: pobrana cena = 1.526e-05
+2025-02-09 17:40:27,837 - INFO - binance-bitstamp - ex2: pobrana cena = 1.522e-05
+2025-02-09 17:40:27,838 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: PEPE/EUR
+2025-02-09 17:40:27,855 - INFO - binance-bitget - ex1: pobrana cena = 1.1229
+2025-02-09 17:40:27,856 - INFO - binance-bitget - ex2: pobrana cena = 1.1233
+2025-02-09 17:40:27,856 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ALPINE/USDT
+2025-02-09 17:40:27,939 - INFO - binance-kucoin - ex1: pobrana cena = 6.5e-07
+2025-02-09 17:40:27,939 - INFO - binance-kucoin - ex2: pobrana cena = 6.58e-07
+2025-02-09 17:40:27,940 - INFO - binance-kucoin - Okazja arbitrażowa dla NKN/BTC: Kupno na BinanceExchange (cena: 6.5e-07, efektywna: 0.0000), sprzedaż na KucoinExchange (cena: 6.58e-07, efektywna: 0.0000), zysk: 1.03%
+2025-02-09 17:40:27,940 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: LTO/USDT
+2025-02-09 17:40:28,006 - INFO - bitget-bitstamp - ex1: pobrana cena = 1.2878
+2025-02-09 17:40:28,006 - INFO - bitget-bitstamp - ex2: pobrana cena = 1.3266
+2025-02-09 17:40:28,007 - INFO - bitget-bitstamp - Okazja arbitrażowa dla ONDO/EUR: Kupno na BitgetExchange (cena: 1.2878, efektywna: 1.2891), sprzedaż na BitstampExchange (cena: 1.3266, efektywna: 1.3233), zysk: 2.65%
+2025-02-09 17:40:28,007 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LINK/EUR
+2025-02-09 17:40:28,067 - INFO - kucoin-bitget - ex1: pobrana cena = 0.0125
+2025-02-09 17:40:28,068 - INFO - kucoin-bitget - ex2: pobrana cena = 0.01254
+2025-02-09 17:40:28,068 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: CPOOL/USDT
+2025-02-09 17:40:28,078 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2638.54
+2025-02-09 17:40:28,079 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2657.6
+2025-02-09 17:40:28,079 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDC/USDT
+2025-02-09 17:40:28,100 - INFO - binance-bitstamp - ex1: pobrana cena = 9.19e-06
+2025-02-09 17:40:28,101 - INFO - binance-bitstamp - ex2: pobrana cena = 9.2e-06
+2025-02-09 17:40:28,101 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: AAVE/BTC
+2025-02-09 17:40:28,177 - INFO - binance-bitget - ex1: pobrana cena = 1.019
+2025-02-09 17:40:28,177 - INFO - binance-bitget - ex2: pobrana cena = 1.023
+2025-02-09 17:40:28,178 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: THE/USDT
+2025-02-09 17:40:28,258 - INFO - binance-kucoin - ex1: pobrana cena = 0.0743
+2025-02-09 17:40:28,258 - INFO - binance-kucoin - ex2: pobrana cena = 0.07451
+2025-02-09 17:40:28,259 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: POND/BTC
+2025-02-09 17:40:28,303 - INFO - bitget-bitstamp - ex1: pobrana cena = 18.08
+2025-02-09 17:40:28,307 - INFO - bitget-bitstamp - ex2: pobrana cena = 18.15
+2025-02-09 17:40:28,308 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: USDC/USDT
+2025-02-09 17:40:28,369 - INFO - binance-bitstamp - ex1: pobrana cena = 0.002535
+2025-02-09 17:40:28,370 - INFO - binance-bitstamp - ex2: pobrana cena = 0.00245428
+2025-02-09 17:40:28,371 - INFO - binance-bitstamp - Okazja arbitrażowa dla AAVE/BTC: Kupno na BitstampExchange (cena: 0.00245428, efektywna: 0.0025), sprzedaż na BinanceExchange (cena: 0.002535, efektywna: 0.0025), zysk: 2.93%
+2025-02-09 17:40:28,371 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDT
+2025-02-09 17:40:28,477 - INFO - kucoin-bitget - ex1: pobrana cena = 0.309
+2025-02-09 17:40:28,480 - INFO - kucoin-bitget - ex2: pobrana cena = 0.30715
+2025-02-09 17:40:28,480 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: TOMI/USDT
+2025-02-09 17:40:28,481 - INFO - kucoin-bitstamp - ex1: pobrana cena = 0.9996
+2025-02-09 17:40:28,483 - INFO - kucoin-bitstamp - ex2: pobrana cena = 0.99992
+2025-02-09 17:40:28,483 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDC
+2025-02-09 17:40:28,499 - INFO - binance-bitget - ex1: pobrana cena = 0.5089
+2025-02-09 17:40:28,499 - INFO - binance-bitget - ex2: pobrana cena = 0.5084
+2025-02-09 17:40:28,500 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: ARB/USDC
+2025-02-09 17:40:28,611 - INFO - bitget-bitstamp - ex1: pobrana cena = 0.9998
+2025-02-09 17:40:28,612 - INFO - bitget-bitstamp - ex2: pobrana cena = 0.99992
+2025-02-09 17:40:28,612 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ETH/USDC
+2025-02-09 17:40:28,632 - INFO - binance-bitstamp - ex1: pobrana cena = 2638.6
+2025-02-09 17:40:28,633 - INFO - binance-bitstamp - ex2: pobrana cena = 2657.6
+2025-02-09 17:40:28,633 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: BOME/EUR
+2025-02-09 17:40:28,692 - INFO - binance-kucoin - ex1: pobrana cena = 1.4e-07
+2025-02-09 17:40:28,693 - INFO - binance-kucoin - ex2: pobrana cena = 1.408e-07
+2025-02-09 17:40:28,693 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symbolu: WIN/TRX
+2025-02-09 17:40:28,827 - INFO - binance-bitget - ex1: pobrana cena = 0.4514
+2025-02-09 17:40:28,828 - INFO - binance-bitget - ex2: pobrana cena = 0.453
+2025-02-09 17:40:28,828 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symbolu: TLM/USDT:USDT
+2025-02-09 17:40:28,899 - INFO - binance-bitstamp - ex1: pobrana cena = 0.002033
+2025-02-09 17:40:28,899 - INFO - binance-bitstamp - ex2: pobrana cena = 0.002112
+2025-02-09 17:40:28,900 - INFO - binance-bitstamp - Okazja arbitrażowa dla BOME/EUR: Kupno na BinanceExchange (cena: 0.002033, efektywna: 0.0020), sprzedaż na BitstampExchange (cena: 0.002112, efektywna: 0.0021), zysk: 3.52%
+2025-02-09 17:40:28,900 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: ICP/EUR
+2025-02-09 17:40:28,911 - INFO - bitget-bitstamp - ex1: pobrana cena = 2639.06
+2025-02-09 17:40:28,911 - INFO - bitget-bitstamp - ex2: pobrana cena = 2639.2
+2025-02-09 17:40:28,912 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LINK/BTC
+2025-02-09 17:40:28,922 - INFO - kucoin-bitget - ex1: pobrana cena = 0.0086
+2025-02-09 17:40:28,922 - INFO - kucoin-bitget - ex2: pobrana cena = 0.00859
+2025-02-09 17:40:28,923 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symbolu: SKY/USDT
+2025-02-09 17:40:28,926 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2641.19
+2025-02-09 17:40:28,926 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2639.2
+2025-02-09 17:40:28,927 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symbolu: LINK/BTC
