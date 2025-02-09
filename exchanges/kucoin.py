@@ -14,7 +14,6 @@ class KucoinExchange(Exchange):
                     return []
                 data = await response.json()
                 symbols = data.get("data", [])
-                # Ujednolicamy format – usuwamy myślniki
                 pairs = [item["symbol"].replace("-", "").upper() for item in symbols if item.get("enableTrading", False)]
                 return pairs
         except Exception as e:
@@ -22,7 +21,6 @@ class KucoinExchange(Exchange):
             return []
 
     async def get_price(self, symbol: str, session: aiohttp.ClientSession) -> float:
-        # Jeśli symbol nie zawiera myślnika, przyjmujemy, że pierwsze 3 litery to base, reszta to quote
         if "-" not in symbol:
             base = symbol[:3]
             quote = symbol[3:]

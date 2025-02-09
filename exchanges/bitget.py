@@ -6,6 +6,12 @@ class BitgetExchange(Exchange):
     BASE_URL = "https://api.bitget.com"
 
     async def get_trading_pairs(self, session: aiohttp.ClientSession):
+        """
+        Pobiera listę dostępnych par z Bitget.
+        Używamy endpointu: GET /api/spot/v1/public/products.
+        Zwracamy listę symboli (stringów) w formacie zgodnym z innymi giełdami.
+        Dodatkowo usuwamy sufiks "_SPBL", jeśli występuje.
+        """
         url = f"{self.BASE_URL}/api/spot/v1/public/products"
         try:
             async with session.get(url) as response:
@@ -13,7 +19,7 @@ class BitgetExchange(Exchange):
                     logging.error(f"Bitget get_trading_pairs HTTP error: {response.status}")
                     return []
                 data = await response.json()
-                # Spodziewamy się, że w odpowiedzi "code" jest "00000"
+                logging.info(f"Bitget get_trading_pairs response: {data}")
                 if data.get("code") != "00000":
                     logging.error(f"Bitget API error: {data.get('msg')}")
                     return []
@@ -21,7 +27,11 @@ class BitgetExchange(Exchange):
                 for item in data.get("data", []):
                     raw = item.get("symbol")
                     if raw:
-                        pairs.append(raw.upper())
+                        raw = raw.upper()
+                        if raw.endswith("_SPBL"):
+                            raw = raw.replace("_SPBL", "")
+                        pairs.append(raw)
+                logging.info(f"Bitget trading pairs: {pairs}")
                 return pairs
         except Exception as e:
             logging.exception("Bitget get_trading_pairs exception", exc_info=e)
@@ -31,6 +41,9 @@ class BitgetExchange(Exchange):
         url = f"{self.BASE_URL}/api/spot/v1/market/ticker?symbol={symbol}"
         try:
             async with session.get(url) as response:
+                if response.status == 400:
+                    logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol} - Invalid symbol")
+                    return 0.0
                 if response.status != 200:
                     logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol}")
                     return 0.0

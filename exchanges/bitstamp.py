@@ -13,7 +13,6 @@ class BitstampExchange(Exchange):
                     logging.error(f"Bitstamp get_trading_pairs HTTP error: {response.status}")
                     return []
                 data = await response.json()
-                # Używamy pola "url_symbol" i konwertujemy do wielkich liter
                 pairs = [item.get("url_symbol", "").upper() for item in data if item.get("url_symbol")]
                 return pairs
         except Exception as e:

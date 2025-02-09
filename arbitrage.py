@@ -11,20 +11,16 @@ from exchanges.kucoin import KucoinExchange
 
 load_dotenv()
 
-# Konfiguracja logowania
-LOG_DIR = "log"
-if not os.path.exists(LOG_DIR):
-    os.makedirs(LOG_DIR)
+# Konfiguracja logowania – logi zapisywane są w pliku "app.log" w głównym folderze
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(os.path.join(LOG_DIR, "app.log"), encoding="utf-8"),
+        logging.FileHandler("app.log", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
 
-# Inicjujemy instancje giełd
 EXCHANGE_INSTANCES = {
     "BinanceExchange": BinanceExchange(api_key=os.getenv("BINANCE_API_KEY"), secret=os.getenv("BINANCE_SECRET")),
     "BitgetExchange": BitgetExchange(api_key=os.getenv("BITGET_API_KEY"), secret=os.getenv("BITGET_SECRET")),
@@ -32,7 +28,6 @@ EXCHANGE_INSTANCES = {
     "KucoinExchange": KucoinExchange(api_key=os.getenv("KUCOIN_API_KEY"), secret=os.getenv("KUCOIN_SECRET"))
 }
 
-# Przykładowe opłaty (jako ułamek dziesiętny)
 FEES = {
     "BinanceExchange": 0.001,
     "BitgetExchange": 0.002,
@@ -74,7 +69,6 @@ async def run_arbitrage():
                 if price1 == 0 or price2 == 0:
                     continue
 
-                # Uwzględnienie opłat: przy kupnie dodajemy fee, przy sprzedaży odejmujemy fee
                 effective_price1 = price1 * (1 + fee1)
                 effective_price2 = price2 * (1 - fee2)
 
