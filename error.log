@@ -1,0 +1,1544 @@
+2025-02-09 09:16:05,915 - ERROR - Bitget get_price HTTP error: 400 for PAXGUSDT - Invalid symbol
+2025-02-09 09:16:05,928 - ERROR - Bitget get_price HTTP error: 400 for UNIUSDC - Invalid symbol
+2025-02-09 09:16:05,932 - ERROR - Bitget get_price HTTP error: 400 for BNTUSDT - Invalid symbol
+2025-02-09 09:16:05,933 - ERROR - Bitget get_price HTTP error: 400 for RDNTUSDT - Invalid symbol
+2025-02-09 09:16:05,935 - ERROR - Bitget get_price HTTP error: 400 for COWUSDT - Invalid symbol
+2025-02-09 09:16:05,936 - ERROR - Bitget get_price HTTP error: 400 for TWTUSDT - Invalid symbol
+2025-02-09 09:16:05,946 - ERROR - Bitget get_price HTTP error: 400 for API3USDT - Invalid symbol
+2025-02-09 09:16:05,950 - ERROR - Bitget get_price HTTP error: 400 for MOVRUSDT - Invalid symbol
+2025-02-09 09:16:05,951 - ERROR - Bitget get_price HTTP error: 400 for 1INCHUSDT - Invalid symbol
+2025-02-09 09:16:05,953 - ERROR - Bitget get_price HTTP error: 400 for AVAXUSDT - Invalid symbol
+2025-02-09 09:16:05,955 - ERROR - Bitget get_price HTTP error: 400 for PIXELUSDT - Invalid symbol
+2025-02-09 09:16:05,957 - ERROR - Bitget get_price HTTP error: 400 for C98USDT - Invalid symbol
+2025-02-09 09:16:05,959 - ERROR - Bitget get_price HTTP error: 400 for IOSTUSDT - Invalid symbol
+2025-02-09 09:16:05,961 - ERROR - Bitget get_price HTTP error: 400 for APEUSDT - Invalid symbol
+2025-02-09 09:16:05,968 - ERROR - Bitget get_price HTTP error: 400 for STMXUSDT - Invalid symbol
+2025-02-09 09:16:05,969 - ERROR - Bitget get_price HTTP error: 400 for LTCEUR - Invalid symbol
+2025-02-09 09:16:05,972 - ERROR - Bitget get_price HTTP error: 400 for AXSUSDT - Invalid symbol
+2025-02-09 09:16:05,974 - ERROR - Bitget get_price HTTP error: 400 for ONEUSDT - Invalid symbol
+2025-02-09 09:16:05,976 - ERROR - Bitget get_price HTTP error: 400 for ACEUSDT - Invalid symbol
+2025-02-09 09:16:05,978 - ERROR - Bitget get_price HTTP error: 400 for ONGUSDT - Invalid symbol
+2025-02-09 09:16:05,979 - ERROR - Bitget get_price HTTP error: 400 for AAVEBTC - Invalid symbol
+2025-02-09 09:16:05,982 - ERROR - Bitget get_price HTTP error: 400 for DOTUSDT - Invalid symbol
+2025-02-09 09:16:05,983 - ERROR - Bitget get_price HTTP error: 400 for VOXELUSDT - Invalid symbol
+2025-02-09 09:16:05,985 - ERROR - Bitget get_price HTTP error: 400 for NEXOUSDT - Invalid symbol
+2025-02-09 09:16:05,986 - ERROR - Bitget get_price HTTP error: 400 for COMBOUSDT - Invalid symbol
+2025-02-09 09:16:05,989 - ERROR - Bitget get_price HTTP error: 400 for PEOPLEUSDT - Invalid symbol
+2025-02-09 09:16:05,998 - ERROR - Bitget get_price HTTP error: 400 for USDCUSDT - Invalid symbol
+2025-02-09 09:16:05,999 - ERROR - Bitget get_price HTTP error: 400 for HBARUSDT - Invalid symbol
+2025-02-09 09:16:06,000 - ERROR - Bitget get_price HTTP error: 400 for COTIUSDT - Invalid symbol
+2025-02-09 09:16:06,002 - ERROR - Bitget get_price HTTP error: 400 for AUCTIONUSDT - Invalid symbol
+2025-02-09 09:16:06,003 - ERROR - Bitget get_price HTTP error: 400 for LINAUSDT - Invalid symbol
+2025-02-09 09:16:06,005 - ERROR - Bitget get_price HTTP error: 400 for XLMUSDT - Invalid symbol
+2025-02-09 09:16:06,008 - ERROR - Bitget get_price HTTP error: 400 for MKRUSDT - Invalid symbol
+2025-02-09 09:16:06,009 - ERROR - Bitget get_price HTTP error: 400 for ALICEUSDT - Invalid symbol
+2025-02-09 09:16:06,011 - ERROR - Bitget get_price HTTP error: 400 for SHIBUSDC - Invalid symbol
+2025-02-09 09:16:06,013 - ERROR - Bitget get_price HTTP error: 400 for LSKUSDT - Invalid symbol
+2025-02-09 09:16:06,015 - ERROR - Bitget get_price HTTP error: 400 for CHESSUSDT - Invalid symbol
+2025-02-09 09:16:06,018 - ERROR - Bitget get_price HTTP error: 400 for RIFUSDT - Invalid symbol
+2025-02-09 09:16:06,058 - ERROR - Bitget get_price HTTP error: 400 for SOLEUR - Invalid symbol
+2025-02-09 09:16:06,062 - ERROR - Bitget get_price HTTP error: 400 for SXPUSDT - Invalid symbol
+2025-02-09 09:16:06,065 - ERROR - Bitget get_price HTTP error: 400 for GNSUSDT - Invalid symbol
+2025-02-09 09:16:06,068 - ERROR - Bitget get_price HTTP error: 400 for XRPETH - Invalid symbol
+2025-02-09 09:16:06,071 - ERROR - Bitget get_price HTTP error: 400 for LISTAUSDT - Invalid symbol
+2025-02-09 09:16:06,074 - ERROR - Bitget get_price HTTP error: 400 for RAREUSDT - Invalid symbol
+2025-02-09 09:16:06,076 - ERROR - Bitget get_price HTTP error: 400 for NFPUSDT - Invalid symbol
+2025-02-09 09:16:06,078 - ERROR - Bitget get_price HTTP error: 400 for STRAXUSDT - Invalid symbol
+2025-02-09 09:16:06,084 - ERROR - Bitget get_price HTTP error: 400 for STXUSDC - Invalid symbol
+2025-02-09 09:16:06,087 - ERROR - Bitget get_price HTTP error: 400 for SANTOSUSDT - Invalid symbol
+2025-02-09 09:16:06,091 - ERROR - Bitget get_price HTTP error: 400 for HOTUSDT - Invalid symbol
+2025-02-09 09:16:06,107 - ERROR - Bitget get_price HTTP error: 400 for ZRXUSDT - Invalid symbol
+2025-02-09 09:16:06,215 - ERROR - Bitget get_price HTTP error: 400 for GUSDT - Invalid symbol
+2025-02-09 09:16:06,225 - ERROR - Bitget get_price HTTP error: 400 for FXSUSDT - Invalid symbol
+2025-02-09 09:16:06,227 - ERROR - Bitget get_price HTTP error: 400 for LRCUSDT - Invalid symbol
+2025-02-09 09:16:06,230 - ERROR - Bitget get_price HTTP error: 400 for ORDIBTC - Invalid symbol
+2025-02-09 09:16:06,254 - ERROR - Bitget get_price HTTP error: 400 for YGGUSDT - Invalid symbol
+2025-02-09 09:16:06,269 - ERROR - Bitget get_price HTTP error: 400 for GRTUSDT - Invalid symbol
+2025-02-09 09:16:06,273 - ERROR - Bitget get_price HTTP error: 400 for BONKUSDT - Invalid symbol
+2025-02-09 09:16:06,276 - ERROR - Bitget get_price HTTP error: 400 for CHRUSDT - Invalid symbol
+2025-02-09 09:16:06,291 - ERROR - Bitget get_price HTTP error: 400 for SYSUSDT - Invalid symbol
+2025-02-09 09:16:06,310 - ERROR - Bitget get_price HTTP error: 400 for AIXBTUSDT - Invalid symbol
+2025-02-09 09:16:06,330 - ERROR - Bitget get_price HTTP error: 400 for APTUSDT - Invalid symbol
+2025-02-09 09:16:06,341 - ERROR - Bitget get_price HTTP error: 400 for POLUSDT - Invalid symbol
+2025-02-09 09:16:06,342 - ERROR - Bitget get_price HTTP error: 400 for GMXUSDT - Invalid symbol
+2025-02-09 09:16:06,343 - ERROR - Bitget get_price HTTP error: 400 for PENGUUSDT - Invalid symbol
+2025-02-09 09:16:06,347 - ERROR - Bitget get_price HTTP error: 400 for HIFIUSDT - Invalid symbol
+2025-02-09 09:16:06,349 - ERROR - Bitget get_price HTTP error: 400 for CVXUSDT - Invalid symbol
+2025-02-09 09:16:06,362 - ERROR - Bitget get_price HTTP error: 429 for LQTYUSDT
+2025-02-09 09:16:06,364 - ERROR - Bitget get_price HTTP error: 400 for ACXUSDT - Invalid symbol
+2025-02-09 09:16:06,366 - ERROR - Bitget get_price HTTP error: 429 for ETCUSDT
+2025-02-09 09:16:06,368 - ERROR - Bitget get_price HTTP error: 400 for HIVEUSDT - Invalid symbol
+2025-02-09 09:16:06,370 - ERROR - Bitget get_price HTTP error: 400 for FETUSDT - Invalid symbol
+2025-02-09 09:16:06,374 - ERROR - Bitget get_price HTTP error: 400 for COOKIEUSDT - Invalid symbol
+2025-02-09 09:16:06,376 - ERROR - Bitget get_price HTTP error: 400 for GLMUSDT - Invalid symbol
+2025-02-09 09:16:06,378 - ERROR - Bitget get_price HTTP error: 429 for CYBERUSDT
+2025-02-09 09:16:06,382 - ERROR - Bitget get_price HTTP error: 400 for IQUSDT - Invalid symbol
+2025-02-09 09:16:06,392 - ERROR - Bitget get_price HTTP error: 400 for LUMIAUSDT - Invalid symbol
+2025-02-09 09:16:06,394 - ERROR - Bitget get_price HTTP error: 400 for VTHOUSDT - Invalid symbol
+2025-02-09 09:16:06,397 - ERROR - Bitget get_price HTTP error: 400 for UMAUSDT - Invalid symbol
+2025-02-09 09:16:06,402 - ERROR - Bitget get_price HTTP error: 429 for VIBUSDT
+2025-02-09 09:16:06,404 - ERROR - Bitget get_price HTTP error: 400 for NOTUSDT - Invalid symbol
+2025-02-09 09:16:06,407 - ERROR - Bitget get_price HTTP error: 400 for PROMUSDT - Invalid symbol
+2025-02-09 09:16:06,408 - ERROR - Bitget get_price HTTP error: 400 for ARUSDC - Invalid symbol
+2025-02-09 09:16:06,412 - ERROR - Bitget get_price HTTP error: 429 for TRUUSDT
+2025-02-09 09:16:06,413 - ERROR - Bitget get_price HTTP error: 429 for STPTUSDT
+2025-02-09 09:16:06,423 - ERROR - Bitget get_price HTTP error: 429 for GASUSDT
+2025-02-09 09:16:06,426 - ERROR - Bitget get_price HTTP error: 429 for DUSDT
+2025-02-09 09:16:06,428 - ERROR - Bitget get_price HTTP error: 400 for HFTUSDT - Invalid symbol
+2025-02-09 09:16:06,430 - ERROR - Bitget get_price HTTP error: 429 for FLOWUSDT
+2025-02-09 09:16:06,431 - ERROR - Bitget get_price HTTP error: 429 for VICUSDT
+2025-02-09 09:16:06,432 - ERROR - Bitget get_price HTTP error: 429 for PHBUSDT
+2025-02-09 09:16:06,438 - ERROR - Bitget get_price HTTP error: 429 for TUSDT
+2025-02-09 09:16:06,441 - ERROR - Bitget get_price HTTP error: 429 for BAKEUSDT
+2025-02-09 09:16:06,442 - ERROR - Bitget get_price HTTP error: 429 for CRVBTC
+2025-02-09 09:16:06,445 - ERROR - Bitget get_price HTTP error: 429 for SAGAUSDT
+2025-02-09 09:16:06,447 - ERROR - Bitget get_price HTTP error: 429 for MTLUSDT
+2025-02-09 09:16:06,448 - ERROR - Bitget get_price HTTP error: 429 for MANTAUSDT
+2025-02-09 09:16:06,450 - ERROR - Bitget get_price HTTP error: 429 for IDUSDT
+2025-02-09 09:16:06,453 - ERROR - Bitget get_price HTTP error: 429 for JUVUSDT
+2025-02-09 09:16:06,455 - ERROR - Bitget get_price HTTP error: 429 for ENAUSDC
+2025-02-09 09:16:06,459 - ERROR - Bitget get_price HTTP error: 429 for XTZUSDT
+2025-02-09 09:16:06,484 - ERROR - Bitget get_price HTTP error: 429 for ENSUSDT
+2025-02-09 09:16:06,490 - ERROR - Bitget get_price HTTP error: 429 for BCHUSDC
+2025-02-09 09:16:06,492 - ERROR - Bitget get_price HTTP error: 429 for MEUSDT
+2025-02-09 09:16:06,507 - ERROR - Bitget get_price HTTP error: 429 for SFPUSDT
+2025-02-09 09:16:06,510 - ERROR - Bitget get_price HTTP error: 429 for SSVUSDT
+2025-02-09 09:16:06,512 - ERROR - Bitget get_price HTTP error: 429 for TRBUSDT
+2025-02-09 09:16:06,514 - ERROR - Bitget get_price HTTP error: 429 for OMUSDC
+2025-02-09 09:16:06,517 - ERROR - Bitget get_price HTTP error: 429 for MANAUSDT
+2025-02-09 09:16:06,519 - ERROR - Bitget get_price HTTP error: 429 for ACMUSDT
+2025-02-09 09:16:06,521 - ERROR - Bitget get_price HTTP error: 429 for BICOUSDT
+2025-02-09 09:16:06,526 - ERROR - Bitget get_price HTTP error: 429 for VANAUSDT
+2025-02-09 09:16:06,528 - ERROR - Bitget get_price HTTP error: 429 for TRXETH
+2025-02-09 09:16:06,535 - ERROR - Bitget get_price HTTP error: 429 for BTCEUR
+2025-02-09 09:16:06,538 - ERROR - Bitget get_price HTTP error: 429 for JASMYUSDT
+2025-02-09 09:16:06,552 - ERROR - Bitget get_price HTTP error: 429 for STORJUSDT
+2025-02-09 09:16:06,554 - ERROR - Bitget get_price HTTP error: 429 for LUNAUSDT
+2025-02-09 09:16:06,573 - ERROR - Bitget get_price HTTP error: 429 for BADGERUSDT
+2025-02-09 09:16:06,579 - ERROR - Bitget get_price HTTP error: 429 for LUNCUSDT
+2025-02-09 09:16:06,581 - ERROR - Bitget get_price HTTP error: 429 for QNTUSDT
+2025-02-09 09:16:06,591 - ERROR - Bitget get_price HTTP error: 429 for TKOUSDT
+2025-02-09 09:16:06,593 - ERROR - Bitget get_price HTTP error: 429 for MBLUSDT
+2025-02-09 09:16:06,607 - ERROR - Bitget get_price HTTP error: 400 for NTRNUSDT - Invalid symbol
+2025-02-09 09:16:06,627 - ERROR - Bitget get_price HTTP error: 429 for $ALTUSDT
+2025-02-09 09:16:06,630 - ERROR - Bitget get_price HTTP error: 429 for AVAXBTC
+2025-02-09 09:16:06,633 - ERROR - Bitget get_price HTTP error: 429 for DENTUSDT
+2025-02-09 09:16:06,636 - ERROR - Bitget get_price HTTP error: 429 for NEIROUSDT
+2025-02-09 09:16:06,640 - ERROR - Bitget get_price HTTP error: 429 for ARPAUSDT
+2025-02-09 09:16:06,642 - ERROR - Bitget get_price HTTP error: 429 for EOSUSDT
+2025-02-09 09:16:06,646 - ERROR - Bitget get_price HTTP error: 429 for METISUSDT
+2025-02-09 09:16:06,649 - ERROR - Bitget get_price HTTP error: 429 for KAVAUSDT
+2025-02-09 09:16:06,659 - ERROR - Bitget get_price HTTP error: 429 for BNXUSDT
+2025-02-09 09:16:06,675 - ERROR - Bitget get_price HTTP error: 429 for MOVEUSDT
+2025-02-09 09:16:06,678 - ERROR - Bitget get_price HTTP error: 429 for VANRYUSDT
+2025-02-09 09:16:06,693 - ERROR - Bitget get_price HTTP error: 429 for ELFUSDT
+2025-02-09 09:16:06,695 - ERROR - Bitget get_price HTTP error: 429 for ENJUSDT
+2025-02-09 09:16:06,696 - ERROR - Bitget get_price HTTP error: 429 for SYNUSDT
+2025-02-09 09:16:06,699 - ERROR - Bitget get_price HTTP error: 429 for RSRUSDT
+2025-02-09 09:16:06,701 - ERROR - Bitget get_price HTTP error: 429 for ASRUSDT
+2025-02-09 09:16:06,703 - ERROR - Bitget get_price HTTP error: 429 for PSGUSDT
+2025-02-09 09:16:06,705 - ERROR - Bitget get_price HTTP error: 429 for IOTXUSDT
+2025-02-09 09:16:06,708 - ERROR - Bitget get_price HTTP error: 429 for SKLUSDT
+2025-02-09 09:16:06,710 - ERROR - Bitget get_price HTTP error: 429 for ATOMBTC
+2025-02-09 09:16:06,727 - ERROR - Bitget get_price HTTP error: 429 for EGLDUSDT
+2025-02-09 09:16:06,734 - ERROR - Bitget get_price HTTP error: 429 for OXTUSDT
+2025-02-09 09:16:06,749 - ERROR - Bitget get_price HTTP error: 429 for LDOUSDT
+2025-02-09 09:16:06,751 - ERROR - Bitget get_price HTTP error: 429 for OGNUSDT
+2025-02-09 09:16:06,752 - ERROR - Bitget get_price HTTP error: 429 for PEPEEUR
+2025-02-09 09:16:06,756 - ERROR - Bitget get_price HTTP error: 429 for SLPUSDT
+2025-02-09 09:16:06,759 - ERROR - Bitget get_price HTTP error: 429 for TRUMPUSDC
+2025-02-09 09:16:06,760 - ERROR - Bitget get_price HTTP error: 429 for BIOUSDT
+2025-02-09 09:16:06,763 - ERROR - Bitget get_price HTTP error: 429 for PONDUSDT
+2025-02-09 09:16:06,765 - ERROR - Bitget get_price HTTP error: 429 for IOUSDT
+2025-02-09 09:16:06,781 - ERROR - Bitget get_price HTTP error: 429 for ZROUSDT
+2025-02-09 09:16:06,783 - ERROR - Bitget get_price HTTP error: 429 for SUIUSDT
+2025-02-09 09:16:06,785 - ERROR - Bitget get_price HTTP error: 429 for AGLDUSDT
+2025-02-09 09:16:06,787 - ERROR - Bitget get_price HTTP error: 429 for ALPINEUSDT
+2025-02-09 09:16:06,860 - ERROR - Bitget get_price HTTP error: 429 for BNBUSDC
+2025-02-09 09:16:06,863 - ERROR - Bitget get_price HTTP error: 429 for AEVOUSDT
+2025-02-09 09:16:06,870 - ERROR - Bitget get_price HTTP error: 429 for CGPTUSDT
+2025-02-09 09:16:06,880 - ERROR - Bitget get_price HTTP error: 429 for DOGEBTC
+2025-02-09 09:16:06,882 - ERROR - Bitget get_price HTTP error: 429 for JUPUSDT
+2025-02-09 09:16:06,888 - ERROR - Bitget get_price HTTP error: 429 for FISUSDT
+2025-02-09 09:16:06,891 - ERROR - Bitget get_price HTTP error: 429 for WUSDT
+2025-02-09 09:16:06,896 - ERROR - Bitget get_price HTTP error: 429 for ANIMEUSDT
+2025-02-09 09:16:06,898 - ERROR - Bitget get_price HTTP error: 429 for $AIUSDT
+2025-02-09 09:16:06,904 - ERROR - Bitget get_price HTTP error: 429 for SUPERUSDT
+2025-02-09 09:16:06,907 - ERROR - Bitget get_price HTTP error: 429 for LAZIOUSDT
+2025-02-09 09:16:06,912 - ERROR - Bitget get_price HTTP error: 429 for BLURUSDT
+2025-02-09 09:16:06,919 - ERROR - Bitget get_price HTTP error: 400 for INJUSDT - Invalid symbol
+2025-02-09 09:16:06,930 - ERROR - Bitget get_price HTTP error: 429 for WINGUSDT
+2025-02-09 09:16:06,933 - ERROR - Bitget get_price HTTP error: 400 for NMRUSDT - Invalid symbol
+2025-02-09 09:16:06,935 - ERROR - Bitget get_price HTTP error: 400 for TNSRUSDT - Invalid symbol
+2025-02-09 09:16:06,940 - ERROR - Bitget get_price HTTP error: 400 for BSWUSDT - Invalid symbol
+2025-02-09 09:16:06,942 - ERROR - Bitget get_price HTTP error: 400 for LEVERUSDT - Invalid symbol
+2025-02-09 09:16:06,944 - ERROR - Bitget get_price HTTP error: 400 for BURGERUSDT - Invalid symbol
+2025-02-09 09:16:06,953 - ERROR - Bitget get_price HTTP error: 400 for JOEUSDT - Invalid symbol
+2025-02-09 09:16:06,965 - ERROR - Bitget get_price HTTP error: 400 for GMTUSDT - Invalid symbol
+2025-02-09 09:16:06,969 - ERROR - Bitget get_price HTTP error: 400 for ACHUSDT - Invalid symbol
+2025-02-09 09:16:06,973 - ERROR - Bitget get_price HTTP error: 400 for FLUXUSDT - Invalid symbol
+2025-02-09 09:16:06,975 - ERROR - Bitget get_price HTTP error: 400 for ATOMUSDT - Invalid symbol
+2025-02-09 09:16:06,979 - ERROR - Bitget get_price HTTP error: 400 for TIAUSDT - Invalid symbol
+2025-02-09 09:16:06,984 - ERROR - Bitget get_price HTTP error: 400 for NKNUSDT - Invalid symbol
+2025-02-09 09:16:06,988 - ERROR - Bitget get_price HTTP error: 400 for USDTBRL - Invalid symbol
+2025-02-09 09:16:06,990 - ERROR - Bitget get_price HTTP error: 400 for DOGSUSDT - Invalid symbol
+2025-02-09 09:16:06,991 - ERROR - Bitget get_price HTTP error: 400 for ONTUSDT - Invalid symbol
+2025-02-09 09:16:06,993 - ERROR - Bitget get_price HTTP error: 400 for CATIUSDT - Invalid symbol
+2025-02-09 09:16:07,007 - ERROR - Bitget get_price HTTP error: 400 for ANKRUSDT - Invalid symbol
+2025-02-09 09:16:07,011 - ERROR - Bitget get_price HTTP error: 400 for KSMUSDT - Invalid symbol
+2025-02-09 09:16:07,012 - ERROR - Bitget get_price HTTP error: 400 for CFXUSDT - Invalid symbol
+2025-02-09 09:16:07,016 - ERROR - Bitget get_price HTTP error: 400 for PNUTUSDT - Invalid symbol
+2025-02-09 09:16:07,025 - ERROR - Bitget get_price HTTP error: 400 for SEIUSDT - Invalid symbol
+2025-02-09 09:16:07,034 - ERROR - Bitget get_price HTTP error: 400 for CRVUSDT - Invalid symbol
+2025-02-09 09:16:07,036 - ERROR - Bitget get_price HTTP error: 400 for RENDERUSDT - Invalid symbol
+2025-02-09 09:16:07,039 - ERROR - Bitget get_price HTTP error: 400 for ASTRUSDT - Invalid symbol
+2025-02-09 09:16:07,048 - ERROR - Bitget get_price HTTP error: 400 for NEARUSDC - Invalid symbol
+2025-02-09 09:16:07,049 - ERROR - Bitget get_price HTTP error: 400 for POWRUSDT - Invalid symbol
+2025-02-09 09:16:07,057 - ERROR - Bitget get_price HTTP error: 400 for AVAUSDT - Invalid symbol
+2025-02-09 09:16:07,060 - ERROR - Bitget get_price HTTP error: 400 for CAKEUSDT - Invalid symbol
+2025-02-09 09:16:07,077 - ERROR - Bitget get_price HTTP error: 400 for AAVEUSDC - Invalid symbol
+2025-02-09 09:16:07,079 - ERROR - Bitget get_price HTTP error: 400 for STGUSDT - Invalid symbol
+2025-02-09 09:16:07,150 - ERROR - Bitget get_price HTTP error: 400 for DOGEEUR - Invalid symbol
+2025-02-09 09:16:07,161 - ERROR - Bitget get_price HTTP error: 400 for AERGOUSDT - Invalid symbol
+2025-02-09 09:16:07,172 - ERROR - Bitget get_price HTTP error: 400 for KNCUSDT - Invalid symbol
+2025-02-09 09:16:07,183 - ERROR - Bitget get_price HTTP error: 400 for TAOUSDT - Invalid symbol
+2025-02-09 09:16:07,197 - ERROR - Bitget get_price HTTP error: 400 for SUSDT - Invalid symbol
+2025-02-09 09:16:07,205 - ERROR - Bitget get_price HTTP error: 400 for RUNEUSDT - Invalid symbol
+2025-02-09 09:16:07,208 - ERROR - Bitget get_price HTTP error: 400 for ICPUSDT - Invalid symbol
+2025-02-09 09:16:07,212 - ERROR - Bitget get_price HTTP error: 400 for ILVUSDT - Invalid symbol
+2025-02-09 09:16:07,222 - ERROR - Bitget get_price HTTP error: 400 for RADUSDT - Invalid symbol
+2025-02-09 09:16:07,225 - ERROR - Bitget get_price HTTP error: 400 for TLMUSDT - Invalid symbol
+2025-02-09 09:16:07,227 - ERROR - Bitget get_price HTTP error: 400 for RLCUSDT - Invalid symbol
+2025-02-09 09:16:07,231 - ERROR - Bitget get_price HTTP error: 400 for FLMUSDT - Invalid symbol
+2025-02-09 09:16:07,236 - ERROR - Bitget get_price HTTP error: 400 for FETBTC - Invalid symbol
+2025-02-09 09:16:07,245 - ERROR - Bitget get_price HTTP error: 400 for FARMUSDT - Invalid symbol
+2025-02-09 09:16:07,248 - ERROR - Bitget get_price HTTP error: 400 for FILETH - Invalid symbol
+2025-02-09 09:16:07,256 - ERROR - Bitget get_price HTTP error: 400 for MAVUSDT - Invalid symbol
+2025-02-09 09:16:07,260 - ERROR - Bitget get_price HTTP error: 400 for LTCETH - Invalid symbol
+2025-02-09 09:16:07,262 - ERROR - Bitget get_price HTTP error: 400 for DYMUSDT - Invalid symbol
+2025-02-09 09:16:07,267 - ERROR - Bitget get_price HTTP error: 400 for CTSIUSDT - Invalid symbol
+2025-02-09 09:16:07,269 - ERROR - Bitget get_price HTTP error: 400 for VETUSDT - Invalid symbol
+2025-02-09 09:16:07,272 - ERROR - Bitget get_price HTTP error: 400 for WIFEUR - Invalid symbol
+2025-02-09 09:16:07,274 - ERROR - Bitget get_price HTTP error: 400 for SNTUSDT - Invalid symbol
+2025-02-09 09:16:07,279 - ERROR - Bitget get_price HTTP error: 400 for ETHFIUSDT - Invalid symbol
+2025-02-09 09:16:07,282 - ERROR - Bitget get_price HTTP error: 400 for MINAUSDT - Invalid symbol
+2025-02-09 09:16:07,284 - ERROR - Bitget get_price HTTP error: 400 for KDAUSDT - Invalid symbol
+2025-02-09 09:16:07,285 - ERROR - Bitget get_price HTTP error: 400 for TRXUSDC - Invalid symbol
+2025-02-09 09:16:07,291 - ERROR - Bitget get_price HTTP error: 400 for QKCUSDT - Invalid symbol
+2025-02-09 09:16:07,293 - ERROR - Bitget get_price HTTP error: 400 for XRPBTC - Invalid symbol
+2025-02-09 09:16:07,295 - ERROR - Bitget get_price HTTP error: 400 for DODOUSDT - Invalid symbol
+2025-02-09 09:16:07,301 - ERROR - Bitget get_price HTTP error: 400 for LTCBTC - Invalid symbol
+2025-02-09 09:16:07,303 - ERROR - Bitget get_price HTTP error: 400 for HIGHUSDT - Invalid symbol
+2025-02-09 09:16:07,308 - ERROR - Bitget get_price HTTP error: 429 for GALAUSDT
+2025-02-09 09:16:07,315 - ERROR - Bitget get_price HTTP error: 400 for OSMOUSDT - Invalid symbol
+2025-02-09 09:16:07,317 - ERROR - Bitget get_price HTTP error: 429 for PHAUSDC
+2025-02-09 09:16:07,319 - ERROR - Bitget get_price HTTP error: 400 for BOMEUSDT - Invalid symbol
+2025-02-09 09:16:07,324 - ERROR - Bitget get_price HTTP error: 400 for LINKEUR - Invalid symbol
+2025-02-09 09:16:07,326 - ERROR - Bitget get_price HTTP error: 400 for SANDUSDT - Invalid symbol
+2025-02-09 09:16:07,328 - ERROR - Bitget get_price HTTP error: 400 for OGUSDT - Invalid symbol
+2025-02-09 09:16:07,329 - ERROR - Bitget get_price HTTP error: 400 for BELUSDT - Invalid symbol
+2025-02-09 09:16:07,332 - ERROR - Bitget get_price HTTP error: 400 for ETCBTC - Invalid symbol
+2025-02-09 09:16:07,344 - ERROR - Bitget get_price HTTP error: 429 for LITUSDT
+2025-02-09 09:16:07,346 - ERROR - Bitget get_price HTTP error: 400 for BALUSDT - Invalid symbol
+2025-02-09 09:16:07,348 - ERROR - Bitget get_price HTTP error: 429 for HOOKUSDT
+2025-02-09 09:16:07,350 - ERROR - Bitget get_price HTTP error: 429 for ALPACAUSDT
+2025-02-09 09:16:07,356 - ERROR - Bitget get_price HTTP error: 429 for FILUSDT
+2025-02-09 09:16:07,359 - ERROR - Bitget get_price HTTP error: 400 for WAXPUSDT - Invalid symbol
+2025-02-09 09:16:07,399 - ERROR - Bitget get_price HTTP error: 400 for BERAUSDT - Invalid symbol
+2025-02-09 09:16:07,446 - ERROR - Bitget get_price HTTP error: 429 for COMPUSDT
+2025-02-09 09:16:07,492 - ERROR - Bitget get_price HTTP error: 400 for PERPUSDT - Invalid symbol
+2025-02-09 09:16:07,494 - ERROR - Bitget get_price HTTP error: 429 for ROSEUSDT
+2025-02-09 09:16:07,496 - ERROR - Bitget get_price HTTP error: 429 for ORDIUSDT
+2025-02-09 09:16:07,502 - ERROR - Bitget get_price HTTP error: 429 for IDEXUSDT
+2025-02-09 09:16:07,504 - ERROR - Bitget get_price HTTP error: 429 for FTTUSDT
+2025-02-09 09:16:07,506 - ERROR - Bitget get_price HTTP error: 429 for WINUSDT
+2025-02-09 09:16:07,508 - ERROR - Bitget get_price HTTP error: 429 for GTCUSDT
+2025-02-09 09:16:07,509 - ERROR - Bitget get_price HTTP error: 400 for EIGENUSDT - Invalid symbol
+2025-02-09 09:16:07,511 - ERROR - Bitget get_price HTTP error: 400 for ETHBTC - Invalid symbol
+2025-02-09 09:16:07,512 - ERROR - Bitget get_price HTTP error: 429 for XAIUSDT
+2025-02-09 09:16:07,514 - ERROR - Bitget get_price HTTP error: 429 for AMPUSDT
+2025-02-09 09:16:07,520 - ERROR - Bitget get_price HTTP error: 429 for BANANAUSDT
+2025-02-09 09:16:07,522 - ERROR - Bitget get_price HTTP error: 400 for BETAUSDT - Invalid symbol
+2025-02-09 09:16:07,526 - ERROR - Bitget get_price HTTP error: 429 for XRPEUR
+2025-02-09 09:16:07,527 - ERROR - Bitget get_price HTTP error: 429 for CELRUSDT
+2025-02-09 09:16:07,528 - ERROR - Bitget get_price HTTP error: 429 for ALGOUSDC
+2025-02-09 09:16:07,532 - ERROR - Bitget get_price HTTP error: 429 for PENDLEUSDT
+2025-02-09 09:16:07,533 - ERROR - Bitget get_price HTTP error: 429 for RPLUSDT
+2025-02-09 09:16:07,535 - ERROR - Bitget get_price HTTP error: 429 for ETHBRL
+2025-02-09 09:16:07,540 - ERROR - Bitget get_price HTTP error: 429 for CKBUSDT
+2025-02-09 09:16:07,543 - ERROR - Bitget get_price HTTP error: 429 for ZKUSDT
+2025-02-09 09:16:07,546 - ERROR - Bitget get_price HTTP error: 429 for TUSDUSDT
+2025-02-09 09:16:07,549 - ERROR - Bitget get_price HTTP error: 429 for IMXUSDT
+2025-02-09 09:16:07,551 - ERROR - Bitget get_price HTTP error: 429 for FDUSDUSDT
+2025-02-09 09:16:07,562 - ERROR - Bitget get_price HTTP error: 429 for MBOXUSDT
+2025-02-09 09:16:07,565 - ERROR - Bitget get_price HTTP error: 429 for SCRUSDT
+2025-02-09 09:16:07,566 - ERROR - Bitget get_price HTTP error: 400 for LINKBTC - Invalid symbol
+2025-02-09 09:16:07,568 - ERROR - Bitget get_price HTTP error: 429 for MAGICUSDT
+2025-02-09 09:16:07,573 - ERROR - Bitget get_price HTTP error: 400 for ALPHAUSDT - Invalid symbol
+2025-02-09 09:16:07,576 - ERROR - Bitget get_price HTTP error: 400 for PORTALUSDT - Invalid symbol
+2025-02-09 09:16:07,578 - ERROR - Bitget get_price HTTP error: 400 for TURBOUSDT - Invalid symbol
+2025-02-09 09:16:07,582 - ERROR - Bitget get_price HTTP error: 429 for OPUSDC
+2025-02-09 09:16:07,585 - ERROR - Bitget get_price HTTP error: 429 for ATMUSDT
+2025-02-09 09:16:07,591 - ERROR - Bitget get_price HTTP error: 429 for ACAUSDT
+2025-02-09 09:16:07,594 - ERROR - Bitget get_price HTTP error: 429 for ARBUSDC
+2025-02-09 09:16:07,596 - ERROR - Bitget get_price HTTP error: 429 for WOOUSDT
+2025-02-09 09:16:07,616 - ERROR - Bitget get_price HTTP error: 429 for PYTHUSDT
+2025-02-09 09:16:07,618 - ERROR - Bitget get_price HTTP error: 429 for DYDXUSDT
+2025-02-09 09:16:07,621 - ERROR - Bitget get_price HTTP error: 429 for QTUMUSDT
+2025-02-09 09:16:07,623 - ERROR - Bitget get_price HTTP error: 429 for GNOUSDT
+2025-02-09 09:16:07,626 - ERROR - Bitget get_price HTTP error: 429 for ETHEUR
+2025-02-09 09:16:07,627 - ERROR - Bitget get_price HTTP error: 429 for POLYXUSDT
+2025-02-09 09:16:07,644 - ERROR - Bitget get_price HTTP error: 429 for QUICKUSDT
+2025-02-09 09:16:07,649 - ERROR - Bitget get_price HTTP error: 429 for BARUSDT
+2025-02-09 09:16:07,650 - ERROR - Bitget get_price HTTP error: 429 for SPELLUSDT
+2025-02-09 09:16:07,651 - ERROR - Bitget get_price HTTP error: 429 for DUSKUSDT
+2025-02-09 09:16:07,653 - ERROR - Bitget get_price HTTP error: 429 for BATUSDT
+2025-02-09 09:16:07,665 - ERROR - Bitget get_price HTTP error: 429 for BANDUSDT
+2025-02-09 09:16:07,705 - ERROR - Bitget get_price HTTP error: 429 for ACTUSDT
+2025-02-09 09:16:07,712 - ERROR - Bitget get_price HTTP error: 429 for ZILUSDT
+2025-02-09 09:16:07,713 - ERROR - Bitget get_price HTTP error: 429 for STRKUSDT
+2025-02-09 09:16:07,715 - ERROR - Bitget get_price HTTP error: 429 for RAYUSDT
+2025-02-09 09:16:07,758 - ERROR - Bitget get_price HTTP error: 429 for ORCAUSDT
+2025-02-09 09:16:07,780 - ERROR - Bitget get_price HTTP error: 429 for SOLBTC
+2025-02-09 09:16:07,796 - ERROR - Bitget get_price HTTP error: 429 for MASKUSDT
+2025-02-09 09:16:07,798 - ERROR - Bitget get_price HTTP error: 429 for YFIUSDT
+2025-02-09 09:16:07,799 - ERROR - Bitget get_price HTTP error: 429 for SUSHIUSDT
+2025-02-09 09:16:07,801 - ERROR - Bitget get_price HTTP error: 429 for HMSTRUSDT
+2025-02-09 09:16:07,809 - ERROR - Bitget get_price HTTP error: 429 for JSTUSDT
+2025-02-09 09:16:07,811 - ERROR - Bitget get_price HTTP error: 429 for FIDAUSDT
+2025-02-09 09:16:07,813 - ERROR - Bitget get_price HTTP error: 429 for ICXUSDT
+2025-02-09 09:16:07,818 - ERROR - Bitget get_price HTTP error: 429 for AUDIOUSDT
+2025-02-09 09:16:07,821 - ERROR - Bitget get_price HTTP error: 429 for FLOKIUSDT
+2025-02-09 09:16:07,824 - ERROR - Bitget get_price HTTP error: 429 for GLMRUSDT
+2025-02-09 09:16:07,826 - ERROR - Bitget get_price HTTP error: 429 for LOKAUSDT
+2025-02-09 09:16:07,829 - ERROR - Bitget get_price HTTP error: 429 for CETUSUSDT
+2025-02-09 09:16:07,831 - ERROR - Bitget get_price HTTP error: 429 for SUNUSDT
+2025-02-09 09:16:07,835 - ERROR - Bitget get_price HTTP error: 429 for MDTUSDT
+2025-02-09 09:16:07,837 - ERROR - Bitget get_price HTTP error: 429 for USUALUSDT
+2025-02-09 09:16:07,844 - ERROR - Bitget get_price HTTP error: 429 for NEOUSDT
+2025-02-09 09:16:07,845 - ERROR - Bitget get_price HTTP error: 429 for ARKMUSDT
+2025-02-09 09:16:07,847 - ERROR - Bitget get_price HTTP error: 429 for PORTOUSDT
+2025-02-09 09:16:07,849 - ERROR - Bitget get_price HTTP error: 429 for CHZUSDT
+2025-02-09 09:16:07,851 - ERROR - Bitget get_price HTTP error: 429 for SNXUSDT
+2025-02-09 09:16:07,870 - ERROR - Bitget get_price HTTP error: 429 for SLFUSDT
+2025-02-09 09:16:07,872 - ERROR - Bitget get_price HTTP error: 429 for REZUSDT
+2025-02-09 09:16:07,874 - ERROR - Bitget get_price HTTP error: 429 for LPTUSDT
+2025-02-09 09:16:07,876 - ERROR - Bitget get_price HTTP error: 429 for PYRUSDT
+2025-02-09 09:16:07,879 - ERROR - Bitget get_price HTTP error: 429 for GHSTUSDT
+2025-02-09 09:16:07,881 - ERROR - Bitget get_price HTTP error: 429 for TRXBTC
+2025-02-09 09:16:07,895 - ERROR - Bitget get_price HTTP error: 400 for PUNDIXUSDT - Invalid symbol
+2025-02-09 09:16:07,899 - ERROR - Bitget get_price HTTP error: 429 for ADAEUR
+2025-02-09 09:16:07,900 - ERROR - Bitget get_price HTTP error: 429 for ZENUSDT
+2025-02-09 09:16:07,906 - ERROR - Bitget get_price HTTP error: 429 for BTCBRL
+2025-02-09 09:16:07,908 - ERROR - Bitget get_price HTTP error: 400 for CELOUSDT - Invalid symbol
+2025-02-09 09:16:07,926 - ERROR - Bitget get_price HTTP error: 400 for USTCUSDT - Invalid symbol
+2025-02-09 09:16:07,958 - ERROR - Bitget get_price HTTP error: 400 for JTOUSDT - Invalid symbol
+2025-02-09 09:16:07,971 - ERROR - Bitget get_price HTTP error: 400 for ARKUSDT - Invalid symbol
+2025-02-09 09:16:07,979 - ERROR - Bitget get_price HTTP error: 400 for CVCUSDT - Invalid symbol
+2025-02-09 09:16:07,981 - ERROR - Bitget get_price HTTP error: 400 for WLDUSDT - Invalid symbol
+2025-02-09 09:16:10,336 - ERROR - Kucoin get_price error for RDN-TUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,348 - ERROR - Kucoin get_price error for STO-RJBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,353 - ERROR - Kucoin get_price error for SHI-BUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,369 - ERROR - Kucoin get_price error for LIN-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,372 - ERROR - Kucoin get_price error for SOL-VUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,393 - ERROR - Kucoin get_price error for ALP-HABTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,398 - ERROR - Kucoin get_price error for MOV-RUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,409 - ERROR - Kucoin get_price error for ALI-CEUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,414 - ERROR - Kucoin get_price error for ATO-METH: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,421 - ERROR - Kucoin get_price error for COM-BOUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,426 - ERROR - Kucoin get_price error for PIX-ELUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,434 - ERROR - Kucoin get_price error for OMN-IUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,439 - ERROR - Kucoin get_price error for HBA-RUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,473 - ERROR - Kucoin get_price error for SCR-TUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,479 - ERROR - Kucoin get_price error for IOS-TUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,485 - ERROR - Kucoin get_price error for USD-CEUR: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,505 - ERROR - Kucoin get_price error for AVA-XUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,540 - ERROR - Kucoin get_price error for AUC-TIONUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,560 - ERROR - Kucoin get_price error for STR-AXUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,568 - ERROR - Kucoin get_price error for VOX-ELUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,575 - ERROR - Kucoin get_price error for TFU-ELBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,602 - ERROR - Kucoin get_price error for COT-IUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,607 - ERROR - Kucoin get_price error for PEO-PLEUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,611 - ERROR - Kucoin get_price error for GLM-RBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,617 - ERROR - Kucoin get_price error for PAX-GUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,623 - ERROR - Kucoin get_price error for AAV-EBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,629 - ERROR - Kucoin get_price error for SHI-BDOGE: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,639 - ERROR - Kucoin get_price error for COO-KIEUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,644 - ERROR - Kucoin get_price error for PER-PBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,649 - ERROR - Kucoin get_price error for ALG-OBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,654 - ERROR - Kucoin get_price error for LQT-YUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,658 - ERROR - Kucoin get_price error for PRO-MUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,662 - ERROR - Kucoin get_price error for CYB-ERUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,680 - ERROR - Kucoin get_price error for LUM-IAUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,688 - ERROR - Kucoin get_price error for VTH-OUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,693 - ERROR - Kucoin get_price error for ALI-CEBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,696 - ERROR - Kucoin get_price error for GUS-DT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,709 - ERROR - Kucoin get_price error for PAX-GBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,717 - ERROR - Kucoin get_price error for LIS-TAUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,723 - ERROR - Kucoin get_price error for DUS-DT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,741 - ERROR - Kucoin get_price error for MAN-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,745 - ERROR - Kucoin get_price error for LUN-AUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,783 - ERROR - Kucoin get_price error for RUN-EBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,796 - ERROR - Kucoin get_price error for HAR-DUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,801 - ERROR - Kucoin get_price error for BIC-OUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,869 - ERROR - Kucoin get_price error for MEU-SDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,877 - ERROR - Kucoin get_price error for IDU-SDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,880 - ERROR - Kucoin get_price error for IOT-ABTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,883 - ERROR - Kucoin get_price error for OMU-SDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,953 - ERROR - Kucoin get_price error for AIX-BTUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,969 - ERROR - Kucoin get_price error for BON-KUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,986 - ERROR - Kucoin get_price error for OMB-TC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:10,993 - ERROR - Kucoin get_price error for TFU-ELUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,003 - ERROR - Kucoin get_price error for ARU-SDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,009 - ERROR - Kucoin get_price error for HIF-IUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,026 - ERROR - Kucoin get_price error for PEN-GUUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,031 - ERROR - Kucoin get_price error for FLO-WUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,038 - ERROR - Kucoin get_price error for TUS-DT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,064 - ERROR - Kucoin get_price error for NEA-RBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,071 - ERROR - Kucoin get_price error for MAN-TAUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,076 - ERROR - Kucoin get_price error for VAN-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,090 - ERROR - Kucoin get_price error for STO-RJUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,134 - ERROR - Kucoin get_price error for KAV-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,142 - ERROR - Kucoin get_price error for LUN-CUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,150 - ERROR - Kucoin get_price error for JAS-MYUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,157 - ERROR - Kucoin get_price error for WBT-CUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,170 - ERROR - Kucoin get_price error for NTR-NUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,180 - ERROR - Kucoin get_price error for AVA-XBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,185 - ERROR - Kucoin get_price error for ARP-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,190 - ERROR - Kucoin get_price error for API-3USDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,195 - ERROR - Kucoin get_price error for MET-ISUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,201 - ERROR - Kucoin get_price error for 1IN-CHUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,205 - ERROR - Kucoin get_price error for NEI-ROUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,218 - ERROR - Kucoin get_price error for DEN-TUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,229 - ERROR - Kucoin get_price error for MOV-EUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,236 - ERROR - Kucoin get_price error for VAN-RYUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,247 - ERROR - Kucoin get_price error for DEX-EUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,276 - ERROR - Kucoin get_price error for IOT-XUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,285 - ERROR - Kucoin get_price error for DAS-HBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,301 - ERROR - Kucoin get_price error for FLO-WBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,307 - ERROR - Kucoin get_price error for EGL-DUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,311 - ERROR - Kucoin get_price error for USD-PUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,317 - ERROR - Kucoin get_price error for ATO-MBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,338 - ERROR - Kucoin get_price error for ALP-INEUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,342 - ERROR - Kucoin get_price error for EGL-DBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,345 - ERROR - Kucoin get_price error for TRU-MPUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,351 - ERROR - Kucoin get_price error for SCR-TBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,382 - ERROR - Kucoin get_price error for IOT-XBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,385 - ERROR - Kucoin get_price error for DEG-OUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,394 - ERROR - Kucoin get_price error for BAN-DBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,457 - ERROR - Kucoin get_price error for PEP-EUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,476 - ERROR - Kucoin get_price error for AGL-DUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,480 - ERROR - Kucoin get_price error for IOU-SDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,493 - ERROR - Kucoin get_price error for CGP-TUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,509 - ERROR - Kucoin get_price error for AEV-OUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,515 - ERROR - Kucoin get_price error for DOG-EBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,521 - ERROR - Kucoin get_price error for ANI-MEUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,528 - ERROR - Kucoin get_price error for BLU-RUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,533 - ERROR - Kucoin get_price error for WUS-DT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,538 - ERROR - Kucoin get_price error for DAT-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,542 - ERROR - Kucoin get_price error for BUR-GERUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,546 - ERROR - Kucoin get_price error for BNU-SDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,553 - ERROR - Kucoin get_price error for PON-DUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,559 - ERROR - Kucoin get_price error for TNS-RUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,569 - ERROR - Kucoin get_price error for SUP-ERUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,591 - ERROR - Kucoin get_price error for FLU-XUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,602 - ERROR - Kucoin get_price error for ATO-MUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,612 - ERROR - Kucoin get_price error for USD-TBRL: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,621 - ERROR - Kucoin get_price error for PNU-TUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,626 - ERROR - Kucoin get_price error for DOG-SUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,631 - ERROR - Kucoin get_price error for DEN-TETH: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,636 - ERROR - Kucoin get_price error for ARB-TC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,645 - ERROR - Kucoin get_price error for CTS-IBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,650 - ERROR - Kucoin get_price error for CAT-IUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,655 - ERROR - Kucoin get_price error for ANK-RUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,659 - ERROR - Kucoin get_price error for IOT-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,669 - ERROR - Kucoin get_price error for CRE-AMUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,688 - ERROR - Kucoin get_price error for AST-RUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,722 - ERROR - Kucoin get_price error for REN-DERUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,778 - ERROR - Kucoin get_price error for QIU-SDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,788 - ERROR - Kucoin get_price error for CAK-EUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,793 - ERROR - Kucoin get_price error for AAV-EUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,807 - ERROR - Kucoin get_price error for DOG-EUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,827 - ERROR - Kucoin get_price error for AER-GOUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,851 - ERROR - Kucoin get_price error for RUN-EUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,873 - ERROR - Kucoin get_price error for FOR-THUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,888 - ERROR - Kucoin get_price error for ANK-RBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,893 - ERROR - Kucoin get_price error for BIF-IUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,897 - ERROR - Kucoin get_price error for SUS-DC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,905 - ERROR - Kucoin get_price error for DOD-OUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,922 - ERROR - Kucoin get_price error for CTS-IUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,956 - ERROR - Kucoin get_price error for ETH-FIUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,961 - ERROR - Kucoin get_price error for VID-TUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,966 - ERROR - Kucoin get_price error for HIG-HUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,972 - ERROR - Kucoin get_price error for MIN-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,977 - ERROR - Kucoin get_price error for LIN-KUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,982 - ERROR - Kucoin get_price error for BOM-EUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:11,989 - ERROR - Kucoin get_price error for CEL-OBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,005 - ERROR - Kucoin get_price error for OSM-OUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,016 - ERROR - Kucoin get_price error for SAN-DUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,021 - ERROR - Kucoin get_price error for DAT-ABTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,050 - ERROR - Kucoin get_price error for SUP-ERBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,110 - ERROR - Kucoin get_price error for BER-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,124 - ERROR - Kucoin get_price error for COM-PUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,135 - ERROR - Kucoin get_price error for PER-PUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,145 - ERROR - Kucoin get_price error for CEL-RUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,151 - ERROR - Kucoin get_price error for DAS-HETH: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,157 - ERROR - Kucoin get_price error for ALG-OUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,182 - ERROR - Kucoin get_price error for BAN-ANAUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,202 - ERROR - Kucoin get_price error for ORD-IUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,225 - ERROR - Kucoin get_price error for ROS-EUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,232 - ERROR - Kucoin get_price error for MAN-AETH: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,243 - ERROR - Kucoin get_price error for PEN-DLEUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,258 - ERROR - Kucoin get_price error for AUD-IOBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,265 - ERROR - Kucoin get_price error for USD-TDAI: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,272 - ERROR - Kucoin get_price error for ZKU-SDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,279 - ERROR - Kucoin get_price error for EIG-ENUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,293 - ERROR - Kucoin get_price error for TUS-DUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,301 - ERROR - Kucoin get_price error for LIN-KBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,310 - ERROR - Kucoin get_price error for KAI-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,322 - ERROR - Kucoin get_price error for THE-TAUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,326 - ERROR - Kucoin get_price error for TUR-BOUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,339 - ERROR - Kucoin get_price error for MAG-ICUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,395 - ERROR - Kucoin get_price error for OPU-SDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,400 - ERROR - Kucoin get_price error for ALP-HAUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,404 - ERROR - Kucoin get_price error for POR-TALUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,409 - ERROR - Kucoin get_price error for DUS-KUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,437 - ERROR - Kucoin get_price error for MAN-ABTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,442 - ERROR - Kucoin get_price error for POL-YXUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,447 - ERROR - Kucoin get_price error for DYD-XUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,453 - ERROR - Kucoin get_price error for QTU-MUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,457 - ERROR - Kucoin get_price error for ETH-WUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,462 - ERROR - Kucoin get_price error for PYT-HUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,466 - ERROR - Kucoin get_price error for ORC-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,474 - ERROR - Kucoin get_price error for BAN-DUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,490 - ERROR - Kucoin get_price error for QUI-CKUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,498 - ERROR - Kucoin get_price error for NEA-RUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,513 - ERROR - Kucoin get_price error for STR-KUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,522 - ERROR - Kucoin get_price error for MAS-KUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,527 - ERROR - Kucoin get_price error for SUS-HIUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,532 - ERROR - Kucoin get_price error for AUD-IOUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,541 - ERROR - Kucoin get_price error for AST-RBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,547 - ERROR - Kucoin get_price error for LOK-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,556 - ERROR - Kucoin get_price error for FLO-KIUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,560 - ERROR - Kucoin get_price error for CET-USUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,563 - ERROR - Kucoin get_price error for FID-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,572 - ERROR - Kucoin get_price error for HBA-RBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,579 - ERROR - Kucoin get_price error for COT-IBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,607 - ERROR - Kucoin get_price error for HMS-TRUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,610 - ERROR - Kucoin get_price error for DAS-HUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,613 - ERROR - Kucoin get_price error for GLM-RUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,620 - ERROR - Kucoin get_price error for USU-ALUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,633 - ERROR - Kucoin get_price error for ARK-MUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,757 - ERROR - Kucoin get_price error for PON-DBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,764 - ERROR - Kucoin get_price error for TAD-AUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,773 - ERROR - Kucoin get_price error for CEL-OUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,777 - ERROR - Kucoin get_price error for MEM-EUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,784 - ERROR - Kucoin get_price error for PUN-DIXUSDT: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,800 - ERROR - Kucoin get_price error for IOT-XETH: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,810 - ERROR - Kucoin get_price error for UST-CUSDC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-02-09 09:16:12,822 - ERROR - Kucoin get_price error for WBT-CBTC: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/workspaces/Arbitrage/exchanges/kucoin.py", line 40, in get_price
+    price_str = data.get("data", {}).get("price", "0")
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
