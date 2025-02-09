@@ -10,5 +10,12 @@
       "dest": "ARCA",
       "normalized": "ARCA/USDT"
     }
-  ]
+],
+"binance-kucoin": [
+  {
+    "source": "ACE",
+    "dest": "kACE",
+    "normalized": "kACE/USDT"
+  }
+]
 }
