@@ -12,8 +12,8 @@ def normalize_symbol(symbol, exchange_name: str) -> str:
     # Jeśli symbol jest słownikiem, wyciągnij pole "symbol"
     if isinstance(symbol, dict):
         symbol = symbol.get("symbol")
+        # Jeśli brak pola "symbol", spróbuj scalić base i quote
         if not symbol:
-            # Jeśli nie ma pola 'symbol', spróbuj połączyć pola "base" i "quote"
             base = symbol.get("base", "")
             quote = symbol.get("quote", "")
             symbol = base + quote

@@ -67,8 +67,9 @@ async def create_all_common_pairs():
             pairs1 = trading_pairs_cache.get(name1, [])
             pairs2 = trading_pairs_cache.get(name2, [])
 
-            mapping1 = {normalize_symbol(sym, name1): sym for sym in pairs1}
-            mapping2 = {normalize_symbol(sym, name2): sym for sym in pairs2}
+            # Zwracamy zawsze string (jeśli symbol nie jest stringiem, konwertujemy)
+            mapping1 = {normalize_symbol(sym, name1): str(sym) for sym in pairs1}
+            mapping2 = {normalize_symbol(sym, name2): str(sym) for sym in pairs2}
 
             common_norm = set(mapping1.keys()) & set(mapping2.keys())
             common_list = [(mapping1[norm], mapping2[norm], norm) for norm in common_norm]

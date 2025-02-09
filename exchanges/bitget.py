@@ -43,7 +43,7 @@ class BitgetExchange(Exchange):
                 async with session.get(url) as response:
                     if response.status == 429:
                         logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol} - Too Many Requests. Retry {attempt+1}/{max_retries}")
-                        await asyncio.sleep(2 ** attempt)  # Exponential backoff
+                        await asyncio.sleep(2 ** attempt)  # exponential backoff
                         continue
                     if response.status != 200:
                         logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol}")
