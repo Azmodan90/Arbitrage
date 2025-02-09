@@ -1,6 +1,7 @@
 import aiohttp
 import logging
 from exchanges.exchange import Exchange
+from utils import normalize_symbol  # Upewnij się, że importujesz funkcję normalizującą
 
 class BinanceExchange(Exchange):
     BASE_URL = "https://api.binance.com"
@@ -22,7 +23,10 @@ class BinanceExchange(Exchange):
             logging.exception(f"Binance get_trading_pairs error: {e}")
             return []
 
-    async def get_price(self, symbol: str, session: aiohttp.ClientSession) -> float:
+    async def get_price(self, symbol, session: aiohttp.ClientSession) -> float:
+        # Upewnij się, że symbol jest stringiem; jeśli nie, spróbuj go znormalizować
+        if not isinstance(symbol, str):
+            symbol = normalize_symbol(symbol, "BinanceExchange")
         url = f"{self.BASE_URL}/api/v3/ticker/price?symbol={symbol}"
         try:
             async with session.get(url) as response:

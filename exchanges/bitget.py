@@ -1,4 +1,5 @@
 import aiohttp
+import asyncio
 import logging
 from exchanges.exchange import Exchange
 
@@ -36,25 +37,29 @@ class BitgetExchange(Exchange):
 
     async def get_price(self, symbol: str, session: aiohttp.ClientSession) -> float:
         url = f"{self.BASE_URL}/api/spot/v1/market/ticker?symbol={symbol}"
-        try:
-            async with session.get(url) as response:
-                if response.status == 400:
-                    logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol} - Invalid symbol")
-                    return 0.0
-                if response.status != 200:
-                    logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol}")
-                    return 0.0
-                data = await response.json()
-                if data.get("code") != "00000":
-                    logging.error(f"Bitget get_price API error: {data.get('msg')} for {symbol}")
-                    return 0.0
-                price_str = data.get("data", {}).get("last")
-                if not price_str:
-                    price_str = data.get("data", {}).get("close")
-                    if not price_str:
-                        logging.error(f"Bitget get_price: no price for {symbol}")
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                async with session.get(url) as response:
+                    if response.status == 429:
+                        logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol} - Too Many Requests. Retry {attempt+1}/{max_retries}")
+                        await asyncio.sleep(2 ** attempt)  # Exponential backoff
+                        continue
+                    if response.status != 200:
+                        logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol}")
                         return 0.0
-                return float(price_str)
-        except Exception as e:
-            logging.exception(f"Bitget get_price exception for {symbol}: {e}")
-            return 0.0
+                    data = await response.json()
+                    if data.get("code") != "00000":
+                        logging.error(f"Bitget get_price API error: {data.get('msg')} for {symbol}")
+                        return 0.0
+                    price_str = data.get("data", {}).get("last")
+                    if not price_str:
+                        price_str = data.get("data", {}).get("close")
+                        if not price_str:
+                            logging.error(f"Bitget get_price: no price for {symbol}")
+                            return 0.0
+                    return float(price_str)
+            except Exception as e:
+                logging.exception(f"Bitget get_price exception for {symbol} on attempt {attempt+1}: {e}")
+                await asyncio.sleep(2 ** attempt)
+        return 0.0
