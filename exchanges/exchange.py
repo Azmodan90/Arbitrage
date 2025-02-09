@@ -9,8 +9,7 @@ class Exchange(ABC):
     @abstractmethod
     async def get_trading_pairs(self, session: aiohttp.ClientSession) -> list:
         """
-        Powinno zwracać listę symboli (stringów) dostępnych na giełdzie,
-        np. ["BTCUSDT", "ETHUSDT", ...].
+        Powinno zwracać listę symboli dostępnych na giełdzie, np. ["BTCUSDT", "ETHUSDT", ...].
         """
         pass
 

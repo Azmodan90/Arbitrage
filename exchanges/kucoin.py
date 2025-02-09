@@ -14,6 +14,7 @@ class KucoinExchange(Exchange):
                     return []
                 data = await response.json()
                 symbols = data.get("data", [])
+                # Usuwamy znak "-" z symbolu i zwracamy duże litery
                 pairs = [item["symbol"].replace("-", "").upper() for item in symbols if item.get("enableTrading", False)]
                 return pairs
         except Exception as e:
@@ -21,7 +22,9 @@ class KucoinExchange(Exchange):
             return []
 
     async def get_price(self, symbol: str, session: aiohttp.ClientSession) -> float:
+        # Jeśli symbol nie zawiera "-", spróbuj ustalić base/quote (uwaga – uproszczone podejście)
         if "-" not in symbol:
+            # Może być lepiej wykorzystać dane z API, ale tu przyjmujemy: pierwsze 3 litery to base
             base = symbol[:3]
             quote = symbol[3:]
             formatted = f"{base}-{quote}"

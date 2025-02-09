@@ -11,7 +11,6 @@ from exchanges.kucoin import KucoinExchange
 
 load_dotenv()
 
-# Konfiguracja logowania – logi zapisywane są w pliku "app.log" w głównym folderze
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -43,16 +42,17 @@ async def fetch_price(exchange, symbol, session):
         return 0.0
 
 async def run_arbitrage():
-    if not os.path.exists("common_pairs.json"):
-        logging.error("Plik common_pairs.json nie istnieje. Uruchom najpierw common_pairs.py")
+    filename = "common_pairs_all.json"
+    if not os.path.exists(filename):
+        logging.error("Plik common_pairs_all.json nie istnieje. Uruchom najpierw create_common_pairs.py")
         return
 
-    with open("common_pairs.json", "r", encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         common_pairs = json.load(f)
 
     async with aiohttp.ClientSession() as session:
-        for key, symbols in common_pairs.items():
-            exchanges = key.split("-")
+        for config_key, pairs in common_pairs.items():
+            exchanges = config_key.split("-")
             if len(exchanges) != 2:
                 continue
             ex1_name, ex2_name = exchanges
@@ -63,9 +63,11 @@ async def run_arbitrage():
             if not ex1 or not ex2:
                 continue
 
-            for symbol in symbols:
-                price1 = await fetch_price(ex1, symbol, session)
-                price2 = await fetch_price(ex2, symbol, session)
+            for symbol in pairs:
+                # symbol to krotka: (symbol z giełdy 1, symbol z giełdy 2, znormalizowany identyfikator)
+                source_sym, dest_sym, normalized = symbol
+                price1 = await fetch_price(ex1, source_sym, session)
+                price2 = await fetch_price(ex2, dest_sym, session)
                 if price1 == 0 or price2 == 0:
                     continue
 
@@ -74,11 +76,11 @@ async def run_arbitrage():
 
                 if effective_price1 < price2:
                     profit = ((price2 - effective_price1) / effective_price1) * 100
-                    logging.info(f"Arbitraż: Kup {symbol} na {ex1_name} za {price1:.4f} (efektywnie {effective_price1:.4f}) "
+                    logging.info(f"Arbitraż: Kup {source_sym} na {ex1_name} za {price1:.4f} (efektywnie {effective_price1:.4f}) "
                                  f"i sprzedaj na {ex2_name} za {price2:.4f}. Zysk: {profit:.2f}%")
                 elif effective_price2 < price1:
                     profit = ((price1 - effective_price2) / effective_price2) * 100
-                    logging.info(f"Arbitraż: Kup {symbol} na {ex2_name} za {price2:.4f} (efektywnie {effective_price2:.4f}) "
+                    logging.info(f"Arbitraż: Kup {dest_sym} na {ex2_name} za {price2:.4f} (efektywnie {effective_price2:.4f}) "
                                  f"i sprzedaj na {ex1_name} za {price1:.4f}. Zysk: {profit:.2f}%")
 
 if __name__ == "__main__":

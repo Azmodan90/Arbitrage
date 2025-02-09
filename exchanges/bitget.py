@@ -7,10 +7,7 @@ class BitgetExchange(Exchange):
 
     async def get_trading_pairs(self, session: aiohttp.ClientSession):
         """
-        Pobiera listę dostępnych par z Bitget.
-        Używamy endpointu: GET /api/spot/v1/public/products.
-        Zwracamy listę symboli (stringów) w formacie zgodnym z innymi giełdami.
-        Dodatkowo usuwamy sufiks "_SPBL", jeśli występuje.
+        Pobiera listę dostępnych par z Bitget. Usuwa sufiks "_SPBL" jeśli występuje.
         """
         url = f"{self.BASE_URL}/api/spot/v1/public/products"
         try:

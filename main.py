@@ -5,35 +5,24 @@ import logging
 import json
 import itertools
 from dotenv import load_dotenv
-try:
-    from utils.create_common_pairs import create_all_common_pairs  # Import funkcji do tworzenia wspólnych par
-except ImportError:
-    import sys
-    sys.path.append(os.path.join(os.path.dirname(__file__), 'utils'))
-    from create_common_pairs import create_all_common_pairs
-
+from create_common_pairs import create_all_common_pairs  # Plik create_common_pairs.py powinien być w tym samym folderze
 from exchanges.binance import BinanceExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
 from exchanges.kucoin import KucoinExchange
-# from exchanges.coinbase import CoinbaseExchange  # opcjonalnie
 from utils import normalize_symbol, calculate_difference
 
 load_dotenv()
 
-# Konfiguracja logowania – ustawiamy dwa FileHandlery: jeden dla wszystkich logów, drugi tylko dla błędów
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-# Stream handler (konsola)
 console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.INFO)
 
-# File handler dla wszystkich logów
 all_handler = logging.FileHandler("app.log", encoding="utf-8")
 all_handler.setLevel(logging.INFO)
 
-# File handler tylko dla błędów
 error_handler = logging.FileHandler("error.log", encoding="utf-8")
 error_handler.setLevel(logging.ERROR)
 
@@ -46,36 +35,26 @@ logger.addHandler(console_handler)
 logger.addHandler(all_handler)
 logger.addHandler(error_handler)
 
-# Mapowanie dostępnych giełd: klucz -> (nazwa, instancja)
 EXCHANGE_OPTIONS = {
     "1": ("BinanceExchange", BinanceExchange(api_key=os.getenv("BINANCE_API_KEY"), secret=os.getenv("BINANCE_SECRET"))),
     "2": ("BitgetExchange", BitgetExchange(api_key=os.getenv("BITGET_API_KEY"), secret=os.getenv("BITGET_SECRET"))),
     "3": ("BitstampExchange", BitstampExchange(api_key=os.getenv("BITSTAMP_API_KEY"), secret=os.getenv("BITSTAMP_SECRET"))),
     "4": ("KucoinExchange", KucoinExchange(api_key=os.getenv("KUCOIN_API_KEY"), secret=os.getenv("KUCOIN_SECRET")))
-    # "5": ("CoinbaseExchange", CoinbaseExchange(api_key=os.getenv("COINBASE_API_KEY"), secret=os.getenv("COINBASE_SECRET")))
 }
 
 def get_exchange_instance_by_name(name: str):
-    """Zwraca instancję giełdy na podstawie nazwy."""
     for key, (ex_name, instance) in EXCHANGE_OPTIONS.items():
         if ex_name == name:
             return instance
     return None
 
 async def fetch_opportunity(tup, current_instance, dest_instance, funds, min_profit, source_name, dest_name, session):
-    """
-    Dla danej pary (tup = (source_sym, dest_sym, normalized)) pobiera ceny obu giełd równolegle.
-    Jeśli cena na giełdzie źródłowej (current_instance) jest mniejsza niż na docelowej (dest_instance)
-    i wyliczony zysk (przy zadanej kwocie funds) przekracza min_profit, zwraca słownik opisujący okazję.
-    W przeciwnym razie zwraca None.
-    """
     source_sym, dest_sym, normalized = tup
-    # Pobieramy ceny równolegle:
     price_source, price_dest = await asyncio.gather(
         current_instance.get_price(source_sym, session),
         dest_instance.get_price(dest_sym, session)
     )
-    if price_source is None or price_dest is None or price_source == 0 or price_dest == 0:
+    if price_source == 0 or price_dest == 0:
         return None
     if price_source < price_dest:
         profit = funds * ((price_dest / price_source) - 1)
@@ -91,11 +70,6 @@ async def fetch_opportunity(tup, current_instance, dest_instance, funds, min_pro
     return None
 
 async def simulate_arbitrage_from_common():
-    """
-    Symulacja arbitrażu przy użyciu listy wspólnych par zapisanej w pliku 'common_pairs_all.json'.
-    Użytkownik wybiera giełdę źródłową (gdzie posiada środki), podaje dostępne środki oraz minimalny zysk.
-    Dla każdej konfiguracji pobieramy ceny dla wszystkich par równolegle, co przyspiesza cały proces.
-    """
     filename = "common_pairs_all.json"
     if not os.path.exists(filename):
         print("Plik common_pairs_all.json nie istnieje. Najpierw utwórz listę wspólnych par (opcja 1).")
@@ -133,7 +107,6 @@ async def simulate_arbitrage_from_common():
     async with aiohttp.ClientSession() as session:
         while True:
             opportunities = []
-            # Dla każdej konfiguracji (np. BinanceExchange-BitgetExchange) sprawdzamy, czy aktualna giełda występuje.
             for config_key, pairs in common_pairs_all.items():
                 if current_exchange_name not in config_key:
                     continue
@@ -141,7 +114,6 @@ async def simulate_arbitrage_from_common():
                 if parts[0] == current_exchange_name:
                     dest_name = parts[1]
                     dest_instance = get_exchange_instance_by_name(dest_name)
-                    # Dla wszystkich par z tej konfiguracji tworzymy zadania pobrania cen równolegle:
                     tasks = [asyncio.create_task(
                                 fetch_opportunity(tup, current_instance, dest_instance, funds, min_profit, current_exchange_name, dest_name, session)
                              ) for tup in pairs]
@@ -152,7 +124,6 @@ async def simulate_arbitrage_from_common():
                 elif parts[1] == current_exchange_name:
                     dest_name = parts[0]
                     dest_instance = get_exchange_instance_by_name(dest_name)
-                    # W tym przypadku dla każdej pary zamieniamy kolejność symboli
                     tasks = [asyncio.create_task(
                                 fetch_opportunity((tup[1], tup[0], tup[2]), current_instance, dest_instance, funds, min_profit, current_exchange_name, dest_name, session)
                              ) for tup in pairs]
@@ -167,10 +138,8 @@ async def simulate_arbitrage_from_common():
                 print(f"  Kup na {best['buy_exchange']} po {best['price_buy']}")
                 print(f"  Sprzedaj na {best['sell_exchange']} po {best['price_sell']}")
                 print(f"  Szacowany zysk: {best['profit']:.2f}")
-                # Zakładamy wykorzystanie całej kwoty – aktualizujemy stan środków
                 funds = funds * (best["price_sell"] / best["price_buy"])
                 print(f"Transakcja przeprowadzona. Nowa kwota środków: {funds:.2f}")
-                # Aktualizujemy bieżącą giełdę – środki trafiają na giełdę docelową
                 current_exchange_name = best["sell_exchange"]
                 current_instance = get_exchange_instance_by_name(current_exchange_name)
             else:
