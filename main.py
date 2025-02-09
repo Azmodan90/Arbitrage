@@ -1,30 +1,25 @@
 import asyncio
 import signal
 import logging
+import json
 from config import CONFIG
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
-from arbitrage import ArbitrageStrategy
+from arbitrage import PairArbitrageStrategy
 import common_assets
 
 def setup_logging():
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    
-    # Czyścimy istniejące handlery, by uniknąć duplikacji
     if logger.hasHandlers():
         logger.handlers.clear()
-    
-    # Handler do terminala
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
-    
-    # Handler do pliku
     file_handler = logging.FileHandler('app.log', mode='a', encoding='utf-8')
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
@@ -32,24 +27,55 @@ def setup_logging():
 
 async def shutdown(signal_name, loop):
     logging.info(f"\nOtrzymano sygnał {signal_name}. Zatrzymywanie programu...")
-    tasks = [t for t in asyncio.all_tasks() if t is not asyncio.current_task()]
-    [task.cancel() for task in tasks]
+    tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
+    for task in tasks:
+        task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
+    await asyncio.sleep(0.1)
     loop.stop()
 
 def setup_signal_handlers(loop):
     for sig in (signal.SIGINT, signal.SIGTERM):
         loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
 
+async def run_arbitrage_for_all_pairs(exchanges):
+    # Ładowanie listy wspólnych aktywów z pliku JSON
+    try:
+        with open("common_assets.json", "r") as f:
+            common_assets_data = json.load(f)
+    except Exception as e:
+        logging.error(f"Nie udało się załadować common_assets.json: {e}")
+        return
+
+    tasks = []
+    # Dla każdej pary giełd (klucz np. "binance-kucoin") uruchamiamy strategię arbitrażu
+    for pair_key, assets in common_assets_data.items():
+        if not assets:
+            logging.info(f"Brak wspólnych aktywów dla pary {pair_key}")
+            continue
+        exch_names = pair_key.split("-")
+        if len(exch_names) != 2:
+            logging.error(f"Niepoprawny format pary: {pair_key}")
+            continue
+        ex1 = exchanges.get(exch_names[0])
+        ex2 = exchanges.get(exch_names[1])
+        if not ex1 or not ex2:
+            logging.error(f"Nie znaleziono giełd dla pary: {pair_key}")
+            continue
+        strategy = PairArbitrageStrategy(ex1, ex2, assets, pair_name=pair_key)
+        tasks.append(asyncio.create_task(strategy.run()))
+    if tasks:
+        await asyncio.gather(*tasks)
+    else:
+        logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
+
 def run_arbitrage(exchanges):
     logging.info("Wybrano opcję rozpoczęcia arbitrażu")
-    arbitrage = ArbitrageStrategy(exchanges)
-    # Tworzymy nowy event loop, aby po zakończeniu móc wrócić do menu
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     setup_signal_handlers(loop)
     try:
-        loop.run_until_complete(arbitrage.run("BTC/USDT"))
+        loop.run_until_complete(run_arbitrage_for_all_pairs(exchanges))
     except asyncio.CancelledError:
         logging.info("Zadania anulowane")
     except KeyboardInterrupt:
@@ -72,7 +98,7 @@ def main():
     while True:
         print("\nWybierz opcję:")
         print("1. Utwórz listę wspólnych aktywów")
-        print("2. Rozpocznij arbitraż")
+        print("2. Rozpocznij arbitraż (dla aktywów z common_assets.json)")
         print("3. Wyjście")
         choice = input("Twój wybór (1/2/3): ").strip()
         if choice == "1":
