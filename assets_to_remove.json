@@ -1,5 +1,27 @@
 {
-  "kucoin-bitget": ["ARC"],
-  "binance-kucoin": ["ACE/USDT"],
-  "kucoin-binance": ["TST/USDT"]
+  "kucoin-bitget": [
+    
+    "ARC",
+    "WELL"
+
+
+],
+  
+  "binance-kucoin": [
+    
+    "ACE"
+  
+  ],
+  
+  "kucoin-binance": [
+    
+    "TST"
+  
+  ],
+  
+  "bitget-binance": [
+    
+    "FARM"
+  
+  ]
 }
