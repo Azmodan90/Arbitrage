@@ -9,19 +9,39 @@
   
   "binance-kucoin": [
     
-    "ACE"
-  
-  ],
-  
-  "kucoin-binance": [
-    
+    "ACE",
     "TST"
   
   ],
   
-  "bitget-binance": [
+
+  
+  "binance-bitget": [
     
     "FARM"
   
+  ],
+
+  "binance-bitstamp" : [
+
+
+  ],
+
+
+
+  "kucoin-bitstamp" : [
+
+
+
+  ],
+
+
+
+  "bitget-bitstamp" : [
+
+
+
   ]
+
+
 }

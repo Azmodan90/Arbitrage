@@ -1,0 +1,141 @@
+2025-02-10 20:20:38,720 - INFO - binance-kucoin - Uruchamiam strategię arbitrażu dla 494 aktywów.
+2025-02-10 20:20:38,721 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: TFUEL/BTC/USDT (ex1), TFUEL/BTC/USDT (ex2)
+2025-02-10 20:20:38,725 - INFO - binance-bitget - Uruchamiam strategię arbitrażu dla 780 aktywów.
+2025-02-10 20:20:38,725 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BCH/USDT (ex1), BCH/USDT (ex2)
+2025-02-10 20:20:38,737 - INFO - binance-bitstamp - Uruchamiam strategię arbitrażu dla 52 aktywów.
+2025-02-10 20:20:38,740 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/GBP/USDT (ex1), XRP/GBP/USDT (ex2)
+2025-02-10 20:20:38,744 - INFO - kucoin-bitget - Uruchamiam strategię arbitrażu dla 536 aktywów.
+2025-02-10 20:20:38,746 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ZK/USDT (ex1), ZK/USDT (ex2)
+2025-02-10 20:20:38,748 - INFO - kucoin-bitstamp - Uruchamiam strategię arbitrażu dla 20 aktywów.
+2025-02-10 20:20:38,749 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/BTC/USDT (ex1), ETH/BTC/USDT (ex2)
+2025-02-10 20:20:38,751 - INFO - bitget-bitstamp - Uruchamiam strategię arbitrażu dla 28 aktywów.
+2025-02-10 20:20:38,751 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SUI/EUR/USDT (ex1), SUI/EUR/USDT (ex2)
+2025-02-10 20:20:48,738 - WARNING - bitget-bitstamp - Niedostateczne dane dla SUI/EUR, pomijam ten symbol.
+2025-02-10 20:20:48,744 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/BTC/USDT (ex1), ETH/BTC/USDT (ex2)
+2025-02-10 20:20:48,818 - WARNING - bitget-bitstamp - Niedostateczne dane dla ETH/BTC, pomijam ten symbol.
+2025-02-10 20:20:48,859 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/EUR/USDT (ex1), BTC/EUR/USDT (ex2)
+2025-02-10 20:20:49,104 - WARNING - bitget-bitstamp - Niedostateczne dane dla BTC/EUR, pomijam ten symbol.
+2025-02-10 20:20:49,110 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/EUR/USDT (ex1), USDC/EUR/USDT (ex2)
+2025-02-10 20:20:49,189 - INFO - kucoin-bitget - ex1: pobrana cena = 0.1113
+2025-02-10 20:20:49,227 - INFO - kucoin-bitget - ex2: pobrana cena = 0.1112
+2025-02-10 20:20:49,242 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ICE/USDT (ex1), ICE/USDT (ex2)
+2025-02-10 20:20:49,289 - WARNING - bitget-bitstamp - Niedostateczne dane dla USDC/EUR, pomijam ten symbol.
+2025-02-10 20:20:49,296 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: WIF/EUR/USDT (ex1), WIF/EUR/USDT (ex2)
+2025-02-10 20:20:49,535 - WARNING - bitget-bitstamp - Niedostateczne dane dla WIF/EUR, pomijam ten symbol.
+2025-02-10 20:20:49,542 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDT/EUR/USDT (ex1), USDT/EUR/USDT (ex2)
+2025-02-10 20:20:49,655 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol ETH/BTC/USDT
+2025-02-10 20:20:49,661 - WARNING - kucoin-bitstamp - Niedostateczne dane dla ETH/BTC, pomijam ten symbol.
+2025-02-10 20:20:49,667 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/EUR/USDT (ex1), BTC/EUR/USDT (ex2)
+2025-02-10 20:20:49,673 - WARNING - bitget-bitstamp - Niedostateczne dane dla USDT/EUR, pomijam ten symbol.
+2025-02-10 20:20:49,720 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDC/USDT (ex1), BTC/USDC/USDT (ex2)
+2025-02-10 20:20:49,726 - INFO - kucoin-bitget - ex1: pobrana cena = 0.006128
+2025-02-10 20:20:49,732 - INFO - kucoin-bitget - ex2: pobrana cena = 0.006104
+2025-02-10 20:20:49,738 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: RATS/USDT (ex1), RATS/USDT (ex2)
+2025-02-10 20:20:49,760 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol BTC/EUR/USDT
+2025-02-10 20:20:49,766 - WARNING - kucoin-bitstamp - Niedostateczne dane dla BTC/EUR, pomijam ten symbol.
+2025-02-10 20:20:49,772 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/EUR/USDT (ex1), USDC/EUR/USDT (ex2)
+2025-02-10 20:20:49,786 - WARNING - bitget-bitstamp - Niedostateczne dane dla BTC/USDC, pomijam ten symbol.
+2025-02-10 20:20:49,792 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (ex1), XRP/USDT (ex2)
+2025-02-10 20:20:49,833 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol USDC/EUR/USDT
+2025-02-10 20:20:49,840 - WARNING - kucoin-bitstamp - Niedostateczne dane dla USDC/EUR, pomijam ten symbol.
+2025-02-10 20:20:49,841 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH2/ETH/USDT (ex1), ETH2/ETH/USDT (ex2)
+2025-02-10 20:20:49,880 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol ETH2/ETH/USDT
+2025-02-10 20:20:49,886 - WARNING - kucoin-bitstamp - Niedostateczne dane dla ETH2/ETH, pomijam ten symbol.
+2025-02-10 20:20:49,892 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDT/EUR/USDT (ex1), USDT/EUR/USDT (ex2)
+2025-02-10 20:20:49,937 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol USDT/EUR/USDT
+2025-02-10 20:20:49,943 - WARNING - kucoin-bitstamp - Niedostateczne dane dla USDT/EUR, pomijam ten symbol.
+2025-02-10 20:20:50,261 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDC/USDT (ex1), BTC/USDC/USDT (ex2)
+2025-02-10 20:20:50,269 - INFO - bitget-bitstamp - ex1: pobrana cena = 2.4281
+2025-02-10 20:20:50,275 - INFO - bitget-bitstamp - ex2: pobrana cena = 2.42968
+2025-02-10 20:20:50,281 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/EUR/USDT (ex1), XRP/EUR/USDT (ex2)
+2025-02-10 20:20:50,287 - INFO - kucoin-bitget - ex1: pobrana cena = 1.779e-05
+2025-02-10 20:20:50,294 - INFO - kucoin-bitget - ex2: pobrana cena = 1.78e-05
+2025-02-10 20:20:50,300 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: OMG/USDT (ex1), OMG/USDT (ex2)
+2025-02-10 20:20:50,350 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol BTC/USDC/USDT
+2025-02-10 20:20:50,356 - WARNING - kucoin-bitstamp - Niedostateczne dane dla BTC/USDC, pomijam ten symbol.
+2025-02-10 20:20:50,364 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (ex1), XRP/USDT (ex2)
+2025-02-10 20:20:50,403 - WARNING - bitget-bitstamp - Niedostateczne dane dla XRP/EUR, pomijam ten symbol.
+2025-02-10 20:20:50,408 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (ex1), ETH/USDT (ex2)
+2025-02-10 20:20:50,722 - INFO - bitget-bitstamp - ex1: pobrana cena = 2671.81
+2025-02-10 20:20:50,724 - INFO - bitget-bitstamp - ex2: pobrana cena = 2671.8
+2025-02-10 20:20:50,730 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ADA/EUR/USDT (ex1), ADA/EUR/USDT (ex2)
+2025-02-10 20:20:50,927 - INFO - kucoin-bitget - ex1: pobrana cena = 0.2569
+2025-02-10 20:20:50,932 - INFO - kucoin-bitget - ex2: pobrana cena = 0.2576
+2025-02-10 20:20:50,998 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: BTC/EUR/USDT (ex1), BTC/EUR/USDT (ex2)
+2025-02-10 20:20:51,060 - WARNING - bitget-bitstamp - Niedostateczne dane dla ADA/EUR, pomijam ten symbol.
+2025-02-10 20:20:51,066 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SHIB/EUR/USDT (ex1), SHIB/EUR/USDT (ex2)
+2025-02-10 20:20:51,073 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2.42869
+2025-02-10 20:20:51,079 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2.42968
+2025-02-10 20:20:51,085 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: WBTC/BTC/USDT (ex1), WBTC/BTC/USDT (ex2)
+2025-02-10 20:20:51,091 - ERROR - kucoin-bitget - Błąd pobierania danych dla ex1: kucoin does not have market symbol BTC/EUR/USDT
+2025-02-10 20:20:51,097 - WARNING - kucoin-bitget - Niedostateczne dane dla BTC/EUR, pomijam ten symbol.
+2025-02-10 20:20:51,103 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: QTUM/USDT (ex1), QTUM/USDT (ex2)
+2025-02-10 20:20:51,168 - WARNING - bitget-bitstamp - Niedostateczne dane dla SHIB/EUR, pomijam ten symbol.
+2025-02-10 20:20:51,175 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: NEAR/EUR/USDT (ex1), NEAR/EUR/USDT (ex2)
+2025-02-10 20:20:51,333 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol WBTC/BTC/USDT
+2025-02-10 20:20:51,339 - WARNING - kucoin-bitstamp - Niedostateczne dane dla WBTC/BTC, pomijam ten symbol.
+2025-02-10 20:20:51,345 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ADA/BTC/USDT (ex1), ADA/BTC/USDT (ex2)
+2025-02-10 20:20:51,351 - WARNING - bitget-bitstamp - Niedostateczne dane dla NEAR/EUR, pomijam ten symbol.
+2025-02-10 20:20:51,368 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOGE/EUR/USDT (ex1), DOGE/EUR/USDT (ex2)
+2025-02-10 20:20:51,374 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol ADA/BTC/USDT
+2025-02-10 20:20:51,385 - WARNING - kucoin-bitstamp - Niedostateczne dane dla ADA/BTC, pomijam ten symbol.
+2025-02-10 20:20:51,423 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (ex1), ETH/USDT (ex2)
+2025-02-10 20:20:51,435 - WARNING - bitget-bitstamp - Niedostateczne dane dla DOGE/EUR, pomijam ten symbol.
+2025-02-10 20:20:51,441 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ONDO/EUR/USDT (ex1), ONDO/EUR/USDT (ex2)
+2025-02-10 20:20:51,507 - WARNING - bitget-bitstamp - Niedostateczne dane dla ONDO/EUR, pomijam ten symbol.
+2025-02-10 20:20:51,515 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: PEPE/EUR/USDT (ex1), PEPE/EUR/USDT (ex2)
+2025-02-10 20:20:51,645 - WARNING - bitget-bitstamp - Niedostateczne dane dla PEPE/EUR, pomijam ten symbol.
+2025-02-10 20:20:51,652 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDC/USDT (ex1), ETH/USDC/USDT (ex2)
+2025-02-10 20:20:51,738 - WARNING - bitget-bitstamp - Niedostateczne dane dla ETH/USDC, pomijam ten symbol.
+2025-02-10 20:20:51,744 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/BTC/USDT (ex1), LINK/BTC/USDT (ex2)
+2025-02-10 20:20:51,751 - INFO - kucoin-bitget - ex1: pobrana cena = 3.007
+2025-02-10 20:20:51,757 - INFO - kucoin-bitget - ex2: pobrana cena = 3.011
+2025-02-10 20:20:51,764 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: MEME/USDT (ex1), MEME/USDT (ex2)
+2025-02-10 20:20:51,821 - WARNING - bitget-bitstamp - Niedostateczne dane dla LINK/BTC, pomijam ten symbol.
+2025-02-10 20:20:51,827 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/EUR/USDT (ex1), ETH/EUR/USDT (ex2)
+2025-02-10 20:20:51,849 - INFO - kucoin-bitstamp - ex1: pobrana cena = 2672.02
+2025-02-10 20:20:51,855 - INFO - kucoin-bitstamp - ex2: pobrana cena = 2671.8
+2025-02-10 20:20:51,872 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDC/USDT (ex1), ETH/USDC/USDT (ex2)
+2025-02-10 20:20:51,898 - WARNING - bitget-bitstamp - Niedostateczne dane dla ETH/EUR, pomijam ten symbol.
+2025-02-10 20:20:51,904 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/BTC/USDT (ex1), XRP/BTC/USDT (ex2)
+2025-02-10 20:20:52,027 - WARNING - bitget-bitstamp - Niedostateczne dane dla XRP/BTC, pomijam ten symbol.
+2025-02-10 20:20:52,033 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AVAX/EUR/USDT (ex1), AVAX/EUR/USDT (ex2)
+2025-02-10 20:20:52,040 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol ETH/USDC/USDT
+2025-02-10 20:20:52,072 - WARNING - kucoin-bitstamp - Niedostateczne dane dla ETH/USDC, pomijam ten symbol.
+2025-02-10 20:20:52,078 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/BTC/USDT (ex1), LINK/BTC/USDT (ex2)
+2025-02-10 20:20:52,096 - WARNING - bitget-bitstamp - Niedostateczne dane dla AVAX/EUR, pomijam ten symbol.
+2025-02-10 20:20:52,102 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AAVE/BTC/USDT (ex1), AAVE/BTC/USDT (ex2)
+2025-02-10 20:20:52,114 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol LINK/BTC/USDT
+2025-02-10 20:20:52,118 - WARNING - kucoin-bitstamp - Niedostateczne dane dla LINK/BTC, pomijam ten symbol.
+2025-02-10 20:20:52,123 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/EUR/USDT (ex1), ETH/EUR/USDT (ex2)
+2025-02-10 20:20:52,170 - INFO - kucoin-bitget - ex1: pobrana cena = 0.00448
+2025-02-10 20:20:52,176 - INFO - kucoin-bitget - ex2: pobrana cena = 0.004476
+2025-02-10 20:20:52,182 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SFP/USDT (ex1), SFP/USDT (ex2)
+2025-02-10 20:20:52,194 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol ETH/EUR/USDT
+2025-02-10 20:20:52,200 - WARNING - kucoin-bitstamp - Niedostateczne dane dla ETH/EUR, pomijam ten symbol.
+2025-02-10 20:20:52,221 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/BTC/USDT (ex1), XRP/BTC/USDT (ex2)
+2025-02-10 20:20:52,361 - WARNING - bitget-bitstamp - Niedostateczne dane dla AAVE/BTC, pomijam ten symbol.
+2025-02-10 20:20:52,367 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/EUR/USDT (ex1), LINK/EUR/USDT (ex2)
+2025-02-10 20:20:52,453 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol XRP/BTC/USDT
+2025-02-10 20:20:52,459 - WARNING - kucoin-bitstamp - Niedostateczne dane dla XRP/BTC, pomijam ten symbol.
+2025-02-10 20:20:52,465 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XLM/BTC/USDT (ex1), XLM/BTC/USDT (ex2)
+2025-02-10 20:20:52,471 - WARNING - bitget-bitstamp - Niedostateczne dane dla LINK/EUR, pomijam ten symbol.
+2025-02-10 20:20:52,477 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (ex1), BTC/USDT (ex2)
+2025-02-10 20:20:52,520 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol XLM/BTC/USDT
+2025-02-10 20:20:52,526 - WARNING - kucoin-bitstamp - Niedostateczne dane dla XLM/BTC, pomijam ten symbol.
+2025-02-10 20:20:52,539 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AAVE/BTC/USDT (ex1), AAVE/BTC/USDT (ex2)
+2025-02-10 20:20:52,591 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol AAVE/BTC/USDT
+2025-02-10 20:20:52,597 - WARNING - kucoin-bitstamp - Niedostateczne dane dla AAVE/BTC, pomijam ten symbol.
+2025-02-10 20:20:52,603 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BCH/BTC/USDT (ex1), BCH/BTC/USDT (ex2)
+2025-02-10 20:20:52,669 - ERROR - kucoin-bitstamp - Błąd pobierania danych dla ex1: kucoin does not have market symbol BCH/BTC/USDT
+2025-02-10 20:20:52,684 - WARNING - kucoin-bitstamp - Niedostateczne dane dla BCH/BTC, pomijam ten symbol.
+2025-02-10 20:20:52,690 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (ex1), BTC/USDT (ex2)
+2025-02-10 20:20:52,702 - INFO - kucoin-bitget - ex1: pobrana cena = 0.6484
+2025-02-10 20:20:52,747 - INFO - kucoin-bitget - ex2: pobrana cena = 0.6473
+2025-02-10 20:20:52,758 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: DODO/USDT (ex1), DODO/USDT (ex2)
+2025-02-10 20:20:52,789 - INFO - binance-bitget - Strategia arbitrażu została anulowana.
+2025-02-10 20:20:52,792 - INFO - binance-kucoin - Strategia arbitrażu została anulowana.
+2025-02-10 20:20:52,797 - INFO - binance-bitstamp - Strategia arbitrażu została anulowana.
+2025-02-10 20:20:52,803 - INFO - bitget-bitstamp - Strategia arbitrażu została anulowana.
+2025-02-10 20:20:52,810 - INFO - kucoin-bitstamp - Strategia arbitrażu została anulowana.
+2025-02-10 20:20:52,816 - INFO - kucoin-bitget - Strategia arbitrażu została anulowana.
