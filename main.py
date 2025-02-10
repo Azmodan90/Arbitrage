@@ -11,7 +11,7 @@ from arbitrage import PairArbitrageStrategy
 import common_assets
 
 def setup_logging():
-    # Konfiguracja logowania ogólnego – tylko do pliku app.log
+    # Konfiguracja logowania ogólnego – zapis do pliku app.log
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
@@ -58,6 +58,7 @@ async def run_arbitrage_for_all_pairs(exchanges):
         if not ex1 or not ex2:
             logging.error(f"Nie znaleziono giełd dla pary: {pair_key}")
             continue
+        # assets to jest teraz słownik mapujący bazowy token do mapowania pełnych symboli
         strategy = PairArbitrageStrategy(ex1, ex2, assets, pair_name=pair_key)
         tasks.append(asyncio.create_task(strategy.run()))
     if tasks:

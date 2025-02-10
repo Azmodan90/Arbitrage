@@ -1,47 +1,20 @@
 {
   "kucoin-bitget": [
-    
     "ARC",
-    "WELL"
-
-
-],
-  
-  "binance-kucoin": [
-    
+    "WELL",
+    "GAME",
     "ACE",
-    "TST"
-  
+    "VOLT"
   ],
-  
-
-  
+  "binance-kucoin": [
+    "ACE",
+    "TST",
+    "NEIRO"
+  ],
   "binance-bitget": [
-    
     "FARM"
-  
   ],
-
-  "binance-bitstamp" : [
-
-
-  ],
-
-
-
-  "kucoin-bitstamp" : [
-
-
-
-  ],
-
-
-
-  "bitget-bitstamp" : [
-
-
-
-  ]
-
-
+  "binance-bitstamp": [],
+  "kucoin-bitstamp": [],
+  "bitget-bitstamp": []
 }
