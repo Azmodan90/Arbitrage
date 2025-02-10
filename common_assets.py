@@ -8,20 +8,32 @@ from exchanges.bitstamp import BitstampExchange
 # Konfiguracja logowania
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_markets(exchange_instance):
+def get_markets_filtered(exchange_instance, allowed_quotes=["USDT", "USDC", "USD", "EUR"]):
+    """
+    Pobiera listę rynków z danej giełdy i zwraca tylko te, których symbol ma format "BASE/QUOTE",
+    przy czym wartość po "/" musi znajdować się w liście allowed_quotes.
+    """
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
         markets = exchange_instance.exchange.load_markets()
-        return set(markets.keys())
+        filtered = {symbol for symbol in markets 
+                    if len(symbol.split("/")) == 2 and symbol.split("/")[1] in allowed_quotes}
+        return filtered
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
         return set()
 
-def get_common_assets_for_pair(exchange1, exchange2):
-    markets1 = get_markets(exchange1)
-    markets2 = get_markets(exchange2)
-    common = markets1.intersection(markets2)
-    logging.info(f"Wspólne aktywa dla {exchange1.__class__.__name__} i {exchange2.__class__.__name__}: {len(common)} znalezione")
+def get_common_assets_for_pair(exchange1, exchange2, allowed_quotes=["USDT", "USDC", "USD", "EUR"]):
+    """
+    Dla dwóch giełd zwraca zbiór tokenów (część przed "/") dostępnych na obu giełdach
+    przy dozwolonych quote z listy allowed_quotes.
+    """
+    markets1 = get_markets_filtered(exchange1, allowed_quotes)
+    markets2 = get_markets_filtered(exchange2, allowed_quotes)
+    tokens1 = {symbol.split("/")[0] for symbol in markets1}
+    tokens2 = {symbol.split("/")[0] for symbol in markets2}
+    common = tokens1.intersection(tokens2)
+    logging.info(f"Wspólne aktywa dla {exchange1.__class__.__name__} i {exchange2.__class__.__name__} (quotes={allowed_quotes}): {len(common)} znalezione")
     return common
 
 def save_common_assets(common_assets, filename="common_assets.json"):
@@ -41,7 +53,6 @@ def should_remove(asset, remove_list):
     """
     for r in remove_list:
         if isinstance(asset, dict):
-            # Jeśli asset jest słownikiem, sprawdzamy wartość 'normalized'
             asset_val = asset.get("normalized", "")
         else:
             asset_val = asset
@@ -54,47 +65,6 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
     Modyfikuje listę wspólnych aktywów na podstawie dodatkowych plików konfiguracyjnych:
       - assets_to_remove.json: zawiera mapowanie konfiguracji na listy aktywów do usunięcia,
       - assets_to_add.json: zawiera mapowanie konfiguracji na listy aktywów do dodania.
-    
-    Przykładowe dane:
-    assets_to_remove.json:
-    {
-      "kucoin-bitget": ["ARC"],
-      "binance-kucoin": ["ACE/USDT"]
-    }
-    
-    assets_to_add.json:
-    {
-      "kucoin-bitget": [
-        {
-          "source": "ARCSOL",
-          "dest": "ARC",
-          "normalized": "ARC/USDT"
-        },
-        {
-          "source": "ARCA",
-          "dest": "ARCA",
-          "normalized": "ARCA/USDT"
-        }
-      ],
-      "binance-kucoin": [
-        {
-          "source": "ACE",
-          "dest": "kACE",
-          "normalized": "kACE/USDT"
-        }
-      ],
-      "bitget-binance": [
-        {
-          "source": "TSTBSC",
-          "dest": "TST",
-          "normalized": "TST/USDT"
-        }
-      ]
-    }
-    
-    Dla każdej konfiguracji:
-      - Usuwamy te elementy, dla których should_remove() zwróci True,
-      - Następnie dla wpisów z assets_to_add dodajemy obiekt (słownik) – jeśli nie ma już wpisu o takim polu "normalized".
     """
     # Wczytanie listy aktywów do usunięcia
     try:
@@ -128,7 +98,6 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
             add_entries = assets_to_add[config_key]
             for entry in add_entries:
                 normalized = entry.get("normalized")
-                # Sprawdzamy, czy w liście już jest element (jako string lub dict) z tym samym normalized
                 exists = False
                 for asset in common_assets[config_key]:
                     if isinstance(asset, dict):
@@ -154,7 +123,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
     return common_assets
 
 def main():
-    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów")
+    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (tylko quote=USDT, USDC, USD lub EUR)")
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
@@ -173,8 +142,8 @@ def main():
         for j in range(i + 1, len(exchange_names)):
             name1 = exchange_names[i]
             name2 = exchange_names[j]
-            logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            common = list(get_common_assets_for_pair(exchanges[name1], exchanges[name2]))
+            logging.info(f"Porównuję aktywa dla pary: {name1} - {name2} (tylko quote=USDT, USDC, USD lub EUR)")
+            common = list(get_common_assets_for_pair(exchanges[name1], exchanges[name2], allowed_quotes=["USDT", "USDC", "USD", "EUR"]))
             common_assets[f"{name1}-{name2}"] = common
 
     # Modyfikacja listy wspólnych aktywów na podstawie plików konfiguracyjnych
@@ -182,7 +151,7 @@ def main():
 
     save_common_assets(common_assets)
     for pair, assets in common_assets.items():
-        logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
+        logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów (tylko quote=USDT, USDC, USD lub EUR).")
 
 if __name__ == '__main__':
     main()
