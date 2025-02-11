@@ -17,5 +17,5 @@ CONFIG = {
     
     "ABSURD_THRESHOLD": 100,  # nowy próg absurdalnego zysku w procentach
     
-    "MIN_VOLUME": 100  # Minimalny wolumen (quoteVolume) – np. w jednostkach USDT lub USDC
+
 }
