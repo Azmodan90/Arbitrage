@@ -14,8 +14,8 @@ def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "USDC"]):
     Pobiera rynki z danej giełdy i zwraca słownik, w którym:
       - klucz: baza (część przed "/")
       - wartość: pełny symbol (np. "GAME/USDT")
-    Uwzględniane są tylko rynki, których quote należy do allowed_quotes 
-    oraz które mają wolumen quoteVolume >= MIN_VOLUME (ustalony w CONFIG).
+    Uwzględniane są tylko rynki, których quote należy do allowed_quotes
+    oraz których wolumen (quoteVolume) jest >= MIN_VOLUME (ustalony w CONFIG).
     """
     min_volume = CONFIG.get("MIN_VOLUME", 0)
     try:
@@ -26,10 +26,11 @@ def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "USDC"]):
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    # Pobieramy wolumen – CCXT może zwracać go w polu 'quoteVolume'
+                    # Próbujemy pobrać wolumen – dla wielu giełd CCXT zwraca to pole jako 'quoteVolume'
                     volume = market.get('quoteVolume', 0)
+                    # Jeśli wolumen jest mniejszy niż minimalny, pomijamy ten rynek
                     if volume >= min_volume:
-                        # Jeśli dla danego tokenu pojawi się więcej niż jeden rynek – zachowujemy pierwszy
+                        # Jeśli dany token (base) już nie został zapisany, dodajemy go
                         if base not in result:
                             result[base] = symbol
         return result
@@ -42,7 +43,7 @@ def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quote
     Dla dwóch giełd (oraz ich aliasów np. "binance" i "kucoin") zwraca słownik wspólnych aktywów.
     Kluczem jest baza (np. "GAME"), a wartością – słownik z mapowaniem:
       { name1: symbol z giełdy1, name2: symbol z giełdy2 }
-    Uwzględniane są tylko rynki, których quote należy do allowed_quotes.
+    Uwzględniane są tylko rynki z allowed_quotes i o wolumenie >= MIN_VOLUME.
     """
     markets1 = get_markets_dict(exchange1, allowed_quotes)
     markets2 = get_markets_dict(exchange2, allowed_quotes)
@@ -110,7 +111,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
             for entry in add_entries:
                 normalized = entry.get("normalized")
                 if normalized and normalized not in common_assets[config_key]:
-                    common_assets[config_key][normalized] = { 
+                    common_assets[config_key][normalized] = {
                         config_key.split("-")[0]: entry.get("source"),
                         config_key.split("-")[1]: entry.get("dest")
                     }
@@ -134,7 +135,7 @@ def main():
     common_assets = {}
     names = list(exchanges.keys())
     # Dla każdej pary giełd budujemy mapowanie: klucz to baza (np. "GAME"),
-    # wartością jest słownik z pełnymi symbolami, np. { "binance": "GAME/USDT", "kucoin": "GAME/USDC" }
+    # a wartością jest słownik z pełnymi symbolami (np. {"binance": "GAME/USDT", "kucoin": "GAME/USDC"})
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
             name1 = names[i]
