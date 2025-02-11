@@ -1,5 +1,6 @@
 import json
 import logging
+from config import CONFIG
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
@@ -8,24 +9,29 @@ from exchanges.bitstamp import BitstampExchange
 # Konfiguracja logowania
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_markets_dict(exchange_instance, allowed_quotes=["USDT"]):
+def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "USDC"]):
     """
     Pobiera rynki z danej giełdy i zwraca słownik, w którym:
       - klucz: baza (część przed "/")
       - wartość: pełny symbol (np. "GAME/USDT")
-    Uwzględniane są tylko rynki, których quote należy do allowed_quotes.
+    Uwzględniane są tylko rynki, których quote należy do allowed_quotes 
+    oraz które mają wolumen quoteVolume >= MIN_VOLUME (ustalony w CONFIG).
     """
+    min_volume = CONFIG.get("MIN_VOLUME", 0)
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
         markets = exchange_instance.exchange.load_markets()
         result = {}
-        for symbol in markets:
+        for symbol, market in markets.items():
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    # Jeśli dla danego tokenu pojawi się więcej niż jeden rynek – zachowujemy pierwszy
-                    if base not in result:
-                        result[base] = symbol
+                    # Pobieramy wolumen – CCXT może zwracać go w polu 'quoteVolume'
+                    volume = market.get('quoteVolume', 0)
+                    if volume >= min_volume:
+                        # Jeśli dla danego tokenu pojawi się więcej niż jeden rynek – zachowujemy pierwszy
+                        if base not in result:
+                            result[base] = symbol
         return result
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
@@ -59,7 +65,6 @@ def should_remove(asset, remove_list):
     """
     Sprawdza, czy dany asset (bazowy symbol) powinien zostać usunięty.
     Jeśli asset jest stringiem, porównujemy go bezpośrednio.
-    Jeśli asset jest słownikiem (mapowanie), można porównać pole "normalized" – tutaj zakładamy, że asset jest kluczem.
     """
     for r in remove_list:
         if asset == r or asset.startswith(r + "/"):
@@ -93,8 +98,8 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
         if config_key in assets_to_remove:
             remove_list = assets_to_remove[config_key]
             before = len(common_assets[config_key])
-            common_assets[config_key] = { base: mapping for base, mapping in common_assets[config_key].items()
-                                          if not should_remove(base, remove_list) }
+            common_assets[config_key] = {base: mapping for base, mapping in common_assets[config_key].items()
+                                         if not should_remove(base, remove_list)}
             after = len(common_assets[config_key])
             logging.info(f"Konfiguracja {config_key}: usunięto {before - after} aktywów.")
         # Dodawanie – dodajemy wpisy, jeśli nie ma już danego tokena (bazowego)
@@ -105,7 +110,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
             for entry in add_entries:
                 normalized = entry.get("normalized")
                 if normalized and normalized not in common_assets[config_key]:
-                    common_assets[config_key][normalized] = {
+                    common_assets[config_key][normalized] = { 
                         config_key.split("-")[0]: entry.get("source"),
                         config_key.split("-")[1]: entry.get("dest")
                     }
@@ -113,7 +118,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
     return common_assets
 
 def main():
-    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (dla par: USDT)")
+    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (filtracja po quote i minimalnej płynności)")
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
@@ -129,13 +134,13 @@ def main():
     common_assets = {}
     names = list(exchanges.keys())
     # Dla każdej pary giełd budujemy mapowanie: klucz to baza (np. "GAME"),
-    # wartością jest słownik z pełnymi symbolami dla obu giełd, jeśli dostępne (np. { "binance": "GAME/USDT", "kucoin": "GAME/USDC" } )
+    # wartością jest słownik z pełnymi symbolami, np. { "binance": "GAME/USDT", "kucoin": "GAME/USDC" }
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT"])
+            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT", "USDC"])
             common_assets[f"{name1}-{name2}"] = mapping
 
     # Modyfikacja listy na podstawie ręcznych korekt

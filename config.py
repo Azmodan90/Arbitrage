@@ -14,5 +14,8 @@ CONFIG = {
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
     "ARBITRAGE_THRESHOLD": 5, # Próg arbitrażu w procentach
+    
     "ABSURD_THRESHOLD": 100,  # nowy próg absurdalnego zysku w procentach
+    
+    "MIN_VOLUME": 1000  # Minimalny wolumen (quoteVolume) – np. w jednostkach USDT lub USDC
 }

@@ -1,0 +1,13 @@
+pomysły
+
+program do dodawania aktywów do pliki assets to add json, 
+
+program służy do dodawania aktywów o różnych symbolach na giełdach ale odnoszących się do tego samego projektu
+
+program pyta do jakiej paty giełd chcemy dodać aktywo 
+wyświetla listę dostępnych par giełdowych w programie 
+po wybraniu możemy podać symbol na giełdzie X przykładowo ACE
+następnie możemy dodać symbol na giełdzie Y przykładowo kACE
+program pyta jak chcemy nazwać parę symboli przykładowo NoweACE
+program porównuje ceny dla nowego aktywa, przy czym wie że na giełdzie X to ACE i dla niego pobiera ceny a na giełdzie Y to kACE
+i dla niego pobiera ceny które później porównuje,
