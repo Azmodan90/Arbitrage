@@ -3,8 +3,9 @@ import logging
 import json
 from config import CONFIG
 from functools import partial
+import time
 
-# Logger dla ogólnych informacji arbitrażu – zapis do pliku arbitrage.log
+# Ustawienia logowania
 arbitrage_logger = logging.getLogger("arbitrage")
 if not arbitrage_logger.hasHandlers():
     handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
@@ -14,7 +15,6 @@ if not arbitrage_logger.hasHandlers():
     arbitrage_logger.setLevel(logging.INFO)
     arbitrage_logger.propagate = False
 
-# Logger dla wykrytych okazji arbitrażowych – zapis do pliku arbitrage_opportunities.log
 opp_logger = logging.getLogger("arbitrage_opportunities")
 if not opp_logger.hasHandlers():
     opp_handler = logging.FileHandler("arbitrage_opportunities.log", mode="a", encoding="utf-8")
@@ -24,7 +24,6 @@ if not opp_logger.hasHandlers():
     opp_logger.setLevel(logging.INFO)
     opp_logger.propagate = False
 
-# Logger dla absurdalnych okazji – zapis do pliku absurd_opportunities.log
 absurd_logger = logging.getLogger("absurd_opportunities")
 if not absurd_logger.hasHandlers():
     absurd_handler = logging.FileHandler("absurd_opportunities.log", mode="a", encoding="utf-8")
@@ -43,16 +42,61 @@ def normalize_symbol(symbol):
         return symbol.split(":")[0]
     return symbol
 
+# --- Rate Limiter ---
+
+class RateLimiter:
+    def __init__(self, delay):
+        self.delay = delay  # minimalny odstęp między zapytaniami (w sekundach)
+        self.lock = asyncio.Lock()
+        self.last_request = 0
+
+    async def wait(self):
+        async with self.lock:
+            now = time.monotonic()
+            wait_time = self.delay - (now - self.last_request)
+            if wait_time > 0:
+                await asyncio.sleep(wait_time)
+            self.last_request = time.monotonic()
+
+# Ustalone limity dla giełd (klucz = nazwa klasy exchange w lowercase)
+# Binance: ~0,05 s, KuCoin: ~0,2 s, Bitget: ~0,3 s, Bitstamp: ~1,2 s
+RATE_LIMITS = {
+    "binanceexchange": 0.05,
+    "kucoinexchange": 0.2,
+    "bitgetexchange": 0.3,
+    "bitstampexchange": 1.2
+}
+
+rate_limiters = {}
+
+def get_rate_limiter(exchange):
+    key = exchange.__class__.__name__.lower()
+    if key not in rate_limiters:
+        delay = RATE_LIMITS.get(key, 0.1)
+        rate_limiters[key] = RateLimiter(delay)
+    return rate_limiters[key]
+
+async def fetch_ticker_rate_limited(exchange, symbol):
+    """
+    Asynchronicznie pobiera ticker z danego exchange, przestrzegając ograniczenia rate limitera.
+    """
+    limiter = get_rate_limiter(exchange)
+    await limiter.wait()
+    return exchange.fetch_ticker(symbol)
+
+# --- Strategia arbitrażu ---
+
 class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        self.assets = assets  # assets: słownik, gdzie klucz = token bazowy, wartość = { "binance": full_symbol, "kucoin": full_symbol } itd.
+        # assets – słownik, gdzie klucz = token bazowy, a wartość = { "binance": pełny symbol, "kucoin": pełny symbol } itd.
+        self.assets = assets
         self.pair_name = pair_name  # np. "binance-kucoin"
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
-        # Jeśli asset nie jest słownikiem, konwertujemy go na domyślne mapowanie, zakładając "/USDT"
+        # Jeśli asset nie jest słownikiem, konwertujemy go na domyślne mapowanie (dodajemy "/USDT")
         if not isinstance(asset, dict):
             base = asset
             asset = { names[0]: base + "/USDT", names[1]: base + "/USDT" }
@@ -65,18 +109,18 @@ class PairArbitrageStrategy:
 
         arbitrage_logger.info(f"{self.pair_name} - Sprawdzam okazje arbitrażowe dla symboli: {symbol_ex1} (dla {names[0]}), {symbol_ex2} (dla {names[1]})")
         loop = asyncio.get_running_loop()
-        
-        # Pobieranie danych dla exchange1
+
+        # Pobieranie danych dla exchange1 z uwzględnieniem rate limitera
         if hasattr(self.exchange1, 'fetch_ticker_limited'):
             task1 = asyncio.create_task(self.exchange1.fetch_ticker_limited(symbol_ex1))
         else:
-            task1 = loop.run_in_executor(None, self.exchange1.fetch_ticker, symbol_ex1)
+            task1 = loop.run_in_executor(None, lambda: asyncio.run(fetch_ticker_rate_limited(self.exchange1, symbol_ex1)))
         
-        # Pobieranie danych dla exchange2
+        # Analogicznie dla exchange2
         if hasattr(self.exchange2, 'fetch_ticker_limited'):
             task2 = asyncio.create_task(self.exchange2.fetch_ticker_limited(symbol_ex2))
         else:
-            task2 = loop.run_in_executor(None, self.exchange2.fetch_ticker, symbol_ex2)
+            task2 = loop.run_in_executor(None, lambda: asyncio.run(fetch_ticker_rate_limited(self.exchange2, symbol_ex2)))
         
         results = await asyncio.gather(task1, task2, return_exceptions=True)
         tickers = {}
