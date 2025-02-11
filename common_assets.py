@@ -1,6 +1,5 @@
 import json
 import logging
-from config import CONFIG
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange

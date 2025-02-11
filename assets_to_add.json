@@ -1,10 +1,6 @@
 {
   "kucoin-bitget": [
-    {
-      "source": "GAME",
-      "dest": "GAMEUSD",
-      "normalized": "GAME"
-    }
+    
   ],
   "binance-kucoin": [
     {

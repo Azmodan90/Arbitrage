@@ -1,9 +1,0 @@
-2025-02-11 18:50:47,662 - WARNING - binance-kucoin - Absurdally wysoki zysk dla {'binance': 'LAYER/USDT', 'kucoin': 'LAYER/USDT'}: 1901.11% (Kupno na KucoinExchange, Sprzedaż na BinanceExchange). Ignoruję okazję.
-2025-02-11 18:51:10,665 - WARNING - kucoin-bitget - Absurdally wysoki zysk dla {'kucoin': 'LAYER/USDT', 'bitget': 'LAYER/USDT'}: 1903.06% (Kupno na KucoinExchange, Sprzedaż na BitgetExchange). Ignoruję okazję.
-2025-02-11 18:53:15,726 - WARNING - binance-kucoin - Absurdally wysoki zysk dla {'binance': 'LAYER/USDT', 'kucoin': 'LAYER/USDT'}: 1919.62% (Kupno na KucoinExchange, Sprzedaż na BinanceExchange). Ignoruję okazję.
-2025-02-11 18:53:28,167 - WARNING - kucoin-bitget - Absurdally wysoki zysk dla {'kucoin': 'GAME/USDT', 'bitget': 'GAME/USDT'}: 824.27% (Kupno na KucoinExchange, Sprzedaż na BitgetExchange). Ignoruję okazję.
-2025-02-11 18:54:58,874 - WARNING - kucoin-bitget - Absurdally wysoki zysk dla {'kucoin': 'LAYER/USDT', 'bitget': 'LAYER/USDT'}: 1946.89% (Kupno na KucoinExchange, Sprzedaż na BitgetExchange). Ignoruję okazję.
-2025-02-11 18:55:44,213 - WARNING - binance-kucoin - Absurdally wysoki zysk dla {'binance': 'LAYER/USDT', 'kucoin': 'LAYER/USDT'}: 1932.39% (Kupno na KucoinExchange, Sprzedaż na BinanceExchange). Ignoruję okazję.
-2025-02-11 18:57:15,286 - WARNING - kucoin-bitget - Absurdally wysoki zysk dla {'kucoin': 'GAME/USDT', 'bitget': 'GAME/USDT'}: 825.22% (Kupno na KucoinExchange, Sprzedaż na BitgetExchange). Ignoruję okazję.
-2025-02-11 18:58:13,511 - WARNING - binance-kucoin - Absurdally wysoki zysk dla {'binance': 'LAYER/USDT', 'kucoin': 'LAYER/USDT'}: 1918.94% (Kupno na KucoinExchange, Sprzedaż na BinanceExchange). Ignoruję okazję.
-2025-02-11 18:58:46,134 - WARNING - kucoin-bitget - Absurdally wysoki zysk dla {'kucoin': 'LAYER/USDT', 'bitget': 'LAYER/USDT'}: 1906.86% (Kupno na KucoinExchange, Sprzedaż na BitgetExchange). Ignoruję okazję.

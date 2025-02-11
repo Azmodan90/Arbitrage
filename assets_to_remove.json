@@ -4,12 +4,14 @@
     "WELL",
     "GAME",
     "ACE",
-    "VOLT"
+    "VOLT",
+    "LAYER"
   ],
   "binance-kucoin": [
     "ACE",
     "TST",
-    "NEIRO"
+    "NEIRO",
+    "LAYER"
   ],
   "binance-bitget": [
     "FARM"
