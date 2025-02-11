@@ -8,7 +8,7 @@ from exchanges.bitstamp import BitstampExchange
 # Konfiguracja logowania
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "USDC"]):
+def get_markets_dict(exchange_instance, allowed_quotes=["USDT"]):
     """
     Pobiera rynki z danej giełdy i zwraca słownik, w którym:
       - klucz: baza (część przed "/")
@@ -113,7 +113,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
     return common_assets
 
 def main():
-    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (dla par: USDT i USDC)")
+    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (dla par: USDT)")
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
@@ -135,7 +135,7 @@ def main():
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT", "USDC"])
+            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT"])
             common_assets[f"{name1}-{name2}"] = mapping
 
     # Modyfikacja listy na podstawie ręcznych korekt
