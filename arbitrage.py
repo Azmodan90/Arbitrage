@@ -5,7 +5,7 @@ import time
 from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
-from tabulate import tabulate  # Używamy tabulate do logowania w formie tabeli
+from tabulate import tabulate
 
 # Logger dla ogólnych informacji arbitrażu – zapis do pliku arbitrage.log
 arbitrage_logger = logging.getLogger("arbitrage")
@@ -150,6 +150,7 @@ class PairArbitrageStrategy:
         fee1 = self.exchange1.fee_rate
         fee2 = self.exchange2.fee_rate
 
+        # Obliczenia oparte na tickerach – wyliczenie potencjalnego zysku
         effective_buy_ex1 = tickers[names[0]] * (1 + fee1 / 100)
         effective_sell_ex2 = tickers[names[1]] * (1 - fee2 / 100)
         profit1 = ((effective_sell_ex2 - effective_buy_ex1) / effective_buy_ex1) * 100
@@ -158,13 +159,12 @@ class PairArbitrageStrategy:
         effective_sell_ex1 = tickers[names[0]] * (1 - fee1 / 100)
         profit2 = ((effective_sell_ex1 - effective_buy_ex2) / effective_buy_ex2) * 100
 
-        # Pobieramy książki zleceń tylko, gdy okazja przekracza próg arbitrażu
         liquidity_info = "N/D"
         extra_info = ""
         investment = CONFIG.get("INVESTMENT_AMOUNT", 100)
-        actual_qty = 0
-        used_investment = 0
-        potential_proceeds = 0
+        adjusted_investment = investment
+        potential_proceeds = "N/D"
+        # Sprawdzamy order book, gdy okazja przekracza próg arbitrażu
         if (profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]) or (profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]):
             liq_ex1 = await loop.run_in_executor(None, lambda: get_liquidity_info(self.exchange1, symbol_ex1))
             liq_ex2 = await loop.run_in_executor(None, lambda: get_liquidity_info(self.exchange2, symbol_ex2))
@@ -181,53 +181,59 @@ class PairArbitrageStrategy:
                 effective_order_buy = top_ask_ex1 * (1 + fee1 / 100)
                 desired_qty = investment / effective_order_buy
                 actual_qty = min(desired_qty, available_buy_vol, available_sell_vol)
-                used_investment = actual_qty * effective_order_buy
+                adjusted_investment = actual_qty * effective_order_buy
+                extra_info += f"Można kupić {actual_qty:.4f} jednostek; "
+                if available_buy_vol < desired_qty:
+                    extra_info += f"Niewystarczająca płynność na {names[0]} (dostępne: {available_buy_vol}); "
+                if available_sell_vol < desired_qty:
+                    extra_info += f"Niewystarczająca płynność na {names[1]} (dostępne: {available_sell_vol}); "
                 effective_order_sell = top_bid_ex2 * (1 - fee2 / 100)
                 potential_proceeds = actual_qty * effective_order_sell
-                profit_amount = potential_proceeds - used_investment
-                profit_percent = (profit_amount / used_investment * 100) if used_investment > 0 else 0
-                extra_info += (f"Można kupić {actual_qty:.4f} jednostek; Nowa kwota inwestycji: {used_investment:.2f} USDT; "
-                               f"Potencjalne przychody: {potential_proceeds:.2f} USDT; Zysk: {profit_amount:.2f} USDT ({profit_percent:.2f}%); ")
+                extra_info += f"Potencjalne przychody: {potential_proceeds:.2f} USDT; "
+                extra_info += f"Skorygowana inwestycja: {adjusted_investment:.2f} USDT."
         else:
             extra_info = "Brak sprawdzania płynności, gdy okazja nie przekracza progu."
 
-        # Przygotowanie danych do logowania w formie tabelarycznej
-        headers = ["Pair", "Asset", "Buy Ex", "Buy Price", "Eff. Buy", "Sell Ex", "Sell Price", "Eff. Sell", 
-                   "Profit %", "Qty", "Invest Used", "Potential Proceeds", "Extra Info", "Liquidity Info"]
-        
-        # Przyjmujemy, że dla obu wariantów (profit1 i profit2) używamy danych z pierwszego wariantu
-        # (można rozszerzyć o osobne logowanie dla profit2, jeśli wymagane)
-        row = [self.pair_name,
-               str(asset),
-               names[0],
-               tickers[names[0]],
-               f"{effective_buy_ex1:.4f}",
-               names[1],
-               tickers[names[1]],
-               f"{effective_sell_ex2:.4f}",
-               f"{profit1:.2f}",
-               f"{actual_qty:.4f}",
-               f"{used_investment:.2f}",
-               f"{potential_proceeds:.2f}",
-               extra_info,
-               liquidity_info]
-        
-        table = tabulate([row], headers=headers, tablefmt="fancy_grid")
-        
-        # Logowanie w zależności od progu
+        # Przygotowujemy tabelaryczne logowanie – logujemy m.in. symbole, ceny, obliczone wartości, zysk, kwotę inwestycji i potencjalne przychody
+        table_data = [
+            [self.pair_name,
+             asset,
+             self.exchange1.__class__.__name__,
+             f"{tickers[names[0]]:.4f}",
+             f"{effective_buy_ex1:.4f}",
+             self.exchange2.__class__.__name__,
+             f"{tickers[names[1]]:.4f}",
+             f"{effective_sell_ex2:.4f}",
+             f"{profit1:.2f}%",
+             f"{adjusted_investment:.2f}",
+             f"{potential_proceeds if isinstance(potential_proceeds, (int, float)) else potential_proceeds}",
+             liquidity_info,
+             extra_info]
+        ]
+        headers = ["Pair", "Asset", f"{names[0]} Exchange", "Price", "Effective Buy",
+                   f"{names[1]} Exchange", "Price", "Effective Sell", "Profit", "Adj. Invest.",
+                   "Potential Proceeds", "Liquidity Info", "Extra Info"]
+        table = tabulate(table_data, headers=headers, tablefmt="plain")
+        arbitrage_logger.info("\n" + table)
+        opp_logger.info("\n" + table)
+
+        # Dodatkowe logowanie – logujemy komunikaty, jeśli zysk przekracza progi
         if profit1 > CONFIG["ABSURD_THRESHOLD"]:
-            absurd_logger.warning(f"{table}")
+            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk dla {asset}: {profit1:.2f}% (Kupno na {self.exchange1.__class__.__name__}, Sprzedaż na {self.exchange2.__class__.__name__}). Ignoruję okazję. [Liquidity -> {liquidity_info} | {extra_info}]")
         elif profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]:
-            arbitrage_logger.info(f"{table}")
-            opp_logger.info(f"{table}")
+            msg = (f"{self.pair_name} - Okazja arbitrażowa dla {asset}: Kupno na {self.exchange1.__class__.__name__} "
+                   f"(cena: {tickers[names[0]]:.4f}, efektywna: {effective_buy_ex1:.4f}), sprzedaż na {self.exchange2.__class__.__name__} "
+                   f"(cena: {tickers[names[1]]:.4f}, efektywna: {effective_sell_ex2:.4f}), zysk: {profit1:.2f}%. "
+                   f"[Liquidity -> {liquidity_info} | {extra_info}]")
+            arbitrage_logger.info(msg)
+            opp_logger.info(msg)
 
         if profit2 > CONFIG["ABSURD_THRESHOLD"]:
-            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk (obrót odwrotny): {profit2:.2f}% [Liquidity -> {liquidity_info} | {extra_info}]")
+            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk dla {asset}: {profit2:.2f}% (Kupno na {self.exchange2.__class__.__name__}, Sprzedaż na {self.exchange1.__class__.__name__}). Ignoruję okazję. [Liquidity -> {liquidity_info} | {extra_info}]")
         elif profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
-            # Można dodać osobną tabelę dla odwrotnego obrotu, jeśli potrzebne
-            msg = (f"{self.pair_name} - Okazja arbitrażowa (odwrotna) dla {asset}: Kupno na {self.exchange2.__class__.__name__} "
-                   f"(cena: {tickers[names[1]]}, efektywna: {effective_buy_ex2:.4f}), sprzedaż na {self.exchange1.__class__.__name__} "
-                   f"(cena: {tickers[names[0]]}, efektywna: {effective_sell_ex1:.4f}), zysk: {profit2:.2f}%. "
+            msg = (f"{self.pair_name} - Okazja arbitrażowa dla {asset}: Kupno na {self.exchange2.__class__.__name__} "
+                   f"(cena: {tickers[names[1]]:.4f}, efektywna: {effective_buy_ex2:.4f}), sprzedaż na {self.exchange1.__class__.__name__} "
+                   f"(cena: {tickers[names[0]]:.4f}, efektywna: {effective_sell_ex1:.4f}), zysk: {profit2:.2f}%. "
                    f"[Liquidity -> {liquidity_info} | {extra_info}]")
             arbitrage_logger.info(msg)
             opp_logger.info(msg)
@@ -242,10 +248,3 @@ class PairArbitrageStrategy:
         except asyncio.CancelledError:
             arbitrage_logger.info(f"{self.pair_name} - Strategia arbitrażu została anulowana.")
             raise
-
-# Na końcu modułu, jeśli uruchamiasz testy lokalnie, możesz dodać:
-if __name__ == '__main__':
-    # Przykładowe wywołanie, jeśli masz assety do testowania
-    # (należy dostosować do struktury danych z common_assets.json)
-    import sys
-    sys.exit("Uruchom program przez main.py")
