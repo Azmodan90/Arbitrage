@@ -7,3 +7,63 @@ Otrzymano sygnał SIGINT. Zatrzymywanie programu...
 2025-02-13 19:40:19,147 - INFO - Wyjście z programu
 2025-02-13 19:41:02,421 - INFO - Uruchamianie programu arbitrażowego
 2025-02-13 19:41:03,914 - INFO - Wybrano opcję rozpoczęcia arbitrażu
+2025-02-13 19:51:49,259 - INFO - 
+Otrzymano sygnał SIGINT. Zatrzymywanie programu...
+2025-02-13 19:51:49,260 - INFO - Anulowanie zadań: [<Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:201> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:201> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:201> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:201> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:65> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:202> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:201> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>]
+2025-02-13 19:51:49,269 - INFO - Zadania anulowane
+2025-02-13 19:51:50,966 - INFO - Wyjście z programu
+2025-02-13 20:03:04,162 - INFO - Uruchamianie programu arbitrażowego
+2025-02-13 20:03:08,657 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-13 20:03:08,658 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
+2025-02-13 20:03:08,749 - INFO - Porównuję aktywa dla pary: binance - kucoin
+2025-02-13 20:03:08,750 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-13 20:03:08,750 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,767 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-13 20:03:08,768 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,769 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'USDC']): 0 znalezione
+2025-02-13 20:03:08,769 - INFO - Porównuję aktywa dla pary: binance - bitget
+2025-02-13 20:03:08,770 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-13 20:03:08,771 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,771 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-13 20:03:08,772 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,772 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'USDC']): 0 znalezione
+2025-02-13 20:03:08,773 - INFO - Porównuję aktywa dla pary: binance - bitstamp
+2025-02-13 20:03:08,773 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-13 20:03:08,773 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,774 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-13 20:03:08,774 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,774 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'USDC']): 0 znalezione
+2025-02-13 20:03:08,775 - INFO - Porównuję aktywa dla pary: kucoin - bitget
+2025-02-13 20:03:08,775 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-13 20:03:08,775 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,776 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-13 20:03:08,776 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,776 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'USDC']): 0 znalezione
+2025-02-13 20:03:08,777 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
+2025-02-13 20:03:08,777 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-13 20:03:08,777 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,778 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-13 20:03:08,778 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,778 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'USDC']): 0 znalezione
+2025-02-13 20:03:08,779 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
+2025-02-13 20:03:08,779 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-13 20:03:08,780 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,780 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-13 20:03:08,780 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'coroutine' object is not iterable
+2025-02-13 20:03:08,781 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'USDC']): 0 znalezione
+2025-02-13 20:03:08,804 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
+2025-02-13 20:03:08,823 - INFO - Wczytano dane do dodania z assets_to_add.json.
+2025-02-13 20:03:08,824 - INFO - Konfiguracja binance-kucoin: usunięto 0 aktywów.
+2025-02-13 20:03:08,825 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-13 20:03:08,825 - INFO - Konfiguracja binance-bitget: usunięto 0 aktywów.
+2025-02-13 20:03:08,826 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
+2025-02-13 20:03:08,826 - INFO - Konfiguracja kucoin-bitget: usunięto 0 aktywów.
+2025-02-13 20:03:08,827 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
+2025-02-13 20:03:08,828 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
+2025-02-13 20:03:08,833 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
+2025-02-13 20:03:08,834 - INFO - Para binance-kucoin ma 1 wspólnych aktywów.
+2025-02-13 20:03:08,835 - INFO - Para binance-bitget ma 0 wspólnych aktywów.
+2025-02-13 20:03:08,836 - INFO - Para binance-bitstamp ma 0 wspólnych aktywów.
+2025-02-13 20:03:08,836 - INFO - Para kucoin-bitget ma 0 wspólnych aktywów.
+2025-02-13 20:03:08,837 - INFO - Para kucoin-bitstamp ma 0 wspólnych aktywów.
+2025-02-13 20:03:08,837 - INFO - Para bitget-bitstamp ma 0 wspólnych aktywów.

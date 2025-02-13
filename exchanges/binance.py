@@ -1,4 +1,5 @@
-import ccxt
+# binance.py - asynchroniczna wersja
+import ccxt.async_support as ccxt
 from config import CONFIG
 
 class BinanceExchange:
@@ -8,12 +9,20 @@ class BinanceExchange:
             'secret': CONFIG["BINANCE_SECRET"],
             'enableRateLimit': True,
         })
-        # Ustawiamy fee_rate – przykładowo 0.1%
         self.fee_rate = 0.1
 
-    def fetch_ticker(self, symbol):
+    async def fetch_ticker(self, symbol):
         try:
-            ticker = self.exchange.fetch_ticker(symbol)
+            ticker = await self.exchange.fetch_ticker(symbol)
             return ticker
         except Exception as e:
             print(f"Error fetching ticker from Binance: {e}")
+            return None
+
+    async def fetch_order_book(self, symbol):
+        try:
+            order_book = await self.exchange.fetch_order_book(symbol)
+            return order_book
+        except Exception as e:
+            print(f"Error fetching order book from Binance: {e}")
+            return None

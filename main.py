@@ -11,7 +11,6 @@ from arbitrage import PairArbitrageStrategy
 import common_assets
 
 def setup_logging():
-    # Konfiguracja logowania ogólnego – zapis do pliku app.log
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
@@ -58,7 +57,6 @@ async def run_arbitrage_for_all_pairs(exchanges):
         if not ex1 or not ex2:
             logging.error(f"Nie znaleziono giełd dla pary: {pair_key}")
             continue
-        # assets to jest teraz słownik mapujący bazowy token do mapowania pełnych symboli
         strategy = PairArbitrageStrategy(ex1, ex2, assets, pair_name=pair_key)
         tasks.append(asyncio.create_task(strategy.run()))
     if tasks:
@@ -66,25 +64,7 @@ async def run_arbitrage_for_all_pairs(exchanges):
     else:
         logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
 
-def run_arbitrage(exchanges):
-    logging.info("Wybrano opcję rozpoczęcia arbitrażu")
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    setup_signal_handlers(loop)
-    try:
-        loop.run_until_complete(run_arbitrage_for_all_pairs(exchanges))
-    except asyncio.CancelledError:
-        logging.info("Zadania anulowane")
-    except KeyboardInterrupt:
-        logging.info("Program zatrzymany przez użytkownika (CTRL+C)")
-    finally:
-        pending = asyncio.all_tasks(loop)
-        if pending:
-            loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
-            loop.run_until_complete(loop.shutdown_asyncgens())
-        loop.close()
-
-def main():
+async def run_main():
     setup_logging()
     logging.info("Uruchamianie programu arbitrażowego")
     
@@ -105,13 +85,16 @@ def main():
             logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
             common_assets.main()
         elif choice == "2":
-            run_arbitrage(exchanges)
+            await run_arbitrage_for_all_pairs(exchanges)
         elif choice == "3":
             logging.info("Wyjście z programu")
             break
         else:
             logging.error("Nieprawidłowy wybór!")
             print("Nieprawidłowy wybór!")
+    
+def main():
+    asyncio.run(run_main())
 
 if __name__ == '__main__':
     main()
