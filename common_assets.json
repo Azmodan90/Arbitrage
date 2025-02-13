@@ -1,13 +1,5638 @@
 {
     "binance-kucoin": {
+        "HFT": {
+            "binance": "HFT/USDT",
+            "kucoin": "HFT/USDT"
+        },
+        "BNB": {
+            "binance": "BNB/USDT",
+            "kucoin": "BNB/USDT"
+        },
+        "ORDI": {
+            "binance": "ORDI/USDT",
+            "kucoin": "ORDI/USDT"
+        },
+        "G": {
+            "binance": "G/USDT",
+            "kucoin": "G/USDT"
+        },
+        "JTO": {
+            "binance": "JTO/USDT",
+            "kucoin": "JTO/USDT"
+        },
+        "STORJ": {
+            "binance": "STORJ/USDT",
+            "kucoin": "STORJ/USDT"
+        },
+        "BERA": {
+            "binance": "BERA/USDT",
+            "kucoin": "BERA/USDT"
+        },
+        "PENDLE": {
+            "binance": "PENDLE/USDT",
+            "kucoin": "PENDLE/USDT"
+        },
+        "FIL": {
+            "binance": "FIL/USDT",
+            "kucoin": "FIL/USDT"
+        },
+        "ALICE": {
+            "binance": "ALICE/USDT",
+            "kucoin": "ALICE/USDT"
+        },
+        "BB": {
+            "binance": "BB/USDT",
+            "kucoin": "BB/USDT"
+        },
+        "ERN": {
+            "binance": "ERN/USDT",
+            "kucoin": "ERN/USDT"
+        },
+        "BONK": {
+            "binance": "BONK/USDT",
+            "kucoin": "BONK/USDT"
+        },
+        "EGLD": {
+            "binance": "EGLD/USDT",
+            "kucoin": "EGLD/USDT"
+        },
+        "PEPE": {
+            "binance": "PEPE/USDT",
+            "kucoin": "PEPE/USDT"
+        },
+        "STRAX": {
+            "binance": "STRAX/USDT",
+            "kucoin": "STRAX/USDT"
+        },
+        "AVA": {
+            "binance": "AVA/USDT",
+            "kucoin": "AVA/USDT"
+        },
+        "XMR": {
+            "binance": "XMR/USDT",
+            "kucoin": "XMR/USDT"
+        },
+        "BULL": {
+            "binance": "BULL/USDT",
+            "kucoin": "BULL/USDT"
+        },
+        "CKB": {
+            "binance": "CKB/USDT",
+            "kucoin": "CKB/USDT"
+        },
+        "ONE": {
+            "binance": "ONE/USDT",
+            "kucoin": "ONE/USDT"
+        },
+        "SYS": {
+            "binance": "SYS/USDT",
+            "kucoin": "SYS/USDT"
+        },
+        "ENA": {
+            "binance": "ENA/USDT",
+            "kucoin": "ENA/USDT"
+        },
+        "USDP": {
+            "binance": "USDP/USDT",
+            "kucoin": "USDP/USDT"
+        },
+        "ALGO": {
+            "binance": "ALGO/USDT",
+            "kucoin": "ALGO/USDT"
+        },
+        "SUI": {
+            "binance": "SUI/USDT",
+            "kucoin": "SUI/USDT"
+        },
+        "OMG": {
+            "binance": "OMG/USDT",
+            "kucoin": "OMG/USDT"
+        },
+        "IMX": {
+            "binance": "IMX/USDT",
+            "kucoin": "IMX/USDT"
+        },
+        "SNX": {
+            "binance": "SNX/USDT",
+            "kucoin": "SNX/USDT"
+        },
+        "PENGU": {
+            "binance": "PENGU/USDT",
+            "kucoin": "PENGU/USDT"
+        },
+        "METIS": {
+            "binance": "METIS/USDT",
+            "kucoin": "METIS/USDT"
+        },
+        "SCR": {
+            "binance": "SCR/USDT",
+            "kucoin": "SCR/USDT"
+        },
+        "SOLV": {
+            "binance": "SOLV/USDT",
+            "kucoin": "SOLV/USDT"
+        },
+        "OSMO": {
+            "binance": "OSMO/USDT",
+            "kucoin": "OSMO/USDT"
+        },
+        "BAND": {
+            "binance": "BAND/USDT",
+            "kucoin": "BAND/USDT"
+        },
+        "LINK": {
+            "binance": "LINK/USDT",
+            "kucoin": "LINK/USDT"
+        },
+        "LDO": {
+            "binance": "LDO/USDT",
+            "kucoin": "LDO/USDT"
+        },
+        "RAY": {
+            "binance": "RAY/USDT",
+            "kucoin": "RAY/USDT"
+        },
+        "PEOPLE": {
+            "binance": "PEOPLE/USDT",
+            "kucoin": "PEOPLE/USDT"
+        },
+        "GLM": {
+            "binance": "GLM/USDT",
+            "kucoin": "GLM/USDT"
+        },
+        "REZ": {
+            "binance": "REZ/USDT",
+            "kucoin": "REZ/USDT"
+        },
+        "POLS": {
+            "binance": "POLS/USDT",
+            "kucoin": "POLS/USDT"
+        },
+        "LOKA": {
+            "binance": "LOKA/USDT",
+            "kucoin": "LOKA/USDT"
+        },
+        "NMR": {
+            "binance": "NMR/USDT",
+            "kucoin": "NMR/USDT"
+        },
+        "CETUS": {
+            "binance": "CETUS/USDT",
+            "kucoin": "CETUS/USDT"
+        },
+        "BAL": {
+            "binance": "BAL/USDT",
+            "kucoin": "BAL/USDT"
+        },
+        "CELR": {
+            "binance": "CELR/USDT",
+            "kucoin": "CELR/USDT"
+        },
+        "BTT": {
+            "binance": "BTT/USDT",
+            "kucoin": "BTT/USDT"
+        },
+        "FLUX": {
+            "binance": "FLUX/USDT",
+            "kucoin": "FLUX/USDT"
+        },
+        "GMT": {
+            "binance": "GMT/USDT",
+            "kucoin": "GMT/USDT"
+        },
+        "ME": {
+            "binance": "ME/USDT",
+            "kucoin": "ME/USDT"
+        },
+        "BTCUP": {
+            "binance": "BTCUP/USDT",
+            "kucoin": "BTCUP/USDT"
+        },
+        "SXP": {
+            "binance": "SXP/USDT",
+            "kucoin": "SXP/USDT"
+        },
+        "SHIB": {
+            "binance": "SHIB/USDT",
+            "kucoin": "SHIB/USDT"
+        },
+        "CYBER": {
+            "binance": "CYBER/USDT",
+            "kucoin": "CYBER/USDT"
+        },
+        "NOT": {
+            "binance": "NOT/USDT",
+            "kucoin": "NOT/USDT"
+        },
+        "FET": {
+            "binance": "FET/USDT",
+            "kucoin": "FET/USDT"
+        },
+        "FXS": {
+            "binance": "FXS/USDT",
+            "kucoin": "FXS/USDT"
+        },
+        "FLOW": {
+            "binance": "FLOW/USDT",
+            "kucoin": "FLOW/USDT"
+        },
+        "SCRT": {
+            "binance": "SCRT/USDT",
+            "kucoin": "SCRT/USDT"
+        },
+        "DOGE": {
+            "binance": "DOGE/USDT",
+            "kucoin": "DOGE/USDT"
+        },
+        "FORTH": {
+            "binance": "FORTH/USDT",
+            "kucoin": "FORTH/USDT"
+        },
+        "D": {
+            "binance": "D/USDT",
+            "kucoin": "D/USDT"
+        },
+        "TWT": {
+            "binance": "TWT/USDT",
+            "kucoin": "TWT/USDT"
+        },
+        "JUP": {
+            "binance": "JUP/USDT",
+            "kucoin": "JUP/USDT"
+        },
+        "EPX": {
+            "binance": "EPX/USDT",
+            "kucoin": "EPX/USDT"
+        },
+        "WAVES": {
+            "binance": "WAVES/USDT",
+            "kucoin": "WAVES/USDT"
+        },
+        "ICP": {
+            "binance": "ICP/USDT",
+            "kucoin": "ICP/USDT"
+        },
+        "COW": {
+            "binance": "COW/USDT",
+            "kucoin": "COW/USDT"
+        },
+        "MTL": {
+            "binance": "MTL/USDT",
+            "kucoin": "MTL/USDT"
+        },
+        "HIGH": {
+            "binance": "HIGH/USDT",
+            "kucoin": "HIGH/USDT"
+        },
+        "KAVA": {
+            "binance": "KAVA/USDT",
+            "kucoin": "KAVA/USDT"
+        },
+        "UNFI": {
+            "binance": "UNFI/USDT",
+            "kucoin": "UNFI/USDT"
+        },
+        "ORCA": {
+            "binance": "ORCA/USDT",
+            "kucoin": "ORCA/USDT"
+        },
+        "APT": {
+            "binance": "APT/USDT",
+            "kucoin": "APT/USDT"
+        },
+        "ZIL": {
+            "binance": "ZIL/USDT",
+            "kucoin": "ZIL/USDT"
+        },
+        "LISTA": {
+            "binance": "LISTA/USDT",
+            "kucoin": "LISTA/USDT"
+        },
+        "TFUEL": {
+            "binance": "TFUEL/USDT",
+            "kucoin": "TFUEL/USDT"
+        },
+        "GLMR": {
+            "binance": "GLMR/USDT",
+            "kucoin": "GLMR/USDT"
+        },
+        "SUN": {
+            "binance": "SUN/USDT",
+            "kucoin": "SUN/USDT"
+        },
+        "1INCH": {
+            "binance": "1INCH/USDT",
+            "kucoin": "1INCH/USDT"
+        },
+        "WIF": {
+            "binance": "WIF/USDT",
+            "kucoin": "WIF/USDT"
+        },
+        "TNSR": {
+            "binance": "TNSR/USDT",
+            "kucoin": "TNSR/USDT"
+        },
+        "INJ": {
+            "binance": "INJ/USDT",
+            "kucoin": "INJ/USDT"
+        },
+        "COMBO": {
+            "binance": "COMBO/USDT",
+            "kucoin": "COMBO/USDT"
+        },
+        "W": {
+            "binance": "W/USDT",
+            "kucoin": "W/USDT"
+        },
+        "XRP": {
+            "binance": "XRP/USDT",
+            "kucoin": "XRP/USDT"
+        },
+        "ASTR": {
+            "binance": "ASTR/USDT",
+            "kucoin": "ASTR/USDT"
+        },
+        "GRT": {
+            "binance": "GRT/USDT",
+            "kucoin": "GRT/USDT"
+        },
+        "STRK": {
+            "binance": "STRK/USDT",
+            "kucoin": "STRK/USDT"
+        },
+        "CLV": {
+            "binance": "CLV/USDT",
+            "kucoin": "CLV/USDT"
+        },
+        "POL": {
+            "binance": "POL/EUR",
+            "kucoin": "POL/USDT"
+        },
+        "DOT": {
+            "binance": "DOT/USDT",
+            "kucoin": "DOT/USDT"
+        },
+        "GAS": {
+            "binance": "GAS/USDT",
+            "kucoin": "GAS/USDT"
+        },
+        "ACH": {
+            "binance": "ACH/USDT",
+            "kucoin": "ACH/USDT"
+        },
+        "PUNDIX": {
+            "binance": "PUNDIX/USDT",
+            "kucoin": "PUNDIX/USDT"
+        },
+        "SFP": {
+            "binance": "SFP/USDT",
+            "kucoin": "SFP/USDT"
+        },
+        "TRB": {
+            "binance": "TRB/USDT",
+            "kucoin": "TRB/USDT"
+        },
+        "BLUR": {
+            "binance": "BLUR/USDT",
+            "kucoin": "BLUR/USDT"
+        },
+        "WIN": {
+            "binance": "WIN/USDT",
+            "kucoin": "WIN/USDT"
+        },
+        "MBL": {
+            "binance": "MBL/USDT",
+            "kucoin": "MBL/USDT"
+        },
+        "OM": {
+            "binance": "OM/USDT",
+            "kucoin": "OM/USDT"
+        },
+        "XEM": {
+            "binance": "XEM/USDT",
+            "kucoin": "XEM/USDT"
+        },
+        "ETC": {
+            "binance": "ETC/USDT",
+            "kucoin": "ETC/USDT"
+        },
+        "HARD": {
+            "binance": "HARD/USDT",
+            "kucoin": "HARD/USDT"
+        },
+        "PERP": {
+            "binance": "PERP/USDT",
+            "kucoin": "PERP/USDT"
+        },
+        "QUICK": {
+            "binance": "QUICK/USDT",
+            "kucoin": "QUICK/USDT"
+        },
+        "ZEC": {
+            "binance": "ZEC/USDT",
+            "kucoin": "ZEC/USDT"
+        },
+        "CHZ": {
+            "binance": "CHZ/USDT",
+            "kucoin": "CHZ/USDT"
+        },
+        "PAXG": {
+            "binance": "PAXG/USDT",
+            "kucoin": "PAXG/USDT"
+        },
+        "XEC": {
+            "binance": "XEC/USDT",
+            "kucoin": "XEC/USDT"
+        },
+        "IOST": {
+            "binance": "IOST/USDT",
+            "kucoin": "IOST/USDT"
+        },
+        "STX": {
+            "binance": "STX/USDT",
+            "kucoin": "STX/USDT"
+        },
+        "JASMY": {
+            "binance": "JASMY/USDT",
+            "kucoin": "JASMY/USDT"
+        },
+        "WAXP": {
+            "binance": "WAXP/USDT",
+            "kucoin": "WAXP/USDT"
+        },
+        "ETHDOWN": {
+            "binance": "ETHDOWN/USDT",
+            "kucoin": "ETHDOWN/USDT"
+        },
+        "MAV": {
+            "binance": "MAV/USDT",
+            "kucoin": "MAV/USDT"
+        },
+        "ANKR": {
+            "binance": "ANKR/USDT",
+            "kucoin": "ANKR/USDT"
+        },
+        "NFP": {
+            "binance": "NFP/USDT",
+            "kucoin": "NFP/USDT"
+        },
+        "XTZ": {
+            "binance": "XTZ/USDT",
+            "kucoin": "XTZ/USDT"
+        },
+        "COTI": {
+            "binance": "COTI/USDT",
+            "kucoin": "COTI/USDT"
+        },
+        "ID": {
+            "binance": "ID/USDT",
+            "kucoin": "ID/USDT"
+        },
+        "KDA": {
+            "binance": "KDA/USDT",
+            "kucoin": "KDA/USDT"
+        },
+        "BCH": {
+            "binance": "BCH/USDT",
+            "kucoin": "BCH/USDT"
+        },
+        "RENDER": {
+            "binance": "RENDER/USDT",
+            "kucoin": "RENDER/USDT"
+        },
+        "GNS": {
+            "binance": "GNS/USDT",
+            "kucoin": "GNS/USDT"
+        },
+        "SAND": {
+            "binance": "SAND/USDT",
+            "kucoin": "SAND/USDT"
+        },
+        "LUNA": {
+            "binance": "LUNA/USDT",
+            "kucoin": "LUNA/USDT"
+        },
+        "AR": {
+            "binance": "AR/USDT",
+            "kucoin": "AR/USDT"
+        },
+        "DEXE": {
+            "binance": "DEXE/USDT",
+            "kucoin": "DEXE/USDT"
+        },
+        "MANA": {
+            "binance": "MANA/USDT",
+            "kucoin": "MANA/USDT"
+        },
+        "ROSE": {
+            "binance": "ROSE/USDT",
+            "kucoin": "ROSE/USDT"
+        },
+        "CVX": {
+            "binance": "CVX/USDT",
+            "kucoin": "CVX/USDT"
+        },
+        "ZK": {
+            "binance": "ZK/USDT",
+            "kucoin": "ZK/USDT"
+        },
+        "NTRN": {
+            "binance": "NTRN/USDT",
+            "kucoin": "NTRN/USDT"
+        },
+        "DODO": {
+            "binance": "DODO/USDT",
+            "kucoin": "DODO/USDT"
+        },
+        "USDC": {
+            "binance": "USDC/USDT",
+            "kucoin": "USDC/USDT"
+        },
+        "ENJ": {
+            "binance": "ENJ/USDT",
+            "kucoin": "ENJ/USDT"
+        },
+        "VIDT": {
+            "binance": "VIDT/USDT",
+            "kucoin": "VIDT/USDT"
+        },
+        "AUDIO": {
+            "binance": "AUDIO/USDT",
+            "kucoin": "AUDIO/USDT"
+        },
+        "NEO": {
+            "binance": "NEO/USDT",
+            "kucoin": "NEO/USDT"
+        },
+        "FLOKI": {
+            "binance": "FLOKI/USDT",
+            "kucoin": "FLOKI/USDT"
+        },
+        "MAGIC": {
+            "binance": "MAGIC/USDT",
+            "kucoin": "MAGIC/USDT"
+        },
+        "DCR": {
+            "binance": "DCR/USDT",
+            "kucoin": "DCR/USDT"
+        },
+        "ICX": {
+            "binance": "ICX/USDT",
+            "kucoin": "ICX/USDT"
+        },
+        "RDNT": {
+            "binance": "RDNT/USDT",
+            "kucoin": "RDNT/USDT"
+        },
+        "OMNI": {
+            "binance": "OMNI/USDT",
+            "kucoin": "OMNI/USDT"
+        },
+        "AIXBT": {
+            "binance": "AIXBT/USDT",
+            "kucoin": "AIXBT/USDT"
+        },
+        "OGN": {
+            "binance": "OGN/USDT",
+            "kucoin": "OGN/USDT"
+        },
+        "DEGO": {
+            "binance": "DEGO/USDT",
+            "kucoin": "DEGO/USDT"
+        },
+        "RVN": {
+            "binance": "RVN/USDT",
+            "kucoin": "RVN/USDT"
+        },
+        "BIO": {
+            "binance": "BIO/USDT",
+            "kucoin": "BIO/USDT"
+        },
+        "CTSI": {
+            "binance": "CTSI/USDT",
+            "kucoin": "CTSI/USDT"
+        },
+        "BLZ": {
+            "binance": "BLZ/USDT",
+            "kucoin": "BLZ/USDT"
+        },
+        "KMD": {
+            "binance": "KMD/USDT",
+            "kucoin": "KMD/USDT"
+        },
+        "ZRX": {
+            "binance": "ZRX/USDT",
+            "kucoin": "ZRX/USDT"
+        },
+        "LPT": {
+            "binance": "LPT/USDT",
+            "kucoin": "LPT/USDT"
+        },
+        "WAN": {
+            "binance": "WAN/USDT",
+            "kucoin": "WAN/USDT"
+        },
+        "PYR": {
+            "binance": "PYR/USDT",
+            "kucoin": "PYR/USDT"
+        },
+        "AGLD": {
+            "binance": "AGLD/USDT",
+            "kucoin": "AGLD/USDT"
+        },
+        "WOO": {
+            "binance": "WOO/USDT",
+            "kucoin": "WOO/USDT"
+        },
+        "SSV": {
+            "binance": "SSV/USDT",
+            "kucoin": "SSV/USDT"
+        },
+        "AXS": {
+            "binance": "AXS/USDT",
+            "kucoin": "AXS/USDT"
+        },
+        "MANTA": {
+            "binance": "MANTA/USDT",
+            "kucoin": "MANTA/USDT"
+        },
+        "EOS": {
+            "binance": "EOS/USDT",
+            "kucoin": "EOS/USDT"
+        },
+        "UTK": {
+            "binance": "UTK/USDT",
+            "kucoin": "UTK/USDT"
+        },
+        "BAT": {
+            "binance": "BAT/USDT",
+            "kucoin": "BAT/USDT"
+        },
+        "C98": {
+            "binance": "C98/USDT",
+            "kucoin": "C98/USDT"
+        },
+        "VANA": {
+            "binance": "VANA/USDT",
+            "kucoin": "VANA/USDT"
+        },
+        "AMB": {
+            "binance": "AMB/USDT",
+            "kucoin": "AMB/USDT"
+        },
+        "CHR": {
+            "binance": "CHR/USDT",
+            "kucoin": "CHR/USDT"
+        },
+        "TIA": {
+            "binance": "TIA/USDT",
+            "kucoin": "TIA/USDT"
+        },
+        "QI": {
+            "binance": "QI/USDT",
+            "kucoin": "QI/USDT"
+        },
+        "EDU": {
+            "binance": "EDU/USDT",
+            "kucoin": "EDU/USDT"
+        },
+        "POND": {
+            "binance": "POND/USDT",
+            "kucoin": "POND/USDT"
+        },
+        "NEAR": {
+            "binance": "NEAR/USDT",
+            "kucoin": "NEAR/USDT"
+        },
+        "ONT": {
+            "binance": "ONT/USDT",
+            "kucoin": "ONT/USDT"
+        },
+        "PYTH": {
+            "binance": "PYTH/USDT",
+            "kucoin": "PYTH/USDT"
+        },
+        "IO": {
+            "binance": "IO/USDT",
+            "kucoin": "IO/USDT"
+        },
+        "API3": {
+            "binance": "API3/USDT",
+            "kucoin": "API3/USDT"
+        },
+        "POLYX": {
+            "binance": "POLYX/USDT",
+            "kucoin": "POLYX/USDT"
+        },
+        "ETH": {
+            "binance": "ETH/USDT",
+            "kucoin": "ETH/USDT"
+        },
+        "ALPINE": {
+            "binance": "ALPINE/EUR",
+            "kucoin": "ALPINE/USDT"
+        },
+        "ACX": {
+            "binance": "ACX/USDT",
+            "kucoin": "ACX/USDT"
+        },
+        "ELF": {
+            "binance": "ELF/USDT",
+            "kucoin": "ELF/USDT"
+        },
+        "LINA": {
+            "binance": "LINA/USDT",
+            "kucoin": "LINA/USDT"
+        },
+        "BSW": {
+            "binance": "BSW/USDT",
+            "kucoin": "BSW/USDT"
+        },
+        "RUNE": {
+            "binance": "RUNE/USDT",
+            "kucoin": "RUNE/USDT"
+        },
+        "RPL": {
+            "binance": "RPL/USDT",
+            "kucoin": "RPL/USDT"
+        },
+        "BTC": {
+            "binance": "BTC/USDT",
+            "kucoin": "BTC/USDT"
+        },
+        "LTC": {
+            "binance": "LTC/USDT",
+            "kucoin": "LTC/USDT"
+        },
+        "RSR": {
+            "binance": "RSR/USDT",
+            "kucoin": "RSR/USDT"
+        },
+        "KSM": {
+            "binance": "KSM/USDT",
+            "kucoin": "KSM/USDT"
+        },
+        "HMSTR": {
+            "binance": "HMSTR/USDT",
+            "kucoin": "HMSTR/USDT"
+        },
+        "UMA": {
+            "binance": "UMA/USDT",
+            "kucoin": "UMA/USDT"
+        },
+        "TLM": {
+            "binance": "TLM/USDT",
+            "kucoin": "TLM/USDT"
+        },
+        "REEF": {
+            "binance": "REEF/USDT",
+            "kucoin": "REEF/USDT"
+        },
+        "MOVR": {
+            "binance": "MOVR/USDT",
+            "kucoin": "MOVR/USDT"
+        },
+        "SUSHI": {
+            "binance": "SUSHI/USDT",
+            "kucoin": "SUSHI/USDT"
+        },
+        "ADX": {
+            "binance": "ADX/USDT",
+            "kucoin": "ADX/USDT"
+        },
+        "VTHO": {
+            "binance": "VTHO/USDT",
+            "kucoin": "VTHO/USDT"
+        },
+        "YGG": {
+            "binance": "YGG/USDT",
+            "kucoin": "YGG/USDT"
+        },
+        "SLP": {
+            "binance": "SLP/USDT",
+            "kucoin": "SLP/USDT"
+        },
+        "ETHUP": {
+            "binance": "ETHUP/USDT",
+            "kucoin": "ETHUP/USDT"
+        },
+        "CREAM": {
+            "binance": "CREAM/USDT",
+            "kucoin": "CREAM/USDT"
+        },
+        "ZEN": {
+            "binance": "ZEN/USDT",
+            "kucoin": "ZEN/USDT"
+        },
+        "FTT": {
+            "binance": "FTT/USDT",
+            "kucoin": "FTT/USDT"
+        },
+        "VOXEL": {
+            "binance": "VOXEL/USDT",
+            "kucoin": "VOXEL/USDT"
+        },
+        "PNUT": {
+            "binance": "PNUT/USDT",
+            "kucoin": "PNUT/USDT"
+        },
+        "DATA": {
+            "binance": "DATA/USDT",
+            "kucoin": "DATA/USDT"
+        },
+        "ATA": {
+            "binance": "ATA/USDT",
+            "kucoin": "ATA/USDT"
+        },
+        "OXT": {
+            "binance": "OXT/USDT",
+            "kucoin": "OXT/USDT"
+        },
+        "ANIME": {
+            "binance": "ANIME/USDT",
+            "kucoin": "ANIME/USDT"
+        },
+        "ARKM": {
+            "binance": "ARKM/USDT",
+            "kucoin": "ARKM/USDT"
+        },
+        "PHA": {
+            "binance": "PHA/USDT",
+            "kucoin": "PHA/USDT"
+        },
+        "USTC": {
+            "binance": "USTC/USDT",
+            "kucoin": "USTC/USDT"
+        },
+        "MEME": {
+            "binance": "MEME/USDT",
+            "kucoin": "MEME/USDT"
+        },
+        "JST": {
+            "binance": "JST/USDT",
+            "kucoin": "JST/USDT"
+        },
+        "LQTY": {
+            "binance": "LQTY/USDT",
+            "kucoin": "LQTY/USDT"
+        },
+        "DGB": {
+            "binance": "DGB/USDT",
+            "kucoin": "DGB/USDT"
+        },
+        "GMX": {
+            "binance": "GMX/USDT",
+            "kucoin": "GMX/USDT"
+        },
+        "BURGER": {
+            "binance": "BURGER/USDT",
+            "kucoin": "BURGER/USDT"
+        },
+        "AAVE": {
+            "binance": "AAVE/USDT",
+            "kucoin": "AAVE/USDT"
+        },
+        "COOKIE": {
+            "binance": "COOKIE/USDT",
+            "kucoin": "COOKIE/USDT"
+        },
+        "MINA": {
+            "binance": "MINA/USDT",
+            "kucoin": "MINA/USDT"
+        },
+        "BOME": {
+            "binance": "BOME/USDT",
+            "kucoin": "BOME/USDT"
+        },
+        "ATOM": {
+            "binance": "ATOM/USDT",
+            "kucoin": "ATOM/USDT"
+        },
+        "TAO": {
+            "binance": "TAO/USDT",
+            "kucoin": "TAO/USDT"
+        },
+        "DASH": {
+            "binance": "DASH/USDT",
+            "kucoin": "DASH/USDT"
+        },
+        "THETA": {
+            "binance": "THETA/USDT",
+            "kucoin": "THETA/USDT"
+        },
+        "CGPT": {
+            "binance": "CGPT/USDT",
+            "kucoin": "CGPT/USDT"
+        },
+        "AUCTION": {
+            "binance": "AUCTION/USDT",
+            "kucoin": "AUCTION/USDT"
+        },
+        "QNT": {
+            "binance": "QNT/USDT",
+            "kucoin": "QNT/USDT"
+        },
+        "ZRO": {
+            "binance": "ZRO/USDT",
+            "kucoin": "ZRO/USDT"
+        },
+        "MASK": {
+            "binance": "MASK/USDT",
+            "kucoin": "MASK/USDT"
+        },
+        "ALT": {
+            "binance": "ALT/USDT",
+            "kucoin": "ALT/USDT"
+        },
+        "SLF": {
+            "binance": "SLF/USDT",
+            "kucoin": "SLF/USDT"
+        },
+        "BOND": {
+            "binance": "BOND/USDT",
+            "kucoin": "BOND/USDT"
+        },
+        "ILV": {
+            "binance": "ILV/USDT",
+            "kucoin": "ILV/USDT"
+        },
+        "QKC": {
+            "binance": "QKC/USDT",
+            "kucoin": "QKC/USDT"
+        },
+        "ETHFI": {
+            "binance": "ETHFI/USDT",
+            "kucoin": "ETHFI/USDT"
+        },
+        "S": {
+            "binance": "S/EUR",
+            "kucoin": "S/USDT"
+        },
+        "VANRY": {
+            "binance": "VANRY/USDT",
+            "kucoin": "VANRY/USDT"
+        },
+        "KEY": {
+            "binance": "KEY/USDT",
+            "kucoin": "KEY/USDT"
+        },
+        "REN": {
+            "binance": "REN/USDT",
+            "kucoin": "REN/USDT"
+        },
+        "LRC": {
+            "binance": "LRC/USDT",
+            "kucoin": "LRC/USDT"
+        },
+        "DYDX": {
+            "binance": "DYDX/USDT",
+            "kucoin": "DYDX/USDT"
+        },
+        "STG": {
+            "binance": "STG/USDT",
+            "kucoin": "STG/USDT"
+        },
+        "LUNC": {
+            "binance": "LUNC/USDT",
+            "kucoin": "LUNC/USDT"
+        },
+        "LTO": {
+            "binance": "LTO/USDT",
+            "kucoin": "LTO/USDT"
+        },
+        "SOL": {
+            "binance": "SOL/USDT",
+            "kucoin": "SOL/USDT"
+        },
+        "RLC": {
+            "binance": "RLC/USDT",
+            "kucoin": "RLC/USDT"
+        },
+        "NKN": {
+            "binance": "NKN/USDT",
+            "kucoin": "NKN/USDT"
+        },
+        "FIDA": {
+            "binance": "FIDA/USDT",
+            "kucoin": "FIDA/USDT"
+        },
+        "AEVO": {
+            "binance": "AEVO/USDT",
+            "kucoin": "AEVO/USDT"
+        },
+        "BANANA": {
+            "binance": "BANANA/USDT",
+            "kucoin": "BANANA/USDT"
+        },
+        "KAIA": {
+            "binance": "KAIA/USDT",
+            "kucoin": "KAIA/USDT"
+        },
+        "QTUM": {
+            "binance": "QTUM/USDT",
+            "kucoin": "QTUM/USDT"
+        },
+        "LOOM": {
+            "binance": "LOOM/USDT",
+            "kucoin": "LOOM/USDT"
+        },
+        "TRUMP": {
+            "binance": "TRUMP/USDT",
+            "kucoin": "TRUMP/USDT"
+        },
+        "CELO": {
+            "binance": "CELO/USDT",
+            "kucoin": "CELO/USDT"
+        },
+        "APE": {
+            "binance": "APE/USDT",
+            "kucoin": "APE/USDT"
+        },
+        "BICO": {
+            "binance": "BICO/USDT",
+            "kucoin": "BICO/USDT"
+        },
+        "UNI": {
+            "binance": "UNI/USDT",
+            "kucoin": "UNI/USDT"
+        },
+        "DIA": {
+            "binance": "DIA/USDT",
+            "kucoin": "DIA/USDT"
+        },
+        "ARPA": {
+            "binance": "ARPA/USDT",
+            "kucoin": "ARPA/USDT"
+        },
+        "CVC": {
+            "binance": "CVC/USDT",
+            "kucoin": "CVC/USDT"
+        },
+        "CAKE": {
+            "binance": "CAKE/USDT",
+            "kucoin": "CAKE/USDT"
+        },
+        "REQ": {
+            "binance": "REQ/USDT",
+            "kucoin": "REQ/USDT"
+        },
+        "HIFI": {
+            "binance": "HIFI/USDT",
+            "kucoin": "HIFI/USDT"
+        },
+        "BSV": {
+            "binance": "BSV/USDT",
+            "kucoin": "BSV/USDT"
+        },
+        "LUMIA": {
+            "binance": "LUMIA/USDT",
+            "kucoin": "LUMIA/USDT"
+        },
+        "MKR": {
+            "binance": "MKR/USDT",
+            "kucoin": "MKR/USDT"
+        },
+        "SKL": {
+            "binance": "SKL/USDT",
+            "kucoin": "SKL/USDT"
+        },
+        "YFI": {
+            "binance": "YFI/USDT",
+            "kucoin": "YFI/USDT"
+        },
+        "DOGS": {
+            "binance": "DOGS/USDT",
+            "kucoin": "DOGS/USDT"
+        },
+        "DYM": {
+            "binance": "DYM/USDT",
+            "kucoin": "DYM/USDT"
+        },
+        "VET": {
+            "binance": "VET/USDT",
+            "kucoin": "VET/USDT"
+        },
+        "SYN": {
+            "binance": "SYN/USDT",
+            "kucoin": "SYN/USDT"
+        },
+        "TUSD": {
+            "binance": "TUSD/USDT",
+            "kucoin": "TUSD/USDT"
+        },
+        "TRX": {
+            "binance": "TRX/USDT",
+            "kucoin": "TRX/USDT"
+        },
+        "XAI": {
+            "binance": "XAI/USDT",
+            "kucoin": "XAI/USDT"
+        },
+        "XNO": {
+            "binance": "XNO/USDT",
+            "kucoin": "XNO/USDT"
+        },
+        "COMP": {
+            "binance": "COMP/USDT",
+            "kucoin": "COMP/USDT"
+        },
+        "AVAX": {
+            "binance": "AVAX/USDT",
+            "kucoin": "AVAX/USDT"
+        },
+        "CRV": {
+            "binance": "CRV/USDT",
+            "kucoin": "CRV/USDT"
+        },
+        "OP": {
+            "binance": "OP/USDT",
+            "kucoin": "OP/USDT"
+        },
+        "AERGO": {
+            "binance": "AERGO/USDT",
+            "kucoin": "AERGO/USDT"
+        },
+        "DENT": {
+            "binance": "DENT/USDT",
+            "kucoin": "DENT/USDT"
+        },
+        "TRU": {
+            "binance": "TRU/USDT",
+            "kucoin": "TRU/USDT"
+        },
+        "WBTC": {
+            "binance": "WBTC/USDT",
+            "kucoin": "WBTC/USDT"
+        },
+        "HNT": {
+            "binance": "HNT/USDT",
+            "kucoin": "HNT/USDT"
+        },
+        "TURBO": {
+            "binance": "TURBO/USDT",
+            "kucoin": "TURBO/USDT"
+        },
+        "KNC": {
+            "binance": "KNC/USDT",
+            "kucoin": "KNC/USDT"
+        },
+        "T": {
+            "binance": "T/USDT",
+            "kucoin": "T/USDT"
+        },
+        "DUSK": {
+            "binance": "DUSK/USDT",
+            "kucoin": "DUSK/USDT"
+        },
+        "USUAL": {
+            "binance": "USUAL/USDT",
+            "kucoin": "USUAL/USDT"
+        },
+        "IOTX": {
+            "binance": "IOTX/USDT",
+            "kucoin": "IOTX/USDT"
+        },
+        "WLD": {
+            "binance": "WLD/USDT",
+            "kucoin": "WLD/USDT"
+        },
+        "PROM": {
+            "binance": "PROM/USDT",
+            "kucoin": "PROM/USDT"
+        },
+        "LSK": {
+            "binance": "LSK/USDT",
+            "kucoin": "LSK/USDT"
+        },
+        "GTC": {
+            "binance": "GTC/USDT",
+            "kucoin": "GTC/USDT"
+        },
+        "PORTAL": {
+            "binance": "PORTAL/USDT",
+            "kucoin": "PORTAL/USDT"
+        },
+        "SUPER": {
+            "binance": "SUPER/USDT",
+            "kucoin": "SUPER/USDT"
+        },
+        "MOVE": {
+            "binance": "MOVE/USDT",
+            "kucoin": "MOVE/USDT"
+        },
+        "CFX": {
+            "binance": "CFX/USDT",
+            "kucoin": "CFX/USDT"
+        },
+        "IOTA": {
+            "binance": "IOTA/USDT",
+            "kucoin": "IOTA/USDT"
+        },
+        "ENS": {
+            "binance": "ENS/USDT",
+            "kucoin": "ENS/USDT"
+        },
+        "ARB": {
+            "binance": "ARB/USDT",
+            "kucoin": "ARB/USDT"
+        },
+        "BTCDOWN": {
+            "binance": "BTCDOWN/USDT",
+            "kucoin": "BTCDOWN/USDT"
+        },
+        "EIGEN": {
+            "binance": "EIGEN/USDT",
+            "kucoin": "EIGEN/USDT"
+        },
+        "SEI": {
+            "binance": "SEI/USDT",
+            "kucoin": "SEI/USDT"
+        },
+        "ALPHA": {
+            "binance": "ALPHA/USDT",
+            "kucoin": "ALPHA/USDT"
+        },
+        "TON": {
+            "binance": "TON/USDT",
+            "kucoin": "TON/USDT"
+        },
+        "HBAR": {
+            "binance": "HBAR/USDT",
+            "kucoin": "HBAR/USDT"
+        },
+        "AMP": {
+            "binance": "AMP/USDT",
+            "kucoin": "AMP/USDT"
+        },
+        "CATI": {
+            "binance": "CATI/USDT",
+            "kucoin": "CATI/USDT"
+        },
+        "ADA": {
+            "binance": "ADA/USDT",
+            "kucoin": "ADA/USDT"
+        },
+        "XLM": {
+            "binance": "XLM/USDT",
+            "kucoin": "XLM/USDT"
+        },
+        "PIXEL": {
+            "binance": "PIXEL/USDT",
+            "kucoin": "PIXEL/USDT"
+        },
         "XYZ": {
             "binance": "XYZ",
             "kucoin": "kXYZ"
         }
     },
-    "binance-bitget": {},
-    "binance-bitstamp": {},
-    "kucoin-bitget": {},
-    "kucoin-bitstamp": {},
-    "bitget-bitstamp": {}
+    "binance-bitget": {
+        "HFT": {
+            "binance": "HFT/USDT",
+            "bitget": "HFT/USDT"
+        },
+        "VIC": {
+            "binance": "VIC/USDT",
+            "bitget": "VIC/USDT"
+        },
+        "BNB": {
+            "binance": "BNB/USDT",
+            "bitget": "BNB/USDT"
+        },
+        "BAKE": {
+            "binance": "BAKE/USDT",
+            "bitget": "BAKE/USDT"
+        },
+        "ORDI": {
+            "binance": "ORDI/USDT",
+            "bitget": "ORDI/USDT"
+        },
+        "G": {
+            "binance": "G/USDT",
+            "bitget": "G/USDT"
+        },
+        "STMX": {
+            "binance": "STMX/USDT",
+            "bitget": "STMX/USDT"
+        },
+        "AI": {
+            "binance": "AI/USDT",
+            "bitget": "AI/USDT"
+        },
+        "JTO": {
+            "binance": "JTO/USDT",
+            "bitget": "JTO/USDT"
+        },
+        "STORJ": {
+            "binance": "STORJ/USDT",
+            "bitget": "STORJ/USDT"
+        },
+        "BERA": {
+            "binance": "BERA/USDT",
+            "bitget": "BERA/USDT"
+        },
+        "LAZIO": {
+            "binance": "LAZIO/EUR",
+            "bitget": "LAZIO/USDT"
+        },
+        "BAR": {
+            "binance": "BAR/USDT",
+            "bitget": "BAR/USDT"
+        },
+        "PENDLE": {
+            "binance": "PENDLE/USDT",
+            "bitget": "PENDLE/USDT"
+        },
+        "FLM": {
+            "binance": "FLM/USDT",
+            "bitget": "FLM/USDT"
+        },
+        "FIL": {
+            "binance": "FIL/USDT",
+            "bitget": "FIL/USDT"
+        },
+        "ALICE": {
+            "binance": "ALICE/USDT",
+            "bitget": "ALICE/USDT"
+        },
+        "BB": {
+            "binance": "BB/USDT",
+            "bitget": "BB/USDT"
+        },
+        "BONK": {
+            "binance": "BONK/USDT",
+            "bitget": "BONK/USDT"
+        },
+        "EGLD": {
+            "binance": "EGLD/USDT",
+            "bitget": "EGLD/USDT"
+        },
+        "PEPE": {
+            "binance": "PEPE/USDT",
+            "bitget": "PEPE/USDT"
+        },
+        "STRAX": {
+            "binance": "STRAX/USDT",
+            "bitget": "STRAX/USDT"
+        },
+        "AVA": {
+            "binance": "AVA/USDT",
+            "bitget": "AVA/USDT"
+        },
+        "CKB": {
+            "binance": "CKB/USDT",
+            "bitget": "CKB/USDT"
+        },
+        "ONE": {
+            "binance": "ONE/USDT",
+            "bitget": "ONE/USDT"
+        },
+        "SYS": {
+            "binance": "SYS/USDT",
+            "bitget": "SYS/USDT"
+        },
+        "ENA": {
+            "binance": "ENA/USDT",
+            "bitget": "ENA/EUR"
+        },
+        "ALGO": {
+            "binance": "ALGO/USDT",
+            "bitget": "ALGO/USDT"
+        },
+        "SUI": {
+            "binance": "SUI/USDT",
+            "bitget": "SUI/EUR"
+        },
+        "BNX": {
+            "binance": "BNX/USDT",
+            "bitget": "BNX/USDT"
+        },
+        "OMG": {
+            "binance": "OMG/USDT",
+            "bitget": "OMG/USDT"
+        },
+        "BADGER": {
+            "binance": "BADGER/USDT",
+            "bitget": "BADGER/USDT"
+        },
+        "IMX": {
+            "binance": "IMX/USDT",
+            "bitget": "IMX/USDT"
+        },
+        "ATM": {
+            "binance": "ATM/USDT",
+            "bitget": "ATM/USDT"
+        },
+        "SNX": {
+            "binance": "SNX/USDT",
+            "bitget": "SNX/USDT"
+        },
+        "PENGU": {
+            "binance": "PENGU/USDT",
+            "bitget": "PENGU/USDT"
+        },
+        "METIS": {
+            "binance": "METIS/USDT",
+            "bitget": "METIS/USDT"
+        },
+        "SCR": {
+            "binance": "SCR/USDT",
+            "bitget": "SCR/EUR"
+        },
+        "SOLV": {
+            "binance": "SOLV/USDT",
+            "bitget": "SOLV/USDT"
+        },
+        "RIF": {
+            "binance": "RIF/USDT",
+            "bitget": "RIF/USDT"
+        },
+        "OSMO": {
+            "binance": "OSMO/USDT",
+            "bitget": "OSMO/USDT"
+        },
+        "AKRO": {
+            "binance": "AKRO/USDT",
+            "bitget": "AKRO/USDT"
+        },
+        "BAND": {
+            "binance": "BAND/USDT",
+            "bitget": "BAND/USDT"
+        },
+        "LINK": {
+            "binance": "LINK/USDT",
+            "bitget": "LINK/USDT"
+        },
+        "LDO": {
+            "binance": "LDO/USDT",
+            "bitget": "LDO/USDT"
+        },
+        "RAY": {
+            "binance": "RAY/USDT",
+            "bitget": "RAY/USDT"
+        },
+        "PEOPLE": {
+            "binance": "PEOPLE/USDT",
+            "bitget": "PEOPLE/USDT"
+        },
+        "GLM": {
+            "binance": "GLM/USDT",
+            "bitget": "GLM/USDT"
+        },
+        "REZ": {
+            "binance": "REZ/USDT",
+            "bitget": "REZ/USDT"
+        },
+        "GNO": {
+            "binance": "GNO/USDT",
+            "bitget": "GNO/USDT"
+        },
+        "HIVE": {
+            "binance": "HIVE/USDT",
+            "bitget": "HIVE/USDT"
+        },
+        "STPT": {
+            "binance": "STPT/USDT",
+            "bitget": "STPT/USDT"
+        },
+        "LOKA": {
+            "binance": "LOKA/USDT",
+            "bitget": "LOKA/USDT"
+        },
+        "NMR": {
+            "binance": "NMR/USDT",
+            "bitget": "NMR/USDT"
+        },
+        "ACE": {
+            "binance": "ACE/USDT",
+            "bitget": "ACE/USDT"
+        },
+        "CETUS": {
+            "binance": "CETUS/USDT",
+            "bitget": "CETUS/USDT"
+        },
+        "BAL": {
+            "binance": "BAL/USDT",
+            "bitget": "BAL/USDT"
+        },
+        "CELR": {
+            "binance": "CELR/USDT",
+            "bitget": "CELR/USDT"
+        },
+        "BTT": {
+            "binance": "BTT/USDT",
+            "bitget": "BTT/USDT"
+        },
+        "FLUX": {
+            "binance": "FLUX/USDT",
+            "bitget": "FLUX/USDT"
+        },
+        "GMT": {
+            "binance": "GMT/USDT",
+            "bitget": "GMT/USDT"
+        },
+        "ME": {
+            "binance": "ME/USDT",
+            "bitget": "ME/USDT"
+        },
+        "SXP": {
+            "binance": "SXP/USDT",
+            "bitget": "SXP/USDT"
+        },
+        "SHIB": {
+            "binance": "SHIB/USDT",
+            "bitget": "SHIB/EUR"
+        },
+        "CYBER": {
+            "binance": "CYBER/USDT",
+            "bitget": "CYBER/USDT"
+        },
+        "NOT": {
+            "binance": "NOT/USDT",
+            "bitget": "NOT/USDT"
+        },
+        "FET": {
+            "binance": "FET/USDT",
+            "bitget": "FET/USDT"
+        },
+        "FXS": {
+            "binance": "FXS/USDT",
+            "bitget": "FXS/USDT"
+        },
+        "FLOW": {
+            "binance": "FLOW/USDT",
+            "bitget": "FLOW/USDT"
+        },
+        "IDEX": {
+            "binance": "IDEX/USDT",
+            "bitget": "IDEX/USDT"
+        },
+        "THE": {
+            "binance": "THE/USDT",
+            "bitget": "THE/USDT"
+        },
+        "DOGE": {
+            "binance": "DOGE/USDT",
+            "bitget": "DOGE/USDT"
+        },
+        "USDS": {
+            "binance": "USDS/USDT",
+            "bitget": "USDS/USDT"
+        },
+        "D": {
+            "binance": "D/USDT",
+            "bitget": "D/USDT"
+        },
+        "PORTO": {
+            "binance": "PORTO/USDT",
+            "bitget": "PORTO/USDT"
+        },
+        "TWT": {
+            "binance": "TWT/USDT",
+            "bitget": "TWT/USDT"
+        },
+        "JUP": {
+            "binance": "JUP/USDT",
+            "bitget": "JUP/USDT"
+        },
+        "WAVES": {
+            "binance": "WAVES/USDT",
+            "bitget": "WAVES/USDT"
+        },
+        "ICP": {
+            "binance": "ICP/USDT",
+            "bitget": "ICP/USDT"
+        },
+        "COW": {
+            "binance": "COW/USDT",
+            "bitget": "COW/USDT"
+        },
+        "MTL": {
+            "binance": "MTL/USDT",
+            "bitget": "MTL/USDT"
+        },
+        "HIGH": {
+            "binance": "HIGH/USDT",
+            "bitget": "HIGH/USDT"
+        },
+        "KAVA": {
+            "binance": "KAVA/USDT",
+            "bitget": "KAVA/USDT"
+        },
+        "UNFI": {
+            "binance": "UNFI/USDT",
+            "bitget": "UNFI/USDT"
+        },
+        "ORCA": {
+            "binance": "ORCA/USDT",
+            "bitget": "ORCA/USDT"
+        },
+        "APT": {
+            "binance": "APT/USDT",
+            "bitget": "APT/USDT"
+        },
+        "ZIL": {
+            "binance": "ZIL/USDT",
+            "bitget": "ZIL/USDT"
+        },
+        "LISTA": {
+            "binance": "LISTA/USDT",
+            "bitget": "LISTA/USDT"
+        },
+        "JUV": {
+            "binance": "JUV/USDT",
+            "bitget": "JUV/USDT"
+        },
+        "GLMR": {
+            "binance": "GLMR/USDT",
+            "bitget": "GLMR/USDT"
+        },
+        "SUN": {
+            "binance": "SUN/USDT",
+            "bitget": "SUN/USDT"
+        },
+        "1INCH": {
+            "binance": "1INCH/USDT",
+            "bitget": "1INCH/USDT"
+        },
+        "WIF": {
+            "binance": "WIF/USDT",
+            "bitget": "WIF/USDT"
+        },
+        "TNSR": {
+            "binance": "TNSR/USDT",
+            "bitget": "TNSR/USDT"
+        },
+        "INJ": {
+            "binance": "INJ/USDT",
+            "bitget": "INJ/USDT"
+        },
+        "COMBO": {
+            "binance": "COMBO/USDT",
+            "bitget": "COMBO/USDT"
+        },
+        "WING": {
+            "binance": "WING/USDT",
+            "bitget": "WING/USDT"
+        },
+        "W": {
+            "binance": "W/USDT",
+            "bitget": "W/USDT"
+        },
+        "XRP": {
+            "binance": "XRP/USDT",
+            "bitget": "XRP/USDT"
+        },
+        "ASTR": {
+            "binance": "ASTR/USDT",
+            "bitget": "ASTR/USDT"
+        },
+        "ACT": {
+            "binance": "ACT/USDT",
+            "bitget": "ACT/USDT"
+        },
+        "GRT": {
+            "binance": "GRT/USDT",
+            "bitget": "GRT/USDT"
+        },
+        "STRK": {
+            "binance": "STRK/USDT",
+            "bitget": "STRK/USDT"
+        },
+        "POL": {
+            "binance": "POL/EUR",
+            "bitget": "POL/USDT"
+        },
+        "DOT": {
+            "binance": "DOT/USDT",
+            "bitget": "DOT/USDT"
+        },
+        "GAS": {
+            "binance": "GAS/USDT",
+            "bitget": "GAS/USDT"
+        },
+        "MBOX": {
+            "binance": "MBOX/USDT",
+            "bitget": "MBOX/USDT"
+        },
+        "ACH": {
+            "binance": "ACH/USDT",
+            "bitget": "ACH/USDT"
+        },
+        "PUNDIX": {
+            "binance": "PUNDIX/USDT",
+            "bitget": "PUNDIX/USDT"
+        },
+        "SFP": {
+            "binance": "SFP/USDT",
+            "bitget": "SFP/USDT"
+        },
+        "TRB": {
+            "binance": "TRB/USDT",
+            "bitget": "TRB/USDT"
+        },
+        "NEXO": {
+            "binance": "NEXO/USDT",
+            "bitget": "NEXO/USDT"
+        },
+        "BLUR": {
+            "binance": "BLUR/USDT",
+            "bitget": "BLUR/USDT"
+        },
+        "WIN": {
+            "binance": "WIN/USDT",
+            "bitget": "WIN/USDT"
+        },
+        "OG": {
+            "binance": "OG/USDT",
+            "bitget": "OG/USDT"
+        },
+        "MBL": {
+            "binance": "MBL/USDT",
+            "bitget": "MBL/USDT"
+        },
+        "OM": {
+            "binance": "OM/USDT",
+            "bitget": "OM/USDT"
+        },
+        "XEM": {
+            "binance": "XEM/USDT",
+            "bitget": "XEM/USDT"
+        },
+        "ETC": {
+            "binance": "ETC/USDT",
+            "bitget": "ETC/USDT"
+        },
+        "PERP": {
+            "binance": "PERP/USDT",
+            "bitget": "PERP/USDT"
+        },
+        "QUICK": {
+            "binance": "QUICK/USDT",
+            "bitget": "QUICK/USDT"
+        },
+        "CHZ": {
+            "binance": "CHZ/USDT",
+            "bitget": "CHZ/USDT"
+        },
+        "PAXG": {
+            "binance": "PAXG/USDT",
+            "bitget": "PAXG/USDT"
+        },
+        "IOST": {
+            "binance": "IOST/USDT",
+            "bitget": "IOST/USDT"
+        },
+        "STX": {
+            "binance": "STX/USDT",
+            "bitget": "STX/USDT"
+        },
+        "JASMY": {
+            "binance": "JASMY/USDT",
+            "bitget": "JASMY/USDT"
+        },
+        "POWR": {
+            "binance": "POWR/USDT",
+            "bitget": "POWR/USDT"
+        },
+        "WAXP": {
+            "binance": "WAXP/USDT",
+            "bitget": "WAXP/USDT"
+        },
+        "MAV": {
+            "binance": "MAV/USDT",
+            "bitget": "MAV/USDT"
+        },
+        "ANKR": {
+            "binance": "ANKR/USDT",
+            "bitget": "ANKR/USDT"
+        },
+        "NFP": {
+            "binance": "NFP/USDT",
+            "bitget": "NFP/USDT"
+        },
+        "XTZ": {
+            "binance": "XTZ/USDT",
+            "bitget": "XTZ/USDT"
+        },
+        "COTI": {
+            "binance": "COTI/USDT",
+            "bitget": "COTI/USDT"
+        },
+        "ID": {
+            "binance": "ID/USDT",
+            "bitget": "ID/USDT"
+        },
+        "KDA": {
+            "binance": "KDA/USDT",
+            "bitget": "KDA/USDT"
+        },
+        "BCH": {
+            "binance": "BCH/USDT",
+            "bitget": "BCH/USDT"
+        },
+        "RENDER": {
+            "binance": "RENDER/USDT",
+            "bitget": "RENDER/USDT"
+        },
+        "GNS": {
+            "binance": "GNS/USDT",
+            "bitget": "GNS/USDT"
+        },
+        "SAND": {
+            "binance": "SAND/USDT",
+            "bitget": "SAND/USDT"
+        },
+        "LUNA": {
+            "binance": "LUNA/USDT",
+            "bitget": "LUNA/USDT"
+        },
+        "AR": {
+            "binance": "AR/USDT",
+            "bitget": "AR/USDT"
+        },
+        "ALPACA": {
+            "binance": "ALPACA/USDT",
+            "bitget": "ALPACA/USDT"
+        },
+        "ZK": {
+            "binance": "ZK/USDT",
+            "bitget": "ZK/USDT"
+        },
+        "MANA": {
+            "binance": "MANA/USDT",
+            "bitget": "MANA/USDT"
+        },
+        "ROSE": {
+            "binance": "ROSE/USDT",
+            "bitget": "ROSE/USDT"
+        },
+        "CVX": {
+            "binance": "CVX/USDT",
+            "bitget": "CVX/USDT"
+        },
+        "NTRN": {
+            "binance": "NTRN/USDT",
+            "bitget": "NTRN/USDT"
+        },
+        "MDT": {
+            "binance": "MDT/USDT",
+            "bitget": "MDT/USDT"
+        },
+        "AXL": {
+            "binance": "AXL/USDT",
+            "bitget": "AXL/USDT"
+        },
+        "HOT": {
+            "binance": "HOT/USDT",
+            "bitget": "HOT/USDT"
+        },
+        "DODO": {
+            "binance": "DODO/USDT",
+            "bitget": "DODO/USDT"
+        },
+        "CHESS": {
+            "binance": "CHESS/USDT",
+            "bitget": "CHESS/USDT"
+        },
+        "JOE": {
+            "binance": "JOE/USDT",
+            "bitget": "JOE/USDT"
+        },
+        "USDC": {
+            "binance": "USDC/USDT",
+            "bitget": "USDC/EUR"
+        },
+        "SPELL": {
+            "binance": "SPELL/USDT",
+            "bitget": "SPELL/USDT"
+        },
+        "ENJ": {
+            "binance": "ENJ/USDT",
+            "bitget": "ENJ/USDT"
+        },
+        "BEL": {
+            "binance": "BEL/USDT",
+            "bitget": "BEL/USDT"
+        },
+        "AUDIO": {
+            "binance": "AUDIO/USDT",
+            "bitget": "AUDIO/USDT"
+        },
+        "NEO": {
+            "binance": "NEO/USDT",
+            "bitget": "NEO/USDT"
+        },
+        "FLOKI": {
+            "binance": "FLOKI/USDT",
+            "bitget": "FLOKI/USDT"
+        },
+        "IQ": {
+            "binance": "IQ/USDT",
+            "bitget": "IQ/USDT"
+        },
+        "MAGIC": {
+            "binance": "MAGIC/USDT",
+            "bitget": "MAGIC/USDT"
+        },
+        "GHST": {
+            "binance": "GHST/USDT",
+            "bitget": "GHST/USDT"
+        },
+        "ICX": {
+            "binance": "ICX/USDT",
+            "bitget": "ICX/USDT"
+        },
+        "RDNT": {
+            "binance": "RDNT/USDT",
+            "bitget": "RDNT/USDT"
+        },
+        "AIXBT": {
+            "binance": "AIXBT/USDT",
+            "bitget": "AIXBT/USDT"
+        },
+        "FDUSD": {
+            "binance": "FDUSD/USDT",
+            "bitget": "FDUSD/USDT"
+        },
+        "VELODROME": {
+            "binance": "VELODROME/USDT",
+            "bitget": "VELODROME/USDT"
+        },
+        "OGN": {
+            "binance": "OGN/USDT",
+            "bitget": "OGN/USDT"
+        },
+        "RAD": {
+            "binance": "RAD/USDT",
+            "bitget": "RAD/USDT"
+        },
+        "BIO": {
+            "binance": "BIO/USDT",
+            "bitget": "BIO/USDT"
+        },
+        "ACM": {
+            "binance": "ACM/USDT",
+            "bitget": "ACM/USDT"
+        },
+        "CTSI": {
+            "binance": "CTSI/USDT",
+            "bitget": "CTSI/USDT"
+        },
+        "LAYER": {
+            "binance": "LAYER/USDT",
+            "bitget": "LAYER/USDT"
+        },
+        "BLZ": {
+            "binance": "BLZ/USDT",
+            "bitget": "BLZ/USDT"
+        },
+        "PSG": {
+            "binance": "PSG/USDT",
+            "bitget": "PSG/USDT"
+        },
+        "ZRX": {
+            "binance": "ZRX/USDT",
+            "bitget": "ZRX/USDT"
+        },
+        "LPT": {
+            "binance": "LPT/USDT",
+            "bitget": "LPT/USDT"
+        },
+        "PYR": {
+            "binance": "PYR/USDT",
+            "bitget": "PYR/USDT"
+        },
+        "AGLD": {
+            "binance": "AGLD/USDT",
+            "bitget": "AGLD/USDT"
+        },
+        "WOO": {
+            "binance": "WOO/USDT",
+            "bitget": "WOO/USDT"
+        },
+        "SSV": {
+            "binance": "SSV/USDT",
+            "bitget": "SSV/USDT"
+        },
+        "AXS": {
+            "binance": "AXS/USDT",
+            "bitget": "AXS/USDT"
+        },
+        "ACA": {
+            "binance": "ACA/USDT",
+            "bitget": "ACA/USDT"
+        },
+        "MANTA": {
+            "binance": "MANTA/USDT",
+            "bitget": "MANTA/USDT"
+        },
+        "EOS": {
+            "binance": "EOS/USDT",
+            "bitget": "EOS/USDT"
+        },
+        "BAT": {
+            "binance": "BAT/USDT",
+            "bitget": "BAT/USDT"
+        },
+        "C98": {
+            "binance": "C98/USDT",
+            "bitget": "C98/USDT"
+        },
+        "VANA": {
+            "binance": "VANA/USDT",
+            "bitget": "VANA/USDT"
+        },
+        "DAI": {
+            "binance": "DAI/USDT",
+            "bitget": "DAI/USDT"
+        },
+        "CHR": {
+            "binance": "CHR/USDT",
+            "bitget": "CHR/USDT"
+        },
+        "TIA": {
+            "binance": "TIA/USDT",
+            "bitget": "TIA/USDT"
+        },
+        "VIB": {
+            "binance": "VIB/USDT",
+            "bitget": "VIB/USDT"
+        },
+        "PHB": {
+            "binance": "PHB/USDT",
+            "bitget": "PHB/USDT"
+        },
+        "SAGA": {
+            "binance": "SAGA/USDT",
+            "bitget": "SAGA/USDT"
+        },
+        "POND": {
+            "binance": "POND/USDT",
+            "bitget": "POND/USDT"
+        },
+        "NEAR": {
+            "binance": "NEAR/USDT",
+            "bitget": "NEAR/EUR"
+        },
+        "ONG": {
+            "binance": "ONG/USDT",
+            "bitget": "ONG/USDT"
+        },
+        "HEI": {
+            "binance": "HEI/USDT",
+            "bitget": "HEI/USDT"
+        },
+        "ONT": {
+            "binance": "ONT/USDT",
+            "bitget": "ONT/USDT"
+        },
+        "PYTH": {
+            "binance": "PYTH/USDT",
+            "bitget": "PYTH/USDT"
+        },
+        "IO": {
+            "binance": "IO/USDT",
+            "bitget": "IO/USDT"
+        },
+        "API3": {
+            "binance": "API3/USDT",
+            "bitget": "API3/USDT"
+        },
+        "POLYX": {
+            "binance": "POLYX/USDT",
+            "bitget": "POLYX/USDT"
+        },
+        "ETH": {
+            "binance": "ETH/USDT",
+            "bitget": "ETH/USDT"
+        },
+        "ALPINE": {
+            "binance": "ALPINE/EUR",
+            "bitget": "ALPINE/USDT"
+        },
+        "ACX": {
+            "binance": "ACX/USDT",
+            "bitget": "ACX/USDT"
+        },
+        "ELF": {
+            "binance": "ELF/USDT",
+            "bitget": "ELF/USDT"
+        },
+        "LINA": {
+            "binance": "LINA/USDT",
+            "bitget": "LINA/USDT"
+        },
+        "BSW": {
+            "binance": "BSW/USDT",
+            "bitget": "BSW/USDT"
+        },
+        "RUNE": {
+            "binance": "RUNE/USDT",
+            "bitget": "RUNE/USDT"
+        },
+        "RPL": {
+            "binance": "RPL/USDT",
+            "bitget": "RPL/USDT"
+        },
+        "BTC": {
+            "binance": "BTC/USDT",
+            "bitget": "BTC/USDT"
+        },
+        "LTC": {
+            "binance": "LTC/USDT",
+            "bitget": "LTC/USDT"
+        },
+        "RSR": {
+            "binance": "RSR/USDT",
+            "bitget": "RSR/USDT"
+        },
+        "KSM": {
+            "binance": "KSM/USDT",
+            "bitget": "KSM/USDT"
+        },
+        "HMSTR": {
+            "binance": "HMSTR/USDT",
+            "bitget": "HMSTR/USDT"
+        },
+        "UMA": {
+            "binance": "UMA/USDT",
+            "bitget": "UMA/USDT"
+        },
+        "TLM": {
+            "binance": "TLM/USDT",
+            "bitget": "TLM/USDT"
+        },
+        "MOVR": {
+            "binance": "MOVR/USDT",
+            "bitget": "MOVR/USDT"
+        },
+        "SUSHI": {
+            "binance": "SUSHI/USDT",
+            "bitget": "SUSHI/USDT"
+        },
+        "VTHO": {
+            "binance": "VTHO/USDT",
+            "bitget": "VTHO/USDT"
+        },
+        "YGG": {
+            "binance": "YGG/USDT",
+            "bitget": "YGG/USDT"
+        },
+        "SLP": {
+            "binance": "SLP/USDT",
+            "bitget": "SLP/USDT"
+        },
+        "ZEN": {
+            "binance": "ZEN/USDT",
+            "bitget": "ZEN/USDT"
+        },
+        "FTT": {
+            "binance": "FTT/USDT",
+            "bitget": "FTT/USDT"
+        },
+        "ASR": {
+            "binance": "ASR/USDT",
+            "bitget": "ASR/USDT"
+        },
+        "VOXEL": {
+            "binance": "VOXEL/USDT",
+            "bitget": "VOXEL/USDT"
+        },
+        "PNUT": {
+            "binance": "PNUT/USDT",
+            "bitget": "PNUT/USDT"
+        },
+        "OXT": {
+            "binance": "OXT/USDT",
+            "bitget": "OXT/USDT"
+        },
+        "ANIME": {
+            "binance": "ANIME/USDT",
+            "bitget": "ANIME/USDT"
+        },
+        "ARKM": {
+            "binance": "ARKM/USDT",
+            "bitget": "ARKM/USDT"
+        },
+        "PHA": {
+            "binance": "PHA/USDT",
+            "bitget": "PHA/USDT"
+        },
+        "USTC": {
+            "binance": "USTC/USDT",
+            "bitget": "USTC/USDT"
+        },
+        "MEME": {
+            "binance": "MEME/USDT",
+            "bitget": "MEME/USDT"
+        },
+        "JST": {
+            "binance": "JST/USDT",
+            "bitget": "JST/USDT"
+        },
+        "LQTY": {
+            "binance": "LQTY/USDT",
+            "bitget": "LQTY/USDT"
+        },
+        "GMX": {
+            "binance": "GMX/USDT",
+            "bitget": "GMX/USDT"
+        },
+        "BURGER": {
+            "binance": "BURGER/USDT",
+            "bitget": "BURGER/USDT"
+        },
+        "AAVE": {
+            "binance": "AAVE/USDT",
+            "bitget": "AAVE/USDT"
+        },
+        "COOKIE": {
+            "binance": "COOKIE/USDT",
+            "bitget": "COOKIE/USDT"
+        },
+        "MINA": {
+            "binance": "MINA/USDT",
+            "bitget": "MINA/USDT"
+        },
+        "BOME": {
+            "binance": "BOME/USDT",
+            "bitget": "BOME/USDT"
+        },
+        "ATOM": {
+            "binance": "ATOM/USDT",
+            "bitget": "ATOM/USDT"
+        },
+        "TAO": {
+            "binance": "TAO/USDT",
+            "bitget": "TAO/USDT"
+        },
+        "CGPT": {
+            "binance": "CGPT/USDT",
+            "bitget": "CGPT/USDT"
+        },
+        "AUCTION": {
+            "binance": "AUCTION/USDT",
+            "bitget": "AUCTION/USDT"
+        },
+        "QNT": {
+            "binance": "QNT/USDT",
+            "bitget": "QNT/USDT"
+        },
+        "ZRO": {
+            "binance": "ZRO/USDT",
+            "bitget": "ZRO/USDT"
+        },
+        "MASK": {
+            "binance": "MASK/USDT",
+            "bitget": "MASK/USDT"
+        },
+        "ALT": {
+            "binance": "ALT/USDT",
+            "bitget": "ALT/USDT"
+        },
+        "SLF": {
+            "binance": "SLF/USDT",
+            "bitget": "SLF/USDT"
+        },
+        "BOND": {
+            "binance": "BOND/USDT",
+            "bitget": "BOND/USDT"
+        },
+        "ILV": {
+            "binance": "ILV/USDT",
+            "bitget": "ILV/USDT"
+        },
+        "QKC": {
+            "binance": "QKC/USDT",
+            "bitget": "QKC/USDT"
+        },
+        "ETHFI": {
+            "binance": "ETHFI/USDT",
+            "bitget": "ETHFI/USDT"
+        },
+        "S": {
+            "binance": "S/EUR",
+            "bitget": "S/USDT"
+        },
+        "VANRY": {
+            "binance": "VANRY/USDT",
+            "bitget": "VANRY/USDT"
+        },
+        "KEY": {
+            "binance": "KEY/USDT",
+            "bitget": "KEY/USDT"
+        },
+        "HOOK": {
+            "binance": "HOOK/USDT",
+            "bitget": "HOOK/USDT"
+        },
+        "KP3R": {
+            "binance": "KP3R/USDT",
+            "bitget": "KP3R/USDT"
+        },
+        "REN": {
+            "binance": "REN/USDT",
+            "bitget": "REN/USDT"
+        },
+        "SANTOS": {
+            "binance": "SANTOS/USDT",
+            "bitget": "SANTOS/USDT"
+        },
+        "LRC": {
+            "binance": "LRC/USDT",
+            "bitget": "LRC/USDT"
+        },
+        "DYDX": {
+            "binance": "DYDX/USDT",
+            "bitget": "DYDX/USDT"
+        },
+        "STG": {
+            "binance": "STG/USDT",
+            "bitget": "STG/USDT"
+        },
+        "LUNC": {
+            "binance": "LUNC/USDT",
+            "bitget": "LUNC/USDT"
+        },
+        "SOL": {
+            "binance": "SOL/USDT",
+            "bitget": "SOL/USDT"
+        },
+        "RLC": {
+            "binance": "RLC/USDT",
+            "bitget": "RLC/USDT"
+        },
+        "NKN": {
+            "binance": "NKN/USDT",
+            "bitget": "NKN/USDT"
+        },
+        "FIDA": {
+            "binance": "FIDA/USDT",
+            "bitget": "FIDA/USDT"
+        },
+        "AEVO": {
+            "binance": "AEVO/USDT",
+            "bitget": "AEVO/USDT"
+        },
+        "BEAM": {
+            "binance": "BEAM/USDT",
+            "bitget": "BEAM/USDT"
+        },
+        "BANANA": {
+            "binance": "BANANA/USDT",
+            "bitget": "BANANA/USDT"
+        },
+        "KAIA": {
+            "binance": "KAIA/USDT",
+            "bitget": "KAIA/USDT"
+        },
+        "QTUM": {
+            "binance": "QTUM/USDT",
+            "bitget": "QTUM/USDT"
+        },
+        "ARK": {
+            "binance": "ARK/USDT",
+            "bitget": "ARK/USDT"
+        },
+        "BETA": {
+            "binance": "BETA/USDT",
+            "bitget": "BETA/USDT"
+        },
+        "LOOM": {
+            "binance": "LOOM/USDT",
+            "bitget": "LOOM/USDT"
+        },
+        "TRUMP": {
+            "binance": "TRUMP/USDT",
+            "bitget": "TRUMP/USDT"
+        },
+        "RARE": {
+            "binance": "RARE/USDT",
+            "bitget": "RARE/USDT"
+        },
+        "CELO": {
+            "binance": "CELO/USDT",
+            "bitget": "CELO/USDT"
+        },
+        "APE": {
+            "binance": "APE/USDT",
+            "bitget": "APE/USDT"
+        },
+        "BICO": {
+            "binance": "BICO/USDT",
+            "bitget": "BICO/USDT"
+        },
+        "UNI": {
+            "binance": "UNI/USDT",
+            "bitget": "UNI/USDT"
+        },
+        "GALA": {
+            "binance": "GALA/USDT",
+            "bitget": "GALA/USDT"
+        },
+        "ARPA": {
+            "binance": "ARPA/USDT",
+            "bitget": "ARPA/USDT"
+        },
+        "CVC": {
+            "binance": "CVC/USDT",
+            "bitget": "CVC/USDT"
+        },
+        "CAKE": {
+            "binance": "CAKE/USDT",
+            "bitget": "CAKE/USDT"
+        },
+        "LEVER": {
+            "binance": "LEVER/USDT",
+            "bitget": "LEVER/USDT"
+        },
+        "HIFI": {
+            "binance": "HIFI/USDT",
+            "bitget": "HIFI/USDT"
+        },
+        "BSV": {
+            "binance": "BSV/USDT",
+            "bitget": "BSV/USDT"
+        },
+        "LUMIA": {
+            "binance": "LUMIA/USDT",
+            "bitget": "LUMIA/USDT"
+        },
+        "MKR": {
+            "binance": "MKR/USDT",
+            "bitget": "MKR/USDT"
+        },
+        "SKL": {
+            "binance": "SKL/USDT",
+            "bitget": "SKL/USDT"
+        },
+        "BNT": {
+            "binance": "BNT/USDT",
+            "bitget": "BNT/USDT"
+        },
+        "YFI": {
+            "binance": "YFI/USDT",
+            "bitget": "YFI/USDT"
+        },
+        "DOGS": {
+            "binance": "DOGS/USDT",
+            "bitget": "DOGS/USDT"
+        },
+        "DYM": {
+            "binance": "DYM/USDT",
+            "bitget": "DYM/USDT"
+        },
+        "VET": {
+            "binance": "VET/USDT",
+            "bitget": "VET/USDT"
+        },
+        "SYN": {
+            "binance": "SYN/USDT",
+            "bitget": "SYN/USDT"
+        },
+        "TUSD": {
+            "binance": "TUSD/USDT",
+            "bitget": "TUSD/USDT"
+        },
+        "TRX": {
+            "binance": "TRX/USDT",
+            "bitget": "TRX/USDT"
+        },
+        "XAI": {
+            "binance": "XAI/USDT",
+            "bitget": "XAI/USDT"
+        },
+        "COMP": {
+            "binance": "COMP/USDT",
+            "bitget": "COMP/USDT"
+        },
+        "AVAX": {
+            "binance": "AVAX/USDT",
+            "bitget": "AVAX/EUR"
+        },
+        "CRV": {
+            "binance": "CRV/USDT",
+            "bitget": "CRV/USDT"
+        },
+        "OP": {
+            "binance": "OP/USDT",
+            "bitget": "OP/USDT"
+        },
+        "SNT": {
+            "binance": "SNT/USDT",
+            "bitget": "SNT/USDT"
+        },
+        "AERGO": {
+            "binance": "AERGO/USDT",
+            "bitget": "AERGO/USDT"
+        },
+        "DENT": {
+            "binance": "DENT/USDT",
+            "bitget": "DENT/USDT"
+        },
+        "TRU": {
+            "binance": "TRU/USDT",
+            "bitget": "TRU/USDT"
+        },
+        "WBTC": {
+            "binance": "WBTC/USDT",
+            "bitget": "WBTC/USDT"
+        },
+        "MC": {
+            "binance": "MC/USDT",
+            "bitget": "MC/USDT"
+        },
+        "HNT": {
+            "binance": "HNT/USDT",
+            "bitget": "HNT/USDT"
+        },
+        "TURBO": {
+            "binance": "TURBO/USDT",
+            "bitget": "TURBO/USDT"
+        },
+        "KNC": {
+            "binance": "KNC/USDT",
+            "bitget": "KNC/USDT"
+        },
+        "T": {
+            "binance": "T/USDT",
+            "bitget": "T/USDT"
+        },
+        "DUSK": {
+            "binance": "DUSK/USDT",
+            "bitget": "DUSK/USDT"
+        },
+        "USUAL": {
+            "binance": "USUAL/USDT",
+            "bitget": "USUAL/USDT"
+        },
+        "IOTX": {
+            "binance": "IOTX/USDT",
+            "bitget": "IOTX/USDT"
+        },
+        "WLD": {
+            "binance": "WLD/USDT",
+            "bitget": "WLD/EUR"
+        },
+        "PROM": {
+            "binance": "PROM/USDT",
+            "bitget": "PROM/USDT"
+        },
+        "LSK": {
+            "binance": "LSK/USDT",
+            "bitget": "LSK/USDT"
+        },
+        "GTC": {
+            "binance": "GTC/USDT",
+            "bitget": "GTC/USDT"
+        },
+        "PORTAL": {
+            "binance": "PORTAL/USDT",
+            "bitget": "PORTAL/USDT"
+        },
+        "SUPER": {
+            "binance": "SUPER/USDT",
+            "bitget": "SUPER/USDT"
+        },
+        "MOVE": {
+            "binance": "MOVE/USDT",
+            "bitget": "MOVE/USDT"
+        },
+        "CFX": {
+            "binance": "CFX/USDT",
+            "bitget": "CFX/USDT"
+        },
+        "FIS": {
+            "binance": "FIS/USDT",
+            "bitget": "FIS/USDT"
+        },
+        "ENS": {
+            "binance": "ENS/USDT",
+            "bitget": "ENS/USDT"
+        },
+        "ARB": {
+            "binance": "ARB/USDT",
+            "bitget": "ARB/USDT"
+        },
+        "EIGEN": {
+            "binance": "EIGEN/USDT",
+            "bitget": "EIGEN/USDT"
+        },
+        "SEI": {
+            "binance": "SEI/USDT",
+            "bitget": "SEI/USDT"
+        },
+        "ALPHA": {
+            "binance": "ALPHA/USDT",
+            "bitget": "ALPHA/USDT"
+        },
+        "TON": {
+            "binance": "TON/USDT",
+            "bitget": "TON/EUR"
+        },
+        "HBAR": {
+            "binance": "HBAR/USDT",
+            "bitget": "HBAR/USDT"
+        },
+        "AMP": {
+            "binance": "AMP/USDT",
+            "bitget": "AMP/USDT"
+        },
+        "CATI": {
+            "binance": "CATI/USDT",
+            "bitget": "CATI/USDT"
+        },
+        "ADA": {
+            "binance": "ADA/USDT",
+            "bitget": "ADA/USDT"
+        },
+        "XLM": {
+            "binance": "XLM/USDT",
+            "bitget": "XLM/USDT"
+        },
+        "PIXEL": {
+            "binance": "PIXEL/USDT",
+            "bitget": "PIXEL/USDT"
+        }
+    },
+    "binance-bitstamp": {
+        "BLUR": {
+            "binance": "BLUR/USDT",
+            "bitstamp": "BLUR/EUR"
+        },
+        "USDC": {
+            "binance": "USDC/USDT",
+            "bitstamp": "USDC/EUR"
+        },
+        "FTM": {
+            "binance": "FTM/USDT",
+            "bitstamp": "FTM/EUR"
+        },
+        "TRUMP": {
+            "binance": "TRUMP/USDT",
+            "bitstamp": "TRUMP/EUR"
+        },
+        "UMA": {
+            "binance": "UMA/USDT",
+            "bitstamp": "UMA/EUR"
+        },
+        "ENJ": {
+            "binance": "ENJ/USDT",
+            "bitstamp": "ENJ/EUR"
+        },
+        "BONK": {
+            "binance": "BONK/USDT",
+            "bitstamp": "BONK/EUR"
+        },
+        "AUDIO": {
+            "binance": "AUDIO/USDT",
+            "bitstamp": "AUDIO/EUR"
+        },
+        "ZRX": {
+            "binance": "ZRX/USDT",
+            "bitstamp": "ZRX/EUR"
+        },
+        "EGLD": {
+            "binance": "EGLD/USDT",
+            "bitstamp": "EGLD/EUR"
+        },
+        "SUSHI": {
+            "binance": "SUSHI/USDT",
+            "bitstamp": "SUSHI/EUR"
+        },
+        "PEPE": {
+            "binance": "PEPE/USDT",
+            "bitstamp": "PEPE/EUR"
+        },
+        "BAND": {
+            "binance": "BAND/USDT",
+            "bitstamp": "BAND/EUR"
+        },
+        "APE": {
+            "binance": "APE/USDT",
+            "bitstamp": "APE/EUR"
+        },
+        "SHIB": {
+            "binance": "SHIB/USDT",
+            "bitstamp": "SHIB/EUR"
+        },
+        "1INCH": {
+            "binance": "1INCH/USDT",
+            "bitstamp": "1INCH/EUR"
+        },
+        "WIF": {
+            "binance": "WIF/USDT",
+            "bitstamp": "WIF/EUR"
+        },
+        "FLOKI": {
+            "binance": "FLOKI/USDT",
+            "bitstamp": "FLOKI/EUR"
+        },
+        "INJ": {
+            "binance": "INJ/USDT",
+            "bitstamp": "INJ/EUR"
+        },
+        "LINK": {
+            "binance": "LINK/USDT",
+            "bitstamp": "LINK/EUR"
+        },
+        "LDO": {
+            "binance": "LDO/USDT",
+            "bitstamp": "LDO/EUR"
+        },
+        "FET": {
+            "binance": "FET/USDT",
+            "bitstamp": "FET/EUR"
+        },
+        "AAVE": {
+            "binance": "AAVE/USDT",
+            "bitstamp": "AAVE/EUR"
+        },
+        "NEAR": {
+            "binance": "NEAR/USDT",
+            "bitstamp": "NEAR/EUR"
+        },
+        "WOO": {
+            "binance": "WOO/USDT",
+            "bitstamp": "WOO/EUR"
+        },
+        "BCH": {
+            "binance": "BCH/USDT",
+            "bitstamp": "BCH/EUR"
+        },
+        "UNI": {
+            "binance": "UNI/USDT",
+            "bitstamp": "UNI/EUR"
+        },
+        "GALA": {
+            "binance": "GALA/USDT",
+            "bitstamp": "GALA/EUR"
+        },
+        "PYTH": {
+            "binance": "PYTH/USDT",
+            "bitstamp": "PYTH/EUR"
+        },
+        "XRP": {
+            "binance": "XRP/USDT",
+            "bitstamp": "XRP/EUR"
+        },
+        "AXS": {
+            "binance": "AXS/USDT",
+            "bitstamp": "AXS/EUR"
+        },
+        "SLP": {
+            "binance": "SLP/USDT",
+            "bitstamp": "SLP/EUR"
+        },
+        "BOME": {
+            "binance": "BOME/USDT",
+            "bitstamp": "BOME/EUR"
+        },
+        "PERP": {
+            "binance": "PERP/USDT",
+            "bitstamp": "PERP/EUR"
+        },
+        "SAND": {
+            "binance": "SAND/USDT",
+            "bitstamp": "SAND/EUR"
+        },
+        "ALGO": {
+            "binance": "ALGO/USDT",
+            "bitstamp": "ALGO/EUR"
+        },
+        "LRC": {
+            "binance": "LRC/USDT",
+            "bitstamp": "LRC/EUR"
+        },
+        "GRT": {
+            "binance": "GRT/USDT",
+            "bitstamp": "GRT/EUR"
+        },
+        "MATIC": {
+            "binance": "MATIC/USDT",
+            "bitstamp": "MATIC/EUR"
+        },
+        "DYDX": {
+            "binance": "DYDX/USDT",
+            "bitstamp": "DYDX/EUR"
+        },
+        "ETH": {
+            "binance": "ETH/USDT",
+            "bitstamp": "ETH/EUR"
+        },
+        "STRK": {
+            "binance": "STRK/USDT",
+            "bitstamp": "STRK/EUR"
+        },
+        "COMP": {
+            "binance": "COMP/USDT",
+            "bitstamp": "COMP/EUR"
+        },
+        "AVAX": {
+            "binance": "AVAX/USDT",
+            "bitstamp": "AVAX/EUR"
+        },
+        "CRV": {
+            "binance": "CRV/USDT",
+            "bitstamp": "CRV/EUR"
+        },
+        "CHZ": {
+            "binance": "CHZ/USDT",
+            "bitstamp": "CHZ/EUR"
+        },
+        "RAD": {
+            "binance": "RAD/USDT",
+            "bitstamp": "RAD/EUR"
+        },
+        "OP": {
+            "binance": "OP/USDT",
+            "bitstamp": "OP/EUR"
+        },
+        "DOGE": {
+            "binance": "DOGE/USDT",
+            "bitstamp": "DOGE/EUR"
+        },
+        "SOL": {
+            "binance": "SOL/USDT",
+            "bitstamp": "SOL/EUR"
+        },
+        "SUI": {
+            "binance": "SUI/USDT",
+            "bitstamp": "SUI/EUR"
+        },
+        "ENS": {
+            "binance": "ENS/USDT",
+            "bitstamp": "ENS/EUR"
+        },
+        "STORJ": {
+            "binance": "STORJ/USDT",
+            "bitstamp": "STORJ/EUR"
+        },
+        "BAT": {
+            "binance": "BAT/USDT",
+            "bitstamp": "BAT/EUR"
+        },
+        "MANA": {
+            "binance": "MANA/USDT",
+            "bitstamp": "MANA/EUR"
+        },
+        "RNDR": {
+            "binance": "RNDR/USDT",
+            "bitstamp": "RNDR/EUR"
+        },
+        "ARB": {
+            "binance": "ARB/USDT",
+            "bitstamp": "ARB/EUR"
+        },
+        "BTC": {
+            "binance": "BTC/USDT",
+            "bitstamp": "BTC/EUR"
+        },
+        "DOT": {
+            "binance": "DOT/USDT",
+            "bitstamp": "DOT/EUR"
+        },
+        "SEI": {
+            "binance": "SEI/USDT",
+            "bitstamp": "SEI/EUR"
+        },
+        "LTC": {
+            "binance": "LTC/USDT",
+            "bitstamp": "LTC/EUR"
+        },
+        "MKR": {
+            "binance": "MKR/USDT",
+            "bitstamp": "MKR/EUR"
+        },
+        "SKL": {
+            "binance": "SKL/USDT",
+            "bitstamp": "SKL/EUR"
+        },
+        "JUP": {
+            "binance": "JUP/USDT",
+            "bitstamp": "JUP/EUR"
+        },
+        "IMX": {
+            "binance": "IMX/USDT",
+            "bitstamp": "IMX/EUR"
+        },
+        "YFI": {
+            "binance": "YFI/USDT",
+            "bitstamp": "YFI/EUR"
+        },
+        "KNC": {
+            "binance": "KNC/USDT",
+            "bitstamp": "KNC/EUR"
+        },
+        "SNX": {
+            "binance": "SNX/USDT",
+            "bitstamp": "SNX/EUR"
+        },
+        "HBAR": {
+            "binance": "HBAR/USDT",
+            "bitstamp": "HBAR/EUR"
+        },
+        "NEXO": {
+            "binance": "NEXO/USDT",
+            "bitstamp": "NEXO/EUR"
+        },
+        "AMP": {
+            "binance": "AMP/USDT",
+            "bitstamp": "AMP/EUR"
+        },
+        "ICP": {
+            "binance": "ICP/USDT",
+            "bitstamp": "ICP/EUR"
+        },
+        "XLM": {
+            "binance": "XLM/USDT",
+            "bitstamp": "XLM/EUR"
+        },
+        "ADA": {
+            "binance": "ADA/USDT",
+            "bitstamp": "ADA/EUR"
+        },
+        "CTSI": {
+            "binance": "CTSI/USDT",
+            "bitstamp": "CTSI/EUR"
+        }
+    },
+    "kucoin-bitget": {
+        "HFT": {
+            "kucoin": "HFT/USDT",
+            "bitget": "HFT/USDT"
+        },
+        "CLAY": {
+            "kucoin": "CLAY/USDT",
+            "bitget": "CLAY/USDT"
+        },
+        "ASI": {
+            "kucoin": "ASI/USDT",
+            "bitget": "ASI/USDT"
+        },
+        "MERL": {
+            "kucoin": "MERL/USDT",
+            "bitget": "MERL/USDT"
+        },
+        "TOMI": {
+            "kucoin": "TOMI/USDT",
+            "bitget": "TOMI/USDT"
+        },
+        "BNB": {
+            "kucoin": "BNB/USDT",
+            "bitget": "BNB/USDT"
+        },
+        "MUBI": {
+            "kucoin": "MUBI/USDT",
+            "bitget": "MUBI/USDT"
+        },
+        "ETHW": {
+            "kucoin": "ETHW/USDT",
+            "bitget": "ETHW/USDT"
+        },
+        "ORDI": {
+            "kucoin": "ORDI/USDT",
+            "bitget": "ORDI/USDT"
+        },
+        "G": {
+            "kucoin": "G/USDT",
+            "bitget": "G/USDT"
+        },
+        "JTO": {
+            "kucoin": "JTO/USDT",
+            "bitget": "JTO/USDT"
+        },
+        "LYX": {
+            "kucoin": "LYX/USDT",
+            "bitget": "LYX/USDT"
+        },
+        "SONIC": {
+            "kucoin": "SONIC/USDT",
+            "bitget": "SONIC/USDT"
+        },
+        "STORJ": {
+            "kucoin": "STORJ/USDT",
+            "bitget": "STORJ/USDT"
+        },
+        "KOMA": {
+            "kucoin": "KOMA/USDT",
+            "bitget": "KOMA/USDT"
+        },
+        "VIRTUAL": {
+            "kucoin": "VIRTUAL/USDT",
+            "bitget": "VIRTUAL/USDT"
+        },
+        "BERA": {
+            "kucoin": "BERA/USDT",
+            "bitget": "BERA/USDT"
+        },
+        "PENDLE": {
+            "kucoin": "PENDLE/USDT",
+            "bitget": "PENDLE/USDT"
+        },
+        "ANLOG": {
+            "kucoin": "ANLOG/USDT",
+            "bitget": "ANLOG/USDT"
+        },
+        "FIL": {
+            "kucoin": "FIL/USDT",
+            "bitget": "FIL/USDT"
+        },
+        "XRD": {
+            "kucoin": "XRD/USDT",
+            "bitget": "XRD/USDT"
+        },
+        "MELANIA": {
+            "kucoin": "MELANIA/USDT",
+            "bitget": "MELANIA/USDT"
+        },
+        "ALICE": {
+            "kucoin": "ALICE/USDT",
+            "bitget": "ALICE/USDT"
+        },
+        "ZRC": {
+            "kucoin": "ZRC/USDT",
+            "bitget": "ZRC/USDT"
+        },
+        "URO": {
+            "kucoin": "URO/USDT",
+            "bitget": "URO/USDT"
+        },
+        "HIPPO": {
+            "kucoin": "HIPPO/USDT",
+            "bitget": "HIPPO/USDT"
+        },
+        "MEMEFI": {
+            "kucoin": "MEMEFI/USDT",
+            "bitget": "MEMEFI/USDT"
+        },
+        "BB": {
+            "kucoin": "BB/USDT",
+            "bitget": "BB/USDT"
+        },
+        "BONK": {
+            "kucoin": "BONK/USDT",
+            "bitget": "BONK/USDT"
+        },
+        "CATS": {
+            "kucoin": "CATS/USDT",
+            "bitget": "CATS/USDT"
+        },
+        "EGLD": {
+            "kucoin": "EGLD/USDT",
+            "bitget": "EGLD/USDT"
+        },
+        "PEPE": {
+            "kucoin": "PEPE/USDT",
+            "bitget": "PEPE/USDT"
+        },
+        "CLOUD": {
+            "kucoin": "CLOUD/USDT",
+            "bitget": "CLOUD/USDT"
+        },
+        "STRAX": {
+            "kucoin": "STRAX/USDT",
+            "bitget": "STRAX/USDT"
+        },
+        "AVA": {
+            "kucoin": "AVA/USDT",
+            "bitget": "AVA/USDT"
+        },
+        "CKB": {
+            "kucoin": "CKB/USDT",
+            "bitget": "CKB/USDT"
+        },
+        "ONE": {
+            "kucoin": "ONE/USDT",
+            "bitget": "ONE/USDT"
+        },
+        "ENA": {
+            "kucoin": "ENA/USDT",
+            "bitget": "ENA/EUR"
+        },
+        "NOOB": {
+            "kucoin": "NOOB/USDT",
+            "bitget": "NOOB/USDT"
+        },
+        "SLN": {
+            "kucoin": "SLN/USDT",
+            "bitget": "SLN/USDT"
+        },
+        "SYS": {
+            "kucoin": "SYS/USDT",
+            "bitget": "SYS/USDT"
+        },
+        "ALGO": {
+            "kucoin": "ALGO/USDT",
+            "bitget": "ALGO/USDT"
+        },
+        "PONKE": {
+            "kucoin": "PONKE/USDT",
+            "bitget": "PONKE/USDT"
+        },
+        "AVAIL": {
+            "kucoin": "AVAIL/USDT",
+            "bitget": "AVAIL/USDT"
+        },
+        "WEN": {
+            "kucoin": "WEN/USDT",
+            "bitget": "WEN/USDT"
+        },
+        "BAN": {
+            "kucoin": "BAN/USDT",
+            "bitget": "BAN/USDT"
+        },
+        "SUI": {
+            "kucoin": "SUI/USDT",
+            "bitget": "SUI/EUR"
+        },
+        "ALEX": {
+            "kucoin": "ALEX/USDT",
+            "bitget": "ALEX/USDT"
+        },
+        "DBR": {
+            "kucoin": "DBR/USDT",
+            "bitget": "DBR/USDT"
+        },
+        "ROOT": {
+            "kucoin": "ROOT/USDT",
+            "bitget": "ROOT/USDT"
+        },
+        "DAO": {
+            "kucoin": "DAO/USDT",
+            "bitget": "DAO/USDT"
+        },
+        "OMG": {
+            "kucoin": "OMG/USDT",
+            "bitget": "OMG/USDT"
+        },
+        "IMX": {
+            "kucoin": "IMX/USDT",
+            "bitget": "IMX/USDT"
+        },
+        "NC": {
+            "kucoin": "NC/USDT",
+            "bitget": "NC/USDT"
+        },
+        "SNX": {
+            "kucoin": "SNX/USDT",
+            "bitget": "SNX/USDT"
+        },
+        "PENGU": {
+            "kucoin": "PENGU/USDT",
+            "bitget": "PENGU/USDT"
+        },
+        "METIS": {
+            "kucoin": "METIS/USDT",
+            "bitget": "METIS/USDT"
+        },
+        "MXC": {
+            "kucoin": "MXC/USDT",
+            "bitget": "MXC/USDT"
+        },
+        "SCR": {
+            "kucoin": "SCR/USDT",
+            "bitget": "SCR/EUR"
+        },
+        "SOLV": {
+            "kucoin": "SOLV/USDT",
+            "bitget": "SOLV/USDT"
+        },
+        "NEIROCTO": {
+            "kucoin": "NEIROCTO/USDT",
+            "bitget": "NEIROCTO/EUR"
+        },
+        "OSMO": {
+            "kucoin": "OSMO/USDT",
+            "bitget": "OSMO/USDT"
+        },
+        "BAND": {
+            "kucoin": "BAND/USDT",
+            "bitget": "BAND/USDT"
+        },
+        "U2U": {
+            "kucoin": "U2U/USDT",
+            "bitget": "U2U/USDT"
+        },
+        "PYUSD": {
+            "kucoin": "PYUSD/USDT",
+            "bitget": "PYUSD/USDT"
+        },
+        "LINK": {
+            "kucoin": "LINK/USDT",
+            "bitget": "LINK/USDT"
+        },
+        "LDO": {
+            "kucoin": "LDO/USDT",
+            "bitget": "LDO/USDT"
+        },
+        "MAJOR": {
+            "kucoin": "MAJOR/USDT",
+            "bitget": "MAJOR/USDT"
+        },
+        "DEFI": {
+            "kucoin": "DEFI/USDT",
+            "bitget": "DEFI/USDT"
+        },
+        "ZBCN": {
+            "kucoin": "ZBCN/USDT",
+            "bitget": "ZBCN/USDT"
+        },
+        "ALU": {
+            "kucoin": "ALU/USDT",
+            "bitget": "ALU/USDT"
+        },
+        "RATS": {
+            "kucoin": "RATS/USDT",
+            "bitget": "RATS/USDT"
+        },
+        "RAY": {
+            "kucoin": "RAY/USDT",
+            "bitget": "RAY/USDT"
+        },
+        "ORAI": {
+            "kucoin": "ORAI/USDT",
+            "bitget": "ORAI/USDT"
+        },
+        "PEOPLE": {
+            "kucoin": "PEOPLE/USDT",
+            "bitget": "PEOPLE/USDT"
+        },
+        "GODL": {
+            "kucoin": "GODL/USDT",
+            "bitget": "GODL/USDT"
+        },
+        "GLM": {
+            "kucoin": "GLM/USDT",
+            "bitget": "GLM/USDT"
+        },
+        "PZP": {
+            "kucoin": "PZP/USDT",
+            "bitget": "PZP/USDT"
+        },
+        "KLV": {
+            "kucoin": "KLV/USDT",
+            "bitget": "KLV/USDT"
+        },
+        "REZ": {
+            "kucoin": "REZ/USDT",
+            "bitget": "REZ/USDT"
+        },
+        "SEAM": {
+            "kucoin": "SEAM/USDT",
+            "bitget": "SEAM/USDT"
+        },
+        "BIGTIME": {
+            "kucoin": "BIGTIME/USDT",
+            "bitget": "BIGTIME/USDT"
+        },
+        "GRIFFAIN": {
+            "kucoin": "GRIFFAIN/USDT",
+            "bitget": "GRIFFAIN/USDT"
+        },
+        "ELON": {
+            "kucoin": "ELON/USDT",
+            "bitget": "ELON/USDT"
+        },
+        "YULI": {
+            "kucoin": "YULI/USDT",
+            "bitget": "YULI/USDT"
+        },
+        "LOKA": {
+            "kucoin": "LOKA/USDT",
+            "bitget": "LOKA/USDT"
+        },
+        "NMR": {
+            "kucoin": "NMR/USDT",
+            "bitget": "NMR/USDT"
+        },
+        "CETUS": {
+            "kucoin": "CETUS/USDT",
+            "bitget": "CETUS/USDT"
+        },
+        "BAL": {
+            "kucoin": "BAL/USDT",
+            "bitget": "BAL/USDT"
+        },
+        "NAKA": {
+            "kucoin": "NAKA/USDT",
+            "bitget": "NAKA/USDT"
+        },
+        "CELR": {
+            "kucoin": "CELR/USDT",
+            "bitget": "CELR/USDT"
+        },
+        "IP": {
+            "kucoin": "IP/USDT",
+            "bitget": "IP/USDT"
+        },
+        "BTT": {
+            "kucoin": "BTT/USDT",
+            "bitget": "BTT/USDT"
+        },
+        "FLUX": {
+            "kucoin": "FLUX/USDT",
+            "bitget": "FLUX/USDT"
+        },
+        "MANEKI": {
+            "kucoin": "MANEKI/USDT",
+            "bitget": "MANEKI/USDT"
+        },
+        "DRIFT": {
+            "kucoin": "DRIFT/USDT",
+            "bitget": "DRIFT/USDT"
+        },
+        "GMT": {
+            "kucoin": "GMT/USDT",
+            "bitget": "GMT/USDT"
+        },
+        "ME": {
+            "kucoin": "ME/USDT",
+            "bitget": "ME/USDT"
+        },
+        "SXP": {
+            "kucoin": "SXP/USDT",
+            "bitget": "SXP/USDT"
+        },
+        "SHIB": {
+            "kucoin": "SHIB/USDT",
+            "bitget": "SHIB/EUR"
+        },
+        "CYBER": {
+            "kucoin": "CYBER/USDT",
+            "bitget": "CYBER/USDT"
+        },
+        "NOT": {
+            "kucoin": "NOT/USDT",
+            "bitget": "NOT/USDT"
+        },
+        "FET": {
+            "kucoin": "FET/USDT",
+            "bitget": "FET/USDT"
+        },
+        "FXS": {
+            "kucoin": "FXS/USDT",
+            "bitget": "FXS/USDT"
+        },
+        "USDT": {
+            "kucoin": "USDT/EUR",
+            "bitget": "USDT/EUR"
+        },
+        "RIFSOL": {
+            "kucoin": "RIFSOL/USDT",
+            "bitget": "RIFSOL/USDT"
+        },
+        "AERO": {
+            "kucoin": "AERO/USDT",
+            "bitget": "AERO/USDT"
+        },
+        "FORT": {
+            "kucoin": "FORT/USDT",
+            "bitget": "FORT/USDT"
+        },
+        "GHX": {
+            "kucoin": "GHX/USDT",
+            "bitget": "GHX/USDT"
+        },
+        "FLOW": {
+            "kucoin": "FLOW/USDT",
+            "bitget": "FLOW/USDT"
+        },
+        "MOODENG": {
+            "kucoin": "MOODENG/USDT",
+            "bitget": "MOODENG/USDT"
+        },
+        "XION": {
+            "kucoin": "XION/USDT",
+            "bitget": "XION/USDT"
+        },
+        "DOGE": {
+            "kucoin": "DOGE/USDT",
+            "bitget": "DOGE/USDT"
+        },
+        "CSPR": {
+            "kucoin": "CSPR/USDT",
+            "bitget": "CSPR/USDT"
+        },
+        "VINE": {
+            "kucoin": "VINE/USDT",
+            "bitget": "VINE/USDT"
+        },
+        "D": {
+            "kucoin": "D/USDT",
+            "bitget": "D/USDT"
+        },
+        "TWT": {
+            "kucoin": "TWT/USDT",
+            "bitget": "TWT/USDT"
+        },
+        "JUP": {
+            "kucoin": "JUP/USDT",
+            "bitget": "JUP/USDT"
+        },
+        "ICP": {
+            "kucoin": "ICP/USDT",
+            "bitget": "ICP/USDT"
+        },
+        "WAVES": {
+            "kucoin": "WAVES/USDT",
+            "bitget": "WAVES/USDT"
+        },
+        "ARCA": {
+            "kucoin": "ARCA/USDT",
+            "bitget": "ARCA/USDT"
+        },
+        "COW": {
+            "kucoin": "COW/USDT",
+            "bitget": "COW/USDT"
+        },
+        "MTL": {
+            "kucoin": "MTL/USDT",
+            "bitget": "MTL/USDT"
+        },
+        "LSD": {
+            "kucoin": "LSD/USDT",
+            "bitget": "LSD/USDT"
+        },
+        "HIGH": {
+            "kucoin": "HIGH/USDT",
+            "bitget": "HIGH/USDT"
+        },
+        "KAVA": {
+            "kucoin": "KAVA/USDT",
+            "bitget": "KAVA/USDT"
+        },
+        "SLERF": {
+            "kucoin": "SLERF/USDT",
+            "bitget": "SLERF/USDT"
+        },
+        "UNFI": {
+            "kucoin": "UNFI/USDT",
+            "bitget": "UNFI/USDT"
+        },
+        "ORCA": {
+            "kucoin": "ORCA/USDT",
+            "bitget": "ORCA/USDT"
+        },
+        "APT": {
+            "kucoin": "APT/USDT",
+            "bitget": "APT/USDT"
+        },
+        "ZIL": {
+            "kucoin": "ZIL/USDT",
+            "bitget": "ZIL/USDT"
+        },
+        "DCK": {
+            "kucoin": "DCK/USDT",
+            "bitget": "DCK/USDT"
+        },
+        "LISTA": {
+            "kucoin": "LISTA/USDT",
+            "bitget": "LISTA/USDT"
+        },
+        "GLMR": {
+            "kucoin": "GLMR/USDT",
+            "bitget": "GLMR/USDT"
+        },
+        "SUN": {
+            "kucoin": "SUN/USDT",
+            "bitget": "SUN/USDT"
+        },
+        "1INCH": {
+            "kucoin": "1INCH/USDT",
+            "bitget": "1INCH/USDT"
+        },
+        "WIF": {
+            "kucoin": "WIF/USDT",
+            "bitget": "WIF/USDT"
+        },
+        "TNSR": {
+            "kucoin": "TNSR/USDT",
+            "bitget": "TNSR/USDT"
+        },
+        "INJ": {
+            "kucoin": "INJ/USDT",
+            "bitget": "INJ/USDT"
+        },
+        "SWARMS": {
+            "kucoin": "SWARMS/USDT",
+            "bitget": "SWARMS/USDT"
+        },
+        "COMBO": {
+            "kucoin": "COMBO/USDT",
+            "bitget": "COMBO/USDT"
+        },
+        "UNIO": {
+            "kucoin": "UNIO/USDT",
+            "bitget": "UNIO/USDT"
+        },
+        "NYM": {
+            "kucoin": "NYM/USDT",
+            "bitget": "NYM/USDT"
+        },
+        "SAFE": {
+            "kucoin": "SAFE/USDT",
+            "bitget": "SAFE/USDT"
+        },
+        "W": {
+            "kucoin": "W/USDT",
+            "bitget": "W/USDT"
+        },
+        "XRP": {
+            "kucoin": "XRP/USDT",
+            "bitget": "XRP/USDT"
+        },
+        "OMNIA": {
+            "kucoin": "OMNIA/USDT",
+            "bitget": "OMNIA/USDT"
+        },
+        "ASTR": {
+            "kucoin": "ASTR/USDT",
+            "bitget": "ASTR/USDT"
+        },
+        "GRT": {
+            "kucoin": "GRT/USDT",
+            "bitget": "GRT/USDT"
+        },
+        "ORBS": {
+            "kucoin": "ORBS/USDT",
+            "bitget": "ORBS/USDT"
+        },
+        "STRK": {
+            "kucoin": "STRK/USDT",
+            "bitget": "STRK/USDT"
+        },
+        "MAPO": {
+            "kucoin": "MAPO/USDT",
+            "bitget": "MAPO/USDT"
+        },
+        "STNK": {
+            "kucoin": "STNK/USDT",
+            "bitget": "STNK/USDT"
+        },
+        "POL": {
+            "kucoin": "POL/USDT",
+            "bitget": "POL/USDT"
+        },
+        "GOAT": {
+            "kucoin": "GOAT/USDT",
+            "bitget": "GOAT/USDT"
+        },
+        "F": {
+            "kucoin": "F/USDT",
+            "bitget": "F/USDT"
+        },
+        "SATS": {
+            "kucoin": "SATS/USDT",
+            "bitget": "SATS/USDT"
+        },
+        "DOT": {
+            "kucoin": "DOT/USDT",
+            "bitget": "DOT/USDT"
+        },
+        "GAS": {
+            "kucoin": "GAS/USDT",
+            "bitget": "GAS/USDT"
+        },
+        "ACH": {
+            "kucoin": "ACH/USDT",
+            "bitget": "ACH/USDT"
+        },
+        "PUNDIX": {
+            "kucoin": "PUNDIX/USDT",
+            "bitget": "PUNDIX/USDT"
+        },
+        "SFP": {
+            "kucoin": "SFP/USDT",
+            "bitget": "SFP/USDT"
+        },
+        "TRB": {
+            "kucoin": "TRB/USDT",
+            "bitget": "TRB/USDT"
+        },
+        "LMWR": {
+            "kucoin": "LMWR/USDT",
+            "bitget": "LMWR/USDT"
+        },
+        "FURY": {
+            "kucoin": "FURY/USDT",
+            "bitget": "FURY/USDT"
+        },
+        "BLUR": {
+            "kucoin": "BLUR/USDT",
+            "bitget": "BLUR/USDT"
+        },
+        "WIN": {
+            "kucoin": "WIN/USDT",
+            "bitget": "WIN/USDT"
+        },
+        "SCA": {
+            "kucoin": "SCA/USDT",
+            "bitget": "SCA/USDT"
+        },
+        "MBL": {
+            "kucoin": "MBL/USDT",
+            "bitget": "MBL/USDT"
+        },
+        "CRO": {
+            "kucoin": "CRO/USDT",
+            "bitget": "CRO/USDT"
+        },
+        "OM": {
+            "kucoin": "OM/USDT",
+            "bitget": "OM/USDT"
+        },
+        "XEM": {
+            "kucoin": "XEM/USDT",
+            "bitget": "XEM/USDT"
+        },
+        "ETC": {
+            "kucoin": "ETC/USDT",
+            "bitget": "ETC/USDT"
+        },
+        "PLUME": {
+            "kucoin": "PLUME/USDT",
+            "bitget": "PLUME/USDT"
+        },
+        "PERP": {
+            "kucoin": "PERP/USDT",
+            "bitget": "PERP/USDT"
+        },
+        "AI16Z": {
+            "kucoin": "AI16Z/USDT",
+            "bitget": "AI16Z/USDT"
+        },
+        "QUICK": {
+            "kucoin": "QUICK/USDT",
+            "bitget": "QUICK/USDT"
+        },
+        "SWELL": {
+            "kucoin": "SWELL/USDT",
+            "bitget": "SWELL/USDT"
+        },
+        "ZKF": {
+            "kucoin": "ZKF/USDT",
+            "bitget": "ZKF/USDT"
+        },
+        "MOZ": {
+            "kucoin": "MOZ/USDT",
+            "bitget": "MOZ/USDT"
+        },
+        "CHZ": {
+            "kucoin": "CHZ/USDT",
+            "bitget": "CHZ/USDT"
+        },
+        "PAXG": {
+            "kucoin": "PAXG/USDT",
+            "bitget": "PAXG/USDT"
+        },
+        "IOST": {
+            "kucoin": "IOST/USDT",
+            "bitget": "IOST/USDT"
+        },
+        "ULTI": {
+            "kucoin": "ULTI/USDT",
+            "bitget": "ULTI/USDT"
+        },
+        "STX": {
+            "kucoin": "STX/USDT",
+            "bitget": "STX/USDT"
+        },
+        "MYRIA": {
+            "kucoin": "MYRIA/USDT",
+            "bitget": "MYRIA/USDT"
+        },
+        "JASMY": {
+            "kucoin": "JASMY/USDT",
+            "bitget": "JASMY/USDT"
+        },
+        "WAXP": {
+            "kucoin": "WAXP/USDT",
+            "bitget": "WAXP/USDT"
+        },
+        "SUNDOG": {
+            "kucoin": "SUNDOG/USDT",
+            "bitget": "SUNDOG/USDT"
+        },
+        "X": {
+            "kucoin": "X/USDT",
+            "bitget": "X/USDT"
+        },
+        "CPOOL": {
+            "kucoin": "CPOOL/USDT",
+            "bitget": "CPOOL/USDT"
+        },
+        "MAV": {
+            "kucoin": "MAV/USDT",
+            "bitget": "MAV/USDT"
+        },
+        "FUEL": {
+            "kucoin": "FUEL/USDT",
+            "bitget": "FUEL/USDT"
+        },
+        "ISLAND": {
+            "kucoin": "ISLAND/USDT",
+            "bitget": "ISLAND/USDT"
+        },
+        "ANKR": {
+            "kucoin": "ANKR/USDT",
+            "bitget": "ANKR/USDT"
+        },
+        "NFP": {
+            "kucoin": "NFP/USDT",
+            "bitget": "NFP/USDT"
+        },
+        "XTZ": {
+            "kucoin": "XTZ/USDT",
+            "bitget": "XTZ/USDT"
+        },
+        "ID": {
+            "kucoin": "ID/USDT",
+            "bitget": "ID/USDT"
+        },
+        "COTI": {
+            "kucoin": "COTI/USDT",
+            "bitget": "COTI/USDT"
+        },
+        "CARV": {
+            "kucoin": "CARV/USDT",
+            "bitget": "CARV/USDT"
+        },
+        "KDA": {
+            "kucoin": "KDA/USDT",
+            "bitget": "KDA/USDT"
+        },
+        "FRED": {
+            "kucoin": "FRED/USDT",
+            "bitget": "FRED/USDT"
+        },
+        "RENDER": {
+            "kucoin": "RENDER/USDT",
+            "bitget": "RENDER/USDT"
+        },
+        "BCH": {
+            "kucoin": "BCH/USDT",
+            "bitget": "BCH/USDT"
+        },
+        "MON": {
+            "kucoin": "MON/USDT",
+            "bitget": "MON/USDT"
+        },
+        "FITFI": {
+            "kucoin": "FITFI/USDT",
+            "bitget": "FITFI/USDT"
+        },
+        "GNS": {
+            "kucoin": "GNS/USDT",
+            "bitget": "GNS/USDT"
+        },
+        "SAND": {
+            "kucoin": "SAND/USDT",
+            "bitget": "SAND/USDT"
+        },
+        "LUNA": {
+            "kucoin": "LUNA/USDT",
+            "bitget": "LUNA/USDT"
+        },
+        "AR": {
+            "kucoin": "AR/USDT",
+            "bitget": "AR/USDT"
+        },
+        "OPEN": {
+            "kucoin": "OPEN/USDT",
+            "bitget": "OPEN/USDT"
+        },
+        "TREAT": {
+            "kucoin": "TREAT/USDT",
+            "bitget": "TREAT/USDT"
+        },
+        "ZK": {
+            "kucoin": "ZK/USDT",
+            "bitget": "ZK/USDT"
+        },
+        "MANA": {
+            "kucoin": "MANA/USDT",
+            "bitget": "MANA/USDT"
+        },
+        "ROSE": {
+            "kucoin": "ROSE/USDT",
+            "bitget": "ROSE/USDT"
+        },
+        "CVX": {
+            "kucoin": "CVX/USDT",
+            "bitget": "CVX/USDT"
+        },
+        "SKY": {
+            "kucoin": "SKY/USDT",
+            "bitget": "SKY/USDT"
+        },
+        "NTRN": {
+            "kucoin": "NTRN/USDT",
+            "bitget": "NTRN/USDT"
+        },
+        "CEEK": {
+            "kucoin": "CEEK/USDT",
+            "bitget": "CEEK/USDT"
+        },
+        "DODO": {
+            "kucoin": "DODO/USDT",
+            "bitget": "DODO/USDT"
+        },
+        "COQ": {
+            "kucoin": "COQ/USDT",
+            "bitget": "COQ/USDT"
+        },
+        "USDC": {
+            "kucoin": "USDC/USDT",
+            "bitget": "USDC/EUR"
+        },
+        "ENJ": {
+            "kucoin": "ENJ/USDT",
+            "bitget": "ENJ/USDT"
+        },
+        "RACA": {
+            "kucoin": "RACA/USDT",
+            "bitget": "RACA/USDT"
+        },
+        "GOATS": {
+            "kucoin": "GOATS/USDT",
+            "bitget": "GOATS/USDT"
+        },
+        "AUDIO": {
+            "kucoin": "AUDIO/USDT",
+            "bitget": "AUDIO/USDT"
+        },
+        "NEO": {
+            "kucoin": "NEO/USDT",
+            "bitget": "NEO/USDT"
+        },
+        "XCN": {
+            "kucoin": "XCN/USDT",
+            "bitget": "XCN/USDT"
+        },
+        "FLOKI": {
+            "kucoin": "FLOKI/USDT",
+            "bitget": "FLOKI/USDT"
+        },
+        "SILLY": {
+            "kucoin": "SILLY/USDT",
+            "bitget": "SILLY/USDT"
+        },
+        "LOOKS": {
+            "kucoin": "LOOKS/USDT",
+            "bitget": "LOOKS/USDT"
+        },
+        "MAGIC": {
+            "kucoin": "MAGIC/USDT",
+            "bitget": "MAGIC/USDT"
+        },
+        "ICX": {
+            "kucoin": "ICX/USDT",
+            "bitget": "ICX/USDT"
+        },
+        "RDNT": {
+            "kucoin": "RDNT/USDT",
+            "bitget": "RDNT/USDT"
+        },
+        "HYPE": {
+            "kucoin": "HYPE/USDT",
+            "bitget": "HYPE/USDT"
+        },
+        "AIXBT": {
+            "kucoin": "AIXBT/USDT",
+            "bitget": "AIXBT/USDT"
+        },
+        "PEAQ": {
+            "kucoin": "PEAQ/USDT",
+            "bitget": "PEAQ/USDT"
+        },
+        "ZERC": {
+            "kucoin": "ZERC/USDT",
+            "bitget": "ZERC/USDT"
+        },
+        "FARTCOIN": {
+            "kucoin": "FARTCOIN/USDT",
+            "bitget": "FARTCOIN/USDT"
+        },
+        "NFT": {
+            "kucoin": "NFT/USDT",
+            "bitget": "NFT/USDT"
+        },
+        "OGN": {
+            "kucoin": "OGN/USDT",
+            "bitget": "OGN/USDT"
+        },
+        "HOLDCOIN": {
+            "kucoin": "HOLDCOIN/USDT",
+            "bitget": "HOLDCOIN/USDT"
+        },
+        "J": {
+            "kucoin": "J/USDT",
+            "bitget": "J/USDT"
+        },
+        "GRASS": {
+            "kucoin": "GRASS/USDT",
+            "bitget": "GRASS/USDT"
+        },
+        "BIO": {
+            "kucoin": "BIO/USDT",
+            "bitget": "BIO/USDT"
+        },
+        "CHILLGUY": {
+            "kucoin": "CHILLGUY/USDT",
+            "bitget": "CHILLGUY/USDT"
+        },
+        "CTSI": {
+            "kucoin": "CTSI/USDT",
+            "bitget": "CTSI/USDT"
+        },
+        "WSDM": {
+            "kucoin": "WSDM/USDT",
+            "bitget": "WSDM/USDT"
+        },
+        "BLZ": {
+            "kucoin": "BLZ/USDT",
+            "bitget": "BLZ/USDT"
+        },
+        "MOBILE": {
+            "kucoin": "MOBILE/USDT",
+            "bitget": "MOBILE/USDT"
+        },
+        "SWEAT": {
+            "kucoin": "SWEAT/USDT",
+            "bitget": "SWEAT/USDT"
+        },
+        "ZRX": {
+            "kucoin": "ZRX/USDT",
+            "bitget": "ZRX/USDT"
+        },
+        "ELA": {
+            "kucoin": "ELA/USDT",
+            "bitget": "ELA/USDT"
+        },
+        "LPT": {
+            "kucoin": "LPT/USDT",
+            "bitget": "LPT/USDT"
+        },
+        "PYR": {
+            "kucoin": "PYR/USDT",
+            "bitget": "PYR/USDT"
+        },
+        "AGLD": {
+            "kucoin": "AGLD/USDT",
+            "bitget": "AGLD/USDT"
+        },
+        "WOO": {
+            "kucoin": "WOO/USDT",
+            "bitget": "WOO/USDT"
+        },
+        "NPC": {
+            "kucoin": "NPC/USDT",
+            "bitget": "NPC/USDT"
+        },
+        "SSV": {
+            "kucoin": "SSV/USDT",
+            "bitget": "SSV/USDT"
+        },
+        "AXS": {
+            "kucoin": "AXS/USDT",
+            "bitget": "AXS/USDT"
+        },
+        "SD": {
+            "kucoin": "SD/USDT",
+            "bitget": "SD/USDT"
+        },
+        "MAVIA": {
+            "kucoin": "MAVIA/USDT",
+            "bitget": "MAVIA/USDT"
+        },
+        "MANTA": {
+            "kucoin": "MANTA/USDT",
+            "bitget": "MANTA/USDT"
+        },
+        "ZEREBRO": {
+            "kucoin": "ZEREBRO/USDT",
+            "bitget": "ZEREBRO/USDT"
+        },
+        "EOS": {
+            "kucoin": "EOS/USDT",
+            "bitget": "EOS/USDT"
+        },
+        "BAT": {
+            "kucoin": "BAT/USDT",
+            "bitget": "BAT/USDT"
+        },
+        "C98": {
+            "kucoin": "C98/USDT",
+            "bitget": "C98/USDT"
+        },
+        "XEN": {
+            "kucoin": "XEN/USDT",
+            "bitget": "XEN/USDT"
+        },
+        "VANA": {
+            "kucoin": "VANA/USDT",
+            "bitget": "VANA/USDT"
+        },
+        "MOG": {
+            "kucoin": "MOG/USDT",
+            "bitget": "MOG/USDT"
+        },
+        "EGP": {
+            "kucoin": "EGP/USDT",
+            "bitget": "EGP/USDT"
+        },
+        "HAPPY": {
+            "kucoin": "HAPPY/USDT",
+            "bitget": "HAPPY/USDT"
+        },
+        "HALO": {
+            "kucoin": "HALO/USDT",
+            "bitget": "HALO/USDT"
+        },
+        "CHR": {
+            "kucoin": "CHR/USDT",
+            "bitget": "CHR/USDT"
+        },
+        "TIA": {
+            "kucoin": "TIA/USDT",
+            "bitget": "TIA/USDT"
+        },
+        "PSTAKE": {
+            "kucoin": "PSTAKE/USDT",
+            "bitget": "PSTAKE/USDT"
+        },
+        "AZERO": {
+            "kucoin": "AZERO/USDT",
+            "bitget": "AZERO/USDT"
+        },
+        "MASA": {
+            "kucoin": "MASA/USDT",
+            "bitget": "MASA/USDT"
+        },
+        "KMNO": {
+            "kucoin": "KMNO/USDT",
+            "bitget": "KMNO/USDT"
+        },
+        "OORT": {
+            "kucoin": "OORT/USDT",
+            "bitget": "OORT/USDT"
+        },
+        "L3": {
+            "kucoin": "L3/USDT",
+            "bitget": "L3/USDT"
+        },
+        "BLAST": {
+            "kucoin": "BLAST/USDT",
+            "bitget": "BLAST/USDT"
+        },
+        "BUZZ": {
+            "kucoin": "BUZZ/USDT",
+            "bitget": "BUZZ/USDT"
+        },
+        "PGC": {
+            "kucoin": "PGC/USDT",
+            "bitget": "PGC/USDT"
+        },
+        "POND": {
+            "kucoin": "POND/USDT",
+            "bitget": "POND/USDT"
+        },
+        "NEAR": {
+            "kucoin": "NEAR/USDT",
+            "bitget": "NEAR/EUR"
+        },
+        "TEL": {
+            "kucoin": "TEL/USDT",
+            "bitget": "TEL/USDT"
+        },
+        "XETA": {
+            "kucoin": "XETA/USDT",
+            "bitget": "XETA/USDT"
+        },
+        "PYTH": {
+            "kucoin": "PYTH/USDT",
+            "bitget": "PYTH/USDT"
+        },
+        "ONT": {
+            "kucoin": "ONT/USDT",
+            "bitget": "ONT/USDT"
+        },
+        "BABYDOGE": {
+            "kucoin": "BABYDOGE/USDT",
+            "bitget": "BABYDOGE/USDT"
+        },
+        "IO": {
+            "kucoin": "IO/USDT",
+            "bitget": "IO/USDT"
+        },
+        "API3": {
+            "kucoin": "API3/USDT",
+            "bitget": "API3/USDT"
+        },
+        "POLYX": {
+            "kucoin": "POLYX/USDT",
+            "bitget": "POLYX/USDT"
+        },
+        "ETH": {
+            "kucoin": "ETH/USDT",
+            "bitget": "ETH/USDT"
+        },
+        "ACX": {
+            "kucoin": "ACX/USDT",
+            "bitget": "ACX/USDT"
+        },
+        "ALPINE": {
+            "kucoin": "ALPINE/USDT",
+            "bitget": "ALPINE/USDT"
+        },
+        "ZKJ": {
+            "kucoin": "ZKJ/USDT",
+            "bitget": "ZKJ/USDT"
+        },
+        "ELF": {
+            "kucoin": "ELF/USDT",
+            "bitget": "ELF/USDT"
+        },
+        "LINA": {
+            "kucoin": "LINA/USDT",
+            "bitget": "LINA/USDT"
+        },
+        "PUFFER": {
+            "kucoin": "PUFFER/USDT",
+            "bitget": "PUFFER/USDT"
+        },
+        "BEER": {
+            "kucoin": "BEER/USDT",
+            "bitget": "BEER/USDT"
+        },
+        "ZCX": {
+            "kucoin": "ZCX/USDT",
+            "bitget": "ZCX/USDT"
+        },
+        "BSW": {
+            "kucoin": "BSW/USDT",
+            "bitget": "BSW/USDT"
+        },
+        "RUNE": {
+            "kucoin": "RUNE/USDT",
+            "bitget": "RUNE/USDT"
+        },
+        "RPL": {
+            "kucoin": "RPL/USDT",
+            "bitget": "RPL/USDT"
+        },
+        "BTC": {
+            "kucoin": "BTC/USDT",
+            "bitget": "BTC/USDT"
+        },
+        "LTC": {
+            "kucoin": "LTC/USDT",
+            "bitget": "LTC/USDT"
+        },
+        "VRTX": {
+            "kucoin": "VRTX/USDT",
+            "bitget": "VRTX/USDT"
+        },
+        "RSR": {
+            "kucoin": "RSR/USDT",
+            "bitget": "RSR/USDT"
+        },
+        "XTER": {
+            "kucoin": "XTER/USDT",
+            "bitget": "XTER/USDT"
+        },
+        "KSM": {
+            "kucoin": "KSM/USDT",
+            "bitget": "KSM/USDT"
+        },
+        "MYRO": {
+            "kucoin": "MYRO/USDT",
+            "bitget": "MYRO/USDT"
+        },
+        "HMSTR": {
+            "kucoin": "HMSTR/USDT",
+            "bitget": "HMSTR/USDT"
+        },
+        "UMA": {
+            "kucoin": "UMA/USDT",
+            "bitget": "UMA/USDT"
+        },
+        "PEPE2": {
+            "kucoin": "PEPE2/USDT",
+            "bitget": "PEPE2/USDT"
+        },
+        "CHEEMS": {
+            "kucoin": "CHEEMS/USDT",
+            "bitget": "CHEEMS/USDT"
+        },
+        "TLM": {
+            "kucoin": "TLM/USDT",
+            "bitget": "TLM/USDT"
+        },
+        "VELO": {
+            "kucoin": "VELO/USDT",
+            "bitget": "VELO/USDT"
+        },
+        "MOVR": {
+            "kucoin": "MOVR/USDT",
+            "bitget": "MOVR/USDT"
+        },
+        "SUSHI": {
+            "kucoin": "SUSHI/USDT",
+            "bitget": "SUSHI/USDT"
+        },
+        "GPS": {
+            "kucoin": "GPS/USDT",
+            "bitget": "GPS/USDT"
+        },
+        "MAK": {
+            "kucoin": "MAK/USDT",
+            "bitget": "MAK/USDT"
+        },
+        "KAS": {
+            "kucoin": "KAS/USDT",
+            "bitget": "KAS/USDT"
+        },
+        "VTHO": {
+            "kucoin": "VTHO/USDT",
+            "bitget": "VTHO/USDT"
+        },
+        "YGG": {
+            "kucoin": "YGG/USDT",
+            "bitget": "YGG/USDT"
+        },
+        "SLP": {
+            "kucoin": "SLP/USDT",
+            "bitget": "SLP/USDT"
+        },
+        "ZEN": {
+            "kucoin": "ZEN/USDT",
+            "bitget": "ZEN/USDT"
+        },
+        "FTT": {
+            "kucoin": "FTT/USDT",
+            "bitget": "FTT/USDT"
+        },
+        "ANYONE": {
+            "kucoin": "ANYONE/USDT",
+            "bitget": "ANYONE/USDT"
+        },
+        "VOXEL": {
+            "kucoin": "VOXEL/USDT",
+            "bitget": "VOXEL/USDT"
+        },
+        "XCAD": {
+            "kucoin": "XCAD/USDT",
+            "bitget": "XCAD/USDT"
+        },
+        "PNUT": {
+            "kucoin": "PNUT/USDT",
+            "bitget": "PNUT/USDT"
+        },
+        "OXT": {
+            "kucoin": "OXT/USDT",
+            "bitget": "OXT/USDT"
+        },
+        "ANIME": {
+            "kucoin": "ANIME/USDT",
+            "bitget": "ANIME/USDT"
+        },
+        "LAI": {
+            "kucoin": "LAI/USDT",
+            "bitget": "LAI/USDT"
+        },
+        "ARKM": {
+            "kucoin": "ARKM/USDT",
+            "bitget": "ARKM/USDT"
+        },
+        "PHA": {
+            "kucoin": "PHA/USDT",
+            "bitget": "PHA/USDT"
+        },
+        "USTC": {
+            "kucoin": "USTC/USDT",
+            "bitget": "USTC/USDT"
+        },
+        "MEME": {
+            "kucoin": "MEME/USDT",
+            "bitget": "MEME/USDT"
+        },
+        "SAROS": {
+            "kucoin": "SAROS/USDT",
+            "bitget": "SAROS/USDT"
+        },
+        "JST": {
+            "kucoin": "JST/USDT",
+            "bitget": "JST/USDT"
+        },
+        "LQTY": {
+            "kucoin": "LQTY/USDT",
+            "bitget": "LQTY/USDT"
+        },
+        "BLUE": {
+            "kucoin": "BLUE/USDT",
+            "bitget": "BLUE/USDT"
+        },
+        "GMX": {
+            "kucoin": "GMX/USDT",
+            "bitget": "GMX/USDT"
+        },
+        "MV": {
+            "kucoin": "MV/USDT",
+            "bitget": "MV/USDT"
+        },
+        "GST": {
+            "kucoin": "GST/USDT",
+            "bitget": "GST/USDT"
+        },
+        "BURGER": {
+            "kucoin": "BURGER/USDT",
+            "bitget": "BURGER/USDT"
+        },
+        "ONDO": {
+            "kucoin": "ONDO/USDT",
+            "bitget": "ONDO/EUR"
+        },
+        "TRAC": {
+            "kucoin": "TRAC/USDT",
+            "bitget": "TRAC/USDT"
+        },
+        "AAVE": {
+            "kucoin": "AAVE/USDT",
+            "bitget": "AAVE/USDT"
+        },
+        "VR": {
+            "kucoin": "VR/USDT",
+            "bitget": "VR/USDT"
+        },
+        "COOKIE": {
+            "kucoin": "COOKIE/USDT",
+            "bitget": "COOKIE/USDT"
+        },
+        "DUCK": {
+            "kucoin": "DUCK/USDT",
+            "bitget": "DUCK/USDT"
+        },
+        "MINA": {
+            "kucoin": "MINA/USDT",
+            "bitget": "MINA/USDT"
+        },
+        "BOME": {
+            "kucoin": "BOME/USDT",
+            "bitget": "BOME/USDT"
+        },
+        "ZKL": {
+            "kucoin": "ZKL/USDT",
+            "bitget": "ZKL/USDT"
+        },
+        "LBR": {
+            "kucoin": "LBR/USDT",
+            "bitget": "LBR/USDT"
+        },
+        "TAO": {
+            "kucoin": "TAO/USDT",
+            "bitget": "TAO/USDT"
+        },
+        "ATOM": {
+            "kucoin": "ATOM/USDT",
+            "bitget": "ATOM/USDT"
+        },
+        "GODS": {
+            "kucoin": "GODS/USDT",
+            "bitget": "GODS/USDT"
+        },
+        "MTOS": {
+            "kucoin": "MTOS/USDT",
+            "bitget": "MTOS/USDT"
+        },
+        "CGPT": {
+            "kucoin": "CGPT/USDT",
+            "bitget": "CGPT/USDT"
+        },
+        "SAMO": {
+            "kucoin": "SAMO/USDT",
+            "bitget": "SAMO/USDT"
+        },
+        "JELLYJELLY": {
+            "kucoin": "JELLYJELLY/USDT",
+            "bitget": "JELLYJELLY/USDT"
+        },
+        "AUCTION": {
+            "kucoin": "AUCTION/USDT",
+            "bitget": "AUCTION/USDT"
+        },
+        "QNT": {
+            "kucoin": "QNT/USDT",
+            "bitget": "QNT/USDT"
+        },
+        "ZRO": {
+            "kucoin": "ZRO/USDT",
+            "bitget": "ZRO/USDT"
+        },
+        "MASK": {
+            "kucoin": "MASK/USDT",
+            "bitget": "MASK/USDT"
+        },
+        "FIRE": {
+            "kucoin": "FIRE/USDT",
+            "bitget": "FIRE/USDT"
+        },
+        "ALT": {
+            "kucoin": "ALT/USDT",
+            "bitget": "ALT/USDT"
+        },
+        "SLF": {
+            "kucoin": "SLF/USDT",
+            "bitget": "SLF/USDT"
+        },
+        "BOND": {
+            "kucoin": "BOND/USDT",
+            "bitget": "BOND/USDT"
+        },
+        "ILV": {
+            "kucoin": "ILV/USDT",
+            "bitget": "ILV/USDT"
+        },
+        "QKC": {
+            "kucoin": "QKC/USDT",
+            "bitget": "QKC/USDT"
+        },
+        "ETHFI": {
+            "kucoin": "ETHFI/USDT",
+            "bitget": "ETHFI/USDT"
+        },
+        "S": {
+            "kucoin": "S/USDT",
+            "bitget": "S/USDT"
+        },
+        "VANRY": {
+            "kucoin": "VANRY/USDT",
+            "bitget": "VANRY/USDT"
+        },
+        "KEY": {
+            "kucoin": "KEY/USDT",
+            "bitget": "KEY/USDT"
+        },
+        "WAT": {
+            "kucoin": "WAT/USDT",
+            "bitget": "WAT/USDT"
+        },
+        "AITECH": {
+            "kucoin": "AITECH/USDT",
+            "bitget": "AITECH/USDT"
+        },
+        "REN": {
+            "kucoin": "REN/USDT",
+            "bitget": "REN/USDT"
+        },
+        "LOGX": {
+            "kucoin": "LOGX/USDT",
+            "bitget": "LOGX/USDT"
+        },
+        "LRC": {
+            "kucoin": "LRC/USDT",
+            "bitget": "LRC/USDT"
+        },
+        "SOCIAL": {
+            "kucoin": "SOCIAL/USDT",
+            "bitget": "SOCIAL/USDT"
+        },
+        "DYDX": {
+            "kucoin": "DYDX/USDT",
+            "bitget": "DYDX/USDT"
+        },
+        "STG": {
+            "kucoin": "STG/USDT",
+            "bitget": "STG/USDT"
+        },
+        "LUNC": {
+            "kucoin": "LUNC/USDT",
+            "bitget": "LUNC/USDT"
+        },
+        "SOL": {
+            "kucoin": "SOL/USDT",
+            "bitget": "SOL/USDT"
+        },
+        "RLC": {
+            "kucoin": "RLC/USDT",
+            "bitget": "RLC/USDT"
+        },
+        "AEVO": {
+            "kucoin": "AEVO/USDT",
+            "bitget": "AEVO/USDT"
+        },
+        "NKN": {
+            "kucoin": "NKN/USDT",
+            "bitget": "NKN/USDT"
+        },
+        "FIDA": {
+            "kucoin": "FIDA/USDT",
+            "bitget": "FIDA/USDT"
+        },
+        "PMG": {
+            "kucoin": "PMG/USDT",
+            "bitget": "PMG/USDT"
+        },
+        "BANANA": {
+            "kucoin": "BANANA/USDT",
+            "bitget": "BANANA/USDT"
+        },
+        "KAIA": {
+            "kucoin": "KAIA/USDT",
+            "bitget": "KAIA/USDT"
+        },
+        "QTUM": {
+            "kucoin": "QTUM/USDT",
+            "bitget": "QTUM/USDT"
+        },
+        "CROS": {
+            "kucoin": "CROS/USDT",
+            "bitget": "CROS/USDT"
+        },
+        "TLOS": {
+            "kucoin": "TLOS/USDT",
+            "bitget": "TLOS/USDT"
+        },
+        "LOOM": {
+            "kucoin": "LOOM/USDT",
+            "bitget": "LOOM/USDT"
+        },
+        "PRCL": {
+            "kucoin": "PRCL/USDT",
+            "bitget": "PRCL/USDT"
+        },
+        "RMV": {
+            "kucoin": "RMV/USDT",
+            "bitget": "RMV/USDT"
+        },
+        "MOCA": {
+            "kucoin": "MOCA/USDT",
+            "bitget": "MOCA/USDT"
+        },
+        "TRUMP": {
+            "kucoin": "TRUMP/USDT",
+            "bitget": "TRUMP/USDT"
+        },
+        "CELO": {
+            "kucoin": "CELO/USDT",
+            "bitget": "CELO/USDT"
+        },
+        "AURORA": {
+            "kucoin": "AURORA/USDT",
+            "bitget": "AURORA/USDT"
+        },
+        "LUCE": {
+            "kucoin": "LUCE/USDT",
+            "bitget": "LUCE/USDT"
+        },
+        "APE": {
+            "kucoin": "APE/USDT",
+            "bitget": "APE/USDT"
+        },
+        "ATH": {
+            "kucoin": "ATH/USDT",
+            "bitget": "ATH/USDT"
+        },
+        "BICO": {
+            "kucoin": "BICO/USDT",
+            "bitget": "BICO/USDT"
+        },
+        "GMEE": {
+            "kucoin": "GMEE/USDT",
+            "bitget": "GMEE/USDT"
+        },
+        "ZETA": {
+            "kucoin": "ZETA/USDT",
+            "bitget": "ZETA/USDT"
+        },
+        "UNI": {
+            "kucoin": "UNI/USDT",
+            "bitget": "UNI/USDT"
+        },
+        "ARPA": {
+            "kucoin": "ARPA/USDT",
+            "bitget": "ARPA/USDT"
+        },
+        "CVC": {
+            "kucoin": "CVC/USDT",
+            "bitget": "CVC/USDT"
+        },
+        "LADYS": {
+            "kucoin": "LADYS/USDT",
+            "bitget": "LADYS/USDT"
+        },
+        "CAKE": {
+            "kucoin": "CAKE/USDT",
+            "bitget": "CAKE/USDT"
+        },
+        "XPR": {
+            "kucoin": "XPR/USDT",
+            "bitget": "XPR/USDT"
+        },
+        "HIFI": {
+            "kucoin": "HIFI/USDT",
+            "bitget": "HIFI/USDT"
+        },
+        "TSUGT": {
+            "kucoin": "TSUGT/USDT",
+            "bitget": "TSUGT/USDT"
+        },
+        "BSV": {
+            "kucoin": "BSV/USDT",
+            "bitget": "BSV/USDT"
+        },
+        "NS": {
+            "kucoin": "NS/USDT",
+            "bitget": "NS/USDT"
+        },
+        "WEMIX": {
+            "kucoin": "WEMIX/USDT",
+            "bitget": "WEMIX/USDT"
+        },
+        "LUMIA": {
+            "kucoin": "LUMIA/USDT",
+            "bitget": "LUMIA/USDT"
+        },
+        "ORDER": {
+            "kucoin": "ORDER/USDT",
+            "bitget": "ORDER/USDT"
+        },
+        "MKR": {
+            "kucoin": "MKR/USDT",
+            "bitget": "MKR/USDT"
+        },
+        "SKL": {
+            "kucoin": "SKL/USDT",
+            "bitget": "SKL/USDT"
+        },
+        "YFI": {
+            "kucoin": "YFI/USDT",
+            "bitget": "YFI/USDT"
+        },
+        "USDE": {
+            "kucoin": "USDE/USDT",
+            "bitget": "USDE/USDT"
+        },
+        "DOGS": {
+            "kucoin": "DOGS/USDT",
+            "bitget": "DOGS/USDT"
+        },
+        "MEW": {
+            "kucoin": "MEW/USDT",
+            "bitget": "MEW/USDT"
+        },
+        "HTX": {
+            "kucoin": "HTX/USDT",
+            "bitget": "HTX/USDT"
+        },
+        "DYM": {
+            "kucoin": "DYM/USDT",
+            "bitget": "DYM/USDT"
+        },
+        "ICE": {
+            "kucoin": "ICE/USDT",
+            "bitget": "ICE/USDT"
+        },
+        "BRETT": {
+            "kucoin": "BRETT/USDT",
+            "bitget": "BRETT/USDT"
+        },
+        "SIN": {
+            "kucoin": "SIN/USDT",
+            "bitget": "SIN/USDT"
+        },
+        "VET": {
+            "kucoin": "VET/USDT",
+            "bitget": "VET/USDT"
+        },
+        "SYN": {
+            "kucoin": "SYN/USDT",
+            "bitget": "SYN/USDT"
+        },
+        "TRX": {
+            "kucoin": "TRX/USDT",
+            "bitget": "TRX/USDT"
+        },
+        "TUSD": {
+            "kucoin": "TUSD/USDT",
+            "bitget": "TUSD/USDT"
+        },
+        "UXLINK": {
+            "kucoin": "UXLINK/USDT",
+            "bitget": "UXLINK/USDT"
+        },
+        "XAI": {
+            "kucoin": "XAI/USDT",
+            "bitget": "XAI/USDT"
+        },
+        "DMAIL": {
+            "kucoin": "DMAIL/USDT",
+            "bitget": "DMAIL/USDT"
+        },
+        "COMP": {
+            "kucoin": "COMP/USDT",
+            "bitget": "COMP/USDT"
+        },
+        "MORPHO": {
+            "kucoin": "MORPHO/USDT",
+            "bitget": "MORPHO/USDT"
+        },
+        "AVAX": {
+            "kucoin": "AVAX/USDT",
+            "bitget": "AVAX/EUR"
+        },
+        "ROUTE": {
+            "kucoin": "ROUTE/USDT",
+            "bitget": "ROUTE/USDT"
+        },
+        "CRV": {
+            "kucoin": "CRV/USDT",
+            "bitget": "CRV/USDT"
+        },
+        "WILD": {
+            "kucoin": "WILD/USDT",
+            "bitget": "WILD/USDT"
+        },
+        "OP": {
+            "kucoin": "OP/USDT",
+            "bitget": "OP/USDT"
+        },
+        "AERGO": {
+            "kucoin": "AERGO/USDT",
+            "bitget": "AERGO/USDT"
+        },
+        "DENT": {
+            "kucoin": "DENT/USDT",
+            "bitget": "DENT/USDT"
+        },
+        "TRU": {
+            "kucoin": "TRU/USDT",
+            "bitget": "TRU/USDT"
+        },
+        "SMILE": {
+            "kucoin": "SMILE/USDT",
+            "bitget": "SMILE/USDT"
+        },
+        "WBTC": {
+            "kucoin": "WBTC/USDT",
+            "bitget": "WBTC/USDT"
+        },
+        "HOLD": {
+            "kucoin": "HOLD/USDT",
+            "bitget": "HOLD/USDT"
+        },
+        "SYLO": {
+            "kucoin": "SYLO/USDT",
+            "bitget": "SYLO/USDT"
+        },
+        "TSTBSC": {
+            "kucoin": "TSTBSC/USDT",
+            "bitget": "TSTBSC/USDT"
+        },
+        "HNT": {
+            "kucoin": "HNT/USDT",
+            "bitget": "HNT/USDT"
+        },
+        "TURBO": {
+            "kucoin": "TURBO/USDT",
+            "bitget": "TURBO/USDT"
+        },
+        "KNC": {
+            "kucoin": "KNC/USDT",
+            "bitget": "KNC/USDT"
+        },
+        "DAPP": {
+            "kucoin": "DAPP/USDT",
+            "bitget": "DAPP/USDT"
+        },
+        "T": {
+            "kucoin": "T/USDT",
+            "bitget": "T/USDT"
+        },
+        "DUSK": {
+            "kucoin": "DUSK/USDT",
+            "bitget": "DUSK/USDT"
+        },
+        "USUAL": {
+            "kucoin": "USUAL/USDT",
+            "bitget": "USUAL/USDT"
+        },
+        "IOTX": {
+            "kucoin": "IOTX/USDT",
+            "bitget": "IOTX/USDT"
+        },
+        "MGT": {
+            "kucoin": "MGT/USDT",
+            "bitget": "MGT/USDT"
+        },
+        "WLD": {
+            "kucoin": "WLD/USDT",
+            "bitget": "WLD/EUR"
+        },
+        "MAX": {
+            "kucoin": "MAX/USDT",
+            "bitget": "MAX/USDT"
+        },
+        "OAS": {
+            "kucoin": "OAS/USDT",
+            "bitget": "OAS/USDT"
+        },
+        "PROM": {
+            "kucoin": "PROM/USDT",
+            "bitget": "PROM/USDT"
+        },
+        "LSK": {
+            "kucoin": "LSK/USDT",
+            "bitget": "LSK/USDT"
+        },
+        "JAILSTOOL": {
+            "kucoin": "JAILSTOOL/USDT",
+            "bitget": "JAILSTOOL/USDT"
+        },
+        "GTC": {
+            "kucoin": "GTC/USDT",
+            "bitget": "GTC/USDT"
+        },
+        "CTC": {
+            "kucoin": "CTC/USDT",
+            "bitget": "CTC/USDT"
+        },
+        "PORTAL": {
+            "kucoin": "PORTAL/USDT",
+            "bitget": "PORTAL/USDT"
+        },
+        "SUPER": {
+            "kucoin": "SUPER/USDT",
+            "bitget": "SUPER/USDT"
+        },
+        "MOVE": {
+            "kucoin": "MOVE/USDT",
+            "bitget": "MOVE/USDT"
+        },
+        "CFX": {
+            "kucoin": "CFX/USDT",
+            "bitget": "CFX/USDT"
+        },
+        "TAIKO": {
+            "kucoin": "TAIKO/USDT",
+            "bitget": "TAIKO/USDT"
+        },
+        "ENS": {
+            "kucoin": "ENS/USDT",
+            "bitget": "ENS/USDT"
+        },
+        "ARB": {
+            "kucoin": "ARB/USDT",
+            "bitget": "ARB/USDT"
+        },
+        "XDC": {
+            "kucoin": "XDC/USDT",
+            "bitget": "XDC/USDT"
+        },
+        "EIGEN": {
+            "kucoin": "EIGEN/USDT",
+            "bitget": "EIGEN/USDT"
+        },
+        "AVAAI": {
+            "kucoin": "AVAAI/USDT",
+            "bitget": "AVAAI/USDT"
+        },
+        "ALPHA": {
+            "kucoin": "ALPHA/USDT",
+            "bitget": "ALPHA/USDT"
+        },
+        "SEI": {
+            "kucoin": "SEI/USDT",
+            "bitget": "SEI/USDT"
+        },
+        "NAVX": {
+            "kucoin": "NAVX/USDT",
+            "bitget": "NAVX/USDT"
+        },
+        "TON": {
+            "kucoin": "TON/USDT",
+            "bitget": "TON/EUR"
+        },
+        "HBAR": {
+            "kucoin": "HBAR/USDT",
+            "bitget": "HBAR/USDT"
+        },
+        "AMP": {
+            "kucoin": "AMP/USDT",
+            "bitget": "AMP/USDT"
+        },
+        "CATI": {
+            "kucoin": "CATI/USDT",
+            "bitget": "CATI/USDT"
+        },
+        "ADA": {
+            "kucoin": "ADA/USDT",
+            "bitget": "ADA/USDT"
+        },
+        "PIXEL": {
+            "kucoin": "PIXEL/USDT",
+            "bitget": "PIXEL/USDT"
+        },
+        "XLM": {
+            "kucoin": "XLM/USDT",
+            "bitget": "XLM/USDT"
+        }
+    },
+    "kucoin-bitstamp": {
+        "ZRX": {
+            "kucoin": "ZRX/USDT",
+            "bitstamp": "ZRX/EUR"
+        },
+        "1INCH": {
+            "kucoin": "1INCH/USDT",
+            "bitstamp": "1INCH/EUR"
+        },
+        "WIF": {
+            "kucoin": "WIF/USDT",
+            "bitstamp": "WIF/EUR"
+        },
+        "INJ": {
+            "kucoin": "INJ/USDT",
+            "bitstamp": "INJ/EUR"
+        },
+        "WOO": {
+            "kucoin": "WOO/USDT",
+            "bitstamp": "WOO/EUR"
+        },
+        "XRP": {
+            "kucoin": "XRP/USDT",
+            "bitstamp": "XRP/EUR"
+        },
+        "AXS": {
+            "kucoin": "AXS/USDT",
+            "bitstamp": "AXS/EUR"
+        },
+        "LRC": {
+            "kucoin": "LRC/USDT",
+            "bitstamp": "LRC/EUR"
+        },
+        "GRT": {
+            "kucoin": "GRT/USDT",
+            "bitstamp": "GRT/EUR"
+        },
+        "DYDX": {
+            "kucoin": "DYDX/USDT",
+            "bitstamp": "DYDX/EUR"
+        },
+        "STRK": {
+            "kucoin": "STRK/USDT",
+            "bitstamp": "STRK/EUR"
+        },
+        "TRUF": {
+            "kucoin": "TRUF/USDT",
+            "bitstamp": "TRUF/EUR"
+        },
+        "CXT": {
+            "kucoin": "CXT/USDT",
+            "bitstamp": "CXT/EUR"
+        },
+        "SOL": {
+            "kucoin": "SOL/USDT",
+            "bitstamp": "SOL/EUR"
+        },
+        "STORJ": {
+            "kucoin": "STORJ/USDT",
+            "bitstamp": "STORJ/EUR"
+        },
+        "BAT": {
+            "kucoin": "BAT/USDT",
+            "bitstamp": "BAT/EUR"
+        },
+        "MOG": {
+            "kucoin": "MOG/USDT",
+            "bitstamp": "MOG/EUR"
+        },
+        "DOT": {
+            "kucoin": "DOT/USDT",
+            "bitstamp": "DOT/EUR"
+        },
+        "MELANIA": {
+            "kucoin": "MELANIA/USDT",
+            "bitstamp": "MELANIA/EUR"
+        },
+        "LMWR": {
+            "kucoin": "LMWR/USDT",
+            "bitstamp": "LMWR/EUR"
+        },
+        "BLUR": {
+            "kucoin": "BLUR/USDT",
+            "bitstamp": "BLUR/EUR"
+        },
+        "TRUMP": {
+            "kucoin": "TRUMP/USDT",
+            "bitstamp": "TRUMP/EUR"
+        },
+        "FLR": {
+            "kucoin": "FLR/USDT",
+            "bitstamp": "FLR/EUR"
+        },
+        "BONK": {
+            "kucoin": "BONK/USDT",
+            "bitstamp": "BONK/EUR"
+        },
+        "EGLD": {
+            "kucoin": "EGLD/USDT",
+            "bitstamp": "EGLD/EUR"
+        },
+        "PEPE": {
+            "kucoin": "PEPE/USDT",
+            "bitstamp": "PEPE/EUR"
+        },
+        "APE": {
+            "kucoin": "APE/USDT",
+            "bitstamp": "APE/EUR"
+        },
+        "NEAR": {
+            "kucoin": "NEAR/USDT",
+            "bitstamp": "NEAR/EUR"
+        },
+        "ZETA": {
+            "kucoin": "ZETA/USDT",
+            "bitstamp": "ZETA/EUR"
+        },
+        "UNI": {
+            "kucoin": "UNI/USDT",
+            "bitstamp": "UNI/EUR"
+        },
+        "PYTH": {
+            "kucoin": "PYTH/USDT",
+            "bitstamp": "PYTH/EUR"
+        },
+        "PERP": {
+            "kucoin": "PERP/USDT",
+            "bitstamp": "PERP/EUR"
+        },
+        "ALGO": {
+            "kucoin": "ALGO/USDT",
+            "bitstamp": "ALGO/EUR"
+        },
+        "ETH": {
+            "kucoin": "ETH/USDT",
+            "bitstamp": "ETH/EUR"
+        },
+        "CHZ": {
+            "kucoin": "CHZ/USDT",
+            "bitstamp": "CHZ/EUR"
+        },
+        "WEN": {
+            "kucoin": "WEN/USDT",
+            "bitstamp": "WEN/EUR"
+        },
+        "SUI": {
+            "kucoin": "SUI/USDT",
+            "bitstamp": "SUI/EUR"
+        },
+        "BTC": {
+            "kucoin": "BTC/USDT",
+            "bitstamp": "BTC/EUR"
+        },
+        "LTC": {
+            "kucoin": "LTC/USDT",
+            "bitstamp": "LTC/EUR"
+        },
+        "MKR": {
+            "kucoin": "MKR/USDT",
+            "bitstamp": "MKR/EUR"
+        },
+        "SKL": {
+            "kucoin": "SKL/USDT",
+            "bitstamp": "SKL/EUR"
+        },
+        "IMX": {
+            "kucoin": "IMX/USDT",
+            "bitstamp": "IMX/EUR"
+        },
+        "YFI": {
+            "kucoin": "YFI/USDT",
+            "bitstamp": "YFI/EUR"
+        },
+        "SNX": {
+            "kucoin": "SNX/USDT",
+            "bitstamp": "SNX/EUR"
+        },
+        "MEW": {
+            "kucoin": "MEW/USDT",
+            "bitstamp": "MEW/EUR"
+        },
+        "UMA": {
+            "kucoin": "UMA/USDT",
+            "bitstamp": "UMA/EUR"
+        },
+        "SUSHI": {
+            "kucoin": "SUSHI/USDT",
+            "bitstamp": "SUSHI/EUR"
+        },
+        "BAND": {
+            "kucoin": "BAND/USDT",
+            "bitstamp": "BAND/EUR"
+        },
+        "PYUSD": {
+            "kucoin": "PYUSD/USDT",
+            "bitstamp": "PYUSD/EUR"
+        },
+        "LINK": {
+            "kucoin": "LINK/USDT",
+            "bitstamp": "LINK/EUR"
+        },
+        "LDO": {
+            "kucoin": "LDO/USDT",
+            "bitstamp": "LDO/EUR"
+        },
+        "BCH": {
+            "kucoin": "BCH/USDT",
+            "bitstamp": "BCH/EUR"
+        },
+        "SLP": {
+            "kucoin": "SLP/USDT",
+            "bitstamp": "SLP/EUR"
+        },
+        "SAND": {
+            "kucoin": "SAND/USDT",
+            "bitstamp": "SAND/EUR"
+        },
+        "POPCAT": {
+            "kucoin": "POPCAT/USDT",
+            "bitstamp": "POPCAT/EUR"
+        },
+        "COMP": {
+            "kucoin": "COMP/USDT",
+            "bitstamp": "COMP/EUR"
+        },
+        "AVAX": {
+            "kucoin": "AVAX/USDT",
+            "bitstamp": "AVAX/EUR"
+        },
+        "CRV": {
+            "kucoin": "CRV/USDT",
+            "bitstamp": "CRV/EUR"
+        },
+        "OP": {
+            "kucoin": "OP/USDT",
+            "bitstamp": "OP/EUR"
+        },
+        "MANA": {
+            "kucoin": "MANA/USDT",
+            "bitstamp": "MANA/EUR"
+        },
+        "KNC": {
+            "kucoin": "KNC/USDT",
+            "bitstamp": "KNC/EUR"
+        },
+        "USDC": {
+            "kucoin": "USDC/USDT",
+            "bitstamp": "USDC/EUR"
+        },
+        "ENJ": {
+            "kucoin": "ENJ/USDT",
+            "bitstamp": "ENJ/EUR"
+        },
+        "AUDIO": {
+            "kucoin": "AUDIO/USDT",
+            "bitstamp": "AUDIO/EUR"
+        },
+        "SHIB": {
+            "kucoin": "SHIB/USDT",
+            "bitstamp": "SHIB/EUR"
+        },
+        "ONDO": {
+            "kucoin": "ONDO/USDT",
+            "bitstamp": "ONDO/EUR"
+        },
+        "FLOKI": {
+            "kucoin": "FLOKI/USDT",
+            "bitstamp": "FLOKI/EUR"
+        },
+        "FET": {
+            "kucoin": "FET/USDT",
+            "bitstamp": "FET/EUR"
+        },
+        "TRAC": {
+            "kucoin": "TRAC/USDT",
+            "bitstamp": "TRAC/EUR"
+        },
+        "AAVE": {
+            "kucoin": "AAVE/USDT",
+            "bitstamp": "AAVE/EUR"
+        },
+        "USDT": {
+            "kucoin": "USDT/EUR",
+            "bitstamp": "USDT/EUR"
+        },
+        "SYRUP": {
+            "kucoin": "SYRUP/USDT",
+            "bitstamp": "SYRUP/EUR"
+        },
+        "BOME": {
+            "kucoin": "BOME/USDT",
+            "bitstamp": "BOME/EUR"
+        },
+        "DOGE": {
+            "kucoin": "DOGE/USDT",
+            "bitstamp": "DOGE/EUR"
+        },
+        "ENS": {
+            "kucoin": "ENS/USDT",
+            "bitstamp": "ENS/EUR"
+        },
+        "CSPR": {
+            "kucoin": "CSPR/USDT",
+            "bitstamp": "CSPR/EUR"
+        },
+        "ARB": {
+            "kucoin": "ARB/USDT",
+            "bitstamp": "ARB/EUR"
+        },
+        "XDC": {
+            "kucoin": "XDC/USDT",
+            "bitstamp": "XDC/EUR"
+        },
+        "SEI": {
+            "kucoin": "SEI/USDT",
+            "bitstamp": "SEI/EUR"
+        },
+        "JUP": {
+            "kucoin": "JUP/USDT",
+            "bitstamp": "JUP/EUR"
+        },
+        "HBAR": {
+            "kucoin": "HBAR/USDT",
+            "bitstamp": "HBAR/EUR"
+        },
+        "AMP": {
+            "kucoin": "AMP/USDT",
+            "bitstamp": "AMP/EUR"
+        },
+        "ICP": {
+            "kucoin": "ICP/USDT",
+            "bitstamp": "ICP/EUR"
+        },
+        "XLM": {
+            "kucoin": "XLM/USDT",
+            "bitstamp": "XLM/EUR"
+        },
+        "ADA": {
+            "kucoin": "ADA/USDT",
+            "bitstamp": "ADA/EUR"
+        },
+        "CTSI": {
+            "kucoin": "CTSI/USDT",
+            "bitstamp": "CTSI/EUR"
+        }
+    },
+    "bitget-bitstamp": {
+        "ZRX": {
+            "bitget": "ZRX/USDT",
+            "bitstamp": "ZRX/EUR"
+        },
+        "1INCH": {
+            "bitget": "1INCH/USDT",
+            "bitstamp": "1INCH/EUR"
+        },
+        "WIF": {
+            "bitget": "WIF/USDT",
+            "bitstamp": "WIF/EUR"
+        },
+        "INJ": {
+            "bitget": "INJ/USDT",
+            "bitstamp": "INJ/EUR"
+        },
+        "WOO": {
+            "bitget": "WOO/USDT",
+            "bitstamp": "WOO/EUR"
+        },
+        "XRP": {
+            "bitget": "XRP/USDT",
+            "bitstamp": "XRP/EUR"
+        },
+        "AXS": {
+            "bitget": "AXS/USDT",
+            "bitstamp": "AXS/EUR"
+        },
+        "LRC": {
+            "bitget": "LRC/USDT",
+            "bitstamp": "LRC/EUR"
+        },
+        "GRT": {
+            "bitget": "GRT/USDT",
+            "bitstamp": "GRT/EUR"
+        },
+        "DYDX": {
+            "bitget": "DYDX/USDT",
+            "bitstamp": "DYDX/EUR"
+        },
+        "STRK": {
+            "bitget": "STRK/USDT",
+            "bitstamp": "STRK/EUR"
+        },
+        "SOL": {
+            "bitget": "SOL/USDT",
+            "bitstamp": "SOL/EUR"
+        },
+        "STORJ": {
+            "bitget": "STORJ/USDT",
+            "bitstamp": "STORJ/EUR"
+        },
+        "BAT": {
+            "bitget": "BAT/USDT",
+            "bitstamp": "BAT/EUR"
+        },
+        "MOG": {
+            "bitget": "MOG/USDT",
+            "bitstamp": "MOG/EUR"
+        },
+        "DOT": {
+            "bitget": "DOT/USDT",
+            "bitstamp": "DOT/EUR"
+        },
+        "MELANIA": {
+            "bitget": "MELANIA/USDT",
+            "bitstamp": "MELANIA/EUR"
+        },
+        "NEXO": {
+            "bitget": "NEXO/USDT",
+            "bitstamp": "NEXO/EUR"
+        },
+        "LMWR": {
+            "bitget": "LMWR/USDT",
+            "bitstamp": "LMWR/EUR"
+        },
+        "BLUR": {
+            "bitget": "BLUR/USDT",
+            "bitstamp": "BLUR/EUR"
+        },
+        "TRUMP": {
+            "bitget": "TRUMP/USDT",
+            "bitstamp": "TRUMP/EUR"
+        },
+        "BONK": {
+            "bitget": "BONK/USDT",
+            "bitstamp": "BONK/EUR"
+        },
+        "EGLD": {
+            "bitget": "EGLD/USDT",
+            "bitstamp": "EGLD/EUR"
+        },
+        "PEPE": {
+            "bitget": "PEPE/USDT",
+            "bitstamp": "PEPE/EUR"
+        },
+        "APE": {
+            "bitget": "APE/USDT",
+            "bitstamp": "APE/EUR"
+        },
+        "NEAR": {
+            "bitget": "NEAR/EUR",
+            "bitstamp": "NEAR/EUR"
+        },
+        "ZETA": {
+            "bitget": "ZETA/USDT",
+            "bitstamp": "ZETA/EUR"
+        },
+        "UNI": {
+            "bitget": "UNI/USDT",
+            "bitstamp": "UNI/EUR"
+        },
+        "GALA": {
+            "bitget": "GALA/USDT",
+            "bitstamp": "GALA/EUR"
+        },
+        "PYTH": {
+            "bitget": "PYTH/USDT",
+            "bitstamp": "PYTH/EUR"
+        },
+        "COREUM": {
+            "bitget": "COREUM/USDT",
+            "bitstamp": "COREUM/EUR"
+        },
+        "PERP": {
+            "bitget": "PERP/USDT",
+            "bitstamp": "PERP/EUR"
+        },
+        "ALGO": {
+            "bitget": "ALGO/USDT",
+            "bitstamp": "ALGO/EUR"
+        },
+        "ETH": {
+            "bitget": "ETH/USDT",
+            "bitstamp": "ETH/EUR"
+        },
+        "CHZ": {
+            "bitget": "CHZ/USDT",
+            "bitstamp": "CHZ/EUR"
+        },
+        "WEN": {
+            "bitget": "WEN/USDT",
+            "bitstamp": "WEN/EUR"
+        },
+        "SUI": {
+            "bitget": "SUI/EUR",
+            "bitstamp": "SUI/EUR"
+        },
+        "BTC": {
+            "bitget": "BTC/USDT",
+            "bitstamp": "BTC/EUR"
+        },
+        "LTC": {
+            "bitget": "LTC/USDT",
+            "bitstamp": "LTC/EUR"
+        },
+        "MKR": {
+            "bitget": "MKR/USDT",
+            "bitstamp": "MKR/EUR"
+        },
+        "SKL": {
+            "bitget": "SKL/USDT",
+            "bitstamp": "SKL/EUR"
+        },
+        "IMX": {
+            "bitget": "IMX/USDT",
+            "bitstamp": "IMX/EUR"
+        },
+        "YFI": {
+            "bitget": "YFI/USDT",
+            "bitstamp": "YFI/EUR"
+        },
+        "SNX": {
+            "bitget": "SNX/USDT",
+            "bitstamp": "SNX/EUR"
+        },
+        "MEW": {
+            "bitget": "MEW/USDT",
+            "bitstamp": "MEW/EUR"
+        },
+        "UMA": {
+            "bitget": "UMA/USDT",
+            "bitstamp": "UMA/EUR"
+        },
+        "SUSHI": {
+            "bitget": "SUSHI/USDT",
+            "bitstamp": "SUSHI/EUR"
+        },
+        "BAND": {
+            "bitget": "BAND/USDT",
+            "bitstamp": "BAND/EUR"
+        },
+        "PYUSD": {
+            "bitget": "PYUSD/USDT",
+            "bitstamp": "PYUSD/EUR"
+        },
+        "LINK": {
+            "bitget": "LINK/USDT",
+            "bitstamp": "LINK/EUR"
+        },
+        "LDO": {
+            "bitget": "LDO/USDT",
+            "bitstamp": "LDO/EUR"
+        },
+        "BCH": {
+            "bitget": "BCH/USDT",
+            "bitstamp": "BCH/EUR"
+        },
+        "SLP": {
+            "bitget": "SLP/USDT",
+            "bitstamp": "SLP/EUR"
+        },
+        "SAND": {
+            "bitget": "SAND/USDT",
+            "bitstamp": "SAND/EUR"
+        },
+        "COMP": {
+            "bitget": "COMP/USDT",
+            "bitstamp": "COMP/EUR"
+        },
+        "AVAX": {
+            "bitget": "AVAX/EUR",
+            "bitstamp": "AVAX/EUR"
+        },
+        "CRV": {
+            "bitget": "CRV/USDT",
+            "bitstamp": "CRV/EUR"
+        },
+        "OP": {
+            "bitget": "OP/USDT",
+            "bitstamp": "OP/EUR"
+        },
+        "VEXT": {
+            "bitget": "VEXT/USDT",
+            "bitstamp": "VEXT/EUR"
+        },
+        "MANA": {
+            "bitget": "MANA/USDT",
+            "bitstamp": "MANA/EUR"
+        },
+        "KNC": {
+            "bitget": "KNC/USDT",
+            "bitstamp": "KNC/EUR"
+        },
+        "USDC": {
+            "bitget": "USDC/EUR",
+            "bitstamp": "USDC/EUR"
+        },
+        "ENJ": {
+            "bitget": "ENJ/USDT",
+            "bitstamp": "ENJ/EUR"
+        },
+        "AUDIO": {
+            "bitget": "AUDIO/USDT",
+            "bitstamp": "AUDIO/EUR"
+        },
+        "SHIB": {
+            "bitget": "SHIB/EUR",
+            "bitstamp": "SHIB/EUR"
+        },
+        "ONDO": {
+            "bitget": "ONDO/EUR",
+            "bitstamp": "ONDO/EUR"
+        },
+        "FLOKI": {
+            "bitget": "FLOKI/USDT",
+            "bitstamp": "FLOKI/EUR"
+        },
+        "FET": {
+            "bitget": "FET/USDT",
+            "bitstamp": "FET/EUR"
+        },
+        "TRAC": {
+            "bitget": "TRAC/USDT",
+            "bitstamp": "TRAC/EUR"
+        },
+        "AAVE": {
+            "bitget": "AAVE/USDT",
+            "bitstamp": "AAVE/EUR"
+        },
+        "USDT": {
+            "bitget": "USDT/EUR",
+            "bitstamp": "USDT/EUR"
+        },
+        "BOME": {
+            "bitget": "BOME/USDT",
+            "bitstamp": "BOME/EUR"
+        },
+        "RAD": {
+            "bitget": "RAD/USDT",
+            "bitstamp": "RAD/EUR"
+        },
+        "DOGE": {
+            "bitget": "DOGE/USDT",
+            "bitstamp": "DOGE/EUR"
+        },
+        "ENS": {
+            "bitget": "ENS/USDT",
+            "bitstamp": "ENS/EUR"
+        },
+        "CSPR": {
+            "bitget": "CSPR/USDT",
+            "bitstamp": "CSPR/EUR"
+        },
+        "ARB": {
+            "bitget": "ARB/USDT",
+            "bitstamp": "ARB/EUR"
+        },
+        "XDC": {
+            "bitget": "XDC/USDT",
+            "bitstamp": "XDC/EUR"
+        },
+        "XCHNG": {
+            "bitget": "XCHNG/USDT",
+            "bitstamp": "XCHNG/EUR"
+        },
+        "SEI": {
+            "bitget": "SEI/USDT",
+            "bitstamp": "SEI/EUR"
+        },
+        "JUP": {
+            "bitget": "JUP/USDT",
+            "bitstamp": "JUP/EUR"
+        },
+        "HBAR": {
+            "bitget": "HBAR/USDT",
+            "bitstamp": "HBAR/EUR"
+        },
+        "AMP": {
+            "bitget": "AMP/USDT",
+            "bitstamp": "AMP/EUR"
+        },
+        "ICP": {
+            "bitget": "ICP/USDT",
+            "bitstamp": "ICP/EUR"
+        },
+        "XLM": {
+            "bitget": "XLM/USDT",
+            "bitstamp": "XLM/EUR"
+        },
+        "ADA": {
+            "bitget": "ADA/USDT",
+            "bitstamp": "ADA/EUR"
+        },
+        "CTSI": {
+            "bitget": "CTSI/USDT",
+            "bitstamp": "CTSI/EUR"
+        }
+    }
 }

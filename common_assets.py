@@ -1,12 +1,15 @@
 import json
 import logging
 import asyncio
+import nest_asyncio
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
 
-# Konfiguracja logowania
+# Umożliwienie zagnieżdżania pętli zdarzeń (przydatne np. w Jupyterze lub niektórych IDE)
+nest_asyncio.apply()
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "EUR"]):
@@ -19,12 +22,14 @@ def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "EUR"]):
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
         markets = exchange_instance.exchange.load_markets()
+        # Jeżeli metoda load_markets zwraca coroutine, czekamy na jej wykonanie
+        if asyncio.iscoroutine(markets):
+            markets = asyncio.get_event_loop().run_until_complete(markets)
         result = {}
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    # Zachowujemy pierwszy napotkany rynek dla danej bazy
                     if base not in result:
                         result[base] = symbol
         return result
@@ -112,7 +117,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
                     logging.info(f"Konfiguracja {config_key}: dodano aktywo {entry}.")
     return common_assets
 
-async def main_async():
+def main():
     logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)")
     binance = BinanceExchange()
     kucoin = KucoinExchange()
@@ -143,13 +148,6 @@ async def main_async():
     save_common_assets(common_assets)
     for pair, assets in common_assets.items():
         logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
-
-def main():
-    # Zastosowanie nest_asyncio pozwala na zagnieżdżanie wywołań pętli zdarzeń, co zapobiega błędowi,
-    # gdy w środowisku już działa pętla zdarzeń.
-    import nest_asyncio
-    nest_asyncio.apply()
-    asyncio.run(main_async())
 
 if __name__ == '__main__':
     main()
