@@ -64,7 +64,25 @@ async def run_arbitrage_for_all_pairs(exchanges):
     else:
         logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
 
-async def run_main():
+def run_arbitrage(exchanges):
+    logging.info("Wybrano opcję rozpoczęcia arbitrażu")
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    setup_signal_handlers(loop)
+    try:
+        loop.run_until_complete(run_arbitrage_for_all_pairs(exchanges))
+    except asyncio.CancelledError:
+        logging.info("Zadania anulowane")
+    except KeyboardInterrupt:
+        logging.info("Program zatrzymany przez użytkownika (CTRL+C)")
+    finally:
+        pending = asyncio.all_tasks(loop)
+        if pending:
+            loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
+            loop.run_until_complete(loop.shutdown_asyncgens())
+        loop.close()
+
+def main():
     setup_logging()
     logging.info("Uruchamianie programu arbitrażowego")
     
@@ -85,16 +103,13 @@ async def run_main():
             logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
             common_assets.main()
         elif choice == "2":
-            await run_arbitrage_for_all_pairs(exchanges)
+            run_arbitrage(exchanges)
         elif choice == "3":
             logging.info("Wyjście z programu")
             break
         else:
             logging.error("Nieprawidłowy wybór!")
             print("Nieprawidłowy wybór!")
-    
-def main():
-    asyncio.run(run_main())
 
 if __name__ == '__main__':
     main()

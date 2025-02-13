@@ -1,172 +1,44 @@
-2025-02-13 20:45:05,681 - INFO - Uruchamianie programu arbitrażowego
-2025-02-13 20:45:14,616 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-13 20:45:14,618 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
-2025-02-13 20:45:14,703 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-13 20:45:14,704 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:45:20,247 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:45:22,606 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 324 znalezione
-2025-02-13 20:45:22,607 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-13 20:45:22,608 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:45:22,613 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:45:25,778 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 343 znalezione
-2025-02-13 20:45:25,779 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-13 20:45:25,779 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:45:25,782 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:45:26,347 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 75 znalezione
-2025-02-13 20:45:26,348 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-13 20:45:26,348 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:45:26,350 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:45:26,352 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 501 znalezione
-2025-02-13 20:45:26,353 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-13 20:45:26,354 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:45:26,356 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:45:26,357 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 86 znalezione
-2025-02-13 20:45:26,358 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-13 20:45:26,358 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:45:26,360 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:45:26,361 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 87 znalezione
-2025-02-13 20:45:26,367 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-13 20:45:26,374 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-13 20:45:26,376 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
-2025-02-13 20:45:26,376 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-13 20:45:26,378 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
-2025-02-13 20:45:26,379 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:45:26,382 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
-2025-02-13 20:45:26,383 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:45:26,384 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:45:26,466 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-13 20:45:26,466 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
-2025-02-13 20:45:26,467 - INFO - Para binance-bitget ma 342 wspólnych aktywów.
-2025-02-13 20:45:26,467 - INFO - Para binance-bitstamp ma 75 wspólnych aktywów.
-2025-02-13 20:45:26,468 - INFO - Para kucoin-bitget ma 495 wspólnych aktywów.
-2025-02-13 20:45:26,468 - INFO - Para kucoin-bitstamp ma 86 wspólnych aktywów.
-2025-02-13 20:45:26,468 - INFO - Para bitget-bitstamp ma 87 wspólnych aktywów.
-2025-02-13 20:45:32,100 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-13 20:45:32,101 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
-2025-02-13 20:45:32,192 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-13 20:45:32,192 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:45:37,506 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:45:40,383 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 324 znalezione
-2025-02-13 20:45:40,384 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-13 20:45:40,385 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:45:40,388 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:45:43,624 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 343 znalezione
-2025-02-13 20:45:43,625 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-13 20:45:43,626 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:45:43,628 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:45:44,083 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 75 znalezione
-2025-02-13 20:45:44,084 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-13 20:45:44,084 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:45:44,086 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:45:44,088 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 501 znalezione
-2025-02-13 20:45:44,089 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-13 20:45:44,090 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:45:44,092 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:45:44,093 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 86 znalezione
-2025-02-13 20:45:44,094 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-13 20:45:44,095 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:45:44,097 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:45:44,099 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 87 znalezione
-2025-02-13 20:45:44,103 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-13 20:45:44,106 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-13 20:45:44,108 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
-2025-02-13 20:45:44,108 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-13 20:45:44,109 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
-2025-02-13 20:45:44,110 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:45:44,112 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
-2025-02-13 20:45:44,113 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:45:44,114 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:45:44,195 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-13 20:45:44,196 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
-2025-02-13 20:45:44,197 - INFO - Para binance-bitget ma 342 wspólnych aktywów.
-2025-02-13 20:45:44,198 - INFO - Para binance-bitstamp ma 75 wspólnych aktywów.
-2025-02-13 20:45:44,198 - INFO - Para kucoin-bitget ma 495 wspólnych aktywów.
-2025-02-13 20:45:44,199 - INFO - Para kucoin-bitstamp ma 86 wspólnych aktywów.
-2025-02-13 20:45:44,199 - INFO - Para bitget-bitstamp ma 87 wspólnych aktywów.
-2025-02-13 20:47:42,622 - INFO - Uruchamianie programu arbitrażowego
-2025-02-13 20:49:11,590 - INFO - Uruchamianie programu arbitrażowego
-2025-02-13 20:49:15,938 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-13 20:49:15,940 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
-2025-02-13 20:49:16,008 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-13 20:49:16,009 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:49:22,184 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:49:25,011 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 324 znalezione
-2025-02-13 20:49:25,012 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-13 20:49:25,012 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:49:25,015 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:49:27,963 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 343 znalezione
-2025-02-13 20:49:27,964 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-13 20:49:27,965 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:49:27,968 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:49:28,443 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 75 znalezione
-2025-02-13 20:49:28,444 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-13 20:49:28,445 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:49:28,447 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:49:28,451 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 501 znalezione
-2025-02-13 20:49:28,453 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-13 20:49:28,454 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:49:28,456 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:49:28,457 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 86 znalezione
-2025-02-13 20:49:28,458 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-13 20:49:28,458 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:49:28,460 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:49:28,462 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 87 znalezione
-2025-02-13 20:49:28,468 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-13 20:49:28,472 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-13 20:49:28,473 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
-2025-02-13 20:49:28,474 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-13 20:49:28,475 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
-2025-02-13 20:49:28,476 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:49:28,479 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
-2025-02-13 20:49:28,480 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:49:28,480 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:49:28,552 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-13 20:49:28,552 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
-2025-02-13 20:49:28,552 - INFO - Para binance-bitget ma 342 wspólnych aktywów.
-2025-02-13 20:49:28,553 - INFO - Para binance-bitstamp ma 75 wspólnych aktywów.
-2025-02-13 20:49:28,553 - INFO - Para kucoin-bitget ma 495 wspólnych aktywów.
-2025-02-13 20:49:28,553 - INFO - Para kucoin-bitstamp ma 86 wspólnych aktywów.
-2025-02-13 20:49:28,553 - INFO - Para bitget-bitstamp ma 87 wspólnych aktywów.
-2025-02-13 20:56:10,380 - INFO - Uruchamianie programu arbitrażowego
-2025-02-13 20:56:52,925 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-13 20:56:52,927 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
-2025-02-13 20:56:52,999 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-13 20:56:53,000 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:56:59,346 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:57:01,488 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 324 znalezione
-2025-02-13 20:57:01,489 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-13 20:57:01,490 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:57:01,492 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:57:04,400 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 343 znalezione
-2025-02-13 20:57:04,401 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-13 20:57:04,402 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-13 20:57:04,406 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:57:04,952 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 75 znalezione
-2025-02-13 20:57:04,953 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-13 20:57:04,954 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:57:04,955 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:57:04,960 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 501 znalezione
-2025-02-13 20:57:04,962 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-13 20:57:04,963 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-13 20:57:04,965 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:57:04,966 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 86 znalezione
-2025-02-13 20:57:04,967 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-13 20:57:04,967 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-13 20:57:04,970 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-13 20:57:04,971 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 87 znalezione
-2025-02-13 20:57:04,977 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-13 20:57:04,984 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-13 20:57:04,985 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
-2025-02-13 20:57:04,986 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-13 20:57:04,987 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
-2025-02-13 20:57:04,988 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:57:04,990 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
-2025-02-13 20:57:04,990 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:57:04,991 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-13 20:57:05,059 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-13 20:57:05,059 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
-2025-02-13 20:57:05,059 - INFO - Para binance-bitget ma 342 wspólnych aktywów.
-2025-02-13 20:57:05,060 - INFO - Para binance-bitstamp ma 75 wspólnych aktywów.
-2025-02-13 20:57:05,060 - INFO - Para kucoin-bitget ma 495 wspólnych aktywów.
-2025-02-13 20:57:05,060 - INFO - Para kucoin-bitstamp ma 86 wspólnych aktywów.
-2025-02-13 20:57:05,061 - INFO - Para bitget-bitstamp ma 87 wspólnych aktywów.
+2025-02-13 21:36:33,363 - INFO - Uruchamianie programu arbitrażowego
+2025-02-13 21:36:35,649 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-13 21:36:35,650 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
+2025-02-13 21:36:35,723 - INFO - Porównuję aktywa dla pary: binance - kucoin
+2025-02-13 21:36:35,724 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-13 21:36:40,908 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-13 21:36:43,286 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT']): 324 znalezione
+2025-02-13 21:36:43,287 - INFO - Porównuję aktywa dla pary: binance - bitget
+2025-02-13 21:36:43,288 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-13 21:36:43,291 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-13 21:36:46,202 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT']): 343 znalezione
+2025-02-13 21:36:46,203 - INFO - Porównuję aktywa dla pary: binance - bitstamp
+2025-02-13 21:36:46,203 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-13 21:36:46,205 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-13 21:36:46,726 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT']): 4 znalezione
+2025-02-13 21:36:46,727 - INFO - Porównuję aktywa dla pary: kucoin - bitget
+2025-02-13 21:36:46,728 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-13 21:36:46,730 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-13 21:36:46,732 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT']): 500 znalezione
+2025-02-13 21:36:46,733 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
+2025-02-13 21:36:46,734 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-13 21:36:46,736 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-13 21:36:46,737 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT']): 4 znalezione
+2025-02-13 21:36:46,737 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
+2025-02-13 21:36:46,738 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-13 21:36:46,740 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-13 21:36:46,740 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT']): 4 znalezione
+2025-02-13 21:36:46,747 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
+2025-02-13 21:36:46,752 - INFO - Wczytano dane do dodania z assets_to_add.json.
+2025-02-13 21:36:46,753 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
+2025-02-13 21:36:46,754 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-13 21:36:46,755 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
+2025-02-13 21:36:46,756 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
+2025-02-13 21:36:46,758 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
+2025-02-13 21:36:46,758 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
+2025-02-13 21:36:46,759 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
+2025-02-13 21:36:46,846 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
+2025-02-13 21:36:46,847 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
+2025-02-13 21:36:46,847 - INFO - Para binance-bitget ma 342 wspólnych aktywów.
+2025-02-13 21:36:46,848 - INFO - Para binance-bitstamp ma 4 wspólnych aktywów.
+2025-02-13 21:36:46,848 - INFO - Para kucoin-bitget ma 494 wspólnych aktywów.
+2025-02-13 21:36:46,848 - INFO - Para kucoin-bitstamp ma 4 wspólnych aktywów.
+2025-02-13 21:36:46,849 - INFO - Para bitget-bitstamp ma 4 wspólnych aktywów.
+2025-02-13 21:36:51,777 - INFO - Wybrano opcję rozpoczęcia arbitrażu

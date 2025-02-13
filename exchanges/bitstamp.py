@@ -17,7 +17,3 @@ class BitstampExchange:
         except Exception as e:
             print(f"Error fetching ticker from Bitstamp: {e}")
             return None
-
-    def close(self):
-        if hasattr(self.exchange, 'close'):
-            self.exchange.close()

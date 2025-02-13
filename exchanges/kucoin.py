@@ -24,7 +24,3 @@ class KucoinExchange:
         except Exception as e:
             print(f"Error fetching ticker from Kucoin: {e}")
             return None
-
-    def close(self):
-        if hasattr(self.exchange, 'close'):
-            self.exchange.close()

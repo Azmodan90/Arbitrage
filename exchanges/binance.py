@@ -16,9 +16,3 @@ class BinanceExchange:
             return ticker
         except Exception as e:
             print(f"Error fetching ticker from Binance: {e}")
-
-    def close(self):
-        # Dla instancji synchronicznych giełd ccxt nie ma metody close,
-        # więc najpierw sprawdzamy, czy taka metoda istnieje.
-        if hasattr(self.exchange, 'close'):
-            self.exchange.close()
