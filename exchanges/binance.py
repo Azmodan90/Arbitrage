@@ -1,37 +1,45 @@
-import ccxt.async_support as ccxt_async
-from config import CONFIG
+import aiohttp
+import logging
+from exchanges.exchange import Exchange
 
-class BinanceExchange:
-    def __init__(self):
-        self.exchange = ccxt_async.binance({
-            'apiKey': CONFIG["BINANCE_API_KEY"],
-            'secret': CONFIG["BINANCE_SECRET"],
-            'enableRateLimit': True,
-        })
-        self.fee_rate = 0.1
+class BinanceExchange(Exchange):
+    BASE_URL = "https://api.binance.com"
 
-    async def fetch_ticker(self, symbol):
+    def __init__(self, api_key, secret):
+        self.api_key = api_key
+        self.secret = secret
+        # Tworzymy własną sesję, którą będziemy zamykać później
+        self.session = aiohttp.ClientSession()
+
+    async def get_trading_pairs(self):
+        url = f"{self.BASE_URL}/api/v3/exchangeInfo"
         try:
-            ticker = await self.exchange.fetch_ticker(symbol)
-            return ticker
+            async with self.session.get(url) as response:
+                if response.status != 200:
+                    logging.error(f"Binance get_trading_pairs HTTP error: {response.status}")
+                    return []
+                data = await response.json()
+                pairs = []
+                for item in data.get("symbols", []):
+                    if item.get("status") == "TRADING":
+                        pairs.append(item["symbol"].upper())
+                return pairs
         except Exception as e:
-            print(f"Error fetching ticker from Binance: {e}")
-            return None
+            logging.exception(f"Binance get_trading_pairs error: {e}")
+            return []
 
-    async def load_markets(self):
+    async def get_price(self, symbol: str) -> float:
+        url = f"{self.BASE_URL}/api/v3/ticker/price?symbol={symbol}"
         try:
-            return await self.exchange.load_markets()
+            async with self.session.get(url) as response:
+                if response.status != 200:
+                    logging.error(f"Binance get_price HTTP error: {response.status} for {symbol}")
+                    return 0.0
+                data = await response.json()
+                return float(data.get("price", 0))
         except Exception as e:
-            print(f"Error loading markets from Binance: {e}")
-            return {}
-
-    async def fetch_order_book(self, symbol, limit=5):
-        try:
-            order_book = await self.exchange.fetch_order_book(symbol, params={'limit': limit})
-            return order_book
-        except Exception as e:
-            print(f"Error fetching order book from Binance: {e}")
-            return None
+            logging.exception(f"Binance get_price error for {symbol}: {e}")
+            return 0.0
 
     async def close(self):
-        await self.exchange.close()
+        await self.session.close()

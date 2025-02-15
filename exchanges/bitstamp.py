@@ -1,37 +1,49 @@
-import ccxt.async_support as ccxt_async
-from config import CONFIG
+import aiohttp
+import logging
+from exchanges.exchange import Exchange
 
-class BitstampExchange:
-    def __init__(self):
-        self.exchange = ccxt_async.bitstamp({
-            'apiKey': CONFIG["BITSTAMP_API_KEY"],
-            'secret': CONFIG["BITSTAMP_SECRET"],
-            'enableRateLimit': True,
-        })
-        self.fee_rate = 0.25
+class BitstampExchange(Exchange):
+    BASE_URL = "https://www.bitstamp.net/api"
 
-    async def fetch_ticker(self, symbol):
+    def __init__(self, api_key, secret):
+        self.api_key = api_key
+        self.secret = secret
+        # Utworzenie własnej sesji
+        self.session = aiohttp.ClientSession()
+
+    async def get_trading_pairs(self):
+        url = f"{self.BASE_URL}/v2/trading-pairs-info/"
         try:
-            ticker = await self.exchange.fetch_ticker(symbol)
-            return ticker
+            async with self.session.get(url) as response:
+                if response.status != 200:
+                    logging.error(f"Bitstamp get_trading_pairs HTTP error: {response.status}")
+                    return []
+                data = await response.json()
+                pairs = []
+                # Przykładowa pętla – dostosuj do struktury zwracanej przez API Bitstamp
+                for item in data:
+                    # Na przykład: jeżeli pole "trading" wskazuje na aktywność
+                    if item.get("trading") == "Enabled":
+                        # Zakładamy, że symbol jest przechowywany w polu "url_symbol"
+                        pairs.append(item["url_symbol"].upper())
+                return pairs
         except Exception as e:
-            print(f"Error fetching ticker from Bitstamp: {e}")
-            return None
+            logging.exception(f"Bitstamp get_trading_pairs error: {e}")
+            return []
 
-    async def load_markets(self):
+    async def get_price(self, symbol: str) -> float:
+        # API Bitstamp oczekuje symbolu w formacie np. "btcusd"
+        url = f"{self.BASE_URL}/v2/ticker/{symbol.lower()}/"
         try:
-            return await self.exchange.load_markets()
+            async with self.session.get(url) as response:
+                if response.status != 200:
+                    logging.error(f"Bitstamp get_price HTTP error: {response.status} for {symbol}")
+                    return 0.0
+                data = await response.json()
+                return float(data.get("last", 0))
         except Exception as e:
-            print(f"Error loading markets from Bitstamp: {e}")
-            return {}
-
-    async def fetch_order_book(self, symbol, limit=5):
-        try:
-            order_book = await self.exchange.fetch_order_book(symbol, params={'limit': limit})
-            return order_book
-        except Exception as e:
-            print(f"Error fetching order book from Bitstamp: {e}")
-            return None
+            logging.exception(f"Bitstamp get_price error for {symbol}: {e}")
+            return 0.0
 
     async def close(self):
-        await self.exchange.close()
+        await self.session.close()

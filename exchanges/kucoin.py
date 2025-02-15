@@ -1,40 +1,54 @@
-import ccxt.async_support as ccxt_async
-from config import CONFIG
-import asyncio
+import aiohttp
+import logging
+from exchanges.exchange import Exchange
 
-class KucoinExchange:
-    def __init__(self):
-        self.exchange = ccxt_async.kucoin({
-            'apiKey': CONFIG["KUCOIN_API_KEY"],
-            'secret': CONFIG["KUCOIN_SECRET"],
-            'enableRateLimit': True,
-        })
-        self.fee_rate = 0.1
-        self.semaphore = asyncio.Semaphore(5)
+class KucoinExchange(Exchange):
+    BASE_URL = "https://api.kucoin.com"
 
-    async def fetch_ticker(self, symbol):
-        async with self.semaphore:
-            try:
-                ticker = await self.exchange.fetch_ticker(symbol)
-                return ticker
-            except Exception as e:
-                print(f"Error fetching ticker from Kucoin: {e}")
-                return None
+    def __init__(self, api_key, secret):
+        self.api_key = api_key
+        self.secret = secret
+        # Utworzenie własnej sesji
+        self.session = aiohttp.ClientSession()
 
-    async def load_markets(self):
+    async def get_trading_pairs(self):
+        url = f"{self.BASE_URL}/api/v1/symbols"
         try:
-            return await self.exchange.load_markets()
+            async with self.session.get(url) as response:
+                if response.status != 200:
+                    logging.error(f"Kucoin get_trading_pairs HTTP error: {response.status}")
+                    return []
+                data = await response.json()
+                pairs = []
+                # Przykładowa struktura: lista symboli w data["data"]
+                for item in data.get("data", []):
+                    if item.get("enableTrading"):
+                        # Zakładamy, że symbol jest przechowywany w polu "symbol" w formacie "BTC-USDT"
+                        # Możesz usunąć znak '-' lub pozostawić go, w zależności od potrzeb normalizacji.
+                        pairs.append(item["symbol"].replace("-", "").upper())
+                return pairs
         except Exception as e:
-            print(f"Error loading markets from Kucoin: {e}")
-            return {}
+            logging.exception(f"Kucoin get_trading_pairs error: {e}")
+            return []
 
-    async def fetch_order_book(self, symbol, limit=5):
+    async def get_price(self, symbol: str) -> float:
+        # Kucoin oczekuje symbolu w formacie z myślnikiem, np. "BTC-USDT"
+        # Jeśli symbol przekazany jest bez myślnika, dodajemy go – zakładamy, że długość symbolu to 6 znaków (BTC+USDT)
+        if len(symbol) == 6:
+            symbol_formatted = symbol[:3] + "-" + symbol[3:]
+        else:
+            symbol_formatted = symbol
+        url = f"{self.BASE_URL}/api/v1/market/orderbook/level1?symbol={symbol_formatted}"
         try:
-            order_book = await self.exchange.fetch_order_book(symbol, params={'limit': limit})
-            return order_book
+            async with self.session.get(url) as response:
+                if response.status != 200:
+                    logging.error(f"Kucoin get_price HTTP error: {response.status} for {symbol_formatted}")
+                    return 0.0
+                data = await response.json()
+                return float(data.get("data", {}).get("price", 0))
         except Exception as e:
-            print(f"Error fetching order book from Kucoin: {e}")
-            return None
+            logging.exception(f"Kucoin get_price error for {symbol_formatted}: {e}")
+            return 0.0
 
     async def close(self):
-        await self.exchange.close()
+        await self.session.close()
