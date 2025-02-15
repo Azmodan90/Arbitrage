@@ -1,3 +1,57 @@
-2025-02-15 20:16:57,367 - INFO - Uruchamianie programu arbitrażowego
-2025-02-15 20:16:58,691 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-15 20:17:46,526 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-15 20:19:04,066 - INFO - Uruchamianie programu arbitrażowego
+2025-02-15 20:19:07,200 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-15 20:20:55,510 - INFO - Uruchamianie programu arbitrażowego
+2025-02-15 20:20:56,637 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-15 20:20:56,648 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
+2025-02-15 20:20:56,721 - INFO - Porównuję aktywa dla pary: binance - kucoin
+2025-02-15 20:21:02,615 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 324 znalezione
+2025-02-15 20:21:02,616 - INFO - Porównuję aktywa dla pary: binance - bitget
+2025-02-15 20:21:04,895 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 342 znalezione
+2025-02-15 20:21:04,896 - INFO - Porównuję aktywa dla pary: binance - bitstamp
+2025-02-15 20:21:05,520 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 75 znalezione
+2025-02-15 20:21:05,521 - INFO - Porównuję aktywa dla pary: kucoin - bitget
+2025-02-15 20:21:05,523 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 501 znalezione
+2025-02-15 20:21:05,524 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
+2025-02-15 20:21:05,525 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 86 znalezione
+2025-02-15 20:21:05,526 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
+2025-02-15 20:21:05,528 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 87 znalezione
+2025-02-15 20:21:05,531 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
+2025-02-15 20:21:05,533 - INFO - Wczytano dane do dodania z assets_to_add.json.
+2025-02-15 20:21:05,534 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
+2025-02-15 20:21:05,535 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-15 20:21:05,535 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
+2025-02-15 20:21:05,536 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
+2025-02-15 20:21:05,538 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
+2025-02-15 20:21:05,538 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
+2025-02-15 20:21:05,538 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
+2025-02-15 20:21:05,597 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
+2025-02-15 20:21:05,598 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
+2025-02-15 20:21:05,598 - INFO - Para binance-bitget ma 341 wspólnych aktywów.
+2025-02-15 20:21:05,599 - INFO - Para binance-bitstamp ma 75 wspólnych aktywów.
+2025-02-15 20:21:05,599 - INFO - Para kucoin-bitget ma 495 wspólnych aktywów.
+2025-02-15 20:21:05,600 - INFO - Para kucoin-bitstamp ma 86 wspólnych aktywów.
+2025-02-15 20:21:05,601 - INFO - Para bitget-bitstamp ma 87 wspólnych aktywów.
+2025-02-15 20:21:05,601 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-15 20:21:05,609 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f5c513c9b50>
+2025-02-15 20:21:05,612 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f5c5134b230>, 2194.18405204), (<aiohttp.client_proto.ResponseHandler object at 0x7f5c5134b3f0>, 2194.218640697), (<aiohttp.client_proto.ResponseHandler object at 0x7f5c51265cc0>, 2194.329892379)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7f5c51266040>, 2194.365838802)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7f5c5134b770>, 2194.853541081)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f5c513c9450>
+2025-02-15 20:21:05,640 - WARNING - kucoin requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-15 20:21:05,643 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f5c51217310>
+2025-02-15 20:21:05,644 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f5c51266660>, 2197.951518705), (<aiohttp.client_proto.ResponseHandler object at 0x7f5c51267540>, 2198.249278786)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f5c51217510>
+2025-02-15 20:21:05,656 - WARNING - bitget requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-15 20:21:05,658 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f5c4f5e8a90>
+2025-02-15 20:21:05,661 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f5c51267700>, 2200.291725572), (<aiohttp.client_proto.ResponseHandler object at 0x7f5c4f2290f0>, 2200.402500185), (<aiohttp.client_proto.ResponseHandler object at 0x7f5c4f229390>, 2200.520757379), (<aiohttp.client_proto.ResponseHandler object at 0x7f5c4f2295c0>, 2200.53072272), (<aiohttp.client_proto.ResponseHandler object at 0x7f5c4f2298d0>, 2200.628637125)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f5c4f20fbd0>
+2025-02-15 20:21:05,670 - WARNING - bitstamp requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-15 20:21:05,671 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f5c4b11f990>
+2025-02-15 20:21:05,672 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f5c4f229b00>, 2201.584650504)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f5c4b11fc10>
