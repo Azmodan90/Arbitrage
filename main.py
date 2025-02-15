@@ -4,7 +4,7 @@ import logging
 import json
 import itertools
 from dotenv import load_dotenv
-import create_common_pairs  # Zmieniony import – zakładamy, że create_common_pairs.py znajduje się w katalogu głównym
+from common_assets import create_all_common_pairs  # Zmiana importu na common_assets.py
 from exchanges.binance import BinanceExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
@@ -147,7 +147,7 @@ async def main():
             print("3. Wyjście")
             choice = input("Twój wybór: ").strip()
             if choice == "1":
-                await create_common_pairs.create_all_common_pairs()
+                await create_all_common_pairs()
             elif choice == "2":
                 await simulate_arbitrage_from_common()
             elif choice == "3":
