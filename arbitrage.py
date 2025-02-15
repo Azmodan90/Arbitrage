@@ -52,9 +52,10 @@ def normalize_symbol(symbol):
         return symbol.split(":")[0]
     return symbol
 
+# --- Rate limiter (przykładowa implementacja) ---
 class RateLimiter:
     def __init__(self, delay):
-        self.delay = delay
+        self.delay = delay  # minimalny odstęp między zapytaniami (w sekundach)
         self.last_request = 0
 
 RATE_LIMITS = {
@@ -65,12 +66,14 @@ RATE_LIMITS = {
 }
 
 rate_limiters = {}
+
 def get_rate_limiter(exchange):
     key = exchange.__class__.__name__.lower()
     if key not in rate_limiters:
         delay = RATE_LIMITS.get(key, 0.1)
         rate_limiters[key] = RateLimiter(delay)
     return rate_limiters[key]
+
 def fetch_ticker_rate_limited_sync(exchange, symbol):
     now = time.monotonic()
     limiter = get_rate_limiter(exchange)
@@ -100,14 +103,18 @@ class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        # assets – słownik mapujący token bazowy do mapowania symboli
-        # np. { "ABC": { "binance": "ABC/USDT", "kucoin": "ABC/USDT" } }
+        # assets – słownik mapujący token bazowy do mapowania symboli np.
+        # { "GMT": { "binance": "GMT/USDT", "kucoin": "GMT/USDT" } }
         self.assets = assets
-        self.pair_name = pair_name
+        self.pair_name = pair_name  # np. "binance-kucoin"
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
-        # Zakładamy, że asset jest już dict (utworzony w common_assets)
+        # Jeśli asset nie jest słownikiem, przekonwertuj go na dict
+        if not isinstance(asset, dict):
+            base = asset
+            asset = {names[0]: base + "/USDT", names[1]: base + "/USDT"}
+        # Teraz asset musi być dict – dzięki temu możemy wywołać get()
         symbol_ex1 = asset.get(names[0])
         symbol_ex2 = asset.get(names[1])
         if not symbol_ex1 or not symbol_ex2:
@@ -182,21 +189,17 @@ class PairArbitrageStrategy:
         else:
             extra_info = "Brak sprawdzania płynności, gdy okazja nie przekracza progu."
 
-        # Logowanie wyników (przykładowo – tradycyjnie, bez tabeli)
+        # Logowanie – oddzielnie opłacalne i nieopłacalne
+        log_msg = (
+            f"{self.pair_name} | {asset} | {names[0]}: {effective_buy_ex1:.4f} | {names[1]}: {effective_sell_ex2:.4f} | "
+            f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {profit_liq_percent if profit_liq_percent is not None else 'N/A'} | "
+            f"Profit (USDT): {profit_liq_usdt if profit_liq_usdt is not None else 'N/A'} | Invested (USDT): {invested_amount if invested_amount is not None else 'N/A'} | "
+            f"Qty Purchased: {actual_qty if 'actual_qty' in locals() else 'N/A'} | Liquidity Info: {liquidity_info} | {extra_info}"
+        )
         if profit_liq_usdt is not None and profit_liq_usdt > 0:
-            opp_logger.info(
-                f"{self.pair_name} | {asset} | {names[0]}: {effective_buy_ex1:.4f} | {names[1]}: {effective_sell_ex2:.4f} | "
-                f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {profit_liq_percent:.2f}% | "
-                f"Profit (USDT): {profit_liq_usdt:.2f} | Invested (USDT): {invested_amount:.2f} | "
-                f"Qty Purchased: {actual_qty:.4f} | Liquidity Info: {liquidity_info} | {extra_info}"
-            )
+            opp_logger.info(log_msg)
         else:
-            unprofitable_logger.info(
-                f"{self.pair_name} | {asset} | {names[0]}: {effective_buy_ex1:.4f} | {names[1]}: {effective_sell_ex2:.4f} | "
-                f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {profit_liq_percent if profit_liq_percent is not None else 'N/A'} | "
-                f"Profit (USDT): {profit_liq_usdt if profit_liq_usdt is not None else 'N/A'} | Invested (USDT): {invested_amount if invested_amount is not None else 'N/A'} | "
-                f"Qty Purchased: {actual_qty if 'actual_qty' in locals() else 'N/A'} | Liquidity Info: {liquidity_info} | {extra_info}"
-            )
+            unprofitable_logger.info(log_msg)
 
         if profit1 > CONFIG["ABSURD_THRESHOLD"]:
             absurd_logger.warning(
@@ -237,7 +240,6 @@ class PairArbitrageStrategy:
             raise
 
 def main():
-    # Opcjonalnie można wywołać test pojedynczego sprawdzenia, np. poprzez asyncio.run(PairArbitrageStrategy(...).check_opportunity(...))
     pass
 
 if __name__ == '__main__':
