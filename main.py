@@ -1,171 +1,115 @@
-import os
 import asyncio
+import signal
 import logging
 import json
-import itertools
-from dotenv import load_dotenv
-from common_assets import main as create_all_common_pairs
+from config import CONFIG
 from exchanges.binance import BinanceExchange
+from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
-from exchanges.kucoin import KucoinExchange
-from utils import normalize_symbol
+from arbitrage import PairArbitrageStrategy
+import common_assets
 
-load_dotenv()
+def setup_logging():
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    if logger.hasHandlers():
+        logger.handlers.clear()
+    file_handler = logging.FileHandler('app.log', mode='a', encoding='utf-8')
+    file_handler.setLevel(logging.INFO)
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
 
-# Konfiguracja logowania
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
-all_handler = logging.FileHandler("app.log", encoding="utf-8")
-all_handler.setLevel(logging.INFO)
-error_handler = logging.FileHandler("error.log", encoding="utf-8")
-error_handler.setLevel(logging.ERROR)
-formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-console_handler.setFormatter(formatter)
-all_handler.setFormatter(formatter)
-error_handler.setFormatter(formatter)
-logger.addHandler(console_handler)
-logger.addHandler(all_handler)
-logger.addHandler(error_handler)
+async def shutdown(signal_name, loop):
+    logging.info(f"\nOtrzymano sygnał {signal_name}. Zatrzymywanie programu...")
+    tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
+    logging.info("Anulowanie zadań: %s", tasks)
+    for task in tasks:
+        task.cancel()
+    await asyncio.gather(*tasks, return_exceptions=True)
+    await asyncio.sleep(0.2)
+    await loop.shutdown_asyncgens()
 
-def get_exchange_instance_by_name(name: str, options: dict):
-    for key, (ex_name, instance) in options.items():
-        if ex_name == name:
-            return instance
-    return None
+def setup_signal_handlers(loop):
+    for sig in (signal.SIGINT, signal.SIGTERM):
+        loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
 
-async def fetch_opportunity(tup, current_instance, dest_instance, funds, min_profit, source_name, dest_name):
-    source_sym, dest_sym, normalized = tup
-    price_source, price_dest = await asyncio.gather(
-        current_instance.get_price(source_sym),
-        dest_instance.get_price(dest_sym)
-    )
-    if price_source is None or price_dest is None or price_source == 0 or price_dest == 0:
-        return None
-    if price_source < price_dest:
-        profit = funds * ((price_dest / price_source) - 1)
-        if profit >= min_profit:
-            return {
-                "asset": normalized,
-                "buy_exchange": source_name,
-                "sell_exchange": dest_name,
-                "price_buy": price_source,
-                "price_sell": price_dest,
-                "profit": profit
-            }
-    return None
-
-async def simulate_arbitrage_from_common(exchange_options):
-    # Używamy pliku generowanego przez common_assets.py (w tym przypadku common_assets.json)
-    filename = "common_assets.json"
-    if not os.path.exists(filename):
-        print("Plik common_assets.json nie istnieje. Najpierw utwórz listę wspólnych aktywów (opcja 1).")
-        return
-    with open(filename, "r", encoding="utf-8") as f:
-        common_assets = json.load(f)
-    print("Wybierz giełdę, na której masz dostępne środki:")
-    for key, (name, _) in exchange_options.items():
-        print(f"{key}: {name}")
-    source_choice = input("Wybierz giełdę (numer): ").strip()
-    if source_choice not in exchange_options:
-        print("Nieprawidłowy wybór.")
-        return
-    source_name, source_instance = exchange_options[source_choice]
+async def run_arbitrage_for_all_pairs(exchanges):
     try:
-        funds = float(input("Podaj kwotę środków dostępnych na giełdzie (np. 1000): ").strip())
-    except ValueError:
-        print("Nieprawidłowa kwota.")
+        with open("common_assets.json", "r") as f:
+            common_assets_data = json.load(f)
+    except Exception as e:
+        logging.error(f"Nie udało się załadować common_assets.json: {e}")
         return
+
+    tasks = []
+    for pair_key, assets in common_assets_data.items():
+        if not assets:
+            logging.info(f"Brak wspólnych aktywów dla pary {pair_key}")
+            continue
+        exch_names = pair_key.split("-")
+        if len(exch_names) != 2:
+            logging.error(f"Niepoprawny format pary: {pair_key}")
+            continue
+        ex1 = exchanges.get(exch_names[0])
+        ex2 = exchanges.get(exch_names[1])
+        if not ex1 or not ex2:
+            logging.error(f"Nie znaleziono giełd dla pary: {pair_key}")
+            continue
+        strategy = PairArbitrageStrategy(ex1, ex2, assets, pair_name=pair_key)
+        tasks.append(asyncio.create_task(strategy.run()))
+    if tasks:
+        await asyncio.gather(*tasks)
+    else:
+        logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
+
+def run_arbitrage(exchanges):
+    logging.info("Wybrano opcję rozpoczęcia arbitrażu")
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    setup_signal_handlers(loop)
     try:
-        min_profit = float(input("Podaj minimalny zysk (w walucie) z pojedynczego arbitrażu (np. 10): ").strip())
-    except ValueError:
-        print("Nieprawidłowa wartość minimalnego zysku – ustawiam 10.")
-        min_profit = 10.0
-    current_exchange_name = source_name
-    current_instance = source_instance
-    print(f"\nRozpoczynam symulację arbitrażu z giełdy {current_exchange_name} z kwotą {funds:.2f}.\n")
-    try:
-        while True:
-            opportunities = []
-            for config_key, pairs in common_assets.items():
-                if current_exchange_name not in config_key:
-                    continue
-                parts = config_key.split("-")
-                if parts[0] == current_exchange_name:
-                    dest_name = parts[1]
-                    dest_instance = get_exchange_instance_by_name(dest_name, exchange_options)
-                    tasks = [asyncio.create_task(
-                        fetch_opportunity(tup, current_instance, dest_instance, funds, min_profit, current_exchange_name, dest_name)
-                    ) for tup in pairs]
-                    results = await asyncio.gather(*tasks)
-                    for res in results:
-                        if res is not None:
-                            opportunities.append(res)
-                elif parts[1] == current_exchange_name:
-                    dest_name = parts[0]
-                    dest_instance = get_exchange_instance_by_name(dest_name, exchange_options)
-                    tasks = [asyncio.create_task(
-                        fetch_opportunity((tup[1], tup[0], tup[2]), current_instance, dest_instance, funds, min_profit, current_exchange_name, dest_name)
-                    ) for tup in pairs]
-                    results = await asyncio.gather(*tasks)
-                    for res in results:
-                        if res is not None:
-                            opportunities.append(res)
-            if opportunities:
-                best = max(opportunities, key=lambda x: x["profit"])
-                print("\nZnaleziono okazję arbitrażową:")
-                print(f" Asset: {best['asset']}")
-                print(f" Kup na {best['buy_exchange']} po {best['price_buy']}")
-                print(f" Sprzedaj na {best['sell_exchange']} po {best['price_sell']}")
-                print(f" Szacowany zysk: {best['profit']:.2f}")
-                funds = funds * (best["price_sell"] / best["price_buy"])
-                print(f"Transakcja przeprowadzona. Nowa kwota środków: {funds:.2f}")
-                current_exchange_name = best["sell_exchange"]
-                current_instance = get_exchange_instance_by_name(current_exchange_name, exchange_options)
-            else:
-                print("Brak opłacalnych okazji arbitrażowych w tej rundzie.")
-            print("-" * 60)
-            await asyncio.sleep(10)
+        loop.run_until_complete(run_arbitrage_for_all_pairs(exchanges))
     except asyncio.CancelledError:
-        print("Symulacja arbitrażu została anulowana.")
-
-async def main():
-    # Inicjalizacja obiektów giełdowych już w środku pętli zdarzeń
-    exchange_options = {
-        "1": ("BinanceExchange", BinanceExchange(api_key=os.getenv("BINANCE_API_KEY"), secret=os.getenv("BINANCE_SECRET"))),
-        "2": ("BitgetExchange", BitgetExchange(api_key=os.getenv("BITGET_API_KEY"), secret=os.getenv("BITGET_SECRET"))),
-        "3": ("BitstampExchange", BitstampExchange(api_key=os.getenv("BITSTAMP_API_KEY"), secret=os.getenv("BITSTAMP_SECRET"))),
-        "4": ("KucoinExchange", KucoinExchange(api_key=os.getenv("KUCOIN_API_KEY"), secret=os.getenv("KUCOIN_SECRET")))
-    }
-
-    try:
-        while True:
-            print("\nWybierz opcję:")
-            print("1. Utwórz/odśwież listę wspólnych aktywów dla wszystkich giełd")
-            print("2. Uruchom symulację arbitrażu (wykorzystując wcześniej utworzoną listę)")
-            print("3. Wyjście")
-            choice = input("Twój wybór: ").strip()
-            if choice == "1":
-                await create_all_common_pairs()
-            elif choice == "2":
-                await simulate_arbitrage_from_common(exchange_options)
-            elif choice == "3":
-                print("Zakończenie programu.")
-                break
-            else:
-                print("Nieprawidłowy wybór. Spróbuj ponownie.")
-    finally:
-        # Zamykamy wszystkie instancje giełdowe, aby zwolnić zasoby
-        for key, (name, instance) in exchange_options.items():
-            try:
-                await instance.close()
-            except Exception as e:
-                logging.error(f"Błąd przy zamykaniu giełdy {name}: {e}")
-
-if __name__ == "__main__":
-    try:
-        asyncio.run(main())
+        logging.info("Zadania anulowane")
     except KeyboardInterrupt:
-        logging.info("Program zakończony przez użytkownika (Ctrl+C).")
+        logging.info("Program zatrzymany przez użytkownika (CTRL+C)")
+    finally:
+        pending = asyncio.all_tasks(loop)
+        if pending:
+            loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
+            loop.run_until_complete(loop.shutdown_asyncgens())
+        loop.close()
+
+def main():
+    setup_logging()
+    logging.info("Uruchamianie programu arbitrażowego")
+    
+    exchanges = {
+        "binance": BinanceExchange(),
+        "kucoin": KucoinExchange(),
+        "bitget": BitgetExchange(),
+        "bitstamp": BitstampExchange()
+    }
+    
+    while True:
+        print("\nWybierz opcję:")
+        print("1. Utwórz listę wspólnych aktywów")
+        print("2. Rozpocznij arbitraż (dla aktywów z common_assets.json)")
+        print("3. Wyjście")
+        choice = input("Twój wybór (1/2/3): ").strip()
+        if choice == "1":
+            logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
+            common_assets.main()
+        elif choice == "2":
+            run_arbitrage(exchanges)
+        elif choice == "3":
+            logging.info("Wyjście z programu")
+            break
+        else:
+            logging.error("Nieprawidłowy wybór!")
+            print("Nieprawidłowy wybór!")
+
+if __name__ == '__main__':
+    main()
