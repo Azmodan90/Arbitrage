@@ -6231,3 +6231,1815 @@
 2025-02-15 12:28:40,359 - INFO - binance-kucoin - binance: pobrana cena = 0.9984
 2025-02-15 12:28:40,359 - INFO - binance-kucoin - kucoin: pobrana cena = 0.9918
 2025-02-15 12:28:40,360 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: CRV/USDT (dla binance), CRV/USDT (dla kucoin)
+2025-02-15 12:28:40,832 - INFO - binance-bitget - binance: pobrana cena = 0.2645
+2025-02-15 12:28:40,832 - INFO - binance-bitget - bitget: pobrana cena = 0.2643
+2025-02-15 12:28:40,833 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: UNFI/USDT (dla binance), UNFI/USDT (dla bitget)
+2025-02-15 12:28:40,958 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.005354
+2025-02-15 12:28:40,959 - INFO - kucoin-bitget - bitget: pobrana cena = 0.00533
+2025-02-15 12:28:40,960 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: GHX/USDT (dla kucoin), GHX/USDT (dla bitget)
+2025-02-15 12:28:41,106 - INFO - binance-kucoin - binance: pobrana cena = 0.5272
+2025-02-15 12:28:41,106 - INFO - binance-kucoin - kucoin: pobrana cena = 0.5264
+2025-02-15 12:28:41,107 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: IMX/USDT (dla binance), IMX/USDT (dla kucoin)
+2025-02-15 12:28:41,207 - INFO - binance-bitstamp - binance: pobrana cena = 0.702
+2025-02-15 12:28:41,207 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'WIF/USDT', 'bitstamp': 'WIF/USDT'}. Pomijam.
+2025-02-15 12:28:41,208 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: UNI/USDT (dla binance), UNI/USDT (dla bitstamp)
+2025-02-15 12:28:41,280 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80786
+2025-02-15 12:28:41,281 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:28:41,282 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:28:41,412 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.009e-05
+2025-02-15 12:28:41,412 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'PEPE/USDT', 'bitstamp': 'PEPE/USDT'}. Pomijam.
+2025-02-15 12:28:41,413 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla bitget), USDC/USDT (dla bitstamp)
+2025-02-15 12:28:41,424 - WARNING - binance-bitget - Dla binance pobrana cena jest None, pomijam asset {'binance': 'UNFI/USDT', 'bitget': 'UNFI/USDT'}
+2025-02-15 12:28:41,424 - INFO - binance-bitget - bitget: pobrana cena = 0.3495
+2025-02-15 12:28:41,425 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'UNFI/USDT', 'bitget': 'UNFI/USDT'}. Pomijam.
+2025-02-15 12:28:41,425 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: HOT/USDT (dla binance), HOT/USDT (dla bitget)
+2025-02-15 12:28:41,586 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0378
+2025-02-15 12:28:41,587 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0381
+2025-02-15 12:28:41,587 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AERGO/USDT (dla kucoin), AERGO/USDT (dla bitget)
+2025-02-15 12:28:41,591 - INFO - binance-kucoin - binance: pobrana cena = 0.807
+2025-02-15 12:28:41,592 - INFO - binance-kucoin - kucoin: pobrana cena = 0.8052
+2025-02-15 12:28:41,593 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ONT/USDT (dla binance), ONT/USDT (dla kucoin)
+2025-02-15 12:28:42,068 - INFO - binance-bitget - binance: pobrana cena = 0.001681
+2025-02-15 12:28:42,068 - INFO - binance-bitget - bitget: pobrana cena = 0.00168
+2025-02-15 12:28:42,070 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: SCR/USDT (dla binance), SCR/USDT (dla bitget)
+2025-02-15 12:28:42,210 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.08954
+2025-02-15 12:28:42,211 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0894
+2025-02-15 12:28:42,212 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SXP/USDT (dla kucoin), SXP/USDT (dla bitget)
+2025-02-15 12:28:42,407 - INFO - binance-bitstamp - binance: pobrana cena = 9.933
+2025-02-15 12:28:42,408 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'UNI/USDT', 'bitstamp': 'UNI/USDT'}. Pomijam.
+2025-02-15 12:28:42,408 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla binance), USDC/USDT (dla bitstamp)
+2025-02-15 12:28:42,475 - INFO - binance-kucoin - binance: pobrana cena = 0.1957
+2025-02-15 12:28:42,476 - INFO - binance-kucoin - kucoin: pobrana cena = 0.19588
+2025-02-15 12:28:42,478 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: MASK/USDT (dla binance), MASK/USDT (dla kucoin)
+2025-02-15 12:28:42,597 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.93
+2025-02-15 12:28:42,598 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:28:42,601 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:28:42,709 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.9999
+2025-02-15 12:28:42,711 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:28:42,713 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SHIB/USDT (dla bitget), SHIB/USDT (dla bitstamp)
+2025-02-15 12:28:42,832 - INFO - binance-bitget - binance: pobrana cena = 0.639
+2025-02-15 12:28:42,832 - INFO - binance-bitget - bitget: pobrana cena = 0.639
+2025-02-15 12:28:42,834 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BSW/USDT (dla binance), BSW/USDT (dla bitget)
+2025-02-15 12:28:42,860 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.242
+2025-02-15 12:28:42,860 - INFO - kucoin-bitget - bitget: pobrana cena = 0.2422
+2025-02-15 12:28:42,861 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: L3/USDT (dla kucoin), L3/USDT (dla bitget)
+2025-02-15 12:28:43,209 - INFO - binance-kucoin - binance: pobrana cena = 2.315
+2025-02-15 12:28:43,211 - INFO - binance-kucoin - kucoin: pobrana cena = 2.3101
+2025-02-15 12:28:43,212 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: TAO/USDT (dla binance), TAO/USDT (dla kucoin)
+2025-02-15 12:28:43,477 - INFO - binance-bitget - binance: pobrana cena = 0.0506
+2025-02-15 12:28:43,479 - INFO - binance-bitget - bitget: pobrana cena = 0.0505
+2025-02-15 12:28:43,481 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: RSR/USDT (dla binance), RSR/USDT (dla bitget)
+2025-02-15 12:28:43,513 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.09036
+2025-02-15 12:28:43,514 - INFO - kucoin-bitget - bitget: pobrana cena = 0.09044
+2025-02-15 12:28:43,514 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PRCL/USDT (dla kucoin), PRCL/USDT (dla bitget)
+2025-02-15 12:28:43,686 - INFO - binance-bitstamp - binance: pobrana cena = 0.9999
+2025-02-15 12:28:43,687 - INFO - binance-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:28:43,689 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ENJ/USDT (dla binance), ENJ/USDT (dla bitstamp)
+2025-02-15 12:28:43,739 - INFO - binance-kucoin - binance: pobrana cena = 383.8
+2025-02-15 12:28:43,741 - INFO - binance-kucoin - kucoin: pobrana cena = 383.75
+2025-02-15 12:28:43,742 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: DEXE/USDT (dla binance), DEXE/USDT (dla kucoin)
+2025-02-15 12:28:43,858 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0
+2025-02-15 12:28:43,859 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:28:43,862 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:28:43,909 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.661e-05
+2025-02-15 12:28:43,910 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SHIB/USDT', 'bitstamp': 'SHIB/USDT'}. Pomijam.
+2025-02-15 12:28:43,911 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SUI/USDT (dla bitget), SUI/USDT (dla bitstamp)
+2025-02-15 12:28:44,104 - INFO - binance-bitget - binance: pobrana cena = 0.008629
+2025-02-15 12:28:44,105 - INFO - binance-bitget - bitget: pobrana cena = 0.008626
+2025-02-15 12:28:44,109 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: QKC/USDT (dla binance), QKC/USDT (dla bitget)
+2025-02-15 12:28:44,134 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.153
+2025-02-15 12:28:44,135 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1522
+2025-02-15 12:28:44,136 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ACH/USDT (dla kucoin), ACH/USDT (dla bitget)
+2025-02-15 12:28:44,515 - INFO - binance-kucoin - binance: pobrana cena = 17.972
+2025-02-15 12:28:44,515 - INFO - binance-kucoin - kucoin: pobrana cena = 17.958
+2025-02-15 12:28:44,516 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: STRAX/USDT (dla binance), STRAX/USDT (dla kucoin)
+2025-02-15 12:28:44,709 - INFO - binance-bitget - binance: pobrana cena = 0.009207
+2025-02-15 12:28:44,710 - INFO - binance-bitget - bitget: pobrana cena = 0.009197
+2025-02-15 12:28:44,713 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: TLM/USDT (dla binance), TLM/USDT (dla bitget)
+2025-02-15 12:28:44,774 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.025153
+2025-02-15 12:28:44,775 - INFO - kucoin-bitget - bitget: pobrana cena = 0.02517
+2025-02-15 12:28:44,776 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ARKM/USDT (dla kucoin), ARKM/USDT (dla bitget)
+2025-02-15 12:28:44,888 - INFO - binance-bitstamp - binance: pobrana cena = 0.126
+2025-02-15 12:28:44,889 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'ENJ/USDT', 'bitstamp': 'ENJ/USDT'}. Pomijam.
+2025-02-15 12:28:44,890 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: TRUMP/USDT (dla binance), TRUMP/USDT (dla bitstamp)
+2025-02-15 12:28:45,034 - INFO - binance-kucoin - binance: pobrana cena = 0.06081
+2025-02-15 12:28:45,034 - INFO - binance-kucoin - kucoin: pobrana cena = 0.0611
+2025-02-15 12:28:45,036 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: DIA/USDT (dla binance), DIA/USDT (dla kucoin)
+2025-02-15 12:28:45,110 - INFO - bitget-bitstamp - bitget: pobrana cena = 3.4714
+2025-02-15 12:28:45,111 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SUI/USDT', 'bitstamp': 'SUI/USDT'}. Pomijam.
+2025-02-15 12:28:45,112 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: WIF/USDT (dla bitget), WIF/USDT (dla bitstamp)
+2025-02-15 12:28:45,129 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97651.7
+2025-02-15 12:28:45,130 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:28:45,316 - INFO - binance-bitget - binance: pobrana cena = 0.00757
+2025-02-15 12:28:45,316 - INFO - binance-bitget - bitget: pobrana cena = 0.00758
+2025-02-15 12:28:45,317 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: SNT/USDT (dla binance), SNT/USDT (dla bitget)
+2025-02-15 12:28:45,409 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.7206
+2025-02-15 12:28:45,410 - INFO - kucoin-bitget - bitget: pobrana cena = 0.719
+2025-02-15 12:28:45,411 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: NC/USDT (dla kucoin), NC/USDT (dla bitget)
+2025-02-15 12:28:45,713 - INFO - binance-kucoin - binance: pobrana cena = 0.5257
+2025-02-15 12:28:45,714 - INFO - binance-kucoin - kucoin: pobrana cena = 0.5214
+2025-02-15 12:28:45,715 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: FXS/USDT (dla binance), FXS/USDT (dla kucoin)
+2025-02-15 12:28:46,062 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.05885
+2025-02-15 12:28:46,075 - INFO - kucoin-bitget - bitget: pobrana cena = 0.05868
+2025-02-15 12:28:46,137 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ALEX/USDT (dla kucoin), ALEX/USDT (dla bitget)
+2025-02-15 12:28:46,148 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:28:46,159 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:28:46,162 - INFO - binance-bitget - binance: pobrana cena = 0.03172
+2025-02-15 12:28:46,162 - INFO - binance-bitget - bitget: pobrana cena = 0.03171
+2025-02-15 12:28:46,164 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MAV/USDT (dla binance), MAV/USDT (dla bitget)
+2025-02-15 12:28:46,165 - INFO - binance-bitstamp - binance: pobrana cena = 19.92
+2025-02-15 12:28:46,168 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'TRUMP/USDT', 'bitstamp': 'TRUMP/USDT'}. Pomijam.
+2025-02-15 12:28:46,181 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SOL/USDT (dla binance), SOL/USDT (dla bitstamp)
+2025-02-15 12:28:46,216 - INFO - binance-kucoin - binance: pobrana cena = 1.812
+2025-02-15 12:28:46,217 - INFO - binance-kucoin - kucoin: pobrana cena = 1.808
+2025-02-15 12:28:46,218 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: JUP/USDT (dla binance), JUP/USDT (dla kucoin)
+2025-02-15 12:28:46,310 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.699
+2025-02-15 12:28:46,311 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'WIF/USDT', 'bitstamp': 'WIF/USDT'}. Pomijam.
+2025-02-15 12:28:46,312 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/USDT (dla bitget), LINK/USDT (dla bitstamp)
+2025-02-15 12:28:46,741 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0441
+2025-02-15 12:28:46,742 - INFO - kucoin-bitget - bitget: pobrana cena = 0.04411
+2025-02-15 12:28:46,743 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ARCA/USDT (dla kucoin), ARCA/USDT (dla bitget)
+2025-02-15 12:28:46,744 - INFO - binance-bitget - binance: pobrana cena = 0.0968
+2025-02-15 12:28:46,744 - INFO - binance-bitget - bitget: pobrana cena = 0.0969
+2025-02-15 12:28:46,745 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: OGN/USDT (dla binance), OGN/USDT (dla bitget)
+2025-02-15 12:28:46,903 - INFO - binance-kucoin - binance: pobrana cena = 0.932
+2025-02-15 12:28:46,904 - INFO - binance-kucoin - kucoin: pobrana cena = 0.931
+2025-02-15 12:28:46,906 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: TWT/USDT (dla binance), TWT/USDT (dla kucoin)
+2025-02-15 12:28:47,292 - INFO - binance-bitstamp - binance: pobrana cena = 195.66
+2025-02-15 12:28:47,292 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'SOL/USDT', 'bitstamp': 'SOL/USDT'}. Pomijam.
+2025-02-15 12:28:47,293 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: GRT/USDT (dla binance), GRT/USDT (dla bitstamp)
+2025-02-15 12:28:47,338 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.02547
+2025-02-15 12:28:47,339 - INFO - kucoin-bitget - bitget: pobrana cena = 0.02519
+2025-02-15 12:28:47,341 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PONKE/USDT (dla kucoin), PONKE/USDT (dla bitget)
+2025-02-15 12:28:47,351 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80731
+2025-02-15 12:28:47,351 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:28:47,353 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:28:47,400 - INFO - binance-bitget - binance: pobrana cena = 0.0812
+2025-02-15 12:28:47,400 - INFO - binance-bitget - bitget: pobrana cena = 0.0812
+2025-02-15 12:28:47,401 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: XLM/USDT (dla binance), XLM/USDT (dla bitget)
+2025-02-15 12:28:47,417 - INFO - binance-kucoin - binance: pobrana cena = 1.011
+2025-02-15 12:28:47,417 - INFO - binance-kucoin - kucoin: pobrana cena = 1.0109
+2025-02-15 12:28:47,418 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: MANA/USDT (dla binance), MANA/USDT (dla kucoin)
+2025-02-15 12:28:47,511 - INFO - bitget-bitstamp - bitget: pobrana cena = 19.24
+2025-02-15 12:28:47,512 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'LINK/USDT', 'bitstamp': 'LINK/USDT'}. Pomijam.
+2025-02-15 12:28:47,513 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AVAX/USDT (dla bitget), AVAX/USDT (dla bitstamp)
+2025-02-15 12:28:47,943 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.16
+2025-02-15 12:28:47,943 - INFO - kucoin-bitget - bitget: pobrana cena = 0.15929
+2025-02-15 12:28:47,944 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AVAX/USDT (dla kucoin), AVAX/USDT (dla bitget)
+2025-02-15 12:28:48,040 - INFO - binance-bitget - binance: pobrana cena = 0.3578
+2025-02-15 12:28:48,041 - INFO - binance-bitget - bitget: pobrana cena = 0.3579
+2025-02-15 12:28:48,042 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: OP/USDT (dla binance), OP/USDT (dla bitget)
+2025-02-15 12:28:48,150 - INFO - binance-kucoin - binance: pobrana cena = 0.3349
+2025-02-15 12:28:48,150 - INFO - binance-kucoin - kucoin: pobrana cena = 0.33464
+2025-02-15 12:28:48,152 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: NEO/USDT (dla binance), NEO/USDT (dla kucoin)
+2025-02-15 12:28:48,492 - INFO - binance-bitstamp - binance: pobrana cena = 0.141
+2025-02-15 12:28:48,493 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'GRT/USDT', 'bitstamp': 'GRT/USDT'}. Pomijam.
+2025-02-15 12:28:48,596 - INFO - kucoin-bitget - kucoin: pobrana cena = 26.129
+2025-02-15 12:28:48,597 - INFO - kucoin-bitget - bitget: pobrana cena = 26.1
+2025-02-15 12:28:48,598 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: FORT/USDT (dla kucoin), FORT/USDT (dla bitget)
+2025-02-15 12:28:48,668 - INFO - binance-bitget - binance: pobrana cena = 1.145
+2025-02-15 12:28:48,669 - INFO - binance-bitget - bitget: pobrana cena = 1.145
+2025-02-15 12:28:48,670 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: TRB/USDT (dla binance), TRB/USDT (dla bitget)
+2025-02-15 12:28:48,711 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.96
+2025-02-15 12:28:48,712 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:28:48,713 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:28:48,715 - INFO - bitget-bitstamp - bitget: pobrana cena = 26.1
+2025-02-15 12:28:48,715 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'AVAX/USDT', 'bitstamp': 'AVAX/USDT'}. Pomijam.
+2025-02-15 12:28:48,716 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SOL/USDT (dla bitget), SOL/USDT (dla bitstamp)
+2025-02-15 12:28:48,797 - INFO - binance-kucoin - binance: pobrana cena = 11.23
+2025-02-15 12:28:48,800 - INFO - binance-kucoin - kucoin: pobrana cena = 11.2225
+2025-02-15 12:28:48,802 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: NMR/USDT (dla binance), NMR/USDT (dla kucoin)
+2025-02-15 12:28:49,239 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0793
+2025-02-15 12:28:49,240 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0785
+2025-02-15 12:28:49,241 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: XRD/USDT (dla kucoin), XRD/USDT (dla bitget)
+2025-02-15 12:28:49,290 - INFO - binance-bitget - binance: pobrana cena = 37.29
+2025-02-15 12:28:49,290 - INFO - binance-bitget - bitget: pobrana cena = 37.25
+2025-02-15 12:28:49,291 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: USUAL/USDT (dla binance), USUAL/USDT (dla bitget)
+2025-02-15 12:28:49,423 - INFO - binance-kucoin - binance: pobrana cena = 11.4
+2025-02-15 12:28:49,424 - INFO - binance-kucoin - kucoin: pobrana cena = 11.405
+2025-02-15 12:28:49,425 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: XNO/USDT (dla binance), XNO/USDT (dla kucoin)
+2025-02-15 12:28:49,494 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla binance), BTC/USDT (dla bitstamp)
+2025-02-15 12:28:49,837 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.01376
+2025-02-15 12:28:49,838 - INFO - kucoin-bitget - bitget: pobrana cena = 0.01376
+2025-02-15 12:28:49,839 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: JAILSTOOL/USDT (dla kucoin), JAILSTOOL/USDT (dla bitget)
+2025-02-15 12:28:49,892 - INFO - binance-bitget - binance: pobrana cena = 0.254
+2025-02-15 12:28:49,892 - INFO - binance-bitget - bitget: pobrana cena = 0.253
+2025-02-15 12:28:49,893 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: AXL/USDT (dla binance), AXL/USDT (dla bitget)
+2025-02-15 12:28:49,914 - INFO - bitget-bitstamp - bitget: pobrana cena = 195.64
+2025-02-15 12:28:49,915 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SOL/USDT', 'bitstamp': 'SOL/USDT'}. Pomijam.
+2025-02-15 12:28:49,915 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla bitget), BTC/USDT (dla bitstamp)
+2025-02-15 12:28:49,957 - INFO - binance-kucoin - binance: pobrana cena = 1.575
+2025-02-15 12:28:49,957 - INFO - binance-kucoin - kucoin: pobrana cena = 1.572
+2025-02-15 12:28:49,958 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: CREAM/USDT (dla binance), CREAM/USDT (dla kucoin)
+2025-02-15 12:28:49,972 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0
+2025-02-15 12:28:49,972 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:28:49,975 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:28:50,050 - INFO - binance-bitstamp - binance: pobrana cena = 97656.14
+2025-02-15 12:28:50,052 - INFO - binance-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:28:50,053 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: GALA/USDT (dla binance), GALA/USDT (dla bitstamp)
+2025-02-15 12:28:50,422 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.04471
+2025-02-15 12:28:50,423 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0443
+2025-02-15 12:28:50,424 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SAND/USDT (dla kucoin), SAND/USDT (dla bitget)
+2025-02-15 12:28:50,482 - INFO - binance-kucoin - binance: pobrana cena = 7.38
+2025-02-15 12:28:50,482 - INFO - binance-kucoin - kucoin: pobrana cena = 7.388
+2025-02-15 12:28:50,483 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BOND/USDT (dla binance), BOND/USDT (dla kucoin)
+2025-02-15 12:28:50,491 - INFO - binance-bitget - binance: pobrana cena = 0.4814
+2025-02-15 12:28:50,492 - INFO - binance-bitget - bitget: pobrana cena = 0.48074
+2025-02-15 12:28:50,493 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ONG/USDT (dla binance), ONG/USDT (dla bitget)
+2025-02-15 12:28:50,995 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'BOND/USDT', 'kucoin': 'BOND/USDT'}
+2025-02-15 12:28:50,996 - INFO - binance-kucoin - kucoin: pobrana cena = 0.322
+2025-02-15 12:28:50,996 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'BOND/USDT', 'kucoin': 'BOND/USDT'}. Pomijam.
+2025-02-15 12:28:50,997 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: LOKA/USDT (dla binance), LOKA/USDT (dla kucoin)
+2025-02-15 12:28:51,010 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.40383
+2025-02-15 12:28:51,011 - INFO - kucoin-bitget - bitget: pobrana cena = 0.404
+2025-02-15 12:28:51,012 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: WEN/USDT (dla kucoin), WEN/USDT (dla bitget)
+2025-02-15 12:28:51,094 - INFO - binance-bitget - binance: pobrana cena = 0.2635
+2025-02-15 12:28:51,095 - INFO - binance-bitget - bitget: pobrana cena = 0.2637
+2025-02-15 12:28:51,096 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: VTHO/USDT (dla binance), VTHO/USDT (dla bitget)
+2025-02-15 12:28:51,207 - INFO - bitget-bitstamp - bitget: pobrana cena = 97650.0
+2025-02-15 12:28:51,209 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:28:51,212 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LTC/USDT (dla bitget), LTC/USDT (dla bitstamp)
+2025-02-15 12:28:51,251 - INFO - binance-bitstamp - binance: pobrana cena = 0.02448
+2025-02-15 12:28:51,253 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'GALA/USDT', 'bitstamp': 'GALA/USDT'}. Pomijam.
+2025-02-15 12:28:51,253 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ARB/USDT (dla binance), ARB/USDT (dla bitstamp)
+2025-02-15 12:28:51,291 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97651.8
+2025-02-15 12:28:51,292 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:28:51,614 - INFO - kucoin-bitget - kucoin: pobrana cena = 3.47e-05
+2025-02-15 12:28:51,614 - INFO - kucoin-bitget - bitget: pobrana cena = 3.47e-05
+2025-02-15 12:28:51,616 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PIXEL/USDT (dla kucoin), PIXEL/USDT (dla bitget)
+2025-02-15 12:28:51,688 - INFO - binance-bitget - binance: pobrana cena = 0.003739
+2025-02-15 12:28:51,689 - INFO - binance-bitget - bitget: pobrana cena = 0.003737
+2025-02-15 12:28:51,690 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: KP3R/USDT (dla binance), KP3R/USDT (dla bitget)
+2025-02-15 12:28:51,756 - INFO - binance-kucoin - binance: pobrana cena = 0.1395
+2025-02-15 12:28:51,757 - INFO - binance-kucoin - kucoin: pobrana cena = 0.139
+2025-02-15 12:28:51,758 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BAL/USDT (dla binance), BAL/USDT (dla kucoin)
+2025-02-15 12:28:52,236 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.06876
+2025-02-15 12:28:52,237 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0685
+2025-02-15 12:28:52,239 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: RMV/USDT (dla kucoin), RMV/USDT (dla bitget)
+2025-02-15 12:28:52,258 - INFO - binance-kucoin - binance: pobrana cena = 2.038
+2025-02-15 12:28:52,259 - INFO - binance-kucoin - kucoin: pobrana cena = 2.024
+2025-02-15 12:28:52,262 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: PENGU/USDT (dla binance), PENGU/USDT (dla kucoin)
+2025-02-15 12:28:52,293 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:28:52,295 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:28:52,296 - WARNING - binance-bitget - Dla binance pobrana cena jest None, pomijam asset {'binance': 'KP3R/USDT', 'bitget': 'KP3R/USDT'}
+2025-02-15 12:28:52,297 - INFO - binance-bitget - bitget: pobrana cena = 19.12
+2025-02-15 12:28:52,299 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'KP3R/USDT', 'bitget': 'KP3R/USDT'}. Pomijam.
+2025-02-15 12:28:52,300 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: API3/USDT (dla binance), API3/USDT (dla bitget)
+2025-02-15 12:28:52,409 - INFO - bitget-bitstamp - bitget: pobrana cena = 132.66
+2025-02-15 12:28:52,410 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'LTC/USDT', 'bitstamp': 'LTC/USDT'}. Pomijam.
+2025-02-15 12:28:52,411 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOGE/USDT (dla bitget), DOGE/USDT (dla bitstamp)
+2025-02-15 12:28:52,451 - INFO - binance-bitstamp - binance: pobrana cena = 0.484
+2025-02-15 12:28:52,452 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'ARB/USDT', 'bitstamp': 'ARB/USDT'}. Pomijam.
+2025-02-15 12:28:52,452 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SHIB/USDT (dla binance), SHIB/USDT (dla bitstamp)
+2025-02-15 12:28:52,763 - INFO - binance-kucoin - binance: pobrana cena = 0.010236
+2025-02-15 12:28:52,764 - INFO - binance-kucoin - kucoin: pobrana cena = 0.01025
+2025-02-15 12:28:52,766 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: DENT/USDT (dla binance), DENT/USDT (dla kucoin)
+2025-02-15 12:28:52,776 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80731
+2025-02-15 12:28:52,777 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:28:52,778 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:28:52,843 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.00478
+2025-02-15 12:28:52,844 - INFO - kucoin-bitget - bitget: pobrana cena = 0.00478
+2025-02-15 12:28:52,845 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: BTT/USDT (dla kucoin), BTT/USDT (dla bitget)
+2025-02-15 12:28:52,951 - INFO - binance-bitget - binance: pobrana cena = 0.904
+2025-02-15 12:28:52,954 - INFO - binance-bitget - bitget: pobrana cena = 0.905
+2025-02-15 12:28:52,959 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: OXT/USDT (dla binance), OXT/USDT (dla bitget)
+2025-02-15 12:28:53,466 - INFO - kucoin-bitget - kucoin: pobrana cena = 8.769e-07
+2025-02-15 12:28:53,466 - INFO - kucoin-bitget - bitget: pobrana cena = 8.76e-07
+2025-02-15 12:28:53,467 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: DOGS/USDT (dla kucoin), DOGS/USDT (dla bitget)
+2025-02-15 12:28:53,528 - INFO - binance-kucoin - binance: pobrana cena = 0.000962
+2025-02-15 12:28:53,529 - INFO - binance-kucoin - kucoin: pobrana cena = 0.0009565
+2025-02-15 12:28:53,532 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: LOOM/USDT (dla binance), LOOM/USDT (dla kucoin)
+2025-02-15 12:28:53,549 - INFO - binance-bitget - binance: pobrana cena = 0.1027
+2025-02-15 12:28:53,549 - INFO - binance-bitget - bitget: pobrana cena = 0.1029
+2025-02-15 12:28:53,551 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: RIF/USDT (dla binance), RIF/USDT (dla bitget)
+2025-02-15 12:28:53,609 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.27732
+2025-02-15 12:28:53,610 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'DOGE/USDT', 'bitstamp': 'DOGE/USDT'}. Pomijam.
+2025-02-15 12:28:53,610 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ADA/USDT (dla bitget), ADA/USDT (dla bitstamp)
+2025-02-15 12:28:53,652 - INFO - binance-bitstamp - binance: pobrana cena = 1.66e-05
+2025-02-15 12:28:53,653 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'SHIB/USDT', 'bitstamp': 'SHIB/USDT'}. Pomijam.
+2025-02-15 12:28:53,654 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LTC/USDT (dla binance), LTC/USDT (dla bitstamp)
+2025-02-15 12:28:53,839 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.96
+2025-02-15 12:28:53,840 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:28:53,840 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:28:54,059 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'LOOM/USDT', 'kucoin': 'LOOM/USDT'}
+2025-02-15 12:28:54,060 - INFO - binance-kucoin - kucoin: pobrana cena = 0.0476
+2025-02-15 12:28:54,061 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'LOOM/USDT', 'kucoin': 'LOOM/USDT'}. Pomijam.
+2025-02-15 12:28:54,061 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BONK/USDT (dla binance), BONK/USDT (dla kucoin)
+2025-02-15 12:28:54,070 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.000189
+2025-02-15 12:28:54,071 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0001889
+2025-02-15 12:28:54,072 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: QUICK/USDT (dla kucoin), QUICK/USDT (dla bitget)
+2025-02-15 12:28:54,200 - INFO - binance-bitget - binance: pobrana cena = 0.0578
+2025-02-15 12:28:54,201 - INFO - binance-bitget - bitget: pobrana cena = 0.0577
+2025-02-15 12:28:54,202 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: VIC/USDT (dla binance), VIC/USDT (dla bitget)
+2025-02-15 12:28:54,567 - INFO - binance-kucoin - binance: pobrana cena = 1.84e-05
+2025-02-15 12:28:54,568 - INFO - binance-kucoin - kucoin: pobrana cena = 1.8381e-05
+2025-02-15 12:28:54,570 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: AEVO/USDT (dla binance), AEVO/USDT (dla kucoin)
+2025-02-15 12:28:54,795 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.02743
+2025-02-15 12:28:54,796 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0271
+2025-02-15 12:28:54,797 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SATS/USDT (dla kucoin), SATS/USDT (dla bitget)
+2025-02-15 12:28:54,809 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.7953
+2025-02-15 12:28:54,810 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'ADA/USDT', 'bitstamp': 'ADA/USDT'}. Pomijam.
+2025-02-15 12:28:54,815 - INFO - binance-bitget - binance: pobrana cena = 0.3084
+2025-02-15 12:28:54,815 - INFO - binance-bitget - bitget: pobrana cena = 0.3085
+2025-02-15 12:28:54,817 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ASR/USDT (dla binance), ASR/USDT (dla bitget)
+2025-02-15 12:28:54,851 - INFO - binance-bitstamp - binance: pobrana cena = 132.66
+2025-02-15 12:28:54,852 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'LTC/USDT', 'bitstamp': 'LTC/USDT'}. Pomijam.
+2025-02-15 12:28:54,853 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BOME/USDT (dla binance), BOME/USDT (dla bitstamp)
+2025-02-15 12:28:55,060 - INFO - binance-kucoin - binance: pobrana cena = 0.166
+2025-02-15 12:28:55,061 - INFO - binance-kucoin - kucoin: pobrana cena = 0.165
+2025-02-15 12:28:55,062 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: GMX/USDT (dla binance), GMX/USDT (dla kucoin)
+2025-02-15 12:28:55,104 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0
+2025-02-15 12:28:55,105 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:28:55,106 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:28:55,309 - INFO - kucoin-bitget - kucoin: pobrana cena = 1.299e-07
+2025-02-15 12:28:55,312 - INFO - kucoin-bitget - bitget: pobrana cena = 1.299e-07
+2025-02-15 12:28:55,314 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ALICE/USDT (dla kucoin), ALICE/USDT (dla bitget)
+2025-02-15 12:28:55,406 - INFO - binance-bitget - binance: pobrana cena = 1.564
+2025-02-15 12:28:55,407 - INFO - binance-bitget - bitget: pobrana cena = 1.564
+2025-02-15 12:28:55,408 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: GMT/USDT (dla binance), GMT/USDT (dla bitget)
+2025-02-15 12:28:55,815 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:28:55,816 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla bitget), XRP/USDT (dla bitstamp)
+2025-02-15 12:28:55,831 - INFO - binance-kucoin - binance: pobrana cena = 20.12
+2025-02-15 12:28:55,832 - INFO - binance-kucoin - kucoin: pobrana cena = 20.07
+2025-02-15 12:28:55,832 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ORCA/USDT (dla binance), ORCA/USDT (dla kucoin)
+2025-02-15 12:28:55,998 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.768
+2025-02-15 12:28:55,999 - INFO - kucoin-bitget - bitget: pobrana cena = 0.771
+2025-02-15 12:28:55,999 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: GAS/USDT (dla kucoin), GAS/USDT (dla bitget)
+2025-02-15 12:28:56,010 - INFO - binance-bitget - binance: pobrana cena = 0.0721
+2025-02-15 12:28:56,011 - INFO - binance-bitget - bitget: pobrana cena = 0.072
+2025-02-15 12:28:56,011 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: METIS/USDT (dla binance), METIS/USDT (dla bitget)
+2025-02-15 12:28:56,052 - INFO - binance-bitstamp - binance: pobrana cena = 0.002272
+2025-02-15 12:28:56,053 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'BOME/USDT', 'bitstamp': 'BOME/USDT'}. Pomijam.
+2025-02-15 12:28:56,054 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla binance), XRP/USDT (dla bitstamp)
+2025-02-15 12:28:56,336 - INFO - binance-kucoin - binance: pobrana cena = 2.208
+2025-02-15 12:28:56,337 - INFO - binance-kucoin - kucoin: pobrana cena = 2.2094
+2025-02-15 12:28:56,338 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: SHIB/USDT (dla binance), SHIB/USDT (dla kucoin)
+2025-02-15 12:28:56,401 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97651.8
+2025-02-15 12:28:56,402 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:28:56,501 - INFO - bitget-bitstamp - bitget: pobrana cena = 2.8074
+2025-02-15 12:28:56,502 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:28:56,504 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla bitget), ETH/USDT (dla bitstamp)
+2025-02-15 12:28:56,638 - INFO - kucoin-bitget - kucoin: pobrana cena = 3.9486
+2025-02-15 12:28:56,639 - INFO - kucoin-bitget - bitget: pobrana cena = 3.95
+2025-02-15 12:28:56,640 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: VELO/USDT (dla kucoin), VELO/USDT (dla bitget)
+2025-02-15 12:28:56,649 - INFO - binance-bitget - binance: pobrana cena = 22.99
+2025-02-15 12:28:56,650 - INFO - binance-bitget - bitget: pobrana cena = 23.0
+2025-02-15 12:28:56,652 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: LSK/USDT (dla binance), LSK/USDT (dla bitget)
+2025-02-15 12:28:56,871 - INFO - binance-kucoin - binance: pobrana cena = 1.66e-05
+2025-02-15 12:28:56,871 - INFO - binance-kucoin - kucoin: pobrana cena = 1.6607e-05
+2025-02-15 12:28:56,872 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: KNC/USDT (dla binance), KNC/USDT (dla kucoin)
+2025-02-15 12:28:57,120 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.02041
+2025-02-15 12:28:57,120 - INFO - kucoin-bitget - bitget: pobrana cena = 0.02027
+2025-02-15 12:28:57,121 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: OAS/USDT (dla kucoin), OAS/USDT (dla bitget)
+2025-02-15 12:28:57,257 - INFO - binance-bitget - binance: pobrana cena = 0.759
+2025-02-15 12:28:57,258 - INFO - binance-bitget - bitget: pobrana cena = 0.758
+2025-02-15 12:28:57,259 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: IOST/USDT (dla binance), IOST/USDT (dla bitget)
+2025-02-15 12:28:57,319 - INFO - binance-bitstamp - binance: pobrana cena = 2.8079
+2025-02-15 12:28:57,322 - INFO - binance-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:28:57,323 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla binance), ETH/USDT (dla bitstamp)
+2025-02-15 12:28:57,361 - INFO - binance-kucoin - binance: pobrana cena = 0.4355
+2025-02-15 12:28:57,362 - INFO - binance-kucoin - kucoin: pobrana cena = 0.4358
+2025-02-15 12:28:57,363 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: C98/USDT (dla binance), C98/USDT (dla kucoin)
+2025-02-15 12:28:57,405 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:28:57,406 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:28:57,730 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.02057
+2025-02-15 12:28:57,740 - INFO - kucoin-bitget - bitget: pobrana cena = 0.02058
+2025-02-15 12:28:57,755 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ROUTE/USDT (dla kucoin), ROUTE/USDT (dla bitget)
+2025-02-15 12:28:57,786 - INFO - bitget-bitstamp - bitget: pobrana cena = 2709.36
+2025-02-15 12:28:57,788 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:28:57,789 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ONDO/USDT (dla bitget), ONDO/USDT (dla bitstamp)
+2025-02-15 12:28:57,856 - INFO - binance-bitget - binance: pobrana cena = 0.005102
+2025-02-15 12:28:57,856 - INFO - binance-bitget - bitget: pobrana cena = 0.005097
+2025-02-15 12:28:57,857 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: CGPT/USDT (dla binance), CGPT/USDT (dla bitget)
+2025-02-15 12:28:57,863 - INFO - binance-kucoin - binance: pobrana cena = 0.1049
+2025-02-15 12:28:57,863 - INFO - binance-kucoin - kucoin: pobrana cena = 0.1048
+2025-02-15 12:28:57,864 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: KDA/USDT (dla binance), KDA/USDT (dla kucoin)
+2025-02-15 12:28:58,467 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.01906
+2025-02-15 12:28:58,468 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0191
+2025-02-15 12:28:58,470 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: DOGE/USDT (dla kucoin), DOGE/USDT (dla bitget)
+2025-02-15 12:28:58,471 - INFO - binance-bitget - binance: pobrana cena = 0.1416
+2025-02-15 12:28:58,471 - INFO - binance-bitget - bitget: pobrana cena = 0.14164
+2025-02-15 12:28:58,472 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: STX/USDT (dla binance), STX/USDT (dla bitget)
+2025-02-15 12:28:58,544 - INFO - binance-kucoin - binance: pobrana cena = 0.5511
+2025-02-15 12:28:58,545 - INFO - binance-kucoin - kucoin: pobrana cena = 0.5503
+2025-02-15 12:28:58,547 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: TFUEL/USDT (dla binance), TFUEL/USDT (dla kucoin)
+2025-02-15 12:28:58,604 - INFO - binance-bitstamp - binance: pobrana cena = 2709.99
+2025-02-15 12:28:58,605 - INFO - binance-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:28:58,606 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: MATIC/USDT (dla binance), MATIC/USDT (dla bitstamp)
+2025-02-15 12:28:58,671 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80783
+2025-02-15 12:28:58,672 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:28:58,674 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:28:58,987 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.3011
+2025-02-15 12:28:58,988 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'ONDO/USDT', 'bitstamp': 'ONDO/USDT'}. Pomijam.
+2025-02-15 12:28:58,990 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: NEAR/USDT (dla bitget), NEAR/USDT (dla bitstamp)
+2025-02-15 12:28:59,075 - INFO - binance-bitget - binance: pobrana cena = 0.961
+2025-02-15 12:28:59,076 - INFO - binance-bitget - bitget: pobrana cena = 0.961
+2025-02-15 12:28:59,077 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: RENDER/USDT (dla binance), RENDER/USDT (dla bitget)
+2025-02-15 12:28:59,113 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.27739
+2025-02-15 12:28:59,114 - INFO - kucoin-bitget - bitget: pobrana cena = 0.27732
+2025-02-15 12:28:59,115 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: 1INCH/USDT (dla kucoin), 1INCH/USDT (dla bitget)
+2025-02-15 12:28:59,200 - INFO - binance-kucoin - binance: pobrana cena = 0.04949
+2025-02-15 12:28:59,201 - INFO - binance-kucoin - kucoin: pobrana cena = 0.04958
+2025-02-15 12:28:59,201 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ANKR/USDT (dla binance), ANKR/USDT (dla kucoin)
+2025-02-15 12:28:59,668 - INFO - binance-bitget - binance: pobrana cena = 4.639
+2025-02-15 12:28:59,669 - INFO - binance-bitget - bitget: pobrana cena = 4.633
+2025-02-15 12:28:59,671 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: TON/USDT (dla binance), TON/USDT (dla bitget)
+2025-02-15 12:28:59,708 - INFO - binance-kucoin - binance: pobrana cena = 0.02318
+2025-02-15 12:28:59,709 - INFO - binance-kucoin - kucoin: pobrana cena = 0.02315
+2025-02-15 12:28:59,710 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: STG/USDT (dla binance), STG/USDT (dla kucoin)
+2025-02-15 12:28:59,741 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.27761
+2025-02-15 12:28:59,742 - INFO - kucoin-bitget - bitget: pobrana cena = 0.2774
+2025-02-15 12:28:59,743 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: BIGTIME/USDT (dla kucoin), BIGTIME/USDT (dla bitget)
+2025-02-15 12:28:59,806 - WARNING - binance-bitstamp - Dla binance pobrana cena jest None, pomijam asset {'binance': 'MATIC/USDT', 'bitstamp': 'MATIC/USDT'}
+2025-02-15 12:28:59,807 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'MATIC/USDT', 'bitstamp': 'MATIC/USDT'}. Pomijam.
+2025-02-15 12:28:59,808 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: CHZ/USDT (dla binance), CHZ/USDT (dla bitstamp)
+2025-02-15 12:28:59,940 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.96
+2025-02-15 12:28:59,942 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:28:59,944 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:00,188 - INFO - bitget-bitstamp - bitget: pobrana cena = 3.519
+2025-02-15 12:29:00,189 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'NEAR/USDT', 'bitstamp': 'NEAR/USDT'}. Pomijam.
+2025-02-15 12:29:00,190 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: PEPE/USDT (dla bitget), PEPE/USDT (dla bitstamp)
+2025-02-15 12:29:00,217 - INFO - binance-kucoin - binance: pobrana cena = 0.2767
+2025-02-15 12:29:00,217 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2769
+2025-02-15 12:29:00,218 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: LISTA/USDT (dla binance), LISTA/USDT (dla kucoin)
+2025-02-15 12:29:00,263 - INFO - binance-bitget - binance: pobrana cena = 3.79
+2025-02-15 12:29:00,263 - INFO - binance-bitget - bitget: pobrana cena = 3.79
+2025-02-15 12:29:00,265 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: NFP/USDT (dla binance), NFP/USDT (dla bitget)
+2025-02-15 12:29:00,451 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.06407
+2025-02-15 12:29:00,451 - INFO - kucoin-bitget - bitget: pobrana cena = 0.064
+2025-02-15 12:29:00,452 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: DUCK/USDT (dla kucoin), DUCK/USDT (dla bitget)
+2025-02-15 12:29:00,814 - INFO - binance-kucoin - binance: pobrana cena = 0.2658
+2025-02-15 12:29:00,814 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2651
+2025-02-15 12:29:00,815 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: QI/USDT (dla binance), QI/USDT (dla kucoin)
+2025-02-15 12:29:00,861 - INFO - binance-bitget - binance: pobrana cena = 0.1383
+2025-02-15 12:29:00,862 - INFO - binance-bitget - bitget: pobrana cena = 0.1382
+2025-02-15 12:29:00,863 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MOVE/USDT (dla binance), MOVE/USDT (dla bitget)
+2025-02-15 12:29:00,956 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.003433
+2025-02-15 12:29:00,956 - INFO - kucoin-bitget - bitget: pobrana cena = 0.00343
+2025-02-15 12:29:00,957 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ATOM/USDT (dla kucoin), ATOM/USDT (dla bitget)
+2025-02-15 12:29:01,006 - INFO - binance-bitstamp - binance: pobrana cena = 0.0611
+2025-02-15 12:29:01,006 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'CHZ/USDT', 'bitstamp': 'CHZ/USDT'}. Pomijam.
+2025-02-15 12:29:01,007 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: FTM/USDT (dla binance), FTM/USDT (dla bitstamp)
+2025-02-15 12:29:01,213 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:01,214 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:01,282 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:01,335 - INFO - binance-kucoin - binance: pobrana cena = 0.01011
+2025-02-15 12:29:01,336 - INFO - binance-kucoin - kucoin: pobrana cena = 0.010095
+2025-02-15 12:29:01,337 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: REZ/USDT (dla binance), REZ/USDT (dla kucoin)
+2025-02-15 12:29:01,389 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.01e-05
+2025-02-15 12:29:01,390 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'PEPE/USDT', 'bitstamp': 'PEPE/USDT'}. Pomijam.
+2025-02-15 12:29:01,391 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla bitget), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:01,453 - INFO - binance-bitget - binance: pobrana cena = 0.5671
+2025-02-15 12:29:01,454 - INFO - binance-bitget - bitget: pobrana cena = 0.5671
+2025-02-15 12:29:01,456 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: PAXG/USDT (dla binance), PAXG/USDT (dla bitget)
+2025-02-15 12:29:01,612 - INFO - kucoin-bitget - kucoin: pobrana cena = 4.9648
+2025-02-15 12:29:01,614 - INFO - kucoin-bitget - bitget: pobrana cena = 4.968
+2025-02-15 12:29:01,620 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EIGEN/USDT (dla kucoin), EIGEN/USDT (dla bitget)
+2025-02-15 12:29:01,998 - INFO - binance-kucoin - binance: pobrana cena = 0.01661
+2025-02-15 12:29:01,999 - INFO - binance-kucoin - kucoin: pobrana cena = 0.0166
+2025-02-15 12:29:02,001 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: SUI/USDT (dla binance), SUI/USDT (dla kucoin)
+2025-02-15 12:29:02,061 - INFO - binance-bitget - binance: pobrana cena = 2906.0
+2025-02-15 12:29:02,062 - INFO - binance-bitget - bitget: pobrana cena = 2905.0
+2025-02-15 12:29:02,063 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: YFI/USDT (dla binance), YFI/USDT (dla bitget)
+2025-02-15 12:29:02,206 - WARNING - binance-bitstamp - Dla binance pobrana cena jest None, pomijam asset {'binance': 'FTM/USDT', 'bitstamp': 'FTM/USDT'}
+2025-02-15 12:29:02,207 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'FTM/USDT', 'bitstamp': 'FTM/USDT'}. Pomijam.
+2025-02-15 12:29:02,207 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOGE/USDT (dla binance), DOGE/USDT (dla bitstamp)
+2025-02-15 12:29:02,260 - INFO - kucoin-bitget - kucoin: pobrana cena = 1.6502
+2025-02-15 12:29:02,261 - INFO - kucoin-bitget - bitget: pobrana cena = 1.65
+2025-02-15 12:29:02,262 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: STORJ/USDT (dla kucoin), STORJ/USDT (dla bitget)
+2025-02-15 12:29:02,479 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97651.7
+2025-02-15 12:29:02,479 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:02,520 - INFO - binance-kucoin - binance: pobrana cena = 3.4715
+2025-02-15 12:29:02,521 - INFO - binance-kucoin - kucoin: pobrana cena = 3.472
+2025-02-15 12:29:02,521 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: KAVA/USDT (dla binance), KAVA/USDT (dla kucoin)
+2025-02-15 12:29:02,660 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.9999
+2025-02-15 12:29:02,661 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:02,663 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SHIB/USDT (dla bitget), SHIB/USDT (dla bitstamp)
+2025-02-15 12:29:02,683 - INFO - binance-bitget - binance: pobrana cena = 6088.0
+2025-02-15 12:29:02,684 - INFO - binance-bitget - bitget: pobrana cena = 6078.0
+2025-02-15 12:29:02,686 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: SEI/USDT (dla binance), SEI/USDT (dla bitget)
+2025-02-15 12:29:02,802 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.3483
+2025-02-15 12:29:02,803 - INFO - kucoin-bitget - bitget: pobrana cena = 0.3483
+2025-02-15 12:29:02,805 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: MEMEFI/USDT (dla kucoin), MEMEFI/USDT (dla bitget)
+2025-02-15 12:29:03,058 - INFO - binance-kucoin - binance: pobrana cena = 0.4772
+2025-02-15 12:29:03,059 - INFO - binance-kucoin - kucoin: pobrana cena = 0.4767
+2025-02-15 12:29:03,060 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BTCUP/USDT (dla binance), BTCUP/USDT (dla kucoin)
+2025-02-15 12:29:03,298 - INFO - binance-bitget - binance: pobrana cena = 0.2398
+2025-02-15 12:29:03,299 - INFO - binance-bitget - bitget: pobrana cena = 0.2397
+2025-02-15 12:29:03,300 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: FIL/USDT (dla binance), FIL/USDT (dla bitget)
+2025-02-15 12:29:03,401 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.00162
+2025-02-15 12:29:03,402 - INFO - kucoin-bitget - bitget: pobrana cena = 0.001615
+2025-02-15 12:29:03,403 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PYTH/USDT (dla kucoin), PYTH/USDT (dla bitget)
+2025-02-15 12:29:03,406 - INFO - binance-bitstamp - binance: pobrana cena = 0.27741
+2025-02-15 12:29:03,406 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'DOGE/USDT', 'bitstamp': 'DOGE/USDT'}. Pomijam.
+2025-02-15 12:29:03,407 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XLM/USDT (dla binance), XLM/USDT (dla bitstamp)
+2025-02-15 12:29:03,482 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:03,483 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:03,649 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'BTCUP/USDT', 'kucoin': 'BTCUP/USDT'}
+2025-02-15 12:29:03,650 - INFO - binance-kucoin - kucoin: pobrana cena = 76.1866
+2025-02-15 12:29:03,650 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'BTCUP/USDT', 'kucoin': 'BTCUP/USDT'}. Pomijam.
+2025-02-15 12:29:03,651 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: LUNA/USDT (dla binance), LUNA/USDT (dla kucoin)
+2025-02-15 12:29:03,860 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.661e-05
+2025-02-15 12:29:03,861 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SHIB/USDT', 'bitstamp': 'SHIB/USDT'}. Pomijam.
+2025-02-15 12:29:03,861 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SUI/USDT (dla bitget), SUI/USDT (dla bitstamp)
+2025-02-15 12:29:03,909 - INFO - binance-bitget - binance: pobrana cena = 3.493
+2025-02-15 12:29:03,910 - INFO - binance-bitget - bitget: pobrana cena = 3.491
+2025-02-15 12:29:03,911 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: G/USDT (dla binance), G/USDT (dla bitget)
+2025-02-15 12:29:04,001 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.21672
+2025-02-15 12:29:04,002 - INFO - kucoin-bitget - bitget: pobrana cena = 0.2171
+2025-02-15 12:29:04,004 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PGC/USDT (dla kucoin), PGC/USDT (dla bitget)
+2025-02-15 12:29:04,241 - INFO - binance-kucoin - binance: pobrana cena = 0.2675
+2025-02-15 12:29:04,242 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2676
+2025-02-15 12:29:04,242 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: WIN/USDT (dla binance), WIN/USDT (dla kucoin)
+2025-02-15 12:29:04,527 - INFO - binance-bitget - binance: pobrana cena = 0.01954
+2025-02-15 12:29:04,528 - INFO - binance-bitget - bitget: pobrana cena = 0.01955
+2025-02-15 12:29:04,531 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: LINA/USDT (dla binance), LINA/USDT (dla bitget)
+2025-02-15 12:29:04,604 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.00036
+2025-02-15 12:29:04,605 - INFO - kucoin-bitget - bitget: pobrana cena = 0.000361
+2025-02-15 12:29:04,609 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ZEREBRO/USDT (dla kucoin), ZEREBRO/USDT (dla bitget)
+2025-02-15 12:29:04,610 - INFO - binance-bitstamp - binance: pobrana cena = 0.3578
+2025-02-15 12:29:04,610 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'XLM/USDT', 'bitstamp': 'XLM/USDT'}. Pomijam.
+2025-02-15 12:29:04,611 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: OP/USDT (dla binance), OP/USDT (dla bitstamp)
+2025-02-15 12:29:04,668 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80777
+2025-02-15 12:29:04,668 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:04,670 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:04,757 - INFO - binance-kucoin - binance: pobrana cena = 7.86e-05
+2025-02-15 12:29:04,758 - INFO - binance-kucoin - kucoin: pobrana cena = 7.858e-05
+2025-02-15 12:29:04,759 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: AR/USDT (dla binance), AR/USDT (dla kucoin)
+2025-02-15 12:29:05,060 - INFO - bitget-bitstamp - bitget: pobrana cena = 3.4713
+2025-02-15 12:29:05,061 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SUI/USDT', 'bitstamp': 'SUI/USDT'}. Pomijam.
+2025-02-15 12:29:05,062 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: WIF/USDT (dla bitget), WIF/USDT (dla bitstamp)
+2025-02-15 12:29:05,116 - INFO - binance-bitget - binance: pobrana cena = 0.002709
+2025-02-15 12:29:05,117 - INFO - binance-bitget - bitget: pobrana cena = 0.00271
+2025-02-15 12:29:05,119 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BETA/USDT (dla binance), BETA/USDT (dla bitget)
+2025-02-15 12:29:05,239 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0359
+2025-02-15 12:29:05,240 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0359
+2025-02-15 12:29:05,242 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ACX/USDT (dla kucoin), ACX/USDT (dla bitget)
+2025-02-15 12:29:05,470 - INFO - binance-kucoin - binance: pobrana cena = 9.4
+2025-02-15 12:29:05,471 - INFO - binance-kucoin - kucoin: pobrana cena = 9.394
+2025-02-15 12:29:05,472 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ZEN/USDT (dla binance), ZEN/USDT (dla kucoin)
+2025-02-15 12:29:05,778 - INFO - binance-bitget - binance: pobrana cena = 0.02887
+2025-02-15 12:29:05,779 - INFO - binance-bitget - bitget: pobrana cena = 0.02882
+2025-02-15 12:29:05,780 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: W/USDT (dla binance), W/USDT (dla bitget)
+2025-02-15 12:29:05,807 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.3368
+2025-02-15 12:29:05,808 - INFO - kucoin-bitget - bitget: pobrana cena = 0.3381
+2025-02-15 12:29:05,809 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SLN/USDT (dla kucoin), SLN/USDT (dla bitget)
+2025-02-15 12:29:05,810 - INFO - binance-bitstamp - binance: pobrana cena = 1.145
+2025-02-15 12:29:05,811 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'OP/USDT', 'bitstamp': 'OP/USDT'}. Pomijam.
+2025-02-15 12:29:05,811 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ICP/USDT (dla binance), ICP/USDT (dla bitstamp)
+2025-02-15 12:29:05,927 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.96
+2025-02-15 12:29:05,928 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:05,930 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:05,996 - INFO - binance-kucoin - binance: pobrana cena = 14.88
+2025-02-15 12:29:06,002 - INFO - binance-kucoin - kucoin: pobrana cena = 14.874
+2025-02-15 12:29:06,004 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: FLOW/USDT (dla binance), FLOW/USDT (dla kucoin)
+2025-02-15 12:29:06,264 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.7
+2025-02-15 12:29:06,264 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'WIF/USDT', 'bitstamp': 'WIF/USDT'}. Pomijam.
+2025-02-15 12:29:06,265 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/USDT (dla bitget), LINK/USDT (dla bitstamp)
+2025-02-15 12:29:06,391 - INFO - binance-bitget - binance: pobrana cena = 0.181
+2025-02-15 12:29:06,393 - INFO - binance-bitget - bitget: pobrana cena = 0.1809
+2025-02-15 12:29:06,396 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: HEI/USDT (dla binance), HEI/USDT (dla bitget)
+2025-02-15 12:29:06,537 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1425
+2025-02-15 12:29:06,540 - WARNING - kucoin-bitget - Dla bitget pobrana cena jest None, pomijam asset {'kucoin': 'SLN/USDT', 'bitget': 'SLN/USDT'}
+2025-02-15 12:29:06,542 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'SLN/USDT', 'bitget': 'SLN/USDT'}. Pomijam.
+2025-02-15 12:29:06,542 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: MOCA/USDT (dla kucoin), MOCA/USDT (dla bitget)
+2025-02-15 12:29:06,543 - INFO - binance-kucoin - binance: pobrana cena = 0.526
+2025-02-15 12:29:06,544 - INFO - binance-kucoin - kucoin: pobrana cena = 0.5258
+2025-02-15 12:29:06,544 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: YGG/USDT (dla binance), YGG/USDT (dla kucoin)
+2025-02-15 12:29:06,992 - INFO - binance-bitget - binance: pobrana cena = 0.7189
+2025-02-15 12:29:06,993 - INFO - binance-bitget - bitget: pobrana cena = 0.7202
+2025-02-15 12:29:06,995 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BLUR/USDT (dla binance), BLUR/USDT (dla bitget)
+2025-02-15 12:29:07,008 - INFO - binance-bitstamp - binance: pobrana cena = 7.168
+2025-02-15 12:29:07,008 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'ICP/USDT', 'bitstamp': 'ICP/USDT'}. Pomijam.
+2025-02-15 12:29:07,009 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EGLD/USDT (dla binance), EGLD/USDT (dla bitstamp)
+2025-02-15 12:29:07,045 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.14172
+2025-02-15 12:29:07,045 - INFO - kucoin-bitget - bitget: pobrana cena = 0.14183
+2025-02-15 12:29:07,046 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SLP/USDT (dla kucoin), SLP/USDT (dla bitget)
+2025-02-15 12:29:07,183 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:07,184 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:07,186 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:07,281 - INFO - binance-kucoin - binance: pobrana cena = 0.2669
+2025-02-15 12:29:07,282 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2666
+2025-02-15 12:29:07,283 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: TNSR/USDT (dla binance), TNSR/USDT (dla kucoin)
+2025-02-15 12:29:07,461 - INFO - bitget-bitstamp - bitget: pobrana cena = 19.24
+2025-02-15 12:29:07,461 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'LINK/USDT', 'bitstamp': 'LINK/USDT'}. Pomijam.
+2025-02-15 12:29:07,461 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AVAX/USDT (dla bitget), AVAX/USDT (dla bitstamp)
+2025-02-15 12:29:07,656 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.002518
+2025-02-15 12:29:07,656 - INFO - kucoin-bitget - bitget: pobrana cena = 0.002518
+2025-02-15 12:29:07,657 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SKL/USDT (dla kucoin), SKL/USDT (dla bitget)
+2025-02-15 12:29:07,703 - INFO - binance-bitget - binance: pobrana cena = 0.1412
+2025-02-15 12:29:07,704 - INFO - binance-bitget - bitget: pobrana cena = 0.1412
+2025-02-15 12:29:07,706 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: PNUT/USDT (dla binance), PNUT/USDT (dla bitget)
+2025-02-15 12:29:07,978 - INFO - binance-kucoin - binance: pobrana cena = 0.3866
+2025-02-15 12:29:07,979 - INFO - binance-kucoin - kucoin: pobrana cena = 0.3866
+2025-02-15 12:29:07,980 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: MANTA/USDT (dla binance), MANTA/USDT (dla kucoin)
+2025-02-15 12:29:08,208 - INFO - binance-bitstamp - binance: pobrana cena = 23.05
+2025-02-15 12:29:08,209 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EGLD/USDT', 'bitstamp': 'EGLD/USDT'}. Pomijam.
+2025-02-15 12:29:08,210 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: YFI/USDT (dla binance), YFI/USDT (dla bitstamp)
+2025-02-15 12:29:08,278 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.03702
+2025-02-15 12:29:08,279 - INFO - kucoin-bitget - bitget: pobrana cena = 0.03706
+2025-02-15 12:29:08,280 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: BERA/USDT (dla kucoin), BERA/USDT (dla bitget)
+2025-02-15 12:29:08,305 - INFO - binance-bitget - binance: pobrana cena = 0.1644
+2025-02-15 12:29:08,306 - INFO - binance-bitget - bitget: pobrana cena = 0.1644
+2025-02-15 12:29:08,308 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: CTSI/USDT (dla binance), CTSI/USDT (dla bitget)
+2025-02-15 12:29:08,449 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97640.4
+2025-02-15 12:29:08,453 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:08,488 - INFO - binance-kucoin - binance: pobrana cena = 0.412
+2025-02-15 12:29:08,490 - INFO - binance-kucoin - kucoin: pobrana cena = 0.4116
+2025-02-15 12:29:08,493 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ELF/USDT (dla binance), ELF/USDT (dla kucoin)
+2025-02-15 12:29:08,661 - INFO - bitget-bitstamp - bitget: pobrana cena = 26.1
+2025-02-15 12:29:08,662 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'AVAX/USDT', 'bitstamp': 'AVAX/USDT'}. Pomijam.
+2025-02-15 12:29:08,664 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SOL/USDT (dla bitget), SOL/USDT (dla bitstamp)
+2025-02-15 12:29:08,882 - INFO - kucoin-bitget - kucoin: pobrana cena = 5.8009
+2025-02-15 12:29:08,883 - INFO - kucoin-bitget - bitget: pobrana cena = 5.7989
+2025-02-15 12:29:08,884 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AUDIO/USDT (dla kucoin), AUDIO/USDT (dla bitget)
+2025-02-15 12:29:08,936 - INFO - binance-bitget - binance: pobrana cena = 0.1156
+2025-02-15 12:29:08,937 - INFO - binance-bitget - bitget: pobrana cena = 0.1158
+2025-02-15 12:29:08,938 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: JTO/USDT (dla binance), JTO/USDT (dla bitget)
+2025-02-15 12:29:09,012 - INFO - binance-kucoin - binance: pobrana cena = 0.2921
+2025-02-15 12:29:09,013 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2919
+2025-02-15 12:29:09,014 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: FLOKI/USDT (dla binance), FLOKI/USDT (dla kucoin)
+2025-02-15 12:29:09,409 - INFO - binance-bitstamp - binance: pobrana cena = 6088.0
+2025-02-15 12:29:09,410 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'YFI/USDT', 'bitstamp': 'YFI/USDT'}. Pomijam.
+2025-02-15 12:29:09,411 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOT/USDT (dla binance), DOT/USDT (dla bitstamp)
+2025-02-15 12:29:09,455 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:09,456 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:09,504 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1025
+2025-02-15 12:29:09,505 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1028
+2025-02-15 12:29:09,507 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: MXC/USDT (dla kucoin), MXC/USDT (dla bitget)
+2025-02-15 12:29:09,519 - INFO - binance-kucoin - binance: pobrana cena = 9.831e-05
+2025-02-15 12:29:09,520 - INFO - binance-kucoin - kucoin: pobrana cena = 9.83e-05
+2025-02-15 12:29:09,521 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: D/USDT (dla binance), D/USDT (dla kucoin)
+2025-02-15 12:29:09,530 - INFO - binance-bitget - binance: pobrana cena = 3.2
+2025-02-15 12:29:09,531 - INFO - binance-bitget - bitget: pobrana cena = 3.212
+2025-02-15 12:29:09,532 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: USTC/USDT (dla binance), USTC/USDT (dla bitget)
+2025-02-15 12:29:09,861 - INFO - bitget-bitstamp - bitget: pobrana cena = 195.69
+2025-02-15 12:29:09,862 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SOL/USDT', 'bitstamp': 'SOL/USDT'}. Pomijam.
+2025-02-15 12:29:09,863 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla bitget), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:10,104 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.00323
+2025-02-15 12:29:10,104 - INFO - kucoin-bitget - bitget: pobrana cena = 0.003254
+2025-02-15 12:29:10,106 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ZKF/USDT (dla kucoin), ZKF/USDT (dla bitget)
+2025-02-15 12:29:10,269 - INFO - binance-bitget - binance: pobrana cena = 0.01859
+2025-02-15 12:29:10,270 - INFO - binance-bitget - bitget: pobrana cena = 0.01855
+2025-02-15 12:29:10,271 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ICX/USDT (dla binance), ICX/USDT (dla bitget)
+2025-02-15 12:29:10,279 - INFO - binance-kucoin - binance: pobrana cena = 0.08521
+2025-02-15 12:29:10,280 - INFO - binance-kucoin - kucoin: pobrana cena = 0.08484
+2025-02-15 12:29:10,281 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: MTL/USDT (dla binance), MTL/USDT (dla kucoin)
+2025-02-15 12:29:10,611 - INFO - binance-bitstamp - binance: pobrana cena = 5.088
+2025-02-15 12:29:10,612 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'DOT/USDT', 'bitstamp': 'DOT/USDT'}. Pomijam.
+2025-02-15 12:29:10,613 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: RNDR/USDT (dla binance), RNDR/USDT (dla bitstamp)
+2025-02-15 12:29:10,678 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80777
+2025-02-15 12:29:10,679 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:10,681 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:10,705 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.00035
+2025-02-15 12:29:10,706 - INFO - kucoin-bitget - bitget: pobrana cena = 0.000363
+2025-02-15 12:29:10,800 - INFO - binance-kucoin - binance: pobrana cena = 0.946
+2025-02-15 12:29:10,801 - INFO - binance-kucoin - kucoin: pobrana cena = 0.9446
+2025-02-15 12:29:10,802 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: PEOPLE/USDT (dla binance), PEOPLE/USDT (dla kucoin)
+2025-02-15 12:29:10,881 - INFO - binance-bitget - binance: pobrana cena = 0.1323
+2025-02-15 12:29:10,882 - INFO - binance-bitget - bitget: pobrana cena = 0.132
+2025-02-15 12:29:10,883 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: WING/USDT (dla binance), WING/USDT (dla bitget)
+2025-02-15 12:29:11,148 - INFO - bitget-bitstamp - bitget: pobrana cena = 97650.0
+2025-02-15 12:29:11,148 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:11,150 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LTC/USDT (dla bitget), LTC/USDT (dla bitstamp)
+2025-02-15 12:29:11,416 - INFO - kucoin-bitget - Okazja arbitrażowa dla {'kucoin': 'ZKF/USDT', 'bitget': 'ZKF/USDT'}: Kupno na KucoinExchange (cena: 0.00035, efektywna: 0.0004), sprzedaż na BitgetExchange (cena: 0.000363, efektywna: 0.0004), zysk: 3.51%. [Liquidity -> kucoin - Top Bid: [0.00035, 613916.1132], Top Ask: [0.00036, 135322.3556]; bitget - Top Bid: [0.00036, 298705.5], Top Ask: [0.000362, 166925.37] | Można kupić 135322.3556 jednostek; Niewystarczająca płynność na kucoin (dostępne: 135322.3556); Potencjalne przychody: 48.67 USDT; ]
+2025-02-15 12:29:11,544 - INFO - binance-bitget - binance: pobrana cena = 3.998
+2025-02-15 12:29:11,545 - INFO - binance-bitget - bitget: pobrana cena = 4.0
+2025-02-15 12:29:11,546 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ROSE/USDT (dla binance), ROSE/USDT (dla bitget)
+2025-02-15 12:29:11,812 - WARNING - binance-bitstamp - Dla binance pobrana cena jest None, pomijam asset {'binance': 'RNDR/USDT', 'bitstamp': 'RNDR/USDT'}
+2025-02-15 12:29:11,813 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'RNDR/USDT', 'bitstamp': 'RNDR/USDT'}. Pomijam.
+2025-02-15 12:29:11,813 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: NEAR/USDT (dla binance), NEAR/USDT (dla bitstamp)
+2025-02-15 12:29:11,945 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.96
+2025-02-15 12:29:11,945 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:11,947 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:12,152 - INFO - binance-bitget - binance: pobrana cena = 0.04449
+2025-02-15 12:29:12,152 - INFO - binance-bitget - bitget: pobrana cena = 0.04441
+2025-02-15 12:29:12,154 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ALPACA/USDT (dla binance), ALPACA/USDT (dla bitget)
+2025-02-15 12:29:12,165 - INFO - binance-kucoin - binance: pobrana cena = 0.02072
+2025-02-15 12:29:12,165 - INFO - binance-kucoin - kucoin: pobrana cena = 0.02073
+2025-02-15 12:29:12,167 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: COW/USDT (dla binance), COW/USDT (dla kucoin)
+2025-02-15 12:29:12,348 - INFO - bitget-bitstamp - bitget: pobrana cena = 132.7
+2025-02-15 12:29:12,349 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'LTC/USDT', 'bitstamp': 'LTC/USDT'}. Pomijam.
+2025-02-15 12:29:12,350 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOGE/USDT (dla bitget), DOGE/USDT (dla bitstamp)
+2025-02-15 12:29:12,418 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: CAKE/USDT (dla kucoin), CAKE/USDT (dla bitget)
+2025-02-15 12:29:12,673 - INFO - binance-kucoin - binance: pobrana cena = 0.3376
+2025-02-15 12:29:12,674 - INFO - binance-kucoin - kucoin: pobrana cena = 0.337
+2025-02-15 12:29:12,674 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: RVN/USDT (dla binance), RVN/USDT (dla kucoin)
+2025-02-15 12:29:12,819 - INFO - binance-bitget - binance: pobrana cena = 0.1496
+2025-02-15 12:29:12,820 - INFO - binance-bitget - bitget: pobrana cena = 0.1496
+2025-02-15 12:29:12,821 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ENA/USDT (dla binance), ENA/USDT (dla bitget)
+2025-02-15 12:29:12,905 - INFO - kucoin-bitget - kucoin: pobrana cena = 2.507
+2025-02-15 12:29:12,908 - INFO - kucoin-bitget - bitget: pobrana cena = 2.507
+2025-02-15 12:29:12,909 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: DODO/USDT (dla kucoin), DODO/USDT (dla bitget)
+2025-02-15 12:29:13,012 - INFO - binance-bitstamp - binance: pobrana cena = 3.524
+2025-02-15 12:29:13,015 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'NEAR/USDT', 'bitstamp': 'NEAR/USDT'}. Pomijam.
+2025-02-15 12:29:13,026 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ADA/USDT (dla binance), ADA/USDT (dla bitstamp)
+2025-02-15 12:29:13,196 - INFO - binance-kucoin - binance: pobrana cena = 0.01491
+2025-02-15 12:29:13,217 - INFO - binance-kucoin - kucoin: pobrana cena = 0.01491
+2025-02-15 12:29:13,227 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: RLC/USDT (dla binance), RLC/USDT (dla kucoin)
+2025-02-15 12:29:13,229 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0
+2025-02-15 12:29:13,233 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:13,255 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:13,439 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1001
+2025-02-15 12:29:13,439 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1001
+2025-02-15 12:29:13,440 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: HIPPO/USDT (dla kucoin), HIPPO/USDT (dla bitget)
+2025-02-15 12:29:13,532 - INFO - binance-bitget - binance: pobrana cena = 0.4634
+2025-02-15 12:29:13,533 - INFO - binance-bitget - bitget: pobrana cena = 0.4636
+2025-02-15 12:29:13,534 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MKR/USDT (dla binance), MKR/USDT (dla bitget)
+2025-02-15 12:29:13,549 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.27732
+2025-02-15 12:29:13,550 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'DOGE/USDT', 'bitstamp': 'DOGE/USDT'}. Pomijam.
+2025-02-15 12:29:13,550 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ADA/USDT (dla bitget), ADA/USDT (dla bitstamp)
+2025-02-15 12:29:13,692 - INFO - binance-kucoin - binance: pobrana cena = 1.303
+2025-02-15 12:29:13,694 - INFO - binance-kucoin - kucoin: pobrana cena = 1.3013
+2025-02-15 12:29:13,697 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: DUSK/USDT (dla binance), DUSK/USDT (dla kucoin)
+2025-02-15 12:29:14,075 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.005042
+2025-02-15 12:29:14,076 - INFO - kucoin-bitget - bitget: pobrana cena = 0.00505
+2025-02-15 12:29:14,077 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: TURBO/USDT (dla kucoin), TURBO/USDT (dla bitget)
+2025-02-15 12:29:14,202 - INFO - binance-kucoin - binance: pobrana cena = 0.1262
+2025-02-15 12:29:14,205 - INFO - binance-kucoin - kucoin: pobrana cena = 0.12604
+2025-02-15 12:29:14,208 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: SUSHI/USDT (dla binance), SUSHI/USDT (dla kucoin)
+2025-02-15 12:29:14,209 - INFO - binance-bitget - binance: pobrana cena = 995.0
+2025-02-15 12:29:14,212 - INFO - binance-bitget - bitget: pobrana cena = 987.0
+2025-02-15 12:29:14,213 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BAND/USDT (dla binance), BAND/USDT (dla bitget)
+2025-02-15 12:29:14,214 - INFO - binance-bitstamp - binance: pobrana cena = 0.7953
+2025-02-15 12:29:14,215 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'ADA/USDT', 'bitstamp': 'ADA/USDT'}. Pomijam.
+2025-02-15 12:29:14,215 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SUI/USDT (dla binance), SUI/USDT (dla bitstamp)
+2025-02-15 12:29:14,485 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97637.0
+2025-02-15 12:29:14,486 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:14,690 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.00377
+2025-02-15 12:29:14,690 - INFO - kucoin-bitget - bitget: pobrana cena = 0.003766
+2025-02-15 12:29:14,691 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ASTR/USDT (dla kucoin), ASTR/USDT (dla bitget)
+2025-02-15 12:29:14,712 - INFO - binance-kucoin - binance: pobrana cena = 0.915
+2025-02-15 12:29:14,712 - INFO - binance-kucoin - kucoin: pobrana cena = 0.914
+2025-02-15 12:29:14,713 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ALPINE/USDT (dla binance), ALPINE/USDT (dla kucoin)
+2025-02-15 12:29:14,749 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.7953
+2025-02-15 12:29:14,750 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'ADA/USDT', 'bitstamp': 'ADA/USDT'}. Pomijam.
+2025-02-15 12:29:14,830 - INFO - binance-bitget - binance: pobrana cena = 0.996
+2025-02-15 12:29:14,830 - INFO - binance-bitget - bitget: pobrana cena = 0.995
+2025-02-15 12:29:14,831 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: TUSD/USDT (dla binance), TUSD/USDT (dla bitget)
+2025-02-15 12:29:15,231 - INFO - binance-kucoin - binance: pobrana cena = 1.174
+2025-02-15 12:29:15,231 - INFO - binance-kucoin - kucoin: pobrana cena = 1.164
+2025-02-15 12:29:15,232 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: MOVR/USDT (dla binance), MOVR/USDT (dla kucoin)
+2025-02-15 12:29:15,337 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.03989
+2025-02-15 12:29:15,338 - INFO - kucoin-bitget - bitget: pobrana cena = 0.04
+2025-02-15 12:29:15,339 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: NKN/USDT (dla kucoin), NKN/USDT (dla bitget)
+2025-02-15 12:29:15,415 - INFO - binance-bitstamp - binance: pobrana cena = 3.472
+2025-02-15 12:29:15,416 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'SUI/USDT', 'bitstamp': 'SUI/USDT'}. Pomijam.
+2025-02-15 12:29:15,418 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BCH/USDT (dla binance), BCH/USDT (dla bitstamp)
+2025-02-15 12:29:15,450 - INFO - binance-bitget - binance: pobrana cena = 0.9984
+2025-02-15 12:29:15,450 - INFO - binance-bitget - bitget: pobrana cena = 0.9982
+2025-02-15 12:29:15,451 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: CRV/USDT (dla binance), CRV/USDT (dla bitget)
+2025-02-15 12:29:15,488 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:15,490 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:15,734 - INFO - binance-kucoin - binance: pobrana cena = 8.073
+2025-02-15 12:29:15,735 - INFO - binance-kucoin - kucoin: pobrana cena = 8.063
+2025-02-15 12:29:15,736 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: MAGIC/USDT (dla binance), MAGIC/USDT (dla kucoin)
+2025-02-15 12:29:15,751 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:15,752 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla bitget), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:15,964 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0635
+2025-02-15 12:29:15,964 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0635
+2025-02-15 12:29:15,965 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: WOO/USDT (dla kucoin), WOO/USDT (dla bitget)
+2025-02-15 12:29:16,063 - INFO - binance-bitget - binance: pobrana cena = 0.527
+2025-02-15 12:29:16,064 - INFO - binance-bitget - bitget: pobrana cena = 0.5267
+2025-02-15 12:29:16,065 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: IMX/USDT (dla binance), IMX/USDT (dla bitget)
+2025-02-15 12:29:16,232 - INFO - binance-kucoin - binance: pobrana cena = 0.2521
+2025-02-15 12:29:16,233 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2519
+2025-02-15 12:29:16,234 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: DGB/USDT (dla binance), DGB/USDT (dla kucoin)
+2025-02-15 12:29:16,592 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.12936
+2025-02-15 12:29:16,592 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1298
+2025-02-15 12:29:16,593 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:16,594 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AI16Z/USDT (dla kucoin), AI16Z/USDT (dla bitget)
+2025-02-15 12:29:16,617 - INFO - binance-bitstamp - binance: pobrana cena = 341.3
+2025-02-15 12:29:16,617 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'BCH/USDT', 'bitstamp': 'BCH/USDT'}. Pomijam.
+2025-02-15 12:29:16,618 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/USDT (dla binance), LINK/USDT (dla bitstamp)
+2025-02-15 12:29:16,671 - INFO - binance-bitget - binance: pobrana cena = 0.808
+2025-02-15 12:29:16,671 - INFO - binance-bitget - bitget: pobrana cena = 0.807
+2025-02-15 12:29:16,672 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ONT/USDT (dla binance), ONT/USDT (dla bitget)
+2025-02-15 12:29:16,685 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80784
+2025-02-15 12:29:16,685 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:16,686 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:16,742 - INFO - binance-kucoin - binance: pobrana cena = 0.00868
+2025-02-15 12:29:16,743 - INFO - binance-kucoin - kucoin: pobrana cena = 0.008631
+2025-02-15 12:29:16,744 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: UMA/USDT (dla binance), UMA/USDT (dla kucoin)
+2025-02-15 12:29:16,774 - INFO - bitget-bitstamp - bitget: pobrana cena = 2.8084
+2025-02-15 12:29:16,775 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:16,777 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla bitget), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:17,267 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.4311
+2025-02-15 12:29:17,267 - INFO - kucoin-bitget - bitget: pobrana cena = 0.4308
+2025-02-15 12:29:17,269 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: STRK/USDT (dla kucoin), STRK/USDT (dla bitget)
+2025-02-15 12:29:17,301 - INFO - binance-bitget - binance: pobrana cena = 0.1957
+2025-02-15 12:29:17,302 - INFO - binance-bitget - bitget: pobrana cena = 0.1957
+2025-02-15 12:29:17,303 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MASK/USDT (dla binance), MASK/USDT (dla bitget)
+2025-02-15 12:29:17,449 - INFO - binance-kucoin - binance: pobrana cena = 1.736
+2025-02-15 12:29:17,449 - INFO - binance-kucoin - kucoin: pobrana cena = 1.733
+2025-02-15 12:29:17,450 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: CATI/USDT (dla binance), CATI/USDT (dla kucoin)
+2025-02-15 12:29:17,817 - INFO - binance-bitstamp - binance: pobrana cena = 19.25
+2025-02-15 12:29:17,818 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'LINK/USDT', 'bitstamp': 'LINK/USDT'}. Pomijam.
+2025-02-15 12:29:17,819 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AVAX/USDT (dla binance), AVAX/USDT (dla bitstamp)
+2025-02-15 12:29:17,978 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.23565
+2025-02-15 12:29:17,981 - INFO - kucoin-bitget - bitget: pobrana cena = 0.2357
+2025-02-15 12:29:17,983 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: FITFI/USDT (dla kucoin), FITFI/USDT (dla bitget)
+2025-02-15 12:29:17,985 - INFO - binance-bitget - binance: pobrana cena = 2.315
+2025-02-15 12:29:17,985 - INFO - binance-bitget - bitget: pobrana cena = 2.312
+2025-02-15 12:29:17,993 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: TAO/USDT (dla binance), TAO/USDT (dla bitget)
+2025-02-15 12:29:18,001 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.96
+2025-02-15 12:29:18,003 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:18,004 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:18,005 - INFO - binance-kucoin - binance: pobrana cena = 0.1654
+2025-02-15 12:29:18,006 - INFO - binance-kucoin - kucoin: pobrana cena = 0.16459
+2025-02-15 12:29:18,007 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: LINK/USDT (dla binance), LINK/USDT (dla kucoin)
+2025-02-15 12:29:18,078 - INFO - bitget-bitstamp - bitget: pobrana cena = 2709.36
+2025-02-15 12:29:18,079 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:18,081 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ONDO/USDT (dla bitget), ONDO/USDT (dla bitstamp)
+2025-02-15 12:29:18,581 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.002441
+2025-02-15 12:29:18,581 - INFO - kucoin-bitget - bitget: pobrana cena = 0.002436
+2025-02-15 12:29:18,582 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AITECH/USDT (dla kucoin), AITECH/USDT (dla bitget)
+2025-02-15 12:29:18,638 - INFO - binance-kucoin - binance: pobrana cena = 19.25
+2025-02-15 12:29:18,639 - INFO - binance-kucoin - kucoin: pobrana cena = 19.2419
+2025-02-15 12:29:18,640 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: VANRY/USDT (dla binance), VANRY/USDT (dla kucoin)
+2025-02-15 12:29:18,648 - INFO - binance-bitget - binance: pobrana cena = 384.1
+2025-02-15 12:29:18,650 - INFO - binance-bitget - bitget: pobrana cena = 383.0
+2025-02-15 12:29:18,651 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: STRAX/USDT (dla binance), STRAX/USDT (dla bitget)
+2025-02-15 12:29:19,016 - INFO - binance-bitstamp - binance: pobrana cena = 26.13
+2025-02-15 12:29:19,017 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'AVAX/USDT', 'bitstamp': 'AVAX/USDT'}. Pomijam.
+2025-02-15 12:29:19,018 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: PEPE/USDT (dla binance), PEPE/USDT (dla bitstamp)
+2025-02-15 12:29:19,142 - INFO - binance-kucoin - binance: pobrana cena = 0.0476
+2025-02-15 12:29:19,144 - INFO - binance-kucoin - kucoin: pobrana cena = 0.04737
+2025-02-15 12:29:19,145 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: WLD/USDT (dla binance), WLD/USDT (dla kucoin)
+2025-02-15 12:29:19,196 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.05886
+2025-02-15 12:29:19,197 - INFO - kucoin-bitget - bitget: pobrana cena = 0.05858
+2025-02-15 12:29:19,198 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ETC/USDT (dla kucoin), ETC/USDT (dla bitget)
+2025-02-15 12:29:19,253 - INFO - binance-bitget - binance: pobrana cena = 0.06077
+2025-02-15 12:29:19,254 - INFO - binance-bitget - bitget: pobrana cena = 0.06087
+2025-02-15 12:29:19,255 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: FXS/USDT (dla binance), FXS/USDT (dla bitget)
+2025-02-15 12:29:19,264 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:19,265 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:19,267 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:19,278 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.3009
+2025-02-15 12:29:19,279 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'ONDO/USDT', 'bitstamp': 'ONDO/USDT'}. Pomijam.
+2025-02-15 12:29:19,279 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: NEAR/USDT (dla bitget), NEAR/USDT (dla bitstamp)
+2025-02-15 12:29:19,795 - INFO - kucoin-bitget - kucoin: pobrana cena = 21.1463
+2025-02-15 12:29:19,796 - INFO - kucoin-bitget - bitget: pobrana cena = 21.18
+2025-02-15 12:29:19,797 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: NOT/USDT (dla kucoin), NOT/USDT (dla bitget)
+2025-02-15 12:29:19,886 - INFO - binance-kucoin - binance: pobrana cena = 1.265
+2025-02-15 12:29:19,887 - INFO - binance-kucoin - kucoin: pobrana cena = 1.2648
+2025-02-15 12:29:19,888 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: XAI/USDT (dla binance), XAI/USDT (dla kucoin)
+2025-02-15 12:29:19,902 - INFO - binance-bitget - binance: pobrana cena = 1.812
+2025-02-15 12:29:19,902 - INFO - binance-bitget - bitget: pobrana cena = 1.814
+2025-02-15 12:29:19,903 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: JUP/USDT (dla binance), JUP/USDT (dla bitget)
+2025-02-15 12:29:20,216 - INFO - binance-bitstamp - binance: pobrana cena = 1.009e-05
+2025-02-15 12:29:20,217 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'PEPE/USDT', 'bitstamp': 'PEPE/USDT'}. Pomijam.
+2025-02-15 12:29:20,218 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: APE/USDT (dla binance), APE/USDT (dla bitstamp)
+2025-02-15 12:29:20,389 - INFO - binance-kucoin - binance: pobrana cena = 0.1073
+2025-02-15 12:29:20,396 - INFO - binance-kucoin - kucoin: pobrana cena = 0.107
+2025-02-15 12:29:20,397 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BURGER/USDT (dla binance), BURGER/USDT (dla kucoin)
+2025-02-15 12:29:20,399 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0030182
+2025-02-15 12:29:20,403 - INFO - kucoin-bitget - bitget: pobrana cena = 0.003017
+2025-02-15 12:29:20,405 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: GLMR/USDT (dla kucoin), GLMR/USDT (dla bitget)
+2025-02-15 12:29:20,479 - INFO - bitget-bitstamp - bitget: pobrana cena = 3.519
+2025-02-15 12:29:20,480 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'NEAR/USDT', 'bitstamp': 'NEAR/USDT'}. Pomijam.
+2025-02-15 12:29:20,481 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: PEPE/USDT (dla bitget), PEPE/USDT (dla bitstamp)
+2025-02-15 12:29:20,506 - INFO - binance-bitget - binance: pobrana cena = 0.9326
+2025-02-15 12:29:20,507 - INFO - binance-bitget - bitget: pobrana cena = 0.932
+2025-02-15 12:29:20,508 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: THE/USDT (dla binance), THE/USDT (dla bitget)
+2025-02-15 12:29:20,547 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97644.7
+2025-02-15 12:29:20,548 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:21,009 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1317
+2025-02-15 12:29:21,010 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1315
+2025-02-15 12:29:21,011 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AERO/USDT (dla kucoin), AERO/USDT (dla bitget)
+2025-02-15 12:29:21,112 - INFO - binance-kucoin - binance: pobrana cena = 0.4559
+2025-02-15 12:29:21,112 - INFO - binance-kucoin - kucoin: pobrana cena = 0.4555
+2025-02-15 12:29:21,113 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: GTC/USDT (dla binance), GTC/USDT (dla kucoin)
+2025-02-15 12:29:21,118 - INFO - binance-bitget - binance: pobrana cena = 0.6597
+2025-02-15 12:29:21,119 - INFO - binance-bitget - bitget: pobrana cena = 0.6599
+2025-02-15 12:29:21,120 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: TWT/USDT (dla binance), TWT/USDT (dla bitget)
+2025-02-15 12:29:21,416 - INFO - binance-bitstamp - binance: pobrana cena = 0.729
+2025-02-15 12:29:21,418 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'APE/USDT', 'bitstamp': 'APE/USDT'}. Pomijam.
+2025-02-15 12:29:21,418 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: WIF/USDT (dla binance), WIF/USDT (dla bitstamp)
+2025-02-15 12:29:21,550 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:21,551 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:21,614 - INFO - binance-kucoin - binance: pobrana cena = 0.475
+2025-02-15 12:29:21,615 - INFO - binance-kucoin - kucoin: pobrana cena = 0.4749
+2025-02-15 12:29:21,616 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: SOL/USDT (dla binance), SOL/USDT (dla kucoin)
+2025-02-15 12:29:21,645 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.839
+2025-02-15 12:29:21,646 - INFO - kucoin-bitget - bitget: pobrana cena = 0.841
+2025-02-15 12:29:21,647 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: REN/USDT (dla kucoin), REN/USDT (dla bitget)
+2025-02-15 12:29:21,679 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.01e-05
+2025-02-15 12:29:21,680 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'PEPE/USDT', 'bitstamp': 'PEPE/USDT'}. Pomijam.
+2025-02-15 12:29:21,681 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla bitget), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:21,729 - INFO - binance-bitget - binance: pobrana cena = 1.011
+2025-02-15 12:29:21,732 - INFO - binance-bitget - bitget: pobrana cena = 1.0119
+2025-02-15 12:29:21,735 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MANA/USDT (dla binance), MANA/USDT (dla bitget)
+2025-02-15 12:29:22,118 - INFO - binance-kucoin - binance: pobrana cena = 195.74
+2025-02-15 12:29:22,125 - INFO - binance-kucoin - kucoin: pobrana cena = 195.75
+2025-02-15 12:29:22,127 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla binance), BTC/USDT (dla kucoin)
+2025-02-15 12:29:22,248 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.02574
+2025-02-15 12:29:22,249 - INFO - kucoin-bitget - bitget: pobrana cena = 0.02576
+2025-02-15 12:29:22,251 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: TRX/USDT (dla kucoin), TRX/USDT (dla bitget)
+2025-02-15 12:29:22,343 - INFO - binance-bitget - binance: pobrana cena = 0.335
+2025-02-15 12:29:22,344 - INFO - binance-bitget - bitget: pobrana cena = 0.3349
+2025-02-15 12:29:22,345 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: NEO/USDT (dla binance), NEO/USDT (dla bitget)
+2025-02-15 12:29:22,620 - INFO - binance-bitstamp - binance: pobrana cena = 0.703
+2025-02-15 12:29:22,620 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'WIF/USDT', 'bitstamp': 'WIF/USDT'}. Pomijam.
+2025-02-15 12:29:22,621 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: UNI/USDT (dla binance), UNI/USDT (dla bitstamp)
+2025-02-15 12:29:22,650 - INFO - binance-kucoin - binance: pobrana cena = 97656.14
+2025-02-15 12:29:22,651 - INFO - binance-kucoin - kucoin: pobrana cena = 97644.7
+2025-02-15 12:29:22,653 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BIO/USDT (dla binance), BIO/USDT (dla kucoin)
+2025-02-15 12:29:22,689 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80861
+2025-02-15 12:29:22,690 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:22,696 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:22,851 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.2352
+2025-02-15 12:29:22,853 - INFO - kucoin-bitget - bitget: pobrana cena = 0.2351
+2025-02-15 12:29:22,854 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: FIDA/USDT (dla kucoin), FIDA/USDT (dla bitget)
+2025-02-15 12:29:22,952 - INFO - binance-bitget - binance: pobrana cena = 11.23
+2025-02-15 12:29:22,953 - INFO - binance-bitget - bitget: pobrana cena = 11.23
+2025-02-15 12:29:22,955 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: NMR/USDT (dla binance), NMR/USDT (dla bitget)
+2025-02-15 12:29:22,968 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.9999
+2025-02-15 12:29:22,969 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:22,970 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SHIB/USDT (dla bitget), SHIB/USDT (dla bitstamp)
+2025-02-15 12:29:23,156 - INFO - binance-kucoin - binance: pobrana cena = 0.1435
+2025-02-15 12:29:23,156 - INFO - binance-kucoin - kucoin: pobrana cena = 0.14351
+2025-02-15 12:29:23,158 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: AIXBT/USDT (dla binance), AIXBT/USDT (dla kucoin)
+2025-02-15 12:29:23,476 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1472
+2025-02-15 12:29:23,477 - INFO - kucoin-bitget - bitget: pobrana cena = 0.148
+2025-02-15 12:29:23,479 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: BCH/USDT (dla kucoin), BCH/USDT (dla bitget)
+2025-02-15 12:29:23,613 - INFO - binance-bitget - binance: pobrana cena = 11.4
+2025-02-15 12:29:23,613 - INFO - binance-bitget - bitget: pobrana cena = 11.43
+2025-02-15 12:29:23,614 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BOND/USDT (dla binance), BOND/USDT (dla bitget)
+2025-02-15 12:29:23,820 - INFO - binance-bitstamp - binance: pobrana cena = 9.933
+2025-02-15 12:29:23,820 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'UNI/USDT', 'bitstamp': 'UNI/USDT'}. Pomijam.
+2025-02-15 12:29:23,821 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla binance), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:23,879 - INFO - binance-kucoin - binance: pobrana cena = 0.2248
+2025-02-15 12:29:23,880 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2248
+2025-02-15 12:29:23,881 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ONE/USDT (dla binance), ONE/USDT (dla kucoin)
+2025-02-15 12:29:23,976 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.96
+2025-02-15 12:29:23,976 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:23,978 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:24,080 - INFO - kucoin-bitget - kucoin: pobrana cena = 341.29
+2025-02-15 12:29:24,081 - INFO - kucoin-bitget - bitget: pobrana cena = 341.0
+2025-02-15 12:29:24,082 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ORBS/USDT (dla kucoin), ORBS/USDT (dla bitget)
+2025-02-15 12:29:24,169 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.661e-05
+2025-02-15 12:29:24,171 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SHIB/USDT', 'bitstamp': 'SHIB/USDT'}. Pomijam.
+2025-02-15 12:29:24,172 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SUI/USDT (dla bitget), SUI/USDT (dla bitstamp)
+2025-02-15 12:29:24,192 - INFO - binance-kucoin - binance: pobrana cena = 0.01532
+2025-02-15 12:29:24,194 - INFO - binance-kucoin - kucoin: pobrana cena = 0.015328
+2025-02-15 12:29:24,197 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: GNS/USDT (dla binance), GNS/USDT (dla kucoin)
+2025-02-15 12:29:24,220 - WARNING - binance-bitget - Dla binance pobrana cena jest None, pomijam asset {'binance': 'BOND/USDT', 'bitget': 'BOND/USDT'}
+2025-02-15 12:29:24,221 - INFO - binance-bitget - bitget: pobrana cena = 0.3242
+2025-02-15 12:29:24,222 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'BOND/USDT', 'bitget': 'BOND/USDT'}. Pomijam.
+2025-02-15 12:29:24,222 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: LOKA/USDT (dla binance), LOKA/USDT (dla bitget)
+2025-02-15 12:29:24,728 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.02576
+2025-02-15 12:29:24,728 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0258
+2025-02-15 12:29:24,730 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ZIL/USDT (dla kucoin), ZIL/USDT (dla bitget)
+2025-02-15 12:29:24,823 - INFO - binance-bitget - binance: pobrana cena = 0.1395
+2025-02-15 12:29:24,824 - INFO - binance-bitget - bitget: pobrana cena = 0.1393
+2025-02-15 12:29:24,825 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BNT/USDT (dla binance), BNT/USDT (dla bitget)
+2025-02-15 12:29:24,881 - INFO - binance-kucoin - binance: pobrana cena = 1.681
+2025-02-15 12:29:24,882 - INFO - binance-kucoin - kucoin: pobrana cena = 1.678
+2025-02-15 12:29:24,883 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: CFX/USDT (dla binance), CFX/USDT (dla kucoin)
+2025-02-15 12:29:25,114 - INFO - binance-bitstamp - binance: pobrana cena = 0.9999
+2025-02-15 12:29:25,116 - INFO - binance-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:25,118 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ENJ/USDT (dla binance), ENJ/USDT (dla bitstamp)
+2025-02-15 12:29:25,230 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:25,231 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:25,233 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:25,340 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0151
+2025-02-15 12:29:25,341 - INFO - kucoin-bitget - bitget: pobrana cena = 0.01509
+2025-02-15 12:29:25,343 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: CETUS/USDT (dla kucoin), CETUS/USDT (dla bitget)
+2025-02-15 12:29:25,369 - INFO - bitget-bitstamp - bitget: pobrana cena = 3.472
+2025-02-15 12:29:25,370 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SUI/USDT', 'bitstamp': 'SUI/USDT'}. Pomijam.
+2025-02-15 12:29:25,370 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: WIF/USDT (dla bitget), WIF/USDT (dla bitstamp)
+2025-02-15 12:29:25,404 - INFO - binance-kucoin - binance: pobrana cena = 0.1197
+2025-02-15 12:29:25,408 - INFO - binance-kucoin - kucoin: pobrana cena = 0.1196
+2025-02-15 12:29:25,414 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: SYS/USDT (dla binance), SYS/USDT (dla kucoin)
+2025-02-15 12:29:25,444 - INFO - binance-bitget - binance: pobrana cena = 0.5336
+2025-02-15 12:29:25,445 - INFO - binance-bitget - bitget: pobrana cena = 0.5335
+2025-02-15 12:29:25,446 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BAL/USDT (dla binance), BAL/USDT (dla bitget)
+2025-02-15 12:29:26,038 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.13532
+2025-02-15 12:29:26,038 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1353
+2025-02-15 12:29:26,040 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ETHFI/USDT (dla kucoin), ETHFI/USDT (dla bitget)
+2025-02-15 12:29:26,046 - INFO - binance-bitget - binance: pobrana cena = 2.038
+2025-02-15 12:29:26,047 - INFO - binance-bitget - bitget: pobrana cena = 2.035
+2025-02-15 12:29:26,048 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: PENGU/USDT (dla binance), PENGU/USDT (dla bitget)
+2025-02-15 12:29:26,121 - INFO - binance-kucoin - binance: pobrana cena = 0.0725
+2025-02-15 12:29:26,122 - INFO - binance-kucoin - kucoin: pobrana cena = 0.0724
+2025-02-15 12:29:26,123 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: OMNI/USDT (dla binance), OMNI/USDT (dla kucoin)
+2025-02-15 12:29:26,313 - INFO - binance-bitstamp - binance: pobrana cena = 0.1262
+2025-02-15 12:29:26,314 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'ENJ/USDT', 'bitstamp': 'ENJ/USDT'}. Pomijam.
+2025-02-15 12:29:26,314 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: TRUMP/USDT (dla binance), TRUMP/USDT (dla bitstamp)
+2025-02-15 12:29:26,499 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97644.7
+2025-02-15 12:29:26,499 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:26,572 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.702
+2025-02-15 12:29:26,573 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'WIF/USDT', 'bitstamp': 'WIF/USDT'}. Pomijam.
+2025-02-15 12:29:26,574 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/USDT (dla bitget), LINK/USDT (dla bitstamp)
+2025-02-15 12:29:26,600 - INFO - kucoin-bitget - kucoin: pobrana cena = 1.142
+2025-02-15 12:29:26,601 - INFO - kucoin-bitget - bitget: pobrana cena = 1.1418
+2025-02-15 12:29:26,602 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PEPE/USDT (dla kucoin), PEPE/USDT (dla bitget)
+2025-02-15 12:29:26,668 - INFO - binance-bitget - binance: pobrana cena = 0.010247
+2025-02-15 12:29:26,668 - INFO - binance-bitget - bitget: pobrana cena = 0.010238
+2025-02-15 12:29:26,669 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: DENT/USDT (dla binance), DENT/USDT (dla bitget)
+2025-02-15 12:29:26,763 - INFO - binance-kucoin - binance: pobrana cena = 5.09
+2025-02-15 12:29:26,763 - INFO - binance-kucoin - kucoin: pobrana cena = 5.068
+2025-02-15 12:29:26,765 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: MEME/USDT (dla binance), MEME/USDT (dla kucoin)
+2025-02-15 12:29:27,208 - INFO - kucoin-bitget - kucoin: pobrana cena = 1.009e-05
+2025-02-15 12:29:27,208 - INFO - kucoin-bitget - bitget: pobrana cena = 1.01e-05
+2025-02-15 12:29:27,209 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: LRC/USDT (dla kucoin), LRC/USDT (dla bitget)
+2025-02-15 12:29:27,275 - INFO - binance-kucoin - binance: pobrana cena = 0.00469
+2025-02-15 12:29:27,276 - INFO - binance-kucoin - kucoin: pobrana cena = 0.004691
+2025-02-15 12:29:27,278 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: COMBO/USDT (dla binance), COMBO/USDT (dla kucoin)
+2025-02-15 12:29:27,309 - INFO - binance-bitget - binance: pobrana cena = 0.000962
+2025-02-15 12:29:27,310 - INFO - binance-bitget - bitget: pobrana cena = 0.000962
+2025-02-15 12:29:27,312 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: LOOM/USDT (dla binance), LOOM/USDT (dla bitget)
+2025-02-15 12:29:27,502 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:27,503 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:27,513 - INFO - binance-bitstamp - binance: pobrana cena = 19.96
+2025-02-15 12:29:27,514 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'TRUMP/USDT', 'bitstamp': 'TRUMP/USDT'}. Pomijam.
+2025-02-15 12:29:27,515 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SOL/USDT (dla binance), SOL/USDT (dla bitstamp)
+2025-02-15 12:29:27,781 - INFO - binance-kucoin - binance: pobrana cena = 0.3145
+2025-02-15 12:29:27,781 - INFO - binance-kucoin - kucoin: pobrana cena = 0.3175
+2025-02-15 12:29:27,782 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: PENDLE/USDT (dla binance), PENDLE/USDT (dla kucoin)
+2025-02-15 12:29:27,783 - INFO - bitget-bitstamp - bitget: pobrana cena = 19.25
+2025-02-15 12:29:27,783 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'LINK/USDT', 'bitstamp': 'LINK/USDT'}. Pomijam.
+2025-02-15 12:29:27,784 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AVAX/USDT (dla bitget), AVAX/USDT (dla bitstamp)
+2025-02-15 12:29:27,820 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1384
+2025-02-15 12:29:27,821 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1383
+2025-02-15 12:29:27,822 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: TOMI/USDT (dla kucoin), TOMI/USDT (dla bitget)
+2025-02-15 12:29:27,902 - WARNING - binance-bitget - Dla binance pobrana cena jest None, pomijam asset {'binance': 'LOOM/USDT', 'bitget': 'LOOM/USDT'}
+2025-02-15 12:29:27,903 - INFO - binance-bitget - bitget: pobrana cena = 0.04841
+2025-02-15 12:29:27,903 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'LOOM/USDT', 'bitget': 'LOOM/USDT'}. Pomijam.
+2025-02-15 12:29:27,904 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BONK/USDT (dla binance), BONK/USDT (dla bitget)
+2025-02-15 12:29:28,032 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80861
+2025-02-15 12:29:28,032 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:28,033 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:28,279 - INFO - binance-kucoin - binance: pobrana cena = 3.694
+2025-02-15 12:29:28,281 - INFO - binance-kucoin - kucoin: pobrana cena = 3.6833
+2025-02-15 12:29:28,283 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BSV/USDT (dla binance), BSV/USDT (dla kucoin)
+2025-02-15 12:29:28,500 - INFO - binance-bitget - binance: pobrana cena = 1.84e-05
+2025-02-15 12:29:28,501 - INFO - binance-bitget - bitget: pobrana cena = 1.84e-05
+2025-02-15 12:29:28,501 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: AEVO/USDT (dla binance), AEVO/USDT (dla bitget)
+2025-02-15 12:29:28,510 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.00871
+2025-02-15 12:29:28,515 - INFO - kucoin-bitget - bitget: pobrana cena = 0.00867
+2025-02-15 12:29:28,540 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: COOKIE/USDT (dla kucoin), COOKIE/USDT (dla bitget)
+2025-02-15 12:29:28,714 - INFO - binance-bitstamp - binance: pobrana cena = 195.75
+2025-02-15 12:29:28,715 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'SOL/USDT', 'bitstamp': 'SOL/USDT'}. Pomijam.
+2025-02-15 12:29:28,716 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: GRT/USDT (dla binance), GRT/USDT (dla bitstamp)
+2025-02-15 12:29:28,952 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'BSV/USDT', 'kucoin': 'BSV/USDT'}
+2025-02-15 12:29:28,952 - INFO - binance-kucoin - kucoin: pobrana cena = 39.69
+2025-02-15 12:29:28,953 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'BSV/USDT', 'kucoin': 'BSV/USDT'}. Pomijam.
+2025-02-15 12:29:28,953 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ALT/USDT (dla binance), ALT/USDT (dla kucoin)
+2025-02-15 12:29:28,982 - INFO - bitget-bitstamp - bitget: pobrana cena = 26.1
+2025-02-15 12:29:28,984 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'AVAX/USDT', 'bitstamp': 'AVAX/USDT'}. Pomijam.
+2025-02-15 12:29:28,984 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SOL/USDT (dla bitget), SOL/USDT (dla bitstamp)
+2025-02-15 12:29:29,117 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.97
+2025-02-15 12:29:29,118 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:29,119 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:29,178 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1968
+2025-02-15 12:29:29,178 - INFO - kucoin-bitget - bitget: pobrana cena = 0.19764
+2025-02-15 12:29:29,180 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: CTC/USDT (dla kucoin), CTC/USDT (dla bitget)
+2025-02-15 12:29:29,196 - INFO - binance-bitget - binance: pobrana cena = 0.1661
+2025-02-15 12:29:29,196 - INFO - binance-bitget - bitget: pobrana cena = 0.1654
+2025-02-15 12:29:29,197 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: GMX/USDT (dla binance), GMX/USDT (dla bitget)
+2025-02-15 12:29:29,696 - INFO - binance-kucoin - binance: pobrana cena = 0.05079
+2025-02-15 12:29:29,697 - INFO - binance-kucoin - kucoin: pobrana cena = 0.05073
+2025-02-15 12:29:29,699 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: FTT/USDT (dla binance), FTT/USDT (dla kucoin)
+2025-02-15 12:29:29,751 - INFO - binance-bitget - binance: pobrana cena = 20.13
+2025-02-15 12:29:29,752 - INFO - binance-bitget - bitget: pobrana cena = 20.11
+2025-02-15 12:29:29,753 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: LAYER/USDT (dla binance), LAYER/USDT (dla bitget)
+2025-02-15 12:29:29,914 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.8056
+2025-02-15 12:29:29,915 - INFO - kucoin-bitget - bitget: pobrana cena = 0.8062
+2025-02-15 12:29:29,915 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: IO/USDT (dla kucoin), IO/USDT (dla bitget)
+2025-02-15 12:29:29,916 - INFO - binance-bitstamp - binance: pobrana cena = 0.1411
+2025-02-15 12:29:29,917 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'GRT/USDT', 'bitstamp': 'GRT/USDT'}. Pomijam.
+2025-02-15 12:29:30,182 - INFO - bitget-bitstamp - bitget: pobrana cena = 195.74
+2025-02-15 12:29:30,183 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SOL/USDT', 'bitstamp': 'SOL/USDT'}. Pomijam.
+2025-02-15 12:29:30,184 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla bitget), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:30,192 - INFO - binance-kucoin - binance: pobrana cena = 2.2136
+2025-02-15 12:29:30,192 - INFO - binance-kucoin - kucoin: pobrana cena = 2.22
+2025-02-15 12:29:30,193 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BANANA/USDT (dla binance), BANANA/USDT (dla kucoin)
+2025-02-15 12:29:30,354 - INFO - binance-bitget - binance: pobrana cena = 0.7865
+2025-02-15 12:29:30,355 - INFO - binance-bitget - bitget: pobrana cena = 0.7875
+2025-02-15 12:29:30,356 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ORCA/USDT (dla binance), ORCA/USDT (dla bitget)
+2025-02-15 12:29:30,381 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:30,382 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:30,384 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:30,434 - INFO - kucoin-bitget - kucoin: pobrana cena = 1.5032
+2025-02-15 12:29:30,435 - INFO - kucoin-bitget - bitget: pobrana cena = 1.503
+2025-02-15 12:29:30,436 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EOS/USDT (dla kucoin), EOS/USDT (dla bitget)
+2025-02-15 12:29:30,698 - INFO - binance-kucoin - binance: pobrana cena = 26.12
+2025-02-15 12:29:30,698 - INFO - binance-kucoin - kucoin: pobrana cena = 26.06
+2025-02-15 12:29:30,699 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: APT/USDT (dla binance), APT/USDT (dla kucoin)
+2025-02-15 12:29:30,919 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla binance), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:30,959 - INFO - binance-bitget - binance: pobrana cena = 2.208
+2025-02-15 12:29:30,971 - INFO - binance-bitget - bitget: pobrana cena = 2.207
+2025-02-15 12:29:30,972 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: SHIB/USDT (dla binance), SHIB/USDT (dla bitget)
+2025-02-15 12:29:31,153 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.6603
+2025-02-15 12:29:31,155 - INFO - kucoin-bitget - bitget: pobrana cena = 0.66
+2025-02-15 12:29:31,156 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: BB/USDT (dla kucoin), BB/USDT (dla bitget)
+2025-02-15 12:29:31,375 - INFO - binance-kucoin - binance: pobrana cena = 6.09
+2025-02-15 12:29:31,376 - INFO - binance-kucoin - kucoin: pobrana cena = 6.088
+2025-02-15 12:29:31,377 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ALGO/USDT (dla binance), ALGO/USDT (dla kucoin)
+2025-02-15 12:29:31,450 - INFO - bitget-bitstamp - bitget: pobrana cena = 97650.0
+2025-02-15 12:29:31,451 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:31,453 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LTC/USDT (dla bitget), LTC/USDT (dla bitstamp)
+2025-02-15 12:29:31,547 - INFO - binance-bitget - binance: pobrana cena = 1.662e-05
+2025-02-15 12:29:31,548 - INFO - binance-bitget - bitget: pobrana cena = 1.661e-05
+2025-02-15 12:29:31,550 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MBOX/USDT (dla binance), MBOX/USDT (dla bitget)
+2025-02-15 12:29:31,669 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97644.7
+2025-02-15 12:29:31,672 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:31,686 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1857
+2025-02-15 12:29:31,687 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1856
+2025-02-15 12:29:31,689 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SWEAT/USDT (dla kucoin), SWEAT/USDT (dla bitget)
+2025-02-15 12:29:31,761 - INFO - binance-bitstamp - binance: pobrana cena = 97656.14
+2025-02-15 12:29:31,762 - INFO - binance-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:31,763 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: GALA/USDT (dla binance), GALA/USDT (dla bitstamp)
+2025-02-15 12:29:31,885 - INFO - binance-kucoin - binance: pobrana cena = 0.2933
+2025-02-15 12:29:31,885 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2933
+2025-02-15 12:29:31,887 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: PROM/USDT (dla binance), PROM/USDT (dla kucoin)
+2025-02-15 12:29:32,140 - INFO - binance-bitget - binance: pobrana cena = 0.1268
+2025-02-15 12:29:32,141 - INFO - binance-bitget - bitget: pobrana cena = 0.1269
+2025-02-15 12:29:32,142 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: KNC/USDT (dla binance), KNC/USDT (dla bitget)
+2025-02-15 12:29:32,288 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.006854
+2025-02-15 12:29:32,289 - INFO - kucoin-bitget - bitget: pobrana cena = 0.006847
+2025-02-15 12:29:32,290 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: DYDX/USDT (dla kucoin), DYDX/USDT (dla bitget)
+2025-02-15 12:29:32,400 - INFO - binance-kucoin - binance: pobrana cena = 5.617
+2025-02-15 12:29:32,401 - INFO - binance-kucoin - kucoin: pobrana cena = 5.597
+2025-02-15 12:29:32,402 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: UTK/USDT (dla binance), UTK/USDT (dla kucoin)
+2025-02-15 12:29:32,651 - INFO - bitget-bitstamp - bitget: pobrana cena = 132.78
+2025-02-15 12:29:32,651 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'LTC/USDT', 'bitstamp': 'LTC/USDT'}. Pomijam.
+2025-02-15 12:29:32,652 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOGE/USDT (dla bitget), DOGE/USDT (dla bitstamp)
+2025-02-15 12:29:32,687 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:32,687 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:32,751 - INFO - binance-bitget - binance: pobrana cena = 0.4355
+2025-02-15 12:29:32,752 - INFO - binance-bitget - bitget: pobrana cena = 0.4356
+2025-02-15 12:29:32,755 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: C98/USDT (dla binance), C98/USDT (dla bitget)
+2025-02-15 12:29:32,908 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.8052
+2025-02-15 12:29:32,909 - INFO - kucoin-bitget - bitget: pobrana cena = 0.805
+2025-02-15 12:29:32,910 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: LUCE/USDT (dla kucoin), LUCE/USDT (dla bitget)
+2025-02-15 12:29:32,911 - INFO - binance-kucoin - binance: pobrana cena = 0.0609
+2025-02-15 12:29:32,911 - INFO - binance-kucoin - kucoin: pobrana cena = 0.06078
+2025-02-15 12:29:32,912 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ORDI/USDT (dla binance), ORDI/USDT (dla kucoin)
+2025-02-15 12:29:32,962 - INFO - binance-bitstamp - binance: pobrana cena = 0.02451
+2025-02-15 12:29:32,963 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'GALA/USDT', 'bitstamp': 'GALA/USDT'}. Pomijam.
+2025-02-15 12:29:32,963 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ARB/USDT (dla binance), ARB/USDT (dla bitstamp)
+2025-02-15 12:29:33,399 - INFO - binance-kucoin - binance: pobrana cena = 12.54
+2025-02-15 12:29:33,400 - INFO - binance-kucoin - kucoin: pobrana cena = 12.51
+2025-02-15 12:29:33,402 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ENJ/USDT (dla binance), ENJ/USDT (dla kucoin)
+2025-02-15 12:29:33,403 - INFO - binance-bitget - binance: pobrana cena = 0.105
+2025-02-15 12:29:33,405 - INFO - binance-bitget - bitget: pobrana cena = 0.1049
+2025-02-15 12:29:33,406 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: HOOK/USDT (dla binance), HOOK/USDT (dla bitget)
+2025-02-15 12:29:33,497 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.01173
+2025-02-15 12:29:33,498 - INFO - kucoin-bitget - bitget: pobrana cena = 0.01177
+2025-02-15 12:29:33,499 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SUN/USDT (dla kucoin), SUN/USDT (dla bitget)
+2025-02-15 12:29:33,855 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.2776
+2025-02-15 12:29:33,856 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'DOGE/USDT', 'bitstamp': 'DOGE/USDT'}. Pomijam.
+2025-02-15 12:29:33,856 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ADA/USDT (dla bitget), ADA/USDT (dla bitstamp)
+2025-02-15 12:29:33,925 - INFO - binance-kucoin - binance: pobrana cena = 0.1262
+2025-02-15 12:29:33,926 - INFO - binance-kucoin - kucoin: pobrana cena = 0.126
+2025-02-15 12:29:33,927 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: AVA/USDT (dla binance), AVA/USDT (dla kucoin)
+2025-02-15 12:29:33,956 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.8086
+2025-02-15 12:29:33,957 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:33,959 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:34,010 - INFO - binance-bitget - binance: pobrana cena = 0.217
+2025-02-15 12:29:34,011 - INFO - binance-bitget - bitget: pobrana cena = 0.2171
+2025-02-15 12:29:34,011 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: KDA/USDT (dla binance), KDA/USDT (dla bitget)
+2025-02-15 12:29:34,151 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.01895
+2025-02-15 12:29:34,152 - INFO - kucoin-bitget - bitget: pobrana cena = 0.01893
+2025-02-15 12:29:34,153 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: GRIFFAIN/USDT (dla kucoin), GRIFFAIN/USDT (dla bitget)
+2025-02-15 12:29:34,162 - INFO - binance-bitstamp - binance: pobrana cena = 0.484
+2025-02-15 12:29:34,162 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'ARB/USDT', 'bitstamp': 'ARB/USDT'}. Pomijam.
+2025-02-15 12:29:34,163 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SHIB/USDT (dla binance), SHIB/USDT (dla bitstamp)
+2025-02-15 12:29:34,432 - INFO - binance-kucoin - binance: pobrana cena = 0.6706
+2025-02-15 12:29:34,434 - INFO - binance-kucoin - kucoin: pobrana cena = 0.6698
+2025-02-15 12:29:34,436 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: GRT/USDT (dla binance), GRT/USDT (dla kucoin)
+2025-02-15 12:29:34,608 - INFO - binance-bitget - binance: pobrana cena = 0.5513
+2025-02-15 12:29:34,609 - INFO - binance-bitget - bitget: pobrana cena = 0.5512
+2025-02-15 12:29:34,610 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: STG/USDT (dla binance), STG/USDT (dla bitget)
+2025-02-15 12:29:34,702 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1252
+2025-02-15 12:29:34,703 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1255
+2025-02-15 12:29:34,704 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PHA/USDT (dla kucoin), PHA/USDT (dla bitget)
+2025-02-15 12:29:34,931 - INFO - binance-kucoin - binance: pobrana cena = 0.141
+2025-02-15 12:29:34,932 - INFO - binance-kucoin - kucoin: pobrana cena = 0.14101
+2025-02-15 12:29:34,932 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: COMP/USDT (dla binance), COMP/USDT (dla kucoin)
+2025-02-15 12:29:35,056 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.7953
+2025-02-15 12:29:35,057 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'ADA/USDT', 'bitstamp': 'ADA/USDT'}. Pomijam.
+2025-02-15 12:29:35,223 - INFO - binance-bitget - binance: pobrana cena = 0.2768
+2025-02-15 12:29:35,225 - INFO - binance-bitget - bitget: pobrana cena = 0.277
+2025-02-15 12:29:35,235 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ANKR/USDT (dla binance), ANKR/USDT (dla bitget)
+2025-02-15 12:29:35,237 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.97
+2025-02-15 12:29:35,238 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:35,240 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:35,311 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1733
+2025-02-15 12:29:35,312 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1736
+2025-02-15 12:29:35,313 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: BOME/USDT (dla kucoin), BOME/USDT (dla bitget)
+2025-02-15 12:29:35,363 - INFO - binance-bitstamp - binance: pobrana cena = 1.662e-05
+2025-02-15 12:29:35,364 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'SHIB/USDT', 'bitstamp': 'SHIB/USDT'}. Pomijam.
+2025-02-15 12:29:35,365 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LTC/USDT (dla binance), LTC/USDT (dla bitstamp)
+2025-02-15 12:29:35,441 - INFO - binance-kucoin - binance: pobrana cena = 57.85
+2025-02-15 12:29:35,442 - INFO - binance-kucoin - kucoin: pobrana cena = 57.81
+2025-02-15 12:29:35,444 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ARB/USDT (dla binance), ARB/USDT (dla kucoin)
+2025-02-15 12:29:35,826 - INFO - binance-bitget - binance: pobrana cena = 0.02318
+2025-02-15 12:29:35,827 - INFO - binance-bitget - bitget: pobrana cena = 0.02316
+2025-02-15 12:29:35,828 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: CHESS/USDT (dla binance), CHESS/USDT (dla bitget)
+2025-02-15 12:29:35,907 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.002267
+2025-02-15 12:29:35,907 - INFO - kucoin-bitget - bitget: pobrana cena = 0.00227
+2025-02-15 12:29:35,908 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: GRASS/USDT (dla kucoin), GRASS/USDT (dla bitget)
+2025-02-15 12:29:36,058 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:36,059 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla bitget), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:36,132 - INFO - binance-kucoin - binance: pobrana cena = 0.484
+2025-02-15 12:29:36,133 - INFO - binance-kucoin - kucoin: pobrana cena = 0.4842
+2025-02-15 12:29:36,134 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: WAN/USDT (dla binance), WAN/USDT (dla kucoin)
+2025-02-15 12:29:36,442 - INFO - binance-bitget - binance: pobrana cena = 0.1264
+2025-02-15 12:29:36,443 - INFO - binance-bitget - bitget: pobrana cena = 0.1267
+2025-02-15 12:29:36,445 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: LISTA/USDT (dla binance), LISTA/USDT (dla bitget)
+2025-02-15 12:29:36,508 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:36,509 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:36,510 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:36,515 - INFO - kucoin-bitget - kucoin: pobrana cena = 1.5774
+2025-02-15 12:29:36,516 - INFO - kucoin-bitget - bitget: pobrana cena = 1.575
+2025-02-15 12:29:36,517 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PLUME/USDT (dla kucoin), PLUME/USDT (dla bitget)
+2025-02-15 12:29:36,568 - INFO - binance-bitstamp - binance: pobrana cena = 132.76
+2025-02-15 12:29:36,569 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'LTC/USDT', 'bitstamp': 'LTC/USDT'}. Pomijam.
+2025-02-15 12:29:36,570 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BOME/USDT (dla binance), BOME/USDT (dla bitstamp)
+2025-02-15 12:29:36,638 - INFO - binance-kucoin - binance: pobrana cena = 0.1581
+2025-02-15 12:29:36,639 - INFO - binance-kucoin - kucoin: pobrana cena = 0.15828
+2025-02-15 12:29:36,641 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ID/USDT (dla binance), ID/USDT (dla kucoin)
+2025-02-15 12:29:36,642 - INFO - bitget-bitstamp - bitget: pobrana cena = 2.8083
+2025-02-15 12:29:36,644 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:36,647 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla bitget), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:37,044 - INFO - binance-bitget - binance: pobrana cena = 0.2653
+2025-02-15 12:29:37,044 - INFO - binance-bitget - bitget: pobrana cena = 0.2653
+2025-02-15 12:29:37,046 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: REZ/USDT (dla binance), REZ/USDT (dla bitget)
+2025-02-15 12:29:37,120 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.14666
+2025-02-15 12:29:37,121 - INFO - kucoin-bitget - bitget: pobrana cena = 0.14669
+2025-02-15 12:29:37,121 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: VANA/USDT (dla kucoin), VANA/USDT (dla bitget)
+2025-02-15 12:29:37,367 - INFO - binance-kucoin - binance: pobrana cena = 0.2958
+2025-02-15 12:29:37,368 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2954
+2025-02-15 12:29:37,369 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: FLUX/USDT (dla binance), FLUX/USDT (dla kucoin)
+2025-02-15 12:29:37,651 - INFO - binance-bitget - binance: pobrana cena = 0.01661
+2025-02-15 12:29:37,653 - INFO - binance-bitget - bitget: pobrana cena = 0.01661
+2025-02-15 12:29:37,654 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: SUI/USDT (dla binance), SUI/USDT (dla bitget)
+2025-02-15 12:29:37,700 - INFO - kucoin-bitget - kucoin: pobrana cena = 6.162
+2025-02-15 12:29:37,701 - INFO - kucoin-bitget - bitget: pobrana cena = 6.1545
+2025-02-15 12:29:37,702 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: KAS/USDT (dla kucoin), KAS/USDT (dla bitget)
+2025-02-15 12:29:37,768 - INFO - binance-bitstamp - binance: pobrana cena = 0.002272
+2025-02-15 12:29:37,769 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'BOME/USDT', 'bitstamp': 'BOME/USDT'}. Pomijam.
+2025-02-15 12:29:37,770 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla binance), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:37,800 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97644.7
+2025-02-15 12:29:37,801 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:37,888 - INFO - binance-kucoin - binance: pobrana cena = 0.4406
+2025-02-15 12:29:37,889 - INFO - binance-kucoin - kucoin: pobrana cena = 0.4405
+2025-02-15 12:29:37,891 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: AMP/USDT (dla binance), AMP/USDT (dla kucoin)
+2025-02-15 12:29:37,905 - INFO - bitget-bitstamp - bitget: pobrana cena = 2709.36
+2025-02-15 12:29:37,906 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:37,907 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ONDO/USDT (dla bitget), ONDO/USDT (dla bitstamp)
+2025-02-15 12:29:38,256 - INFO - binance-bitget - binance: pobrana cena = 3.472
+2025-02-15 12:29:38,257 - INFO - binance-bitget - bitget: pobrana cena = 3.4728
+2025-02-15 12:29:38,258 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: KAVA/USDT (dla binance), KAVA/USDT (dla bitget)
+2025-02-15 12:29:38,352 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.10769
+2025-02-15 12:29:38,352 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1076
+2025-02-15 12:29:38,353 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: DAPP/USDT (dla kucoin), DAPP/USDT (dla bitget)
+2025-02-15 12:29:38,543 - INFO - binance-kucoin - binance: pobrana cena = 0.005719
+2025-02-15 12:29:38,544 - INFO - binance-kucoin - kucoin: pobrana cena = 0.005708
+2025-02-15 12:29:38,545 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: INJ/USDT (dla binance), INJ/USDT (dla kucoin)
+2025-02-15 12:29:38,804 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:38,806 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:38,896 - INFO - binance-bitget - binance: pobrana cena = 0.4773
+2025-02-15 12:29:38,897 - INFO - binance-bitget - bitget: pobrana cena = 0.4774
+2025-02-15 12:29:38,898 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: LUNA/USDT (dla binance), LUNA/USDT (dla bitget)
+2025-02-15 12:29:38,945 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1295
+2025-02-15 12:29:38,946 - INFO - kucoin-bitget - bitget: pobrana cena = 0.13
+2025-02-15 12:29:38,947 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AVAAI/USDT (dla kucoin), AVAAI/USDT (dla bitget)
+2025-02-15 12:29:39,030 - INFO - binance-bitstamp - binance: pobrana cena = 2.8079
+2025-02-15 12:29:39,033 - INFO - binance-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:39,033 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla binance), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:39,034 - INFO - binance-kucoin - binance: pobrana cena = 15.28
+2025-02-15 12:29:39,036 - INFO - binance-kucoin - kucoin: pobrana cena = 15.282
+2025-02-15 12:29:39,037 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ME/USDT (dla binance), ME/USDT (dla kucoin)
+2025-02-15 12:29:39,109 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.301
+2025-02-15 12:29:39,111 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'ONDO/USDT', 'bitstamp': 'ONDO/USDT'}. Pomijam.
+2025-02-15 12:29:39,111 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: NEAR/USDT (dla bitget), NEAR/USDT (dla bitstamp)
+2025-02-15 12:29:39,267 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.808
+2025-02-15 12:29:39,268 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:39,269 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:39,497 - INFO - binance-bitget - binance: pobrana cena = 0.2677
+2025-02-15 12:29:39,498 - INFO - binance-bitget - bitget: pobrana cena = 0.2677
+2025-02-15 12:29:39,499 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ARK/USDT (dla binance), ARK/USDT (dla bitget)
+2025-02-15 12:29:39,539 - INFO - binance-kucoin - binance: pobrana cena = 1.668
+2025-02-15 12:29:39,549 - INFO - binance-kucoin - kucoin: pobrana cena = 1.66725
+2025-02-15 12:29:39,551 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ZRX/USDT (dla binance), ZRX/USDT (dla kucoin)
+2025-02-15 12:29:39,552 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.04007
+2025-02-15 12:29:39,555 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0401
+2025-02-15 12:29:39,556 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: KEY/USDT (dla kucoin), KEY/USDT (dla bitget)
+2025-02-15 12:29:40,091 - INFO - binance-bitget - binance: pobrana cena = 0.3866
+2025-02-15 12:29:40,092 - INFO - binance-bitget - bitget: pobrana cena = 0.3879
+2025-02-15 12:29:40,095 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: WIN/USDT (dla binance), WIN/USDT (dla bitget)
+2025-02-15 12:29:40,149 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.000737
+2025-02-15 12:29:40,150 - INFO - kucoin-bitget - bitget: pobrana cena = 0.000732
+2025-02-15 12:29:40,151 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ICE/USDT (dla kucoin), ICE/USDT (dla bitget)
+2025-02-15 12:29:40,265 - INFO - binance-kucoin - binance: pobrana cena = 0.3263
+2025-02-15 12:29:40,267 - INFO - binance-kucoin - kucoin: pobrana cena = 0.3259
+2025-02-15 12:29:40,268 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: HMSTR/USDT (dla binance), HMSTR/USDT (dla kucoin)
+2025-02-15 12:29:40,312 - INFO - binance-bitstamp - binance: pobrana cena = 2710.0
+2025-02-15 12:29:40,312 - INFO - binance-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:40,313 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: MATIC/USDT (dla binance), MATIC/USDT (dla bitstamp)
+2025-02-15 12:29:40,314 - INFO - bitget-bitstamp - bitget: pobrana cena = 3.523
+2025-02-15 12:29:40,316 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'NEAR/USDT', 'bitstamp': 'NEAR/USDT'}. Pomijam.
+2025-02-15 12:29:40,317 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: PEPE/USDT (dla bitget), PEPE/USDT (dla bitstamp)
+2025-02-15 12:29:40,410 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.97
+2025-02-15 12:29:40,410 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:40,412 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:40,676 - INFO - binance-bitget - binance: pobrana cena = 7.858e-05
+2025-02-15 12:29:40,677 - INFO - binance-bitget - bitget: pobrana cena = 7.861e-05
+2025-02-15 12:29:40,679 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: AR/USDT (dla binance), AR/USDT (dla bitget)
+2025-02-15 12:29:40,786 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.005953
+2025-02-15 12:29:40,787 - INFO - kucoin-bitget - bitget: pobrana cena = 0.005946
+2025-02-15 12:29:40,788 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: POND/USDT (dla kucoin), POND/USDT (dla bitget)
+2025-02-15 12:29:40,833 - INFO - binance-kucoin - binance: pobrana cena = 0.001751
+2025-02-15 12:29:40,833 - INFO - binance-kucoin - kucoin: pobrana cena = 0.001748
+2025-02-15 12:29:40,834 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: AUCTION/USDT (dla binance), AUCTION/USDT (dla kucoin)
+2025-02-15 12:29:41,299 - INFO - binance-bitget - binance: pobrana cena = 9.4
+2025-02-15 12:29:41,300 - INFO - binance-bitget - bitget: pobrana cena = 9.39
+2025-02-15 12:29:41,301 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ZEN/USDT (dla binance), ZEN/USDT (dla bitget)
+2025-02-15 12:29:41,368 - INFO - binance-kucoin - binance: pobrana cena = 11.19
+2025-02-15 12:29:41,369 - INFO - binance-kucoin - kucoin: pobrana cena = 11.19
+2025-02-15 12:29:41,371 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: CKB/USDT (dla binance), CKB/USDT (dla kucoin)
+2025-02-15 12:29:41,484 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.013643
+2025-02-15 12:29:41,485 - INFO - kucoin-bitget - bitget: pobrana cena = 0.01366
+2025-02-15 12:29:41,486 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PSTAKE/USDT (dla kucoin), PSTAKE/USDT (dla bitget)
+2025-02-15 12:29:41,512 - WARNING - binance-bitstamp - Dla binance pobrana cena jest None, pomijam asset {'binance': 'MATIC/USDT', 'bitstamp': 'MATIC/USDT'}
+2025-02-15 12:29:41,522 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'MATIC/USDT', 'bitstamp': 'MATIC/USDT'}. Pomijam.
+2025-02-15 12:29:41,536 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: CHZ/USDT (dla binance), CHZ/USDT (dla bitstamp)
+2025-02-15 12:29:41,559 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.01e-05
+2025-02-15 12:29:41,562 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'PEPE/USDT', 'bitstamp': 'PEPE/USDT'}. Pomijam.
+2025-02-15 12:29:41,562 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla bitget), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:41,694 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:41,694 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:41,695 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:41,915 - INFO - binance-bitget - binance: pobrana cena = 14.9
+2025-02-15 12:29:41,916 - INFO - binance-bitget - bitget: pobrana cena = 14.892
+2025-02-15 12:29:41,918 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ACT/USDT (dla binance), ACT/USDT (dla bitget)
+2025-02-15 12:29:42,092 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.02493
+2025-02-15 12:29:42,093 - INFO - kucoin-bitget - bitget: pobrana cena = 0.02472
+2025-02-15 12:29:42,094 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: TRU/USDT (dla kucoin), TRU/USDT (dla bitget)
+2025-02-15 12:29:42,095 - INFO - binance-kucoin - binance: pobrana cena = 0.006383
+2025-02-15 12:29:42,096 - INFO - binance-kucoin - kucoin: pobrana cena = 0.006374
+2025-02-15 12:29:42,099 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: HNT/USDT (dla binance), HNT/USDT (dla kucoin)
+2025-02-15 12:29:42,529 - INFO - binance-bitget - binance: pobrana cena = 0.1904
+2025-02-15 12:29:42,534 - INFO - binance-bitget - bitget: pobrana cena = 0.1903
+2025-02-15 12:29:42,535 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: FLOW/USDT (dla binance), FLOW/USDT (dla bitget)
+2025-02-15 12:29:42,599 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'HNT/USDT', 'kucoin': 'HNT/USDT'}
+2025-02-15 12:29:42,600 - INFO - binance-kucoin - kucoin: pobrana cena = 3.786
+2025-02-15 12:29:42,601 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'HNT/USDT', 'kucoin': 'HNT/USDT'}. Pomijam.
+2025-02-15 12:29:42,602 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BULL/USDT (dla binance), BULL/USDT (dla kucoin)
+2025-02-15 12:29:42,713 - INFO - binance-bitstamp - binance: pobrana cena = 0.0611
+2025-02-15 12:29:42,718 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'CHZ/USDT', 'bitstamp': 'CHZ/USDT'}. Pomijam.
+2025-02-15 12:29:42,719 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: FTM/USDT (dla binance), FTM/USDT (dla bitstamp)
+2025-02-15 12:29:42,806 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.9998
+2025-02-15 12:29:42,807 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:42,808 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SHIB/USDT (dla bitget), SHIB/USDT (dla bitstamp)
+2025-02-15 12:29:42,822 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.04656
+2025-02-15 12:29:42,823 - INFO - kucoin-bitget - bitget: pobrana cena = 0.0468
+2025-02-15 12:29:42,825 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: WIF/USDT (dla kucoin), WIF/USDT (dla bitget)
+2025-02-15 12:29:42,965 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97644.7
+2025-02-15 12:29:42,966 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:43,085 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'BULL/USDT', 'kucoin': 'BULL/USDT'}
+2025-02-15 12:29:43,086 - INFO - binance-kucoin - kucoin: pobrana cena = 0.002093
+2025-02-15 12:29:43,087 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'BULL/USDT', 'kucoin': 'BULL/USDT'}. Pomijam.
+2025-02-15 12:29:43,088 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: CELO/USDT (dla binance), CELO/USDT (dla kucoin)
+2025-02-15 12:29:43,149 - INFO - binance-bitget - binance: pobrana cena = 0.526
+2025-02-15 12:29:43,149 - INFO - binance-bitget - bitget: pobrana cena = 0.5263
+2025-02-15 12:29:43,150 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: YGG/USDT (dla binance), YGG/USDT (dla bitget)
+2025-02-15 12:29:43,357 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.7022
+2025-02-15 12:29:43,358 - INFO - kucoin-bitget - bitget: pobrana cena = 0.701
+2025-02-15 12:29:43,359 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: MELANIA/USDT (dla kucoin), MELANIA/USDT (dla bitget)
+2025-02-15 12:29:43,589 - INFO - binance-kucoin - binance: pobrana cena = 0.4534
+2025-02-15 12:29:43,590 - INFO - binance-kucoin - kucoin: pobrana cena = 0.453
+2025-02-15 12:29:43,591 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: OM/USDT (dla binance), OM/USDT (dla kucoin)
+2025-02-15 12:29:43,745 - INFO - binance-bitget - binance: pobrana cena = 0.2672
+2025-02-15 12:29:43,746 - INFO - binance-bitget - bitget: pobrana cena = 0.2672
+2025-02-15 12:29:43,748 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MDT/USDT (dla binance), MDT/USDT (dla bitget)
+2025-02-15 12:29:43,913 - WARNING - binance-bitstamp - Dla binance pobrana cena jest None, pomijam asset {'binance': 'FTM/USDT', 'bitstamp': 'FTM/USDT'}
+2025-02-15 12:29:43,920 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'FTM/USDT', 'bitstamp': 'FTM/USDT'}. Pomijam.
+2025-02-15 12:29:43,923 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOGE/USDT (dla binance), DOGE/USDT (dla bitstamp)
+2025-02-15 12:29:43,968 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:43,970 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:43,976 - INFO - kucoin-bitget - kucoin: pobrana cena = 1.361
+2025-02-15 12:29:43,976 - INFO - kucoin-bitget - bitget: pobrana cena = 1.36
+2025-02-15 12:29:43,982 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: HIGH/USDT (dla kucoin), HIGH/USDT (dla bitget)
+2025-02-15 12:29:44,007 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.661e-05
+2025-02-15 12:29:44,007 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SHIB/USDT', 'bitstamp': 'SHIB/USDT'}. Pomijam.
+2025-02-15 12:29:44,008 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SUI/USDT (dla bitget), SUI/USDT (dla bitstamp)
+2025-02-15 12:29:44,107 - INFO - binance-kucoin - binance: pobrana cena = 7.563
+2025-02-15 12:29:44,109 - INFO - binance-kucoin - kucoin: pobrana cena = 7.56182
+2025-02-15 12:29:44,111 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: WAVES/USDT (dla binance), WAVES/USDT (dla kucoin)
+2025-02-15 12:29:44,362 - INFO - binance-bitget - binance: pobrana cena = 0.03965
+2025-02-15 12:29:44,363 - INFO - binance-bitget - bitget: pobrana cena = 0.03957
+2025-02-15 12:29:44,364 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: TNSR/USDT (dla binance), TNSR/USDT (dla bitget)
+2025-02-15 12:29:44,641 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.962
+2025-02-15 12:29:44,642 - INFO - kucoin-bitget - bitget: pobrana cena = 0.968
+2025-02-15 12:29:44,643 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ROOT/USDT (dla kucoin), ROOT/USDT (dla bitget)
+2025-02-15 12:29:44,768 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'WAVES/USDT', 'kucoin': 'WAVES/USDT'}
+2025-02-15 12:29:44,769 - INFO - binance-kucoin - kucoin: pobrana cena = 1.5703
+2025-02-15 12:29:44,769 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'WAVES/USDT', 'kucoin': 'WAVES/USDT'}. Pomijam.
+2025-02-15 12:29:44,770 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ANIME/USDT (dla binance), ANIME/USDT (dla kucoin)
+2025-02-15 12:29:44,966 - INFO - binance-bitget - binance: pobrana cena = 0.3868
+2025-02-15 12:29:44,967 - INFO - binance-bitget - bitget: pobrana cena = 0.3867
+2025-02-15 12:29:44,970 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MANTA/USDT (dla binance), MANTA/USDT (dla bitget)
+2025-02-15 12:29:45,115 - INFO - binance-bitstamp - binance: pobrana cena = 0.27766
+2025-02-15 12:29:45,116 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'DOGE/USDT', 'bitstamp': 'DOGE/USDT'}. Pomijam.
+2025-02-15 12:29:45,116 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XLM/USDT (dla binance), XLM/USDT (dla bitstamp)
+2025-02-15 12:29:45,179 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.808
+2025-02-15 12:29:45,180 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:45,181 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:45,208 - INFO - bitget-bitstamp - bitget: pobrana cena = 3.472
+2025-02-15 12:29:45,209 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SUI/USDT', 'bitstamp': 'SUI/USDT'}. Pomijam.
+2025-02-15 12:29:45,210 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: WIF/USDT (dla bitget), WIF/USDT (dla bitstamp)
+2025-02-15 12:29:45,235 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.01732
+2025-02-15 12:29:45,236 - INFO - kucoin-bitget - bitget: pobrana cena = 0.01728
+2025-02-15 12:29:45,239 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: CEEK/USDT (dla kucoin), CEEK/USDT (dla bitget)
+2025-02-15 12:29:45,342 - INFO - binance-kucoin - binance: pobrana cena = 0.0271
+2025-02-15 12:29:45,343 - INFO - binance-kucoin - kucoin: pobrana cena = 0.027105
+2025-02-15 12:29:45,345 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: HFT/USDT (dla binance), HFT/USDT (dla kucoin)
+2025-02-15 12:29:45,636 - INFO - binance-bitget - binance: pobrana cena = 0.412
+2025-02-15 12:29:45,636 - INFO - binance-bitget - bitget: pobrana cena = 0.4123
+2025-02-15 12:29:45,637 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ELF/USDT (dla binance), ELF/USDT (dla bitget)
+2025-02-15 12:29:45,977 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.02331
+2025-02-15 12:29:45,978 - INFO - kucoin-bitget - bitget: pobrana cena = 0.02323
+2025-02-15 12:29:45,979 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: RAY/USDT (dla kucoin), RAY/USDT (dla bitget)
+2025-02-15 12:29:46,072 - INFO - binance-kucoin - binance: pobrana cena = 0.1102
+2025-02-15 12:29:46,074 - INFO - binance-kucoin - kucoin: pobrana cena = 0.1101
+2025-02-15 12:29:46,075 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ZRO/USDT (dla binance), ZRO/USDT (dla kucoin)
+2025-02-15 12:29:46,241 - INFO - binance-bitget - binance: pobrana cena = 0.292
+2025-02-15 12:29:46,241 - INFO - binance-bitget - bitget: pobrana cena = 0.2919
+2025-02-15 12:29:46,243 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: FLOKI/USDT (dla binance), FLOKI/USDT (dla bitget)
+2025-02-15 12:29:46,316 - INFO - binance-bitstamp - binance: pobrana cena = 0.3579
+2025-02-15 12:29:46,317 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'XLM/USDT', 'bitstamp': 'XLM/USDT'}. Pomijam.
+2025-02-15 12:29:46,318 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: OP/USDT (dla binance), OP/USDT (dla bitstamp)
+2025-02-15 12:29:46,408 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.701
+2025-02-15 12:29:46,409 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'WIF/USDT', 'bitstamp': 'WIF/USDT'}. Pomijam.
+2025-02-15 12:29:46,409 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/USDT (dla bitget), LINK/USDT (dla bitstamp)
+2025-02-15 12:29:46,455 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.97
+2025-02-15 12:29:46,455 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:46,457 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:46,583 - INFO - kucoin-bitget - kucoin: pobrana cena = 5.4567
+2025-02-15 12:29:46,583 - INFO - kucoin-bitget - bitget: pobrana cena = 5.453
+2025-02-15 12:29:46,585 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: LUNC/USDT (dla kucoin), LUNC/USDT (dla bitget)
+2025-02-15 12:29:46,677 - INFO - binance-kucoin - binance: pobrana cena = 3.073
+2025-02-15 12:29:46,677 - INFO - binance-kucoin - kucoin: pobrana cena = 3.0738
+2025-02-15 12:29:46,678 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: LDO/USDT (dla binance), LDO/USDT (dla kucoin)
+2025-02-15 12:29:46,896 - INFO - binance-bitget - binance: pobrana cena = 9.836e-05
+2025-02-15 12:29:46,897 - INFO - binance-bitget - bitget: pobrana cena = 9.82e-05
+2025-02-15 12:29:46,897 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: D/USDT (dla binance), D/USDT (dla bitget)
+2025-02-15 12:29:47,183 - INFO - kucoin-bitget - kucoin: pobrana cena = 7.917e-05
+2025-02-15 12:29:47,184 - INFO - kucoin-bitget - bitget: pobrana cena = 7.923e-05
+2025-02-15 12:29:47,185 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: NS/USDT (dla kucoin), NS/USDT (dla bitget)
+2025-02-15 12:29:47,427 - INFO - binance-kucoin - binance: pobrana cena = 1.832
+2025-02-15 12:29:47,428 - INFO - binance-kucoin - kucoin: pobrana cena = 1.8321
+2025-02-15 12:29:47,429 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: CHR/USDT (dla binance), CHR/USDT (dla kucoin)
+2025-02-15 12:29:47,497 - INFO - binance-bitget - binance: pobrana cena = 0.08521
+2025-02-15 12:29:47,497 - INFO - binance-bitget - bitget: pobrana cena = 0.08518
+2025-02-15 12:29:47,498 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MTL/USDT (dla binance), MTL/USDT (dla bitget)
+2025-02-15 12:29:47,517 - INFO - binance-bitstamp - binance: pobrana cena = 1.146
+2025-02-15 12:29:47,518 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'OP/USDT', 'bitstamp': 'OP/USDT'}. Pomijam.
+2025-02-15 12:29:47,519 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ICP/USDT (dla binance), ICP/USDT (dla bitstamp)
+2025-02-15 12:29:47,609 - INFO - bitget-bitstamp - bitget: pobrana cena = 19.25
+2025-02-15 12:29:47,610 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'LINK/USDT', 'bitstamp': 'LINK/USDT'}. Pomijam.
+2025-02-15 12:29:47,612 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AVAX/USDT (dla bitget), AVAX/USDT (dla bitstamp)
+2025-02-15 12:29:47,729 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:47,730 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:47,731 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:47,789 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.09136
+2025-02-15 12:29:47,790 - INFO - kucoin-bitget - bitget: pobrana cena = 0.09131
+2025-02-15 12:29:47,791 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EGLD/USDT (dla kucoin), EGLD/USDT (dla bitget)
+2025-02-15 12:29:47,931 - INFO - binance-kucoin - binance: pobrana cena = 0.1388
+2025-02-15 12:29:47,937 - INFO - binance-kucoin - kucoin: pobrana cena = 0.1389
+2025-02-15 12:29:47,942 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: RUNE/USDT (dla binance), RUNE/USDT (dla kucoin)
+2025-02-15 12:29:48,096 - INFO - binance-bitget - binance: pobrana cena = 0.946
+2025-02-15 12:29:48,097 - INFO - binance-bitget - bitget: pobrana cena = 0.945
+2025-02-15 12:29:48,099 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: PEOPLE/USDT (dla binance), PEOPLE/USDT (dla bitget)
+2025-02-15 12:29:48,564 - INFO - kucoin-bitget - kucoin: pobrana cena = 23.06
+2025-02-15 12:29:48,565 - INFO - kucoin-bitget - bitget: pobrana cena = 23.07
+2025-02-15 12:29:48,566 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: JST/USDT (dla kucoin), JST/USDT (dla bitget)
+2025-02-15 12:29:48,713 - INFO - binance-bitget - binance: pobrana cena = 0.02073
+2025-02-15 12:29:48,714 - INFO - binance-bitget - bitget: pobrana cena = 0.02073
+2025-02-15 12:29:48,715 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: COW/USDT (dla binance), COW/USDT (dla bitget)
+2025-02-15 12:29:48,716 - INFO - binance-bitstamp - binance: pobrana cena = 7.167
+2025-02-15 12:29:48,719 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'ICP/USDT', 'bitstamp': 'ICP/USDT'}. Pomijam.
+2025-02-15 12:29:48,720 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EGLD/USDT (dla binance), EGLD/USDT (dla bitstamp)
+2025-02-15 12:29:48,728 - INFO - binance-kucoin - binance: pobrana cena = 1.355
+2025-02-15 12:29:48,729 - INFO - binance-kucoin - kucoin: pobrana cena = 1.3556
+2025-02-15 12:29:48,732 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: REEF/USDT (dla binance), REEF/USDT (dla kucoin)
+2025-02-15 12:29:48,806 - INFO - bitget-bitstamp - bitget: pobrana cena = 26.1
+2025-02-15 12:29:48,807 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'AVAX/USDT', 'bitstamp': 'AVAX/USDT'}. Pomijam.
+2025-02-15 12:29:48,808 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SOL/USDT (dla bitget), SOL/USDT (dla bitstamp)
+2025-02-15 12:29:49,015 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97644.8
+2025-02-15 12:29:49,017 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:49,076 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.03342
+2025-02-15 12:29:49,077 - INFO - kucoin-bitget - bitget: pobrana cena = 0.03341
+2025-02-15 12:29:49,079 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ELA/USDT (dla kucoin), ELA/USDT (dla bitget)
+2025-02-15 12:29:49,288 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'REEF/USDT', 'kucoin': 'REEF/USDT'}
+2025-02-15 12:29:49,289 - INFO - binance-kucoin - kucoin: pobrana cena = 0.000786
+2025-02-15 12:29:49,290 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'REEF/USDT', 'kucoin': 'REEF/USDT'}. Pomijam.
+2025-02-15 12:29:49,291 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: SFP/USDT (dla binance), SFP/USDT (dla kucoin)
+2025-02-15 12:29:49,322 - INFO - binance-bitget - binance: pobrana cena = 0.3376
+2025-02-15 12:29:49,323 - INFO - binance-bitget - bitget: pobrana cena = 0.3377
+2025-02-15 12:29:49,324 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: RLC/USDT (dla binance), RLC/USDT (dla bitget)
+2025-02-15 12:29:49,617 - INFO - kucoin-bitget - kucoin: pobrana cena = 1.7632
+2025-02-15 12:29:49,618 - INFO - kucoin-bitget - bitget: pobrana cena = 1.753
+2025-02-15 12:29:49,621 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: LPT/USDT (dla kucoin), LPT/USDT (dla bitget)
+2025-02-15 12:29:49,825 - INFO - binance-kucoin - binance: pobrana cena = 0.6727
+2025-02-15 12:29:49,826 - INFO - binance-kucoin - kucoin: pobrana cena = 0.6726
+2025-02-15 12:29:49,827 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: HBAR/USDT (dla binance), HBAR/USDT (dla kucoin)
+2025-02-15 12:29:49,916 - INFO - binance-bitstamp - binance: pobrana cena = 23.05
+2025-02-15 12:29:49,917 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EGLD/USDT', 'bitstamp': 'EGLD/USDT'}. Pomijam.
+2025-02-15 12:29:49,919 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: YFI/USDT (dla binance), YFI/USDT (dla bitstamp)
+2025-02-15 12:29:50,013 - INFO - bitget-bitstamp - bitget: pobrana cena = 195.84
+2025-02-15 12:29:50,018 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'SOL/USDT', 'bitstamp': 'SOL/USDT'}. Pomijam.
+2025-02-15 12:29:50,022 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla bitget), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:50,023 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:50,025 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:50,056 - INFO - binance-bitget - binance: pobrana cena = 1.304
+2025-02-15 12:29:50,057 - INFO - binance-bitget - bitget: pobrana cena = 1.305
+2025-02-15 12:29:50,058 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: VELODROME/USDT (dla binance), VELODROME/USDT (dla bitget)
+2025-02-15 12:29:50,349 - INFO - binance-kucoin - binance: pobrana cena = 0.23589
+2025-02-15 12:29:50,352 - INFO - binance-kucoin - kucoin: pobrana cena = 0.23592
+2025-02-15 12:29:50,354 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: WAXP/USDT (dla binance), WAXP/USDT (dla kucoin)
+2025-02-15 12:29:50,658 - INFO - binance-bitget - binance: pobrana cena = 0.075
+2025-02-15 12:29:50,659 - INFO - binance-bitget - bitget: pobrana cena = 0.07497
+2025-02-15 12:29:50,660 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: DUSK/USDT (dla binance), DUSK/USDT (dla bitget)
+2025-02-15 12:29:50,805 - INFO - kucoin-bitget - kucoin: pobrana cena = 8.057
+2025-02-15 12:29:50,806 - INFO - kucoin-bitget - bitget: pobrana cena = 8.059
+2025-02-15 12:29:50,807 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SLF/USDT (dla kucoin), SLF/USDT (dla bitget)
+2025-02-15 12:29:50,878 - INFO - binance-kucoin - binance: pobrana cena = 0.0324
+2025-02-15 12:29:50,879 - INFO - binance-kucoin - kucoin: pobrana cena = 0.03227
+2025-02-15 12:29:50,880 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: IOTX/USDT (dla binance), IOTX/USDT (dla kucoin)
+2025-02-15 12:29:51,116 - INFO - binance-bitstamp - binance: pobrana cena = 6088.0
+2025-02-15 12:29:51,117 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'YFI/USDT', 'bitstamp': 'YFI/USDT'}. Pomijam.
+2025-02-15 12:29:51,118 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOT/USDT (dla binance), DOT/USDT (dla bitstamp)
+2025-02-15 12:29:51,267 - INFO - binance-bitget - binance: pobrana cena = 0.1263
+2025-02-15 12:29:51,267 - INFO - binance-bitget - bitget: pobrana cena = 0.1261
+2025-02-15 12:29:51,269 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: SUSHI/USDT (dla binance), SUSHI/USDT (dla bitget)
+2025-02-15 12:29:51,279 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80799
+2025-02-15 12:29:51,279 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:51,280 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:51,355 - INFO - bitget-bitstamp - bitget: pobrana cena = 97649.99
+2025-02-15 12:29:51,356 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:51,358 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LTC/USDT (dla bitget), LTC/USDT (dla bitstamp)
+2025-02-15 12:29:51,359 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.2072
+2025-02-15 12:29:51,359 - INFO - kucoin-bitget - bitget: pobrana cena = 0.2074
+2025-02-15 12:29:51,360 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: LQTY/USDT (dla kucoin), LQTY/USDT (dla bitget)
+2025-02-15 12:29:51,545 - INFO - binance-kucoin - binance: pobrana cena = 0.02051
+2025-02-15 12:29:51,545 - INFO - binance-kucoin - kucoin: pobrana cena = 0.0205
+2025-02-15 12:29:51,546 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: POLS/USDT (dla binance), POLS/USDT (dla kucoin)
+2025-02-15 12:29:51,889 - INFO - binance-bitget - binance: pobrana cena = 0.916
+2025-02-15 12:29:51,890 - INFO - binance-bitget - bitget: pobrana cena = 0.914
+2025-02-15 12:29:51,891 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: SANTOS/USDT (dla binance), SANTOS/USDT (dla bitget)
+2025-02-15 12:29:51,994 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.9606
+2025-02-15 12:29:51,999 - INFO - kucoin-bitget - bitget: pobrana cena = 0.962
+2025-02-15 12:29:52,004 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AAVE/USDT (dla kucoin), AAVE/USDT (dla bitget)
+2025-02-15 12:29:52,276 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'POLS/USDT', 'kucoin': 'POLS/USDT'}
+2025-02-15 12:29:52,276 - INFO - binance-kucoin - kucoin: pobrana cena = 0.3031
+2025-02-15 12:29:52,277 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'POLS/USDT', 'kucoin': 'POLS/USDT'}. Pomijam.
+2025-02-15 12:29:52,278 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: XEM/USDT (dla binance), XEM/USDT (dla kucoin)
+2025-02-15 12:29:52,316 - INFO - binance-bitstamp - binance: pobrana cena = 5.089
+2025-02-15 12:29:52,316 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'DOT/USDT', 'bitstamp': 'DOT/USDT'}. Pomijam.
+2025-02-15 12:29:52,317 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: RNDR/USDT (dla binance), RNDR/USDT (dla bitstamp)
+2025-02-15 12:29:52,520 - INFO - binance-bitget - binance: pobrana cena = 2.681
+2025-02-15 12:29:52,521 - INFO - binance-bitget - bitget: pobrana cena = 2.682
+2025-02-15 12:29:52,522 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: ALPINE/USDT (dla binance), ALPINE/USDT (dla bitget)
+2025-02-15 12:29:52,556 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.97
+2025-02-15 12:29:52,556 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:52,558 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:52,559 - INFO - bitget-bitstamp - bitget: pobrana cena = 132.85
+2025-02-15 12:29:52,560 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'LTC/USDT', 'bitstamp': 'LTC/USDT'}. Pomijam.
+2025-02-15 12:29:52,560 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: DOGE/USDT (dla bitget), DOGE/USDT (dla bitstamp)
+2025-02-15 12:29:52,654 - INFO - kucoin-bitget - kucoin: pobrana cena = 257.619
+2025-02-15 12:29:52,655 - INFO - kucoin-bitget - bitget: pobrana cena = 257.57
+2025-02-15 12:29:52,656 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ZETA/USDT (dla kucoin), ZETA/USDT (dla bitget)
+2025-02-15 12:29:52,766 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'XEM/USDT', 'kucoin': 'XEM/USDT'}
+2025-02-15 12:29:52,766 - INFO - binance-kucoin - kucoin: pobrana cena = 0.021747
+2025-02-15 12:29:52,767 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'XEM/USDT', 'kucoin': 'XEM/USDT'}. Pomijam.
+2025-02-15 12:29:52,767 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: DOT/USDT (dla binance), DOT/USDT (dla kucoin)
+2025-02-15 12:29:53,136 - INFO - binance-bitget - binance: pobrana cena = 1.175
+2025-02-15 12:29:53,137 - INFO - binance-bitget - bitget: pobrana cena = 1.173
+2025-02-15 12:29:53,139 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MOVR/USDT (dla binance), MOVR/USDT (dla bitget)
+2025-02-15 12:29:53,226 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.3224
+2025-02-15 12:29:53,226 - INFO - kucoin-bitget - bitget: pobrana cena = 0.3225
+2025-02-15 12:29:53,227 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: FET/USDT (dla kucoin), FET/USDT (dla bitget)
+2025-02-15 12:29:53,504 - INFO - binance-kucoin - binance: pobrana cena = 5.089
+2025-02-15 12:29:53,504 - INFO - binance-kucoin - kucoin: pobrana cena = 5.0901
+2025-02-15 12:29:53,505 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BICO/USDT (dla binance), BICO/USDT (dla kucoin)
+2025-02-15 12:29:53,516 - WARNING - binance-bitstamp - Dla binance pobrana cena jest None, pomijam asset {'binance': 'RNDR/USDT', 'bitstamp': 'RNDR/USDT'}
+2025-02-15 12:29:53,517 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'RNDR/USDT', 'bitstamp': 'RNDR/USDT'}. Pomijam.
+2025-02-15 12:29:53,517 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: NEAR/USDT (dla binance), NEAR/USDT (dla bitstamp)
+2025-02-15 12:29:53,728 - INFO - binance-bitget - binance: pobrana cena = 8.078
+2025-02-15 12:29:53,729 - INFO - binance-bitget - bitget: pobrana cena = 8.081
+2025-02-15 12:29:53,730 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: MAGIC/USDT (dla binance), MAGIC/USDT (dla bitget)
+2025-02-15 12:29:53,758 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.27764
+2025-02-15 12:29:53,759 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'DOGE/USDT', 'bitstamp': 'DOGE/USDT'}. Pomijam.
+2025-02-15 12:29:53,759 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ADA/USDT (dla bitget), ADA/USDT (dla bitstamp)
+2025-02-15 12:29:53,818 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.7786
+2025-02-15 12:29:53,818 - INFO - kucoin-bitget - bitget: pobrana cena = 0.778
+2025-02-15 12:29:53,819 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: CATS/USDT (dla kucoin), CATS/USDT (dla bitget)
+2025-02-15 12:29:53,841 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:53,841 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:53,842 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:29:54,030 - INFO - binance-kucoin - binance: pobrana cena = 0.1808
+2025-02-15 12:29:54,034 - INFO - binance-kucoin - kucoin: pobrana cena = 0.1798
+2025-02-15 12:29:54,036 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: THETA/USDT (dla binance), THETA/USDT (dla kucoin)
+2025-02-15 12:29:54,424 - INFO - binance-bitget - binance: pobrana cena = 0.2526
+2025-02-15 12:29:54,427 - INFO - binance-bitget - bitget: pobrana cena = 0.2527
+2025-02-15 12:29:54,428 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: UMA/USDT (dla binance), UMA/USDT (dla bitget)
+2025-02-15 12:29:54,430 - INFO - kucoin-bitget - kucoin: pobrana cena = 9.06e-06
+2025-02-15 12:29:54,431 - INFO - kucoin-bitget - bitget: pobrana cena = 9.07e-06
+2025-02-15 12:29:54,432 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: PUNDIX/USDT (dla kucoin), PUNDIX/USDT (dla bitget)
+2025-02-15 12:29:54,544 - INFO - binance-kucoin - binance: pobrana cena = 1.395
+2025-02-15 12:29:54,544 - INFO - binance-kucoin - kucoin: pobrana cena = 1.3958
+2025-02-15 12:29:54,546 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: FORTH/USDT (dla binance), FORTH/USDT (dla kucoin)
+2025-02-15 12:29:54,717 - INFO - binance-bitstamp - binance: pobrana cena = 3.523
+2025-02-15 12:29:54,718 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'NEAR/USDT', 'bitstamp': 'NEAR/USDT'}. Pomijam.
+2025-02-15 12:29:54,718 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ADA/USDT (dla binance), ADA/USDT (dla bitstamp)
+2025-02-15 12:29:54,958 - INFO - bitget-bitstamp - bitget: pobrana cena = 0.7955
+2025-02-15 12:29:54,959 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'ADA/USDT', 'bitstamp': 'ADA/USDT'}. Pomijam.
+2025-02-15 12:29:55,019 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.3742
+2025-02-15 12:29:55,019 - INFO - kucoin-bitget - bitget: pobrana cena = 0.3752
+2025-02-15 12:29:55,021 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ICP/USDT (dla kucoin), ICP/USDT (dla bitget)
+2025-02-15 12:29:55,065 - INFO - binance-bitget - binance: pobrana cena = 1.737
+2025-02-15 12:29:55,066 - INFO - binance-bitget - bitget: pobrana cena = 1.733
+2025-02-15 12:29:55,069 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: CATI/USDT (dla binance), CATI/USDT (dla bitget)
+2025-02-15 12:29:55,070 - INFO - binance-kucoin - binance: pobrana cena = 3.939
+2025-02-15 12:29:55,071 - INFO - binance-kucoin - kucoin: pobrana cena = 3.9416
+2025-02-15 12:29:55,072 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: CVX/USDT (dla binance), CVX/USDT (dla kucoin)
+2025-02-15 12:29:55,106 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97644.8
+2025-02-15 12:29:55,106 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:29:55,591 - INFO - binance-kucoin - binance: pobrana cena = 2.368
+2025-02-15 12:29:55,592 - INFO - binance-kucoin - kucoin: pobrana cena = 2.3662
+2025-02-15 12:29:55,594 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: QNT/USDT (dla binance), QNT/USDT (dla kucoin)
+2025-02-15 12:29:55,654 - INFO - kucoin-bitget - kucoin: pobrana cena = 7.167
+2025-02-15 12:29:55,655 - INFO - kucoin-bitget - bitget: pobrana cena = 7.17
+2025-02-15 12:29:55,657 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: AURORA/USDT (dla kucoin), AURORA/USDT (dla bitget)
+2025-02-15 12:29:55,700 - INFO - binance-bitget - binance: pobrana cena = 0.1653
+2025-02-15 12:29:55,701 - INFO - binance-bitget - bitget: pobrana cena = 0.1653
+2025-02-15 12:29:55,703 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: LINK/USDT (dla binance), LINK/USDT (dla bitget)
+2025-02-15 12:29:55,917 - INFO - binance-bitstamp - binance: pobrana cena = 0.7954
+2025-02-15 12:29:55,918 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'ADA/USDT', 'bitstamp': 'ADA/USDT'}. Pomijam.
+2025-02-15 12:29:55,918 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: SUI/USDT (dla binance), SUI/USDT (dla bitstamp)
+2025-02-15 12:29:55,961 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:55,962 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla bitget), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:56,099 - INFO - binance-kucoin - binance: pobrana cena = 95.7
+2025-02-15 12:29:56,100 - INFO - binance-kucoin - kucoin: pobrana cena = 95.512
+2025-02-15 12:29:56,102 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: UNI/USDT (dla binance), UNI/USDT (dla kucoin)
+2025-02-15 12:29:56,108 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:29:56,109 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:29:56,362 - INFO - binance-bitget - binance: pobrana cena = 19.26
+2025-02-15 12:29:56,363 - INFO - binance-bitget - bitget: pobrana cena = 19.25
+2025-02-15 12:29:56,365 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: VANRY/USDT (dla binance), VANRY/USDT (dla bitget)
+2025-02-15 12:29:56,366 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.127
+2025-02-15 12:29:56,366 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1267
+2025-02-15 12:29:56,367 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: MORPHO/USDT (dla kucoin), MORPHO/USDT (dla bitget)
+2025-02-15 12:29:56,820 - INFO - binance-kucoin - binance: pobrana cena = 9.938
+2025-02-15 12:29:56,822 - INFO - binance-kucoin - kucoin: pobrana cena = 9.9331
+2025-02-15 12:29:56,824 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: LUMIA/USDT (dla binance), LUMIA/USDT (dla kucoin)
+2025-02-15 12:29:57,010 - INFO - binance-bitget - binance: pobrana cena = 0.0475
+2025-02-15 12:29:57,011 - INFO - binance-bitget - bitget: pobrana cena = 0.0474
+2025-02-15 12:29:57,012 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: WLD/USDT (dla binance), WLD/USDT (dla bitget)
+2025-02-15 12:29:57,058 - INFO - kucoin-bitget - kucoin: pobrana cena = 2.1642
+2025-02-15 12:29:57,059 - INFO - kucoin-bitget - bitget: pobrana cena = 2.1661
+2025-02-15 12:29:57,060 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: MOZ/USDT (dla kucoin), MOZ/USDT (dla bitget)
+2025-02-15 12:29:57,121 - INFO - binance-bitstamp - binance: pobrana cena = 3.4723
+2025-02-15 12:29:57,122 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'SUI/USDT', 'bitstamp': 'SUI/USDT'}. Pomijam.
+2025-02-15 12:29:57,123 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BCH/USDT (dla binance), BCH/USDT (dla bitstamp)
+2025-02-15 12:29:57,219 - INFO - bitget-bitstamp - bitget: pobrana cena = 2.8068
+2025-02-15 12:29:57,220 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:57,222 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla bitget), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:57,268 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2.80663
+2025-02-15 12:29:57,269 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2.80921
+2025-02-15 12:29:57,270 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-15 12:29:57,356 - INFO - binance-kucoin - binance: pobrana cena = 0.613
+2025-02-15 12:29:57,357 - INFO - binance-kucoin - kucoin: pobrana cena = 0.611
+2025-02-15 12:29:57,357 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: DEGO/USDT (dla binance), DEGO/USDT (dla kucoin)
+2025-02-15 12:29:57,619 - INFO - binance-bitget - binance: pobrana cena = 1.265
+2025-02-15 12:29:57,619 - INFO - binance-bitget - bitget: pobrana cena = 1.262
+2025-02-15 12:29:57,620 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: GHST/USDT (dla binance), GHST/USDT (dla bitget)
+2025-02-15 12:29:57,667 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0289
+2025-02-15 12:29:57,668 - INFO - kucoin-bitget - bitget: pobrana cena = 0.02874
+2025-02-15 12:29:57,669 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: NTRN/USDT (dla kucoin), NTRN/USDT (dla bitget)
+2025-02-15 12:29:58,006 - INFO - binance-kucoin - binance: pobrana cena = 1.827
+2025-02-15 12:29:58,007 - INFO - binance-kucoin - kucoin: pobrana cena = 1.8296
+2025-02-15 12:29:58,008 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: RPL/USDT (dla binance), RPL/USDT (dla kucoin)
+2025-02-15 12:29:58,218 - INFO - binance-bitget - binance: pobrana cena = 0.585
+2025-02-15 12:29:58,230 - INFO - binance-bitget - bitget: pobrana cena = 0.5845
+2025-02-15 12:29:58,236 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: VIB/USDT (dla binance), VIB/USDT (dla bitget)
+2025-02-15 12:29:58,278 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.2001
+2025-02-15 12:29:58,279 - INFO - kucoin-bitget - bitget: pobrana cena = 0.2012
+2025-02-15 12:29:58,280 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ZK/USDT (dla kucoin), ZK/USDT (dla bitget)
+2025-02-15 12:29:58,322 - INFO - binance-bitstamp - binance: pobrana cena = 341.3
+2025-02-15 12:29:58,323 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'BCH/USDT', 'bitstamp': 'BCH/USDT'}. Pomijam.
+2025-02-15 12:29:58,323 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: LINK/USDT (dla binance), LINK/USDT (dla bitstamp)
+2025-02-15 12:29:58,502 - INFO - bitget-bitstamp - bitget: pobrana cena = 2709.36
+2025-02-15 12:29:58,503 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:58,504 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ONDO/USDT (dla bitget), ONDO/USDT (dla bitstamp)
+2025-02-15 12:29:58,543 - INFO - binance-kucoin - binance: pobrana cena = 7.92
+2025-02-15 12:29:58,543 - INFO - binance-kucoin - kucoin: pobrana cena = 7.87
+2025-02-15 12:29:58,544 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: COTI/USDT (dla binance), COTI/USDT (dla kucoin)
+2025-02-15 12:29:58,573 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2709.97
+2025-02-15 12:29:58,574 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.2
+2025-02-15 12:29:58,575 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla kucoin), USDC/USDT (dla bitstamp)
+2025-02-15 12:29:58,815 - INFO - binance-bitget - binance: pobrana cena = 0.06486
+2025-02-15 12:29:58,816 - INFO - binance-bitget - bitget: pobrana cena = 0.06478
+2025-02-15 12:29:58,817 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: XAI/USDT (dla binance), XAI/USDT (dla bitget)
+2025-02-15 12:29:58,886 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1099
+2025-02-15 12:29:58,886 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1099
+2025-02-15 12:29:58,887 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: DYM/USDT (dla kucoin), DYM/USDT (dla bitget)
+2025-02-15 12:29:59,083 - INFO - binance-kucoin - binance: pobrana cena = 0.09359
+2025-02-15 12:29:59,085 - INFO - binance-kucoin - kucoin: pobrana cena = 0.0928
+2025-02-15 12:29:59,086 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ILV/USDT (dla binance), ILV/USDT (dla kucoin)
+2025-02-15 12:29:59,418 - INFO - binance-bitget - binance: pobrana cena = 0.1074
+2025-02-15 12:29:59,419 - INFO - binance-bitget - bitget: pobrana cena = 0.1075
+2025-02-15 12:29:59,420 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BURGER/USDT (dla binance), BURGER/USDT (dla bitget)
+2025-02-15 12:29:59,487 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.5287
+2025-02-15 12:29:59,488 - INFO - kucoin-bitget - bitget: pobrana cena = 0.5289
+2025-02-15 12:29:59,489 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: APE/USDT (dla kucoin), APE/USDT (dla bitget)
+2025-02-15 12:29:59,522 - INFO - binance-bitstamp - binance: pobrana cena = 19.26
+2025-02-15 12:29:59,523 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'LINK/USDT', 'bitstamp': 'LINK/USDT'}. Pomijam.
+2025-02-15 12:29:59,524 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: AVAX/USDT (dla binance), AVAX/USDT (dla bitstamp)
+2025-02-15 12:29:59,562 - INFO - binance-kucoin - binance: pobrana cena = 20.31
+2025-02-15 12:29:59,562 - INFO - binance-kucoin - kucoin: pobrana cena = 20.292
+2025-02-15 12:29:59,563 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: BLZ/USDT (dla binance), BLZ/USDT (dla kucoin)
+2025-02-15 12:29:59,702 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.3011
+2025-02-15 12:29:59,703 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'ONDO/USDT', 'bitstamp': 'ONDO/USDT'}. Pomijam.
+2025-02-15 12:29:59,704 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: NEAR/USDT (dla bitget), NEAR/USDT (dla bitstamp)
+2025-02-15 12:29:59,856 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 1.0001
+2025-02-15 12:29:59,858 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 0.99996
+2025-02-15 12:29:59,860 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla kucoin), BTC/USDT (dla bitstamp)
+2025-02-15 12:30:00,018 - INFO - binance-bitget - binance: pobrana cena = 0.4546
+2025-02-15 12:30:00,019 - INFO - binance-bitget - bitget: pobrana cena = 0.4561
+2025-02-15 12:30:00,020 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: GTC/USDT (dla binance), GTC/USDT (dla bitget)
+2025-02-15 12:30:00,079 - WARNING - binance-kucoin - Dla binance pobrana cena jest None, pomijam asset {'binance': 'BLZ/USDT', 'kucoin': 'BLZ/USDT'}
+2025-02-15 12:30:00,079 - INFO - binance-kucoin - kucoin: pobrana cena = 0.03983
+2025-02-15 12:30:00,080 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'BLZ/USDT', 'kucoin': 'BLZ/USDT'}. Pomijam.
+2025-02-15 12:30:00,080 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: XTZ/USDT (dla binance), XTZ/USDT (dla kucoin)
+2025-02-15 12:30:00,133 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.7291
+2025-02-15 12:30:00,134 - INFO - kucoin-bitget - bitget: pobrana cena = 0.729
+2025-02-15 12:30:00,136 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: CELR/USDT (dla kucoin), CELR/USDT (dla bitget)
+2025-02-15 12:30:00,613 - INFO - binance-kucoin - binance: pobrana cena = 0.902
+2025-02-15 12:30:00,614 - INFO - binance-kucoin - kucoin: pobrana cena = 0.902
+2025-02-15 12:30:00,615 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: ERN/USDT (dla binance), ERN/USDT (dla kucoin)
+2025-02-15 12:30:00,636 - INFO - binance-bitget - binance: pobrana cena = 0.476
+2025-02-15 12:30:00,637 - INFO - binance-bitget - bitget: pobrana cena = 0.475
+2025-02-15 12:30:00,639 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: PSG/USDT (dla binance), PSG/USDT (dla bitget)
+2025-02-15 12:30:00,723 - INFO - binance-bitstamp - binance: pobrana cena = 26.13
+2025-02-15 12:30:00,724 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'AVAX/USDT', 'bitstamp': 'AVAX/USDT'}. Pomijam.
+2025-02-15 12:30:00,725 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: PEPE/USDT (dla binance), PEPE/USDT (dla bitstamp)
+2025-02-15 12:30:00,830 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.01286
+2025-02-15 12:30:00,831 - INFO - kucoin-bitget - bitget: pobrana cena = 0.01293
+2025-02-15 12:30:00,832 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: SOCIAL/USDT (dla kucoin), SOCIAL/USDT (dla bitget)
+2025-02-15 12:30:00,903 - INFO - bitget-bitstamp - bitget: pobrana cena = 3.523
+2025-02-15 12:30:00,903 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'NEAR/USDT', 'bitstamp': 'NEAR/USDT'}. Pomijam.
+2025-02-15 12:30:00,904 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: PEPE/USDT (dla bitget), PEPE/USDT (dla bitstamp)
+2025-02-15 12:30:01,124 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 97650.6
+2025-02-15 12:30:01,125 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 97597.0
+2025-02-15 12:30:01,139 - INFO - binance-kucoin - binance: pobrana cena = 1.495
+2025-02-15 12:30:01,140 - INFO - binance-kucoin - kucoin: pobrana cena = 1.4934
+2025-02-15 12:30:01,141 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: T/USDT (dla binance), T/USDT (dla kucoin)
+2025-02-15 12:30:01,258 - INFO - binance-bitget - binance: pobrana cena = 2.532
+2025-02-15 12:30:01,258 - INFO - binance-bitget - bitget: pobrana cena = 2.519
+2025-02-15 12:30:01,259 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: SOL/USDT (dla binance), SOL/USDT (dla bitget)
+2025-02-15 12:30:01,367 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.0003389
+2025-02-15 12:30:01,368 - INFO - kucoin-bitget - bitget: pobrana cena = 0.00034
+2025-02-15 12:30:01,369 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: ENS/USDT (dla kucoin), ENS/USDT (dla bitget)
+2025-02-15 12:30:01,640 - INFO - binance-kucoin - binance: pobrana cena = 0.021
+2025-02-15 12:30:01,641 - INFO - binance-kucoin - kucoin: pobrana cena = 0.02097
+2025-02-15 12:30:01,642 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: S/USDT (dla binance), S/USDT (dla kucoin)
+2025-02-15 12:30:01,867 - INFO - binance-bitget - binance: pobrana cena = 195.8
+2025-02-15 12:30:01,867 - INFO - binance-bitget - bitget: pobrana cena = 195.81
+2025-02-15 12:30:01,868 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BTC/USDT (dla binance), BTC/USDT (dla bitget)
+2025-02-15 12:30:01,923 - INFO - binance-bitstamp - binance: pobrana cena = 1.01e-05
+2025-02-15 12:30:01,924 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'PEPE/USDT', 'bitstamp': 'PEPE/USDT'}. Pomijam.
+2025-02-15 12:30:01,925 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: APE/USDT (dla binance), APE/USDT (dla bitstamp)
+2025-02-15 12:30:01,963 - INFO - kucoin-bitget - kucoin: pobrana cena = 26.849
+2025-02-15 12:30:01,964 - INFO - kucoin-bitget - bitget: pobrana cena = 26.86
+2025-02-15 12:30:01,965 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: OMNIA/USDT (dla kucoin), OMNIA/USDT (dla bitget)
+2025-02-15 12:30:02,103 - INFO - bitget-bitstamp - bitget: pobrana cena = 1.01e-05
+2025-02-15 12:30:02,103 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'PEPE/USDT', 'bitstamp': 'PEPE/USDT'}. Pomijam.
+2025-02-15 12:30:02,104 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: USDC/USDT (dla bitget), USDC/USDT (dla bitstamp)
+2025-02-15 12:30:02,127 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:30:02,127 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: XRP/USDT (dla kucoin), XRP/USDT (dla bitstamp)
+2025-02-15 12:30:02,156 - INFO - binance-kucoin - binance: pobrana cena = 0.5352
+2025-02-15 12:30:02,157 - INFO - binance-kucoin - kucoin: pobrana cena = 0.5354
+2025-02-15 12:30:02,158 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: AERGO/USDT (dla binance), AERGO/USDT (dla kucoin)
+2025-02-15 12:30:02,495 - INFO - binance-bitget - binance: pobrana cena = 97656.15
+2025-02-15 12:30:02,496 - INFO - binance-bitget - bitget: pobrana cena = 97650.0
+2025-02-15 12:30:02,498 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: BIO/USDT (dla binance), BIO/USDT (dla bitget)
+2025-02-15 12:30:02,584 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.1423
+2025-02-15 12:30:02,585 - INFO - kucoin-bitget - bitget: pobrana cena = 0.1424
+2025-02-15 12:30:02,586 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: COQ/USDT (dla kucoin), COQ/USDT (dla bitget)
+2025-02-15 12:30:02,881 - INFO - binance-kucoin - binance: pobrana cena = 0.0897
+2025-02-15 12:30:02,881 - INFO - binance-kucoin - kucoin: pobrana cena = 0.08954
+2025-02-15 12:30:02,882 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: SXP/USDT (dla binance), SXP/USDT (dla kucoin)
+2025-02-15 12:30:02,984 - INFO - kucoin-bitstamp - Strategia arbitrażu została anulowana.
+2025-02-15 12:30:02,985 - INFO - binance-kucoin - Strategia arbitrażu została anulowana.
+2025-02-15 12:30:02,986 - INFO - binance-bitstamp - Strategia arbitrażu została anulowana.
+2025-02-15 12:30:02,986 - INFO - bitget-bitstamp - Strategia arbitrażu została anulowana.
+2025-02-15 12:30:02,987 - INFO - binance-bitget - Strategia arbitrażu została anulowana.
+2025-02-15 12:30:02,987 - INFO - kucoin-bitget - Strategia arbitrażu została anulowana.
