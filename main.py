@@ -64,6 +64,11 @@ async def run_arbitrage_for_all_pairs(exchanges):
     else:
         logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
 
+async def close_exchanges(exchanges):
+    for ex in exchanges.values():
+        if hasattr(ex.exchange, "close"):
+            await ex.exchange.close()
+
 def run_arbitrage(exchanges):
     logging.info("Wybrano opcję rozpoczęcia arbitrażu")
     loop = asyncio.new_event_loop()
@@ -80,19 +85,18 @@ def run_arbitrage(exchanges):
         if pending:
             loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
             loop.run_until_complete(loop.shutdown_asyncgens())
+        loop.run_until_complete(close_exchanges(exchanges))
         loop.close()
 
 def main():
     setup_logging()
     logging.info("Uruchamianie programu arbitrażowego")
-    
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
-    
     while True:
         print("\nWybierz opcję:")
         print("1. Utwórz listę wspólnych aktywów")
