@@ -12,9 +12,9 @@ CONFIG = {
     "BITGET_SECRET": os.getenv("BITGET_SECRET"),
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
-
     
-    "ARBITRAGE_THRESHOLD": 1,   # minimalny procentowy zysk, by rozważać okazję
-    "ABSURD_THRESHOLD": 100,    # próg absurdalnie wysokiego zysku
-    "INVESTMENT_AMOUNT": 100,    # kwota inwestycji w USDT
+    "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu w procentach
+    "ABSURD_THRESHOLD": 100,   # Próg absurdalnego zysku w procentach
+    "INVESTMENT_AMOUNT": 100,   # Kwota inwestycji w USDT
+    "MIN_LIQUIDITY": 100        # Minimalny wolumen top ask (lub bid) wymagany dla aktywa
 }

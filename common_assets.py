@@ -8,7 +8,14 @@ from config import CONFIG
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_markets_dict(exchange_instance, allowed_quotes=["USDT"]):
+def get_markets_dict(exchange_instance, allowed_quotes=["USDT"], min_liquidity=CONFIG.get("MIN_LIQUIDITY", 100)):
+    """
+    Pobiera rynki z danej giełdy i zwraca słownik, w którym:
+      - klucz: baza (część przed "/")
+      - wartość: pełny symbol (np. "GAME/USDT")
+    Uwzględniane są tylko rynki, których quote należy do allowed_quotes
+    i których top ask volume (z order book) jest >= min_liquidity.
+    """
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
         markets = exchange_instance.exchange.load_markets()
@@ -16,12 +23,17 @@ def get_markets_dict(exchange_instance, allowed_quotes=["USDT"]):
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
-                # Jeśli base jest równe quote (np. "USDT/USDT") – pomijamy
-                if base == quote:
-                    continue
                 if quote in allowed_quotes:
-                    if base not in result:
-                        result[base] = symbol
+                    try:
+                        # Pobieramy order book i sprawdzamy top ask volume
+                        order_book = exchange_instance.exchange.fetch_order_book(symbol)
+                        asks = order_book.get("asks", [])
+                        if asks and asks[0][1] >= min_liquidity:
+                            if base not in result:
+                                result[base] = symbol
+                    except Exception as ex:
+                        logging.error(f"Błąd pobierania order book dla {symbol} na {exchange_instance.__class__.__name__}: {ex}")
+                        # Jeśli nie uda się pobrać order book, możemy pominąć ten symbol lub dodać go – tutaj pomijamy
         return result
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
