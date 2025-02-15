@@ -103,9 +103,7 @@ class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        # assets – słownik mapujący token bazowy do mapowania symboli, np.
-        # { "GMT": { "binance": "GMT/USDT", "kucoin": "GMT/USDT" } }
-        self.assets = assets
+        self.assets = assets  # słownik mapujący token bazowy do mapowania symboli
         self.pair_name = pair_name
 
     async def check_opportunity(self, asset):
@@ -189,14 +187,12 @@ class PairArbitrageStrategy:
         else:
             extra_info = "Brak sprawdzania płynności, gdy okazja nie przekracza progu."
 
-        # Przygotowujemy log w formie tabeli (tutaj usuwamy formatowanie tabelaryczne – logujemy jako zwykły tekst)
         log_line = (
             f"{self.pair_name} | {asset} | {names[0]} | {effective_buy_ex1:.4f} | {names[1]} | {effective_sell_ex2:.4f} | "
             f"{profit1:.2f}% | {profit_liq_percent if profit_liq_percent is not None else 'N/A'} | "
             f"{profit_liq_usdt if profit_liq_usdt is not None else 'N/A'} | {invested_amount if invested_amount is not None else 'N/A'} | "
             f"{actual_qty if 'actual_qty' in locals() else 'N/A'} | {liquidity_info}"
         )
-        # Rozdzielamy opłacalne od nieopłacalnych
         if profit_liq_usdt is not None and profit_liq_usdt > 0:
             opp_logger.info(log_line)
         else:

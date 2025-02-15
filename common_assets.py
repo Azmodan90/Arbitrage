@@ -8,7 +8,7 @@ from config import CONFIG
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_markets_dict(exchange_instance, allowed_quotes):
+def get_markets_dict(exchange_instance, allowed_quotes=["USDT"]):
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
         markets = exchange_instance.exchange.load_markets()
@@ -16,11 +16,10 @@ def get_markets_dict(exchange_instance, allowed_quotes):
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
-                # Odrzucamy przypadki, gdy base jest równe quote (np. EUR/USDT)
+                # Jeśli base jest równe quote (np. "USDT/USDT") – pomijamy
                 if base == quote:
                     continue
                 if quote in allowed_quotes:
-                    # Zachowujemy pierwszy napotkany symbol dla danej bazy
                     if base not in result:
                         result[base] = symbol
         return result
@@ -28,15 +27,7 @@ def get_markets_dict(exchange_instance, allowed_quotes):
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
         return {}
 
-def get_allowed_quotes_for_pair(name1, exchange1, name2, exchange2):
-    allowed1 = set(CONFIG.get(f"{name1.upper()}_ALLOWED_QUOTES", ["USDT"]))
-    allowed2 = set(CONFIG.get(f"{name2.upper()}_ALLOWED_QUOTES", ["USDT"]))
-    common = list(allowed1.intersection(allowed2))
-    logging.info(f"Dla pary {name1}-{name2} dozwolone quote: {common}")
-    return common
-
-def get_common_assets_for_pair(name1, exchange1, name2, exchange2):
-    allowed_quotes = get_allowed_quotes_for_pair(name1, exchange1, name2, exchange2)
+def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT"]):
     markets1 = get_markets_dict(exchange1, allowed_quotes)
     markets2 = get_markets_dict(exchange2, allowed_quotes)
     common_bases = set(markets1.keys()).intersection(set(markets2.keys()))
@@ -120,7 +111,7 @@ def main():
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2])
+            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT"])
             common_assets[f"{name1}-{name2}"] = mapping
 
     common_assets = modify_common_assets(common_assets)

@@ -12,14 +12,9 @@ CONFIG = {
     "BITGET_SECRET": os.getenv("BITGET_SECRET"),
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
+
     
-    # Dozwolone notowania – pamiętaj, że niektóre giełdy (np. Bitstamp) obsługują tylko USDT
-    "BINANCE_ALLOWED_QUOTES": ["USDT", "EUR"],
-    "KUCOIN_ALLOWED_QUOTES": ["USDT", "EUR"],
-    "BITGET_ALLOWED_QUOTES": ["USDT", "EUR"],
-    "BITSTAMP_ALLOWED_QUOTES": ["USDT"],
-    
-    "ARBITRAGE_THRESHOLD": 2,   # minimalny procentowy zysk, by rozważać okazję
+    "ARBITRAGE_THRESHOLD": 1,   # minimalny procentowy zysk, by rozważać okazję
     "ABSURD_THRESHOLD": 100,    # próg absurdalnie wysokiego zysku
-    "INVESTMENT_AMOUNT": 100,    # kwota inwestycji w USDT (bazowo)
+    "INVESTMENT_AMOUNT": 100,    # kwota inwestycji w USDT
 }

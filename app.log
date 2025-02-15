@@ -1,50 +1,59 @@
-2025-02-15 12:57:05,809 - INFO - Uruchamianie programu arbitrażowego
-2025-02-15 12:57:09,172 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-15 12:57:09,173 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
-2025-02-15 12:57:09,241 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-15 12:57:09,242 - INFO - Dla pary binance-kucoin dozwolone quote: ['EUR', 'USDT']
-2025-02-15 12:57:09,243 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-15 12:57:15,644 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-15 12:57:17,896 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['EUR', 'USDT']): 324 znalezione
-2025-02-15 12:57:17,897 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-15 12:57:17,898 - INFO - Dla pary binance-bitget dozwolone quote: ['EUR', 'USDT']
-2025-02-15 12:57:17,899 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-15 12:57:17,901 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-15 12:57:20,778 - INFO - Wspólne aktywa dla binance i bitget (quotes=['EUR', 'USDT']): 342 znalezione
-2025-02-15 12:57:20,779 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-15 12:57:20,780 - INFO - Dla pary binance-bitstamp dozwolone quote: ['USDT']
-2025-02-15 12:57:20,780 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-15 12:57:20,783 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-15 12:57:21,291 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT']): 4 znalezione
-2025-02-15 12:57:21,292 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-15 12:57:21,292 - INFO - Dla pary kucoin-bitget dozwolone quote: ['EUR', 'USDT']
-2025-02-15 12:57:21,293 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-15 12:57:21,295 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-15 12:57:21,297 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['EUR', 'USDT']): 501 znalezione
-2025-02-15 12:57:21,298 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-15 12:57:21,300 - INFO - Dla pary kucoin-bitstamp dozwolone quote: ['USDT']
-2025-02-15 12:57:21,301 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-15 12:57:21,303 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-15 12:57:21,304 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT']): 4 znalezione
-2025-02-15 12:57:21,304 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-15 12:57:21,305 - INFO - Dla pary bitget-bitstamp dozwolone quote: ['USDT']
-2025-02-15 12:57:21,306 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-15 12:57:21,307 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-15 12:57:21,308 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT']): 4 znalezione
-2025-02-15 12:57:21,313 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-15 12:57:21,317 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-15 12:57:21,317 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
-2025-02-15 12:57:21,318 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-15 12:57:21,318 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
-2025-02-15 12:57:21,319 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-15 12:57:21,320 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
-2025-02-15 12:57:21,321 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-15 12:57:21,321 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-15 12:57:21,366 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-15 12:57:21,367 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
-2025-02-15 12:57:21,367 - INFO - Para binance-bitget ma 341 wspólnych aktywów.
-2025-02-15 12:57:21,368 - INFO - Para binance-bitstamp ma 4 wspólnych aktywów.
-2025-02-15 12:57:21,369 - INFO - Para kucoin-bitget ma 495 wspólnych aktywów.
-2025-02-15 12:57:21,369 - INFO - Para kucoin-bitstamp ma 4 wspólnych aktywów.
-2025-02-15 12:57:21,370 - INFO - Para bitget-bitstamp ma 4 wspólnych aktywów.
-2025-02-15 12:57:39,457 - INFO - Wyjście z programu
+2025-02-15 13:06:12,465 - INFO - Wybrano opcję rozpoczęcia arbitrażu
+2025-02-15 13:07:29,730 - INFO - 
+Otrzymano sygnał SIGINT. Zatrzymywanie programu...
+2025-02-15 13:07:29,731 - INFO - Anulowanie zadań: [<Task pending name='Task-1' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:63> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>]
+2025-02-15 13:07:29,746 - INFO - Zadania anulowane
+2025-02-15 13:07:31,560 - INFO - Wyjście z programu
+2025-02-15 13:08:08,683 - INFO - Uruchamianie programu arbitrażowego
+2025-02-15 13:08:10,297 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-15 13:08:10,298 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
+2025-02-15 13:08:10,370 - INFO - Porównuję aktywa dla pary: binance - kucoin
+2025-02-15 13:08:10,371 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-15 13:08:16,672 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-15 13:08:19,610 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT']): 324 znalezione
+2025-02-15 13:08:19,611 - INFO - Porównuję aktywa dla pary: binance - bitget
+2025-02-15 13:08:19,612 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-15 13:08:19,614 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-15 13:08:22,740 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT']): 342 znalezione
+2025-02-15 13:08:22,741 - INFO - Porównuję aktywa dla pary: binance - bitstamp
+2025-02-15 13:08:22,742 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-15 13:08:22,745 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-15 13:08:23,319 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT']): 4 znalezione
+2025-02-15 13:08:23,320 - INFO - Porównuję aktywa dla pary: kucoin - bitget
+2025-02-15 13:08:23,321 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-15 13:08:23,323 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-15 13:08:23,325 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT']): 500 znalezione
+2025-02-15 13:08:23,326 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
+2025-02-15 13:08:23,327 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-15 13:08:23,329 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-15 13:08:23,330 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT']): 4 znalezione
+2025-02-15 13:08:23,331 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
+2025-02-15 13:08:23,332 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-15 13:08:23,334 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-15 13:08:23,335 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT']): 4 znalezione
+2025-02-15 13:08:23,342 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
+2025-02-15 13:08:23,347 - INFO - Wczytano dane do dodania z assets_to_add.json.
+2025-02-15 13:08:23,349 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
+2025-02-15 13:08:23,349 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-15 13:08:23,350 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
+2025-02-15 13:08:23,351 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
+2025-02-15 13:08:23,352 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
+2025-02-15 13:08:23,353 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
+2025-02-15 13:08:23,353 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
+2025-02-15 13:08:23,407 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
+2025-02-15 13:08:23,408 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
+2025-02-15 13:08:23,408 - INFO - Para binance-bitget ma 341 wspólnych aktywów.
+2025-02-15 13:08:23,408 - INFO - Para binance-bitstamp ma 4 wspólnych aktywów.
+2025-02-15 13:08:23,409 - INFO - Para kucoin-bitget ma 494 wspólnych aktywów.
+2025-02-15 13:08:23,409 - INFO - Para kucoin-bitstamp ma 4 wspólnych aktywów.
+2025-02-15 13:08:23,410 - INFO - Para bitget-bitstamp ma 4 wspólnych aktywów.
+2025-02-15 13:08:28,268 - INFO - Wybrano opcję rozpoczęcia arbitrażu
+2025-02-15 13:10:32,586 - INFO - 
+Otrzymano sygnał SIGINT. Zatrzymywanie programu...
+2025-02-15 13:10:32,587 - INFO - Anulowanie zadań: [<Task pending name='Task-1' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:63> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:234> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:233> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>]
+2025-02-15 13:10:32,598 - INFO - Zadania anulowane
+2025-02-15 13:10:32,794 - INFO - 
+Otrzymano sygnał SIGINT. Zatrzymywanie programu...
+2025-02-15 13:10:32,795 - INFO - Anulowanie zadań: [<Task pending name='Task-8' coro=<shutdown() running at /workspaces/Arbitrage/main.py:31> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>]
+2025-02-15 13:10:33,809 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-9' coro=<shutdown() done, defined at /workspaces/Arbitrage/main.py:24> wait_for=<Future pending cb=[Task.task_wakeup()]>>
