@@ -55,3 +55,4 @@ client_session: <aiohttp.client.ClientSession object at 0x7f5c4b11f990>
 2025-02-15 20:21:05,672 - ERROR - Unclosed connector
 connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f5c4f229b00>, 2201.584650504)]']
 connector: <aiohttp.connector.TCPConnector object at 0x7f5c4b11fc10>
+2025-02-15 20:25:57,224 - INFO - Wyjście z programu
