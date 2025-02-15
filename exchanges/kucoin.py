@@ -1,10 +1,10 @@
-import ccxt
-import asyncio
+import ccxt.async_support as ccxt_async
 from config import CONFIG
+import asyncio
 
 class KucoinExchange:
     def __init__(self):
-        self.exchange = ccxt.kucoin({
+        self.exchange = ccxt_async.kucoin({
             'apiKey': CONFIG["KUCOIN_API_KEY"],
             'secret': CONFIG["KUCOIN_SECRET"],
             'enableRateLimit': True,
@@ -12,25 +12,29 @@ class KucoinExchange:
         self.fee_rate = 0.1
         self.semaphore = asyncio.Semaphore(5)
 
-    async def fetch_ticker_limited(self, symbol):
+    async def fetch_ticker(self, symbol):
         async with self.semaphore:
-            loop = asyncio.get_running_loop()
-            return await loop.run_in_executor(None, self.exchange.fetch_ticker, symbol)
+            try:
+                ticker = await self.exchange.fetch_ticker(symbol)
+                return ticker
+            except Exception as e:
+                print(f"Error fetching ticker from Kucoin: {e}")
+                return None
 
-    def fetch_ticker(self, symbol):
+    async def load_markets(self):
         try:
-            ticker = self.exchange.fetch_ticker(symbol)
-            return ticker
+            return await self.exchange.load_markets()
         except Exception as e:
-            print(f"Error fetching ticker from Kucoin: {e}")
+            print(f"Error loading markets from Kucoin: {e}")
+            return {}
+
+    async def fetch_order_book(self, symbol, limit=5):
+        try:
+            order_book = await self.exchange.fetch_order_book(symbol, params={'limit': limit})
+            return order_book
+        except Exception as e:
+            print(f"Error fetching order book from Kucoin: {e}")
             return None
 
     async def close(self):
-        try:
-            await self.exchange.close()
-        except Exception as e:
-            print(f"Error closing KucoinExchange: {e}")
-            
-    # Dodaj również metodę synchroną dla ujednolicenia interfejsu
-    def close_sync(self):
-        asyncio.run(self.close())
+        await self.exchange.close()

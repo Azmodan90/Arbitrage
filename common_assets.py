@@ -1,47 +1,34 @@
+# common_assets.py
+import asyncio
 import json
 import logging
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
-from config import CONFIG
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_markets_dict(exchange_instance, allowed_quotes=["USDT"], min_liquidity=CONFIG.get("MIN_LIQUIDITY", 100)):
-    """
-    Pobiera rynki z danej giełdy i zwraca słownik, w którym:
-      - klucz: baza (część przed "/")
-      - wartość: pełny symbol (np. "GAME/USDT")
-    Uwzględniane są tylko rynki, których quote należy do allowed_quotes
-    i których top ask volume (z order book) jest >= min_liquidity.
-    """
+async def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "EUR"]):
     try:
-        logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
-        markets = exchange_instance.exchange.load_markets()
+        # Używamy asynchronicznej metody load_markets
+        markets = await exchange_instance.exchange.load_markets()
         result = {}
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    try:
-                        # Pobieramy order book i sprawdzamy top ask volume
-                        order_book = exchange_instance.exchange.fetch_order_book(symbol)
-                        asks = order_book.get("asks", [])
-                        if asks and asks[0][1] >= min_liquidity:
-                            if base not in result:
-                                result[base] = symbol
-                    except Exception as ex:
-                        logging.error(f"Błąd pobierania order book dla {symbol} na {exchange_instance.__class__.__name__}: {ex}")
-                        # Jeśli nie uda się pobrać order book, możemy pominąć ten symbol lub dodać go – tutaj pomijamy
+                    # Jeśli mamy więcej niż jeden rynek dla danej bazy – zachowujemy pierwszy
+                    if base not in result:
+                        result[base] = symbol
         return result
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
         return {}
 
-def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT"]):
-    markets1 = get_markets_dict(exchange1, allowed_quotes)
-    markets2 = get_markets_dict(exchange2, allowed_quotes)
+async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT", "EUR"]):
+    markets1 = await get_markets_dict(exchange1, allowed_quotes)
+    markets2 = await get_markets_dict(exchange2, allowed_quotes)
     common_bases = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
     for base in common_bases:
@@ -49,7 +36,7 @@ def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quote
     logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
     return common
 
-def save_common_assets(common_assets, filename="common_assets.json"):
+async def save_common_assets(common_assets, filename="common_assets.json"):
     try:
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(common_assets, f, indent=4)
@@ -102,7 +89,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
                     logging.info(f"Konfiguracja {config_key}: dodano aktywo {entry}.")
     return common_assets
 
-def main():
+async def main():
     logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)")
     binance = BinanceExchange()
     kucoin = KucoinExchange()
@@ -118,18 +105,19 @@ def main():
 
     common_assets = {}
     names = list(exchanges.keys())
+    # Ładujemy rynki równolegle dla każdej pary giełd
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT"])
+            mapping = await get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT", "EUR"])
             common_assets[f"{name1}-{name2}"] = mapping
 
     common_assets = modify_common_assets(common_assets)
-    save_common_assets(common_assets)
+    await save_common_assets(common_assets)
     for pair, assets in common_assets.items():
         logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
