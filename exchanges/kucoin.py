@@ -1,4 +1,4 @@
-import ccxt.async_support as ccxt
+import ccxt
 import asyncio
 from config import CONFIG
 
@@ -12,11 +12,25 @@ class KucoinExchange:
         self.fee_rate = 0.1
         self.semaphore = asyncio.Semaphore(5)
 
-    async def fetch_ticker(self, symbol):
+    async def fetch_ticker_limited(self, symbol):
         async with self.semaphore:
-            try:
-                ticker = await self.exchange.fetch_ticker(symbol)
-                return ticker
-            except Exception as e:
-                print(f"Error fetching ticker from Kucoin: {e}")
-                return None
+            loop = asyncio.get_running_loop()
+            return await loop.run_in_executor(None, self.exchange.fetch_ticker, symbol)
+
+    def fetch_ticker(self, symbol):
+        try:
+            ticker = self.exchange.fetch_ticker(symbol)
+            return ticker
+        except Exception as e:
+            print(f"Error fetching ticker from Kucoin: {e}")
+            return None
+
+    async def close(self):
+        try:
+            await self.exchange.close()
+        except Exception as e:
+            print(f"Error closing KucoinExchange: {e}")
+            
+    # Dodaj również metodę synchroną dla ujednolicenia interfejsu
+    def close_sync(self):
+        asyncio.run(self.close())

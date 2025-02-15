@@ -1,4 +1,4 @@
-import ccxt.async_support as ccxt
+import ccxt
 from config import CONFIG
 
 class BinanceExchange:
@@ -10,10 +10,15 @@ class BinanceExchange:
         })
         self.fee_rate = 0.1
 
-    async def fetch_ticker(self, symbol):
+    def fetch_ticker(self, symbol):
         try:
-            ticker = await self.exchange.fetch_ticker(symbol)
+            ticker = self.exchange.fetch_ticker(symbol)
             return ticker
         except Exception as e:
             print(f"Error fetching ticker from Binance: {e}")
-            return None
+            
+    def close(self):
+        try:
+            self.exchange.close()
+        except Exception as e:
+            print(f"Error closing BinanceExchange: {e}")

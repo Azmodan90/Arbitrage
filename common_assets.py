@@ -11,8 +11,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 async def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "EUR"]):
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
-        # Przy założeniu, że korzystasz z async wersji API – awaitujemy load_markets
-        markets = await exchange_instance.exchange.load_markets()
+        # Jeżeli używasz async_support, awaituj load_markets – w przeciwnym razie wywołaj synchronicznie
+        markets = exchange_instance.exchange.load_markets()
+        # Jeśli load_markets jest coroutine, użyj: markets = await exchange_instance.exchange.load_markets()
         result = {}
         for symbol in markets:
             if "/" in symbol:
@@ -90,6 +91,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
 
 async def main_async():
     logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)")
+    # Tworzymy nowe instancje giełd tylko do budowy listy
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
@@ -116,6 +118,17 @@ async def main_async():
     save_common_assets(common_assets)
     for pair, assets in common_assets.items():
         logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
+
+    # Po zakończeniu budowy listy zamykamy użyte instancje (aby nie pozostawały otwarte sesje)
+    for ex in exchanges.values():
+        try:
+            # Jeśli giełda ma metodę async close, awaituj ją
+            if hasattr(ex, "close") and asyncio.iscoroutinefunction(ex.close):
+                await ex.close()
+            elif hasattr(ex, "close"):
+                ex.close()
+        except Exception as e:
+            logging.error(f"Błąd zamykania {ex.__class__.__name__}: {e}")
 
 def main():
     asyncio.run(main_async())

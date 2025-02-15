@@ -35,6 +35,16 @@ def setup_signal_handlers(loop):
     for sig in (signal.SIGINT, signal.SIGTERM):
         loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
 
+async def close_exchanges(exchanges):
+    for ex in exchanges.values():
+        try:
+            if hasattr(ex, "close") and asyncio.iscoroutinefunction(ex.close):
+                await ex.close()
+            elif hasattr(ex, "close"):
+                ex.close()
+        except Exception as e:
+            logging.error(f"Błąd zamykania {ex.__class__.__name__}: {e}")
+
 async def run_arbitrage_for_all_pairs(exchanges):
     try:
         with open("common_assets.json", "r") as f:
@@ -63,11 +73,6 @@ async def run_arbitrage_for_all_pairs(exchanges):
         await asyncio.gather(*tasks)
     else:
         logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
-
-async def close_exchanges(exchanges):
-    for ex in exchanges.values():
-        if hasattr(ex.exchange, "close"):
-            await ex.exchange.close()
 
 def run_arbitrage(exchanges):
     logging.info("Wybrano opcję rozpoczęcia arbitrażu")
