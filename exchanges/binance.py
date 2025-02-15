@@ -1,45 +1,18 @@
-import aiohttp
-import logging
-from exchanges.exchange import Exchange
+import ccxt
+from config import CONFIG
 
-class BinanceExchange(Exchange):
-    BASE_URL = "https://api.binance.com"
+class BinanceExchange:
+    def __init__(self):
+        self.exchange = ccxt.binance({
+            'apiKey': CONFIG["BINANCE_API_KEY"],
+            'secret': CONFIG["BINANCE_SECRET"],
+            'enableRateLimit': True,
+        })
+        self.fee_rate = 0.1
 
-    def __init__(self, api_key, secret):
-        self.api_key = api_key
-        self.secret = secret
-        # Utworzenie własnej sesji, którą będziemy zamykać po zakończeniu pracy
-        self.session = aiohttp.ClientSession()
-
-    async def get_trading_pairs(self):
-        url = f"{self.BASE_URL}/api/v3/exchangeInfo"
+    def fetch_ticker(self, symbol):
         try:
-            async with self.session.get(url) as response:
-                if response.status != 200:
-                    logging.error(f"Binance get_trading_pairs HTTP error: {response.status}")
-                    return []
-                data = await response.json()
-                pairs = []
-                for item in data.get("symbols", []):
-                    if item.get("status") == "TRADING":
-                        pairs.append(item["symbol"].upper())
-                return pairs
+            ticker = self.exchange.fetch_ticker(symbol)
+            return ticker
         except Exception as e:
-            logging.exception(f"Binance get_trading_pairs error: {e}")
-            return []
-
-    async def get_price(self, symbol: str) -> float:
-        url = f"{self.BASE_URL}/api/v3/ticker/price?symbol={symbol}"
-        try:
-            async with self.session.get(url) as response:
-                if response.status != 200:
-                    logging.error(f"Binance get_price HTTP error: {response.status} for {symbol}")
-                    return 0.0
-                data = await response.json()
-                return float(data.get("price", 0))
-        except Exception as e:
-            logging.exception(f"Binance get_price error for {symbol}: {e}")
-            return 0.0
-
-    async def close(self):
-        await self.session.close()
+            print(f"Error fetching ticker from Binance: {e}")

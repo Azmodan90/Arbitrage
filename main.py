@@ -4,7 +4,7 @@ import logging
 import json
 import itertools
 from dotenv import load_dotenv
-from common_assets import create_all_common_pairs  # Zmiana importu na common_assets.py
+from common_assets import main as create_all_common_pairs
 from exchanges.binance import BinanceExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
@@ -30,16 +30,8 @@ logger.addHandler(console_handler)
 logger.addHandler(all_handler)
 logger.addHandler(error_handler)
 
-# Mapowanie dostępnych giełd: klucz -> (nazwa, instancja)
-EXCHANGE_OPTIONS = {
-    "1": ("BinanceExchange", BinanceExchange(api_key=os.getenv("BINANCE_API_KEY"), secret=os.getenv("BINANCE_SECRET"))),
-    "2": ("BitgetExchange", BitgetExchange(api_key=os.getenv("BITGET_API_KEY"), secret=os.getenv("BITGET_SECRET"))),
-    "3": ("BitstampExchange", BitstampExchange(api_key=os.getenv("BITSTAMP_API_KEY"), secret=os.getenv("BITSTAMP_SECRET"))),
-    "4": ("KucoinExchange", KucoinExchange(api_key=os.getenv("KUCOIN_API_KEY"), secret=os.getenv("KUCOIN_SECRET")))
-}
-
-def get_exchange_instance_by_name(name: str):
-    for key, (ex_name, instance) in EXCHANGE_OPTIONS.items():
+def get_exchange_instance_by_name(name: str, options: dict):
+    for key, (ex_name, instance) in options.items():
         if ex_name == name:
             return instance
     return None
@@ -65,21 +57,22 @@ async def fetch_opportunity(tup, current_instance, dest_instance, funds, min_pro
             }
     return None
 
-async def simulate_arbitrage_from_common():
-    filename = "common_pairs_all.json"
+async def simulate_arbitrage_from_common(exchange_options):
+    # Używamy pliku generowanego przez common_assets.py (w tym przypadku common_assets.json)
+    filename = "common_assets.json"
     if not os.path.exists(filename):
-        print("Plik common_pairs_all.json nie istnieje. Najpierw utwórz listę wspólnych par (opcja 1).")
+        print("Plik common_assets.json nie istnieje. Najpierw utwórz listę wspólnych aktywów (opcja 1).")
         return
     with open(filename, "r", encoding="utf-8") as f:
-        common_pairs_all = json.load(f)
+        common_assets = json.load(f)
     print("Wybierz giełdę, na której masz dostępne środki:")
-    for key, (name, _) in EXCHANGE_OPTIONS.items():
+    for key, (name, _) in exchange_options.items():
         print(f"{key}: {name}")
     source_choice = input("Wybierz giełdę (numer): ").strip()
-    if source_choice not in EXCHANGE_OPTIONS:
+    if source_choice not in exchange_options:
         print("Nieprawidłowy wybór.")
         return
-    source_name, source_instance = EXCHANGE_OPTIONS[source_choice]
+    source_name, source_instance = exchange_options[source_choice]
     try:
         funds = float(input("Podaj kwotę środków dostępnych na giełdzie (np. 1000): ").strip())
     except ValueError:
@@ -96,13 +89,13 @@ async def simulate_arbitrage_from_common():
     try:
         while True:
             opportunities = []
-            for config_key, pairs in common_pairs_all.items():
+            for config_key, pairs in common_assets.items():
                 if current_exchange_name not in config_key:
                     continue
                 parts = config_key.split("-")
                 if parts[0] == current_exchange_name:
                     dest_name = parts[1]
-                    dest_instance = get_exchange_instance_by_name(dest_name)
+                    dest_instance = get_exchange_instance_by_name(dest_name, exchange_options)
                     tasks = [asyncio.create_task(
                         fetch_opportunity(tup, current_instance, dest_instance, funds, min_profit, current_exchange_name, dest_name)
                     ) for tup in pairs]
@@ -112,7 +105,7 @@ async def simulate_arbitrage_from_common():
                             opportunities.append(res)
                 elif parts[1] == current_exchange_name:
                     dest_name = parts[0]
-                    dest_instance = get_exchange_instance_by_name(dest_name)
+                    dest_instance = get_exchange_instance_by_name(dest_name, exchange_options)
                     tasks = [asyncio.create_task(
                         fetch_opportunity((tup[1], tup[0], tup[2]), current_instance, dest_instance, funds, min_profit, current_exchange_name, dest_name)
                     ) for tup in pairs]
@@ -130,7 +123,7 @@ async def simulate_arbitrage_from_common():
                 funds = funds * (best["price_sell"] / best["price_buy"])
                 print(f"Transakcja przeprowadzona. Nowa kwota środków: {funds:.2f}")
                 current_exchange_name = best["sell_exchange"]
-                current_instance = get_exchange_instance_by_name(current_exchange_name)
+                current_instance = get_exchange_instance_by_name(current_exchange_name, exchange_options)
             else:
                 print("Brak opłacalnych okazji arbitrażowych w tej rundzie.")
             print("-" * 60)
@@ -139,17 +132,25 @@ async def simulate_arbitrage_from_common():
         print("Symulacja arbitrażu została anulowana.")
 
 async def main():
+    # Inicjalizacja obiektów giełdowych już w środku pętli zdarzeń
+    exchange_options = {
+        "1": ("BinanceExchange", BinanceExchange(api_key=os.getenv("BINANCE_API_KEY"), secret=os.getenv("BINANCE_SECRET"))),
+        "2": ("BitgetExchange", BitgetExchange(api_key=os.getenv("BITGET_API_KEY"), secret=os.getenv("BITGET_SECRET"))),
+        "3": ("BitstampExchange", BitstampExchange(api_key=os.getenv("BITSTAMP_API_KEY"), secret=os.getenv("BITSTAMP_SECRET"))),
+        "4": ("KucoinExchange", KucoinExchange(api_key=os.getenv("KUCOIN_API_KEY"), secret=os.getenv("KUCOIN_SECRET")))
+    }
+
     try:
         while True:
             print("\nWybierz opcję:")
-            print("1. Utwórz/odśwież listę wspólnych par dla wszystkich giełd")
+            print("1. Utwórz/odśwież listę wspólnych aktywów dla wszystkich giełd")
             print("2. Uruchom symulację arbitrażu (wykorzystując wcześniej utworzoną listę)")
             print("3. Wyjście")
             choice = input("Twój wybór: ").strip()
             if choice == "1":
                 await create_all_common_pairs()
             elif choice == "2":
-                await simulate_arbitrage_from_common()
+                await simulate_arbitrage_from_common(exchange_options)
             elif choice == "3":
                 print("Zakończenie programu.")
                 break
@@ -157,7 +158,7 @@ async def main():
                 print("Nieprawidłowy wybór. Spróbuj ponownie.")
     finally:
         # Zamykamy wszystkie instancje giełdowe, aby zwolnić zasoby
-        for key, (name, instance) in EXCHANGE_OPTIONS.items():
+        for key, (name, instance) in exchange_options.items():
             try:
                 await instance.close()
             except Exception as e:

@@ -13,8 +13,7 @@ CONFIG = {
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
-    "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu w procentach
-    "ABSURD_THRESHOLD": 100,   # Próg absurdalnego zysku w procentach
-    "INVESTMENT_AMOUNT": 100,   # Kwota inwestycji w USDT
-    "MIN_LIQUIDITY": 100        # Minimalny wolumen top ask (lub bid) wymagany dla aktywa
+    "ARBITRAGE_THRESHOLD": 0.5,  # minimalny zysk procentowy, aby sprawdzać order book
+    "ABSURD_THRESHOLD": 100,     # powyżej tej wartości okazje są traktowane jako absurdalne
+    "INVESTMENT_AMOUNT": 100      # kwota inwestycji w USDT
 }
