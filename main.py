@@ -35,16 +35,6 @@ def setup_signal_handlers(loop):
     for sig in (signal.SIGINT, signal.SIGTERM):
         loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
 
-async def close_exchanges(exchanges):
-    for ex in exchanges.values():
-        try:
-            if hasattr(ex, "close") and asyncio.iscoroutinefunction(ex.close):
-                await ex.close()
-            elif hasattr(ex, "close"):
-                ex.close()
-        except Exception as e:
-            logging.error(f"Błąd zamykania {ex.__class__.__name__}: {e}")
-
 async def run_arbitrage_for_all_pairs(exchanges):
     try:
         with open("common_assets.json", "r") as f:
@@ -90,18 +80,19 @@ def run_arbitrage(exchanges):
         if pending:
             loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
             loop.run_until_complete(loop.shutdown_asyncgens())
-        loop.run_until_complete(close_exchanges(exchanges))
         loop.close()
 
 def main():
     setup_logging()
     logging.info("Uruchamianie programu arbitrażowego")
+    
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
+    
     while True:
         print("\nWybierz opcję:")
         print("1. Utwórz listę wspólnych aktywów")

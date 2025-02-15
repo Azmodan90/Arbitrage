@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 CONFIG = {
     "BINANCE_API_KEY": os.getenv("BINANCE_API_KEY"),
@@ -10,18 +13,13 @@ CONFIG = {
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
-
-        "BINANCE_ALLOWED_QUOTES": ["USDT", "EUR"],
+    # Dozwolone notowania – pamiętaj, że niektóre giełdy (np. Bitstamp) obsługują tylko USDT
+    "BINANCE_ALLOWED_QUOTES": ["USDT", "EUR"],
     "KUCOIN_ALLOWED_QUOTES": ["USDT", "EUR"],
     "BITGET_ALLOWED_QUOTES": ["USDT", "EUR"],
     "BITSTAMP_ALLOWED_QUOTES": ["USDT"],
-
-
-    "ALLOWED_QUOTES": ["USDT", "EUR"],
-
-    "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu w procentach
-    "ABSURD_THRESHOLD": 100,   # Próg absurdalnego zysku
-    "INVESTMENT_AMOUNT": 100    # Kwota inwestycji w USDT
-
-
+    
+    "ARBITRAGE_THRESHOLD": 2,   # minimalny procentowy zysk, by rozważać okazję
+    "ABSURD_THRESHOLD": 100,    # próg absurdalnie wysokiego zysku
+    "INVESTMENT_AMOUNT": 100,    # kwota inwestycji w USDT (bazowo)
 }
