@@ -1,6 +1,6 @@
-import asyncio
 import json
 import logging
+import asyncio
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
@@ -8,31 +8,46 @@ from exchanges.bitstamp import BitstampExchange
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-async def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "EUR"]):
+def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "EUR"]):
+    """
+    Pobiera rynki z danej giełdy i zwraca słownik, w którym:
+      - klucz: symbol bazowy (np. "ABC")
+      - wartość: słownik, którego kluczem jest quote (np. "USDT") a wartością pełny symbol (np. "ABC/USDT")
+    Uwzględniane są tylko rynki, których quote należy do allowed_quotes.
+    """
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
-        # Jeżeli używasz async_support, awaituj load_markets – w przeciwnym razie wywołaj synchronicznie
+        # Jeśli korzystamy z asynchronicznych wersji, można by tu awaitować load_markets()
         markets = exchange_instance.exchange.load_markets()
-        # Jeśli load_markets jest coroutine, użyj: markets = await exchange_instance.exchange.load_markets()
         result = {}
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
                     if base not in result:
-                        result[base] = symbol
+                        result[base] = {}
+                    result[base][quote] = symbol
         return result
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
         return {}
 
 async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT", "EUR"]):
-    markets1 = await get_markets_dict(exchange1, allowed_quotes)
-    markets2 = await get_markets_dict(exchange2, allowed_quotes)
+    markets1 = get_markets_dict(exchange1, allowed_quotes)
+    markets2 = get_markets_dict(exchange2, allowed_quotes)
     common_bases = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
     for base in common_bases:
-        common[base] = {name1: markets1[base], name2: markets2[base]}
+        quotes1 = set(markets1[base].keys())
+        quotes2 = set(markets2[base].keys())
+        common_quotes = quotes1.intersection(quotes2)
+        if common_quotes:
+            # Preferujemy USDT, jeśli dostępne
+            preferred_quote = "USDT" if "USDT" in common_quotes else list(common_quotes)[0]
+            common[base] = {
+                name1: markets1[base][preferred_quote],
+                name2: markets2[base][preferred_quote]
+            }
     logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
     return common
 
@@ -82,6 +97,7 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
             for entry in add_entries:
                 normalized = entry.get("normalized")
                 if normalized and normalized not in common_assets[config_key]:
+                    # Tutaj zakładamy, że wpis zawiera już pełne symbole z właściwym quote
                     common_assets[config_key][normalized] = {
                         config_key.split("-")[0]: entry.get("source"),
                         config_key.split("-")[1]: entry.get("dest")
@@ -119,10 +135,9 @@ async def main_async():
     for pair, assets in common_assets.items():
         logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
 
-    # Po zakończeniu budowy listy zamykamy użyte instancje (aby nie pozostawały otwarte sesje)
+    # Po zakończeniu budowy listy zamykamy użyte instancje
     for ex in exchanges.values():
         try:
-            # Jeśli giełda ma metodę async close, awaituj ją
             if hasattr(ex, "close") and asyncio.iscoroutinefunction(ex.close):
                 await ex.close()
             elif hasattr(ex, "close"):
