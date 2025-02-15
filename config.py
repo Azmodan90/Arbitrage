@@ -10,9 +10,18 @@ CONFIG = {
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
+
+        "BINANCE_ALLOWED_QUOTES": ["USDT", "EUR"],
+    "KUCOIN_ALLOWED_QUOTES": ["USDT", "EUR"],
+    "BITGET_ALLOWED_QUOTES": ["USDT", "EUR"],
+    "BITSTAMP_ALLOWED_QUOTES": ["USDT"],
+
+
     "ALLOWED_QUOTES": ["USDT", "EUR"],
 
     "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu w procentach
     "ABSURD_THRESHOLD": 100,   # Próg absurdalnego zysku
     "INVESTMENT_AMOUNT": 100    # Kwota inwestycji w USDT
+
+
 }
