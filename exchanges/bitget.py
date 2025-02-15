@@ -3,7 +3,7 @@ import logging
 from exchanges.exchange import Exchange
 
 class BitgetExchange(Exchange):
-    BASE_URL = "https://api.bitget.com"  # podstawowy URL – sprawdź aktualną dokumentację
+    BASE_URL = "https://api.bitget.com"  # Podstawowy URL – dostosuj do aktualnej dokumentacji
 
     def __init__(self, api_key, secret):
         self.api_key = api_key
@@ -22,7 +22,6 @@ class BitgetExchange(Exchange):
                 pairs = []
                 # Przykładowa struktura danych – dostosuj do faktycznej odpowiedzi API
                 for item in data.get("data", {}).get("list", []):
-                    # Przykład: sprawdzamy, czy para ma status "normal"
                     if item.get("state") == "normal":
                         pairs.append(item["symbol"].upper())
                 return pairs
@@ -38,7 +37,6 @@ class BitgetExchange(Exchange):
                     logging.error(f"Bitget get_price HTTP error: {response.status} for {symbol}")
                     return 0.0
                 data = await response.json()
-                # Przykładowo zakładamy, że cena znajduje się w data["data"]["last"]
                 return float(data.get("data", {}).get("last", 0))
         except Exception as e:
             logging.exception(f"Bitget get_price error for {symbol}: {e}")

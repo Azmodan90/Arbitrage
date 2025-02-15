@@ -8,7 +8,7 @@ class BinanceExchange(Exchange):
     def __init__(self, api_key, secret):
         self.api_key = api_key
         self.secret = secret
-        # Tworzymy własną sesję, którą będziemy zamykać później
+        # Utworzenie własnej sesji, którą będziemy zamykać po zakończeniu pracy
         self.session = aiohttp.ClientSession()
 
     async def get_trading_pairs(self):

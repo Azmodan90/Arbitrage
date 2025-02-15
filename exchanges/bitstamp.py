@@ -20,11 +20,9 @@ class BitstampExchange(Exchange):
                     return []
                 data = await response.json()
                 pairs = []
-                # Przykładowa pętla – dostosuj do struktury zwracanej przez API Bitstamp
+                # Dostosuj pętlę do struktury danych zwracanej przez API Bitstamp
                 for item in data:
-                    # Na przykład: jeżeli pole "trading" wskazuje na aktywność
                     if item.get("trading") == "Enabled":
-                        # Zakładamy, że symbol jest przechowywany w polu "url_symbol"
                         pairs.append(item["url_symbol"].upper())
                 return pairs
         except Exception as e:

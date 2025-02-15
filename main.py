@@ -4,7 +4,7 @@ import logging
 import json
 import itertools
 from dotenv import load_dotenv
-from create_common_pairs import create_all_common_pairs  # Import funkcji do tworzenia wspólnych par
+import create_common_pairs  # Zmieniony import – zakładamy, że create_common_pairs.py znajduje się w katalogu głównym
 from exchanges.binance import BinanceExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
@@ -46,7 +46,6 @@ def get_exchange_instance_by_name(name: str):
 
 async def fetch_opportunity(tup, current_instance, dest_instance, funds, min_profit, source_name, dest_name):
     source_sym, dest_sym, normalized = tup
-    # Pobieramy ceny bez przekazywania zewnętrznej sesji – używamy wewnętrznych ClientSession giełd
     price_source, price_dest = await asyncio.gather(
         current_instance.get_price(source_sym),
         dest_instance.get_price(dest_sym)
@@ -148,7 +147,7 @@ async def main():
             print("3. Wyjście")
             choice = input("Twój wybór: ").strip()
             if choice == "1":
-                await create_all_common_pairs()
+                await create_common_pairs.create_all_common_pairs()
             elif choice == "2":
                 await simulate_arbitrage_from_common()
             elif choice == "3":

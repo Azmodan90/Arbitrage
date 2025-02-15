@@ -24,7 +24,6 @@ class KucoinExchange(Exchange):
                 for item in data.get("data", []):
                     if item.get("enableTrading"):
                         # Zakładamy, że symbol jest przechowywany w polu "symbol" w formacie "BTC-USDT"
-                        # Możesz usunąć znak '-' lub pozostawić go, w zależności od potrzeb normalizacji.
                         pairs.append(item["symbol"].replace("-", "").upper())
                 return pairs
         except Exception as e:
@@ -33,7 +32,6 @@ class KucoinExchange(Exchange):
 
     async def get_price(self, symbol: str) -> float:
         # Kucoin oczekuje symbolu w formacie z myślnikiem, np. "BTC-USDT"
-        # Jeśli symbol przekazany jest bez myślnika, dodajemy go – zakładamy, że długość symbolu to 6 znaków (BTC+USDT)
         if len(symbol) == 6:
             symbol_formatted = symbol[:3] + "-" + symbol[3:]
         else:
