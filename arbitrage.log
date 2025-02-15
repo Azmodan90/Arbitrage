@@ -1,0 +1,402 @@
+2025-02-15 12:45:05,493 - INFO - binance-kucoin - Uruchamiam strategię arbitrażu dla 2 aktywów.
+2025-02-15 12:45:05,494 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:05,495 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:05,504 - INFO - binance-bitget - Uruchamiam strategię arbitrażu dla 2 aktywów.
+2025-02-15 12:45:05,506 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:05,506 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:05,510 - INFO - binance-bitstamp - Uruchamiam strategię arbitrażu dla 2 aktywów.
+2025-02-15 12:45:05,512 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:05,512 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:05,515 - INFO - kucoin-bitget - Uruchamiam strategię arbitrażu dla 2 aktywów.
+2025-02-15 12:45:05,517 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:05,517 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:05,521 - INFO - kucoin-bitstamp - Uruchamiam strategię arbitrażu dla 2 aktywów.
+2025-02-15 12:45:05,521 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:05,522 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:05,524 - INFO - bitget-bitstamp - Uruchamiam strategię arbitrażu dla 2 aktywów.
+2025-02-15 12:45:05,525 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:05,525 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:21,522 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:21,818 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:22,361 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:22,627 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:22,634 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:22,792 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:22,852 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:22,873 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:23,383 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:23,390 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:23,437 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:23,808 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:23,895 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:24,010 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:24,016 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:24,267 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:24,272 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:24,540 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:24,546 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:24,591 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:25,027 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:25,033 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:25,040 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:25,046 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:25,221 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:25,233 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:25,280 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:25,281 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:25,359 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:25,360 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:25,512 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:25,512 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:25,604 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:25,605 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:25,607 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:26,229 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:26,231 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:26,240 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:26,242 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:26,361 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:26,389 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:26,422 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:26,423 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:26,424 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:26,424 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:26,515 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:26,516 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:26,609 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:26,610 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:26,659 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:26,659 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:26,783 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:26,784 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:26,845 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:27,424 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:27,426 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:27,427 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:27,429 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:27,431 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:27,433 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:27,625 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:27,627 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:27,661 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:27,662 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:27,704 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:27,705 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:27,786 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:27,787 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:27,847 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:27,847 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:27,934 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:27,935 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:28,051 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:28,052 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:28,090 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:28,629 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:28,630 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:28,630 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:28,631 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:28,707 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:28,711 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:28,827 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:28,828 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:28,937 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:28,937 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:28,985 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:28,986 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:29,055 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:29,056 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:29,091 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:29,092 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:29,201 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:29,202 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:29,312 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:29,312 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:29,359 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:29,830 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:29,831 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:29,832 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:29,832 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:29,987 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:29,988 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:30,029 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:30,030 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:30,204 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:30,204 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:30,279 - INFO - binance-bitstamp - binance: pobrana cena = 1.0482
+2025-02-15 12:45:30,279 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:30,314 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:30,314 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:30,362 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:30,363 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:30,484 - INFO - binance-kucoin - binance: pobrana cena = 1.0482
+2025-02-15 12:45:30,485 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:30,591 - INFO - binance-bitget - binance: pobrana cena = 1.0482
+2025-02-15 12:45:30,592 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:30,617 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:31,032 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:31,034 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:31,036 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:31,038 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:31,230 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:31,231 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:31,280 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:31,281 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:31,489 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:31,490 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:31,595 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:31,597 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:31,621 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:31,623 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:31,767 - INFO - binance-kucoin - binance: pobrana cena = 1.0482
+2025-02-15 12:45:31,767 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:31,872 - INFO - binance-bitget - binance: pobrana cena = 1.0482
+2025-02-15 12:45:31,873 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:31,901 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:32,232 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:32,233 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:32,235 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:32,237 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:32,431 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:32,432 - INFO - binance-bitstamp - binance: pobrana cena = 1.0482
+2025-02-15 12:45:32,432 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:32,432 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:32,768 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:32,770 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:32,875 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:32,876 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:32,903 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:32,904 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:33,042 - INFO - binance-kucoin - binance: pobrana cena = 1.0482
+2025-02-15 12:45:33,043 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:33,180 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:33,230 - INFO - binance-bitget - binance: pobrana cena = 1.0482
+2025-02-15 12:45:33,231 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:33,433 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:33,433 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:33,434 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:33,435 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:33,436 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:33,438 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:33,632 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:33,633 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:33,772 - INFO - binance-bitstamp - binance: pobrana cena = 1.0482
+2025-02-15 12:45:33,773 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:34,046 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:34,047 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:34,181 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:34,182 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:34,233 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:34,234 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:34,254 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:34,340 - INFO - binance-kucoin - binance: pobrana cena = 1.0482
+2025-02-15 12:45:34,341 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:34,518 - INFO - binance-bitget - binance: pobrana cena = 1.0482
+2025-02-15 12:45:34,519 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:34,634 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:34,636 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:34,637 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:34,639 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:34,774 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:34,776 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:34,836 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:34,838 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:35,051 - INFO - binance-bitstamp - binance: pobrana cena = 1.0482
+2025-02-15 12:45:35,052 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:35,256 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:35,258 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:35,262 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:35,342 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:35,344 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:35,521 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:35,522 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:35,637 - INFO - binance-kucoin - binance: pobrana cena = 1.0482
+2025-02-15 12:45:35,638 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:35,783 - INFO - binance-bitget - binance: pobrana cena = 1.0482
+2025-02-15 12:45:35,784 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:35,839 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:35,839 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:35,840 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:35,841 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:36,037 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:36,038 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:36,053 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:36,054 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:36,265 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:36,265 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:36,267 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:36,640 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:36,641 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:36,786 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:36,787 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:36,904 - INFO - binance-kucoin - binance: pobrana cena = 1.0482
+2025-02-15 12:45:36,904 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:37,039 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:37,041 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:37,045 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:37,046 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:37,060 - INFO - binance-bitget - binance: pobrana cena = 1.0482
+2025-02-15 12:45:37,062 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:37,238 - INFO - binance-bitstamp - binance: pobrana cena = 1.0482
+2025-02-15 12:45:37,239 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:37,240 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:37,241 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:37,268 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:37,269 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:37,392 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:37,907 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:37,909 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:38,065 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:38,065 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:38,201 - INFO - binance-kucoin - binance: pobrana cena = 1.0482
+2025-02-15 12:45:38,202 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:38,241 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:38,242 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:38,243 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:38,243 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:38,244 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:38,245 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:38,333 - INFO - binance-bitget - binance: pobrana cena = 1.0482
+2025-02-15 12:45:38,334 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:38,393 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:38,394 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:38,440 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:38,440 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:38,531 - INFO - binance-bitstamp - binance: pobrana cena = 1.0482
+2025-02-15 12:45:38,531 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:38,670 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:39,205 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:39,206 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:39,336 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:39,337 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:39,442 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:39,443 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:39,445 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:39,446 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:39,479 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:39,479 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:39,533 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:39,535 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:39,615 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:39,616 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:39,642 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:39,645 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:39,672 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:39,672 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:39,807 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:39,808 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:39,945 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:40,482 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:40,484 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:40,618 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:40,618 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:40,643 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:40,644 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:40,647 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:40,648 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:40,755 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:40,756 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:40,811 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:40,812 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:40,844 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:40,890 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:40,890 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:40,922 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:40,947 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:40,947 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:41,098 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:41,098 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:41,223 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:41,759 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:41,760 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:41,845 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:41,846 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:41,891 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:41,892 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:41,924 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:41,924 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:42,046 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:42,099 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:42,099 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:42,151 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:42,152 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:42,195 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:42,224 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:42,225 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:42,496 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:42,504 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:42,505 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:43,049 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:43,051 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:43,154 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:43,156 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:43,196 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:43,197 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:43,249 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:43,251 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:43,252 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:43,463 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:43,499 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:43,499 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:43,507 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:43,507 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:43,763 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:43,799 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:43,800 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:43,801 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:43,801 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:44,253 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:44,254 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:44,256 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:44,257 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:44,449 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:44,465 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:44,466 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:44,572 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:44,573 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:44,767 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:44,768 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:44,772 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:44,801 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:44,802 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:44,804 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:44,807 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:45,260 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:45,261 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:45,262 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:45,263 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:45,451 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:45,452 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:45,576 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:45,577 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:45,650 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:45,652 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:45,775 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:45,776 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:45,778 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:45,896 - INFO - binance-bitstamp - binance: pobrana cena = 1.0481
+2025-02-15 12:45:45,897 - WARNING - binance-bitstamp - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:46,263 - WARNING - binance-kucoin - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'kucoin': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:46,265 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla kucoin)
+2025-02-15 12:45:46,268 - WARNING - binance-bitget - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:46,272 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitget)
+2025-02-15 12:45:46,532 - INFO - binance-kucoin - binance: pobrana cena = 1.0481
+2025-02-15 12:45:46,534 - WARNING - binance-kucoin - Niedostateczne dane dla {'binance': 'EUR/USDT', 'kucoin': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:46,558 - INFO - binance-bitget - binance: pobrana cena = 1.0481
+2025-02-15 12:45:46,560 - WARNING - binance-bitget - Niedostateczne dane dla {'binance': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:46,653 - WARNING - kucoin-bitstamp - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:46,654 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:46,656 - WARNING - bitget-bitstamp - Nieprawidłowy symbol {'bitget': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:46,658 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla bitget), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:46,781 - WARNING - kucoin-bitget - Nieprawidłowy symbol {'kucoin': 'USDT/USDT', 'bitget': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:46,782 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla kucoin), EUR/USDT (dla bitget)
+2025-02-15 12:45:46,852 - WARNING - kucoin-bitstamp - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:46,854 - WARNING - bitget-bitstamp - Niedostateczne dane dla {'bitget': 'EUR/USDT', 'bitstamp': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:46,899 - WARNING - binance-bitstamp - Nieprawidłowy symbol {'binance': 'USDT/USDT', 'bitstamp': 'USDT/USDT'} (USDT/USDT). Pomijam.
+2025-02-15 12:45:46,901 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: EUR/USDT (dla binance), EUR/USDT (dla bitstamp)
+2025-02-15 12:45:46,961 - WARNING - kucoin-bitget - Niedostateczne dane dla {'kucoin': 'EUR/USDT', 'bitget': 'EUR/USDT'}. Pomijam.
+2025-02-15 12:45:47,002 - INFO - kucoin-bitstamp - Strategia arbitrażu została anulowana.
+2025-02-15 12:45:47,003 - INFO - binance-kucoin - Strategia arbitrażu została anulowana.
+2025-02-15 12:45:47,003 - INFO - kucoin-bitget - Strategia arbitrażu została anulowana.
+2025-02-15 12:45:47,004 - INFO - bitget-bitstamp - Strategia arbitrażu została anulowana.
+2025-02-15 12:45:47,004 - INFO - binance-bitget - Strategia arbitrażu została anulowana.
+2025-02-15 12:45:47,020 - INFO - binance-bitstamp - Strategia arbitrażu została anulowana.
