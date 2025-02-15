@@ -1,4 +1,4 @@
-import ccxt
+import ccxt.async_support as ccxt
 from config import CONFIG
 
 class BitstampExchange:
@@ -10,9 +10,9 @@ class BitstampExchange:
         })
         self.fee_rate = 0.25
 
-    def fetch_ticker(self, symbol):
+    async def fetch_ticker(self, symbol):
         try:
-            ticker = self.exchange.fetch_ticker(symbol)
+            ticker = await self.exchange.fetch_ticker(symbol)
             return ticker
         except Exception as e:
             print(f"Error fetching ticker from Bitstamp: {e}")

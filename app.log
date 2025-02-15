@@ -1,0 +1,31 @@
+2025-02-15 11:25:57,564 - INFO - Uruchamianie programu arbitrażowego
+2025-02-15 11:26:00,520 - INFO - Wybrano opcję rozpoczęcia arbitrażu
+2025-02-15 11:29:29,963 - INFO - 
+Otrzymano sygnał SIGINT. Zatrzymywanie programu...
+2025-02-15 11:29:29,964 - INFO - Anulowanie zadań: [<Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:184> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:184> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:184> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:63> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:184> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-5402' coro=<Throttler.looper() running at /workspaces/Arbitrage/.venv/lib/python3.11/site-packages/ccxt/async_support/base/throttler.py:36> wait_for=<Future pending cb=[Task.task_wakeup()]>>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:184> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:184> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-5414' coro=<Throttler.looper() running at /workspaces/Arbitrage/.venv/lib/python3.11/site-packages/ccxt/async_support/base/throttler.py:36> wait_for=<Future pending cb=[Task.task_wakeup()]>>]
+2025-02-15 11:29:29,971 - INFO - Zadania anulowane
+2025-02-15 11:29:31,982 - INFO - Wyjście z programu
+2025-02-15 11:29:31,983 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-15 11:29:31,992 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fda3191d6d0>
+2025-02-15 11:29:31,993 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7fda1620cc20>, 2986.745376073)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7fda16dc5b10>
+2025-02-15 11:29:32,021 - WARNING - kucoin requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-15 11:29:32,023 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fda16dcf310>
+2025-02-15 11:29:32,024 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7fda1620def0>, 2988.102622059)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7fda161bb250>
+2025-02-15 11:29:32,029 - WARNING - bitget requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-15 11:29:32,033 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fda161d2f50>
+2025-02-15 11:29:32,033 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7fda1620cd70>, 2986.593411961), (<aiohttp.client_proto.ResponseHandler object at 0x7fda1620c600>, 2987.865194045), (<aiohttp.client_proto.ResponseHandler object at 0x7fda1620c8a0>, 2988.019238554)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7fda161d2c10>
+2025-02-15 11:29:32,039 - WARNING - bitstamp requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-15 11:29:32,041 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fda1496e350>
+2025-02-15 11:29:32,042 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7fda1620f620>, 2984.236995411)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7fda2c91a0d0>
