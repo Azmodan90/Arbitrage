@@ -1,6 +1,5 @@
 import json
 import logging
-import asyncio
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
@@ -9,45 +8,37 @@ from exchanges.bitstamp import BitstampExchange
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "EUR"]):
-    """
-    Pobiera rynki z danej giełdy i zwraca słownik, w którym:
-      - klucz: symbol bazowy (np. "ABC")
-      - wartość: słownik, którego kluczem jest quote (np. "USDT") a wartością pełny symbol (np. "ABC/USDT")
-    Uwzględniane są tylko rynki, których quote należy do allowed_quotes.
-    """
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
-        # Jeśli korzystamy z asynchronicznych wersji, można by tu awaitować load_markets()
         markets = exchange_instance.exchange.load_markets()
         result = {}
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
+                    # Jeśli mamy więcej niż jeden rynek dla danej bazy – zachowujemy pierwszy
                     if base not in result:
-                        result[base] = {}
-                    result[base][quote] = symbol
+                        result[base] = symbol
         return result
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
         return {}
 
-async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT", "EUR"]):
+def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT", "EUR"]):
     markets1 = get_markets_dict(exchange1, allowed_quotes)
     markets2 = get_markets_dict(exchange2, allowed_quotes)
     common_bases = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
     for base in common_bases:
-        quotes1 = set(markets1[base].keys())
-        quotes2 = set(markets2[base].keys())
-        common_quotes = quotes1.intersection(quotes2)
-        if common_quotes:
-            # Preferujemy USDT, jeśli dostępne
-            preferred_quote = "USDT" if "USDT" in common_quotes else list(common_quotes)[0]
-            common[base] = {
-                name1: markets1[base][preferred_quote],
-                name2: markets2[base][preferred_quote]
-            }
+        symbol1 = markets1[base]
+        symbol2 = markets2[base]
+        # Sprawdzamy, czy oba symbole mają ten sam quote
+        if "/" in symbol1 and "/" in symbol2:
+            quote1 = symbol1.split("/")[1]
+            quote2 = symbol2.split("/")[1]
+            if quote1 != quote2:
+                continue
+            common[base] = {name1: symbol1, name2: symbol2}
     logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
     return common
 
@@ -97,7 +88,6 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
             for entry in add_entries:
                 normalized = entry.get("normalized")
                 if normalized and normalized not in common_assets[config_key]:
-                    # Tutaj zakładamy, że wpis zawiera już pełne symbole z właściwym quote
                     common_assets[config_key][normalized] = {
                         config_key.split("-")[0]: entry.get("source"),
                         config_key.split("-")[1]: entry.get("dest")
@@ -105,9 +95,8 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
                     logging.info(f"Konfiguracja {config_key}: dodano aktywo {entry}.")
     return common_assets
 
-async def main_async():
+def main():
     logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)")
-    # Tworzymy nowe instancje giełd tylko do budowy listy
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
@@ -127,26 +116,13 @@ async def main_async():
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            mapping = await get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT", "EUR"])
+            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT", "EUR"])
             common_assets[f"{name1}-{name2}"] = mapping
 
     common_assets = modify_common_assets(common_assets)
     save_common_assets(common_assets)
     for pair, assets in common_assets.items():
         logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
-
-    # Po zakończeniu budowy listy zamykamy użyte instancje
-    for ex in exchanges.values():
-        try:
-            if hasattr(ex, "close") and asyncio.iscoroutinefunction(ex.close):
-                await ex.close()
-            elif hasattr(ex, "close"):
-                ex.close()
-        except Exception as e:
-            logging.error(f"Błąd zamykania {ex.__class__.__name__}: {e}")
-
-def main():
-    asyncio.run(main_async())
 
 if __name__ == '__main__':
     main()

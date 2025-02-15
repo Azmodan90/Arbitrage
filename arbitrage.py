@@ -64,16 +64,13 @@ RATE_LIMITS = {
     "bitgetexchange": 0.3,
     "bitstampexchange": 1.2
 }
-
 rate_limiters = {}
-
 def get_rate_limiter(exchange):
     key = exchange.__class__.__name__.lower()
     if key not in rate_limiters:
         delay = RATE_LIMITS.get(key, 0.1)
         rate_limiters[key] = RateLimiter(delay)
     return rate_limiters[key]
-
 def fetch_ticker_rate_limited_sync(exchange, symbol):
     now = time.monotonic()
     limiter = get_rate_limiter(exchange)
@@ -110,19 +107,17 @@ class PairArbitrageStrategy:
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
-        # Jeśli asset nie jest słownikiem, przekonwertuj go na dict
+        # Jeśli asset nie jest słownikiem, używamy domyślnego quote z config (np. USDT)
         if not isinstance(asset, dict):
+            default_quote = CONFIG.get("DEFAULT_QUOTE", "USDT")
             base = asset
-            asset = {names[0]: base + "/USDT", names[1]: base + "/USDT"}
-        # Teraz asset musi być dict – dzięki temu możemy wywołać get()
+            asset = {names[0]: f"{base}/{default_quote}", names[1]: f"{base}/{default_quote}"}
         symbol_ex1 = asset.get(names[0])
         symbol_ex2 = asset.get(names[1])
         if not symbol_ex1 or not symbol_ex2:
             arbitrage_logger.warning(f"{self.pair_name} - Brak pełnych symboli dla asset {asset}. Pomijam.")
             return
-        if symbol_ex1 == "USDT/USDT" or symbol_ex2 == "USDT/USDT":
-            arbitrage_logger.warning(f"{self.pair_name} - Nieprawidłowy symbol {asset} (USDT/USDT). Pomijam.")
-            return
+        # Nie sprawdzamy dodatkowo, czy symbol zawiera USDT/USDT – zakładamy, że assety z common_assets są poprawne
 
         arbitrage_logger.info(f"{self.pair_name} - Sprawdzam okazje arbitrażowe dla symboli: {symbol_ex1} (dla {names[0]}), {symbol_ex2} (dla {names[1]})")
         loop = asyncio.get_running_loop()
@@ -189,7 +184,6 @@ class PairArbitrageStrategy:
         else:
             extra_info = "Brak sprawdzania płynności, gdy okazja nie przekracza progu."
 
-        # Logowanie – oddzielnie opłacalne i nieopłacalne
         log_msg = (
             f"{self.pair_name} | {asset} | {names[0]}: {effective_buy_ex1:.4f} | {names[1]}: {effective_sell_ex2:.4f} | "
             f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {profit_liq_percent if profit_liq_percent is not None else 'N/A'} | "
