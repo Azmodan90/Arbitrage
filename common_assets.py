@@ -16,7 +16,8 @@ async def get_markets_dict_by_quote(exchange_instance, allowed_quotes=["USDT", "
           "EUR": { base: "BASE/EUR", ... } }
     """
     try:
-        markets = await exchange_instance.exchange.load_markets()
+        # Poprawka: wywołujemy metodę load_markets() zdefiniowaną w klasie
+        markets = await exchange_instance.load_markets()
         result = {quote: {} for quote in allowed_quotes}
         for symbol in markets:
             if "/" in symbol:

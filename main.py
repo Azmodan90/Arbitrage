@@ -99,7 +99,6 @@ def main():
         choice = input("Twój wybór (1/2/3): ").strip()
         if choice == "1":
             logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
-            # Wywołanie funkcji asynchronicznej przez asyncio.run()
             asyncio.run(common_assets.main())
         elif choice == "2":
             run_arbitrage(exchanges)
