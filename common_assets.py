@@ -5,15 +5,16 @@ from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
+import logger_config
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Ustawienie logowania centralnie
+logger_config.setup_logging()
 
 async def get_markets_dict(exchange_instance, allowed_quotes=None):
     if allowed_quotes is None:
         allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
-        # Używamy asynchronicznej metody load_markets
         markets = await exchange_instance.load_markets()
         result = {}
         for symbol in markets:
@@ -33,7 +34,6 @@ async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed
     markets2 = await get_markets_dict(exchange2, allowed_quotes)
     common_symbols = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
-    # Każdy wspólny symbol tworzy własny wpis
     for symbol in common_symbols:
         common[symbol] = {name1: symbol, name2: symbol}
     logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
@@ -92,12 +92,10 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
 
 async def main():
     logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)")
-    # Tworzymy instancje giełd przy użyciu asynchronicznych interfejsów API
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
     bitstamp = BitstampExchange()
-
     exchanges = {
         "binance": binance,
         "kucoin": kucoin,
@@ -119,7 +117,6 @@ async def main():
         for pair, assets in common_assets_dict.items():
             logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
     finally:
-        # Upewnij się, że wszystkie sesje są zamknięte
         await binance.close()
         await kucoin.close()
         await bitget.close()

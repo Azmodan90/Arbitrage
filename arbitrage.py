@@ -5,48 +5,16 @@ import time
 from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
+import logger_config
 
-# Logger configuration
+# Ustawienie logowania – centralnie
+logger_config.setup_logging()
+
+# Pobieramy dedykowane loggery
 arbitrage_logger = logging.getLogger("arbitrage")
-if not arbitrage_logger.hasHandlers():
-    handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
-    arbitrage_logger.addHandler(handler)
-    arbitrage_logger.setLevel(logging.INFO)
-    arbitrage_logger.propagate = False
-
 opp_logger = logging.getLogger("arbitrage_opportunities")
-if not opp_logger.hasHandlers():
-    opp_handler = logging.FileHandler("arbitrage_opportunities.log", mode="a", encoding="utf-8")
-    opp_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    opp_handler.setFormatter(opp_formatter)
-    opp_logger.addHandler(opp_handler)
-    opp_logger.setLevel(logging.INFO)
-    opp_logger.propagate = False
-
 unprofitable_logger = logging.getLogger("unprofitable_opportunities")
-if not unprofitable_logger.hasHandlers():
-    unprofitable_handler = logging.FileHandler("unprofitable_opportunities.log", mode="a", encoding="utf-8")
-    unprofitable_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    unprofitable_handler.setFormatter(unprofitable_formatter)
-    unprofitable_logger.addHandler(unprofitable_handler)
-    unprofitable_logger.setLevel(logging.INFO)
-    unprofitable_logger.propagate = False
-
 absurd_logger = logging.getLogger("absurd_opportunities")
-if not absurd_logger.hasHandlers():
-    absurd_handler = logging.FileHandler("absurd_opportunities.log", mode="a", encoding="utf-8")
-    absurd_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    absurd_handler.setFormatter(absurd_formatter)
-    absurd_logger.addHandler(absurd_handler)
-    absurd_logger.setLevel(logging.INFO)
-    absurd_logger.propagate = False
-
-def normalize_symbol(symbol):
-    if ":" in symbol:
-        return symbol.split(":")[0]
-    return symbol
 
 # Rate limiter (synchronous implementation)
 class RateLimiter:
@@ -98,9 +66,7 @@ class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        # assets – słownik mapujący pełne symbole, np.:
-        # { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
-        self.assets = assets
+        self.assets = assets  # np. { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
         self.pair_name = pair_name
 
     async def check_opportunity(self, asset):
@@ -121,7 +87,6 @@ class PairArbitrageStrategy:
         arbitrage_logger.info(
             f"{self.pair_name} - Sprawdzam arbitraż dla symboli: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})"
         )
-        # Pobieranie tickerów asynchronicznie z rate limiterem
         task1 = fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
         task2 = fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
         results = await asyncio.gather(task1, task2, return_exceptions=True)
@@ -228,7 +193,6 @@ class PairArbitrageStrategy:
                 await asyncio.sleep(1)
         except asyncio.CancelledError:
             arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
-            # Zakończenie strategii bez dalszego podnoszenia wyjątku
             return
 
 if __name__ == '__main__':

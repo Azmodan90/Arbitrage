@@ -9,17 +9,10 @@ from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
 from arbitrage import PairArbitrageStrategy
 import common_assets
+import logger_config
 
-def setup_logging():
-    logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    if logger.hasHandlers():
-        logger.handlers.clear()
-    file_handler = logging.FileHandler('app.log', mode='a', encoding='utf-8')
-    file_handler.setLevel(logging.INFO)
-    file_handler.setFormatter(formatter)
-    logger.addHandler(file_handler)
+# Konfiguracja logowania z centralnego modułu
+logger_config.setup_logging()
 
 def setup_signal_handlers(loop):
     for sig in (signal.SIGINT, signal.SIGTERM):
@@ -68,10 +61,8 @@ async def run_arbitrage_for_all_pairs(exchanges):
         logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
 
 async def main():
-    setup_logging()
     logging.info("Uruchamianie programu arbitrażowego")
     
-    # Utworzenie instancji giełd
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
@@ -91,10 +82,9 @@ async def main():
             choice = input("Twój wybór (1/2/3): ").strip()
             if choice == "1":
                 logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
-                await common_assets.main()  # Funkcja asynchroniczna – awaitujemy ją
+                await common_assets.main()
             elif choice == "2":
                 logging.info("Wybrano opcję rozpoczęcia arbitrażu")
-                # Wywołujemy asynchronicznie funkcję uruchamiającą arbitraż
                 await run_arbitrage_for_all_pairs(exchanges)
             elif choice == "3":
                 logging.info("Wyjście z programu")
