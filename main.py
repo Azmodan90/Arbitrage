@@ -103,7 +103,8 @@ async def main():
             choice = input("Twój wybór (1/2/3): ").strip()
             if choice == "1":
                 logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
-                common_assets.main()
+                # Dodajemy await, ponieważ common_assets.main() jest coroutine
+                await common_assets.main()
             elif choice == "2":
                 run_arbitrage(exchanges)
             elif choice == "3":
