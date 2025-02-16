@@ -2,37 +2,36 @@ import logging
 
 def setup_logging():
     """
-    Ustawia konfigurację logowania dla całej aplikacji oraz dedykowanych loggerów.
+    Ustawia centralną konfigurację logowania:
+      - Główny (root) logger zapisuje logi do pliku app.log
+      - Dedykowane loggery: 'arbitrage', 'arbitrage_opportunities',
+        'unprofitable_opportunities' i 'absurd_opportunities' zapisują logi do swoich plików.
+      - Usunięto logowanie do terminala.
     """
     # Konfiguracja głównego (root) loggera
     root_logger = logging.getLogger()
     root_logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 
-    # Usuwamy istniejące handlery
+    # Usuwamy wszystkie istniejące handlery
     if root_logger.hasHandlers():
         root_logger.handlers.clear()
 
-    # Dodajemy handler konsolowy
-    console_handler = logging.StreamHandler()
-    console_handler.setFormatter(formatter)
-    root_logger.addHandler(console_handler)
-
-    # Dodajemy globalny handler plikowy do root loggera
+    # Dodajemy file handler do root loggera (logi z działania programu)
     file_handler = logging.FileHandler("app.log", mode="a", encoding="utf-8")
     file_handler.setFormatter(formatter)
     root_logger.addHandler(file_handler)
 
-    # Konfiguracja loggera dla arbitrażu
+    # Konfiguracja dedykowanego loggera "arbitrage"
     arbitrage_logger = logging.getLogger("arbitrage")
     if not arbitrage_logger.hasHandlers():
-        arb_file_handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
-        arb_file_handler.setFormatter(formatter)
-        arbitrage_logger.addHandler(arb_file_handler)
+        arb_handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
+        arb_handler.setFormatter(formatter)
+        arbitrage_logger.addHandler(arb_handler)
         arbitrage_logger.setLevel(logging.INFO)
-        arbitrage_logger.propagate = False
+        arbitrage_logger.propagate = False  # zapobiega propagacji do root loggera
 
-    # Logger dla okazji arbitrażowych
+    # Logger dla okazji arbitrażowych (opłacalnych)
     opp_logger = logging.getLogger("arbitrage_opportunities")
     if not opp_logger.hasHandlers():
         opp_handler = logging.FileHandler("arbitrage_opportunities.log", mode="a", encoding="utf-8")
