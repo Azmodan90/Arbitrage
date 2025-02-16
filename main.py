@@ -11,17 +11,18 @@ from arbitrage import PairArbitrageStrategy
 import common_assets
 import logger_config
 
-# Konfiguracja logowania z centralnego modułu
+# Ustawienie centralne logowania
 logger_config.setup_logging()
+app_logger = logging.getLogger("app")
 
 def setup_signal_handlers(loop):
     for sig in (signal.SIGINT, signal.SIGTERM):
         loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
 
 async def shutdown(signal_name, loop):
-    logging.info(f"\nOtrzymano sygnał {signal_name}. Zatrzymywanie programu...")
+    app_logger.info(f"\nOtrzymano sygnał {signal_name}. Zatrzymywanie programu...")
     tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
-    logging.info("Anulowanie zadań: %s", tasks)
+    app_logger.info("Anulowanie zadań: %s", tasks)
     for task in tasks:
         task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
@@ -33,22 +34,22 @@ async def run_arbitrage_for_all_pairs(exchanges):
         with open("common_assets.json", "r") as f:
             common_assets_data = json.load(f)
     except Exception as e:
-        logging.error(f"Nie udało się załadować common_assets.json: {e}")
+        app_logger.error(f"Nie udało się załadować common_assets.json: {e}")
         return
 
     tasks = []
     for pair_key, assets in common_assets_data.items():
         if not assets:
-            logging.info(f"Brak wspólnych aktywów dla pary {pair_key}")
+            app_logger.info(f"Brak wspólnych aktywów dla pary {pair_key}")
             continue
         exch_names = pair_key.split("-")
         if len(exch_names) != 2:
-            logging.error(f"Niepoprawny format pary: {pair_key}")
+            app_logger.error(f"Niepoprawny format pary: {pair_key}")
             continue
         ex1 = exchanges.get(exch_names[0])
         ex2 = exchanges.get(exch_names[1])
         if not ex1 or not ex2:
-            logging.error(f"Nie znaleziono giełd dla pary: {pair_key}")
+            app_logger.error(f"Nie znaleziono giełd dla pary: {pair_key}")
             continue
         strategy = PairArbitrageStrategy(ex1, ex2, assets, pair_name=pair_key)
         tasks.append(asyncio.create_task(strategy.run()))
@@ -56,12 +57,12 @@ async def run_arbitrage_for_all_pairs(exchanges):
         try:
             await asyncio.gather(*tasks)
         except asyncio.CancelledError:
-            logging.info("Arbitraż został przerwany.")
+            app_logger.info("Arbitraż został przerwany.")
     else:
-        logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
+        app_logger.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
 
 async def main():
-    logging.info("Uruchamianie programu arbitrażowego")
+    app_logger.info("Uruchamianie programu arbitrażowego")
     
     exchanges = {
         "binance": BinanceExchange(),
@@ -81,19 +82,19 @@ async def main():
             print("3. Wyjście")
             choice = input("Twój wybór (1/2/3): ").strip()
             if choice == "1":
-                logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
+                app_logger.info("Wybrano opcję tworzenia listy wspólnych aktywów")
                 await common_assets.main()
             elif choice == "2":
-                logging.info("Wybrano opcję rozpoczęcia arbitrażu")
+                app_logger.info("Wybrano opcję rozpoczęcia arbitrażu")
                 await run_arbitrage_for_all_pairs(exchanges)
             elif choice == "3":
-                logging.info("Wyjście z programu")
+                app_logger.info("Wyjście z programu")
                 break
             else:
-                logging.error("Nieprawidłowy wybór!")
+                app_logger.error("Nieprawidłowy wybór!")
                 print("Nieprawidłowy wybór!")
     except (KeyboardInterrupt, asyncio.CancelledError):
-        logging.info("Program zatrzymany przez użytkownika.")
+        app_logger.info("Program zatrzymany przez użytkownika.")
     finally:
         await exchanges["binance"].close()
         await exchanges["kucoin"].close()

@@ -7,7 +7,7 @@ from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 import logger_config
 
-# Ustawienie logowania – centralnie
+# Ustawienie centralne logowania
 logger_config.setup_logging()
 
 # Pobieramy dedykowane loggery
@@ -16,7 +16,7 @@ opp_logger = logging.getLogger("arbitrage_opportunities")
 unprofitable_logger = logging.getLogger("unprofitable_opportunities")
 absurd_logger = logging.getLogger("absurd_opportunities")
 
-# Rate limiter (synchronous implementation)
+# --- Rate limiter (synchronous implementation) ---
 class RateLimiter:
     def __init__(self, delay):
         self.delay = delay
@@ -66,7 +66,8 @@ class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        self.assets = assets  # np. { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
+        # assets – słownik mapujący pełne symbole, np.: { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
+        self.assets = assets
         self.pair_name = pair_name
 
     async def check_opportunity(self, asset):
