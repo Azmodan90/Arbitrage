@@ -12,10 +12,10 @@ CONFIG = {
     "BITGET_SECRET": os.getenv("BITGET_SECRET"),
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
-
-    "ARBITRAGE_THRESHOLD": 2,      # Próg arbitrażu w procentach
-    "ABSURD_THRESHOLD": 100,       # Próg absurdalnego zysku (dla ignorowania okazji)
-    "INVESTMENT_AMOUNT": 100,      # Kwota inwestycji w USDT
-    "ALLOWED_QUOTES": ["USDT", "EUR"],  # Dozwolone quote – możesz łatwo dodać/usunąć waluty
-    "DEFAULT_QUOTE": "USDT",       # Domyślny quote dla symboli, które nie zawierają '/'
+    
+    "ALLOWED_QUOTES": ["USDT", "EUR"],  # Ustawiasz tutaj, które quote mają być brane pod uwagę.
+    
+    "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu w procentach
+    "ABSURD_THRESHOLD": 100,   # próg absurdalnego zysku w procentach
+    "INVESTMENT_AMOUNT": 100    # kwota inwestycji w USDT
 }

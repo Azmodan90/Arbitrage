@@ -5,9 +5,8 @@ import time
 from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
-from tabulate import tabulate
 
-# Logger dla ogólnych informacji arbitrażu – zapis do pliku arbitrage.log
+# Loggery
 arbitrage_logger = logging.getLogger("arbitrage")
 if not arbitrage_logger.hasHandlers():
     handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
@@ -17,7 +16,6 @@ if not arbitrage_logger.hasHandlers():
     arbitrage_logger.setLevel(logging.INFO)
     arbitrage_logger.propagate = False
 
-# Logger dla wykrytych okazji arbitrażowych – zapis do pliku arbitrage_opportunities.log
 opp_logger = logging.getLogger("arbitrage_opportunities")
 if not opp_logger.hasHandlers():
     opp_handler = logging.FileHandler("arbitrage_opportunities.log", mode="a", encoding="utf-8")
@@ -27,7 +25,6 @@ if not opp_logger.hasHandlers():
     opp_logger.setLevel(logging.INFO)
     opp_logger.propagate = False
 
-# Logger dla nieopłacalnych okazji – zapis do pliku unprofitable_opportunities.log
 unprofitable_logger = logging.getLogger("unprofitable_opportunities")
 if not unprofitable_logger.hasHandlers():
     unprofitable_handler = logging.FileHandler("unprofitable_opportunities.log", mode="a", encoding="utf-8")
@@ -37,7 +34,6 @@ if not unprofitable_logger.hasHandlers():
     unprofitable_logger.setLevel(logging.INFO)
     unprofitable_logger.propagate = False
 
-# Logger dla absurdalnych okazji – zapis do pliku absurd_opportunities.log
 absurd_logger = logging.getLogger("absurd_opportunities")
 if not absurd_logger.hasHandlers():
     absurd_handler = logging.FileHandler("absurd_opportunities.log", mode="a", encoding="utf-8")
@@ -52,10 +48,10 @@ def normalize_symbol(symbol):
         return symbol.split(":")[0]
     return symbol
 
-# --- Rate limiter (przykładowa implementacja) ---
+# Asynchroniczny rate limiter
 class RateLimiter:
     def __init__(self, delay):
-        self.delay = delay  # minimalny odstęp między zapytaniami (w sekundach)
+        self.delay = delay
         self.last_request = 0
 
 RATE_LIMITS = {
@@ -72,95 +68,69 @@ def get_rate_limiter(exchange):
         rate_limiters[key] = RateLimiter(delay)
     return rate_limiters[key]
 
-def fetch_ticker_rate_limited_sync(exchange, symbol):
+async def fetch_ticker_rate_limited(exchange, symbol):
     now = time.monotonic()
     limiter = get_rate_limiter(exchange)
     wait_time = limiter.delay - (now - limiter.last_request)
     if wait_time > 0:
-        time.sleep(wait_time)
-    ticker = exchange.fetch_ticker(symbol)
+        await asyncio.sleep(wait_time)
+    ticker = await exchange.fetch_ticker(symbol)
     limiter.last_request = time.monotonic()
     return ticker
 
-def get_liquidity_info(exchange, symbol):
+async def get_liquidity_info(exchange, symbol):
     try:
-        if hasattr(exchange, "fetch_order_book"):
-            order_book = exchange.fetch_order_book(symbol)
-        else:
-            order_book = exchange.exchange.fetch_order_book(symbol)
+        order_book = await exchange.fetch_order_book(symbol)
         bids = order_book.get('bids', [])
         asks = order_book.get('asks', [])
         top_bid = bids[0] if bids else [None, None]
         top_ask = asks[0] if asks else [None, None]
         return {"top_bid": top_bid, "top_ask": top_ask}
     except Exception as e:
-        arbitrage_logger.error(f"Błąd pobierania order book dla {symbol} na {exchange.__class__.__name__}: {e}")
+        arbitrage_logger.error(f"Error fetching order book for {symbol} on {exchange.__class__.__name__}: {e}")
         return None
-
-# Funkcja pomocnicza do bezpiecznego formatowania wartości
-def safe_format(value, fmt_spec):
-    try:
-        return format(value, fmt_spec) if value is not None else "N/A"
-    except Exception:
-        return "N/A"
 
 class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        # assets – słownik mapujący pełny symbol (np. "ABC/USDT") do mapowania, np.
-        # { "ABC/USDT": { "binance": "ABC/USDT", "kucoin": "ABC/USDT" } }
-        self.assets = assets
+        self.assets = assets  # słownik mapujący np.: { "GMT": {"binance": "GMT/USDT", "kucoin": "GMT/USDT"} }
         self.pair_name = pair_name
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
-        # Jeśli asset nie jest słownikiem, sprawdzamy, czy zawiera znak '/' – jeśli nie, dopełniamy domyślnym quote
         if not isinstance(asset, dict):
             base = asset
-            if "/" not in base:
-                default_quote = CONFIG.get("DEFAULT_QUOTE", "USDT")
-                asset = {names[0]: f"{base}/{default_quote}", names[1]: f"{base}/{default_quote}"}
-            else:
-                asset = {names[0]: base, names[1]: base}
+            asset = {names[0]: base + "/USDT", names[1]: base + "/USDT"}
         symbol_ex1 = asset.get(names[0])
         symbol_ex2 = asset.get(names[1])
         if not symbol_ex1 or not symbol_ex2:
-            arbitrage_logger.warning(f"{self.pair_name} - Brak pełnych symboli dla asset {asset}. Pomijam.")
+            arbitrage_logger.warning(f"{self.pair_name} - Missing full symbols for asset {asset}. Skipping.")
             return
         if symbol_ex1 == "USDT/USDT" or symbol_ex2 == "USDT/USDT":
-            arbitrage_logger.warning(f"{self.pair_name} - Nieprawidłowy symbol {asset} (USDT/USDT). Pomijam.")
+            arbitrage_logger.warning(f"{self.pair_name} - Invalid symbol {asset} (USDT/USDT). Skipping.")
             return
-
-        arbitrage_logger.info(f"{self.pair_name} - Sprawdzam okazje arbitrażowe dla symboli: {symbol_ex1} (dla {names[0]}), {symbol_ex2} (dla {names[1]})")
-        loop = asyncio.get_running_loop()
-        task1 = loop.run_in_executor(None, lambda: fetch_ticker_rate_limited_sync(self.exchange1, symbol_ex1))
-        task2 = loop.run_in_executor(None, lambda: fetch_ticker_rate_limited_sync(self.exchange2, symbol_ex2))
-        results = await asyncio.gather(task1, task2, return_exceptions=True)
-        tickers = {}
-        for key, result in zip([names[0], names[1]], results):
-            if isinstance(result, Exception):
-                arbitrage_logger.error(f"{self.pair_name} - Błąd pobierania danych dla {key}: {result}")
-            elif result:
-                price = result.get('last')
-                if price is None:
-                    arbitrage_logger.warning(f"{self.pair_name} - Dla {key} pobrana cena jest None, pomijam asset {asset}")
-                else:
-                    tickers[key] = price
-                    arbitrage_logger.info(f"{self.pair_name} - {key}: pobrana cena = {price}")
-        if names[0] not in tickers or names[1] not in tickers:
-            arbitrage_logger.warning(f"{self.pair_name} - Niedostateczne dane dla {asset}. Pomijam.")
+        arbitrage_logger.info(f"{self.pair_name} - Checking arbitrage for: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
+        
+        ticker1 = await fetch_ticker_rate_limited(self.exchange1, symbol_ex1)
+        ticker2 = await fetch_ticker_rate_limited(self.exchange2, symbol_ex2)
+        if ticker1 is None or ticker2 is None:
+            arbitrage_logger.warning(f"{self.pair_name} - Insufficient data for {asset}. Skipping.")
             return
-
+        price1 = ticker1.get('last')
+        price2 = ticker2.get('last')
+        if price1 is None or price2 is None:
+            arbitrage_logger.warning(f"{self.pair_name} - One of the tickers returned None, skipping asset {asset}.")
+            return
+        arbitrage_logger.info(f"{self.pair_name} - {names[0]} ticker price: {price1}")
+        arbitrage_logger.info(f"{self.pair_name} - {names[1]} ticker price: {price2}")
         fee1 = self.exchange1.fee_rate
         fee2 = self.exchange2.fee_rate
-
-        effective_buy_ex1 = tickers[names[0]] * (1 + fee1 / 100)
-        effective_sell_ex2 = tickers[names[1]] * (1 - fee2 / 100)
+        effective_buy_ex1 = price1 * (1 + fee1 / 100)
+        effective_sell_ex2 = price2 * (1 - fee2 / 100)
         profit1 = ((effective_sell_ex2 - effective_buy_ex1) / effective_buy_ex1) * 100
-
-        effective_buy_ex2 = tickers[names[1]] * (1 + fee2 / 100)
-        effective_sell_ex1 = tickers[names[0]] * (1 - fee1 / 100)
+        effective_buy_ex2 = price2 * (1 + fee2 / 100)
+        effective_sell_ex1 = price1 * (1 - fee1 / 100)
         profit2 = ((effective_sell_ex1 - effective_buy_ex2) / effective_buy_ex2) * 100
 
         liquidity_info = "N/D"
@@ -170,9 +140,9 @@ class PairArbitrageStrategy:
         profit_liq_percent = None
         invested_amount = None
         actual_qty = None
-        if (profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]) or (profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]):
-            liq_ex1 = await loop.run_in_executor(None, lambda: get_liquidity_info(self.exchange1, symbol_ex1))
-            liq_ex2 = await loop.run_in_executor(None, lambda: get_liquidity_info(self.exchange2, symbol_ex2))
+        if profit1 >= CONFIG["ARBITRAGE_THRESHOLD"] or profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
+            liq_ex1 = await get_liquidity_info(self.exchange1, symbol_ex1)
+            liq_ex2 = await get_liquidity_info(self.exchange2, symbol_ex2)
             liquidity_info = ""
             if liq_ex1:
                 liquidity_info += f"{names[0]} - Top Bid: {liq_ex1['top_bid']}, Top Ask: {liq_ex1['top_ask']}; "
@@ -191,57 +161,64 @@ class PairArbitrageStrategy:
                 invested_amount = actual_qty * effective_order_buy
                 profit_liq_usdt = potential_proceeds - invested_amount
                 profit_liq_percent = (profit_liq_usdt / invested_amount * 100) if invested_amount else 0
-                extra_info += f"Można kupić {actual_qty:.4f} jednostek; "
+                extra_info += f"Can purchase {actual_qty:.4f} units; "
                 if available_buy_vol < desired_qty:
-                    extra_info += f"Niewystarczająca płynność na {names[0]} (dostępne: {available_buy_vol}); "
+                    extra_info += f"Insufficient liquidity on {names[0]} (available: {available_buy_vol}); "
                 if available_sell_vol < desired_qty:
-                    extra_info += f"Niewystarczająca płynność na {names[1]} (dostępne: {available_sell_vol}); "
-                extra_info += f"Zainwestowano: {invested_amount:.2f} USDT; Potencjalne przychody: {potential_proceeds:.2f} USDT; "
-                extra_info += f"Profit: {profit_liq_usdt:.2f} USDT ({profit_liq_percent:.2f}%)."
+                    extra_info += f"Insufficient liquidity on {names[1]} (available: {available_sell_vol}); "
+                extra_info += f"Potential proceeds: {potential_proceeds:.2f} USDT; "
         else:
-            extra_info = "Brak sprawdzania płynności, gdy okazja nie przekracza progu."
+            extra_info = "No liquidity check as profit does not exceed threshold."
 
-        # Budujemy log_message, stosując funkcję safe_format() dla wartości, które mogą być None
-        log_message = (
+        log_msg = (
             f"Pair: {self.pair_name} | Asset: {asset} | "
-            f"Buy (Ex): {names[0]} | Buy Price (eff.): {safe_format(effective_buy_ex1, '.4f')} | "
-            f"Sell (Ex): {names[1]} | Sell Price (eff.): {safe_format(effective_sell_ex2, '.4f')} | "
-            f"Ticker Profit: {safe_format(profit1, '.2f')}% | Liquidity Profit: {safe_format(profit_liq_percent, '.2f')}% | "
-            f"Profit (USDT): {safe_format(profit_liq_usdt, '.2f')} | Invested (USDT): {safe_format(invested_amount, '.2f')} | "
-            f"Qty Purchased: {safe_format(actual_qty, '.4f')} | Liquidity Info: {liquidity_info} | Extra: {extra_info}"
+            f"Buy (Ex): {names[0]} | Buy Price (eff.): {effective_buy_ex1:.4f} | "
+            f"Sell (Ex): {names[1]} | Sell Price (eff.): {effective_sell_ex2:.4f} | "
+            f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {profit_liq_percent:.2f}% | "
+            f"Profit (USDT): {profit_liq_usdt:.2f} | Invested (USDT): {invested_amount:.2f} | "
+            f"Qty Purchased: {actual_qty:.4f} | Liquidity Info: {liquidity_info} | Extra: {extra_info}"
         )
-
-        # Logowanie – oddzielnie dla opłacalnych oraz nieopłacalnych okazji
         if profit_liq_usdt is not None and profit_liq_usdt > 0:
-            opp_logger.info(log_message)
+            opp_logger.info(log_msg)
         else:
-            unprofitable_logger.info(log_message)
-
+            unprofitable_logger.info(log_msg)
         if profit1 > CONFIG["ABSURD_THRESHOLD"]:
-            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk dla {asset}: {safe_format(profit1, '.2f')}% [Liquidity -> {liquidity_info} | {extra_info}]")
+            absurd_logger.warning(
+                f"{self.pair_name} - Absurd profit for {asset}: {profit1:.2f}% (Buy on {self.exchange1.__class__.__name__}, Sell on {self.exchange2.__class__.__name__}). Ignoring. [Liquidity -> {liquidity_info} | {extra_info}]"
+            )
         elif profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]:
-            arbitrage_logger.info(f"{self.pair_name} - Okazja arbitrażowa dla {asset}: Kupno na {self.exchange1.__class__.__name__} "
-                                    f"(cena: {tickers[names[0]]}, eff.: {safe_format(effective_buy_ex1, '.4f')}), sprzedaż na {self.exchange2.__class__.__name__} "
-                                    f"(cena: {tickers[names[1]]}, eff.: {safe_format(effective_sell_ex2, '.4f')}), Ticker Profit: {safe_format(profit1, '.2f')}% "
-                                    f"[Liquidity -> {liquidity_info} | {extra_info}]")
+            arbitrage_logger.info(
+                f"{self.pair_name} - Opportunity for {asset}: Buy on {self.exchange1.__class__.__name__} "
+                f"(ticker price: {price1}, eff.: {effective_buy_ex1:.4f}), Sell on {self.exchange2.__class__.__name__} "
+                f"(ticker price: {price2}, eff.: {effective_sell_ex2:.4f}), Profit: {profit1:.2f}%. "
+                f"[Liquidity -> {liquidity_info} | {extra_info}]"
+            )
         if profit2 > CONFIG["ABSURD_THRESHOLD"]:
-            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk dla {asset}: {safe_format(profit2, '.2f')}% [Liquidity -> {liquidity_info} | {extra_info}]")
+            absurd_logger.warning(
+                f"{self.pair_name} - Absurd profit for {asset}: {profit2:.2f}% (Buy on {self.exchange2.__class__.__name__}, Sell on {self.exchange1.__class__.__name__}). Ignoring. [Liquidity -> {liquidity_info} | {extra_info}]"
+            )
         elif profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
-            arbitrage_logger.info(f"{self.pair_name} - Okazja arbitrażowa dla {asset}: Kupno na {self.exchange2.__class__.__name__} "
-                                    f"(cena: {tickers[names[1]]}, eff.: {safe_format(effective_buy_ex2, '.4f')}), sprzedaż na {self.exchange1.__class__.__name__} "
-                                    f"(cena: {tickers[names[0]]}, eff.: {safe_format(effective_sell_ex1, '.4f')}), Ticker Profit: {safe_format(profit2, '.2f')}% "
-                                    f"[Liquidity -> {liquidity_info} | {extra_info}]")
+            arbitrage_logger.info(
+                f"{self.pair_name} - Opportunity for {asset}: Buy on {self.exchange2.__class__.__name__} "
+                f"(ticker price: {price2}, eff.: {effective_buy_ex2:.4f}), Sell on {self.exchange1.__class__.__name__} "
+                f"(ticker price: {price1}, eff.: {effective_sell_ex1:.4f}), Profit: {profit2:.2f}%. "
+                f"[Liquidity -> {liquidity_info} | {extra_info}]"
+            )
+
     async def run(self):
-        arbitrage_logger.info(f"{self.pair_name} - Uruchamiam strategię arbitrażu dla {len(self.assets)} aktywów.")
+        arbitrage_logger.info(f"{self.pair_name} - Starting arbitrage strategy for {len(self.assets)} assets.")
         try:
             while True:
                 for asset in self.assets:
                     await self.check_opportunity(asset)
                 await asyncio.sleep(1)
         except asyncio.CancelledError:
-            arbitrage_logger.info(f"{self.pair_name} - Strategia arbitrażu została anulowana.")
+            arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
             raise
 
-if __name__ == '__main__':
-    # Testowe wywołanie, jeśli potrzebne
-    pass
+async def close_exchanges(exchanges):
+    for exchange in exchanges.values():
+        try:
+            await exchange.close()
+        except Exception as e:
+            arbitrage_logger.error(f"Error closing {exchange.__class__.__name__}: {e}")

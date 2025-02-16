@@ -1,177 +1,92 @@
-2025-02-16 13:04:28,328 - INFO - Wybrano opcję rozpoczęcia arbitrażu
-2025-02-16 13:08:53,004 - INFO - 
-Otrzymano sygnał SIGINT. Zatrzymywanie programu...
-2025-02-16 13:08:53,005 - INFO - Anulowanie zadań: [<Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:63> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>]
-2025-02-16 13:08:53,019 - INFO - Zadania anulowane
-2025-02-16 13:08:54,849 - INFO - Wyjście z programu
-2025-02-16 13:19:35,606 - INFO - Uruchamianie programu arbitrażowego
-2025-02-16 13:19:37,099 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-16 13:19:37,099 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)
-2025-02-16 13:19:37,172 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-16 13:19:37,173 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:19:37,174 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,181 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:19:37,182 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,182 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 13:19:37,183 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-16 13:19:37,183 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:19:37,183 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,184 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:19:37,184 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,185 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 13:19:37,185 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-16 13:19:37,186 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:19:37,186 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,187 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:19:37,187 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,187 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 13:19:37,188 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-16 13:19:37,188 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:19:37,189 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,189 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:19:37,189 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,190 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 13:19:37,190 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-16 13:19:37,190 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:19:37,191 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,191 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:19:37,191 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,192 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 13:19:37,192 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-16 13:19:37,193 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:19:37,193 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,193 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:19:37,193 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'coroutine' object is not iterable
-2025-02-16 13:19:37,194 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 13:19:37,196 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-16 13:19:37,199 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-16 13:19:37,199 - INFO - Konfiguracja binance-kucoin: usunięto 0 aktywów.
-2025-02-16 13:19:37,200 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-16 13:19:37,200 - INFO - Konfiguracja binance-bitget: usunięto 0 aktywów.
-2025-02-16 13:19:37,201 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:19:37,201 - INFO - Konfiguracja kucoin-bitget: usunięto 0 aktywów.
-2025-02-16 13:19:37,202 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:19:37,202 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:19:37,206 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-16 13:19:37,206 - INFO - Para binance-kucoin ma 1 wspólnych aktywów.
-2025-02-16 13:19:37,207 - INFO - Para binance-bitget ma 0 wspólnych aktywów.
-2025-02-16 13:19:37,207 - INFO - Para binance-bitstamp ma 0 wspólnych aktywów.
-2025-02-16 13:19:37,207 - INFO - Para kucoin-bitget ma 0 wspólnych aktywów.
-2025-02-16 13:19:37,207 - INFO - Para kucoin-bitstamp ma 0 wspólnych aktywów.
-2025-02-16 13:19:37,208 - INFO - Para bitget-bitstamp ma 0 wspólnych aktywów.
-2025-02-16 13:21:20,478 - INFO - Uruchamianie programu arbitrażowego
-2025-02-16 13:21:22,633 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-16 13:21:22,636 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)
-2025-02-16 13:21:22,702 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-16 13:21:22,703 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:21:26,331 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:21:28,561 - INFO - Wspólne aktywa dla binance i kucoin (użyte quote: {'EUR', 'USDT'}): 321 znalezione
-2025-02-16 13:21:28,563 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-16 13:21:28,563 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:21:28,566 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:21:30,799 - INFO - Wspólne aktywa dla binance i bitget (użyte quote: {'EUR', 'USDT'}): 329 znalezione
-2025-02-16 13:21:30,800 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-16 13:21:30,800 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:21:30,803 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:21:31,360 - INFO - Wspólne aktywa dla binance i bitstamp (użyte quote: {'EUR', 'USDT'}): 0 znalezione
-2025-02-16 13:21:31,361 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-16 13:21:31,362 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:21:31,363 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:21:31,366 - INFO - Wspólne aktywa dla kucoin i bitget (użyte quote: {'EUR', 'USDT'}): 490 znalezione
-2025-02-16 13:21:31,366 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-16 13:21:31,367 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:21:31,369 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:21:31,370 - INFO - Wspólne aktywa dla kucoin i bitstamp (użyte quote: {'EUR', 'USDT'}): 1 znalezione
-2025-02-16 13:21:31,370 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-16 13:21:31,371 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:21:31,372 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:21:31,374 - INFO - Wspólne aktywa dla bitget i bitstamp (użyte quote: {'EUR', 'USDT'}): 7 znalezione
-2025-02-16 13:21:31,379 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-16 13:21:31,384 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-16 13:21:31,385 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
-2025-02-16 13:21:31,386 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-16 13:21:31,387 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
-2025-02-16 13:21:31,387 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:21:31,389 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
-2025-02-16 13:21:31,389 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:21:31,390 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:21:31,437 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-16 13:21:31,438 - INFO - Para binance-kucoin ma 318 wspólnych aktywów.
-2025-02-16 13:21:31,438 - INFO - Para binance-bitget ma 328 wspólnych aktywów.
-2025-02-16 13:21:31,438 - INFO - Para binance-bitstamp ma 0 wspólnych aktywów.
-2025-02-16 13:21:31,439 - INFO - Para kucoin-bitget ma 484 wspólnych aktywów.
-2025-02-16 13:21:31,439 - INFO - Para kucoin-bitstamp ma 1 wspólnych aktywów.
-2025-02-16 13:21:31,440 - INFO - Para bitget-bitstamp ma 7 wspólnych aktywów.
-2025-02-16 13:21:31,440 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
-2025-02-16 13:21:31,445 - ERROR - Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x7faf5ab1a390>
-2025-02-16 13:21:31,447 - ERROR - Unclosed connector
-connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faf5ab28750>, 4140.126374045), (<aiohttp.client_proto.ResponseHandler object at 0x7faf5ab28590>, 4140.251680905), (<aiohttp.client_proto.ResponseHandler object at 0x7faf5ab2ae40>, 4140.28207744)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7faf5ab2b230>, 4140.550665443)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7faf5ab2b000>, 4141.12399495)]']
-connector: <aiohttp.connector.TCPConnector object at 0x7faf5ab1bfd0>
-2025-02-16 13:21:31,469 - WARNING - kucoin requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
-2025-02-16 13:21:31,471 - ERROR - Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x7faf5157a550>
-2025-02-16 13:21:31,473 - ERROR - Unclosed connector
-connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faf5ab2b930>, 4144.072893836), (<aiohttp.client_proto.ResponseHandler object at 0x7faf5a9bc830>, 4144.218089935)]']
-connector: <aiohttp.connector.TCPConnector object at 0x7faf5157a7d0>
-2025-02-16 13:21:31,479 - WARNING - bitget requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
-2025-02-16 13:21:31,482 - ERROR - Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x7faf58a36390>
-2025-02-16 13:21:31,485 - ERROR - Unclosed connector
-connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faf5a9bca60>, 4146.258317274), (<aiohttp.client_proto.ResponseHandler object at 0x7faf5a9be350>, 4146.394907472), (<aiohttp.client_proto.ResponseHandler object at 0x7faf5a9be5f0>, 4146.446796146), (<aiohttp.client_proto.ResponseHandler object at 0x7faf5a9be890>, 4146.499833062), (<aiohttp.client_proto.ResponseHandler object at 0x7faf5a9beb30>, 4146.573030026)]']
-connector: <aiohttp.connector.TCPConnector object at 0x7faf58a360d0>
-2025-02-16 13:21:31,492 - WARNING - bitstamp requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
-2025-02-16 13:21:31,493 - ERROR - Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x7faf50a2dad0>
-2025-02-16 13:21:31,494 - ERROR - Unclosed connector
-connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faf5a9bed60>, 4147.487100372)]']
-connector: <aiohttp.connector.TCPConnector object at 0x7faf69240190>
-2025-02-16 13:22:58,771 - INFO - Uruchamianie programu arbitrażowego
-2025-02-16 13:23:00,730 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-16 13:23:00,730 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)
-2025-02-16 13:23:00,798 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-16 13:23:00,799 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:23:06,029 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:23:08,195 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 326 znalezione
-2025-02-16 13:23:08,196 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-16 13:23:08,196 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:23:08,198 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:23:11,230 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 358 znalezione
-2025-02-16 13:23:11,231 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-16 13:23:11,231 - INFO - Ładowanie rynków dla: BinanceExchange
-2025-02-16 13:23:11,234 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:23:11,735 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 37 znalezione
-2025-02-16 13:23:11,736 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-16 13:23:11,737 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:23:11,738 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:23:11,740 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 504 znalezione
-2025-02-16 13:23:11,741 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-16 13:23:11,741 - INFO - Ładowanie rynków dla: KucoinExchange
-2025-02-16 13:23:11,743 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:23:11,744 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 8 znalezione
-2025-02-16 13:23:11,744 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-16 13:23:11,745 - INFO - Ładowanie rynków dla: BitgetExchange
-2025-02-16 13:23:11,747 - INFO - Ładowanie rynków dla: BitstampExchange
-2025-02-16 13:23:11,748 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 21 znalezione
-2025-02-16 13:23:11,755 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-16 13:23:11,760 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-16 13:23:11,762 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
-2025-02-16 13:23:11,762 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-16 13:23:11,763 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
-2025-02-16 13:23:11,764 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:23:11,765 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
-2025-02-16 13:23:11,765 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:23:11,766 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-16 13:23:11,815 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-16 13:23:11,815 - INFO - Para binance-kucoin ma 323 wspólnych aktywów.
-2025-02-16 13:23:11,816 - INFO - Para binance-bitget ma 357 wspólnych aktywów.
-2025-02-16 13:23:11,816 - INFO - Para binance-bitstamp ma 37 wspólnych aktywów.
-2025-02-16 13:23:11,817 - INFO - Para kucoin-bitget ma 498 wspólnych aktywów.
-2025-02-16 13:23:11,817 - INFO - Para kucoin-bitstamp ma 8 wspólnych aktywów.
-2025-02-16 13:23:11,818 - INFO - Para bitget-bitstamp ma 21 wspólnych aktywów.
-2025-02-16 13:23:17,142 - INFO - Wybrano opcję rozpoczęcia arbitrażu
-2025-02-16 14:26:45,182 - INFO - 
-Otrzymano sygnał SIGINT. Zatrzymywanie programu...
-2025-02-16 14:26:45,187 - INFO - Anulowanie zadań: [<Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:63> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:239> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>]
-2025-02-16 14:26:45,221 - INFO - Zadania anulowane
-2025-02-16 14:26:47,587 - INFO - Wyjście z programu
+2025-02-16 17:11:37,107 - INFO - Starting arbitrage program
+2025-02-16 17:11:39,187 - INFO - Starting creation of common assets list (comparing by symbol and quote)
+2025-02-16 17:11:39,256 - INFO - Comparing assets for pair: binance - kucoin
+2025-02-16 17:14:34,326 - INFO - Starting arbitrage program
+2025-02-16 17:14:36,324 - INFO - Starting creation of common assets list (comparing by symbol and quote)
+2025-02-16 17:14:36,392 - INFO - Comparing assets for pair: binance - kucoin
+2025-02-16 17:14:36,393 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:14:39,767 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:14:42,206 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR']): 324 found
+2025-02-16 17:14:42,207 - INFO - Comparing assets for pair: binance - bitget
+2025-02-16 17:14:42,208 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:14:42,210 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:14:44,595 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR']): 342 found
+2025-02-16 17:14:44,595 - INFO - Comparing assets for pair: binance - bitstamp
+2025-02-16 17:14:44,596 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:14:44,599 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:14:45,175 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR']): 75 found
+2025-02-16 17:14:45,176 - INFO - Comparing assets for pair: kucoin - bitget
+2025-02-16 17:14:45,177 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:14:45,178 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:14:45,181 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR']): 501 found
+2025-02-16 17:14:45,182 - INFO - Comparing assets for pair: kucoin - bitstamp
+2025-02-16 17:14:45,183 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:14:45,184 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:14:45,185 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR']): 86 found
+2025-02-16 17:14:45,186 - INFO - Comparing assets for pair: bitget - bitstamp
+2025-02-16 17:14:45,186 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:14:45,188 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:14:45,189 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR']): 87 found
+2025-02-16 17:14:45,194 - INFO - Loaded assets to remove from assets_to_remove.json.
+2025-02-16 17:14:45,198 - INFO - Loaded assets to add from assets_to_add.json.
+2025-02-16 17:14:45,199 - INFO - Config binance-kucoin: removed 4 assets.
+2025-02-16 17:14:45,199 - INFO - Config binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-16 17:14:45,200 - INFO - Config binance-bitget: removed 1 assets.
+2025-02-16 17:14:45,201 - INFO - Config binance-bitstamp: removed 0 assets.
+2025-02-16 17:14:45,202 - INFO - Config kucoin-bitget: removed 6 assets.
+2025-02-16 17:14:45,203 - INFO - Config kucoin-bitstamp: removed 0 assets.
+2025-02-16 17:14:45,203 - INFO - Config bitget-bitstamp: removed 0 assets.
+2025-02-16 17:14:45,258 - INFO - Common assets list saved to file: common_assets.json
+2025-02-16 17:14:45,258 - INFO - Pair binance-kucoin has 321 common assets.
+2025-02-16 17:14:45,259 - INFO - Pair binance-bitget has 341 common assets.
+2025-02-16 17:14:45,259 - INFO - Pair binance-bitstamp has 75 common assets.
+2025-02-16 17:14:45,260 - INFO - Pair kucoin-bitget has 495 common assets.
+2025-02-16 17:14:45,260 - INFO - Pair kucoin-bitstamp has 86 common assets.
+2025-02-16 17:14:45,260 - INFO - Pair bitget-bitstamp has 87 common assets.
+2025-02-16 17:19:31,980 - INFO - Starting arbitrage program
+2025-02-16 17:19:33,956 - INFO - Starting creation of common assets list (comparing by symbol and quote)
+2025-02-16 17:19:34,020 - INFO - Comparing assets for pair: binance - kucoin
+2025-02-16 17:19:34,022 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:19:37,648 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:19:40,076 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR']): 326 found
+2025-02-16 17:19:40,077 - INFO - Comparing assets for pair: binance - bitget
+2025-02-16 17:19:40,078 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:19:40,081 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:19:42,310 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR']): 358 found
+2025-02-16 17:19:42,311 - INFO - Comparing assets for pair: binance - bitstamp
+2025-02-16 17:19:42,312 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:19:42,314 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:19:42,867 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR']): 37 found
+2025-02-16 17:19:42,868 - INFO - Comparing assets for pair: kucoin - bitget
+2025-02-16 17:19:42,869 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:19:42,870 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:19:42,872 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR']): 504 found
+2025-02-16 17:19:42,873 - INFO - Comparing assets for pair: kucoin - bitstamp
+2025-02-16 17:19:42,874 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:19:42,875 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:19:42,876 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR']): 8 found
+2025-02-16 17:19:42,877 - INFO - Comparing assets for pair: bitget - bitstamp
+2025-02-16 17:19:42,878 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:19:42,879 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:19:42,880 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR']): 21 found
+2025-02-16 17:19:42,886 - INFO - Loaded assets to remove from assets_to_remove.json.
+2025-02-16 17:19:42,891 - INFO - Loaded assets to add from assets_to_add.json.
+2025-02-16 17:19:42,893 - INFO - Config binance-kucoin: removed 4 assets.
+2025-02-16 17:19:42,893 - INFO - Config binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-16 17:19:42,894 - INFO - Config binance-bitget: removed 1 assets.
+2025-02-16 17:19:42,894 - INFO - Config binance-bitstamp: removed 0 assets.
+2025-02-16 17:19:42,896 - INFO - Config kucoin-bitget: removed 6 assets.
+2025-02-16 17:19:42,896 - INFO - Config kucoin-bitstamp: removed 0 assets.
+2025-02-16 17:19:42,896 - INFO - Config bitget-bitstamp: removed 0 assets.
+2025-02-16 17:19:42,947 - INFO - Common assets list saved to file: common_assets.json
+2025-02-16 17:19:42,948 - INFO - Pair binance-kucoin has 323 common assets.
+2025-02-16 17:19:42,948 - INFO - Pair binance-bitget has 357 common assets.
+2025-02-16 17:19:42,949 - INFO - Pair binance-bitstamp has 37 common assets.
+2025-02-16 17:19:42,949 - INFO - Pair kucoin-bitget has 498 common assets.
+2025-02-16 17:19:42,949 - INFO - Pair kucoin-bitstamp has 8 common assets.
+2025-02-16 17:19:42,950 - INFO - Pair bitget-bitstamp has 21 common assets.
+2025-02-16 17:19:48,133 - INFO - Arbitrage option selected
+2025-02-16 17:20:01,792 - INFO - 
+Received signal SIGINT. Shutting down...
+2025-02-16 17:20:01,793 - INFO - Cancelling tasks: [<Task pending name='Task-67' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-71' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-66' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-70' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-68' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-69' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-65' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:62> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>]
+2025-02-16 17:20:01,804 - INFO - Tasks cancelled

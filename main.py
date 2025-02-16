@@ -22,9 +22,9 @@ def setup_logging():
     logger.addHandler(file_handler)
 
 async def shutdown(signal_name, loop):
-    logging.info(f"\nOtrzymano sygnał {signal_name}. Zatrzymywanie programu...")
+    logging.info(f"\nReceived signal {signal_name}. Shutting down...")
     tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
-    logging.info("Anulowanie zadań: %s", tasks)
+    logging.info("Cancelling tasks: %s", tasks)
     for task in tasks:
         task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
@@ -40,41 +40,40 @@ async def run_arbitrage_for_all_pairs(exchanges):
         with open("common_assets.json", "r") as f:
             common_assets_data = json.load(f)
     except Exception as e:
-        logging.error(f"Nie udało się załadować common_assets.json: {e}")
+        logging.error(f"Failed to load common_assets.json: {e}")
         return
-
     tasks = []
     for pair_key, assets in common_assets_data.items():
         if not assets:
-            logging.info(f"Brak wspólnych aktywów dla pary {pair_key}")
+            logging.info(f"No common assets for pair {pair_key}")
             continue
         exch_names = pair_key.split("-")
         if len(exch_names) != 2:
-            logging.error(f"Niepoprawny format pary: {pair_key}")
+            logging.error(f"Invalid pair format: {pair_key}")
             continue
         ex1 = exchanges.get(exch_names[0])
         ex2 = exchanges.get(exch_names[1])
         if not ex1 or not ex2:
-            logging.error(f"Nie znaleziono giełd dla pary: {pair_key}")
+            logging.error(f"Exchanges not found for pair: {pair_key}")
             continue
         strategy = PairArbitrageStrategy(ex1, ex2, assets, pair_name=pair_key)
         tasks.append(asyncio.create_task(strategy.run()))
     if tasks:
         await asyncio.gather(*tasks)
     else:
-        logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
+        logging.info("No arbitrage tasks to run.")
 
 def run_arbitrage(exchanges):
-    logging.info("Wybrano opcję rozpoczęcia arbitrażu")
+    logging.info("Arbitrage option selected")
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     setup_signal_handlers(loop)
     try:
         loop.run_until_complete(run_arbitrage_for_all_pairs(exchanges))
     except asyncio.CancelledError:
-        logging.info("Zadania anulowane")
+        logging.info("Tasks cancelled")
     except KeyboardInterrupt:
-        logging.info("Program zatrzymany przez użytkownika (CTRL+C)")
+        logging.info("Program terminated by user (CTRL+C)")
     finally:
         pending = asyncio.all_tasks(loop)
         if pending:
@@ -84,32 +83,29 @@ def run_arbitrage(exchanges):
 
 def main():
     setup_logging()
-    logging.info("Uruchamianie programu arbitrażowego")
-    
+    logging.info("Starting arbitrage program")
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
-    
     while True:
-        print("\nWybierz opcję:")
-        print("1. Utwórz listę wspólnych aktywów")
-        print("2. Rozpocznij arbitraż (dla aktywów z common_assets.json)")
-        print("3. Wyjście")
-        choice = input("Twój wybór (1/2/3): ").strip()
+        print("\nSelect an option:")
+        print("1. Create common assets list")
+        print("2. Start arbitrage (using common_assets.json)")
+        print("3. Exit")
+        choice = input("Your choice (1/2/3): ").strip()
         if choice == "1":
-            logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
-            common_assets.main()
+            asyncio.run(common_assets.main())
         elif choice == "2":
             run_arbitrage(exchanges)
         elif choice == "3":
-            logging.info("Wyjście z programu")
+            logging.info("Exiting program")
             break
         else:
-            logging.error("Nieprawidłowy wybór!")
-            print("Nieprawidłowy wybór!")
+            logging.error("Invalid choice!")
+            print("Invalid choice!")
 
 if __name__ == '__main__':
     main()
