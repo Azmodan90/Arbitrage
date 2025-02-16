@@ -1,0 +1,49 @@
+2025-02-16 18:58:29,235 - INFO - Uruchamianie programu arbitrażowego
+2025-02-16 18:58:36,947 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-16 18:58:36,948 - INFO - Starting creation of common assets list (by full symbol and quote)
+2025-02-16 18:58:37,013 - INFO - Comparing assets for pair: binance - kucoin
+2025-02-16 18:58:37,014 - INFO - Loading markets for: BinanceExchange
+2025-02-16 18:58:41,020 - INFO - Loading markets for: KucoinExchange
+2025-02-16 18:58:43,361 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR']): 326 found
+2025-02-16 18:58:43,363 - INFO - Comparing assets for pair: binance - bitget
+2025-02-16 18:58:43,363 - INFO - Loading markets for: BinanceExchange
+2025-02-16 18:58:43,366 - INFO - Loading markets for: BitgetExchange
+2025-02-16 18:58:45,869 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR']): 358 found
+2025-02-16 18:58:45,870 - INFO - Comparing assets for pair: binance - bitstamp
+2025-02-16 18:58:45,870 - INFO - Loading markets for: BinanceExchange
+2025-02-16 18:58:45,873 - INFO - Loading markets for: BitstampExchange
+2025-02-16 18:58:46,404 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR']): 37 found
+2025-02-16 18:58:46,405 - INFO - Comparing assets for pair: kucoin - bitget
+2025-02-16 18:58:46,406 - INFO - Loading markets for: KucoinExchange
+2025-02-16 18:58:46,408 - INFO - Loading markets for: BitgetExchange
+2025-02-16 18:58:46,410 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR']): 504 found
+2025-02-16 18:58:46,411 - INFO - Comparing assets for pair: kucoin - bitstamp
+2025-02-16 18:58:46,412 - INFO - Loading markets for: KucoinExchange
+2025-02-16 18:58:46,413 - INFO - Loading markets for: BitstampExchange
+2025-02-16 18:58:46,414 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR']): 8 found
+2025-02-16 18:58:46,415 - INFO - Comparing assets for pair: bitget - bitstamp
+2025-02-16 18:58:46,415 - INFO - Loading markets for: BitgetExchange
+2025-02-16 18:58:46,417 - INFO - Loading markets for: BitstampExchange
+2025-02-16 18:58:46,418 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR']): 21 found
+2025-02-16 18:58:46,422 - INFO - Loaded assets to remove from assets_to_remove.json.
+2025-02-16 18:58:46,426 - INFO - Loaded assets to add from assets_to_add.json.
+2025-02-16 18:58:46,427 - INFO - Configuration binance-kucoin: removed 4 assets.
+2025-02-16 18:58:46,427 - INFO - Configuration binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-16 18:58:46,428 - INFO - Configuration binance-bitget: removed 1 assets.
+2025-02-16 18:58:46,428 - INFO - Configuration binance-bitstamp: removed 0 assets.
+2025-02-16 18:58:46,430 - INFO - Configuration kucoin-bitget: removed 6 assets.
+2025-02-16 18:58:46,430 - INFO - Configuration kucoin-bitstamp: removed 0 assets.
+2025-02-16 18:58:46,430 - INFO - Configuration bitget-bitstamp: removed 0 assets.
+2025-02-16 18:58:46,479 - INFO - Common assets list saved to file: common_assets.json
+2025-02-16 18:58:46,480 - INFO - Pair binance-kucoin has 323 common assets.
+2025-02-16 18:58:46,480 - INFO - Pair binance-bitget has 357 common assets.
+2025-02-16 18:58:46,481 - INFO - Pair binance-bitstamp has 37 common assets.
+2025-02-16 18:58:46,482 - INFO - Pair kucoin-bitget has 498 common assets.
+2025-02-16 18:58:46,482 - INFO - Pair kucoin-bitstamp has 8 common assets.
+2025-02-16 18:58:46,483 - INFO - Pair bitget-bitstamp has 21 common assets.
+2025-02-16 18:58:51,665 - INFO - Wybrano opcję rozpoczęcia arbitrażu
+2025-02-16 18:59:48,587 - INFO - 
+Otrzymano sygnał SIGINT. Zatrzymywanie programu...
+2025-02-16 18:59:48,588 - INFO - Anulowanie zadań: [<Task pending name='Task-67' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:227> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1936' coro=<Throttler.looper() running at /workspaces/Arbitrage/.venv/lib/python3.11/site-packages/ccxt/async_support/base/throttler.py:36> wait_for=<Future pending cb=[Task.task_wakeup()]>>, <Task pending name='Task-1929' coro=<fetch_ticker_rate_limited_async() running at /workspaces/Arbitrage/arbitrage.py:78> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-64' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:227> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1930' coro=<fetch_ticker_rate_limited_async() running at /workspaces/Arbitrage/arbitrage.py:78> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1927' coro=<fetch_ticker_rate_limited_async() running at /workspaces/Arbitrage/arbitrage.py:77> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1916' coro=<fetch_ticker_rate_limited_async() running at /workspaces/Arbitrage/arbitrage.py:78> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-65' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:227> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-66' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:227> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<main() running at /workspaces/Arbitrage/main.py:98> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-1905' coro=<fetch_ticker_rate_limited_async() running at /workspaces/Arbitrage/arbitrage.py:77> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-69' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:227> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1921' coro=<fetch_ticker_rate_limited_async() running at /workspaces/Arbitrage/arbitrage.py:78> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-68' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:227> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1926' coro=<fetch_ticker_rate_limited_async() running at /workspaces/Arbitrage/arbitrage.py:78> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1908' coro=<fetch_ticker_rate_limited_async() running at /workspaces/Arbitrage/arbitrage.py:77> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>]
+2025-02-16 18:59:48,595 - INFO - Arbitraż został przerwany.
+2025-02-16 18:59:50,696 - INFO - Wyjście z programu
