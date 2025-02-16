@@ -32,3 +32,9 @@
 2025-02-16 18:00:26,618 - INFO - kucoin-bitstamp - Arbitrage strategy cancelled.
 2025-02-16 18:00:26,619 - INFO - binance-bitget - Arbitrage strategy cancelled.
 2025-02-16 18:00:26,619 - INFO - binance-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 18:16:49,653 - INFO - binance-kucoin - Starting arbitrage strategy for 323 assets.
+2025-02-16 18:16:49,654 - INFO - binance-bitget - Starting arbitrage strategy for 357 assets.
+2025-02-16 18:16:49,655 - INFO - binance-bitstamp - Starting arbitrage strategy for 37 assets.
+2025-02-16 18:16:49,655 - INFO - kucoin-bitget - Starting arbitrage strategy for 498 assets.
+2025-02-16 18:16:49,656 - INFO - kucoin-bitstamp - Starting arbitrage strategy for 8 assets.
+2025-02-16 18:16:49,656 - INFO - bitget-bitstamp - Starting arbitrage strategy for 21 assets.

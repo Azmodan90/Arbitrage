@@ -98,6 +98,17 @@ def get_liquidity_info(exchange, symbol):
         return None
 
 class PairArbitrageStrategy:
+    async def run(self):
+        arbitrage_logger.info(f"{self.pair_name} - Starting arbitrage strategy for {len(self.assets)} assets.")
+        try:
+            while True:
+                for asset in self.assets:
+                    await self.check_opportunity(asset)
+                await asyncio.sleep(1)
+        except asyncio.CancelledError:
+            arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
+            raise
+
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
