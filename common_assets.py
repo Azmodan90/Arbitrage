@@ -1,54 +1,51 @@
+import asyncio
 import json
 import logging
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
-from config import CONFIG
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_markets_dict(exchange_instance, exchange_name, allowed_quotes=None):
-    if allowed_quotes is None:
-        allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
+async def get_markets_dict_by_quote(exchange_instance, allowed_quotes=["USDT", "EUR"]):
+    """
+    Pobiera rynki z danej giełdy i grupuje je według quote.
+    Zwraca słownik postaci:
+        { "USDT": { base: "BASE/USDT", ... },
+          "EUR": { base: "BASE/EUR", ... } }
+    """
     try:
-        logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
-        markets = exchange_instance.exchange.load_markets()
-        result = {}
+        markets = await exchange_instance.exchange.load_markets()
+        result = {quote: {} for quote in allowed_quotes}
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    if base not in result:
-                        result[base] = symbol
+                    result[quote][base] = symbol
         return result
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
-        return {}
+        return {quote: {} for quote in allowed_quotes}
 
-def get_common_assets_for_pair(name1, exchange1, name2, exchange2):
-    quotes1 = set(CONFIG.get("EXCHANGE_QUOTES", {}).get(name1, CONFIG.get("ALLOWED_QUOTES", ["USDT"])))
-    quotes2 = set(CONFIG.get("EXCHANGE_QUOTES", {}).get(name2, CONFIG.get("ALLOWED_QUOTES", ["USDT"])))
-    common_quotes = quotes1.intersection(quotes2)
-    if not common_quotes:
-        logging.warning(f"Brak wspólnych quote dla {name1} i {name2}")
-        return {}
-    markets1 = get_markets_dict(exchange1, name1, allowed_quotes=list(common_quotes))
-    markets2 = get_markets_dict(exchange2, name2, allowed_quotes=list(common_quotes))
-    common_bases = set(markets1.keys()).intersection(set(markets2.keys()))
+async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT", "EUR"]):
+    """
+    Dla każdej z podanych walut (np. USDT, EUR) wyszukuje wspólne aktywa.
+    Zapisuje tylko te, gdzie na obu giełdach występuje ten sam quote.
+    Klucz zapisu to "BASE/QUOTE".
+    """
+    markets1 = await get_markets_dict_by_quote(exchange1, allowed_quotes)
+    markets2 = await get_markets_dict_by_quote(exchange2, allowed_quotes)
     common = {}
-    for base in common_bases:
-        symbol1 = markets1[base]
-        symbol2 = markets2[base]
-        if "/" in symbol1 and "/" in symbol2:
-            quote1 = symbol1.split("/")[1]
-            quote2 = symbol2.split("/")[1]
-            if quote1 == quote2 and quote1 in common_quotes:
-                common[base] = {name1: symbol1, name2: symbol2}
-    logging.info(f"Wspólne aktywa dla {name1} i {name2} (użyte quote: {common_quotes}): {len(common)} znalezione")
+    for quote in allowed_quotes:
+        common_bases = set(markets1[quote].keys()).intersection(set(markets2[quote].keys()))
+        for base in common_bases:
+            asset_key = f"{base}/{quote}"
+            common[asset_key] = {name1: markets1[quote][base], name2: markets2[quote][base]}
+    logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
     return common
 
-def save_common_assets(common_assets, filename="common_assets.json"):
+async def save_common_assets(common_assets, filename="common_assets.json"):
     try:
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(common_assets, f, indent=4)
@@ -83,8 +80,8 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
         if config_key in assets_to_remove:
             remove_list = assets_to_remove[config_key]
             before = len(common_assets[config_key])
-            common_assets[config_key] = {base: mapping for base, mapping in common_assets[config_key].items()
-                                         if not should_remove(base, remove_list)}
+            common_assets[config_key] = {asset: mapping for asset, mapping in common_assets[config_key].items()
+                                         if not should_remove(asset, remove_list)}
             after = len(common_assets[config_key])
             logging.info(f"Konfiguracja {config_key}: usunięto {before - after} aktywów.")
         if config_key in assets_to_add:
@@ -94,15 +91,16 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
             for entry in add_entries:
                 normalized = entry.get("normalized")
                 if normalized and normalized not in common_assets[config_key]:
+                    exchanges = config_key.split("-")
                     common_assets[config_key][normalized] = {
-                        config_key.split("-")[0]: entry.get("source"),
-                        config_key.split("-")[1]: entry.get("dest")
+                        exchanges[0]: entry.get("source"),
+                        exchanges[1]: entry.get("dest")
                     }
                     logging.info(f"Konfiguracja {config_key}: dodano aktywo {entry}.")
     return common_assets
 
-def main():
-    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie wyłącznie po symbolu)")
+async def main():
+    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)")
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
@@ -117,18 +115,19 @@ def main():
 
     common_assets = {}
     names = list(exchanges.keys())
+    # Porównanie aktywów dla każdej pary giełd
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2])
+            mapping = await get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT", "EUR"])
             common_assets[f"{name1}-{name2}"] = mapping
 
     common_assets = modify_common_assets(common_assets)
-    save_common_assets(common_assets)
+    await save_common_assets(common_assets)
     for pair, assets in common_assets.items():
         logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
