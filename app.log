@@ -85,3 +85,29 @@
 2025-02-16 18:14:18,508 - INFO - Starting arbitrage program
 2025-02-16 18:16:39,899 - INFO - Starting arbitrage program
 2025-02-16 18:16:42,257 - ERROR - Invalid choice!
+2025-02-16 18:18:08,959 - INFO - Starting arbitrage program
+2025-02-16 18:28:50,006 - INFO - Starting arbitrage program
+2025-02-16 18:31:44,194 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-16 18:31:44,201 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f2972652050>
+2025-02-16 18:31:44,202 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f297264cb40>, 5439.081890992), (<aiohttp.client_proto.ResponseHandler object at 0x7f29727325f0>, 5439.764138321)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f2980d75a10>
+2025-02-16 18:31:44,226 - WARNING - kucoin requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-16 18:31:44,229 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f2972644c90>
+2025-02-16 18:31:44,229 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f29681286e0>, 5440.074743315)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f29731d5e50>
+2025-02-16 18:31:44,235 - WARNING - bitget requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-16 18:31:44,238 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f2972647d90>
+2025-02-16 18:31:44,239 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f297205f2a0>, 5435.436054754), (<aiohttp.client_proto.ResponseHandler object at 0x7f297205ef20>, 5439.825975499)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f2973087050>
+2025-02-16 18:31:44,245 - WARNING - bitstamp requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-16 18:31:44,247 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f2972650b90>
+2025-02-16 18:31:44,248 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f297126cec0>, 5437.558246317)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f2972650810>
