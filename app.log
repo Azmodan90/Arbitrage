@@ -178,3 +178,5 @@ client_session: <aiohttp.client.ClientSession object at 0x7fce5f7c9f90>
 2025-02-16 18:42:18,129 - ERROR - Unclosed connector
 connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7fce610a5080>, 6073.295139623), (<aiohttp.client_proto.ResponseHandler object at 0x7fce610a7e70>, 6073.343200111)]']
 connector: <aiohttp.connector.TCPConnector object at 0x7fce5f7c8a50>
+2025-02-16 18:48:28,953 - INFO - Uruchamianie programu arbitrażowego
+2025-02-16 18:48:31,182 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów

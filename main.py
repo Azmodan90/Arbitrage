@@ -22,9 +22,9 @@ def setup_logging():
     logger.addHandler(file_handler)
 
 async def shutdown(signal_name, loop):
-    logging.info(f"\nReceived signal {signal_name}. Shutting down...")
+    logging.info(f"\nOtrzymano sygnał {signal_name}. Zatrzymywanie programu...")
     tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
-    logging.info("Cancelling tasks: %s", tasks)
+    logging.info("Anulowanie zadań: %s", tasks)
     for task in tasks:
         task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
@@ -40,33 +40,52 @@ async def run_arbitrage_for_all_pairs(exchanges):
         with open("common_assets.json", "r") as f:
             common_assets_data = json.load(f)
     except Exception as e:
-        logging.error(f"Failed to load common_assets.json: {e}")
+        logging.error(f"Nie udało się załadować common_assets.json: {e}")
         return
 
     tasks = []
     for pair_key, assets in common_assets_data.items():
         if not assets:
-            logging.info(f"No common assets for pair {pair_key}")
+            logging.info(f"Brak wspólnych aktywów dla pary {pair_key}")
             continue
         exch_names = pair_key.split("-")
         if len(exch_names) != 2:
-            logging.error(f"Invalid pair format: {pair_key}")
+            logging.error(f"Niepoprawny format pary: {pair_key}")
             continue
         ex1 = exchanges.get(exch_names[0])
         ex2 = exchanges.get(exch_names[1])
         if not ex1 or not ex2:
-            logging.error(f"Exchanges not found for pair: {pair_key}")
+            logging.error(f"Nie znaleziono giełd dla pary: {pair_key}")
             continue
         strategy = PairArbitrageStrategy(ex1, ex2, assets, pair_name=pair_key)
         tasks.append(asyncio.create_task(strategy.run()))
     if tasks:
-        await asyncio.gather(*tasks)
+        try:
+            await asyncio.gather(*tasks)
+        except asyncio.CancelledError:
+            logging.info("Arbitraż został przerwany.")
     else:
-        logging.info("No arbitrage tasks to run.")
+        logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
+
+def run_arbitrage(exchanges):
+    logging.info("Wybrano opcję rozpoczęcia arbitrażu")
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    setup_signal_handlers(loop)
+    try:
+        loop.run_until_complete(run_arbitrage_for_all_pairs(exchanges))
+    except (asyncio.CancelledError, KeyboardInterrupt):
+        logging.info("Program został przerwany.")
+    finally:
+        pending = asyncio.all_tasks(loop)
+        if pending:
+            loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
+        loop.run_until_complete(loop.shutdown_asyncgens())
+        loop.close()
 
 async def main():
     setup_logging()
-    logging.info("Starting arbitrage program")
+    logging.info("Uruchamianie programu arbitrażowego")
     
     exchanges = {
         "binance": BinanceExchange(),
@@ -75,28 +94,31 @@ async def main():
         "bitstamp": BitstampExchange()
     }
     
-    while True:
-        print("\nChoose an option:")
-        print("1. Create common assets list")
-        print("2. Start arbitrage (using assets from common_assets.json)")
-        print("3. Exit")
-        choice = input("Your choice (1/2/3): ").strip()
-        if choice == "1":
-            await common_assets.main()  # common_assets.main() is async
-        elif choice == "2":
-            await run_arbitrage_for_all_pairs(exchanges)
-        elif choice == "3":
-            logging.info("Exiting program")
-            break
-        else:
-            logging.error("Invalid choice!")
-            print("Invalid choice!")
-
-    # Close exchanges
-    await exchanges["binance"].close()
-    await exchanges["kucoin"].close()
-    await exchanges["bitget"].close()
-    await exchanges["bitstamp"].close()
+    try:
+        while True:
+            print("\nWybierz opcję:")
+            print("1. Utwórz listę wspólnych aktywów")
+            print("2. Rozpocznij arbitraż (dla aktywów z common_assets.json)")
+            print("3. Wyjście")
+            choice = input("Twój wybór (1/2/3): ").strip()
+            if choice == "1":
+                logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
+                common_assets.main()
+            elif choice == "2":
+                run_arbitrage(exchanges)
+            elif choice == "3":
+                logging.info("Wyjście z programu")
+                break
+            else:
+                logging.error("Nieprawidłowy wybór!")
+                print("Nieprawidłowy wybór!")
+    except (KeyboardInterrupt, asyncio.CancelledError):
+        logging.info("Program zatrzymany przez użytkownika.")
+    finally:
+        await exchanges["binance"].close()
+        await exchanges["kucoin"].close()
+        await exchanges["bitget"].close()
+        await exchanges["bitstamp"].close()
 
 if __name__ == '__main__':
     asyncio.run(main())

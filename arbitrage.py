@@ -79,7 +79,7 @@ async def fetch_ticker_rate_limited_async(exchange, symbol):
     limiter.last_request = time.monotonic()
     return ticker
 
-# Nowa, asynchroniczna wersja funkcji pobierającej order book
+# Asynchroniczna wersja pobierania order book
 async def get_liquidity_info_async(exchange, symbol):
     try:
         order_book = await exchange.fetch_order_book(symbol)
@@ -89,7 +89,9 @@ async def get_liquidity_info_async(exchange, symbol):
         top_ask = asks[0] if asks else [None, None]
         return {"top_bid": top_bid, "top_ask": top_ask}
     except Exception as e:
-        arbitrage_logger.error(f"Błąd pobierania order book dla {symbol} na {exchange.__class__.__name__}: {e}")
+        arbitrage_logger.error(
+            f"Błąd pobierania order book dla {symbol} na {exchange.__class__.__name__}: {e}"
+        )
         return None
 
 class PairArbitrageStrategy:
@@ -119,7 +121,7 @@ class PairArbitrageStrategy:
         arbitrage_logger.info(
             f"{self.pair_name} - Sprawdzam arbitraż dla symboli: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})"
         )
-        # Pobieranie tickerów przy użyciu asynchronicznego rate limitera
+        # Pobieranie tickerów asynchronicznie z rate limiterem
         task1 = fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
         task2 = fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
         results = await asyncio.gather(task1, task2, return_exceptions=True)
@@ -160,7 +162,6 @@ class PairArbitrageStrategy:
         invested_amount = None
         actual_qty = None
 
-        # Pobieramy order book asynchronicznie, jeżeli spełniony jest próg arbitrażu
         if (profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]) or (profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]):
             liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol_ex1)
             liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2)
@@ -227,7 +228,8 @@ class PairArbitrageStrategy:
                 await asyncio.sleep(1)
         except asyncio.CancelledError:
             arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
-            raise
+            # Zakończenie strategii bez dalszego podnoszenia wyjątku
+            return
 
 if __name__ == '__main__':
     import asyncio
