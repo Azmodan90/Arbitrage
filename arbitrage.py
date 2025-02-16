@@ -75,14 +75,15 @@ class PairArbitrageStrategy:
         """
         Sprawdza okazję arbitrażową i loguje wynik.
         Dla opłacalnych okazji loguje:
-          - Pair: para giełd
-          - Symbol: symbol (pojedynczy, przyjmujemy że obie giełdy używają tego samego symbolu)
-          - Buy Price: cena zakupu (z opłatą)
-          - Sell Price: cena sprzedaży (z opłatą)
-          - Profit: profit w %
-          - Invested: kwota zainwestowana
+          - Pair: para giełd,
+          - Symbol,
+          - Buy Price: cena zakupu (z opłatą),
+          - Sell Price: cena sprzedaży (z opłatą),
+          - Profit: profit w %,
+          - Profit Quote: zysk w walucie quote (obliczany na podstawie kwoty inwestycji),
+          - Invested: kwota zainwestowana.
         Dla nieopłacalnych okazji loguje:
-          - Pair, Symbol oraz informację, dlaczego okazja była nieopłacalna.
+          - Pair, Symbol oraz powód nieopłacalności.
         """
         names = self.pair_name.split("-")
         if not isinstance(asset, dict):
@@ -134,9 +135,17 @@ class PairArbitrageStrategy:
         investment = CONFIG.get("INVESTMENT_AMOUNT", 100)
         invested_amount = None
 
-        # Pobieramy dane płynności, jeśli profit przekracza próg
+        # Dla obliczenia zysku w quote (niezależnie od płynności) zakładamy, że inwestujemy 'investment'
+        # Ilość zakupionych jednostek na podstawie ceny zakupu z opłatą
+        quantity1 = investment / effective_buy_ex1
+        profit_quote1 = (effective_sell_ex2 - effective_buy_ex1) * quantity1
+
+        quantity2 = investment / effective_buy_ex2
+        profit_quote2 = (effective_sell_ex1 - effective_buy_ex2) * quantity2
+
         extra_info = ""
         if (profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]) or (profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]):
+            # Jeśli mamy dane płynności, możemy wyliczyć bardziej realistyczne wartości
             liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol)
             liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol2)
             if liq_ex1 and liq_ex2:
@@ -155,25 +164,26 @@ class PairArbitrageStrategy:
         else:
             extra_info = "Profit poniżej progu arbitrażu."
 
-        # Logowanie - wybieramy opłacalną lub nieopłacalną okazję
+        # Logowanie opłacalnej okazji
         if profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]:
             msg = (
                 f"Pair: {self.pair_name} | Symbol: {symbol} | "
                 f"Buy Price: {effective_buy_ex1:.4f} | Sell Price: {effective_sell_ex2:.4f} | "
-                f"Profit: {profit1:.2f}% | Invested: {invested_amount if invested_amount is not None else 'N/A'}"
+                f"Profit: {profit1:.2f}% | Profit Quote: {profit_quote1:.2f} | "
+                f"Invested: {invested_amount if invested_amount is not None else 'N/A'}"
             )
             opp_logger.info(msg)
         elif profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
             msg = (
                 f"Pair: {self.pair_name} | Symbol: {symbol} | "
                 f"Buy Price: {effective_buy_ex2:.4f} | Sell Price: {effective_sell_ex1:.4f} | "
-                f"Profit: {profit2:.2f}% | Invested: {invested_amount if invested_amount is not None else 'N/A'}"
+                f"Profit: {profit2:.2f}% | Profit Quote: {profit_quote2:.2f} | "
+                f"Invested: {invested_amount if invested_amount is not None else 'N/A'}"
             )
             opp_logger.info(msg)
         else:
             msg = (
-                f"Pair: {self.pair_name} | Symbol: {symbol} | "
-                f"Unprofitable: {extra_info}"
+                f"Pair: {self.pair_name} | Symbol: {symbol} | Unprofitable: {extra_info}"
             )
             unprofitable_logger.info(msg)
 

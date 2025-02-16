@@ -15,7 +15,7 @@ CONFIG = {
     
     "ALLOWED_QUOTES": ["USDT", "EUR"],
     
-    "ARBITRAGE_THRESHOLD": 0.5,  # Próg arbitrażu (w %)
+    "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu (w %)
     "ABSURD_THRESHOLD": 100,     # Próg absurdalnego zysku (w %)
     "INVESTMENT_AMOUNT": 100     # Kwota inwestycji (w USDT)
 }
