@@ -1,0 +1,24 @@
+2025-02-16 12:30:22,477 - INFO - binance-kucoin - Uruchamiam strategię arbitrażu dla 323 aktywów.
+2025-02-16 12:30:22,477 - INFO - binance-kucoin - Sprawdzam okazje arbitrażowe dla symboli: KMD/USDT (dla binance), KMD/USDT (dla kucoin)
+2025-02-16 12:30:22,486 - INFO - binance-bitget - Uruchamiam strategię arbitrażu dla 357 aktywów.
+2025-02-16 12:30:22,488 - INFO - binance-bitget - Sprawdzam okazje arbitrażowe dla symboli: WING/USDT (dla binance), WING/USDT (dla bitget)
+2025-02-16 12:30:22,491 - INFO - binance-bitstamp - Uruchamiam strategię arbitrażu dla 37 aktywów.
+2025-02-16 12:30:22,493 - INFO - binance-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: GRT/EUR (dla binance), GRT/EUR (dla bitstamp)
+2025-02-16 12:30:22,496 - INFO - kucoin-bitget - Uruchamiam strategię arbitrażu dla 498 aktywów.
+2025-02-16 12:30:22,499 - INFO - kucoin-bitget - Sprawdzam okazje arbitrażowe dla symboli: MV/USDT (dla kucoin), MV/USDT (dla bitget)
+2025-02-16 12:30:22,503 - INFO - kucoin-bitstamp - Uruchamiam strategię arbitrażu dla 8 aktywów.
+2025-02-16 12:30:22,504 - INFO - kucoin-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/USDT (dla kucoin), ETH/USDT (dla bitstamp)
+2025-02-16 12:30:22,508 - INFO - bitget-bitstamp - Uruchamiam strategię arbitrażu dla 21 aktywów.
+2025-02-16 12:30:22,508 - INFO - bitget-bitstamp - Sprawdzam okazje arbitrażowe dla symboli: ETH/EUR (dla bitget), ETH/EUR (dla bitstamp)
+2025-02-16 12:30:31,862 - INFO - kucoin-bitstamp - kucoin: pobrana cena = 2707.77
+2025-02-16 12:30:31,868 - INFO - kucoin-bitstamp - bitstamp: pobrana cena = 2710.0
+2025-02-16 12:30:31,877 - INFO - bitget-bitstamp - bitget: pobrana cena = 2582.72
+2025-02-16 12:30:31,883 - INFO - bitget-bitstamp - bitstamp: pobrana cena = 2582.4
+2025-02-16 12:30:32,216 - INFO - kucoin-bitget - kucoin: pobrana cena = 0.00876
+2025-02-16 12:30:32,222 - INFO - kucoin-bitget - bitget: pobrana cena = 0.00876
+2025-02-16 12:30:40,060 - INFO - binance-bitget - binance: pobrana cena = 3.927
+2025-02-16 12:30:40,066 - INFO - binance-bitget - bitget: pobrana cena = 3.929
+2025-02-16 12:30:40,108 - INFO - binance-kucoin - binance: pobrana cena = 0.2125
+2025-02-16 12:30:40,114 - INFO - binance-kucoin - kucoin: pobrana cena = 0.2128
+2025-02-16 12:30:40,832 - INFO - binance-bitstamp - binance: pobrana cena = 0.136
+2025-02-16 12:30:40,833 - INFO - binance-bitstamp - bitstamp: pobrana cena = 0.13584

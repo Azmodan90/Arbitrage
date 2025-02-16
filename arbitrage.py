@@ -97,16 +97,16 @@ class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        # assets – słownik mapujący token bazowy do mapowania symboli, np.
-        # { "ABC": { "binance": "ABC/USDT", "kucoin": "ABC/USDT" } }
+        # assets – słownik mapujący pełny symbol (np. "ABC/USDT") do mapowania, np.
+        # { "ABC/USDT": { "binance": "ABC/USDT", "kucoin": "ABC/USDT" } }
         self.assets = assets
         self.pair_name = pair_name
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
+        # Jeśli asset nie jest słownikiem, sprawdzamy, czy zawiera znak '/' – jeśli nie, dopełniamy domyślnym quote
         if not isinstance(asset, dict):
             base = asset
-            # Jeśli symbol nie zawiera '/', dopisujemy domyślny quote z configu
             if "/" not in base:
                 default_quote = CONFIG.get("DEFAULT_QUOTE", "USDT")
                 asset = {names[0]: f"{base}/{default_quote}", names[1]: f"{base}/{default_quote}"}
@@ -191,12 +191,14 @@ class PairArbitrageStrategy:
             extra_info = "Brak sprawdzania płynności, gdy okazja nie przekracza progu."
 
         log_message = (
-            f"Pair: {self.pair_name} | Asset: {asset} | Buy (Ex): {names[0]} | "
-            f"Buy Price (eff.): {effective_buy_ex1:.4f} | Sell (Ex): {names[1]} | "
-            f"Sell Price (eff.): {effective_sell_ex2:.4f} | Ticker Profit: {profit1:.2f}% | "
-            f"Liquidity Profit: {profit_liq_percent:.2f}% | Profit (USDT): {profit_liq_usdt:.2f} | "
-            f"Invested (USDT): {invested_amount:.2f} | Qty Purchased: {actual_qty:.4f} | Liquidity Info: {liquidity_info} | Extra: {extra_info}"
+            f"Pair: {self.pair_name} | Asset: {asset} | "
+            f"Buy (Ex): {names[0]} | Buy Price (eff.): {effective_buy_ex1:.4f} | "
+            f"Sell (Ex): {names[1]} | Sell Price (eff.): {effective_sell_ex2:.4f} | "
+            f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {profit_liq_percent:.2f}% | "
+            f"Profit (USDT): {profit_liq_usdt:.2f} | Invested (USDT): {invested_amount:.2f} | "
+            f"Qty Purchased: {actual_qty:.4f} | Liquidity Info: {liquidity_info} | Extra: {extra_info}"
         )
+
         if profit_liq_usdt is not None and profit_liq_usdt > 0:
             opp_logger.info(log_message)
         else:
@@ -216,7 +218,6 @@ class PairArbitrageStrategy:
                                     f"(cena: {tickers[names[1]]}, eff.: {effective_buy_ex2:.4f}), sprzedaż na {self.exchange1.__class__.__name__} "
                                     f"(cena: {tickers[names[0]]}, eff.: {effective_sell_ex1:.4f}), Ticker Profit: {profit2:.2f}% "
                                     f"[Liquidity -> {liquidity_info} | {extra_info}]")
-
     async def run(self):
         arbitrage_logger.info(f"{self.pair_name} - Uruchamiam strategię arbitrażu dla {len(self.assets)} aktywów.")
         try:
@@ -229,5 +230,5 @@ class PairArbitrageStrategy:
             raise
 
 if __name__ == '__main__':
-    # Możesz tu dodać testowe wywołanie, jeśli chcesz
+    # Testowe wywołanie, jeśli potrzebne
     pass

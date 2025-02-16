@@ -13,15 +13,15 @@ def get_markets_dict(exchange_instance, allowed_quotes=None):
         allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
-        # Używamy atrybutu .exchange, aby wywołać metodę load_markets() z ccxt
+        # Wywołujemy load_markets() na obiekcie ccxt znajdującym się w atrybucie .exchange
         markets = exchange_instance.exchange.load_markets()
         result = {}
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    if base not in result:
-                        result[base] = symbol
+                    # Kluczem jest pełny symbol, np. "ABC/USDT" lub "ABC/EUR"
+                    result[symbol] = symbol
         return result
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
@@ -32,10 +32,11 @@ def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quote
         allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
     markets1 = get_markets_dict(exchange1, allowed_quotes)
     markets2 = get_markets_dict(exchange2, allowed_quotes)
-    common_bases = set(markets1.keys()).intersection(set(markets2.keys()))
+    common_symbols = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
-    for base in common_bases:
-        common[base] = {name1: markets1[base], name2: markets2[base]}
+    # Każdy wspólny symbol (np. "ABC/USDT" lub "ABC/EUR") tworzy własny wpis
+    for symbol in common_symbols:
+        common[symbol] = { name1: symbol, name2: symbol }
     logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
     return common
 
@@ -71,11 +72,13 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
         logging.warning(f"Nie udało się wczytać {add_file}: {e}")
 
     for config_key in list(common_assets.keys()):
+        # config_key teraz to pełny symbol, np. "ABC/USDT"
+        # W warstwie ręcznych korekt zakładamy, że podane assety również są pełnymi symbolami.
         if config_key in assets_to_remove:
             remove_list = assets_to_remove[config_key]
             before = len(common_assets[config_key])
-            common_assets[config_key] = {base: mapping for base, mapping in common_assets[config_key].items()
-                                         if not should_remove(base, remove_list)}
+            common_assets[config_key] = {asset: mapping for asset, mapping in common_assets[config_key].items()
+                                         if not should_remove(asset, remove_list)}
             after = len(common_assets[config_key])
             logging.info(f"Konfiguracja {config_key}: usunięto {before - after} aktywów.")
         if config_key in assets_to_add:
