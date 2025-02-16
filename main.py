@@ -79,18 +79,20 @@ def run_arbitrage(exchanges):
         pending = asyncio.all_tasks(loop)
         if pending:
             loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
-        loop.run_until_complete(loop.shutdown_asyncgens())
+            loop.run_until_complete(loop.shutdown_asyncgens())
         loop.close()
 
 def main():
     setup_logging()
     logging.info("Uruchamianie programu arbitrażowego")
+    
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
+    
     while True:
         print("\nWybierz opcję:")
         print("1. Utwórz listę wspólnych aktywów")
@@ -99,7 +101,7 @@ def main():
         choice = input("Twój wybór (1/2/3): ").strip()
         if choice == "1":
             logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
-            asyncio.run(common_assets.main())
+            common_assets.main()
         elif choice == "2":
             run_arbitrage(exchanges)
         elif choice == "3":

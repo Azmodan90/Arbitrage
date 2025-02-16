@@ -1,43 +1,42 @@
-2025-02-16 10:13:00,971 - INFO - Uruchamianie programu arbitrażowego
-2025-02-16 10:13:02,578 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
-2025-02-16 10:13:02,582 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)
-2025-02-16 10:13:02,653 - INFO - Porównuję aktywa dla pary: binance - kucoin
-2025-02-16 10:13:02,654 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'BinanceExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,655 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'KucoinExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,656 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 10:13:02,656 - INFO - Porównuję aktywa dla pary: binance - bitget
-2025-02-16 10:13:02,657 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'BinanceExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,658 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'BitgetExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,658 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 10:13:02,659 - INFO - Porównuję aktywa dla pary: binance - bitstamp
-2025-02-16 10:13:02,660 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: 'BinanceExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,660 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'BitstampExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,661 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 10:13:02,661 - INFO - Porównuję aktywa dla pary: kucoin - bitget
-2025-02-16 10:13:02,661 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'KucoinExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,662 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'BitgetExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,662 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 10:13:02,662 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
-2025-02-16 10:13:02,663 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: 'KucoinExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,663 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'BitstampExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,663 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 10:13:02,664 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
-2025-02-16 10:13:02,664 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: 'BitgetExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,664 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: 'BitstampExchange' object has no attribute 'load_markets'
-2025-02-16 10:13:02,665 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
-2025-02-16 10:13:02,667 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
-2025-02-16 10:13:02,669 - INFO - Wczytano dane do dodania z assets_to_add.json.
-2025-02-16 10:13:02,670 - INFO - Konfiguracja binance-kucoin: usunięto 0 aktywów.
-2025-02-16 10:13:02,670 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-16 10:13:02,670 - INFO - Konfiguracja binance-bitget: usunięto 0 aktywów.
-2025-02-16 10:13:02,671 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
-2025-02-16 10:13:02,671 - INFO - Konfiguracja kucoin-bitget: usunięto 0 aktywów.
-2025-02-16 10:13:02,671 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
-2025-02-16 10:13:02,671 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
-2025-02-16 10:13:02,674 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
-2025-02-16 10:13:02,675 - INFO - Para binance-kucoin ma 1 wspólnych aktywów.
-2025-02-16 10:13:02,675 - INFO - Para binance-bitget ma 0 wspólnych aktywów.
-2025-02-16 10:13:02,675 - INFO - Para binance-bitstamp ma 0 wspólnych aktywów.
-2025-02-16 10:13:02,676 - INFO - Para kucoin-bitget ma 0 wspólnych aktywów.
-2025-02-16 10:13:02,676 - INFO - Para kucoin-bitstamp ma 0 wspólnych aktywów.
-2025-02-16 10:13:02,676 - INFO - Para bitget-bitstamp ma 0 wspólnych aktywów.
+2025-02-16 12:22:53,206 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-16 12:22:53,207 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)
+2025-02-16 12:22:53,281 - INFO - Porównuję aktywa dla pary: binance - kucoin
+2025-02-16 12:22:53,282 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-16 12:22:59,740 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-16 12:23:02,255 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 324 znalezione
+2025-02-16 12:23:02,256 - INFO - Porównuję aktywa dla pary: binance - bitget
+2025-02-16 12:23:02,257 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-16 12:23:02,259 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-16 12:23:05,311 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 342 znalezione
+2025-02-16 12:23:05,311 - INFO - Porównuję aktywa dla pary: binance - bitstamp
+2025-02-16 12:23:05,312 - INFO - Ładowanie rynków dla: BinanceExchange
+2025-02-16 12:23:05,314 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-16 12:23:05,823 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 75 znalezione
+2025-02-16 12:23:05,824 - INFO - Porównuję aktywa dla pary: kucoin - bitget
+2025-02-16 12:23:05,826 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-16 12:23:05,827 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-16 12:23:05,829 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 501 znalezione
+2025-02-16 12:23:05,830 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
+2025-02-16 12:23:05,831 - INFO - Ładowanie rynków dla: KucoinExchange
+2025-02-16 12:23:05,834 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-16 12:23:05,836 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 86 znalezione
+2025-02-16 12:23:05,837 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
+2025-02-16 12:23:05,837 - INFO - Ładowanie rynków dla: BitgetExchange
+2025-02-16 12:23:05,839 - INFO - Ładowanie rynków dla: BitstampExchange
+2025-02-16 12:23:05,840 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 87 znalezione
+2025-02-16 12:23:05,846 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
+2025-02-16 12:23:05,852 - INFO - Wczytano dane do dodania z assets_to_add.json.
+2025-02-16 12:23:05,853 - INFO - Konfiguracja binance-kucoin: usunięto 4 aktywów.
+2025-02-16 12:23:05,853 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-16 12:23:05,854 - INFO - Konfiguracja binance-bitget: usunięto 1 aktywów.
+2025-02-16 12:23:05,855 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
+2025-02-16 12:23:05,856 - INFO - Konfiguracja kucoin-bitget: usunięto 6 aktywów.
+2025-02-16 12:23:05,857 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
+2025-02-16 12:23:05,857 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
+2025-02-16 12:23:05,915 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
+2025-02-16 12:23:05,915 - INFO - Para binance-kucoin ma 321 wspólnych aktywów.
+2025-02-16 12:23:05,916 - INFO - Para binance-bitget ma 341 wspólnych aktywów.
+2025-02-16 12:23:05,917 - INFO - Para binance-bitstamp ma 75 wspólnych aktywów.
+2025-02-16 12:23:05,917 - INFO - Para kucoin-bitget ma 495 wspólnych aktywów.
+2025-02-16 12:23:05,918 - INFO - Para kucoin-bitstamp ma 86 wspólnych aktywów.
+2025-02-16 12:23:05,919 - INFO - Para bitget-bitstamp ma 87 wspólnych aktywów.

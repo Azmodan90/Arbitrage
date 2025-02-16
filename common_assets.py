@@ -1,6 +1,6 @@
-import asyncio
 import json
 import logging
+from config import CONFIG
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
@@ -8,45 +8,38 @@ from exchanges.bitstamp import BitstampExchange
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-async def get_markets_dict_by_quote(exchange_instance, allowed_quotes=["USDT", "EUR"]):
-    """
-    Pobiera rynki z danej giełdy i grupuje je według quote.
-    Zwraca słownik postaci:
-        { "USDT": { base: "BASE/USDT", ... },
-          "EUR": { base: "BASE/EUR", ... } }
-    """
+def get_markets_dict(exchange_instance, allowed_quotes=None):
+    if allowed_quotes is None:
+        allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
     try:
-        # Poprawka: wywołujemy metodę load_markets() zdefiniowaną w klasie
-        markets = await exchange_instance.load_markets()
-        result = {quote: {} for quote in allowed_quotes}
+        logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
+        # Używamy atrybutu .exchange, aby wywołać metodę load_markets() z ccxt
+        markets = exchange_instance.exchange.load_markets()
+        result = {}
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    result[quote][base] = symbol
+                    if base not in result:
+                        result[base] = symbol
         return result
     except Exception as e:
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
-        return {quote: {} for quote in allowed_quotes}
+        return {}
 
-async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT", "EUR"]):
-    """
-    Dla każdej z podanych walut (np. USDT, EUR) wyszukuje wspólne aktywa.
-    Zapisuje tylko te, gdzie na obu giełdach występuje ten sam quote.
-    Klucz zapisu to "BASE/QUOTE".
-    """
-    markets1 = await get_markets_dict_by_quote(exchange1, allowed_quotes)
-    markets2 = await get_markets_dict_by_quote(exchange2, allowed_quotes)
+def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=None):
+    if allowed_quotes is None:
+        allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
+    markets1 = get_markets_dict(exchange1, allowed_quotes)
+    markets2 = get_markets_dict(exchange2, allowed_quotes)
+    common_bases = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
-    for quote in allowed_quotes:
-        common_bases = set(markets1[quote].keys()).intersection(set(markets2[quote].keys()))
-        for base in common_bases:
-            asset_key = f"{base}/{quote}"
-            common[asset_key] = {name1: markets1[quote][base], name2: markets2[quote][base]}
+    for base in common_bases:
+        common[base] = {name1: markets1[base], name2: markets2[base]}
     logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
     return common
 
-async def save_common_assets(common_assets, filename="common_assets.json"):
+def save_common_assets(common_assets, filename="common_assets.json"):
     try:
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(common_assets, f, indent=4)
@@ -81,8 +74,8 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
         if config_key in assets_to_remove:
             remove_list = assets_to_remove[config_key]
             before = len(common_assets[config_key])
-            common_assets[config_key] = {asset: mapping for asset, mapping in common_assets[config_key].items()
-                                         if not should_remove(asset, remove_list)}
+            common_assets[config_key] = {base: mapping for base, mapping in common_assets[config_key].items()
+                                         if not should_remove(base, remove_list)}
             after = len(common_assets[config_key])
             logging.info(f"Konfiguracja {config_key}: usunięto {before - after} aktywów.")
         if config_key in assets_to_add:
@@ -92,15 +85,14 @@ def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add
             for entry in add_entries:
                 normalized = entry.get("normalized")
                 if normalized and normalized not in common_assets[config_key]:
-                    exchanges = config_key.split("-")
                     common_assets[config_key][normalized] = {
-                        exchanges[0]: entry.get("source"),
-                        exchanges[1]: entry.get("dest")
+                        config_key.split("-")[0]: entry.get("source"),
+                        config_key.split("-")[1]: entry.get("dest")
                     }
                     logging.info(f"Konfiguracja {config_key}: dodano aktywo {entry}.")
     return common_assets
 
-async def main():
+def main():
     logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)")
     binance = BinanceExchange()
     kucoin = KucoinExchange()
@@ -116,19 +108,18 @@ async def main():
 
     common_assets = {}
     names = list(exchanges.keys())
-    # Porównanie aktywów dla każdej pary giełd
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            mapping = await get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT", "EUR"])
+            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2])
             common_assets[f"{name1}-{name2}"] = mapping
 
     common_assets = modify_common_assets(common_assets)
-    await save_common_assets(common_assets)
+    save_common_assets(common_assets)
     for pair, assets in common_assets.items():
         logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    main()

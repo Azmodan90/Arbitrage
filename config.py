@@ -12,17 +12,10 @@ CONFIG = {
     "BITGET_SECRET": os.getenv("BITGET_SECRET"),
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
-    
-    "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu w procentach
-    "ABSURD_THRESHOLD": 100,
-    "INVESTMENT_AMOUNT": 100,
-    
-    "ALLOWED_QUOTES": ["USDT", "EUR"],
-    "DEFAULT_QUOTE": "USDT", "EUR"
-    "EXCHANGE_QUOTES": {
-        "binance": ["USDT", "EUR"],
-        "kucoin": ["USDT", "EUR"],
-        "bitget": ["USDT", "EUR"],
-        "bitstamp": ["USDT"]
-    }
+
+    "ARBITRAGE_THRESHOLD": 2,      # Próg arbitrażu w procentach
+    "ABSURD_THRESHOLD": 100,       # Próg absurdalnego zysku (dla ignorowania okazji)
+    "INVESTMENT_AMOUNT": 100,      # Kwota inwestycji w USDT
+    "ALLOWED_QUOTES": ["USDT", "EUR"],  # Dozwolone quote – możesz łatwo dodać/usunąć waluty
+    "DEFAULT_QUOTE": "USDT",       # Domyślny quote dla symboli, które nie zawierają '/'
 }
