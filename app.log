@@ -43,3 +43,46 @@
 2025-02-16 09:39:35,521 - INFO - Para bitget-bitstamp ma 7 wspólnych aktywów.
 2025-02-16 10:02:27,977 - INFO - Uruchamianie programu arbitrażowego
 2025-02-16 10:02:30,275 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-16 10:07:21,887 - INFO - Uruchamianie programu arbitrażowego
+2025-02-16 10:07:24,500 - INFO - Wybrano opcję tworzenia listy wspólnych aktywów
+2025-02-16 10:07:24,506 - INFO - Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)
+2025-02-16 10:07:24,586 - INFO - Porównuję aktywa dla pary: binance - kucoin
+2025-02-16 10:07:31,755 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:35,071 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:35,072 - INFO - Wspólne aktywa dla binance i kucoin (quotes=['USDT', 'EUR']): 0 znalezione
+2025-02-16 10:07:35,073 - INFO - Porównuję aktywa dla pary: binance - bitget
+2025-02-16 10:07:35,074 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,247 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,248 - INFO - Wspólne aktywa dla binance i bitget (quotes=['USDT', 'EUR']): 0 znalezione
+2025-02-16 10:07:38,249 - INFO - Porównuję aktywa dla pary: binance - bitstamp
+2025-02-16 10:07:38,250 - ERROR - Błąd przy ładowaniu rynków dla BinanceExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,901 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,902 - INFO - Wspólne aktywa dla binance i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
+2025-02-16 10:07:38,902 - INFO - Porównuję aktywa dla pary: kucoin - bitget
+2025-02-16 10:07:38,903 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,904 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,904 - INFO - Wspólne aktywa dla kucoin i bitget (quotes=['USDT', 'EUR']): 0 znalezione
+2025-02-16 10:07:38,905 - INFO - Porównuję aktywa dla pary: kucoin - bitstamp
+2025-02-16 10:07:38,905 - ERROR - Błąd przy ładowaniu rynków dla KucoinExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,906 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,907 - INFO - Wspólne aktywa dla kucoin i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
+2025-02-16 10:07:38,907 - INFO - Porównuję aktywa dla pary: bitget - bitstamp
+2025-02-16 10:07:38,908 - ERROR - Błąd przy ładowaniu rynków dla BitgetExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,908 - ERROR - Błąd przy ładowaniu rynków dla BitstampExchange: object dict can't be used in 'await' expression
+2025-02-16 10:07:38,909 - INFO - Wspólne aktywa dla bitget i bitstamp (quotes=['USDT', 'EUR']): 0 znalezione
+2025-02-16 10:07:38,913 - INFO - Wczytano dane do usunięcia z assets_to_remove.json.
+2025-02-16 10:07:38,916 - INFO - Wczytano dane do dodania z assets_to_add.json.
+2025-02-16 10:07:38,917 - INFO - Konfiguracja binance-kucoin: usunięto 0 aktywów.
+2025-02-16 10:07:38,917 - INFO - Konfiguracja binance-kucoin: dodano aktywo {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-16 10:07:38,917 - INFO - Konfiguracja binance-bitget: usunięto 0 aktywów.
+2025-02-16 10:07:38,918 - INFO - Konfiguracja binance-bitstamp: usunięto 0 aktywów.
+2025-02-16 10:07:38,918 - INFO - Konfiguracja kucoin-bitget: usunięto 0 aktywów.
+2025-02-16 10:07:38,918 - INFO - Konfiguracja kucoin-bitstamp: usunięto 0 aktywów.
+2025-02-16 10:07:38,918 - INFO - Konfiguracja bitget-bitstamp: usunięto 0 aktywów.
+2025-02-16 10:07:38,921 - INFO - Lista wspólnych aktywów zapisana do pliku: common_assets.json
+2025-02-16 10:07:38,921 - INFO - Para binance-kucoin ma 1 wspólnych aktywów.
+2025-02-16 10:07:38,921 - INFO - Para binance-bitget ma 0 wspólnych aktywów.
+2025-02-16 10:07:38,922 - INFO - Para binance-bitstamp ma 0 wspólnych aktywów.
+2025-02-16 10:07:38,922 - INFO - Para kucoin-bitget ma 0 wspólnych aktywów.
+2025-02-16 10:07:38,922 - INFO - Para kucoin-bitstamp ma 0 wspólnych aktywów.
+2025-02-16 10:07:38,922 - INFO - Para bitget-bitstamp ma 0 wspólnych aktywów.
