@@ -1,4 +1,5 @@
 import ccxt.async_support as ccxt
+import asyncio
 from config import CONFIG
 
 class KucoinExchange:
@@ -9,22 +10,25 @@ class KucoinExchange:
             'enableRateLimit': True,
         })
         self.fee_rate = 0.1
+        self.semaphore = asyncio.Semaphore(5)
 
     async def load_markets(self):
         return await self.exchange.load_markets()
 
     async def fetch_ticker(self, symbol):
         try:
-            ticker = await self.exchange.fetch_ticker(symbol)
-            return ticker
+            async with self.semaphore:
+                ticker = await self.exchange.fetch_ticker(symbol)
+                return ticker
         except Exception as e:
             print(f"Error fetching ticker from Kucoin: {e}")
             return None
 
     async def fetch_order_book(self, symbol):
         try:
-            order_book = await self.exchange.fetch_order_book(symbol)
-            return order_book
+            async with self.semaphore:
+                order_book = await self.exchange.fetch_order_book(symbol)
+                return order_book
         except Exception as e:
             print(f"Error fetching order book from Kucoin: {e}")
             return None

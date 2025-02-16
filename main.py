@@ -42,6 +42,7 @@ async def run_arbitrage_for_all_pairs(exchanges):
     except Exception as e:
         logging.error(f"Failed to load common_assets.json: {e}")
         return
+
     tasks = []
     for pair_key, assets in common_assets_data.items():
         if not assets:
@@ -63,43 +64,27 @@ async def run_arbitrage_for_all_pairs(exchanges):
     else:
         logging.info("No arbitrage tasks to run.")
 
-def run_arbitrage(exchanges):
-    logging.info("Arbitrage option selected")
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    setup_signal_handlers(loop)
-    try:
-        loop.run_until_complete(run_arbitrage_for_all_pairs(exchanges))
-    except asyncio.CancelledError:
-        logging.info("Tasks cancelled")
-    except KeyboardInterrupt:
-        logging.info("Program terminated by user (CTRL+C)")
-    finally:
-        pending = asyncio.all_tasks(loop)
-        if pending:
-            loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
-            loop.run_until_complete(loop.shutdown_asyncgens())
-        loop.close()
-
-def main():
+async def main():
     setup_logging()
     logging.info("Starting arbitrage program")
+    
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
+    
     while True:
-        print("\nSelect an option:")
+        print("\nChoose an option:")
         print("1. Create common assets list")
-        print("2. Start arbitrage (using common_assets.json)")
+        print("2. Start arbitrage (using assets from common_assets.json)")
         print("3. Exit")
         choice = input("Your choice (1/2/3): ").strip()
         if choice == "1":
-            asyncio.run(common_assets.main())
+            await common_assets.main()  # common_assets.main() is async
         elif choice == "2":
-            run_arbitrage(exchanges)
+            await run_arbitrage_for_all_pairs(exchanges)
         elif choice == "3":
             logging.info("Exiting program")
             break
@@ -107,5 +92,11 @@ def main():
             logging.error("Invalid choice!")
             print("Invalid choice!")
 
+    # Close exchanges
+    await exchanges["binance"].close()
+    await exchanges["kucoin"].close()
+    await exchanges["bitget"].close()
+    await exchanges["bitstamp"].close()
+
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())

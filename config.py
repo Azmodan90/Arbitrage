@@ -13,9 +13,8 @@ CONFIG = {
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
-    "ALLOWED_QUOTES": ["USDT", "EUR"],  # Ustawiasz tutaj, które quote mają być brane pod uwagę.
-    
-    "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu w procentach
-    "ABSURD_THRESHOLD": 100,   # próg absurdalnego zysku w procentach
-    "INVESTMENT_AMOUNT": 100    # kwota inwestycji w USDT
+    "ARBITRAGE_THRESHOLD": 0.5,    # Próg arbitrażu w %
+    "ABSURD_THRESHOLD": 100,       # Próg absurdalnego zysku w %
+    "INVESTMENT_AMOUNT": 100,      # Kwota inwestycji w USDT
+    "ALLOWED_QUOTES": ["USDT", "EUR"],  # Lista dozwolonych quote – wystarczy zmodyfikować tę listę, aby np. dodać EUR lub usunąć USDC
 }
