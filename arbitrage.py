@@ -79,12 +79,10 @@ async def fetch_ticker_rate_limited_async(exchange, symbol):
     limiter.last_request = time.monotonic()
     return ticker
 
-def get_liquidity_info(exchange, symbol):
+# Nowa, asynchroniczna wersja funkcji pobierającej order book
+async def get_liquidity_info_async(exchange, symbol):
     try:
-        if hasattr(exchange, "fetch_order_book"):
-            order_book = exchange.fetch_order_book(symbol)
-        else:
-            order_book = exchange.exchange.fetch_order_book(symbol)
+        order_book = await exchange.fetch_order_book(symbol)
         bids = order_book.get('bids', [])
         asks = order_book.get('asks', [])
         top_bid = bids[0] if bids else [None, None]
@@ -101,7 +99,7 @@ class PairArbitrageStrategy:
         # assets – słownik mapujący pełne symbole, np.:
         # { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
         self.assets = assets
-        self.pair_name = pair_name  # np. "binance-bitget"
+        self.pair_name = pair_name
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
@@ -121,8 +119,7 @@ class PairArbitrageStrategy:
         arbitrage_logger.info(
             f"{self.pair_name} - Sprawdzam arbitraż dla symboli: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})"
         )
-
-        # Asynchroniczne pobranie tickerów z rate limiterem
+        # Pobieranie tickerów przy użyciu asynchronicznego rate limitera
         task1 = fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
         task2 = fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
         results = await asyncio.gather(task1, task2, return_exceptions=True)
@@ -140,7 +137,6 @@ class PairArbitrageStrategy:
                 else:
                     tickers[key] = price
                     arbitrage_logger.info(f"{self.pair_name} - Ticker {key}: {price}")
-
         if names[0] not in tickers or names[1] not in tickers:
             arbitrage_logger.warning(f"{self.pair_name} - Niewystarczające dane ticker dla {asset}. Pomijam.")
             return
@@ -164,11 +160,10 @@ class PairArbitrageStrategy:
         invested_amount = None
         actual_qty = None
 
-        # Sprawdzamy płynność, jeśli osiągnięto próg arbitrażu
+        # Pobieramy order book asynchronicznie, jeżeli spełniony jest próg arbitrażu
         if (profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]) or (profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]):
-            loop = asyncio.get_running_loop()
-            liq_ex1 = await loop.run_in_executor(None, lambda: get_liquidity_info(self.exchange1, symbol_ex1))
-            liq_ex2 = await loop.run_in_executor(None, lambda: get_liquidity_info(self.exchange2, symbol_ex2))
+            liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol_ex1)
+            liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2)
             liquidity_info = ""
             if liq_ex1:
                 liquidity_info += f"{names[0]} - Top Bid: {liq_ex1['top_bid']}, Top Ask: {liq_ex1['top_ask']}; "
@@ -187,10 +182,7 @@ class PairArbitrageStrategy:
                 invested_amount = actual_qty * effective_order_buy
                 profit_liq_usdt = potential_proceeds - invested_amount
                 profit_liq_percent = (profit_liq_usdt / invested_amount * 100) if invested_amount else 0
-                extra_info += (
-                    f"Qty: {actual_qty:.4f}; Invested: {invested_amount:.2f} USDT; "
-                    f"Proceeds: {potential_proceeds:.2f} USDT; "
-                )
+                extra_info += f"Qty: {actual_qty:.4f}; Invested: {invested_amount:.2f} USDT; Proceeds: {potential_proceeds:.2f} USDT; "
                 if available_buy_vol < desired_qty:
                     extra_info += f"Insufficient liquidity on {names[0]} (available: {available_buy_vol}); "
                 if available_sell_vol < desired_qty:
@@ -215,15 +207,15 @@ class PairArbitrageStrategy:
 
         if profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]:
             arbitrage_logger.info(
-                f"{self.pair_name} - Opportunity: Buy on {self.exchange1.__class__.__name__} (price: {tickers[names[0]]}, "
-                f"eff.: {effective_buy_ex1:.4f}) | Sell on {self.exchange2.__class__.__name__} (price: {tickers[names[1]]}, "
-                f"eff.: {effective_sell_ex2:.4f}) | Ticker Profit: {profit1:.2f}% | Profit: {profit_liq_usdt if profit_liq_usdt is not None else 'N/A'} USDT"
+                f"{self.pair_name} - Opportunity: Buy on {self.exchange1.__class__.__name__} (price: {tickers[names[0]]}, eff.: {effective_buy_ex1:.4f}) | "
+                f"Sell on {self.exchange2.__class__.__name__} (price: {tickers[names[1]]}, eff.: {effective_sell_ex2:.4f}) | "
+                f"Ticker Profit: {profit1:.2f}% | Profit: {profit_liq_usdt if profit_liq_usdt is not None else 'N/A'} USDT"
             )
         if profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
             arbitrage_logger.info(
-                f"{self.pair_name} - Opportunity: Buy on {self.exchange2.__class__.__name__} (price: {tickers[names[1]]}, "
-                f"eff.: {effective_buy_ex2:.4f}) | Sell on {self.exchange1.__class__.__name__} (price: {tickers[names[0]]}, "
-                f"eff.: {effective_sell_ex1:.4f}) | Ticker Profit: {profit2:.2f}%"
+                f"{self.pair_name} - Opportunity: Buy on {self.exchange2.__class__.__name__} (price: {tickers[names[1]]}, eff.: {effective_buy_ex2:.4f}) | "
+                f"Sell on {self.exchange1.__class__.__name__} (price: {tickers[names[0]]}, eff.: {effective_sell_ex1:.4f}) | "
+                f"Ticker Profit: {profit2:.2f}%"
             )
 
     async def run(self):
@@ -238,5 +230,6 @@ class PairArbitrageStrategy:
             raise
 
 if __name__ == '__main__':
-    # Przykładowe uruchomienie (pamiętaj, że tutaj przekazujemy None, ponieważ to tylko test)
+    import asyncio
+    from config import CONFIG
     asyncio.run(PairArbitrageStrategy(None, None, None).run())
