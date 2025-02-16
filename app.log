@@ -1,92 +1,43 @@
-2025-02-16 17:11:37,107 - INFO - Starting arbitrage program
-2025-02-16 17:11:39,187 - INFO - Starting creation of common assets list (comparing by symbol and quote)
-2025-02-16 17:11:39,256 - INFO - Comparing assets for pair: binance - kucoin
-2025-02-16 17:14:34,326 - INFO - Starting arbitrage program
-2025-02-16 17:14:36,324 - INFO - Starting creation of common assets list (comparing by symbol and quote)
-2025-02-16 17:14:36,392 - INFO - Comparing assets for pair: binance - kucoin
-2025-02-16 17:14:36,393 - INFO - Loading markets for: BinanceExchange
-2025-02-16 17:14:39,767 - INFO - Loading markets for: KucoinExchange
-2025-02-16 17:14:42,206 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR']): 324 found
-2025-02-16 17:14:42,207 - INFO - Comparing assets for pair: binance - bitget
-2025-02-16 17:14:42,208 - INFO - Loading markets for: BinanceExchange
-2025-02-16 17:14:42,210 - INFO - Loading markets for: BitgetExchange
-2025-02-16 17:14:44,595 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR']): 342 found
-2025-02-16 17:14:44,595 - INFO - Comparing assets for pair: binance - bitstamp
-2025-02-16 17:14:44,596 - INFO - Loading markets for: BinanceExchange
-2025-02-16 17:14:44,599 - INFO - Loading markets for: BitstampExchange
-2025-02-16 17:14:45,175 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR']): 75 found
-2025-02-16 17:14:45,176 - INFO - Comparing assets for pair: kucoin - bitget
-2025-02-16 17:14:45,177 - INFO - Loading markets for: KucoinExchange
-2025-02-16 17:14:45,178 - INFO - Loading markets for: BitgetExchange
-2025-02-16 17:14:45,181 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR']): 501 found
-2025-02-16 17:14:45,182 - INFO - Comparing assets for pair: kucoin - bitstamp
-2025-02-16 17:14:45,183 - INFO - Loading markets for: KucoinExchange
-2025-02-16 17:14:45,184 - INFO - Loading markets for: BitstampExchange
-2025-02-16 17:14:45,185 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR']): 86 found
-2025-02-16 17:14:45,186 - INFO - Comparing assets for pair: bitget - bitstamp
-2025-02-16 17:14:45,186 - INFO - Loading markets for: BitgetExchange
-2025-02-16 17:14:45,188 - INFO - Loading markets for: BitstampExchange
-2025-02-16 17:14:45,189 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR']): 87 found
-2025-02-16 17:14:45,194 - INFO - Loaded assets to remove from assets_to_remove.json.
-2025-02-16 17:14:45,198 - INFO - Loaded assets to add from assets_to_add.json.
-2025-02-16 17:14:45,199 - INFO - Config binance-kucoin: removed 4 assets.
-2025-02-16 17:14:45,199 - INFO - Config binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-16 17:14:45,200 - INFO - Config binance-bitget: removed 1 assets.
-2025-02-16 17:14:45,201 - INFO - Config binance-bitstamp: removed 0 assets.
-2025-02-16 17:14:45,202 - INFO - Config kucoin-bitget: removed 6 assets.
-2025-02-16 17:14:45,203 - INFO - Config kucoin-bitstamp: removed 0 assets.
-2025-02-16 17:14:45,203 - INFO - Config bitget-bitstamp: removed 0 assets.
-2025-02-16 17:14:45,258 - INFO - Common assets list saved to file: common_assets.json
-2025-02-16 17:14:45,258 - INFO - Pair binance-kucoin has 321 common assets.
-2025-02-16 17:14:45,259 - INFO - Pair binance-bitget has 341 common assets.
-2025-02-16 17:14:45,259 - INFO - Pair binance-bitstamp has 75 common assets.
-2025-02-16 17:14:45,260 - INFO - Pair kucoin-bitget has 495 common assets.
-2025-02-16 17:14:45,260 - INFO - Pair kucoin-bitstamp has 86 common assets.
-2025-02-16 17:14:45,260 - INFO - Pair bitget-bitstamp has 87 common assets.
-2025-02-16 17:19:31,980 - INFO - Starting arbitrage program
-2025-02-16 17:19:33,956 - INFO - Starting creation of common assets list (comparing by symbol and quote)
-2025-02-16 17:19:34,020 - INFO - Comparing assets for pair: binance - kucoin
-2025-02-16 17:19:34,022 - INFO - Loading markets for: BinanceExchange
-2025-02-16 17:19:37,648 - INFO - Loading markets for: KucoinExchange
-2025-02-16 17:19:40,076 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR']): 326 found
-2025-02-16 17:19:40,077 - INFO - Comparing assets for pair: binance - bitget
-2025-02-16 17:19:40,078 - INFO - Loading markets for: BinanceExchange
-2025-02-16 17:19:40,081 - INFO - Loading markets for: BitgetExchange
-2025-02-16 17:19:42,310 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR']): 358 found
-2025-02-16 17:19:42,311 - INFO - Comparing assets for pair: binance - bitstamp
-2025-02-16 17:19:42,312 - INFO - Loading markets for: BinanceExchange
-2025-02-16 17:19:42,314 - INFO - Loading markets for: BitstampExchange
-2025-02-16 17:19:42,867 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR']): 37 found
-2025-02-16 17:19:42,868 - INFO - Comparing assets for pair: kucoin - bitget
-2025-02-16 17:19:42,869 - INFO - Loading markets for: KucoinExchange
-2025-02-16 17:19:42,870 - INFO - Loading markets for: BitgetExchange
-2025-02-16 17:19:42,872 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR']): 504 found
-2025-02-16 17:19:42,873 - INFO - Comparing assets for pair: kucoin - bitstamp
-2025-02-16 17:19:42,874 - INFO - Loading markets for: KucoinExchange
-2025-02-16 17:19:42,875 - INFO - Loading markets for: BitstampExchange
-2025-02-16 17:19:42,876 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR']): 8 found
-2025-02-16 17:19:42,877 - INFO - Comparing assets for pair: bitget - bitstamp
-2025-02-16 17:19:42,878 - INFO - Loading markets for: BitgetExchange
-2025-02-16 17:19:42,879 - INFO - Loading markets for: BitstampExchange
-2025-02-16 17:19:42,880 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR']): 21 found
-2025-02-16 17:19:42,886 - INFO - Loaded assets to remove from assets_to_remove.json.
-2025-02-16 17:19:42,891 - INFO - Loaded assets to add from assets_to_add.json.
-2025-02-16 17:19:42,893 - INFO - Config binance-kucoin: removed 4 assets.
-2025-02-16 17:19:42,893 - INFO - Config binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-16 17:19:42,894 - INFO - Config binance-bitget: removed 1 assets.
-2025-02-16 17:19:42,894 - INFO - Config binance-bitstamp: removed 0 assets.
-2025-02-16 17:19:42,896 - INFO - Config kucoin-bitget: removed 6 assets.
-2025-02-16 17:19:42,896 - INFO - Config kucoin-bitstamp: removed 0 assets.
-2025-02-16 17:19:42,896 - INFO - Config bitget-bitstamp: removed 0 assets.
-2025-02-16 17:19:42,947 - INFO - Common assets list saved to file: common_assets.json
-2025-02-16 17:19:42,948 - INFO - Pair binance-kucoin has 323 common assets.
-2025-02-16 17:19:42,948 - INFO - Pair binance-bitget has 357 common assets.
-2025-02-16 17:19:42,949 - INFO - Pair binance-bitstamp has 37 common assets.
-2025-02-16 17:19:42,949 - INFO - Pair kucoin-bitget has 498 common assets.
-2025-02-16 17:19:42,949 - INFO - Pair kucoin-bitstamp has 8 common assets.
-2025-02-16 17:19:42,950 - INFO - Pair bitget-bitstamp has 21 common assets.
-2025-02-16 17:19:48,133 - INFO - Arbitrage option selected
-2025-02-16 17:20:01,792 - INFO - 
-Received signal SIGINT. Shutting down...
-2025-02-16 17:20:01,793 - INFO - Cancelling tasks: [<Task pending name='Task-67' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-71' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-66' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-70' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-68' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-69' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:213> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-65' coro=<run_arbitrage_for_all_pairs() running at /workspaces/Arbitrage/main.py:62> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>]
-2025-02-16 17:20:01,804 - INFO - Tasks cancelled
+2025-02-16 17:25:28,397 - INFO - Starting arbitrage program
+2025-02-16 17:25:33,347 - INFO - Starting creation of common assets list (comparing by symbol and quote)
+2025-02-16 17:25:33,415 - INFO - Comparing assets for pair: binance - kucoin
+2025-02-16 17:25:33,416 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:25:37,401 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:25:39,547 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR']): 326 found
+2025-02-16 17:25:39,548 - INFO - Comparing assets for pair: binance - bitget
+2025-02-16 17:25:39,549 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:25:39,551 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:25:41,895 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR']): 358 found
+2025-02-16 17:25:41,896 - INFO - Comparing assets for pair: binance - bitstamp
+2025-02-16 17:25:41,897 - INFO - Loading markets for: BinanceExchange
+2025-02-16 17:25:41,899 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:25:42,462 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR']): 37 found
+2025-02-16 17:25:42,463 - INFO - Comparing assets for pair: kucoin - bitget
+2025-02-16 17:25:42,464 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:25:42,466 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:25:42,468 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR']): 504 found
+2025-02-16 17:25:42,468 - INFO - Comparing assets for pair: kucoin - bitstamp
+2025-02-16 17:25:42,469 - INFO - Loading markets for: KucoinExchange
+2025-02-16 17:25:42,470 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:25:42,471 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR']): 8 found
+2025-02-16 17:25:42,472 - INFO - Comparing assets for pair: bitget - bitstamp
+2025-02-16 17:25:42,472 - INFO - Loading markets for: BitgetExchange
+2025-02-16 17:25:42,474 - INFO - Loading markets for: BitstampExchange
+2025-02-16 17:25:42,475 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR']): 21 found
+2025-02-16 17:25:42,480 - INFO - Loaded assets to remove from assets_to_remove.json.
+2025-02-16 17:25:42,486 - INFO - Loaded assets to add from assets_to_add.json.
+2025-02-16 17:25:42,487 - INFO - Config binance-kucoin: removed 4 assets.
+2025-02-16 17:25:42,488 - INFO - Config binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-16 17:25:42,489 - INFO - Config binance-bitget: removed 1 assets.
+2025-02-16 17:25:42,489 - INFO - Config binance-bitstamp: removed 0 assets.
+2025-02-16 17:25:42,491 - INFO - Config kucoin-bitget: removed 6 assets.
+2025-02-16 17:25:42,492 - INFO - Config kucoin-bitstamp: removed 0 assets.
+2025-02-16 17:25:42,492 - INFO - Config bitget-bitstamp: removed 0 assets.
+2025-02-16 17:25:42,545 - INFO - Common assets list saved to file: common_assets.json
+2025-02-16 17:25:42,546 - INFO - Pair binance-kucoin has 323 common assets.
+2025-02-16 17:25:42,546 - INFO - Pair binance-bitget has 357 common assets.
+2025-02-16 17:25:42,546 - INFO - Pair binance-bitstamp has 37 common assets.
+2025-02-16 17:25:42,547 - INFO - Pair kucoin-bitget has 498 common assets.
+2025-02-16 17:25:42,547 - INFO - Pair kucoin-bitstamp has 8 common assets.
+2025-02-16 17:25:42,548 - INFO - Pair bitget-bitstamp has 21 common assets.
+2025-02-16 17:25:48,318 - INFO - Arbitrage option selected
