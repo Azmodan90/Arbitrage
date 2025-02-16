@@ -8,13 +8,14 @@ from exchanges.bitstamp import BitstampExchange
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-async def get_markets_dict(exchange_instance, allowed_quotes=CONFIG["ALLOWED_QUOTES"]):
+async def get_markets_dict(exchange_instance, allowed_quotes=None):
+    if allowed_quotes is None:
+        allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
     try:
-        logging.info(f"Loading markets for: {exchange_instance.__class__.__name__}")
-        # Zakładamy, że load_markets() jest asynchroniczną metodą
+        logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
+        # Używamy asynchronicznej metody load_markets
         markets = await exchange_instance.load_markets()
         result = {}
-        # Używamy pełnego symbolu jako klucza – dzięki temu "ABC/USDT" i "ABC/EUR" są różne
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
@@ -22,26 +23,29 @@ async def get_markets_dict(exchange_instance, allowed_quotes=CONFIG["ALLOWED_QUO
                     result[symbol] = symbol
         return result
     except Exception as e:
-        logging.error(f"Error loading markets for {exchange_instance.__class__.__name__}: {e}")
+        logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
         return {}
 
-async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=CONFIG["ALLOWED_QUOTES"]):
+async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=None):
+    if allowed_quotes is None:
+        allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
     markets1 = await get_markets_dict(exchange1, allowed_quotes)
     markets2 = await get_markets_dict(exchange2, allowed_quotes)
-    common_keys = set(markets1.keys()).intersection(set(markets2.keys()))
+    common_symbols = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
-    for key in common_keys:
-         common[key] = {name1: markets1[key], name2: markets2[key]}
-    logging.info(f"Common assets for {name1} and {name2} (quotes={allowed_quotes}): {len(common)} found")
+    # Każdy wspólny symbol tworzy własny wpis
+    for symbol in common_symbols:
+        common[symbol] = {name1: symbol, name2: symbol}
+    logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
     return common
 
 def save_common_assets(common_assets, filename="common_assets.json"):
     try:
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(common_assets, f, indent=4)
-        logging.info(f"Common assets list saved to file: {filename}")
+        logging.info(f"Lista wspólnych aktywów zapisana do pliku: {filename}")
     except Exception as e:
-        logging.error(f"Error saving to file {filename}: {e}")
+        logging.error(f"Błąd przy zapisywaniu do pliku {filename}: {e}")
 
 def should_remove(asset, remove_list):
     for r in remove_list:
@@ -49,23 +53,21 @@ def should_remove(asset, remove_list):
             return True
     return False
 
-async def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add_file="assets_to_add.json"):
+def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add_file="assets_to_add.json"):
     try:
         with open(remove_file, "r", encoding="utf-8") as f:
             assets_to_remove = json.load(f)
-        logging.info(f"Loaded assets to remove from {remove_file}.")
+        logging.info(f"Wczytano dane do usunięcia z {remove_file}.")
     except Exception as e:
         assets_to_remove = {}
-        logging.warning(f"Failed to load {remove_file}: {e}")
-
+        logging.warning(f"Nie udało się wczytać {remove_file}: {e}")
     try:
         with open(add_file, "r", encoding="utf-8") as f:
             assets_to_add = json.load(f)
-        logging.info(f"Loaded assets to add from {add_file}.")
+        logging.info(f"Wczytano dane do dodania z {add_file}.")
     except Exception as e:
         assets_to_add = {}
-        logging.warning(f"Failed to load {add_file}: {e}")
-
+        logging.warning(f"Nie udało się wczytać {add_file}: {e}")
     for config_key in list(common_assets.keys()):
         if config_key in assets_to_remove:
             remove_list = assets_to_remove[config_key]
@@ -73,7 +75,7 @@ async def modify_common_assets(common_assets, remove_file="assets_to_remove.json
             common_assets[config_key] = {asset: mapping for asset, mapping in common_assets[config_key].items()
                                          if not should_remove(asset, remove_list)}
             after = len(common_assets[config_key])
-            logging.info(f"Configuration {config_key}: removed {before - after} assets.")
+            logging.info(f"Konfiguracja {config_key}: usunięto {before - after} aktywów.")
         if config_key in assets_to_add:
             add_entries = assets_to_add[config_key]
             if config_key not in common_assets:
@@ -85,11 +87,12 @@ async def modify_common_assets(common_assets, remove_file="assets_to_remove.json
                         config_key.split("-")[0]: entry.get("source"),
                         config_key.split("-")[1]: entry.get("dest")
                     }
-                    logging.info(f"Configuration {config_key}: added asset {entry}.")
+                    logging.info(f"Konfiguracja {config_key}: dodano aktywo {entry}.")
     return common_assets
 
 async def main():
-    logging.info("Starting creation of common assets list (by full symbol and quote)")
+    logging.info("Rozpoczynam tworzenie listy wspólnych aktywów (porównanie po symbolu oraz quote)")
+    # Tworzymy instancje giełd przy użyciu asynchronicznych interfejsów API
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
@@ -101,29 +104,27 @@ async def main():
         "bitget": bitget,
         "bitstamp": bitstamp
     }
-
-    common_assets = {}
+    common_assets_dict = {}
     names = list(exchanges.keys())
-    for i in range(len(names)):
-        for j in range(i + 1, len(names)):
-            name1 = names[i]
-            name2 = names[j]
-            logging.info(f"Comparing assets for pair: {name1} - {name2}")
-            mapping = await get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=CONFIG["ALLOWED_QUOTES"])
-            common_assets[f"{name1}-{name2}"] = mapping
-
-    common_assets = await modify_common_assets(common_assets)
-    save_common_assets(common_assets)
-    for pair, assets in common_assets.items():
-        logging.info(f"Pair {pair} has {len(assets)} common assets.")
-    
-    # Zamykamy instancje giełd (jeśli asynchroniczne API posiada metodę close)
-    await binance.close()
-    await kucoin.close()
-    await bitget.close()
-    await bitstamp.close()
+    try:
+        for i in range(len(names)):
+            for j in range(i + 1, len(names)):
+                name1 = names[i]
+                name2 = names[j]
+                logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
+                mapping = await get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2])
+                common_assets_dict[f"{name1}-{name2}"] = mapping
+        common_assets_dict = modify_common_assets(common_assets_dict)
+        save_common_assets(common_assets_dict)
+        for pair, assets in common_assets_dict.items():
+            logging.info(f"Para {pair} ma {len(assets)} wspólnych aktywów.")
+    finally:
+        # Upewnij się, że wszystkie sesje są zamknięte
+        await binance.close()
+        await kucoin.close()
+        await bitget.close()
+        await bitstamp.close()
 
 if __name__ == '__main__':
     import asyncio
-    from config import CONFIG
     asyncio.run(main())

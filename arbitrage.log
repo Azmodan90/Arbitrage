@@ -971,3 +971,755 @@
 2025-02-16 18:59:48,593 - INFO - binance-bitstamp - Arbitrage strategy cancelled.
 2025-02-16 18:59:48,594 - INFO - kucoin-bitstamp - Arbitrage strategy cancelled.
 2025-02-16 18:59:48,594 - INFO - bitget-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 19:08:27,169 - INFO - binance-kucoin - Starting arbitrage strategy for 323 assets.
+2025-02-16 19:08:27,170 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: ANKR/USDT (binance), ANKR/USDT (kucoin)
+2025-02-16 19:08:27,170 - INFO - binance-bitget - Starting arbitrage strategy for 357 assets.
+2025-02-16 19:08:27,171 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: ANKR/USDT (binance), ANKR/USDT (bitget)
+2025-02-16 19:08:27,171 - INFO - binance-bitstamp - Starting arbitrage strategy for 37 assets.
+2025-02-16 19:08:27,171 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: BCH/EUR (binance), BCH/EUR (bitstamp)
+2025-02-16 19:08:27,172 - INFO - kucoin-bitget - Starting arbitrage strategy for 498 assets.
+2025-02-16 19:08:27,172 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: ANKR/USDT (kucoin), ANKR/USDT (bitget)
+2025-02-16 19:08:27,173 - INFO - kucoin-bitstamp - Starting arbitrage strategy for 8 assets.
+2025-02-16 19:08:27,173 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-16 19:08:27,173 - INFO - bitget-bitstamp - Starting arbitrage strategy for 21 assets.
+2025-02-16 19:08:27,174 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: NEAR/EUR (bitget), NEAR/EUR (bitstamp)
+2025-02-16 19:08:32,394 - INFO - bitget-bitstamp - Ticker bitget: 3.327
+2025-02-16 19:08:32,395 - INFO - bitget-bitstamp - Ticker bitstamp: 3.28
+2025-02-16 19:08:32,432 - INFO - binance-bitget - Ticker binance: 0.02265
+2025-02-16 19:08:32,432 - INFO - binance-bitget - Ticker bitget: 0.02264
+2025-02-16 19:08:32,433 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: PSG/USDT (binance), PSG/USDT (bitget)
+2025-02-16 19:08:32,434 - INFO - binance-kucoin - Ticker binance: 0.02265
+2025-02-16 19:08:32,434 - INFO - binance-kucoin - Ticker kucoin: 0.02266
+2025-02-16 19:08:32,435 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: BCH/USDT (binance), BCH/USDT (kucoin)
+2025-02-16 19:08:32,436 - INFO - binance-bitstamp - Ticker binance: 312.4
+2025-02-16 19:08:32,436 - INFO - binance-bitstamp - Ticker bitstamp: 312.78
+2025-02-16 19:08:32,437 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: XLM/EUR (binance), XLM/EUR (bitstamp)
+2025-02-16 19:08:32,638 - INFO - kucoin-bitget - Ticker kucoin: 0.02266
+2025-02-16 19:08:32,639 - INFO - kucoin-bitget - Ticker bitget: 0.02264
+2025-02-16 19:08:32,640 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: BCH/USDT (kucoin), BCH/USDT (bitget)
+2025-02-16 19:08:32,801 - INFO - binance-bitstamp - Ticker binance: 0.3277
+2025-02-16 19:08:32,801 - INFO - binance-bitstamp - Ticker bitstamp: 0.32738
+2025-02-16 19:08:32,802 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: GRT/EUR (binance), GRT/EUR (bitstamp)
+2025-02-16 19:08:32,940 - INFO - kucoin-bitstamp - Ticker kucoin: 0.954
+2025-02-16 19:08:32,941 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95427
+2025-02-16 19:08:32,942 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: ETH/USDT (kucoin), ETH/USDT (bitstamp)
+2025-02-16 19:08:33,044 - INFO - binance-bitget - Ticker binance: 2.375
+2025-02-16 19:08:33,045 - INFO - binance-bitget - Ticker bitget: 2.371
+2025-02-16 19:08:33,045 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: BCH/USDT (binance), BCH/USDT (bitget)
+2025-02-16 19:08:33,075 - INFO - bitget-bitstamp - Opportunity: Buy on BitstampExchange (price: 3.28, eff.: 3.2882) | Sell on BitgetExchange (price: 3.327, eff.: 3.3237) | Ticker Profit: 1.08%
+2025-02-16 19:08:33,076 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: ETH/EUR (bitget), ETH/EUR (bitstamp)
+2025-02-16 19:08:33,163 - INFO - binance-kucoin - Ticker binance: 327.7
+2025-02-16 19:08:33,164 - INFO - binance-kucoin - Ticker kucoin: 327.05
+2025-02-16 19:08:33,165 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: BLUR/USDT (binance), BLUR/USDT (kucoin)
+2025-02-16 19:08:33,403 - INFO - kucoin-bitget - Ticker kucoin: 327.05
+2025-02-16 19:08:33,404 - INFO - kucoin-bitget - Ticker bitget: 327.8
+2025-02-16 19:08:33,405 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: MGT/USDT (kucoin), MGT/USDT (bitget)
+2025-02-16 19:08:33,710 - INFO - binance-bitget - Ticker binance: 327.7
+2025-02-16 19:08:33,710 - INFO - binance-bitget - Ticker bitget: 327.8
+2025-02-16 19:08:33,711 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: IDEX/USDT (binance), IDEX/USDT (bitget)
+2025-02-16 19:08:33,924 - INFO - binance-kucoin - Ticker binance: 0.1388
+2025-02-16 19:08:33,924 - INFO - binance-kucoin - Ticker kucoin: 0.1387
+2025-02-16 19:08:33,925 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: AEVO/USDT (binance), AEVO/USDT (kucoin)
+2025-02-16 19:08:34,173 - INFO - kucoin-bitget - Ticker kucoin: 0.00365
+2025-02-16 19:08:34,174 - INFO - kucoin-bitget - Ticker bitget: 0.00363
+2025-02-16 19:08:34,175 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: BLUR/USDT (kucoin), BLUR/USDT (bitget)
+2025-02-16 19:08:34,211 - INFO - binance-bitstamp - Ticker binance: 0.1323
+2025-02-16 19:08:34,211 - INFO - binance-bitstamp - Ticker bitstamp: 0.13182
+2025-02-16 19:08:34,212 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: NEAR/EUR (binance), NEAR/EUR (bitstamp)
+2025-02-16 19:08:34,233 - INFO - bitget-bitstamp - Ticker bitget: 2554.76
+2025-02-16 19:08:34,233 - INFO - bitget-bitstamp - Ticker bitstamp: 2553.1
+2025-02-16 19:08:34,234 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: USDC/USDT (bitget), USDC/USDT (bitstamp)
+2025-02-16 19:08:34,358 - INFO - binance-bitget - Ticker binance: 0.03741
+2025-02-16 19:08:34,359 - INFO - binance-bitget - Ticker bitget: 0.03744
+2025-02-16 19:08:34,359 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: LAZIO/USDT (binance), LAZIO/USDT (bitget)
+2025-02-16 19:08:34,402 - INFO - kucoin-bitstamp - Ticker kucoin: 2675.61
+2025-02-16 19:08:34,403 - INFO - kucoin-bitstamp - Ticker bitstamp: 2678.1
+2025-02-16 19:08:34,404 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: ETH/EUR (kucoin), ETH/EUR (bitstamp)
+2025-02-16 19:08:34,927 - INFO - kucoin-bitget - Ticker kucoin: 0.1387
+2025-02-16 19:08:34,927 - INFO - kucoin-bitget - Ticker bitget: 0.1389
+2025-02-16 19:08:34,928 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: MAJOR/USDT (kucoin), MAJOR/USDT (bitget)
+2025-02-16 19:08:35,109 - INFO - binance-bitget - Ticker binance: 1.251
+2025-02-16 19:08:35,109 - INFO - binance-bitget - Ticker bitget: 1.252
+2025-02-16 19:08:35,110 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: VIB/USDT (binance), VIB/USDT (bitget)
+2025-02-16 19:08:35,396 - INFO - binance-kucoin - Ticker binance: 0.1619
+2025-02-16 19:08:35,397 - INFO - binance-kucoin - Ticker kucoin: 0.162
+2025-02-16 19:08:35,398 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: STG/USDT (binance), STG/USDT (kucoin)
+2025-02-16 19:08:35,582 - INFO - binance-bitstamp - Ticker binance: 3.326
+2025-02-16 19:08:35,582 - INFO - binance-bitstamp - Ticker bitstamp: 3.28
+2025-02-16 19:08:35,682 - INFO - bitget-bitstamp - Ticker bitget: 0.9998
+2025-02-16 19:08:35,683 - INFO - bitget-bitstamp - Ticker bitstamp: 1.00017
+2025-02-16 19:08:35,683 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: USDC/EUR (bitget), USDC/EUR (bitstamp)
+2025-02-16 19:08:35,728 - INFO - kucoin-bitget - Ticker kucoin: 0.1875
+2025-02-16 19:08:35,729 - INFO - kucoin-bitget - Ticker bitget: 0.1876
+2025-02-16 19:08:35,730 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: AEVO/USDT (kucoin), AEVO/USDT (bitget)
+2025-02-16 19:08:35,740 - INFO - binance-bitget - Ticker binance: 0.0617
+2025-02-16 19:08:35,740 - INFO - binance-bitget - Ticker bitget: 0.06156
+2025-02-16 19:08:35,741 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: BLUR/USDT (binance), BLUR/USDT (bitget)
+2025-02-16 19:08:35,753 - INFO - kucoin-bitstamp - Ticker kucoin: 2567.51
+2025-02-16 19:08:35,753 - INFO - kucoin-bitstamp - Ticker bitstamp: 2553.1
+2025-02-16 19:08:35,754 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-16 19:08:36,166 - INFO - binance-bitstamp - Opportunity: Buy on BitstampExchange (price: 3.28, eff.: 3.2882) | Sell on BinanceExchange (price: 3.326, eff.: 3.3227) | Ticker Profit: 1.05%
+2025-02-16 19:08:36,167 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: ETH/EUR (binance), ETH/EUR (bitstamp)
+2025-02-16 19:08:36,169 - INFO - binance-kucoin - Ticker binance: 0.2783
+2025-02-16 19:08:36,169 - INFO - binance-kucoin - Ticker kucoin: 0.2793
+2025-02-16 19:08:36,170 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: ERN/USDT (binance), ERN/USDT (kucoin)
+2025-02-16 19:08:36,425 - INFO - binance-bitget - Ticker binance: 0.1388
+2025-02-16 19:08:36,425 - INFO - binance-bitget - Ticker bitget: 0.1389
+2025-02-16 19:08:36,426 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: AEVO/USDT (binance), AEVO/USDT (bitget)
+2025-02-16 19:08:36,633 - INFO - kucoin-bitget - Ticker kucoin: 0.162
+2025-02-16 19:08:36,633 - INFO - kucoin-bitget - Ticker bitget: 0.1623
+2025-02-16 19:08:36,634 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: STG/USDT (kucoin), STG/USDT (bitget)
+2025-02-16 19:08:36,936 - INFO - binance-kucoin - Ticker binance: 1.458
+2025-02-16 19:08:36,937 - INFO - binance-kucoin - Ticker kucoin: 1.4603
+2025-02-16 19:08:36,938 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: CTSI/USDT (binance), CTSI/USDT (kucoin)
+2025-02-16 19:08:37,039 - INFO - bitget-bitstamp - Ticker bitget: 0.9545
+2025-02-16 19:08:37,039 - INFO - bitget-bitstamp - Ticker bitstamp: 0.95427
+2025-02-16 19:08:37,040 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: AVAX/EUR (bitget), AVAX/EUR (bitstamp)
+2025-02-16 19:08:37,146 - INFO - binance-bitget - Ticker binance: 0.162
+2025-02-16 19:08:37,155 - INFO - binance-bitget - Ticker bitget: 0.1623
+2025-02-16 19:08:37,158 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: FLM/USDT (binance), FLM/USDT (bitget)
+2025-02-16 19:08:37,392 - INFO - kucoin-bitget - Ticker kucoin: 0.2793
+2025-02-16 19:08:37,392 - INFO - kucoin-bitget - Ticker bitget: 0.2783
+2025-02-16 19:08:37,393 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: HAPPY/USDT (kucoin), HAPPY/USDT (bitget)
+2025-02-16 19:08:37,484 - INFO - binance-bitstamp - Ticker binance: 2554.11
+2025-02-16 19:08:37,485 - INFO - binance-bitstamp - Ticker bitstamp: 2553.1
+2025-02-16 19:08:37,486 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: ICP/EUR (binance), ICP/EUR (bitstamp)
+2025-02-16 19:08:37,520 - INFO - kucoin-bitstamp - Ticker kucoin: 2.71213
+2025-02-16 19:08:37,521 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.71107
+2025-02-16 19:08:37,522 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: BTC/USDT (kucoin), BTC/USDT (bitstamp)
+2025-02-16 19:08:37,843 - INFO - binance-bitget - Ticker binance: 0.0421
+2025-02-16 19:08:37,843 - INFO - binance-bitget - Ticker bitget: 0.04223
+2025-02-16 19:08:37,845 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: STG/USDT (binance), STG/USDT (bitget)
+2025-02-16 19:08:38,375 - INFO - kucoin-bitget - Ticker kucoin: 0.001822
+2025-02-16 19:08:38,376 - INFO - kucoin-bitget - Ticker bitget: 0.001824
+2025-02-16 19:08:38,377 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: CTSI/USDT (kucoin), CTSI/USDT (bitget)
+2025-02-16 19:08:38,402 - INFO - binance-kucoin - Ticker binance: 0.1128
+2025-02-16 19:08:38,402 - INFO - binance-kucoin - Ticker kucoin: 0.113
+2025-02-16 19:08:38,403 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: ALGO/USDT (binance), ALGO/USDT (kucoin)
+2025-02-16 19:08:38,413 - INFO - bitget-bitstamp - Ticker bitget: 23.79
+2025-02-16 19:08:38,413 - INFO - bitget-bitstamp - Ticker bitstamp: 23.72741
+2025-02-16 19:08:38,414 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: DOGE/EUR (bitget), DOGE/EUR (bitstamp)
+2025-02-16 19:08:38,521 - INFO - binance-bitget - Ticker binance: 0.2783
+2025-02-16 19:08:38,521 - INFO - binance-bitget - Ticker bitget: 0.2783
+2025-02-16 19:08:38,522 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: WLD/EUR (binance), WLD/EUR (bitget)
+2025-02-16 19:08:38,851 - INFO - binance-bitstamp - Ticker binance: 6.612
+2025-02-16 19:08:38,851 - INFO - binance-bitstamp - Ticker bitstamp: 6.632
+2025-02-16 19:08:38,852 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: RNDR/EUR (binance), RNDR/EUR (bitstamp)
+2025-02-16 19:08:38,895 - INFO - kucoin-bitstamp - Ticker kucoin: 96891.7
+2025-02-16 19:08:38,896 - INFO - kucoin-bitstamp - Ticker bitstamp: 96710.0
+2025-02-16 19:08:38,897 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: BTC/EUR (kucoin), BTC/EUR (bitstamp)
+2025-02-16 19:08:39,099 - INFO - kucoin-bitget - Ticker kucoin: 0.113
+2025-02-16 19:08:39,100 - INFO - kucoin-bitget - Ticker bitget: 0.1127
+2025-02-16 19:08:39,101 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: ALGO/USDT (kucoin), ALGO/USDT (bitget)
+2025-02-16 19:08:39,178 - INFO - binance-bitget - Ticker binance: 1.158
+2025-02-16 19:08:39,179 - INFO - binance-bitget - Ticker bitget: 1.1566
+2025-02-16 19:08:39,180 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: CTSI/USDT (binance), CTSI/USDT (bitget)
+2025-02-16 19:08:39,454 - INFO - binance-kucoin - Ticker binance: 0.2756
+2025-02-16 19:08:39,455 - INFO - binance-kucoin - Ticker kucoin: 0.2757
+2025-02-16 19:08:39,456 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: PEOPLE/USDT (binance), PEOPLE/USDT (kucoin)
+2025-02-16 19:08:39,745 - INFO - bitget-bitstamp - Ticker bitget: 0.2536
+2025-02-16 19:08:39,745 - INFO - bitget-bitstamp - Ticker bitstamp: 0.25353
+2025-02-16 19:08:39,747 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: ONDO/EUR (bitget), ONDO/EUR (bitstamp)
+2025-02-16 19:08:39,829 - INFO - kucoin-bitget - Ticker kucoin: 0.2757
+2025-02-16 19:08:39,830 - INFO - kucoin-bitget - Ticker bitget: 0.2755
+2025-02-16 19:08:39,831 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: PEOPLE/USDT (kucoin), PEOPLE/USDT (bitget)
+2025-02-16 19:08:39,916 - INFO - binance-bitget - Ticker binance: 0.1128
+2025-02-16 19:08:39,916 - INFO - binance-bitget - Ticker bitget: 0.1127
+2025-02-16 19:08:39,917 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: ALGO/USDT (binance), ALGO/USDT (bitget)
+2025-02-16 19:08:40,196 - WARNING - binance-bitstamp - Ticker price dla binance jest None, pomijam asset {'binance': 'RNDR/EUR', 'bitstamp': 'RNDR/EUR'}
+2025-02-16 19:08:40,197 - INFO - binance-bitstamp - Ticker bitstamp: 4.332
+2025-02-16 19:08:40,197 - WARNING - binance-bitstamp - Niewystarczające dane ticker dla {'binance': 'RNDR/EUR', 'bitstamp': 'RNDR/EUR'}. Pomijam.
+2025-02-16 19:08:40,198 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: UNI/EUR (binance), UNI/EUR (bitstamp)
+2025-02-16 19:08:40,208 - INFO - binance-kucoin - Ticker binance: 0.01999
+2025-02-16 19:08:40,208 - INFO - binance-kucoin - Ticker kucoin: 0.01998
+2025-02-16 19:08:40,208 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: KEY/USDT (binance), KEY/USDT (kucoin)
+2025-02-16 19:08:40,370 - INFO - kucoin-bitstamp - Ticker kucoin: 92821.88
+2025-02-16 19:08:40,371 - INFO - kucoin-bitstamp - Ticker bitstamp: 92463.0
+2025-02-16 19:08:40,372 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-16 19:08:40,685 - INFO - kucoin-bitget - Ticker kucoin: 0.01998
+2025-02-16 19:08:40,686 - INFO - kucoin-bitget - Ticker bitget: 0.01999
+2025-02-16 19:08:40,687 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: ANIME/USDT (kucoin), ANIME/USDT (bitget)
+2025-02-16 19:08:40,688 - INFO - binance-bitget - Ticker binance: 0.2756
+2025-02-16 19:08:40,688 - INFO - binance-bitget - Ticker bitget: 0.2755
+2025-02-16 19:08:40,689 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: PEOPLE/USDT (binance), PEOPLE/USDT (bitget)
+2025-02-16 19:08:40,957 - WARNING - binance-kucoin - Ticker price dla binance jest None, pomijam asset {'binance': 'KEY/USDT', 'kucoin': 'KEY/USDT'}
+2025-02-16 19:08:40,958 - INFO - binance-kucoin - Ticker kucoin: 0.000722
+2025-02-16 19:08:40,958 - WARNING - binance-kucoin - Niewystarczające dane ticker dla {'binance': 'KEY/USDT', 'kucoin': 'KEY/USDT'}. Pomijam.
+2025-02-16 19:08:40,959 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: ANIME/USDT (binance), ANIME/USDT (kucoin)
+2025-02-16 19:08:41,253 - INFO - bitget-bitstamp - Ticker bitget: 1.2351
+2025-02-16 19:08:41,253 - INFO - bitget-bitstamp - Ticker bitstamp: 1.2341
+2025-02-16 19:08:41,254 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: SOL/EUR (bitget), SOL/EUR (bitstamp)
+2025-02-16 19:08:41,412 - INFO - binance-bitget - Ticker binance: 0.01999
+2025-02-16 19:08:41,412 - INFO - binance-bitget - Ticker bitget: 0.01999
+2025-02-16 19:08:41,413 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: KEY/USDT (binance), KEY/USDT (bitget)
+2025-02-16 19:08:41,456 - INFO - kucoin-bitget - Ticker kucoin: 0.025062
+2025-02-16 19:08:41,466 - INFO - kucoin-bitget - Ticker bitget: 0.0253
+2025-02-16 19:08:41,558 - WARNING - binance-bitstamp - Ticker price dla binance jest None, pomijam asset {'binance': 'UNI/EUR', 'bitstamp': 'UNI/EUR'}
+2025-02-16 19:08:41,558 - INFO - binance-bitstamp - Ticker bitstamp: 9.18767
+2025-02-16 19:08:41,559 - WARNING - binance-bitstamp - Niewystarczające dane ticker dla {'binance': 'UNI/EUR', 'bitstamp': 'UNI/EUR'}. Pomijam.
+2025-02-16 19:08:41,559 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: MATIC/EUR (binance), MATIC/EUR (bitstamp)
+2025-02-16 19:08:41,705 - INFO - binance-kucoin - Ticker binance: 0.0251
+2025-02-16 19:08:41,706 - INFO - binance-kucoin - Ticker kucoin: 0.025062
+2025-02-16 19:08:41,707 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: EIGEN/USDT (binance), EIGEN/USDT (kucoin)
+2025-02-16 19:08:41,720 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9999
+2025-02-16 19:08:41,720 - INFO - kucoin-bitstamp - Ticker bitstamp: 1.00017
+2025-02-16 19:08:41,721 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-16 19:08:42,083 - WARNING - binance-bitget - Ticker price dla binance jest None, pomijam asset {'binance': 'KEY/USDT', 'bitget': 'KEY/USDT'}
+2025-02-16 19:08:42,083 - INFO - binance-bitget - Ticker bitget: 0.000714
+2025-02-16 19:08:42,084 - WARNING - binance-bitget - Niewystarczające dane ticker dla {'binance': 'KEY/USDT', 'bitget': 'KEY/USDT'}. Pomijam.
+2025-02-16 19:08:42,085 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: ANIME/USDT (binance), ANIME/USDT (bitget)
+2025-02-16 19:08:42,308 - INFO - kucoin-bitget - Opportunity: Buy on KucoinExchange (price: 0.025062, eff.: 0.0251) | Sell on BitgetExchange (price: 0.0253, eff.: 0.0253) | Ticker Profit: 0.75% | Profit: -0.03436849799999919 USDT
+2025-02-16 19:08:42,309 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: KEY/USDT (kucoin), KEY/USDT (bitget)
+2025-02-16 19:08:42,510 - INFO - binance-kucoin - Ticker binance: 1.604
+2025-02-16 19:08:42,511 - INFO - binance-kucoin - Ticker kucoin: 1.6
+2025-02-16 19:08:42,512 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: ZRO/USDT (binance), ZRO/USDT (kucoin)
+2025-02-16 19:08:42,584 - INFO - bitget-bitstamp - Ticker bitget: 180.37
+2025-02-16 19:08:42,585 - INFO - bitget-bitstamp - Ticker bitstamp: 180.3651
+2025-02-16 19:08:42,586 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: LTC/EUR (bitget), LTC/EUR (bitstamp)
+2025-02-16 19:08:42,800 - INFO - binance-bitget - Ticker binance: 0.0251
+2025-02-16 19:08:42,801 - INFO - binance-bitget - Ticker bitget: 0.0253
+2025-02-16 19:08:42,906 - WARNING - binance-bitstamp - Ticker price dla binance jest None, pomijam asset {'binance': 'MATIC/EUR', 'bitstamp': 'MATIC/EUR'}
+2025-02-16 19:08:42,907 - INFO - binance-bitstamp - Ticker bitstamp: 0.308
+2025-02-16 19:08:42,907 - WARNING - binance-bitstamp - Niewystarczające dane ticker dla {'binance': 'MATIC/EUR', 'bitstamp': 'MATIC/EUR'}. Pomijam.
+2025-02-16 19:08:42,907 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: AVAX/EUR (binance), AVAX/EUR (bitstamp)
+2025-02-16 19:08:43,031 - INFO - kucoin-bitget - Ticker kucoin: 0.000722
+2025-02-16 19:08:43,031 - INFO - kucoin-bitget - Ticker bitget: 0.000714
+2025-02-16 19:08:43,079 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9548
+2025-02-16 19:08:43,080 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95428
+2025-02-16 19:08:43,231 - INFO - binance-kucoin - Ticker binance: 2.9
+2025-02-16 19:08:43,231 - INFO - binance-kucoin - Ticker kucoin: 2.8995
+2025-02-16 19:08:43,232 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: AMP/USDT (binance), AMP/USDT (kucoin)
+2025-02-16 19:08:43,432 - INFO - binance-bitget - Opportunity: Buy on BinanceExchange (price: 0.0251, eff.: 0.0251) | Sell on BitgetExchange (price: 0.0253, eff.: 0.0253) | Ticker Profit: 0.60% | Profit: -0.5974105575699156 USDT
+2025-02-16 19:08:43,433 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: ARK/USDT (binance), ARK/USDT (bitget)
+2025-02-16 19:08:43,798 - INFO - binance-bitget - Ticker binance: 0.3987
+2025-02-16 19:08:43,799 - INFO - binance-bitget - Ticker bitget: 0.3995
+2025-02-16 19:08:43,800 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: LTC/EUR (binance), LTC/EUR (bitget)
+2025-02-16 19:08:43,812 - INFO - binance-kucoin - Ticker binance: 0.005741
+2025-02-16 19:08:43,813 - INFO - binance-kucoin - Ticker kucoin: 0.005742
+2025-02-16 19:08:43,814 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: FLUX/USDT (binance), FLUX/USDT (kucoin)
+2025-02-16 19:08:43,919 - INFO - bitget-bitstamp - Ticker bitget: 120.66
+2025-02-16 19:08:43,920 - INFO - bitget-bitstamp - Ticker bitstamp: 120.4
+2025-02-16 19:08:43,922 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: SHIB/EUR (bitget), SHIB/EUR (bitstamp)
+2025-02-16 19:08:43,952 - INFO - kucoin-bitget - Opportunity: Buy on BitgetExchange (price: 0.000714, eff.: 0.0007) | Sell on KucoinExchange (price: 0.000722, eff.: 0.0007) | Ticker Profit: 0.92%
+2025-02-16 19:08:43,953 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: ETHW/USDT (kucoin), ETHW/USDT (bitget)
+2025-02-16 19:08:44,081 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-16 19:08:44,227 - INFO - binance-bitstamp - Ticker binance: 23.77
+2025-02-16 19:08:44,228 - INFO - binance-bitstamp - Ticker bitstamp: 23.72741
+2025-02-16 19:08:44,229 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: DOGE/EUR (binance), DOGE/EUR (bitstamp)
+2025-02-16 19:08:44,485 - INFO - binance-bitget - Ticker binance: 120.42
+2025-02-16 19:08:44,486 - INFO - binance-bitget - Ticker bitget: 120.66
+2025-02-16 19:08:44,486 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: EIGEN/USDT (binance), EIGEN/USDT (bitget)
+2025-02-16 19:08:44,601 - INFO - binance-kucoin - Ticker binance: 0.4476
+2025-02-16 19:08:44,601 - INFO - binance-kucoin - Ticker kucoin: 0.4474
+2025-02-16 19:08:44,602 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: MANTA/USDT (binance), MANTA/USDT (kucoin)
+2025-02-16 19:08:44,794 - INFO - kucoin-bitget - Ticker kucoin: 1.9625
+2025-02-16 19:08:44,795 - INFO - kucoin-bitget - Ticker bitget: 1.95
+2025-02-16 19:08:44,796 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: EIGEN/USDT (kucoin), EIGEN/USDT (bitget)
+2025-02-16 19:08:45,200 - INFO - binance-bitget - Ticker binance: 1.604
+2025-02-16 19:08:45,201 - INFO - binance-bitget - Ticker bitget: 1.605
+2025-02-16 19:08:45,202 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: ZRO/USDT (binance), ZRO/USDT (bitget)
+2025-02-16 19:08:45,265 - INFO - bitget-bitstamp - Ticker bitget: 1.521e-05
+2025-02-16 19:08:45,266 - INFO - bitget-bitstamp - Ticker bitstamp: 1.513e-05
+2025-02-16 19:08:45,267 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: XRP/USDT (bitget), XRP/USDT (bitstamp)
+2025-02-16 19:08:45,347 - INFO - kucoin-bitstamp - Ticker kucoin: 0.954
+2025-02-16 19:08:45,348 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95427
+2025-02-16 19:08:45,349 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: ETH/USDT (kucoin), ETH/USDT (bitstamp)
+2025-02-16 19:08:45,393 - INFO - binance-kucoin - Ticker binance: 0.398
+2025-02-16 19:08:45,394 - INFO - binance-kucoin - Ticker kucoin: 0.3992
+2025-02-16 19:08:45,396 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: STORJ/USDT (binance), STORJ/USDT (kucoin)
+2025-02-16 19:08:45,558 - INFO - binance-bitstamp - Ticker binance: 0.25344
+2025-02-16 19:08:45,558 - INFO - binance-bitstamp - Ticker bitstamp: 0.25353
+2025-02-16 19:08:45,559 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: SOL/EUR (binance), SOL/EUR (bitstamp)
+2025-02-16 19:08:45,561 - INFO - kucoin-bitget - Ticker kucoin: 1.6036
+2025-02-16 19:08:45,561 - INFO - kucoin-bitget - Ticker bitget: 1.605
+2025-02-16 19:08:45,562 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: ZRO/USDT (kucoin), ZRO/USDT (bitget)
+2025-02-16 19:08:45,867 - INFO - binance-bitget - Ticker binance: 2.9
+2025-02-16 19:08:45,868 - INFO - binance-bitget - Ticker bitget: 2.903
+2025-02-16 19:08:45,869 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: AMP/USDT (binance), AMP/USDT (bitget)
+2025-02-16 19:08:46,174 - INFO - binance-kucoin - Ticker binance: 0.3617
+2025-02-16 19:08:46,175 - INFO - binance-kucoin - Ticker kucoin: 0.3645
+2025-02-16 19:08:46,347 - INFO - kucoin-bitget - Ticker kucoin: 2.8995
+2025-02-16 19:08:46,347 - INFO - kucoin-bitget - Ticker bitget: 2.903
+2025-02-16 19:08:46,349 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: AMP/USDT (kucoin), AMP/USDT (bitget)
+2025-02-16 19:08:46,534 - INFO - binance-bitget - Ticker binance: 0.005741
+2025-02-16 19:08:46,534 - INFO - binance-bitget - Ticker bitget: 0.005748
+2025-02-16 19:08:46,535 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: CHESS/USDT (binance), CHESS/USDT (bitget)
+2025-02-16 19:08:46,602 - INFO - bitget-bitstamp - Ticker bitget: 2.7124
+2025-02-16 19:08:46,602 - INFO - bitget-bitstamp - Ticker bitstamp: 2.71107
+2025-02-16 19:08:46,603 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: SUI/EUR (bitget), SUI/EUR (bitstamp)
+2025-02-16 19:08:46,680 - INFO - kucoin-bitstamp - Ticker kucoin: 2675.42
+2025-02-16 19:08:46,681 - INFO - kucoin-bitstamp - Ticker bitstamp: 2678.1
+2025-02-16 19:08:46,682 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: ETH/EUR (kucoin), ETH/EUR (bitstamp)
+2025-02-16 19:08:46,884 - INFO - binance-bitstamp - Ticker binance: 180.38
+2025-02-16 19:08:46,885 - INFO - binance-bitstamp - Ticker bitstamp: 180.3651
+2025-02-16 19:08:46,886 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: LTC/EUR (binance), LTC/EUR (bitstamp)
+2025-02-16 19:08:47,022 - INFO - binance-kucoin - Opportunity: Buy on BinanceExchange (price: 0.3617, eff.: 0.3621) | Sell on KucoinExchange (price: 0.3645, eff.: 0.3641) | Ticker Profit: 0.57% | Profit: -0.05691600000000108 USDT
+2025-02-16 19:08:47,022 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: DCR/USDT (binance), DCR/USDT (kucoin)
+2025-02-16 19:08:47,072 - INFO - kucoin-bitget - Ticker kucoin: 0.005742
+2025-02-16 19:08:47,072 - INFO - kucoin-bitget - Ticker bitget: 0.005748
+2025-02-16 19:08:47,073 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: FLUX/USDT (kucoin), FLUX/USDT (bitget)
+2025-02-16 19:08:47,198 - INFO - binance-bitget - Ticker binance: 0.1227
+2025-02-16 19:08:47,198 - INFO - binance-bitget - Ticker bitget: 0.1224
+2025-02-16 19:08:47,200 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: FLUX/USDT (binance), FLUX/USDT (bitget)
+2025-02-16 19:08:47,560 - INFO - binance-kucoin - Ticker binance: 13.82
+2025-02-16 19:08:47,561 - INFO - binance-kucoin - Ticker kucoin: 13.85
+2025-02-16 19:08:47,562 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: UTK/USDT (binance), UTK/USDT (kucoin)
+2025-02-16 19:08:47,789 - INFO - kucoin-bitget - Ticker kucoin: 0.4474
+2025-02-16 19:08:47,790 - INFO - kucoin-bitget - Ticker bitget: 0.4473
+2025-02-16 19:08:47,791 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: MANTA/USDT (kucoin), MANTA/USDT (bitget)
+2025-02-16 19:08:47,938 - INFO - binance-bitget - Ticker binance: 0.4476
+2025-02-16 19:08:47,938 - INFO - binance-bitget - Ticker bitget: 0.4473
+2025-02-16 19:08:47,939 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: MANTA/USDT (binance), MANTA/USDT (bitget)
+2025-02-16 19:08:47,950 - INFO - bitget-bitstamp - Ticker bitget: 3.1329
+2025-02-16 19:08:47,950 - INFO - bitget-bitstamp - Ticker bitstamp: 3.13
+2025-02-16 19:08:47,951 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: WIF/EUR (bitget), WIF/EUR (bitstamp)
+2025-02-16 19:08:48,019 - INFO - kucoin-bitstamp - Ticker kucoin: 2567.51
+2025-02-16 19:08:48,019 - INFO - kucoin-bitstamp - Ticker bitstamp: 2553.1
+2025-02-16 19:08:48,020 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-16 19:08:48,211 - INFO - binance-bitstamp - Ticker binance: 120.42
+2025-02-16 19:08:48,212 - INFO - binance-bitstamp - Ticker bitstamp: 120.4
+2025-02-16 19:08:48,213 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: SHIB/EUR (binance), SHIB/EUR (bitstamp)
+2025-02-16 19:08:48,295 - INFO - binance-kucoin - Ticker binance: 0.05834
+2025-02-16 19:08:48,296 - INFO - binance-kucoin - Ticker kucoin: 0.05829
+2025-02-16 19:08:48,297 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: BSV/USDT (binance), BSV/USDT (kucoin)
+2025-02-16 19:08:48,513 - INFO - kucoin-bitget - Ticker kucoin: 0.3992
+2025-02-16 19:08:48,513 - INFO - kucoin-bitget - Ticker bitget: 0.398
+2025-02-16 19:08:48,515 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: URO/USDT (kucoin), URO/USDT (bitget)
+2025-02-16 19:08:48,720 - INFO - binance-bitget - Ticker binance: 0.398
+2025-02-16 19:08:48,721 - INFO - binance-bitget - Ticker bitget: 0.398
+2025-02-16 19:08:48,722 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: STORJ/USDT (binance), STORJ/USDT (bitget)
+2025-02-16 19:08:49,047 - WARNING - binance-kucoin - Ticker price dla binance jest None, pomijam asset {'binance': 'BSV/USDT', 'kucoin': 'BSV/USDT'}
+2025-02-16 19:08:49,047 - INFO - binance-kucoin - Ticker kucoin: 39.29
+2025-02-16 19:08:49,048 - WARNING - binance-kucoin - Niewystarczające dane ticker dla {'binance': 'BSV/USDT', 'kucoin': 'BSV/USDT'}. Pomijam.
+2025-02-16 19:08:49,049 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: OM/USDT (binance), OM/USDT (kucoin)
+2025-02-16 19:08:49,274 - INFO - bitget-bitstamp - Ticker bitget: 0.624
+2025-02-16 19:08:49,274 - INFO - bitget-bitstamp - Ticker bitstamp: 0.626
+2025-02-16 19:08:49,275 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: BTC/USDT (bitget), BTC/USDT (bitstamp)
+2025-02-16 19:08:49,276 - INFO - kucoin-bitget - Ticker kucoin: 0.00629
+2025-02-16 19:08:49,276 - INFO - kucoin-bitget - Ticker bitget: 0.00631
+2025-02-16 19:08:49,277 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: STORJ/USDT (kucoin), STORJ/USDT (bitget)
+2025-02-16 19:08:49,340 - INFO - kucoin-bitstamp - Ticker kucoin: 2.71166
+2025-02-16 19:08:49,341 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.71107
+2025-02-16 19:08:49,342 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: BTC/USDT (kucoin), BTC/USDT (bitstamp)
+2025-02-16 19:08:49,400 - INFO - binance-bitget - Ticker binance: 0.3617
+2025-02-16 19:08:49,400 - INFO - binance-bitget - Ticker bitget: 0.3619
+2025-02-16 19:08:49,401 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: BSV/USDT (binance), BSV/USDT (bitget)
+2025-02-16 19:08:49,541 - INFO - binance-bitstamp - Ticker binance: 1.518e-05
+2025-02-16 19:08:49,541 - INFO - binance-bitstamp - Ticker bitstamp: 1.513e-05
+2025-02-16 19:08:49,542 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: XRP/USDT (binance), XRP/USDT (bitstamp)
+2025-02-16 19:08:49,780 - INFO - binance-kucoin - Ticker binance: 7.3588
+2025-02-16 19:08:49,781 - INFO - binance-kucoin - Ticker kucoin: 7.34975
+2025-02-16 19:08:49,783 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: BURGER/USDT (binance), BURGER/USDT (kucoin)
+2025-02-16 19:08:49,985 - INFO - kucoin-bitget - Ticker kucoin: 0.3645
+2025-02-16 19:08:49,985 - INFO - kucoin-bitget - Ticker bitget: 0.3619
+2025-02-16 19:08:50,070 - WARNING - binance-bitget - Ticker price dla binance jest None, pomijam asset {'binance': 'BSV/USDT', 'bitget': 'BSV/USDT'}
+2025-02-16 19:08:50,071 - INFO - binance-bitget - Ticker bitget: 39.37
+2025-02-16 19:08:50,071 - WARNING - binance-bitget - Niewystarczające dane ticker dla {'binance': 'BSV/USDT', 'bitget': 'BSV/USDT'}. Pomijam.
+2025-02-16 19:08:50,072 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: OM/USDT (binance), OM/USDT (bitget)
+2025-02-16 19:08:50,507 - INFO - binance-kucoin - Ticker binance: 0.4352
+2025-02-16 19:08:50,508 - INFO - binance-kucoin - Ticker kucoin: 0.4351
+2025-02-16 19:08:50,509 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: HNT/USDT (binance), HNT/USDT (kucoin)
+2025-02-16 19:08:50,631 - INFO - bitget-bitstamp - Ticker bitget: 96888.71
+2025-02-16 19:08:50,632 - INFO - bitget-bitstamp - Ticker bitstamp: 96710.0
+2025-02-16 19:08:50,632 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: ADA/EUR (bitget), ADA/EUR (bitstamp)
+2025-02-16 19:08:50,720 - INFO - kucoin-bitstamp - Ticker kucoin: 96891.6
+2025-02-16 19:08:50,727 - INFO - kucoin-bitstamp - Ticker bitstamp: 96710.0
+2025-02-16 19:08:50,747 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: BTC/EUR (kucoin), BTC/EUR (bitstamp)
+2025-02-16 19:08:50,785 - INFO - binance-bitget - Ticker binance: 7.3594
+2025-02-16 19:08:50,786 - INFO - binance-bitget - Ticker bitget: 7.3434
+2025-02-16 19:08:50,790 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: BURGER/USDT (binance), BURGER/USDT (bitget)
+2025-02-16 19:08:50,912 - INFO - binance-bitstamp - Ticker binance: 2.711
+2025-02-16 19:08:50,913 - INFO - binance-bitstamp - Ticker bitstamp: 2.71107
+2025-02-16 19:08:50,914 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: SUI/EUR (binance), SUI/EUR (bitstamp)
+2025-02-16 19:08:51,091 - WARNING - binance-kucoin - Ticker price dla binance jest None, pomijam asset {'binance': 'HNT/USDT', 'kucoin': 'HNT/USDT'}
+2025-02-16 19:08:51,092 - INFO - binance-kucoin - Ticker kucoin: 3.714
+2025-02-16 19:08:51,092 - WARNING - binance-kucoin - Niewystarczające dane ticker dla {'binance': 'HNT/USDT', 'kucoin': 'HNT/USDT'}. Pomijam.
+2025-02-16 19:08:51,092 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: ZEC/USDT (binance), ZEC/USDT (kucoin)
+2025-02-16 19:08:51,122 - INFO - kucoin-bitget - Opportunity: Buy on BitgetExchange (price: 0.3619, eff.: 0.3623) | Sell on KucoinExchange (price: 0.3645, eff.: 0.3641) | Ticker Profit: 0.52%
+2025-02-16 19:08:51,122 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: NFT/USDT (kucoin), NFT/USDT (bitget)
+2025-02-16 19:08:51,425 - INFO - binance-bitget - Ticker binance: 0.4352
+2025-02-16 19:08:51,426 - INFO - binance-bitget - Ticker bitget: 0.4354
+2025-02-16 19:08:51,427 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: HNT/USDT (binance), HNT/USDT (bitget)
+2025-02-16 19:08:51,830 - INFO - binance-kucoin - Ticker binance: 33.56
+2025-02-16 19:08:51,831 - INFO - binance-kucoin - Ticker kucoin: 33.601
+2025-02-16 19:08:51,832 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: VIDT/USDT (binance), VIDT/USDT (kucoin)
+2025-02-16 19:08:51,999 - INFO - bitget-bitstamp - Ticker bitget: 0.7335
+2025-02-16 19:08:52,000 - INFO - bitget-bitstamp - Ticker bitstamp: 0.73522
+2025-02-16 19:08:52,001 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: ETH/USDT (bitget), ETH/USDT (bitstamp)
+2025-02-16 19:08:52,060 - INFO - kucoin-bitstamp - Ticker kucoin: 92821.88
+2025-02-16 19:08:52,060 - INFO - kucoin-bitstamp - Ticker bitstamp: 92459.0
+2025-02-16 19:08:52,061 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-16 19:08:52,088 - INFO - kucoin-bitget - Ticker kucoin: 4.552e-07
+2025-02-16 19:08:52,089 - INFO - kucoin-bitget - Ticker bitget: 4.563e-07
+2025-02-16 19:08:52,089 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: BSV/USDT (kucoin), BSV/USDT (bitget)
+2025-02-16 19:08:52,090 - WARNING - binance-bitget - Ticker price dla binance jest None, pomijam asset {'binance': 'HNT/USDT', 'bitget': 'HNT/USDT'}
+2025-02-16 19:08:52,090 - INFO - binance-bitget - Ticker bitget: 3.713
+2025-02-16 19:08:52,091 - WARNING - binance-bitget - Niewystarczające dane ticker dla {'binance': 'HNT/USDT', 'bitget': 'HNT/USDT'}. Pomijam.
+2025-02-16 19:08:52,091 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: ENA/EUR (binance), ENA/EUR (bitget)
+2025-02-16 19:08:52,226 - INFO - binance-bitstamp - Ticker binance: 3.1356
+2025-02-16 19:08:52,227 - INFO - binance-bitstamp - Ticker bitstamp: 3.13
+2025-02-16 19:08:52,228 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: WIF/EUR (binance), WIF/EUR (bitstamp)
+2025-02-16 19:08:52,591 - INFO - binance-kucoin - Ticker binance: 0.01852
+2025-02-16 19:08:52,591 - INFO - binance-kucoin - Ticker kucoin: 0.01843
+2025-02-16 19:08:52,592 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: ACX/USDT (binance), ACX/USDT (kucoin)
+2025-02-16 19:08:52,802 - WARNING - binance-bitget - Ticker price dla binance jest None, pomijam asset {'binance': 'ENA/EUR', 'bitget': 'ENA/EUR'}
+2025-02-16 19:08:52,803 - INFO - binance-bitget - Ticker bitget: 0.4263
+2025-02-16 19:08:52,804 - WARNING - binance-bitget - Niewystarczające dane ticker dla {'binance': 'ENA/EUR', 'bitget': 'ENA/EUR'}. Pomijam.
+2025-02-16 19:08:52,804 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: SAGA/USDT (binance), SAGA/USDT (bitget)
+2025-02-16 19:08:53,031 - INFO - kucoin-bitget - Ticker kucoin: 39.29
+2025-02-16 19:08:53,033 - INFO - kucoin-bitget - Ticker bitget: 39.37
+2025-02-16 19:08:53,034 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: OM/USDT (kucoin), OM/USDT (bitget)
+2025-02-16 19:08:53,348 - INFO - bitget-bitstamp - Ticker bitget: 2675.21
+2025-02-16 19:08:53,349 - INFO - bitget-bitstamp - Ticker bitstamp: 2678.1
+2025-02-16 19:08:53,350 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: LINK/EUR (bitget), LINK/EUR (bitstamp)
+2025-02-16 19:08:53,379 - INFO - binance-kucoin - Ticker binance: 0.3295
+2025-02-16 19:08:53,379 - INFO - binance-kucoin - Ticker kucoin: 0.33
+2025-02-16 19:08:53,381 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: XEC/USDT (binance), XEC/USDT (kucoin)
+2025-02-16 19:08:53,420 - INFO - kucoin-bitstamp - Ticker kucoin: 1.0
+2025-02-16 19:08:53,421 - INFO - kucoin-bitstamp - Ticker bitstamp: 1.00017
+2025-02-16 19:08:53,422 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-16 19:08:53,519 - INFO - binance-bitget - Ticker binance: 0.6871
+2025-02-16 19:08:53,523 - INFO - binance-bitget - Ticker bitget: 0.6864
+2025-02-16 19:08:53,537 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: ACX/USDT (binance), ACX/USDT (bitget)
+2025-02-16 19:08:53,593 - INFO - binance-bitstamp - Ticker binance: 0.628
+2025-02-16 19:08:53,593 - INFO - binance-bitstamp - Ticker bitstamp: 0.626
+2025-02-16 19:08:53,594 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: EGLD/EUR (binance), EGLD/EUR (bitstamp)
+2025-02-16 19:08:53,755 - INFO - kucoin-bitget - Ticker kucoin: 7.34975
+2025-02-16 19:08:53,756 - INFO - kucoin-bitget - Ticker bitget: 7.3499
+2025-02-16 19:08:53,761 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: BURGER/USDT (kucoin), BURGER/USDT (bitget)
+2025-02-16 19:08:54,194 - INFO - binance-bitget - Ticker binance: 0.3295
+2025-02-16 19:08:54,194 - INFO - binance-bitget - Ticker bitget: 0.3319
+2025-02-16 19:08:54,400 - INFO - binance-kucoin - Ticker binance: 2.609e-05
+2025-02-16 19:08:54,401 - INFO - binance-kucoin - Ticker kucoin: 2.617e-05
+2025-02-16 19:08:54,402 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: ELF/USDT (binance), ELF/USDT (kucoin)
+2025-02-16 19:08:54,567 - INFO - kucoin-bitget - Ticker kucoin: 0.4351
+2025-02-16 19:08:54,568 - INFO - kucoin-bitget - Ticker bitget: 0.4352
+2025-02-16 19:08:54,569 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: HNT/USDT (kucoin), HNT/USDT (bitget)
+2025-02-16 19:08:54,667 - INFO - bitget-bitstamp - Ticker bitget: 17.95
+2025-02-16 19:08:54,668 - INFO - bitget-bitstamp - Ticker bitstamp: 17.94
+2025-02-16 19:08:54,669 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: BTC/EUR (bitget), BTC/EUR (bitstamp)
+2025-02-16 19:08:54,754 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9548
+2025-02-16 19:08:54,755 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95428
+2025-02-16 19:08:54,942 - INFO - binance-bitstamp - Ticker binance: 21.41
+2025-02-16 19:08:54,942 - INFO - binance-bitstamp - Ticker bitstamp: 21.421
+2025-02-16 19:08:54,943 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: APE/EUR (binance), APE/EUR (bitstamp)
+2025-02-16 19:08:54,970 - INFO - binance-bitget - Opportunity: Buy on BinanceExchange (price: 0.3295, eff.: 0.3298) | Sell on BitgetExchange (price: 0.3319, eff.: 0.3316) | Ticker Profit: 0.53% | Profit: -0.1225218599999991 USDT
+2025-02-16 19:08:54,970 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: BADGER/USDT (binance), BADGER/USDT (bitget)
+2025-02-16 19:08:55,125 - INFO - binance-kucoin - Ticker binance: 0.3041
+2025-02-16 19:08:55,126 - INFO - binance-kucoin - Ticker kucoin: 0.305
+2025-02-16 19:08:55,127 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: D/USDT (binance), D/USDT (kucoin)
+2025-02-16 19:08:55,348 - INFO - binance-bitget - Ticker binance: 3.666
+2025-02-16 19:08:55,349 - INFO - binance-bitget - Ticker bitget: 3.666
+2025-02-16 19:08:55,350 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: ELF/USDT (binance), ELF/USDT (bitget)
+2025-02-16 19:08:55,352 - INFO - kucoin-bitget - Ticker kucoin: 3.714
+2025-02-16 19:08:55,352 - INFO - kucoin-bitget - Ticker bitget: 3.713
+2025-02-16 19:08:55,353 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: TSTBSC/USDT (kucoin), TSTBSC/USDT (bitget)
+2025-02-16 19:08:55,756 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-16 19:08:55,880 - INFO - binance-kucoin - Ticker binance: 0.08354
+2025-02-16 19:08:55,881 - INFO - binance-kucoin - Ticker kucoin: 0.0834
+2025-02-16 19:08:55,882 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: RVN/USDT (binance), RVN/USDT (kucoin)
+2025-02-16 19:08:55,991 - INFO - bitget-bitstamp - Ticker bitget: 92482.06
+2025-02-16 19:08:55,991 - INFO - bitget-bitstamp - Ticker bitstamp: 92456.0
+2025-02-16 19:08:55,993 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: XRP/EUR (bitget), XRP/EUR (bitstamp)
+2025-02-16 19:08:56,106 - INFO - kucoin-bitget - Ticker kucoin: 0.0984
+2025-02-16 19:08:56,107 - INFO - kucoin-bitget - Ticker bitget: 0.09856
+2025-02-16 19:08:56,108 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: SUNDOG/USDT (kucoin), SUNDOG/USDT (bitget)
+2025-02-16 19:08:56,144 - INFO - binance-bitget - Ticker binance: 0.3041
+2025-02-16 19:08:56,145 - INFO - binance-bitget - Ticker bitget: 0.3042
+2025-02-16 19:08:56,146 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: D/USDT (binance), D/USDT (bitget)
+2025-02-16 19:08:56,316 - INFO - kucoin-bitstamp - Ticker kucoin: 0.954
+2025-02-16 19:08:56,317 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95427
+2025-02-16 19:08:56,317 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: ETH/USDT (kucoin), ETH/USDT (bitstamp)
+2025-02-16 19:08:56,359 - WARNING - binance-bitstamp - Ticker price dla binance jest None, pomijam asset {'binance': 'APE/EUR', 'bitstamp': 'APE/EUR'}
+2025-02-16 19:08:56,359 - INFO - binance-bitstamp - Ticker bitstamp: 0.68
+2025-02-16 19:08:56,360 - WARNING - binance-bitstamp - Niewystarczające dane ticker dla {'binance': 'APE/EUR', 'bitstamp': 'APE/EUR'}. Pomijam.
+2025-02-16 19:08:56,360 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: OP/EUR (binance), OP/EUR (bitstamp)
+2025-02-16 19:08:56,616 - INFO - binance-kucoin - Ticker binance: 0.01442
+2025-02-16 19:08:56,617 - INFO - binance-kucoin - Ticker kucoin: 0.01442
+2025-02-16 19:08:56,618 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: FET/USDT (binance), FET/USDT (kucoin)
+2025-02-16 19:08:56,826 - INFO - binance-bitget - Ticker binance: 0.08354
+2025-02-16 19:08:56,836 - INFO - binance-bitget - Ticker bitget: 0.08355
+2025-02-16 19:08:56,837 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: HEI/USDT (binance), HEI/USDT (bitget)
+2025-02-16 19:08:56,839 - INFO - kucoin-bitget - Ticker kucoin: 0.03672
+2025-02-16 19:08:56,840 - INFO - kucoin-bitget - Ticker bitget: 0.0368
+2025-02-16 19:08:56,842 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: LSD/USDT (kucoin), LSD/USDT (bitget)
+2025-02-16 19:08:57,352 - INFO - binance-kucoin - Ticker binance: 0.78
+2025-02-16 19:08:57,352 - INFO - binance-kucoin - Ticker kucoin: 0.7795
+2025-02-16 19:08:57,354 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: YFI/USDT (binance), YFI/USDT (kucoin)
+2025-02-16 19:08:57,358 - INFO - bitget-bitstamp - Ticker bitget: 2.5868
+2025-02-16 19:08:57,359 - INFO - bitget-bitstamp - Ticker bitstamp: 2.5882
+2025-02-16 19:08:57,359 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: PEPE/EUR (bitget), PEPE/EUR (bitstamp)
+2025-02-16 19:08:57,498 - INFO - binance-bitget - Ticker binance: 0.6993
+2025-02-16 19:08:57,498 - INFO - binance-bitget - Ticker bitget: 0.6999
+2025-02-16 19:08:57,499 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: FET/USDT (binance), FET/USDT (bitget)
+2025-02-16 19:08:57,608 - INFO - kucoin-bitget - Ticker kucoin: 0.4468
+2025-02-16 19:08:57,609 - INFO - kucoin-bitget - Ticker bitget: 0.44881
+2025-02-16 19:08:57,610 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: RMV/USDT (kucoin), RMV/USDT (bitget)
+2025-02-16 19:08:57,683 - INFO - kucoin-bitstamp - Ticker kucoin: 2675.42
+2025-02-16 19:08:57,683 - INFO - kucoin-bitstamp - Ticker bitstamp: 2678.1
+2025-02-16 19:08:57,684 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: ETH/EUR (kucoin), ETH/EUR (bitstamp)
+2025-02-16 19:08:57,741 - INFO - binance-bitstamp - Ticker binance: 1.064
+2025-02-16 19:08:57,742 - INFO - binance-bitstamp - Ticker bitstamp: 1.0792
+2025-02-16 19:08:58,097 - INFO - binance-kucoin - Ticker binance: 5920.0
+2025-02-16 19:08:58,097 - INFO - binance-kucoin - Ticker kucoin: 5911.0
+2025-02-16 19:08:58,098 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: XMR/USDT (binance), XMR/USDT (kucoin)
+2025-02-16 19:08:58,190 - INFO - binance-bitstamp - Opportunity: Buy on BinanceExchange (price: 1.064, eff.: 1.0651) | Sell on BitstampExchange (price: 1.0792, eff.: 1.0765) | Ticker Profit: 1.07% | Profit: -0.6123819683141818 USDT
+2025-02-16 19:08:58,190 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: CHZ/EUR (binance), CHZ/EUR (bitstamp)
+2025-02-16 19:08:58,259 - INFO - binance-bitget - Ticker binance: 0.78
+2025-02-16 19:08:58,260 - INFO - binance-bitget - Ticker bitget: 0.779
+2025-02-16 19:08:58,261 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: YFI/USDT (binance), YFI/USDT (bitget)
+2025-02-16 19:08:58,348 - INFO - kucoin-bitget - Ticker kucoin: 0.00469
+2025-02-16 19:08:58,349 - INFO - kucoin-bitget - Ticker bitget: 0.00469
+2025-02-16 19:08:58,350 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: RATS/USDT (kucoin), RATS/USDT (bitget)
+2025-02-16 19:08:58,709 - INFO - bitget-bitstamp - Ticker bitget: 9.25e-06
+2025-02-16 19:08:58,709 - INFO - bitget-bitstamp - Ticker bitstamp: 9.23e-06
+2025-02-16 19:08:58,711 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: USDT/EUR (bitget), USDT/EUR (bitstamp)
+2025-02-16 19:08:58,848 - WARNING - binance-kucoin - Ticker price dla binance jest None, pomijam asset {'binance': 'XMR/USDT', 'kucoin': 'XMR/USDT'}
+2025-02-16 19:08:58,849 - INFO - binance-kucoin - Ticker kucoin: 232.62
+2025-02-16 19:08:58,849 - WARNING - binance-kucoin - Niewystarczające dane ticker dla {'binance': 'XMR/USDT', 'kucoin': 'XMR/USDT'}. Pomijam.
+2025-02-16 19:08:58,849 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: AUCTION/USDT (binance), AUCTION/USDT (kucoin)
+2025-02-16 19:08:58,981 - INFO - binance-bitget - Ticker binance: 5920.0
+2025-02-16 19:08:58,982 - INFO - binance-bitget - Ticker bitget: 5930.0
+2025-02-16 19:08:58,982 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: AUCTION/USDT (binance), AUCTION/USDT (bitget)
+2025-02-16 19:08:59,029 - INFO - kucoin-bitstamp - Ticker kucoin: 2567.51
+2025-02-16 19:08:59,030 - INFO - kucoin-bitstamp - Ticker bitstamp: 2553.4
+2025-02-16 19:08:59,031 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-16 19:08:59,066 - INFO - kucoin-bitget - Ticker kucoin: 1.772e-05
+2025-02-16 19:08:59,066 - INFO - kucoin-bitget - Ticker bitget: 1.78e-05
+2025-02-16 19:08:59,067 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: ACX/USDT (kucoin), ACX/USDT (bitget)
+2025-02-16 19:08:59,109 - WARNING - binance-bitstamp - Ticker price dla binance jest None, pomijam asset {'binance': 'CHZ/EUR', 'bitstamp': 'CHZ/EUR'}
+2025-02-16 19:08:59,110 - INFO - binance-bitstamp - Ticker bitstamp: 0.05657
+2025-02-16 19:08:59,111 - WARNING - binance-bitstamp - Niewystarczające dane ticker dla {'binance': 'CHZ/EUR', 'bitstamp': 'CHZ/EUR'}. Pomijam.
+2025-02-16 19:08:59,111 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: ADA/EUR (binance), ADA/EUR (bitstamp)
+2025-02-16 19:08:59,679 - INFO - binance-bitget - Ticker binance: 10.94
+2025-02-16 19:08:59,680 - INFO - binance-bitget - Ticker bitget: 10.99
+2025-02-16 19:08:59,681 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: TUSD/USDT (binance), TUSD/USDT (bitget)
+2025-02-16 19:08:59,784 - INFO - binance-kucoin - Ticker binance: 10.94
+2025-02-16 19:08:59,785 - INFO - binance-kucoin - Ticker kucoin: 11.01
+2025-02-16 19:08:59,785 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: TUSD/USDT (binance), TUSD/USDT (kucoin)
+2025-02-16 19:09:00,030 - INFO - bitget-bitstamp - Ticker bitget: 0.9547
+2025-02-16 19:09:00,032 - INFO - bitget-bitstamp - Ticker bitstamp: 0.95428
+2025-02-16 19:09:00,050 - INFO - kucoin-bitget - Ticker kucoin: 0.33
+2025-02-16 19:09:00,051 - INFO - kucoin-bitget - Ticker bitget: 0.3319
+2025-02-16 19:09:00,052 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: XPR/USDT (kucoin), XPR/USDT (bitget)
+2025-02-16 19:09:00,348 - INFO - binance-bitget - Ticker binance: 0.9982
+2025-02-16 19:09:00,348 - INFO - binance-bitget - Ticker bitget: 0.9981
+2025-02-16 19:09:00,349 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: GMT/USDT (binance), GMT/USDT (bitget)
+2025-02-16 19:09:00,380 - INFO - kucoin-bitstamp - Ticker kucoin: 2.71166
+2025-02-16 19:09:00,381 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.71107
+2025-02-16 19:09:00,381 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: BTC/USDT (kucoin), BTC/USDT (bitstamp)
+2025-02-16 19:09:00,422 - INFO - binance-bitstamp - Ticker binance: 0.7326
+2025-02-16 19:09:00,423 - INFO - binance-bitstamp - Ticker bitstamp: 0.73522
+2025-02-16 19:09:00,424 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: BTC/USDT (binance), BTC/USDT (bitstamp)
+2025-02-16 19:09:00,605 - INFO - binance-kucoin - Ticker binance: 0.9982
+2025-02-16 19:09:00,606 - INFO - binance-kucoin - Ticker kucoin: 0.9919
+2025-02-16 19:09:00,607 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: GMT/USDT (binance), GMT/USDT (kucoin)
+2025-02-16 19:09:00,797 - INFO - kucoin-bitget - Ticker kucoin: 0.0051537
+2025-02-16 19:09:00,797 - INFO - kucoin-bitget - Ticker bitget: 0.005143
+2025-02-16 19:09:00,798 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: KMNO/USDT (kucoin), KMNO/USDT (bitget)
+2025-02-16 19:09:01,019 - INFO - binance-bitget - Ticker binance: 0.0694
+2025-02-16 19:09:01,020 - INFO - binance-bitget - Ticker bitget: 0.0693
+2025-02-16 19:09:01,021 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: STRAX/USDT (binance), STRAX/USDT (bitget)
+2025-02-16 19:09:01,034 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: NEAR/EUR (bitget), NEAR/EUR (bitstamp)
+2025-02-16 19:09:01,355 - INFO - binance-kucoin - Ticker binance: 0.0694
+2025-02-16 19:09:01,356 - INFO - binance-kucoin - Ticker kucoin: 0.0695
+2025-02-16 19:09:01,356 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: STRAX/USDT (binance), STRAX/USDT (kucoin)
+2025-02-16 19:09:01,550 - INFO - kucoin-bitget - Ticker kucoin: 0.110935
+2025-02-16 19:09:01,551 - INFO - kucoin-bitget - Ticker bitget: 0.1109
+2025-02-16 19:09:01,551 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: ELA/USDT (kucoin), ELA/USDT (bitget)
+2025-02-16 19:09:01,670 - INFO - binance-bitget - Ticker binance: 0.05927
+2025-02-16 19:09:01,671 - INFO - binance-bitget - Ticker bitget: 0.05917
+2025-02-16 19:09:01,672 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: USDS/USDT (binance), USDS/USDT (bitget)
+2025-02-16 19:09:01,744 - INFO - kucoin-bitstamp - Ticker kucoin: 96891.5
+2025-02-16 19:09:01,744 - INFO - kucoin-bitstamp - Ticker bitstamp: 96710.0
+2025-02-16 19:09:01,745 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: BTC/EUR (kucoin), BTC/EUR (bitstamp)
+2025-02-16 19:09:01,801 - INFO - binance-bitstamp - Ticker binance: 96886.75
+2025-02-16 19:09:01,802 - INFO - binance-bitstamp - Ticker bitstamp: 96710.0
+2025-02-16 19:09:01,803 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: FTM/EUR (binance), FTM/EUR (bitstamp)
+2025-02-16 19:09:01,874 - INFO - bitget-bitstamp - Ticker bitget: 3.326
+2025-02-16 19:09:01,875 - INFO - bitget-bitstamp - Ticker bitstamp: 3.28
+2025-02-16 19:09:02,068 - INFO - binance-kucoin - Ticker binance: 0.05927
+2025-02-16 19:09:02,069 - INFO - binance-kucoin - Ticker kucoin: 0.05975
+2025-02-16 19:09:02,316 - WARNING - binance-bitget - Ticker price dla binance jest None, pomijam asset {'binance': 'USDS/USDT', 'bitget': 'USDS/USDT'}
+2025-02-16 19:09:02,317 - INFO - binance-bitget - Ticker bitget: 0.9965
+2025-02-16 19:09:02,318 - WARNING - binance-bitget - Niewystarczające dane ticker dla {'binance': 'USDS/USDT', 'bitget': 'USDS/USDT'}. Pomijam.
+2025-02-16 19:09:02,319 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: UMA/USDT (binance), UMA/USDT (bitget)
+2025-02-16 19:09:02,361 - INFO - bitget-bitstamp - Opportunity: Buy on BitstampExchange (price: 3.28, eff.: 3.2882) | Sell on BitgetExchange (price: 3.326, eff.: 3.3227) | Ticker Profit: 1.05%
+2025-02-16 19:09:02,362 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: ETH/EUR (bitget), ETH/EUR (bitstamp)
+2025-02-16 19:09:02,559 - INFO - kucoin-bitget - Ticker kucoin: 1.7347
+2025-02-16 19:09:02,564 - INFO - kucoin-bitget - Ticker bitget: 1.731
+2025-02-16 19:09:02,576 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: MTOS/USDT (kucoin), MTOS/USDT (bitget)
+2025-02-16 19:09:02,938 - INFO - binance-kucoin - Opportunity: Buy on BinanceExchange (price: 0.05927, eff.: 0.0593) | Sell on KucoinExchange (price: 0.05975, eff.: 0.0597) | Ticker Profit: 0.61% | Profit: -0.21109899999999726 USDT
+2025-02-16 19:09:02,939 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: UMA/USDT (binance), UMA/USDT (kucoin)
+2025-02-16 19:09:03,098 - INFO - binance-bitget - Ticker binance: 1.663
+2025-02-16 19:09:03,098 - INFO - binance-bitget - Ticker bitget: 1.663
+2025-02-16 19:09:03,099 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: API3/USDT (binance), API3/USDT (bitget)
+2025-02-16 19:09:03,113 - INFO - kucoin-bitstamp - Ticker kucoin: 92821.88
+2025-02-16 19:09:03,114 - INFO - kucoin-bitstamp - Ticker bitstamp: 92462.0
+2025-02-16 19:09:03,115 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-16 19:09:03,127 - INFO - kucoin-bitget - Ticker kucoin: 0.000554
+2025-02-16 19:09:03,128 - INFO - kucoin-bitget - Ticker bitget: 0.00055
+2025-02-16 19:09:03,185 - WARNING - binance-bitstamp - Ticker price dla binance jest None, pomijam asset {'binance': 'FTM/EUR', 'bitstamp': 'FTM/EUR'}
+2025-02-16 19:09:03,185 - INFO - binance-bitstamp - Ticker bitstamp: 0.50107
+2025-02-16 19:09:03,186 - WARNING - binance-bitstamp - Niewystarczające dane ticker dla {'binance': 'FTM/EUR', 'bitstamp': 'FTM/EUR'}. Pomijam.
+2025-02-16 19:09:03,187 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: TRUMP/EUR (binance), TRUMP/EUR (bitstamp)
+2025-02-16 19:09:03,208 - INFO - bitget-bitstamp - Ticker bitget: 2553.9
+2025-02-16 19:09:03,209 - INFO - bitget-bitstamp - Ticker bitstamp: 2553.5
+2025-02-16 19:09:03,210 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: USDC/USDT (bitget), USDC/USDT (bitstamp)
+2025-02-16 19:09:03,445 - INFO - binance-kucoin - Ticker binance: 1.663
+2025-02-16 19:09:03,446 - INFO - binance-kucoin - Ticker kucoin: 1.664
+2025-02-16 19:09:03,447 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: API3/USDT (binance), API3/USDT (kucoin)
+2025-02-16 19:09:03,754 - INFO - binance-bitget - Ticker binance: 0.888
+2025-02-16 19:09:03,755 - INFO - binance-bitget - Ticker bitget: 0.889
+2025-02-16 19:09:03,756 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: IOST/USDT (binance), IOST/USDT (bitget)
+2025-02-16 19:09:04,004 - INFO - binance-kucoin - Ticker binance: 0.888
+2025-02-16 19:09:04,004 - INFO - binance-kucoin - Ticker kucoin: 0.8894
+2025-02-16 19:09:04,005 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: IOST/USDT (binance), IOST/USDT (kucoin)
+2025-02-16 19:09:04,632 - INFO - kucoin-bitget - Opportunity: Buy on BitgetExchange (price: 0.00055, eff.: 0.0006) | Sell on KucoinExchange (price: 0.000554, eff.: 0.0006) | Ticker Profit: 0.53%
+2025-02-16 19:09:04,633 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: MELANIA/USDT (kucoin), MELANIA/USDT (bitget)
+2025-02-16 19:09:04,840 - INFO - binance-bitget - Ticker binance: 0.005099
+2025-02-16 19:09:04,840 - INFO - binance-bitget - Ticker bitget: 0.005095
+2025-02-16 19:09:04,842 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: MC/USDT (binance), MC/USDT (bitget)
+2025-02-16 19:09:05,044 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9999
+2025-02-16 19:09:05,044 - INFO - kucoin-bitstamp - Ticker bitstamp: 1.00017
+2025-02-16 19:09:05,045 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-16 19:09:05,170 - INFO - binance-bitstamp - Ticker binance: 17.57
+2025-02-16 19:09:05,170 - INFO - binance-bitstamp - Ticker bitstamp: 17.85
+2025-02-16 19:09:05,302 - INFO - binance-kucoin - Ticker binance: 0.005099
+2025-02-16 19:09:05,303 - INFO - binance-kucoin - Ticker kucoin: 0.005083
+2025-02-16 19:09:05,304 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: VET/USDT (binance), VET/USDT (kucoin)
+2025-02-16 19:09:05,640 - INFO - kucoin-bitget - Ticker kucoin: 1.297
+2025-02-16 19:09:05,640 - INFO - kucoin-bitget - Ticker bitget: 1.296
+2025-02-16 19:09:05,641 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: ELF/USDT (kucoin), ELF/USDT (bitget)
+2025-02-16 19:09:05,645 - INFO - bitget-bitstamp - Ticker bitget: 0.9999
+2025-02-16 19:09:05,645 - INFO - bitget-bitstamp - Ticker bitstamp: 1.00017
+2025-02-16 19:09:05,646 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: USDC/EUR (bitget), USDC/EUR (bitstamp)
+2025-02-16 19:09:05,791 - WARNING - binance-bitget - Ticker price dla binance jest None, pomijam asset {'binance': 'MC/USDT', 'bitget': 'MC/USDT'}
+2025-02-16 19:09:05,792 - INFO - binance-bitget - Ticker bitget: 0.1101
+2025-02-16 19:09:05,793 - WARNING - binance-bitget - Niewystarczające dane ticker dla {'binance': 'MC/USDT', 'bitget': 'MC/USDT'}. Pomijam.
+2025-02-16 19:09:05,793 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: VET/USDT (binance), VET/USDT (bitget)
+2025-02-16 19:09:05,797 - INFO - binance-bitstamp - Opportunity: Buy on BinanceExchange (price: 17.57, eff.: 17.5876) | Sell on BitstampExchange (price: 17.85, eff.: 17.8054) | Ticker Profit: 1.24% | Profit: -0.8537836531091045 USDT
+2025-02-16 19:09:05,797 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: DOT/EUR (binance), DOT/EUR (bitstamp)
+2025-02-16 19:09:06,049 - INFO - binance-kucoin - Ticker binance: 0.03311
+2025-02-16 19:09:06,049 - INFO - binance-kucoin - Ticker kucoin: 0.0331
+2025-02-16 19:09:06,051 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: BTCDOWN/USDT (binance), BTCDOWN/USDT (kucoin)
+2025-02-16 19:09:06,368 - INFO - kucoin-bitget - Ticker kucoin: 0.305
+2025-02-16 19:09:06,369 - INFO - kucoin-bitget - Ticker bitget: 0.304
+2025-02-16 19:09:06,370 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: D/USDT (kucoin), D/USDT (bitget)
+2025-02-16 19:09:06,406 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9548
+2025-02-16 19:09:06,407 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95428
+2025-02-16 19:09:06,628 - INFO - binance-bitget - Ticker binance: 0.03311
+2025-02-16 19:09:06,629 - INFO - binance-bitget - Ticker bitget: 0.0331
+2025-02-16 19:09:06,630 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: STX/USDT (binance), STX/USDT (bitget)
+2025-02-16 19:09:06,931 - WARNING - binance-kucoin - Ticker price dla binance jest None, pomijam asset {'binance': 'BTCDOWN/USDT', 'kucoin': 'BTCDOWN/USDT'}
+2025-02-16 19:09:06,931 - INFO - binance-kucoin - Ticker kucoin: 0.0211
+2025-02-16 19:09:06,932 - WARNING - binance-kucoin - Niewystarczające dane ticker dla {'binance': 'BTCDOWN/USDT', 'kucoin': 'BTCDOWN/USDT'}. Pomijam.
+2025-02-16 19:09:06,932 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: STX/USDT (binance), STX/USDT (kucoin)
+2025-02-16 19:09:07,011 - INFO - bitget-bitstamp - Ticker bitget: 0.9545
+2025-02-16 19:09:07,011 - INFO - bitget-bitstamp - Ticker bitstamp: 0.95427
+2025-02-16 19:09:07,012 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: AVAX/EUR (bitget), AVAX/EUR (bitstamp)
+2025-02-16 19:09:07,117 - INFO - kucoin-bitget - Ticker kucoin: 0.0834
+2025-02-16 19:09:07,118 - INFO - kucoin-bitget - Ticker bitget: 0.08355
+2025-02-16 19:09:07,119 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: SMILE/USDT (kucoin), SMILE/USDT (bitget)
+2025-02-16 19:09:07,189 - INFO - binance-bitstamp - Ticker binance: 4.655
+2025-02-16 19:09:07,189 - INFO - binance-bitstamp - Ticker bitstamp: 4.659
+2025-02-16 19:09:07,190 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: PEPE/EUR (binance), PEPE/EUR (bitstamp)
+2025-02-16 19:09:07,294 - INFO - binance-bitget - Ticker binance: 0.923
+2025-02-16 19:09:07,295 - INFO - binance-bitget - Ticker bitget: 0.922
+2025-02-16 19:09:07,296 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: CATI/USDT (binance), CATI/USDT (bitget)
+2025-02-16 19:09:07,408 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-16 19:09:07,666 - INFO - binance-kucoin - Ticker binance: 0.923
+2025-02-16 19:09:07,667 - INFO - binance-kucoin - Ticker kucoin: 0.9226
+2025-02-16 19:09:07,668 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: CATI/USDT (binance), CATI/USDT (kucoin)
+2025-02-16 19:09:07,877 - INFO - kucoin-bitget - Ticker kucoin: 0.037
+2025-02-16 19:09:07,878 - INFO - kucoin-bitget - Ticker bitget: 0.0369
+2025-02-16 19:09:07,879 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: XCAD/USDT (kucoin), XCAD/USDT (bitget)
+2025-02-16 19:09:07,951 - INFO - binance-bitget - Ticker binance: 0.1601
+2025-02-16 19:09:07,951 - INFO - binance-bitget - Ticker bitget: 0.1601
+2025-02-16 19:09:07,953 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: G/USDT (binance), G/USDT (bitget)
+2025-02-16 19:09:08,428 - INFO - bitget-bitstamp - Ticker bitget: 23.79
+2025-02-16 19:09:08,428 - INFO - bitget-bitstamp - Ticker bitstamp: 23.72741
+2025-02-16 19:09:08,430 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: DOGE/EUR (bitget), DOGE/EUR (bitstamp)
+2025-02-16 19:09:08,430 - INFO - binance-kucoin - Ticker binance: 0.1601
+2025-02-16 19:09:08,431 - INFO - binance-kucoin - Ticker kucoin: 0.16051
+2025-02-16 19:09:08,431 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: G/USDT (binance), G/USDT (kucoin)
+2025-02-16 19:09:08,543 - INFO - binance-bitstamp - Ticker binance: 9.22e-06
+2025-02-16 19:09:08,543 - INFO - binance-bitstamp - Ticker bitstamp: 9.23e-06
+2025-02-16 19:09:08,544 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: ENJ/EUR (binance), ENJ/EUR (bitstamp)
+2025-02-16 19:09:08,599 - INFO - kucoin-bitget - Ticker kucoin: 0.1096
+2025-02-16 19:09:08,600 - INFO - kucoin-bitget - Ticker bitget: 0.1088
+2025-02-16 19:09:08,602 - INFO - kucoin-bitstamp - Ticker kucoin: 0.954
+2025-02-16 19:09:08,602 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95427
+2025-02-16 19:09:08,603 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: ETH/USDT (kucoin), ETH/USDT (bitstamp)
+2025-02-16 19:09:08,666 - INFO - binance-bitget - Ticker binance: 0.0193
+2025-02-16 19:09:08,667 - INFO - binance-bitget - Ticker bitget: 0.01927
+2025-02-16 19:09:08,668 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: POWR/USDT (binance), POWR/USDT (bitget)
+2025-02-16 19:09:09,210 - INFO - binance-kucoin - Ticker binance: 0.0193
+2025-02-16 19:09:09,210 - INFO - binance-kucoin - Ticker kucoin: 0.01927
+2025-02-16 19:09:09,212 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: TFUEL/USDT (binance), TFUEL/USDT (kucoin)
+2025-02-16 19:09:09,333 - INFO - binance-bitget - Ticker binance: 0.2212
+2025-02-16 19:09:09,334 - INFO - binance-bitget - Ticker bitget: 0.2209
+2025-02-16 19:09:09,336 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: FIS/USDT (binance), FIS/USDT (bitget)
+2025-02-16 19:09:09,603 - INFO - kucoin-bitget - Opportunity: Buy on BitgetExchange (price: 0.1088, eff.: 0.1089) | Sell on KucoinExchange (price: 0.1096, eff.: 0.1095) | Ticker Profit: 0.53%
+2025-02-16 19:09:09,604 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: FET/USDT (kucoin), FET/USDT (bitget)
+2025-02-16 19:09:09,763 - INFO - bitget-bitstamp - Ticker bitget: 0.25352
+2025-02-16 19:09:09,763 - INFO - bitget-bitstamp - Ticker bitstamp: 0.25353
+2025-02-16 19:09:09,764 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: ONDO/EUR (bitget), ONDO/EUR (bitstamp)
+2025-02-16 19:09:09,876 - WARNING - binance-bitstamp - Ticker price dla binance jest None, pomijam asset {'binance': 'ENJ/EUR', 'bitstamp': 'ENJ/EUR'}
+2025-02-16 19:09:09,876 - INFO - binance-bitstamp - Ticker bitstamp: 0.13613
+2025-02-16 19:09:09,877 - WARNING - binance-bitstamp - Niewystarczające dane ticker dla {'binance': 'ENJ/EUR', 'bitstamp': 'ENJ/EUR'}. Pomijam.
+2025-02-16 19:09:09,877 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: ETH/USDT (binance), ETH/USDT (bitstamp)
+2025-02-16 19:09:09,961 - INFO - binance-kucoin - Ticker binance: 0.04939
+2025-02-16 19:09:09,962 - INFO - binance-kucoin - Ticker kucoin: 0.04963
+2025-02-16 19:09:09,964 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: IOTA/USDT (binance), IOTA/USDT (kucoin)
+2025-02-16 19:09:09,965 - INFO - kucoin-bitstamp - Ticker kucoin: 2675.18
+2025-02-16 19:09:09,965 - INFO - kucoin-bitstamp - Ticker bitstamp: 2678.1
+2025-02-16 19:09:09,966 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: ETH/EUR (kucoin), ETH/EUR (bitstamp)
+2025-02-16 19:09:10,032 - INFO - binance-bitget - Ticker binance: 0.2588
+2025-02-16 19:09:10,033 - INFO - binance-bitget - Ticker bitget: 0.2587
+2025-02-16 19:09:10,034 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: SLF/USDT (binance), SLF/USDT (bitget)
+2025-02-16 19:09:10,179 - INFO - kucoin-bitget - Ticker kucoin: 0.7791
+2025-02-16 19:09:10,179 - INFO - kucoin-bitget - Ticker bitget: 0.779
+2025-02-16 19:09:10,180 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: YFI/USDT (kucoin), YFI/USDT (bitget)
+2025-02-16 19:09:10,768 - INFO - binance-bitget - Ticker binance: 0.2176
+2025-02-16 19:09:10,769 - INFO - binance-bitget - Ticker bitget: 0.2175
+2025-02-16 19:09:10,770 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: BAR/USDT (binance), BAR/USDT (bitget)
+2025-02-16 19:09:10,912 - INFO - binance-kucoin - Ticker binance: 0.2285
+2025-02-16 19:09:10,913 - INFO - binance-kucoin - Ticker kucoin: 0.2287
+2025-02-16 19:09:10,914 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: SLF/USDT (binance), SLF/USDT (kucoin)
+2025-02-16 19:09:11,142 - INFO - bitget-bitstamp - Ticker bitget: 1.2356
+2025-02-16 19:09:11,151 - INFO - bitget-bitstamp - Ticker bitstamp: 1.2341
+2025-02-16 19:09:11,152 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: SOL/EUR (bitget), SOL/EUR (bitstamp)
+2025-02-16 19:09:11,153 - INFO - kucoin-bitget - Ticker kucoin: 5911.0
+2025-02-16 19:09:11,154 - INFO - kucoin-bitget - Ticker bitget: 5929.0
+2025-02-16 19:09:11,156 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: SWELL/USDT (kucoin), SWELL/USDT (bitget)
+2025-02-16 19:09:11,267 - INFO - binance-bitstamp - Ticker binance: 2674.91
+2025-02-16 19:09:11,267 - INFO - binance-bitstamp - Ticker bitstamp: 2678.1
+2025-02-16 19:09:11,268 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: LINK/EUR (binance), LINK/EUR (bitstamp)
+2025-02-16 19:09:11,304 - INFO - kucoin-bitstamp - Ticker kucoin: 2567.51
+2025-02-16 19:09:11,304 - INFO - kucoin-bitstamp - Ticker bitstamp: 2553.5
+2025-02-16 19:09:11,305 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-16 19:09:11,421 - INFO - binance-bitget - Ticker binance: 1.913
+2025-02-16 19:09:11,421 - INFO - binance-bitget - Ticker bitget: 1.916
+2025-02-16 19:09:11,423 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: LTC/USDT (binance), LTC/USDT (bitget)
+2025-02-16 19:09:11,660 - INFO - binance-kucoin - Ticker binance: 0.2176
+2025-02-16 19:09:11,660 - INFO - binance-kucoin - Ticker kucoin: 0.2173
+2025-02-16 19:09:11,661 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: LTC/USDT (binance), LTC/USDT (kucoin)
+2025-02-16 19:09:12,079 - INFO - binance-bitget - Ticker binance: 126.43
+2025-02-16 19:09:12,080 - INFO - binance-bitget - Ticker bitget: 126.46
+2025-02-16 19:09:12,081 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: MDT/USDT (binance), MDT/USDT (bitget)
+2025-02-16 19:09:12,083 - INFO - kucoin-bitget - Ticker kucoin: 0.015279
+2025-02-16 19:09:12,084 - INFO - kucoin-bitget - Ticker bitget: 0.01521
+2025-02-16 19:09:12,085 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: OORT/USDT (kucoin), OORT/USDT (bitget)
+2025-02-16 19:09:12,395 - INFO - binance-kucoin - Ticker binance: 126.43
+2025-02-16 19:09:12,396 - INFO - binance-kucoin - Ticker kucoin: 126.44
+2025-02-16 19:09:12,397 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: WLD/USDT (binance), WLD/USDT (kucoin)
+2025-02-16 19:09:12,461 - INFO - bitget-bitstamp - Ticker bitget: 180.3
+2025-02-16 19:09:12,462 - INFO - bitget-bitstamp - Ticker bitstamp: 180.3244
+2025-02-16 19:09:12,463 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: LTC/EUR (bitget), LTC/EUR (bitstamp)
+2025-02-16 19:09:12,483 - INFO - kucoin-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 19:09:12,483 - INFO - kucoin-bitget - Arbitrage strategy cancelled.
+2025-02-16 19:09:12,484 - INFO - binance-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 19:09:12,484 - INFO - binance-bitget - Arbitrage strategy cancelled.
+2025-02-16 19:09:12,485 - INFO - binance-kucoin - Arbitrage strategy cancelled.
+2025-02-16 19:09:12,485 - INFO - bitget-bitstamp - Arbitrage strategy cancelled.
