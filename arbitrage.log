@@ -1,0 +1,34 @@
+2025-02-16 17:52:30,999 - INFO - binance-kucoin - Starting arbitrage strategy for 323 assets.
+2025-02-16 17:52:31,000 - INFO - binance-kucoin - Checking arbitrage for symbols: QUICK/USDT (binance), QUICK/USDT (kucoin)
+2025-02-16 17:52:31,017 - INFO - binance-bitget - Starting arbitrage strategy for 357 assets.
+2025-02-16 17:52:31,018 - INFO - binance-bitget - Checking arbitrage for symbols: QUICK/USDT (binance), QUICK/USDT (bitget)
+2025-02-16 17:52:31,019 - INFO - binance-bitstamp - Starting arbitrage strategy for 37 assets.
+2025-02-16 17:52:31,019 - INFO - binance-bitstamp - Checking arbitrage for symbols: ARB/EUR (binance), ARB/EUR (bitstamp)
+2025-02-16 17:52:31,021 - INFO - kucoin-bitget - Starting arbitrage strategy for 498 assets.
+2025-02-16 17:52:31,022 - INFO - kucoin-bitget - Checking arbitrage for symbols: CARV/USDT (kucoin), CARV/USDT (bitget)
+2025-02-16 17:52:31,024 - INFO - kucoin-bitstamp - Starting arbitrage strategy for 8 assets.
+2025-02-16 17:52:31,024 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-16 17:52:31,028 - INFO - bitget-bitstamp - Starting arbitrage strategy for 21 assets.
+2025-02-16 17:52:31,029 - INFO - bitget-bitstamp - Checking arbitrage for symbols: AVAX/EUR (bitget), AVAX/EUR (bitstamp)
+2025-02-16 17:52:31,039 - INFO - kucoin-bitget - Arbitrage strategy cancelled.
+2025-02-16 17:52:31,040 - INFO - bitget-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 17:52:31,040 - INFO - kucoin-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 17:52:31,041 - INFO - binance-bitget - Arbitrage strategy cancelled.
+2025-02-16 17:52:31,041 - INFO - binance-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 18:00:26,585 - INFO - binance-kucoin - Starting arbitrage strategy for 323 assets.
+2025-02-16 18:00:26,586 - INFO - binance-kucoin - Sprawdzam arbitraż dla symboli: GLM/USDT (binance), GLM/USDT (kucoin)
+2025-02-16 18:00:26,600 - INFO - binance-bitget - Starting arbitrage strategy for 357 assets.
+2025-02-16 18:00:26,600 - INFO - binance-bitget - Sprawdzam arbitraż dla symboli: GLM/USDT (binance), GLM/USDT (bitget)
+2025-02-16 18:00:26,601 - INFO - binance-bitstamp - Starting arbitrage strategy for 37 assets.
+2025-02-16 18:00:26,601 - INFO - binance-bitstamp - Sprawdzam arbitraż dla symboli: UNI/EUR (binance), UNI/EUR (bitstamp)
+2025-02-16 18:00:26,603 - INFO - kucoin-bitget - Starting arbitrage strategy for 498 assets.
+2025-02-16 18:00:26,603 - INFO - kucoin-bitget - Sprawdzam arbitraż dla symboli: PEPE2/USDT (kucoin), PEPE2/USDT (bitget)
+2025-02-16 18:00:26,605 - INFO - kucoin-bitstamp - Starting arbitrage strategy for 8 assets.
+2025-02-16 18:00:26,606 - INFO - kucoin-bitstamp - Sprawdzam arbitraż dla symboli: BTC/USDT (kucoin), BTC/USDT (bitstamp)
+2025-02-16 18:00:26,608 - INFO - bitget-bitstamp - Starting arbitrage strategy for 21 assets.
+2025-02-16 18:00:26,609 - INFO - bitget-bitstamp - Sprawdzam arbitraż dla symboli: DOGE/EUR (bitget), DOGE/EUR (bitstamp)
+2025-02-16 18:00:26,617 - INFO - kucoin-bitget - Arbitrage strategy cancelled.
+2025-02-16 18:00:26,618 - INFO - bitget-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 18:00:26,618 - INFO - kucoin-bitstamp - Arbitrage strategy cancelled.
+2025-02-16 18:00:26,619 - INFO - binance-bitget - Arbitrage strategy cancelled.
+2025-02-16 18:00:26,619 - INFO - binance-bitstamp - Arbitrage strategy cancelled.

@@ -8,26 +8,26 @@ from exchanges.bitstamp import BitstampExchange
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-async def get_markets_dict(exchange_instance, allowed_quotes=["USDT"]):
+async def get_markets_dict(exchange_instance, allowed_quotes=CONFIG["ALLOWED_QUOTES"]):
     try:
         logging.info(f"Loading markets for: {exchange_instance.__class__.__name__}")
+        # Zakładamy, że load_markets() jest asynchroniczną metodą
         markets = await exchange_instance.load_markets()
         result = {}
+        # Używamy pełnego symbolu jako klucza – dzięki temu "ABC/USDT" i "ABC/EUR" są różne
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    # Używamy pełnego symbolu jako klucza, np. "ABC/USDT" lub "ABC/EUR"
                     result[symbol] = symbol
         return result
     except Exception as e:
         logging.error(f"Error loading markets for {exchange_instance.__class__.__name__}: {e}")
         return {}
 
-async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT"]):
+async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=CONFIG["ALLOWED_QUOTES"]):
     markets1 = await get_markets_dict(exchange1, allowed_quotes)
     markets2 = await get_markets_dict(exchange2, allowed_quotes)
-    # Wykorzystujemy pełne symbole jako klucze – dzięki temu "ABC/USDT" i "ABC/EUR" są różne
     common_keys = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
     for key in common_keys:
@@ -89,7 +89,7 @@ async def modify_common_assets(common_assets, remove_file="assets_to_remove.json
     return common_assets
 
 async def main():
-    logging.info("Starting creation of common assets list (by symbol and quote)")
+    logging.info("Starting creation of common assets list (by full symbol and quote)")
     binance = BinanceExchange()
     kucoin = KucoinExchange()
     bitget = BitgetExchange()
@@ -117,7 +117,7 @@ async def main():
     for pair, assets in common_assets.items():
         logging.info(f"Pair {pair} has {len(assets)} common assets.")
     
-    # Close exchanges
+    # Zamykamy instancje giełd (jeśli asynchroniczne API posiada metodę close)
     await binance.close()
     await kucoin.close()
     await bitget.close()
