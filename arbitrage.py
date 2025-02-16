@@ -69,15 +69,18 @@ def get_rate_limiter(exchange):
         rate_limiters[key] = RateLimiter(delay)
     return rate_limiters[key]
 
-def fetch_ticker_rate_limited_sync(exchange, symbol):
+
+
+async def fetch_ticker_rate_limited_async(exchange, symbol):
     now = time.monotonic()
     limiter = get_rate_limiter(exchange)
     wait_time = limiter.delay - (now - limiter.last_request)
     if wait_time > 0:
-        time.sleep(wait_time)
-    ticker = exchange.fetch_ticker(symbol)
+        await asyncio.sleep(wait_time)
+    ticker = await exchange.fetch_ticker(symbol)
     limiter.last_request = time.monotonic()
     return ticker
+
 
 def get_liquidity_info(exchange, symbol):
     try:
@@ -103,41 +106,41 @@ class PairArbitrageStrategy:
         self.assets = assets
         self.pair_name = pair_name  # np. "binance-bitget"
 
-    async def check_opportunity(self, asset):
-        names = self.pair_name.split("-")
-        # Jeśli asset nie jest dict-em, oczekujemy, że zawiera już znak "/" – inaczej pomijamy.
-        if not isinstance(asset, dict):
-            if "/" in asset:
-                asset = {names[0]: asset, names[1]: asset}
+async def check_opportunity(self, asset):
+    names = self.pair_name.split("-")
+    if not isinstance(asset, dict):
+        if "/" in asset:
+            asset = {names[0]: asset, names[1]: asset}
+        else:
+            arbitrage_logger.error(f"{self.pair_name} - Asset '{asset}' nie zawiera '/', pomijam.")
+            return
+
+    symbol_ex1 = asset.get(names[0])
+    symbol_ex2 = asset.get(names[1])
+    if not symbol_ex1 or not symbol_ex2:
+        arbitrage_logger.warning(f"{self.pair_name} - Niekompletne dane symbolu dla asset {asset}. Pomijam.")
+        return
+
+    arbitrage_logger.info(f"{self.pair_name} - Sprawdzam arbitraż dla symboli: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
+    # Uruchamiamy asynchroniczne wywołania bezpośrednio:
+    task1 = fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
+    task2 = fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
+    results = await asyncio.gather(task1, task2, return_exceptions=True)
+    
+    tickers = {}
+    for key, result in zip([names[0], names[1]], results):
+        if isinstance(result, Exception):
+            arbitrage_logger.error(f"{self.pair_name} - Błąd pobierania ticker dla {key}: {result}")
+        elif result:
+            price = result.get('last')
+            if price is None:
+                arbitrage_logger.warning(f"{self.pair_name} - Ticker price dla {key} jest None, pomijam asset {asset}")
             else:
-                arbitrage_logger.error(f"{self.pair_name} - Asset '{asset}' nie zawiera '/', pomijam.")
-                return
-
-        symbol_ex1 = asset.get(names[0])
-        symbol_ex2 = asset.get(names[1])
-        if not symbol_ex1 or not symbol_ex2:
-            arbitrage_logger.warning(f"{self.pair_name} - Niekompletne dane symbolu dla asset {asset}. Pomijam.")
-            return
-
-        arbitrage_logger.info(f"{self.pair_name} - Sprawdzam arbitraż dla symboli: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
-        loop = asyncio.get_running_loop()
-        task1 = loop.run_in_executor(None, lambda: fetch_ticker_rate_limited_sync(self.exchange1, symbol_ex1))
-        task2 = loop.run_in_executor(None, lambda: fetch_ticker_rate_limited_sync(self.exchange2, symbol_ex2))
-        results = await asyncio.gather(task1, task2, return_exceptions=True)
-        tickers = {}
-        for key, result in zip([names[0], names[1]], results):
-            if isinstance(result, Exception):
-                arbitrage_logger.error(f"{self.pair_name} - Błąd pobierania ticker dla {key}: {result}")
-            elif result:
-                price = result.get('last')
-                if price is None:
-                    arbitrage_logger.warning(f"{self.pair_name} - Ticker price dla {key} jest None, pomijam asset {asset}")
-                else:
-                    tickers[key] = price
-                    arbitrage_logger.info(f"{self.pair_name} - Ticker {key}: {price}")
-        if names[0] not in tickers or names[1] not in tickers:
-            arbitrage_logger.warning(f"{self.pair_name} - Niewystarczające dane ticker dla {asset}. Pomijam.")
-            return
+                tickers[key] = price
+                arbitrage_logger.info(f"{self.pair_name} - Ticker {key}: {price}")
+    if names[0] not in tickers or names[1] not in tickers:
+        arbitrage_logger.warning(f"{self.pair_name} - Niewystarczające dane ticker dla {asset}. Pomijam.")
+        return
 
         fee1 = self.exchange1.fee_rate
         fee2 = self.exchange2.fee_rate
