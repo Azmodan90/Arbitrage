@@ -21,6 +21,10 @@ def setup_logging():
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
+def setup_signal_handlers(loop):
+    for sig in (signal.SIGINT, signal.SIGTERM):
+        loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
+
 async def shutdown(signal_name, loop):
     logging.info(f"\nOtrzymano sygnał {signal_name}. Zatrzymywanie programu...")
     tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
@@ -30,10 +34,6 @@ async def shutdown(signal_name, loop):
     await asyncio.gather(*tasks, return_exceptions=True)
     await asyncio.sleep(0.2)
     await loop.shutdown_asyncgens()
-
-def setup_signal_handlers(loop):
-    for sig in (signal.SIGINT, signal.SIGTERM):
-        loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
 
 async def run_arbitrage_for_all_pairs(exchanges):
     try:
@@ -67,32 +67,20 @@ async def run_arbitrage_for_all_pairs(exchanges):
     else:
         logging.info("Brak aktywnych zadań arbitrażu do uruchomienia.")
 
-def run_arbitrage(exchanges):
-    logging.info("Wybrano opcję rozpoczęcia arbitrażu")
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    setup_signal_handlers(loop)
-    try:
-        loop.run_until_complete(run_arbitrage_for_all_pairs(exchanges))
-    except (asyncio.CancelledError, KeyboardInterrupt):
-        logging.info("Program został przerwany.")
-    finally:
-        pending = asyncio.all_tasks(loop)
-        if pending:
-            loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
-        loop.run_until_complete(loop.shutdown_asyncgens())
-        loop.close()
-
 async def main():
     setup_logging()
     logging.info("Uruchamianie programu arbitrażowego")
     
+    # Utworzenie instancji giełd
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
+    
+    loop = asyncio.get_running_loop()
+    setup_signal_handlers(loop)
     
     try:
         while True:
@@ -103,10 +91,11 @@ async def main():
             choice = input("Twój wybór (1/2/3): ").strip()
             if choice == "1":
                 logging.info("Wybrano opcję tworzenia listy wspólnych aktywów")
-                # Dodajemy await, ponieważ common_assets.main() jest coroutine
-                await common_assets.main()
+                await common_assets.main()  # Funkcja asynchroniczna – awaitujemy ją
             elif choice == "2":
-                run_arbitrage(exchanges)
+                logging.info("Wybrano opcję rozpoczęcia arbitrażu")
+                # Wywołujemy asynchronicznie funkcję uruchamiającą arbitraż
+                await run_arbitrage_for_all_pairs(exchanges)
             elif choice == "3":
                 logging.info("Wyjście z programu")
                 break
