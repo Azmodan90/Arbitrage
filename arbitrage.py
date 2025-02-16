@@ -5,8 +5,9 @@ import time
 from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
+from tabulate import tabulate
 
-# Konfiguracja loggerów
+# Logger dla ogólnych informacji arbitrażu – zapis do pliku arbitrage.log
 arbitrage_logger = logging.getLogger("arbitrage")
 if not arbitrage_logger.hasHandlers():
     handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
@@ -16,6 +17,7 @@ if not arbitrage_logger.hasHandlers():
     arbitrage_logger.setLevel(logging.INFO)
     arbitrage_logger.propagate = False
 
+# Logger dla wykrytych okazji arbitrażowych – zapis do pliku arbitrage_opportunities.log
 opp_logger = logging.getLogger("arbitrage_opportunities")
 if not opp_logger.hasHandlers():
     opp_handler = logging.FileHandler("arbitrage_opportunities.log", mode="a", encoding="utf-8")
@@ -25,6 +27,7 @@ if not opp_logger.hasHandlers():
     opp_logger.setLevel(logging.INFO)
     opp_logger.propagate = False
 
+# Logger dla nieopłacalnych okazji – zapis do pliku unprofitable_opportunities.log
 unprofitable_logger = logging.getLogger("unprofitable_opportunities")
 if not unprofitable_logger.hasHandlers():
     unprofitable_handler = logging.FileHandler("unprofitable_opportunities.log", mode="a", encoding="utf-8")
@@ -34,6 +37,7 @@ if not unprofitable_logger.hasHandlers():
     unprofitable_logger.setLevel(logging.INFO)
     unprofitable_logger.propagate = False
 
+# Logger dla absurdalnych okazji – zapis do pliku absurd_opportunities.log
 absurd_logger = logging.getLogger("absurd_opportunities")
 if not absurd_logger.hasHandlers():
     absurd_handler = logging.FileHandler("absurd_opportunities.log", mode="a", encoding="utf-8")
@@ -48,7 +52,7 @@ def normalize_symbol(symbol):
         return symbol.split(":")[0]
     return symbol
 
-# --- Rate limiter ---
+# --- Rate limiter (przykładowa implementacja) ---
 class RateLimiter:
     def __init__(self, delay):
         self.delay = delay  # minimalny odstęp między zapytaniami (w sekundach)
@@ -92,6 +96,13 @@ def get_liquidity_info(exchange, symbol):
     except Exception as e:
         arbitrage_logger.error(f"Błąd pobierania order book dla {symbol} na {exchange.__class__.__name__}: {e}")
         return None
+
+# Funkcja pomocnicza do bezpiecznego formatowania wartości
+def safe_format(value, fmt_spec):
+    try:
+        return format(value, fmt_spec) if value is not None else "N/A"
+    except Exception:
+        return "N/A"
 
 class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
@@ -190,33 +201,35 @@ class PairArbitrageStrategy:
         else:
             extra_info = "Brak sprawdzania płynności, gdy okazja nie przekracza progu."
 
+        # Budujemy log_message, stosując funkcję safe_format() dla wartości, które mogą być None
         log_message = (
             f"Pair: {self.pair_name} | Asset: {asset} | "
-            f"Buy (Ex): {names[0]} | Buy Price (eff.): {effective_buy_ex1:.4f} | "
-            f"Sell (Ex): {names[1]} | Sell Price (eff.): {effective_sell_ex2:.4f} | "
-            f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {profit_liq_percent:.2f}% | "
-            f"Profit (USDT): {profit_liq_usdt:.2f} | Invested (USDT): {invested_amount:.2f} | "
-            f"Qty Purchased: {actual_qty:.4f} | Liquidity Info: {liquidity_info} | Extra: {extra_info}"
+            f"Buy (Ex): {names[0]} | Buy Price (eff.): {safe_format(effective_buy_ex1, '.4f')} | "
+            f"Sell (Ex): {names[1]} | Sell Price (eff.): {safe_format(effective_sell_ex2, '.4f')} | "
+            f"Ticker Profit: {safe_format(profit1, '.2f')}% | Liquidity Profit: {safe_format(profit_liq_percent, '.2f')}% | "
+            f"Profit (USDT): {safe_format(profit_liq_usdt, '.2f')} | Invested (USDT): {safe_format(invested_amount, '.2f')} | "
+            f"Qty Purchased: {safe_format(actual_qty, '.4f')} | Liquidity Info: {liquidity_info} | Extra: {extra_info}"
         )
 
+        # Logowanie – oddzielnie dla opłacalnych oraz nieopłacalnych okazji
         if profit_liq_usdt is not None and profit_liq_usdt > 0:
             opp_logger.info(log_message)
         else:
             unprofitable_logger.info(log_message)
 
         if profit1 > CONFIG["ABSURD_THRESHOLD"]:
-            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk dla {asset}: {profit1:.2f}% [Liquidity -> {liquidity_info} | {extra_info}]")
+            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk dla {asset}: {safe_format(profit1, '.2f')}% [Liquidity -> {liquidity_info} | {extra_info}]")
         elif profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]:
             arbitrage_logger.info(f"{self.pair_name} - Okazja arbitrażowa dla {asset}: Kupno na {self.exchange1.__class__.__name__} "
-                                    f"(cena: {tickers[names[0]]}, eff.: {effective_buy_ex1:.4f}), sprzedaż na {self.exchange2.__class__.__name__} "
-                                    f"(cena: {tickers[names[1]]}, eff.: {effective_sell_ex2:.4f}), Ticker Profit: {profit1:.2f}% "
+                                    f"(cena: {tickers[names[0]]}, eff.: {safe_format(effective_buy_ex1, '.4f')}), sprzedaż na {self.exchange2.__class__.__name__} "
+                                    f"(cena: {tickers[names[1]]}, eff.: {safe_format(effective_sell_ex2, '.4f')}), Ticker Profit: {safe_format(profit1, '.2f')}% "
                                     f"[Liquidity -> {liquidity_info} | {extra_info}]")
         if profit2 > CONFIG["ABSURD_THRESHOLD"]:
-            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk dla {asset}: {profit2:.2f}% [Liquidity -> {liquidity_info} | {extra_info}]")
+            absurd_logger.warning(f"{self.pair_name} - Absurdally wysoki zysk dla {asset}: {safe_format(profit2, '.2f')}% [Liquidity -> {liquidity_info} | {extra_info}]")
         elif profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
             arbitrage_logger.info(f"{self.pair_name} - Okazja arbitrażowa dla {asset}: Kupno na {self.exchange2.__class__.__name__} "
-                                    f"(cena: {tickers[names[1]]}, eff.: {effective_buy_ex2:.4f}), sprzedaż na {self.exchange1.__class__.__name__} "
-                                    f"(cena: {tickers[names[0]]}, eff.: {effective_sell_ex1:.4f}), Ticker Profit: {profit2:.2f}% "
+                                    f"(cena: {tickers[names[1]]}, eff.: {safe_format(effective_buy_ex2, '.4f')}), sprzedaż na {self.exchange1.__class__.__name__} "
+                                    f"(cena: {tickers[names[0]]}, eff.: {safe_format(effective_sell_ex1, '.4f')}), Ticker Profit: {safe_format(profit2, '.2f')}% "
                                     f"[Liquidity -> {liquidity_info} | {extra_info}]")
     async def run(self):
         arbitrage_logger.info(f"{self.pair_name} - Uruchamiam strategię arbitrażu dla {len(self.assets)} aktywów.")
