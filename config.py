@@ -13,7 +13,16 @@ CONFIG = {
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
-    "ARBITRAGE_THRESHOLD": 0.5,  # minimalny zysk procentowy, aby sprawdzać order book
-    "ABSURD_THRESHOLD": 100,     # powyżej tej wartości okazje są traktowane jako absurdalne
-    "INVESTMENT_AMOUNT": 100      # kwota inwestycji w USDT
+    "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu w procentach
+    "ABSURD_THRESHOLD": 100,
+    "INVESTMENT_AMOUNT": 100,
+    
+    "ALLOWED_QUOTES": ["USDT", "EUR"],
+    "DEFAULT_QUOTE": "USDT", "EUR"
+    "EXCHANGE_QUOTES": {
+        "binance": ["USDT", "EUR"],
+        "kucoin": ["USDT", "EUR"],
+        "bitget": ["USDT", "EUR"],
+        "bitstamp": ["USDT"]
+    }
 }

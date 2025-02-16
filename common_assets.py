@@ -4,10 +4,13 @@ from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
+from config import CONFIG
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "USDC"]):
+def get_markets_dict(exchange_instance, exchange_name, allowed_quotes=None):
+    if allowed_quotes is None:
+        allowed_quotes = CONFIG.get("ALLOWED_QUOTES", ["USDT"])
     try:
         logging.info(f"Ładowanie rynków dla: {exchange_instance.__class__.__name__}")
         markets = exchange_instance.exchange.load_markets()
@@ -23,14 +26,26 @@ def get_markets_dict(exchange_instance, allowed_quotes=["USDT", "USDC"]):
         logging.error(f"Błąd przy ładowaniu rynków dla {exchange_instance.__class__.__name__}: {e}")
         return {}
 
-def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=["USDT", "USDC"]):
-    markets1 = get_markets_dict(exchange1, allowed_quotes)
-    markets2 = get_markets_dict(exchange2, allowed_quotes)
+def get_common_assets_for_pair(name1, exchange1, name2, exchange2):
+    quotes1 = set(CONFIG.get("EXCHANGE_QUOTES", {}).get(name1, CONFIG.get("ALLOWED_QUOTES", ["USDT"])))
+    quotes2 = set(CONFIG.get("EXCHANGE_QUOTES", {}).get(name2, CONFIG.get("ALLOWED_QUOTES", ["USDT"])))
+    common_quotes = quotes1.intersection(quotes2)
+    if not common_quotes:
+        logging.warning(f"Brak wspólnych quote dla {name1} i {name2}")
+        return {}
+    markets1 = get_markets_dict(exchange1, name1, allowed_quotes=list(common_quotes))
+    markets2 = get_markets_dict(exchange2, name2, allowed_quotes=list(common_quotes))
     common_bases = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
     for base in common_bases:
-        common[base] = {name1: markets1[base], name2: markets2[base]}
-    logging.info(f"Wspólne aktywa dla {name1} i {name2} (quotes={allowed_quotes}): {len(common)} znalezione")
+        symbol1 = markets1[base]
+        symbol2 = markets2[base]
+        if "/" in symbol1 and "/" in symbol2:
+            quote1 = symbol1.split("/")[1]
+            quote2 = symbol2.split("/")[1]
+            if quote1 == quote2 and quote1 in common_quotes:
+                common[base] = {name1: symbol1, name2: symbol2}
+    logging.info(f"Wspólne aktywa dla {name1} i {name2} (użyte quote: {common_quotes}): {len(common)} znalezione")
     return common
 
 def save_common_assets(common_assets, filename="common_assets.json"):
@@ -107,7 +122,7 @@ def main():
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Porównuję aktywa dla pary: {name1} - {name2}")
-            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=["USDT", "USDC"])
+            mapping = get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2])
             common_assets[f"{name1}-{name2}"] = mapping
 
     common_assets = modify_common_assets(common_assets)
