@@ -4,7 +4,7 @@ def setup_logging():
     """
     Ustawia konfigurację logowania dla całej aplikacji oraz dedykowanych loggerów.
     """
-    # Konfiguracja głównego loggera
+    # Konfiguracja głównego (root) loggera
     root_logger = logging.getLogger()
     root_logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
@@ -13,17 +13,22 @@ def setup_logging():
     if root_logger.hasHandlers():
         root_logger.handlers.clear()
 
-    # Dodajemy handler konsolowy (opcjonalnie)
+    # Dodajemy handler konsolowy
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(formatter)
     root_logger.addHandler(console_handler)
 
+    # Dodajemy globalny handler plikowy do root loggera
+    file_handler = logging.FileHandler("app.log", mode="a", encoding="utf-8")
+    file_handler.setFormatter(formatter)
+    root_logger.addHandler(file_handler)
+
     # Konfiguracja loggera dla arbitrażu
     arbitrage_logger = logging.getLogger("arbitrage")
     if not arbitrage_logger.hasHandlers():
-        file_handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
-        file_handler.setFormatter(formatter)
-        arbitrage_logger.addHandler(file_handler)
+        arb_file_handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
+        arb_file_handler.setFormatter(formatter)
+        arbitrage_logger.addHandler(arb_file_handler)
         arbitrage_logger.setLevel(logging.INFO)
         arbitrage_logger.propagate = False
 
