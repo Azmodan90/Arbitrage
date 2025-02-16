@@ -159,6 +159,9 @@ class PairArbitrageStrategy:
                 effective_order_sell = top_bid_ex2 * (1 - fee2 / 100)
                 potential_proceeds = qty * effective_order_sell
                 invested_amount = qty * effective_order_buy
+                liquidity_profit = ((effective_order_sell - effective_order_buy) / effective_order_buy) * 100
+                profit_quote1 = invested_amount * (liquidity_profit / 100)
+
             else:
                 extra_info = "Brak wystarczających danych płynności."
         else:
