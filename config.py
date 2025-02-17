@@ -13,7 +13,7 @@ CONFIG = {
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
-    "ALLOWED_QUOTES": ["USDT", "EUR"],
+    "ALLOWED_QUOTES": ["USDT", "EUR", "BTC"],
     
     "ARBITRAGE_THRESHOLD": 2,  # Próg arbitrażu (w %)
     "ABSURD_THRESHOLD": 100,     # Próg absurdalnego zysku (w %)
