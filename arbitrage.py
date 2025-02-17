@@ -139,8 +139,8 @@ class PairArbitrageStrategy:
             chosen_quote = quote1
 
         profit_liq_percent_str = f"{profit_liq_percent:.2f}" if profit_liq_percent is not None else "N/A"
-        profit_liq_str = f"{profit_liq:.2f}" if profit_liq is not None else "N/A"
-        invested_amount_str = f"{invested_amount:.2f}" if invested_amount is not None else "N/A"
+        profit_liq_str = f"{profit_liq:.6f}" if profit_liq is not None else "N/A"
+        invested_amount_str = f"{invested_amount:.6f}" if invested_amount is not None else "N/A"
         actual_qty_str = f"{actual_qty:.4f}" if actual_qty is not None else "N/A"
 
         log_line = (
