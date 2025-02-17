@@ -7,7 +7,7 @@ from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 from tabulate import tabulate
 
-# Konfiguracja loggerów
+# Logger configuration
 arbitrage_logger = logging.getLogger("arbitrage")
 if not arbitrage_logger.hasHandlers():
     handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
@@ -49,10 +49,10 @@ def normalize_symbol(symbol):
         return symbol.split(":")[0]
     return symbol
 
-# Asynchroniczny rate limiter – działający w oparciu o asyncio.sleep()
+# --- Rate limiter (asynchroniczny) ---
 class RateLimiter:
     def __init__(self, delay):
-        self.delay = delay  # minimalny odstęp między zapytaniami (w sekundach)
+        self.delay = delay  # minimalny odstęp między zapytaniami (sekundy)
         self.last_request = 0
 
 RATE_LIMITS = {
@@ -70,19 +70,42 @@ def get_rate_limiter(exchange):
         rate_limiters[key] = RateLimiter(delay)
     return rate_limiters[key]
 
+# --- Cache dla tickerów i order booków ---
+ticker_cache = {}       # key: (exchange_name, symbol) -> (timestamp, ticker)
+orderbook_cache = {}    # key: (exchange_name, symbol) -> (timestamp, order_book)
+TICKER_TTL = 1.0        # TTL tickera (sekundy)
+ORDERBOOK_TTL = 1.0     # TTL order booka (sekundy)
+
 async def fetch_ticker_rate_limited_async(exchange, symbol):
     now = time.monotonic()
+    key = (exchange.__class__.__name__, symbol)
+    if key in ticker_cache:
+        cached_time, cached_ticker = ticker_cache[key]
+        if now - cached_time < TICKER_TTL:
+            return cached_ticker
     limiter = get_rate_limiter(exchange)
     wait_time = limiter.delay - (now - limiter.last_request)
     if wait_time > 0:
         await asyncio.sleep(wait_time)
     ticker = await exchange.fetch_ticker(symbol)
     limiter.last_request = time.monotonic()
+    ticker_cache[key] = (time.monotonic(), ticker)
     return ticker
 
 async def get_liquidity_info_async(exchange, symbol):
     try:
-        order_book = await exchange.fetch_order_book(symbol)
+        now = time.monotonic()
+        key = (exchange.__class__.__name__, symbol)
+        if key in orderbook_cache:
+            cached_time, cached_order_book = orderbook_cache[key]
+            if now - cached_time < ORDERBOOK_TTL:
+                order_book = cached_order_book
+            else:
+                order_book = await exchange.fetch_order_book(symbol)
+                orderbook_cache[key] = (time.monotonic(), order_book)
+        else:
+            order_book = await exchange.fetch_order_book(symbol)
+            orderbook_cache[key] = (time.monotonic(), order_book)
         bids = order_book.get('bids', [])
         asks = order_book.get('asks', [])
         top_bid = bids[0] if bids else [None, None]
@@ -92,14 +115,12 @@ async def get_liquidity_info_async(exchange, symbol):
         arbitrage_logger.error(f"Error fetching order book for {symbol} on {exchange.__class__.__name__}: {e}")
         return None
 
+# Funkcja konwersji inwestycji – przelicza INVESTMENT_AMOUNT (w USDT) na jednostki quote
 async def convert_investment(quote, investment_usdt, conversion_exchange):
-    """
-    Pobiera kurs pary quote/USDT i przelicza inwestycję z USDT na jednostki quote.
-    """
     pair = f"{quote}/USDT"
     ticker = await conversion_exchange.fetch_ticker(pair)
     if ticker is None or ticker.get("last") is None:
-        return investment_usdt
+        return investment_usdt  # Jeśli nie uda się pobrać kursu, zwróć wartość bez konwersji
     price = ticker.get("last")
     return investment_usdt / price
 
@@ -107,13 +128,12 @@ class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        # assets – słownik z pełnymi symbolami, np. { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
+        # assets – słownik pełnych symboli, np. { "AAVE/BTC": {"binance": "AAVE/BTC", "bitget": "AAVE/BTC"} }
         self.assets = assets
         self.pair_name = pair_name  # np. "binance-bitget"
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
-        # Jeśli asset nie jest dict-em, oczekujemy, że zawiera już '/' – inaczej pomijamy.
         if not isinstance(asset, dict):
             if "/" in asset:
                 asset = {names[0]: asset, names[1]: asset}
@@ -128,28 +148,22 @@ class PairArbitrageStrategy:
             return
 
         arbitrage_logger.info(f"{self.pair_name} - Checking arbitrage for symbols: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
-        
-        # Używamy asynchronicznego rate limited ticker
+
+        # Pobieramy tickery asynchronicznie
         ticker1 = await fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
         ticker2 = await fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
         tickers = {}
-        if ticker1:
-            price1 = ticker1.get('last')
-            if price1 is None:
-                arbitrage_logger.warning(f"{self.pair_name} - Ticker price for {names[0]} is None, skipping asset {asset}")
-            else:
-                tickers[names[0]] = price1
-                arbitrage_logger.info(f"{self.pair_name} - Ticker {names[0]}: {price1}")
-        if ticker2:
-            price2 = ticker2.get('last')
-            if price2 is None:
-                arbitrage_logger.warning(f"{self.pair_name} - Ticker price for {names[1]} is None, skipping asset {asset}")
-            else:
-                tickers[names[1]] = price2
-                arbitrage_logger.info(f"{self.pair_name} - Ticker {names[1]}: {price2}")
-        if names[0] not in tickers or names[1] not in tickers:
-            arbitrage_logger.warning(f"{self.pair_name} - Insufficient ticker data for {asset}, skipping.")
+        if ticker1 is None or ticker2 is None:
+            arbitrage_logger.warning(f"{self.pair_name} - Missing ticker data for {asset}, skipping.")
             return
+        price1 = ticker1.get('last')
+        price2 = ticker2.get('last')
+        if price1 is None or price2 is None:
+            arbitrage_logger.warning(f"{self.pair_name} - Ticker price is None for {asset}, skipping.")
+            return
+        tickers[names[0]] = price1
+        tickers[names[1]] = price2
+        arbitrage_logger.info(f"{self.pair_name} - Ticker {names[0]}: {price1}, {names[1]}: {price2}")
 
         fee1 = self.exchange1.fee_rate
         fee2 = self.exchange2.fee_rate
@@ -162,23 +176,28 @@ class PairArbitrageStrategy:
         effective_sell_ex1 = tickers[names[0]] * (1 - fee1 / 100)
         profit2 = ((effective_sell_ex1 - effective_buy_ex2) / effective_buy_ex2) * 100
 
-        liquidity_info = "N/D"
-        extra_info = ""
+        # Ustalanie quote z symbolu (zakładamy format "XYZ/QUOTE")
+        try:
+            quote = symbol_ex1.split("/")[1]
+        except Exception as e:
+            arbitrage_logger.error(f"{self.pair_name} - Error determining quote from symbol {symbol_ex1}: {e}")
+            return
+
         base_investment = CONFIG.get("INVESTMENT_AMOUNT", 100)
-        # Ustalanie quote – przyjmujemy, że symbol ma format "XYZ/QUOTE"
-        quote = symbol_ex1.split("/")[1]
         investment = base_investment
+        # Konwersja inwestycji, jeśli ustawiono w CONFIG
         if CONFIG.get("CONVERT_INVESTMENT", {}).get(quote, False):
-            from exchanges.binance import BinanceExchange  # używamy Binance jako exchange referencyjnego
+            from exchanges.binance import BinanceExchange  # używamy Binance jako exchange konwersyjnego
             conversion_exchange = BinanceExchange()
             investment = await convert_investment(quote, base_investment, conversion_exchange)
             await conversion_exchange.close()
             arbitrage_logger.info(f"Converted investment for quote {quote}: {base_investment} USDT -> {investment:.6f} {quote}")
 
-        profit_liq_usdt = None
-        profit_liq_percent = None
+        profit_liq = None
         invested_amount = None
         actual_qty = None
+        liquidity_info = "N/D"
+        extra_info = ""
         if (profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]) or (profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]):
             liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol_ex1)
             liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2)
@@ -198,27 +217,32 @@ class PairArbitrageStrategy:
                 effective_order_sell = top_bid_ex2 * (1 - fee2 / 100)
                 potential_proceeds = actual_qty * effective_order_sell
                 invested_amount = actual_qty * effective_order_buy
-                profit_liq_usdt = potential_proceeds - invested_amount
-                profit_liq_percent = (profit_liq_usdt / invested_amount * 100) if invested_amount else 0
+                profit_liq = potential_proceeds - invested_amount
+                profit_liq_percent = (profit_liq / invested_amount * 100) if invested_amount else 0
                 extra_info += f"Qty: {actual_qty:.4f}; Invested: {invested_amount:.6f} {quote}; Proceeds: {potential_proceeds:.6f} {quote}; "
                 if available_buy_vol < desired_qty:
                     extra_info += f"Insufficient liquidity on {names[0]} (available: {available_buy_vol}); "
                 if available_sell_vol < desired_qty:
                     extra_info += f"Insufficient liquidity on {names[1]} (available: {available_sell_vol}); "
+            else:
+                extra_info = "No liquidity data available."
         else:
             extra_info = "No liquidity check (threshold not met)."
 
-        log_line = (
-            f"Pair: {self.pair_name} | Asset: {asset} | "
-            f"Buy ({names[0]} eff.): {effective_buy_ex1:.4f} | Sell ({names[1]} eff.): {effective_sell_ex2:.4f} | "
-            f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {f'{profit_liq_percent:.2f}' if profit_liq_percent is not None else 'N/A'}% | "
-            f"Profit ({quote}): {f'{profit_liq_usdt:.6f}' if profit_liq_usdt is not None else 'N/A'} | "
-            f"Invested ({quote}): {f'{invested_amount:.6f}' if invested_amount is not None else 'N/A'} | "
-            f"Qty Purchased: {f'{actual_qty:.4f}' if actual_qty is not None else 'N/A'} | "
-            f"Liquidity Info: {liquidity_info} | Extra: {extra_info}"
-        )
+        # Przygotowanie loga – tekstowo
+        try:
+            log_line = (
+                f"Pair: {self.pair_name} | Asset: {asset} | "
+                f"Buy ({names[0]} eff.): {effective_buy_ex1:.4f} | Sell ({names[1]} eff.): {effective_sell_ex2:.4f} | "
+                f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {profit_liq_percent:.2f}% | "
+                f"Profit ({quote}): {profit_liq:.6f} | Invested ({quote}): {invested_amount:.6f} | "
+                f"Qty Purchased: {actual_qty:.4f} | Liquidity Info: {liquidity_info} | Extra: {extra_info}"
+            )
+        except Exception as format_e:
+            arbitrage_logger.error(f"{self.pair_name} - Formatting error: {format_e}")
+            return
 
-        if profit_liq_usdt is not None and profit_liq_usdt > 0:
+        if profit_liq is not None and profit_liq > 0:
             opp_logger.info(log_line)
         else:
             unprofitable_logger.info(log_line)
@@ -227,7 +251,7 @@ class PairArbitrageStrategy:
             arbitrage_logger.info(
                 f"{self.pair_name} - Opportunity: Buy on {self.exchange1.__class__.__name__} (price: {tickers[names[0]]}, eff.: {effective_buy_ex1:.4f}) | "
                 f"Sell on {self.exchange2.__class__.__name__} (price: {tickers[names[1]]}, eff.: {effective_sell_ex2:.4f}) | "
-                f"Ticker Profit: {profit1:.2f}% | Profit: {f'{profit_liq_usdt:.6f}' if profit_liq_usdt is not None else 'N/A'} {quote}"
+                f"Ticker Profit: {profit1:.2f}% | Profit: {profit_liq:.6f} {quote}"
             )
         if profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
             arbitrage_logger.info(
@@ -247,5 +271,30 @@ class PairArbitrageStrategy:
             arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
             raise
 
+# Asynchroniczna wersja get_liquidity_info
+async def get_liquidity_info_async(exchange, symbol):
+    try:
+        now = time.monotonic()
+        key = (exchange.__class__.__name__, symbol)
+        if key in orderbook_cache:
+            cached_time, cached_order_book = orderbook_cache[key]
+            if now - cached_time < ORDERBOOK_TTL:
+                order_book = cached_order_book
+            else:
+                order_book = await exchange.fetch_order_book(symbol)
+                orderbook_cache[key] = (time.monotonic(), order_book)
+        else:
+            order_book = await exchange.fetch_order_book(symbol)
+            orderbook_cache[key] = (time.monotonic(), order_book)
+        bids = order_book.get('bids', [])
+        asks = order_book.get('asks', [])
+        top_bid = bids[0] if bids else [None, None]
+        top_ask = asks[0] if asks else [None, None]
+        return {"top_bid": top_bid, "top_ask": top_ask}
+    except Exception as e:
+        arbitrage_logger.error(f"Error fetching order book for {symbol} on {exchange.__class__.__name__}: {e}")
+        return None
+
 if __name__ == '__main__':
+    # For testing purposes – normally the strategy is launched via common_assets
     asyncio.run(PairArbitrageStrategy(None, None, None).run())

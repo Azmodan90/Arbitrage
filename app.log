@@ -1,113 +1,40 @@
-2025-02-17 21:25:11,635 - INFO - Uruchamianie programu arbitrażowego
-2025-02-17 21:25:14,462 - INFO - Wyjście z programu
-2025-02-17 21:25:43,560 - INFO - Uruchamianie programu arbitrażowego
-2025-02-17 21:27:00,666 - INFO - Wybrano opcję rozpoczęcia arbitrażu
-2025-02-17 21:30:00,016 - INFO - 
-Otrzymano sygnał SIGINT. Zatrzymywanie programu...
-2025-02-17 21:30:00,018 - INFO - Anulowanie zadań: [<Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-5405' coro=<Throttler.looper() running at /workspaces/Arbitrage/.venv/lib/python3.11/site-packages/ccxt/async_support/base/throttler.py:36> wait_for=<Future finished result=None>>, <Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-5429' coro=<Throttler.looper() running at /workspaces/Arbitrage/.venv/lib/python3.11/site-packages/ccxt/async_support/base/throttler.py:36> wait_for=<Future finished result=None>>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<main() running at /workspaces/Arbitrage/main.py:89> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>]
-2025-02-17 21:30:00,027 - INFO - Arbitraż został przerwany.
-2025-02-17 21:30:01,453 - INFO - Wyjście z programu
-2025-02-17 21:30:30,955 - INFO - Uruchamianie programu arbitrażowego
-2025-02-17 21:30:35,410 - INFO - Wybrano opcję rozpoczęcia arbitrażu
-2025-02-17 21:31:36,111 - INFO - 
-Otrzymano sygnał SIGINT. Zatrzymywanie programu...
-2025-02-17 21:31:36,112 - INFO - Anulowanie zadań: [<Task pending name='Task-1726' coro=<Throttler.looper() running at /workspaces/Arbitrage/.venv/lib/python3.11/site-packages/ccxt/async_support/base/throttler.py:36> wait_for=<Future pending cb=[Task.task_wakeup()]>>, <Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:177> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<main() running at /workspaces/Arbitrage/main.py:89> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>]
-2025-02-17 21:31:36,119 - INFO - Arbitraż został przerwany.
-2025-02-17 21:31:37,354 - INFO - Wyjście z programu
-2025-02-17 21:32:18,505 - INFO - Uruchamianie programu arbitrażowego
-2025-02-17 21:32:20,210 - INFO - Wybrano opcję rozpoczęcia arbitrażu
-2025-02-17 21:33:14,096 - INFO - 
-Otrzymano sygnał SIGINT. Zatrzymywanie programu...
-2025-02-17 21:33:14,097 - INFO - Anulowanie zadań: [<Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<main() running at /workspaces/Arbitrage/main.py:89> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>, <Task pending name='Task-1584' coro=<Throttler.looper() running at /workspaces/Arbitrage/.venv/lib/python3.11/site-packages/ccxt/async_support/base/throttler.py:36> wait_for=<Future pending cb=[Task.task_wakeup()]>>]
-2025-02-17 21:33:14,104 - INFO - Arbitraż został przerwany.
-2025-02-17 21:33:44,991 - INFO - Uruchamianie programu arbitrażowego
-2025-02-17 21:33:47,000 - INFO - Wybrano opcję rozpoczęcia arbitrażu
-2025-02-17 21:52:05,641 - INFO - 
-Otrzymano sygnał SIGINT. Zatrzymywanie programu...
-2025-02-17 21:52:05,644 - INFO - Anulowanie zadań: [<Task pending name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:176> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>, <Task pending name='Task-1' coro=<main() running at /workspaces/Arbitrage/main.py:89> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181]>]
-2025-02-17 21:52:05,662 - INFO - Arbitraż został przerwany.
-2025-02-17 21:52:07,649 - INFO - Wyjście z programu
-2025-02-17 21:58:57,824 - INFO - Starting arbitrage program
-2025-02-17 21:58:59,757 - INFO - Starting creation of common assets list (by full symbol and quote)
-2025-02-17 21:58:59,829 - INFO - Comparing assets for pair: binance - kucoin
-2025-02-17 21:58:59,830 - INFO - Loading markets for: BinanceExchange
-2025-02-17 21:59:03,967 - INFO - Loading markets for: KucoinExchange
-2025-02-17 21:59:06,211 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 463 found
-2025-02-17 21:59:06,212 - INFO - Comparing assets for pair: binance - bitget
-2025-02-17 21:59:06,213 - INFO - Loading markets for: BinanceExchange
-2025-02-17 21:59:06,215 - INFO - Loading markets for: BitgetExchange
-2025-02-17 21:59:08,485 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 376 found
-2025-02-17 21:59:08,486 - INFO - Comparing assets for pair: binance - bitstamp
-2025-02-17 21:59:08,487 - INFO - Loading markets for: BinanceExchange
-2025-02-17 21:59:08,489 - INFO - Loading markets for: BitstampExchange
-2025-02-17 21:59:09,052 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 47 found
-2025-02-17 21:59:09,053 - INFO - Comparing assets for pair: kucoin - bitget
-2025-02-17 21:59:09,053 - INFO - Loading markets for: KucoinExchange
-2025-02-17 21:59:09,055 - INFO - Loading markets for: BitgetExchange
-2025-02-17 21:59:09,057 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 518 found
-2025-02-17 21:59:09,057 - INFO - Comparing assets for pair: kucoin - bitstamp
-2025-02-17 21:59:09,058 - INFO - Loading markets for: KucoinExchange
-2025-02-17 21:59:09,059 - INFO - Loading markets for: BitstampExchange
-2025-02-17 21:59:09,060 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 18 found
-2025-02-17 21:59:09,061 - INFO - Comparing assets for pair: bitget - bitstamp
-2025-02-17 21:59:09,061 - INFO - Loading markets for: BitgetExchange
-2025-02-17 21:59:09,063 - INFO - Loading markets for: BitstampExchange
-2025-02-17 21:59:09,064 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 26 found
-2025-02-17 21:59:09,070 - INFO - Loaded assets to remove from assets_to_remove.json.
-2025-02-17 21:59:09,072 - INFO - Loaded assets to add from assets_to_add.json.
-2025-02-17 21:59:09,074 - INFO - Configuration binance-kucoin: removed 4 assets.
-2025-02-17 21:59:09,074 - INFO - Configuration binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-17 21:59:09,075 - INFO - Configuration binance-bitget: removed 1 assets.
-2025-02-17 21:59:09,075 - INFO - Configuration binance-bitstamp: removed 0 assets.
-2025-02-17 21:59:09,076 - INFO - Configuration kucoin-bitget: removed 6 assets.
-2025-02-17 21:59:09,077 - INFO - Configuration kucoin-bitstamp: removed 0 assets.
-2025-02-17 21:59:09,077 - INFO - Configuration bitget-bitstamp: removed 0 assets.
-2025-02-17 21:59:09,135 - INFO - Common assets list saved to file: common_assets.json
-2025-02-17 21:59:09,135 - INFO - Pair binance-kucoin has 460 common assets.
-2025-02-17 21:59:09,136 - INFO - Pair binance-bitget has 375 common assets.
-2025-02-17 21:59:09,136 - INFO - Pair binance-bitstamp has 47 common assets.
-2025-02-17 21:59:09,137 - INFO - Pair kucoin-bitget has 512 common assets.
-2025-02-17 21:59:09,137 - INFO - Pair kucoin-bitstamp has 18 common assets.
-2025-02-17 21:59:09,137 - INFO - Pair bitget-bitstamp has 26 common assets.
-2025-02-17 22:09:17,637 - INFO - Starting arbitrage program
-2025-02-17 22:09:19,725 - INFO - Starting creation of common assets list (by full symbol and quote)
-2025-02-17 22:09:19,798 - INFO - Comparing assets for pair: binance - kucoin
-2025-02-17 22:09:19,799 - INFO - Loading markets for: BinanceExchange
-2025-02-17 22:09:23,443 - INFO - Loading markets for: KucoinExchange
-2025-02-17 22:09:25,718 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 463 found
-2025-02-17 22:09:25,719 - INFO - Comparing assets for pair: binance - bitget
-2025-02-17 22:09:25,719 - INFO - Loading markets for: BinanceExchange
-2025-02-17 22:09:25,722 - INFO - Loading markets for: BitgetExchange
-2025-02-17 22:09:28,316 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 376 found
-2025-02-17 22:09:28,316 - INFO - Comparing assets for pair: binance - bitstamp
-2025-02-17 22:09:28,317 - INFO - Loading markets for: BinanceExchange
-2025-02-17 22:09:28,320 - INFO - Loading markets for: BitstampExchange
-2025-02-17 22:09:28,937 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 47 found
-2025-02-17 22:09:28,938 - INFO - Comparing assets for pair: kucoin - bitget
-2025-02-17 22:09:28,939 - INFO - Loading markets for: KucoinExchange
-2025-02-17 22:09:28,940 - INFO - Loading markets for: BitgetExchange
-2025-02-17 22:09:28,942 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 518 found
-2025-02-17 22:09:28,942 - INFO - Comparing assets for pair: kucoin - bitstamp
-2025-02-17 22:09:28,943 - INFO - Loading markets for: KucoinExchange
-2025-02-17 22:09:28,944 - INFO - Loading markets for: BitstampExchange
-2025-02-17 22:09:28,945 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 18 found
-2025-02-17 22:09:28,945 - INFO - Comparing assets for pair: bitget - bitstamp
-2025-02-17 22:09:28,946 - INFO - Loading markets for: BitgetExchange
-2025-02-17 22:09:28,947 - INFO - Loading markets for: BitstampExchange
-2025-02-17 22:09:28,948 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR', 'BTC', 'ETH']): 26 found
-2025-02-17 22:09:28,951 - INFO - Loaded assets to remove from assets_to_remove.json.
-2025-02-17 22:09:28,953 - INFO - Loaded assets to add from assets_to_add.json.
-2025-02-17 22:09:28,955 - INFO - Configuration binance-kucoin: removed 4 assets.
-2025-02-17 22:09:28,955 - INFO - Configuration binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-17 22:09:28,956 - INFO - Configuration binance-bitget: removed 1 assets.
-2025-02-17 22:09:28,956 - INFO - Configuration binance-bitstamp: removed 0 assets.
-2025-02-17 22:09:28,958 - INFO - Configuration kucoin-bitget: removed 6 assets.
-2025-02-17 22:09:28,959 - INFO - Configuration kucoin-bitstamp: removed 0 assets.
-2025-02-17 22:09:28,959 - INFO - Configuration bitget-bitstamp: removed 0 assets.
-2025-02-17 22:09:29,015 - INFO - Common assets list saved to file: common_assets.json
-2025-02-17 22:09:29,016 - INFO - Pair binance-kucoin has 460 common assets.
-2025-02-17 22:09:29,017 - INFO - Pair binance-bitget has 375 common assets.
-2025-02-17 22:09:29,017 - INFO - Pair binance-bitstamp has 47 common assets.
-2025-02-17 22:09:29,018 - INFO - Pair kucoin-bitget has 512 common assets.
-2025-02-17 22:09:29,019 - INFO - Pair kucoin-bitstamp has 18 common assets.
-2025-02-17 22:09:29,019 - INFO - Pair bitget-bitstamp has 26 common assets.
+2025-02-17 22:48:29,979 - INFO - Starting arbitrage program
+2025-02-17 22:48:49,384 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-17 22:48:49,392 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7faa70f6bdd0>
+2025-02-17 22:48:49,393 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faa619f8980>, 9967.393339291), (<aiohttp.client_proto.ResponseHandler object at 0x7faa619fb620>, 9967.449946933), (<aiohttp.client_proto.ResponseHandler object at 0x7faa619f8a60>, 9967.736092841)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7faa619fbee0>, 9967.714662319)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7faa57ce46e0>, 9968.286026769)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7faa61181650>
+2025-02-17 22:48:49,414 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-17 22:48:49,415 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7faa61182b10>
+2025-02-17 22:48:49,416 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faa619f8b40>, 9967.384823469), (<aiohttp.client_proto.ResponseHandler object at 0x7faa619fb3f0>, 9967.461033815), (<aiohttp.client_proto.ResponseHandler object at 0x7faa619f8830>, 9967.473499284)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7faa619fbe00>, 9967.720674371)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7faa57ce4830>, 9968.287286187)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7faa5b7f7850>
+2025-02-17 22:48:49,417 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-17 22:48:49,417 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7faa50220b50>
+2025-02-17 22:48:49,421 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-17 22:48:49,425 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7faa628408d0>
+2025-02-17 22:48:49,426 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faa6286d1d0>, 9959.937104973)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7faa628eff50>, 9960.560676509)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7faa6293f3f0>, 9963.127467168), (<aiohttp.client_proto.ResponseHandler object at 0x7faa6293f310>, 9967.713320212)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7faa71036f50>
+2025-02-17 22:48:49,447 - WARNING - kucoin requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-17 22:48:49,449 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7faa6282c290>
+2025-02-17 22:48:49,450 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faa6293f070>, 9968.255050129)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7faa62a17a90>
+2025-02-17 22:48:49,459 - WARNING - bitget requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-17 22:48:49,461 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7faa6282f390>
+2025-02-17 22:48:49,462 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faa6293f230>, 9959.068133772), (<aiohttp.client_proto.ResponseHandler object at 0x7faa6286c1a0>, 9959.315319008), (<aiohttp.client_proto.ResponseHandler object at 0x7faa6286c600>, 9966.358766755), (<aiohttp.client_proto.ResponseHandler object at 0x7faa6286cc90>, 9968.057726056), (<aiohttp.client_proto.ResponseHandler object at 0x7faa6286cec0>, 9968.140186627)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7faa6282f010>
+2025-02-17 22:48:49,467 - WARNING - bitstamp requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-17 22:48:49,469 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7faa7103b2d0>
+2025-02-17 22:48:49,470 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7faa6286db70>, 9965.841254577), (<aiohttp.client_proto.ResponseHandler object at 0x7faa619f8520>, 9967.386310889)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7faa633961d0>
