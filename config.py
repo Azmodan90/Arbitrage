@@ -15,7 +15,7 @@ CONFIG = {
     
     "ALLOWED_QUOTES": ["USDT", "EUR", "BTC"],
 
-    "MIN_QUOTE_VOLUME": 1000,   # minimalny wolumen (w jednostkach danej waluty) wymagany do uwzględnienia rynku
+    "MIN_LIQUIDITY": 50,  # minimalny wolumen (możesz ustalić własną wartość)
 
     "ARBITRAGE_THRESHOLD": 0.5,  # próg arbitrażu w %
 
