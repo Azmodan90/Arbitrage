@@ -9,6 +9,7 @@ from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
 from arbitrage import PairArbitrageStrategy
 import common_assets
+from logging.handlers import RotatingFileHandler
 
 def setup_logging():
     logger = logging.getLogger()
@@ -16,30 +17,24 @@ def setup_logging():
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     if logger.hasHandlers():
         logger.handlers.clear()
-    file_handler = logging.FileHandler('app.log', mode='a', encoding='utf-8')
+    file_handler = RotatingFileHandler('app.log', mode='a', maxBytes=5*1024*1024, backupCount=5, encoding='utf-8')
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
-async def shutdown(signal_name, loop, exchanges):
+async def shutdown(signal_name, loop):
     logging.info(f"\nReceived signal {signal_name}. Shutting down...")
     tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
     logging.info("Cancelling tasks: %s", tasks)
     for task in tasks:
         task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
-    logging.info("Closing exchanges...")
-    for exchange in exchanges.values():
-        try:
-            await exchange.close()
-        except Exception as e:
-            logging.error(f"Error closing exchange {exchange.__class__.__name__}: {e}")
     await asyncio.sleep(0.2)
     await loop.shutdown_asyncgens()
 
-def setup_signal_handlers(loop, exchanges):
+def setup_signal_handlers(loop):
     for sig in (signal.SIGINT, signal.SIGTERM):
-        loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop, exchanges)))
+        loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
 
 async def run_arbitrage_for_all_pairs(exchanges):
     try:
@@ -73,44 +68,35 @@ async def run_arbitrage_for_all_pairs(exchanges):
 async def main():
     setup_logging()
     logging.info("Starting arbitrage program")
-
+    
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
+    
+    while True:
+        print("\nChoose an option:")
+        print("1. Create common assets list")
+        print("2. Start arbitrage (using assets from common_assets.json)")
+        print("3. Exit")
+        choice = input("Your choice (1/2/3): ").strip()
+        if choice == "1":
+            await common_assets.main()  # common_assets.main() is async
+        elif choice == "2":
+            await run_arbitrage_for_all_pairs(exchanges)
+        elif choice == "3":
+            logging.info("Exiting program")
+            break
+        else:
+            logging.error("Invalid choice!")
+            print("Invalid choice!")
 
-    loop = asyncio.get_running_loop()
-    setup_signal_handlers(loop, exchanges)
-
-    try:
-        while True:
-            print("\nChoose an option:")
-            print("1. Create common assets list")
-            print("2. Start arbitrage (using assets from common_assets.json)")
-            print("3. Exit")
-            choice = input("Your choice (1/2/3): ").strip()
-            if choice == "1":
-                await common_assets.main()  # common_assets.main() musi być asynchroniczne
-            elif choice == "2":
-                await run_arbitrage_for_all_pairs(exchanges)
-            elif choice == "3":
-                logging.info("Exiting program")
-                break
-            else:
-                logging.error("Invalid choice!")
-                print("Invalid choice!")
-    except KeyboardInterrupt:
-        logging.info("KeyboardInterrupt received. Exiting.")
-    finally:
-        logging.info("Closing exchanges in finally block...")
-        for exchange in exchanges.values():
-            try:
-                await exchange.close()
-            except Exception as e:
-                logging.error(f"Error closing exchange {exchange.__class__.__name__}: {e}")
-        logging.info("Exchanges closed.")
+    await exchanges["binance"].close()
+    await exchanges["kucoin"].close()
+    await exchanges["bitget"].close()
+    await exchanges["bitstamp"].close()
 
 if __name__ == '__main__':
     asyncio.run(main())

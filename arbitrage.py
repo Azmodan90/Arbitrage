@@ -6,38 +6,44 @@ from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 from tabulate import tabulate
+from logging.handlers import RotatingFileHandler
 
-# Logger configuration
+# Konfiguracja loggerów z RotatingFileHandler
+
+# Logger główny – arbitrage
 arbitrage_logger = logging.getLogger("arbitrage")
 if not arbitrage_logger.hasHandlers():
-    handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
+    handler = RotatingFileHandler("arbitrage.log", mode="a", maxBytes=5*1024*1024, backupCount=5, encoding="utf-8")
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
     arbitrage_logger.addHandler(handler)
     arbitrage_logger.setLevel(logging.INFO)
     arbitrage_logger.propagate = False
 
+# Logger okazji arbitrażowych
 opp_logger = logging.getLogger("arbitrage_opportunities")
 if not opp_logger.hasHandlers():
-    opp_handler = logging.FileHandler("arbitrage_opportunities.log", mode="a", encoding="utf-8")
+    opp_handler = RotatingFileHandler("arbitrage_opportunities.log", mode="a", maxBytes=5*1024*1024, backupCount=5, encoding="utf-8")
     opp_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     opp_handler.setFormatter(opp_formatter)
     opp_logger.addHandler(opp_handler)
     opp_logger.setLevel(logging.INFO)
     opp_logger.propagate = False
 
+# Logger nieopłacalnych okazji
 unprofitable_logger = logging.getLogger("unprofitable_opportunities")
 if not unprofitable_logger.hasHandlers():
-    unprofitable_handler = logging.FileHandler("unprofitable_opportunities.log", mode="a", encoding="utf-8")
+    unprofitable_handler = RotatingFileHandler("unprofitable_opportunities.log", mode="a", maxBytes=5*1024*1024, backupCount=5, encoding="utf-8")
     unprofitable_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     unprofitable_handler.setFormatter(unprofitable_formatter)
     unprofitable_logger.addHandler(unprofitable_handler)
     unprofitable_logger.setLevel(logging.INFO)
     unprofitable_logger.propagate = False
 
+# Logger absurdalnych okazji
 absurd_logger = logging.getLogger("absurd_opportunities")
 if not absurd_logger.hasHandlers():
-    absurd_handler = logging.FileHandler("absurd_opportunities.log", mode="a", encoding="utf-8")
+    absurd_handler = RotatingFileHandler("absurd_opportunities.log", mode="a", maxBytes=5*1024*1024, backupCount=5, encoding="utf-8")
     absurd_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     absurd_handler.setFormatter(absurd_formatter)
     absurd_logger.addHandler(absurd_handler)
@@ -52,7 +58,7 @@ def normalize_symbol(symbol):
 # --- Rate limiter (asynchroniczny) ---
 class RateLimiter:
     def __init__(self, delay):
-        self.delay = delay  # minimalny odstęp między zapytaniami (sekundy)
+        self.delay = delay  # minimalny odstęp między zapytaniami (w sekundach)
         self.last_request = 0
 
 RATE_LIMITS = {
@@ -70,29 +76,16 @@ def get_rate_limiter(exchange):
         rate_limiters[key] = RateLimiter(delay)
     return rate_limiters[key]
 
-# --- Cache dla tickerów i order booków ---
-ticker_cache = {}       # key: (exchange_name, symbol) -> (timestamp, ticker)
-orderbook_cache = {}    # key: (exchange_name, symbol) -> (timestamp, order_book)
-TICKER_TTL = 1.0        # czas ważności tickera (sekundy)
-ORDERBOOK_TTL = 1.0     # czas ważności order booka (sekundy)
-
 async def fetch_ticker_rate_limited_async(exchange, symbol):
     now = time.monotonic()
     key = (exchange.__class__.__name__, symbol)
-    if key in ticker_cache:
-        cached_time, cached_ticker = ticker_cache[key]
-        if now - cached_time < TICKER_TTL:
-            return cached_ticker
+    # W tym przykładzie nie stosujemy cache (możesz dodać cache, jak wcześniej)
     limiter = get_rate_limiter(exchange)
     wait_time = limiter.delay - (now - limiter.last_request)
     if wait_time > 0:
         await asyncio.sleep(wait_time)
     ticker = await exchange.fetch_ticker(symbol)
-    # Upewnij się, że ticker nie jest coroutine (gdyby tak się zdarzyło)
-    if asyncio.iscoroutine(ticker):
-        ticker = await ticker
     limiter.last_request = time.monotonic()
-    ticker_cache[key] = (time.monotonic(), ticker)
     return ticker
 
 async def get_liquidity_info_async(exchange, symbol):
@@ -108,9 +101,6 @@ async def get_liquidity_info_async(exchange, symbol):
         return None
 
 async def convert_investment(quote, investment_usdt, conversion_exchange):
-    """
-    Pobiera kurs pary quote/USDT i przelicza inwestycję z USDT na jednostki quote.
-    """
     pair = f"{quote}/USDT"
     ticker = await conversion_exchange.fetch_ticker(pair)
     if ticker is None or ticker.get("last") is None:
@@ -128,7 +118,6 @@ class PairArbitrageStrategy:
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
-        # Jeśli asset nie jest dict-em, oczekujemy, że zawiera już '/' – inaczej pomijamy.
         if not isinstance(asset, dict):
             if "/" in asset:
                 asset = {names[0]: asset, names[1]: asset}
@@ -143,21 +132,27 @@ class PairArbitrageStrategy:
             return
 
         arbitrage_logger.info(f"{self.pair_name} - Checking arbitrage for symbols: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
-
+        
         ticker1 = await fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
         ticker2 = await fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
         tickers = {}
-        if ticker1 is None or ticker2 is None:
-            arbitrage_logger.warning(f"{self.pair_name} - Missing ticker data for {asset}, skipping.")
+        if ticker1:
+            price1 = ticker1.get('last')
+            if price1 is None:
+                arbitrage_logger.warning(f"{self.pair_name} - Ticker price for {names[0]} is None, skipping asset {asset}")
+            else:
+                tickers[names[0]] = price1
+                arbitrage_logger.info(f"{self.pair_name} - Ticker {names[0]}: {price1}")
+        if ticker2:
+            price2 = ticker2.get('last')
+            if price2 is None:
+                arbitrage_logger.warning(f"{self.pair_name} - Ticker price for {names[1]} is None, skipping asset {asset}")
+            else:
+                tickers[names[1]] = price2
+                arbitrage_logger.info(f"{self.pair_name} - Ticker {names[1]}: {price2}")
+        if names[0] not in tickers or names[1] not in tickers:
+            arbitrage_logger.warning(f"{self.pair_name} - Insufficient ticker data for {asset}, skipping.")
             return
-        price1 = ticker1.get('last')
-        price2 = ticker2.get('last')
-        if price1 is None or price2 is None:
-            arbitrage_logger.warning(f"{self.pair_name} - Ticker price is None for {asset}, skipping.")
-            return
-        tickers[names[0]] = price1
-        tickers[names[1]] = price2
-        arbitrage_logger.info(f"{self.pair_name} - Ticker {names[0]}: {price1}, {names[1]}: {price2}")
 
         fee1 = self.exchange1.fee_rate
         fee2 = self.exchange2.fee_rate
@@ -258,17 +253,11 @@ class PairArbitrageStrategy:
         try:
             while True:
                 for asset in self.assets:
-                    try:
-                        await self.check_opportunity(asset)
-                    except asyncio.CancelledError:
-                        raise
-                    except Exception as e:
-                        arbitrage_logger.error(f"{self.pair_name} - Error processing asset {asset}: {e}")
+                    await self.check_opportunity(asset)
                 await asyncio.sleep(1)
         except asyncio.CancelledError:
             arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
             raise
 
 if __name__ == '__main__':
-    # For testing purposes – normally the strategy is launched via common_assets
     asyncio.run(PairArbitrageStrategy(None, None, None).run())
