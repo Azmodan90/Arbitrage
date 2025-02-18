@@ -14,9 +14,9 @@ CONFIG = {
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
     # Lista dozwolonych quote – teraz możesz dodać dowolne, np. USDT, EUR, BTC, ETH itd.
-    "ALLOWED_QUOTES": ["USDT", "EUR", "BTC", "ETH"],
+    "ALLOWED_QUOTES": ["USDT", "EUR",],
     
-    "ARBITRAGE_THRESHOLD": 0.5,  # próg arbitrażu (w %)
+    "ARBITRAGE_THRESHOLD": 3,  # próg arbitrażu (w %)
     "ABSURD_THRESHOLD": 100,     # próg absurdalnego zysku (w %)
     
     # Inwestycja podana w USDT
