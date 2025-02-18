@@ -1,5 +1,6 @@
 import ccxt.async_support as ccxt
 from config import CONFIG
+import asyncio
 
 class BinanceExchange:
     def __init__(self):
@@ -17,6 +18,9 @@ class BinanceExchange:
         try:
             ticker = await self.exchange.fetch_ticker(symbol)
             return ticker
+        except asyncio.CancelledError:
+            # Propagujemy anulowanie, aby główny kod mógł go obsłużyć
+            raise
         except Exception as e:
             print(f"Error fetching ticker from Binance: {e}")
             return None
@@ -25,6 +29,8 @@ class BinanceExchange:
         try:
             order_book = await self.exchange.fetch_order_book(symbol)
             return order_book
+        except asyncio.CancelledError:
+            raise
         except Exception as e:
             print(f"Error fetching order book from Binance: {e}")
             return None

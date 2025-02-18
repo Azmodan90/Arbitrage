@@ -20,6 +20,8 @@ class KucoinExchange:
             async with self.semaphore:
                 ticker = await self.exchange.fetch_ticker(symbol)
                 return ticker
+        except asyncio.CancelledError:
+            raise
         except Exception as e:
             print(f"Error fetching ticker from Kucoin: {e}")
             return None
@@ -29,6 +31,8 @@ class KucoinExchange:
             async with self.semaphore:
                 order_book = await self.exchange.fetch_order_book(symbol)
                 return order_book
+        except asyncio.CancelledError:
+            raise
         except Exception as e:
             print(f"Error fetching order book from Kucoin: {e}")
             return None

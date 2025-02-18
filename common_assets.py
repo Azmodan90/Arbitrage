@@ -1,5 +1,6 @@
 import json
 import logging
+import asyncio
 from config import CONFIG
 from exchanges.binance import BinanceExchange
 from exchanges.kucoin import KucoinExchange
@@ -8,16 +9,31 @@ from exchanges.bitstamp import BitstampExchange
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Prosty cache dla wyników load_markets – TTL w sekundach
+markets_cache = {}  # key: exchange name, value: (timestamp, markets)
+MARKETS_TTL = 300   # 5 minut
+
 async def get_markets_dict(exchange_instance, allowed_quotes=CONFIG["ALLOWED_QUOTES"]):
     try:
-        logging.info(f"Loading markets for: {exchange_instance.__class__.__name__}")
-        markets = await exchange_instance.load_markets()
+        exchange_name = exchange_instance.__class__.__name__
+        now = asyncio.get_event_loop().time()
+        # Sprawdzenie cache
+        if exchange_name in markets_cache:
+            cached_time, cached_markets = markets_cache[exchange_name]
+            if now - cached_time < MARKETS_TTL:
+                logging.info(f"Using cached markets for: {exchange_name}")
+                markets = cached_markets
+            else:
+                markets = await exchange_instance.load_markets()
+                markets_cache[exchange_name] = (now, markets)
+        else:
+            markets = await exchange_instance.load_markets()
+            markets_cache[exchange_name] = (now, markets)
         result = {}
         for symbol in markets:
             if "/" in symbol:
                 base, quote = symbol.split("/")
                 if quote in allowed_quotes:
-                    # Używamy pełnego symbolu jako klucza, aby rozróżnić np. ABC/USDT i ABC/EUR
                     result[symbol] = symbol
         return result
     except Exception as e:
@@ -25,8 +41,11 @@ async def get_markets_dict(exchange_instance, allowed_quotes=CONFIG["ALLOWED_QUO
         return {}
 
 async def get_common_assets_for_pair(name1, exchange1, name2, exchange2, allowed_quotes=CONFIG["ALLOWED_QUOTES"]):
-    markets1 = await get_markets_dict(exchange1, allowed_quotes)
-    markets2 = await get_markets_dict(exchange2, allowed_quotes)
+    # Ładujemy rynki równolegle dla obu giełd
+    markets1, markets2 = await asyncio.gather(
+        get_markets_dict(exchange1, allowed_quotes),
+        get_markets_dict(exchange2, allowed_quotes)
+    )
     common_keys = set(markets1.keys()).intersection(set(markets2.keys()))
     common = {}
     for key in common_keys:
@@ -41,12 +60,6 @@ def save_common_assets(common_assets, filename="common_assets.json"):
         logging.info(f"Common assets list saved to file: {filename}")
     except Exception as e:
         logging.error(f"Error saving to file {filename}: {e}")
-
-def should_remove(asset, remove_list):
-    for r in remove_list:
-        if asset == r or asset.startswith(r + "/"):
-            return True
-    return False
 
 async def modify_common_assets(common_assets, remove_file="assets_to_remove.json", add_file="assets_to_add.json"):
     try:
@@ -70,7 +83,7 @@ async def modify_common_assets(common_assets, remove_file="assets_to_remove.json
             remove_list = assets_to_remove[config_key]
             before = len(common_assets[config_key])
             common_assets[config_key] = {asset: mapping for asset, mapping in common_assets[config_key].items()
-                                         if not should_remove(asset, remove_list)}
+                                         if not any(asset == r or asset.startswith(r + "/") for r in remove_list)}
             after = len(common_assets[config_key])
             logging.info(f"Configuration {config_key}: removed {before - after} assets.")
         if config_key in assets_to_add:
@@ -103,20 +116,28 @@ async def main():
 
     common_assets = {}
     names = list(exchanges.keys())
+    # Ładujemy rynki dla każdej pary giełd równolegle
+    tasks = []
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
             name1 = names[i]
             name2 = names[j]
             logging.info(f"Comparing assets for pair: {name1} - {name2}")
-            mapping = await get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=CONFIG["ALLOWED_QUOTES"])
-            common_assets[f"{name1}-{name2}"] = mapping
+            tasks.append(get_common_assets_for_pair(name1, exchanges[name1], name2, exchanges[name2], allowed_quotes=CONFIG["ALLOWED_QUOTES"]))
+    pairs_results = await asyncio.gather(*tasks)
+    # Przypisujemy wyniki do common_assets, zakładając, że kolejność w tasks odpowiada kolejności par
+    idx = 0
+    for i in range(len(names)):
+        for j in range(i + 1, len(names)):
+            pair_key = f"{names[i]}-{names[j]}"
+            common_assets[pair_key] = pairs_results[idx]
+            idx += 1
 
     common_assets = await modify_common_assets(common_assets)
     save_common_assets(common_assets)
     for pair, assets in common_assets.items():
         logging.info(f"Pair {pair} has {len(assets)} common assets.")
 
-    # Close exchanges
     await binance.close()
     await kucoin.close()
     await bitget.close()
