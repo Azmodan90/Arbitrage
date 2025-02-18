@@ -8,6 +8,10 @@ class BinanceExchange:
             'apiKey': CONFIG["BINANCE_API_KEY"],
             'secret': CONFIG["BINANCE_SECRET"],
             'enableRateLimit': True,
+            'options': {
+                'default type' : 'spot'
+            }
+            
         })
         self.fee_rate = 0.1
 
