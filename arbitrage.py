@@ -7,7 +7,7 @@ from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 from tabulate import tabulate
 
-# Logger configuration
+# Konfiguracja loggerów
 arbitrage_logger = logging.getLogger("arbitrage")
 if not arbitrage_logger.hasHandlers():
     handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
@@ -49,7 +49,7 @@ def normalize_symbol(symbol):
         return symbol.split(":")[0]
     return symbol
 
-# --- Asynchroniczny rate limiter ---
+# Asynchroniczny rate limiter – działa przy użyciu asyncio.sleep()
 class RateLimiter:
     def __init__(self, delay):
         self.delay = delay  # minimalny odstęp między zapytaniami (sekundy)
@@ -72,18 +72,12 @@ def get_rate_limiter(exchange):
 
 async def fetch_ticker_rate_limited_async(exchange, symbol):
     now = time.monotonic()
-    key = (exchange.__class__.__name__, symbol)
-    if key in ticker_cache:
-        cached_time, cached_ticker = ticker_cache[key]
-        if now - cached_time < TICKER_TTL:
-            return cached_ticker
     limiter = get_rate_limiter(exchange)
     wait_time = limiter.delay - (now - limiter.last_request)
     if wait_time > 0:
         await asyncio.sleep(wait_time)
     ticker = await exchange.fetch_ticker(symbol)
     limiter.last_request = time.monotonic()
-    ticker_cache[key] = (time.monotonic(), ticker)
     return ticker
 
 async def get_liquidity_info_async(exchange, symbol):
@@ -99,21 +93,12 @@ async def get_liquidity_info_async(exchange, symbol):
         return None
 
 async def convert_investment(quote, investment_usdt, conversion_exchange):
-    """
-    Pobiera kurs pary quote/USDT i przelicza inwestycję z USDT na jednostki quote.
-    """
     pair = f"{quote}/USDT"
     ticker = await conversion_exchange.fetch_ticker(pair)
     if ticker is None or ticker.get("last") is None:
         return investment_usdt
     price = ticker.get("last")
     return investment_usdt / price
-
-# Cache
-ticker_cache = {}       # key: (exchange_name, symbol) -> (timestamp, ticker)
-ORDERBOOK_TTL = 1.0     # TTL order booka (sekundy)
-TICKER_TTL = 1.0        # TTL tickera (sekundy)
-orderbook_cache = {}
 
 class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
@@ -139,15 +124,13 @@ class PairArbitrageStrategy:
             return
 
         arbitrage_logger.info(f"{self.pair_name} - Checking arbitrage for symbols: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
-        
-        # Pobieramy tickery asynchronicznie
-        ticker1 = await fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
-        ticker2 = await fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
-        # Jeśli wynik jest coroutine (co powinno już być rozpakowane), dodatkowo awaitujemy:
-        if asyncio.iscoroutine(ticker1):
-            ticker1 = await ticker1
-        if asyncio.iscoroutine(ticker2):
-            ticker2 = await ticker2
+
+        try:
+            ticker1 = await fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
+            ticker2 = await fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
+        except asyncio.CancelledError:
+            # Jeśli zadanie zostało przerwane, wyjdź spokojnie
+            return
 
         tickers = {}
         if ticker1:
@@ -188,7 +171,7 @@ class PairArbitrageStrategy:
         base_investment = CONFIG.get("INVESTMENT_AMOUNT", 100)
         investment = base_investment
         if CONFIG.get("CONVERT_INVESTMENT", {}).get(quote, False):
-            from exchanges.binance import BinanceExchange  # Using Binance as conversion reference
+            from exchanges.binance import BinanceExchange  # Używamy Binance jako exchange konwersyjny
             conversion_exchange = BinanceExchange()
             investment = await convert_investment(quote, base_investment, conversion_exchange)
             await conversion_exchange.close()
@@ -232,7 +215,7 @@ class PairArbitrageStrategy:
             log_line = (
                 f"Pair: {self.pair_name} | Asset: {asset} | "
                 f"Buy ({names[0]} eff.): {effective_buy_ex1:.4f} | Sell ({names[1]} eff.): {effective_sell_ex2:.4f} | "
-                f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {f'{profit_liq_percent:.2f}' if profit_liq is not None else 'N/A'}% | "
+                f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {f'{profit_liq_percent:.2f}' if 'profit_liq_percent' in locals() and profit_liq_percent is not None else 'N/A'}% | "
                 f"Profit ({quote}): {f'{profit_liq:.6f}' if profit_liq is not None else 'N/A'} | "
                 f"Invested ({quote}): {f'{invested_amount:.6f}' if invested_amount is not None else 'N/A'} | "
                 f"Qty Purchased: {f'{actual_qty:.4f}' if actual_qty is not None else 'N/A'} | "
@@ -269,7 +252,8 @@ class PairArbitrageStrategy:
                 await asyncio.sleep(1)
         except asyncio.CancelledError:
             arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
-            raise
+            return
 
 if __name__ == '__main__':
+    # For testing purposes – normally the strategy is launched via common_assets
     asyncio.run(PairArbitrageStrategy(None, None, None).run())

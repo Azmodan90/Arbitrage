@@ -15,13 +15,13 @@ CONFIG = {
     
     "ALLOWED_QUOTES": ["USDT", "EUR", "BTC"],
 
-    "MIN_LIQUIDITY": 50,  # minimalny wolumen (możesz ustalić własną wartość)
+    "MIN_LIQUIDITY": 200,  # minimalny wolumen (możesz ustalić własną wartość)
 
-    "ARBITRAGE_THRESHOLD": 0.5,  # próg arbitrażu w %
+    "ARBITRAGE_THRESHOLD": 4,  # próg arbitrażu w %
 
     "ABSURD_THRESHOLD": 100,     # próg absurdalnego zysku w %
 
-    "INVESTMENT_AMOUNT": 100,    # kwota inwestycji (domyślnie w USDT)
+    "INVESTMENT_AMOUNT": 500,    # kwota inwestycji (domyślnie w USDT)
     
     "CONVERT_INVESTMENT": {
         "BTC": True,

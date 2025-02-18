@@ -1,48 +1,13 @@
-2025-02-18 20:17:16,770 - INFO - Starting arbitrage program
-2025-02-18 20:17:18,959 - INFO - Starting creation of common assets list (by full symbol and quote)
-2025-02-18 20:17:19,027 - INFO - Comparing assets for pair: binance - kucoin
-2025-02-18 20:17:19,029 - INFO - Loading markets for: BinanceExchange
-2025-02-18 20:17:22,598 - INFO - Loading markets for: KucoinExchange
-2025-02-18 20:17:24,804 - INFO - Common assets for binance and kucoin (quotes=['USDT', 'EUR', 'BTC']): 436 found
-2025-02-18 20:17:58,866 - INFO - After liquidity filtering, 260 common assets remain.
-2025-02-18 20:17:58,867 - INFO - Comparing assets for pair: binance - bitget
-2025-02-18 20:17:58,869 - INFO - Loading markets for: BinanceExchange
-2025-02-18 20:17:58,872 - INFO - Loading markets for: BitgetExchange
-2025-02-18 20:18:01,072 - INFO - Common assets for binance and bitget (quotes=['USDT', 'EUR', 'BTC']): 372 found
-2025-02-18 20:18:20,002 - INFO - After liquidity filtering, 232 common assets remain.
-2025-02-18 20:18:20,005 - INFO - Comparing assets for pair: binance - bitstamp
-2025-02-18 20:18:20,006 - INFO - Loading markets for: BinanceExchange
-2025-02-18 20:18:20,010 - INFO - Loading markets for: BitstampExchange
-2025-02-18 20:18:20,546 - INFO - Common assets for binance and bitstamp (quotes=['USDT', 'EUR', 'BTC']): 47 found
-2025-02-18 20:18:24,154 - INFO - After liquidity filtering, 19 common assets remain.
-2025-02-18 20:18:24,156 - INFO - Comparing assets for pair: kucoin - bitget
-2025-02-18 20:18:24,159 - INFO - Loading markets for: KucoinExchange
-2025-02-18 20:18:24,161 - INFO - Loading markets for: BitgetExchange
-2025-02-18 20:18:24,165 - INFO - Common assets for kucoin and bitget (quotes=['USDT', 'EUR', 'BTC']): 515 found
-2025-02-18 20:19:03,831 - INFO - After liquidity filtering, 358 common assets remain.
-2025-02-18 20:19:03,833 - INFO - Comparing assets for pair: kucoin - bitstamp
-2025-02-18 20:19:03,835 - INFO - Loading markets for: KucoinExchange
-2025-02-18 20:19:03,838 - INFO - Loading markets for: BitstampExchange
-2025-02-18 20:19:03,839 - INFO - Common assets for kucoin and bitstamp (quotes=['USDT', 'EUR', 'BTC']): 17 found
-2025-02-18 20:19:05,509 - INFO - After liquidity filtering, 6 common assets remain.
-2025-02-18 20:19:05,511 - INFO - Comparing assets for pair: bitget - bitstamp
-2025-02-18 20:19:05,513 - INFO - Loading markets for: BitgetExchange
-2025-02-18 20:19:05,516 - INFO - Loading markets for: BitstampExchange
-2025-02-18 20:19:05,517 - INFO - Common assets for bitget and bitstamp (quotes=['USDT', 'EUR', 'BTC']): 26 found
-2025-02-18 20:19:07,538 - INFO - After liquidity filtering, 13 common assets remain.
-2025-02-18 20:19:07,556 - INFO - Loaded assets to remove from assets_to_remove.json.
-2025-02-18 20:19:07,570 - INFO - Loaded assets to add from assets_to_add.json.
-2025-02-18 20:19:07,572 - INFO - Configuration binance-kucoin: removed 4 assets.
-2025-02-18 20:19:07,574 - INFO - Configuration binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
-2025-02-18 20:19:07,576 - INFO - Configuration binance-bitget: removed 0 assets.
-2025-02-18 20:19:07,578 - INFO - Configuration binance-bitstamp: removed 0 assets.
-2025-02-18 20:19:07,581 - INFO - Configuration kucoin-bitget: removed 4 assets.
-2025-02-18 20:19:07,583 - INFO - Configuration kucoin-bitstamp: removed 0 assets.
-2025-02-18 20:19:07,585 - INFO - Configuration bitget-bitstamp: removed 0 assets.
-2025-02-18 20:19:07,621 - INFO - Common assets list saved to file: common_assets.json
-2025-02-18 20:19:07,622 - INFO - Pair binance-kucoin has 257 common assets.
-2025-02-18 20:19:07,623 - INFO - Pair binance-bitget has 232 common assets.
-2025-02-18 20:19:07,624 - INFO - Pair binance-bitstamp has 19 common assets.
-2025-02-18 20:19:07,625 - INFO - Pair kucoin-bitget has 354 common assets.
-2025-02-18 20:19:07,626 - INFO - Pair kucoin-bitstamp has 6 common assets.
-2025-02-18 20:19:07,627 - INFO - Pair bitget-bitstamp has 13 common assets.
+2025-02-18 21:19:09,264 - INFO - Starting arbitrage program
+2025-02-18 21:28:34,181 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-18 21:28:34,186 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fc5b6259450>
+2025-02-18 21:28:34,188 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7fc5cecd2040>, 91560.671057327), (<aiohttp.client_proto.ResponseHandler object at 0x7fc5cecd0050>, 91560.903831042), (<aiohttp.client_proto.ResponseHandler object at 0x7fc5c518e5f0>, 91560.906069295)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7fc5c518c2f0>, 91560.906864674)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7fc5c518dcc0>, 91561.526958934)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7fc5c4d017d0>
+2025-02-18 21:28:34,214 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-18 21:28:34,219 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fc5c4dd4450>
+2025-02-18 21:28:34,220 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7fc5cecd31c0>, 91560.666956517), (<aiohttp.client_proto.ResponseHandler object at 0x7fc5cecd2820>, 91560.903551447), (<aiohttp.client_proto.ResponseHandler object at 0x7fc5cfc3fd20>, 91560.905148661)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7fc5c518ef90>, 91561.042457579)]', '[(<aiohttp.client_proto.ResponseHandler object at 0x7fc5c518eb30>, 91563.242822465)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7fc5c4dd5d10>

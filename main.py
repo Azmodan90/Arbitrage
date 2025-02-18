@@ -9,7 +9,6 @@ from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
 from arbitrage import PairArbitrageStrategy
 import common_assets
-from logging.handlers import RotatingFileHandler
 
 def setup_logging():
     logger = logging.getLogger()
@@ -17,7 +16,7 @@ def setup_logging():
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     if logger.hasHandlers():
         logger.handlers.clear()
-    file_handler = RotatingFileHandler('app.log', mode='a', maxBytes=5*1024*1024, backupCount=5, encoding='utf-8')
+    file_handler = logging.FileHandler('app.log', mode='a', encoding='utf-8')
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
@@ -29,7 +28,7 @@ async def shutdown(signal_name, loop):
     for task in tasks:
         task.cancel()
     await asyncio.gather(*tasks, return_exceptions=True)
-    await asyncio.sleep(0.2)
+    await asyncio.sleep(0.1)
     await loop.shutdown_asyncgens()
 
 def setup_signal_handlers(loop):
@@ -61,7 +60,7 @@ async def run_arbitrage_for_all_pairs(exchanges):
         strategy = PairArbitrageStrategy(ex1, ex2, assets, pair_name=pair_key)
         tasks.append(asyncio.create_task(strategy.run()))
     if tasks:
-        await asyncio.gather(*tasks)
+        await asyncio.gather(*tasks, return_exceptions=True)
     else:
         logging.info("No arbitrage tasks to run.")
 
@@ -92,11 +91,14 @@ async def main():
         else:
             logging.error("Invalid choice!")
             print("Invalid choice!")
-
+    
     await exchanges["binance"].close()
     await exchanges["kucoin"].close()
     await exchanges["bitget"].close()
     await exchanges["bitstamp"].close()
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("Program terminated by user")
