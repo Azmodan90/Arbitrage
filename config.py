@@ -26,5 +26,15 @@ CONFIG = {
     "CONVERT_INVESTMENT": {
         "BTC": True,
         "ETH": True
-    }
+
+            },
+    "FILTER_LOW_LIQUIDITY": True,
+    "MIN_LIQUIDITY": {
+        
+        "USDT": 1000,   # minimalny wolumen (sumarycznie z N poziomów) dla USDT
+        "EUR": 50,      # dla EUR
+        "BTC": 0.05     # dla BTC
+    },
+    "LIQUIDITY_LEVELS_TO_CHECK": 3  # liczba pierwszych poziomów order booka do zsumowania
 }
+

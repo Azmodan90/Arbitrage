@@ -2,13 +2,14 @@ import asyncio
 import logging
 import json
 import time
-from logging.handlers import RotatingFileHandler
 from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 from tabulate import tabulate
 
-# Konfiguracja loggerów z użyciem RotatingFileHandler – konfigurujemy raz dla wszystkich loggerów
+from logging.handlers import RotatingFileHandler
+
+# Konfiguracja loggerów z RotatingFileHandler
 def setup_logger(logger_name, log_file, level=logging.INFO):
     logger = logging.getLogger(logger_name)
     if not logger.hasHandlers():
@@ -30,10 +31,10 @@ def normalize_symbol(symbol):
         return symbol.split(":")[0]
     return symbol
 
-# Asynchroniczny rate limiter – wykorzystujący asyncio.sleep()
+# Asynchroniczny rate limiter – działający przy użyciu asyncio.sleep()
 class RateLimiter:
     def __init__(self, delay):
-        self.delay = delay  # minimalny odstęp między zapytaniami (sekundy)
+        self.delay = delay  # minimalny odstęp między zapytaniami (w sekundach)
         self.last_request = 0
 
 RATE_LIMITS = {
@@ -61,32 +62,39 @@ async def fetch_ticker_rate_limited_async(exchange, symbol):
     limiter.last_request = time.monotonic()
     return ticker
 
-# Asynchroniczna wersja funkcji pobierającej order book z cache'owaniem
-orderbook_cache = {}  # key: (exchange_name, symbol) -> (timestamp, order_book)
-ORDERBOOK_TTL = 1.0   # TTL dla order booka (sekundy)
-
+# Zmieniamy get_liquidity_info_async, aby zwracał cały order book
 async def get_liquidity_info_async(exchange, symbol):
     try:
-        now = time.monotonic()
-        key = (exchange.__class__.__name__, symbol)
-        if key in orderbook_cache:
-            cached_time, cached_order_book = orderbook_cache[key]
-            if now - cached_time < ORDERBOOK_TTL:
-                order_book = cached_order_book
-            else:
-                order_book = await exchange.fetch_order_book(symbol)
-                orderbook_cache[key] = (time.monotonic(), order_book)
-        else:
-            order_book = await exchange.fetch_order_book(symbol)
-            orderbook_cache[key] = (time.monotonic(), order_book)
+        order_book = await exchange.fetch_order_book(symbol)
         bids = order_book.get('bids', [])
         asks = order_book.get('asks', [])
-        top_bid = bids[0] if bids else [None, None]
-        top_ask = asks[0] if asks else [None, None]
-        return {"top_bid": top_bid, "top_ask": top_ask}
+        return {"bids": bids, "asks": asks}
     except Exception as e:
         arbitrage_logger.error(f"Error fetching order book for {symbol} on {exchange.__class__.__name__}: {e}")
         return None
+
+# Funkcja agregująca kilka poziomów order booka – oblicza średnią ważoną cenę dla wymaganej ilości
+def aggregate_order_book(levels, required_qty):
+    total_cost = 0
+    accumulated_qty = 0
+    for price, volume in levels:
+        if volume is None:
+            continue
+        if accumulated_qty + volume >= required_qty:
+            qty_needed = required_qty - accumulated_qty
+            total_cost += qty_needed * price
+            accumulated_qty += qty_needed
+            break
+        else:
+            total_cost += volume * price
+            accumulated_qty += volume
+    if accumulated_qty == 0:
+        return None
+    return total_cost / accumulated_qty
+
+# Funkcja sumująca całkowity dostępny wolumen na wszystkich poziomach
+def total_volume(levels):
+    return sum(volume for _, volume in levels if volume is not None)
 
 # Funkcja konwersji inwestycji – przelicza INVESTMENT_AMOUNT (w USDT) na jednostki quote
 async def convert_investment(quote, investment_usdt, conversion_exchange):
@@ -121,7 +129,6 @@ class PairArbitrageStrategy:
             return
 
         arbitrage_logger.info(f"{self.pair_name} - Checking arbitrage for symbols: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
-
         try:
             ticker1 = await fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
             ticker2 = await fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
@@ -167,7 +174,7 @@ class PairArbitrageStrategy:
         base_investment = CONFIG.get("INVESTMENT_AMOUNT", 100)
         investment = base_investment
         if CONFIG.get("CONVERT_INVESTMENT", {}).get(quote, False):
-            from exchanges.binance import BinanceExchange  # używamy Binance jako exchange referencyjnego
+            from exchanges.binance import BinanceExchange
             conversion_exchange = BinanceExchange()
             investment = await convert_investment(quote, base_investment, conversion_exchange)
             await conversion_exchange.close()
@@ -183,27 +190,34 @@ class PairArbitrageStrategy:
             liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2)
             liquidity_info = ""
             if liq_ex1:
-                liquidity_info += f"{names[0]} Top Ask: {liq_ex1['top_ask']}; "
+                liquidity_info += f"{names[0]} Asks: {liq_ex1['asks']}; "
             if liq_ex2:
-                liquidity_info += f"{names[1]} Top Bid: {liq_ex2['top_bid']}"
+                liquidity_info += f"{names[1]} Bids: {liq_ex2['bids']}"
             if liq_ex1 and liq_ex2:
-                top_ask_ex1 = liq_ex1['top_ask'][0]
-                available_buy_vol = liq_ex1['top_ask'][1]
-                top_bid_ex2 = liq_ex2['top_bid'][0]
-                available_sell_vol = liq_ex2['top_bid'][1]
-                effective_order_buy = top_ask_ex1 * (1 + fee1 / 100)
-                desired_qty = investment / effective_order_buy
-                actual_qty = min(desired_qty, available_buy_vol, available_sell_vol)
-                effective_order_sell = top_bid_ex2 * (1 - fee2 / 100)
-                potential_proceeds = actual_qty * effective_order_sell
-                invested_amount = actual_qty * effective_order_buy
+                ask_levels = liq_ex1.get('asks', [])
+                bid_levels = liq_ex2.get('bids', [])
+                total_ask_volume = sum(level[1] for level in ask_levels if level[1] is not None)
+                total_bid_volume = sum(level[1] for level in bid_levels if level[1] is not None)
+                # Obliczamy maksymalny możliwy do zrealizowania wolumen (na podstawie sumy wolumenów)
+                max_qty = min(total_ask_volume, total_bid_volume)
+                desired_qty = investment / effective_buy_ex1
+                actual_qty = min(desired_qty, max_qty)
+                agg_buy_price = aggregate_order_book(ask_levels, actual_qty)
+                agg_sell_price = aggregate_order_book(bid_levels, actual_qty)
+                if agg_buy_price is None or agg_sell_price is None:
+                    arbitrage_logger.warning(f"{self.pair_name} - Unable to aggregate order book for {asset}, skipping.")
+                    return
+                potential_proceeds = actual_qty * agg_sell_price
+                invested_amount = actual_qty * agg_buy_price
                 profit_liq = potential_proceeds - invested_amount
                 profit_liq_percent = (profit_liq / invested_amount * 100) if invested_amount else 0
                 extra_info += f"Qty: {actual_qty:.4f}; Invested: {invested_amount:.6f} {quote}; Proceeds: {potential_proceeds:.6f} {quote}; "
-                if available_buy_vol < desired_qty:
-                    extra_info += f"Insufficient liquidity on {names[0]} (available: {available_buy_vol}); "
-                if available_sell_vol < desired_qty:
-                    extra_info += f"Insufficient liquidity on {names[1]} (available: {available_sell_vol}); "
+                if total_ask_volume < desired_qty:
+                    extra_info += f"Insufficient liquidity on {names[0]} (total ask volume: {total_ask_volume}); "
+                if total_bid_volume < desired_qty:
+                    extra_info += f"Insufficient liquidity on {names[1]} (total bid volume: {total_bid_volume}); "
+            else:
+                extra_info = "No liquidity data available."
         else:
             extra_info = "No liquidity check (threshold not met)."
 
@@ -250,5 +264,25 @@ class PairArbitrageStrategy:
             arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
             return
 
+# Funkcja agregująca kilka poziomów order booka – oblicza średnią ważoną cenę dla wymaganej ilości
+def aggregate_order_book(levels, required_qty):
+    total_cost = 0
+    accumulated_qty = 0
+    for price, volume in levels:
+        if volume is None:
+            continue
+        if accumulated_qty + volume >= required_qty:
+            qty_needed = required_qty - accumulated_qty
+            total_cost += qty_needed * price
+            accumulated_qty += qty_needed
+            break
+        else:
+            total_cost += volume * price
+            accumulated_qty += volume
+    if accumulated_qty == 0:
+        return None
+    return total_cost / accumulated_qty
+
 if __name__ == '__main__':
+    # For testing purposes – normally the strategy is launched via common_assets
     asyncio.run(PairArbitrageStrategy(None, None, None).run())
