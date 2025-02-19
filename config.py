@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 CONFIG = {
+    # Klucze API – upewnij się, że zmienne środowiskowe są ustawione
     "BINANCE_API_KEY": os.getenv("BINANCE_API_KEY"),
     "BINANCE_SECRET": os.getenv("BINANCE_SECRET"),
     "KUCOIN_API_KEY": os.getenv("KUCOIN_API_KEY"),
@@ -13,28 +14,35 @@ CONFIG = {
     "BITSTAMP_API_KEY": os.getenv("BITSTAMP_API_KEY"),
     "BITSTAMP_SECRET": os.getenv("BITSTAMP_SECRET"),
     
-    "ALLOWED_QUOTES": ["USDT", "EUR",],
-
-    "MIN_LIQUIDITY": 300,  # minimalny wolumen (możesz ustalić własną wartość)
-
-    "ARBITRAGE_THRESHOLD": 2,  # próg arbitrażu w %
-
-    "ABSURD_THRESHOLD": 100,     # próg absurdalnego zysku w %
-
-    "INVESTMENT_AMOUNT": 500,    # kwota inwestycji (domyślnie w USDT)
+    # Dozwolone waluty (quote) – tylko symbole z tymi quote będą rozpatrywane
+    "ALLOWED_QUOTES": ["USDT", "EUR"],
     
+    # Domyślna kwota inwestycji (w USDT)
+    "INVESTMENT_AMOUNT": 500,
+    
+    # Dla których quote należy przeliczać inwestycję (z USDT) na jednostki danej waluty
     "CONVERT_INVESTMENT": {
-        "BTC": True,
-        "ETH": True
-
-            },
-    "FILTER_LOW_LIQUIDITY": True,
-    "MIN_LIQUIDITY": {
-        
-        "USDT": 1000,   # minimalny wolumen (sumarycznie z N poziomów) dla USDT
-        "EUR": 50,      # dla EUR
-        "BTC": 0.05     # dla BTC
+         "BTC": True,
+         "ETH": True
+         # Dodaj inne, jeśli potrzebujesz
     },
-    "LIQUIDITY_LEVELS_TO_CHECK": 3  # liczba pierwszych poziomów order booka do zsumowania
+    
+    # Filtracja aktywów o niskiej płynności przy tworzeniu listy wspólnych aktywów
+    "FILTER_LOW_LIQUIDITY": True,
+    
+    # Minimalne wymagane wolumeny (sumarycznie z pierwszych N pozycji order booka) dla danego quote
+    "MIN_LIQUIDITY": {
+         "USDT": 300,   # np. 1000 USDT wolumenu
+         "EUR": 300,      # np. 50 EUR wolumenu
+         "BTC": 0.005     # np. 0.05 BTC wolumenu
+    },
+    
+    # Liczba pierwszych poziomów order booka, z których sumujemy wolumen
+    "LIQUIDITY_LEVELS_TO_CHECK": 5,
+    
+    # Ustawienia arbitrażu:
+    # Minimalny procentowy zysk, przy którym okazja jest rozpatrywana
+    "ARBITRAGE_THRESHOLD": 1,
+    # Jeśli procentowy zysk przekracza tę wartość (np. 100%), okazja jest traktowana jako absurdalna i ignorowana
+    "ABSURD_THRESHOLD": 100,
 }
-
