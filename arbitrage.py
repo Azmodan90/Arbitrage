@@ -2,54 +2,35 @@ import asyncio
 import logging
 import json
 import time
+from logging.handlers import RotatingFileHandler
 from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 from tabulate import tabulate
 
-# Konfiguracja loggerów
-arbitrage_logger = logging.getLogger("arbitrage")
-if not arbitrage_logger.hasHandlers():
-    handler = logging.FileHandler("arbitrage.log", mode="a", encoding="utf-8")
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
-    arbitrage_logger.addHandler(handler)
-    arbitrage_logger.setLevel(logging.INFO)
-    arbitrage_logger.propagate = False
+# Konfiguracja loggerów z użyciem RotatingFileHandler – konfigurujemy raz dla wszystkich loggerów
+def setup_logger(logger_name, log_file, level=logging.INFO):
+    logger = logging.getLogger(logger_name)
+    if not logger.hasHandlers():
+        handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5, encoding="utf-8")
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(level)
+        logger.propagate = False
+    return logger
 
-opp_logger = logging.getLogger("arbitrage_opportunities")
-if not opp_logger.hasHandlers():
-    opp_handler = logging.FileHandler("arbitrage_opportunities.log", mode="a", encoding="utf-8")
-    opp_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    opp_handler.setFormatter(opp_formatter)
-    opp_logger.addHandler(opp_handler)
-    opp_logger.setLevel(logging.INFO)
-    opp_logger.propagate = False
-
-unprofitable_logger = logging.getLogger("unprofitable_opportunities")
-if not unprofitable_logger.hasHandlers():
-    unprofitable_handler = logging.FileHandler("unprofitable_opportunities.log", mode="a", encoding="utf-8")
-    unprofitable_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    unprofitable_handler.setFormatter(unprofitable_formatter)
-    unprofitable_logger.addHandler(unprofitable_handler)
-    unprofitable_logger.setLevel(logging.INFO)
-    unprofitable_logger.propagate = False
-
-absurd_logger = logging.getLogger("absurd_opportunities")
-if not absurd_logger.hasHandlers():
-    absurd_handler = logging.FileHandler("absurd_opportunities.log", mode="a", encoding="utf-8")
-    absurd_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    absurd_handler.setFormatter(absurd_formatter)
-    absurd_logger.addHandler(absurd_handler)
-    absurd_logger.setLevel(logging.INFO)
-    absurd_logger.propagate = False
+arbitrage_logger = setup_logger("arbitrage", "arbitrage.log")
+opp_logger = setup_logger("arbitrage_opportunities", "arbitrage_opportunities.log")
+unprofitable_logger = setup_logger("unprofitable_opportunities", "unprofitable_opportunities.log")
+absurd_logger = setup_logger("absurd_opportunities", "absurd_opportunities.log")
 
 def normalize_symbol(symbol):
     if ":" in symbol:
         return symbol.split(":")[0]
     return symbol
 
-# Asynchroniczny rate limiter – działa przy użyciu asyncio.sleep()
+# Asynchroniczny rate limiter – wykorzystujący asyncio.sleep()
 class RateLimiter:
     def __init__(self, delay):
         self.delay = delay  # minimalny odstęp między zapytaniami (sekundy)
@@ -80,9 +61,24 @@ async def fetch_ticker_rate_limited_async(exchange, symbol):
     limiter.last_request = time.monotonic()
     return ticker
 
+# Asynchroniczna wersja funkcji pobierającej order book z cache'owaniem
+orderbook_cache = {}  # key: (exchange_name, symbol) -> (timestamp, order_book)
+ORDERBOOK_TTL = 1.0   # TTL dla order booka (sekundy)
+
 async def get_liquidity_info_async(exchange, symbol):
     try:
-        order_book = await exchange.fetch_order_book(symbol)
+        now = time.monotonic()
+        key = (exchange.__class__.__name__, symbol)
+        if key in orderbook_cache:
+            cached_time, cached_order_book = orderbook_cache[key]
+            if now - cached_time < ORDERBOOK_TTL:
+                order_book = cached_order_book
+            else:
+                order_book = await exchange.fetch_order_book(symbol)
+                orderbook_cache[key] = (time.monotonic(), order_book)
+        else:
+            order_book = await exchange.fetch_order_book(symbol)
+            orderbook_cache[key] = (time.monotonic(), order_book)
         bids = order_book.get('bids', [])
         asks = order_book.get('asks', [])
         top_bid = bids[0] if bids else [None, None]
@@ -92,6 +88,7 @@ async def get_liquidity_info_async(exchange, symbol):
         arbitrage_logger.error(f"Error fetching order book for {symbol} on {exchange.__class__.__name__}: {e}")
         return None
 
+# Funkcja konwersji inwestycji – przelicza INVESTMENT_AMOUNT (w USDT) na jednostki quote
 async def convert_investment(quote, investment_usdt, conversion_exchange):
     pair = f"{quote}/USDT"
     ticker = await conversion_exchange.fetch_ticker(pair)
@@ -129,7 +126,6 @@ class PairArbitrageStrategy:
             ticker1 = await fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
             ticker2 = await fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
         except asyncio.CancelledError:
-            # Jeśli zadanie zostało przerwane, wyjdź spokojnie
             return
 
         tickers = {}
@@ -171,7 +167,7 @@ class PairArbitrageStrategy:
         base_investment = CONFIG.get("INVESTMENT_AMOUNT", 100)
         investment = base_investment
         if CONFIG.get("CONVERT_INVESTMENT", {}).get(quote, False):
-            from exchanges.binance import BinanceExchange  # Używamy Binance jako exchange konwersyjny
+            from exchanges.binance import BinanceExchange  # używamy Binance jako exchange referencyjnego
             conversion_exchange = BinanceExchange()
             investment = await convert_investment(quote, base_investment, conversion_exchange)
             await conversion_exchange.close()
@@ -255,5 +251,4 @@ class PairArbitrageStrategy:
             return
 
 if __name__ == '__main__':
-    # For testing purposes – normally the strategy is launched via common_assets
     asyncio.run(PairArbitrageStrategy(None, None, None).run())
