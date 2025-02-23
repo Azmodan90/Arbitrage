@@ -1,0 +1,276 @@
+2025-02-20 20:54:31,229 - INFO - Starting arbitrage program
+2025-02-20 20:54:32,951 - INFO - Starting creation of common assets list (by full symbol and quote)
+2025-02-20 20:54:33,018 - INFO - Comparing assets for pair: binance - kucoin
+2025-02-20 20:54:33,019 - INFO - Loading markets for: BinanceExchange
+2025-02-20 20:54:36,251 - INFO - Loading markets for: KucoinExchange
+2025-02-20 20:54:38,272 - INFO - Found 328 common symbols for binance and kucoin before liquidity filtering
+2025-02-20 20:54:44,980 - INFO - Skipping AAVE/USDT due to low liquidity: exchange1 asks: 3.915, exchange2 bids: 2.7816, required: 300
+2025-02-20 20:54:45,603 - INFO - Skipping RAY/USDT due to low liquidity: exchange1 asks: 1304.4, exchange2 bids: 228.3979, required: 300
+2025-02-20 20:54:46,663 - INFO - Skipping HNT/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 61.8467, required: 300
+2025-02-20 20:54:58,190 - INFO - Skipping ETHDOWN/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 368286.753599, required: 300
+2025-02-20 20:55:00,404 - INFO - Skipping MOVR/USDT due to low liquidity: exchange1 asks: 61.022999999999996, exchange2 bids: 274.2204, required: 300
+2025-02-20 20:55:08,294 - INFO - Skipping NEO/USDT due to low liquidity: exchange1 asks: 7033.54, exchange2 bids: 68.013937, required: 300
+2025-02-20 20:55:11,000 - INFO - Skipping ENS/USDT due to low liquidity: exchange1 asks: 3465.7200000000003, exchange2 bids: 33.310700000000004, required: 300
+2025-02-20 20:55:14,214 - INFO - Skipping INJ/USDT due to low liquidity: exchange1 asks: 11720.25, exchange2 bids: 66.7976, required: 300
+2025-02-20 20:55:18,997 - INFO - Skipping ZRO/USDT due to low liquidity: exchange1 asks: 9958.0, exchange2 bids: 228.05, required: 300
+2025-02-20 20:55:21,593 - INFO - Skipping BAL/USDT due to low liquidity: exchange1 asks: 5564.17, exchange2 bids: 241.2013, required: 300
+2025-02-20 20:55:22,276 - INFO - Skipping XNO/USDT due to low liquidity: exchange1 asks: 7476.48, exchange2 bids: 55.5099, required: 300
+2025-02-20 20:55:30,927 - INFO - Skipping OM/USDT due to low liquidity: exchange1 asks: 434.0, exchange2 bids: 66.46209999999999, required: 300
+2025-02-20 20:55:33,652 - INFO - Skipping NMR/USDT due to low liquidity: exchange1 asks: 1921.34, exchange2 bids: 216.2511, required: 300
+2025-02-20 20:55:35,050 - INFO - Skipping YFI/USDT due to low liquidity: exchange1 asks: 0.5695399999999999, exchange2 bids: 0.161155, required: 300
+2025-02-20 20:55:36,390 - INFO - Skipping MKR/USDT due to low liquidity: exchange1 asks: 49.8177, exchange2 bids: 0.6382000000000001, required: 300
+2025-02-20 20:55:41,153 - INFO - Skipping APT/USDT due to low liquidity: exchange1 asks: 80737.97, exchange2 bids: 160.9373, required: 300
+2025-02-20 20:55:41,816 - INFO - Skipping BCH/USDT due to low liquidity: exchange1 asks: 201.481, exchange2 bids: 1.5023, required: 300
+2025-02-20 20:55:42,499 - INFO - Skipping WAVES/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 1334.3418000000001, required: 300
+2025-02-20 20:55:46,033 - INFO - Skipping AVAX/USDT due to low liquidity: exchange1 asks: 24501.26, exchange2 bids: 51.9816, required: 300
+2025-02-20 20:55:47,453 - INFO - Skipping MASK/USDT due to low liquidity: exchange1 asks: 9685.8, exchange2 bids: 258.75, required: 300
+2025-02-20 20:55:51,942 - INFO - Skipping ILV/USDT due to low liquidity: exchange1 asks: 435.71399999999994, exchange2 bids: 23.5597, required: 300
+2025-02-20 20:55:55,451 - INFO - Skipping LPT/USDT due to low liquidity: exchange1 asks: 92.77000000000001, exchange2 bids: 285.6837, required: 300
+2025-02-20 20:55:56,152 - INFO - Skipping DCR/USDT due to low liquidity: exchange1 asks: 411.371, exchange2 bids: 217.3021, required: 300
+2025-02-20 20:55:56,854 - INFO - Skipping UNI/USDT due to low liquidity: exchange1 asks: 1772.0900000000001, exchange2 bids: 260.889, required: 300
+2025-02-20 20:55:58,230 - INFO - Skipping EPX/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 13112741.232099999, required: 300
+2025-02-20 20:55:59,675 - INFO - Skipping ETC/USDT due to low liquidity: exchange1 asks: 5670.050000000001, exchange2 bids: 77.432, required: 300
+2025-02-20 20:56:00,358 - INFO - Skipping LINK/USDT due to low liquidity: exchange1 asks: 39215.899999999994, exchange2 bids: 44.1029, required: 300
+2025-02-20 20:56:13,492 - INFO - Skipping ETH/USDT due to low liquidity: exchange1 asks: 3.9035999999999995, exchange2 bids: 14.8502449, required: 300
+2025-02-20 20:56:14,628 - INFO - Skipping BOND/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 860.8313, required: 300
+2025-02-20 20:56:19,562 - INFO - Skipping ZEC/USDT due to low liquidity: exchange1 asks: 84.98, exchange2 bids: 35.495400000000004, required: 300
+2025-02-20 20:56:20,280 - INFO - Skipping SUI/USDT due to low liquidity: exchange1 asks: 205.2, exchange2 bids: 39403.12, required: 300
+2025-02-20 20:56:21,074 - INFO - Skipping OMNI/USDT due to low liquidity: exchange1 asks: 36224.55, exchange2 bids: 278.97, required: 300
+2025-02-20 20:56:21,739 - INFO - Skipping BTC/USDT due to low liquidity: exchange1 asks: 9.81304, exchange2 bids: 1.00452227, required: 300
+2025-02-20 20:56:23,846 - INFO - Skipping KEY/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 799291.0, required: 300
+2025-02-20 20:56:24,518 - INFO - Skipping UNFI/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 3662.4948999999997, required: 300
+2025-02-20 20:56:25,193 - INFO - Skipping DEXE/USDT due to low liquidity: exchange1 asks: 8.31, exchange2 bids: 52.84, required: 300
+2025-02-20 20:56:25,913 - INFO - Skipping METIS/USDT due to low liquidity: exchange1 asks: 223.123, exchange2 bids: 195.27710000000002, required: 300
+2025-02-20 20:56:27,289 - INFO - Skipping SOL/USDT due to low liquidity: exchange1 asks: 1193.488, exchange2 bids: 30.6828, required: 300
+2025-02-20 20:56:27,974 - INFO - Skipping ATOM/USDT due to low liquidity: exchange1 asks: 8779.25, exchange2 bids: 182.4051, required: 300
+2025-02-20 20:56:30,716 - INFO - Skipping ETH/EUR due to low liquidity: exchange1 asks: 1.4346999999999999, exchange2 bids: 0.27559999999999996, required: 300
+2025-02-20 20:56:38,706 - INFO - Skipping BTCUP/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 43.51350000000001, required: 300
+2025-02-20 20:56:39,426 - INFO - Skipping TWT/USDT due to low liquidity: exchange1 asks: 126.0, exchange2 bids: 10127.9515, required: 300
+2025-02-20 20:56:40,092 - INFO - Skipping EGLD/USDT due to low liquidity: exchange1 asks: 1186.48, exchange2 bids: 205.34789999999998, required: 300
+2025-02-20 20:56:42,943 - INFO - Skipping POLS/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 880.2188, required: 300
+2025-02-20 20:56:45,856 - INFO - Skipping FTT/USDT due to low liquidity: exchange1 asks: 19.35, exchange2 bids: 1525.1881, required: 300
+2025-02-20 20:56:49,328 - INFO - Skipping XMR/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 6.1373, required: 300
+2025-02-20 20:56:53,587 - INFO - Skipping OMG/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 566.4653000000001, required: 300
+2025-02-20 20:56:59,269 - INFO - Skipping ALPINE/USDT due to low liquidity: exchange1 asks: 6996.79, exchange2 bids: 82.84270000000001, required: 300
+2025-02-20 20:57:09,014 - INFO - Skipping BTCDOWN/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 35640.82017200001, required: 300
+2025-02-20 20:57:10,857 - INFO - Skipping FORTH/USDT due to low liquidity: exchange1 asks: 362.9, exchange2 bids: 129.2394, required: 300
+2025-02-20 20:57:13,573 - INFO - Skipping BTT/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 595876069.9125, required: 300
+2025-02-20 20:57:18,591 - INFO - Skipping BTC/EUR due to low liquidity: exchange1 asks: 0.04817, exchange2 bids: 0.03399, required: 300
+2025-02-20 20:57:20,695 - INFO - Skipping TRB/USDT due to low liquidity: exchange1 asks: 840.1949999999999, exchange2 bids: 22.0033, required: 300
+2025-02-20 20:57:26,955 - INFO - Skipping REEF/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 198598.8671, required: 300
+2025-02-20 20:57:30,515 - INFO - Skipping GAS/USDT due to low liquidity: exchange1 asks: 3661.7000000000003, exchange2 bids: 217.6153, required: 300
+2025-02-20 20:57:31,913 - INFO - Skipping BERA/USDT due to low liquidity: exchange1 asks: 551.153, exchange2 bids: 134.7, required: 300
+2025-02-20 20:57:41,070 - INFO - Skipping PENDLE/USDT due to low liquidity: exchange1 asks: 10857.4, exchange2 bids: 283.879, required: 300
+2025-02-20 20:57:41,787 - INFO - Skipping TAO/USDT due to low liquidity: exchange1 asks: 147.084, exchange2 bids: 9.229800000000001, required: 300
+2025-02-20 20:57:45,467 - INFO - Skipping NEAR/USDT due to low liquidity: exchange1 asks: 31500.0, exchange2 bids: 284.7663, required: 300
+2025-02-20 20:57:48,306 - INFO - Skipping CREAM/USDT due to low liquidity: exchange1 asks: 483.802, exchange2 bids: 55.5893, required: 300
+2025-02-20 20:57:50,381 - INFO - Skipping BLZ/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 1227.8813, required: 300
+2025-02-20 20:57:53,917 - INFO - Skipping GMX/USDT due to low liquidity: exchange1 asks: 1046.36, exchange2 bids: 162.07999999999998, required: 300
+2025-02-20 20:57:55,319 - INFO - Skipping ETHUP/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 1261.6337, required: 300
+2025-02-20 20:57:56,029 - INFO - Skipping BSV/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 78.273, required: 300
+2025-02-20 20:58:01,751 - INFO - Skipping LOOM/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 10057.3655, required: 300
+2025-02-20 20:58:03,876 - INFO - Skipping ZEN/USDT due to low liquidity: exchange1 asks: 5892.49, exchange2 bids: 115.97800000000001, required: 300
+2025-02-20 20:58:05,948 - INFO - Skipping WBTC/USDT due to low liquidity: exchange1 asks: 0.07468000000000001, exchange2 bids: 0.17020000000000002, required: 300
+2025-02-20 20:58:06,637 - INFO - Skipping REN/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 23315.9625, required: 300
+2025-02-20 20:58:07,320 - INFO - Skipping QNT/USDT due to low liquidity: exchange1 asks: 445.99299999999994, exchange2 bids: 9.262999999999998, required: 300
+2025-02-20 20:58:09,371 - INFO - Skipping PROM/USDT due to low liquidity: exchange1 asks: 36.85, exchange2 bids: 925.2306000000001, required: 300
+2025-02-20 20:58:14,912 - INFO - Skipping XEM/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 17506.4813, required: 300
+2025-02-20 20:58:17,028 - INFO - Skipping COMP/USDT due to low liquidity: exchange1 asks: 33.393, exchange2 bids: 95.64099999999999, required: 300
+2025-02-20 20:58:19,075 - INFO - Skipping BNB/USDT due to low liquidity: exchange1 asks: 25.026, exchange2 bids: 2.6504000000000003, required: 300
+2025-02-20 20:58:19,769 - INFO - Skipping TRUMP/USDT due to low liquidity: exchange1 asks: 38484.694, exchange2 bids: 40.16, required: 300
+2025-02-20 20:58:20,920 - INFO - Skipping DASH/USDT due to low liquidity: exchange1 asks: 388.90099999999995, exchange2 bids: 265.09450000000004, required: 300
+2025-02-20 20:58:26,872 - INFO - Skipping PAXG/USDT due to low liquidity: exchange1 asks: 12.1862, exchange2 bids: 2.7872, required: 300
+2025-02-20 20:58:28,233 - INFO - Skipping BULL/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 299347.9424, required: 300
+2025-02-20 20:58:36,553 - INFO - Skipping LTC/USDT due to low liquidity: exchange1 asks: 199.3, exchange2 bids: 9.92, required: 300
+2025-02-20 20:58:38,640 - INFO - 250 common symbols remain for binance and kucoin after liquidity filtering
+2025-02-20 20:58:38,641 - INFO - Comparing assets for pair: binance - bitget
+2025-02-20 20:58:38,642 - INFO - Loading markets for: BinanceExchange
+2025-02-20 20:58:38,645 - INFO - Loading markets for: BitgetExchange
+2025-02-20 20:58:40,896 - INFO - Found 359 common symbols for binance and bitget before liquidity filtering
+2025-02-20 20:58:48,044 - INFO - Skipping AAVE/USDT due to low liquidity: exchange1 asks: 10.155, exchange2 bids: 1.9187, required: 300
+2025-02-20 20:58:49,568 - INFO - Skipping HNT/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 1706.967, required: 300
+2025-02-20 20:59:01,230 - INFO - Skipping MOVR/USDT due to low liquidity: exchange1 asks: 50.918, exchange2 bids: 329.892, required: 300
+2025-02-20 20:59:03,348 - INFO - Skipping FARM/USDT due to low liquidity: exchange1 asks: 83.911, exchange2 bids: 235.27, required: 300
+2025-02-20 20:59:04,639 - INFO - Skipping BANANA/USDT due to low liquidity: exchange1 asks: 348.935, exchange2 bids: 91.27000000000001, required: 300
+2025-02-20 20:59:29,518 - INFO - Skipping ASR/USDT due to low liquidity: exchange1 asks: 1596.8000000000002, exchange2 bids: 271.81, required: 300
+2025-02-20 20:59:34,513 - INFO - Skipping OM/USDT due to low liquidity: exchange1 asks: 108.0, exchange2 bids: 205.10999999999996, required: 300
+2025-02-20 20:59:40,103 - INFO - Skipping YFI/USDT due to low liquidity: exchange1 asks: 0.66854, exchange2 bids: 2.056, required: 300
+2025-02-20 20:59:41,483 - INFO - Skipping MKR/USDT due to low liquidity: exchange1 asks: 30.178100000000004, exchange2 bids: 17.0361, required: 300
+2025-02-20 20:59:46,948 - INFO - Skipping BCH/USDT due to low liquidity: exchange1 asks: 177.296, exchange2 bids: 72.5204, required: 300
+2025-02-20 20:59:47,636 - INFO - Skipping WAVES/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 406.06500000000005, required: 300
+2025-02-20 20:59:54,346 - INFO - Skipping BEAM/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 2501817.96, required: 300
+2025-02-20 20:59:59,878 - INFO - Skipping ILV/USDT due to low liquidity: exchange1 asks: 299.722, exchange2 bids: 799.4798000000001, required: 300
+2025-02-20 21:00:01,886 - INFO - Skipping ENA/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 244384.1, required: 300
+2025-02-20 21:00:04,039 - INFO - Skipping LPT/USDT due to low liquidity: exchange1 asks: 256.97, exchange2 bids: 652.11, required: 300
+2025-02-20 21:00:11,815 - INFO - Skipping USDS/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 8650.7, required: 300
+2025-02-20 21:00:20,601 - INFO - Skipping GNO/USDT due to low liquidity: exchange1 asks: 80.843, exchange2 bids: 56.079, required: 300
+2025-02-20 21:00:27,657 - INFO - Skipping ETH/USDT due to low liquidity: exchange1 asks: 121.99919999999999, exchange2 bids: 20.284200000000002, required: 300
+2025-02-20 21:00:28,406 - INFO - Skipping BOND/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 1243.26, required: 300
+2025-02-20 21:00:34,634 - INFO - Skipping BTC/USDT due to low liquidity: exchange1 asks: 1.25345, exchange2 bids: 0.157561, required: 300
+2025-02-20 21:00:36,598 - INFO - Skipping KEY/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 2633297.0, required: 300
+2025-02-20 21:00:37,940 - INFO - Skipping UNFI/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 486.42999999999995, required: 300
+2025-02-20 21:00:39,992 - INFO - Skipping METIS/USDT due to low liquidity: exchange1 asks: 168.03, exchange2 bids: 164.1594, required: 300
+2025-02-20 21:00:41,153 - INFO - Skipping SOL/USDT due to low liquidity: exchange1 asks: 871.2459999999999, exchange2 bids: 195.10410000000002, required: 300
+2025-02-20 21:00:45,672 - INFO - Skipping ETH/EUR due to low liquidity: exchange1 asks: 2.0281000000000002, exchange2 bids: 2.5869, required: 300
+2025-02-20 21:01:01,622 - INFO - Skipping FTT/USDT due to low liquidity: exchange1 asks: 845.11, exchange2 bids: 129.1, required: 300
+2025-02-20 21:01:05,274 - INFO - Skipping SUI/EUR due to low liquidity: exchange1 asks: 171.6, exchange2 bids: 757.58, required: 300
+2025-02-20 21:01:10,074 - INFO - Skipping OMG/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 629.1242000000001, required: 300
+2025-02-20 21:01:12,916 - INFO - Skipping DAI/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 582050.0, required: 300
+2025-02-20 21:01:25,961 - INFO - Skipping BTT/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 29805383456.0, required: 300
+2025-02-20 21:01:31,025 - INFO - Skipping BTC/EUR due to low liquidity: exchange1 asks: 0.07869999999999999, exchange2 bids: 0.14780000000000001, required: 300
+2025-02-20 21:01:33,068 - INFO - Skipping TRB/USDT due to low liquidity: exchange1 asks: 534.9979999999999, exchange2 bids: 68.5949, required: 300
+2025-02-20 21:01:46,932 - INFO - Skipping BERA/USDT due to low liquidity: exchange1 asks: 136.891, exchange2 bids: 272.59000000000003, required: 300
+2025-02-20 21:01:58,341 - INFO - Skipping TAO/USDT due to low liquidity: exchange1 asks: 68.0523, exchange2 bids: 34.961, required: 300
+2025-02-20 21:02:03,832 - INFO - Skipping SOL/EUR due to low liquidity: exchange1 asks: 8.082, exchange2 bids: 16.9754, required: 300
+2025-02-20 21:02:07,474 - INFO - Skipping BLZ/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 24460.0, required: 300
+2025-02-20 21:02:12,317 - INFO - Skipping BSV/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 27.669999999999998, required: 300
+2025-02-20 21:02:16,515 - INFO - Skipping WING/USDT due to low liquidity: exchange1 asks: 424.24, exchange2 bids: 103.53000000000002, required: 300
+2025-02-20 21:02:17,202 - INFO - Skipping LOOM/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 26338.399999999998, required: 300
+2025-02-20 21:02:21,395 - INFO - Skipping WBTC/USDT due to low liquidity: exchange1 asks: 0.07264999999999999, exchange2 bids: 0.0049, required: 300
+2025-02-20 21:02:22,125 - INFO - Skipping REN/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 32983.11, required: 300
+2025-02-20 21:02:25,597 - INFO - Skipping PROM/USDT due to low liquidity: exchange1 asks: 33.31, exchange2 bids: 245.736, required: 300
+2025-02-20 21:02:26,955 - INFO - Skipping MC/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 76.01, required: 300
+2025-02-20 21:02:30,518 - INFO - Skipping XEM/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 60264.4, required: 300
+2025-02-20 21:02:32,638 - INFO - Skipping COMP/USDT due to low liquidity: exchange1 asks: 71.792, exchange2 bids: 51.3998, required: 300
+2025-02-20 21:02:35,114 - INFO - Skipping BNB/USDT due to low liquidity: exchange1 asks: 0.514, exchange2 bids: 141.5883, required: 300
+2025-02-20 21:02:35,803 - INFO - Skipping TRUMP/USDT due to low liquidity: exchange1 asks: 35981.379, exchange2 bids: 84.17, required: 300
+2025-02-20 21:02:39,885 - INFO - Skipping AUCTION/USDT due to low liquidity: exchange1 asks: 3592.3199999999997, exchange2 bids: 241.2513, required: 300
+2025-02-20 21:02:42,045 - INFO - Skipping PAXG/USDT due to low liquidity: exchange1 asks: 12.719800000000001, exchange2 bids: 8.3254, required: 300
+2025-02-20 21:02:55,042 - INFO - Skipping LTC/USDT due to low liquidity: exchange1 asks: 194.397, exchange2 bids: 103.6007, required: 300
+2025-02-20 21:02:55,716 - INFO - Skipping LTC/EUR due to low liquidity: exchange1 asks: 51.45399999999999, exchange2 bids: 403.584, required: 300
+2025-02-20 21:02:57,747 - INFO - Skipping KP3R/USDT due to low liquidity: exchange1 asks: 0, exchange2 bids: 63.75, required: 300
+2025-02-20 21:02:58,482 - INFO - 307 common symbols remain for binance and bitget after liquidity filtering
+2025-02-20 21:02:58,483 - INFO - Comparing assets for pair: binance - bitstamp
+2025-02-20 21:02:58,483 - INFO - Loading markets for: BinanceExchange
+2025-02-20 21:02:58,486 - INFO - Loading markets for: BitstampExchange
+2025-02-20 21:02:59,019 - INFO - Found 37 common symbols for binance and bitstamp before liquidity filtering
+2025-02-20 21:02:59,972 - INFO - Skipping CHZ/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 198959.82955987, required: 300
+2025-02-20 21:03:01,815 - INFO - Skipping SOL/EUR due to low liquidity: exchange1 asks: 15.718000000000002, exchange2 bids: 157.63, required: 300
+2025-02-20 21:03:02,753 - INFO - Skipping ENJ/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 8403.94577667, required: 300
+2025-02-20 21:03:04,363 - INFO - Skipping RNDR/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 4620.5, required: 300
+2025-02-20 21:03:05,683 - INFO - Skipping EGLD/EUR due to low liquidity: exchange1 asks: 167.34, exchange2 bids: 23.36152, required: 300
+2025-02-20 21:03:06,661 - INFO - Skipping ETH/USDT due to low liquidity: exchange1 asks: 45.9842, exchange2 bids: 7.31711034, required: 300
+2025-02-20 21:03:07,112 - INFO - Skipping FTM/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 5245.676781079999, required: 300
+2025-02-20 21:03:07,597 - INFO - Skipping ETH/EUR due to low liquidity: exchange1 asks: 2.558, exchange2 bids: 19.3263247, required: 300
+2025-02-20 21:03:09,255 - INFO - Skipping AVAX/EUR due to low liquidity: exchange1 asks: 3881.04, exchange2 bids: 90.59840052000001, required: 300
+2025-02-20 21:03:09,831 - INFO - Skipping BTC/EUR due to low liquidity: exchange1 asks: 0.16385, exchange2 bids: 1.31823061, required: 300
+2025-02-20 21:03:10,287 - INFO - Skipping TRUMP/EUR due to low liquidity: exchange1 asks: 247.968, exchange2 bids: 889.1833000000001, required: 300
+2025-02-20 21:03:10,862 - INFO - Skipping BCH/EUR due to low liquidity: exchange1 asks: 327.947, exchange2 bids: 23.18041809, required: 300
+2025-02-20 21:03:13,743 - INFO - Skipping APE/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 4020.0699999999997, required: 300
+2025-02-20 21:03:14,206 - INFO - Skipping YFI/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 0.5169429099999999, required: 300
+2025-02-20 21:03:15,143 - INFO - Skipping UNI/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 832.26791967, required: 300
+2025-02-20 21:03:15,623 - INFO - Skipping LTC/EUR due to low liquidity: exchange1 asks: 47.457, exchange2 bids: 22.951982939999997, required: 300
+2025-02-20 21:03:16,091 - INFO - Skipping MATIC/EUR due to low liquidity: exchange1 asks: 0, exchange2 bids: 55288.41217903, required: 300
+2025-02-20 21:03:17,017 - INFO - Skipping BTC/USDT due to low liquidity: exchange1 asks: 0.8507899999999999, exchange2 bids: 0.3680875, required: 300
+2025-02-20 21:03:17,018 - INFO - 19 common symbols remain for binance and bitstamp after liquidity filtering
+2025-02-20 21:03:17,019 - INFO - Comparing assets for pair: kucoin - bitget
+2025-02-20 21:03:17,020 - INFO - Loading markets for: KucoinExchange
+2025-02-20 21:03:17,021 - INFO - Loading markets for: BitgetExchange
+2025-02-20 21:03:17,023 - INFO - Found 505 common symbols for kucoin and bitget before liquidity filtering
+2025-02-20 21:03:19,633 - INFO - Skipping VOLT/USDT due to low liquidity: exchange1 asks: 1100507128.0717, exchange2 bids: 0, required: 300
+2025-02-20 21:03:33,442 - INFO - Skipping AAVE/USDT due to low liquidity: exchange1 asks: 3.2457, exchange2 bids: 2.3453, required: 300
+2025-02-20 21:03:36,645 - INFO - Skipping HNT/USDT due to low liquidity: exchange1 asks: 106.5415, exchange2 bids: 258.02, required: 300
+2025-02-20 21:03:41,404 - INFO - Skipping GNS/USDT due to low liquidity: exchange1 asks: 255.2582, exchange2 bids: 2125.82, required: 300
+2025-02-20 21:03:45,374 - INFO - Skipping FLOW/USDT due to low liquidity: exchange1 asks: 260.9971, exchange2 bids: 3753.1, required: 300
+2025-02-20 21:03:47,647 - INFO - Skipping MOVR/USDT due to low liquidity: exchange1 asks: 843.9589, exchange2 bids: 116.77590000000001, required: 300
+2025-02-20 21:03:52,197 - INFO - Skipping AR/USDT due to low liquidity: exchange1 asks: 282.6808, exchange2 bids: 9619.119999999999, required: 300
+2025-02-20 21:03:53,726 - INFO - Skipping BANANA/USDT due to low liquidity: exchange1 asks: 253.38000000000002, exchange2 bids: 95.72999999999999, required: 300
+2025-02-20 21:04:00,316 - INFO - Skipping SEAM/USDT due to low liquidity: exchange1 asks: 207.25220000000002, exchange2 bids: 2664.2000000000003, required: 300
+2025-02-20 21:04:03,230 - INFO - Skipping NEO/USDT due to low liquidity: exchange1 asks: 62.459182, exchange2 bids: 9627.854000000001, required: 300
+2025-02-20 21:04:06,319 - INFO - Skipping ENS/USDT due to low liquidity: exchange1 asks: 36.5027, exchange2 bids: 461.10749999999996, required: 300
+2025-02-20 21:04:11,166 - INFO - Skipping INJ/USDT due to low liquidity: exchange1 asks: 128.026, exchange2 bids: 3030.4, required: 300
+2025-02-20 21:04:18,065 - INFO - Skipping ZRO/USDT due to low liquidity: exchange1 asks: 237.16, exchange2 bids: 1185.1799999999998, required: 300
+2025-02-20 21:04:38,044 - INFO - Skipping OM/USDT due to low liquidity: exchange1 asks: 173.991, exchange2 bids: 126.88, required: 300
+2025-02-20 21:04:43,565 - INFO - Skipping NMR/USDT due to low liquidity: exchange1 asks: 79.1529, exchange2 bids: 920.3, required: 300
+2025-02-20 21:04:45,169 - INFO - Skipping YFI/USDT due to low liquidity: exchange1 asks: 0.09917500000000001, exchange2 bids: 0.5105000000000001, required: 300
+2025-02-20 21:04:47,558 - INFO - Skipping MKR/USDT due to low liquidity: exchange1 asks: 0.7439, exchange2 bids: 20.756999999999998, required: 300
+2025-02-20 21:04:55,080 - INFO - Skipping BCH/USDT due to low liquidity: exchange1 asks: 2.3398, exchange2 bids: 71.3781, required: 300
+2025-02-20 21:04:55,836 - INFO - Skipping WAVES/USDT due to low liquidity: exchange1 asks: 599.6238, exchange2 bids: 157.71599999999998, required: 300
+2025-02-20 21:05:01,701 - INFO - Skipping AVAX/USDT due to low liquidity: exchange1 asks: 82.531, exchange2 bids: 2938.3575, required: 300
+2025-02-20 21:05:04,662 - INFO - Skipping MASK/USDT due to low liquidity: exchange1 asks: 223.0, exchange2 bids: 2306.5464, required: 300
+2025-02-20 21:05:11,853 - INFO - Skipping ILV/USDT due to low liquidity: exchange1 asks: 31.7988, exchange2 bids: 1058.5504, required: 300
+2025-02-20 21:05:15,499 - INFO - Skipping LPT/USDT due to low liquidity: exchange1 asks: 191.60519999999997, exchange2 bids: 816.28, required: 300
+2025-02-20 21:05:17,030 - INFO - Skipping UNI/USDT due to low liquidity: exchange1 asks: 272.2285, exchange2 bids: 279.0059, required: 300
+2025-02-20 21:05:21,997 - INFO - Skipping XION/USDT due to low liquidity: exchange1 asks: 218.53000000000003, exchange2 bids: 1712.28, required: 300
+2025-02-20 21:05:22,744 - INFO - Skipping ETC/USDT due to low liquidity: exchange1 asks: 116.432993, exchange2 bids: 1147.0541, required: 300
+2025-02-20 21:05:23,437 - INFO - Skipping LINK/USDT due to low liquidity: exchange1 asks: 46.4501, exchange2 bids: 17947.8219, required: 300
+2025-02-20 21:05:37,943 - INFO - Skipping EGP/USDT due to low liquidity: exchange1 asks: 591.9100000000001, exchange2 bids: 272.6, required: 300
+2025-02-20 21:05:45,171 - INFO - Skipping ETH/USDT due to low liquidity: exchange1 asks: 9.1493168, exchange2 bids: 13.8398, required: 300
+2025-02-20 21:05:46,583 - INFO - Skipping AXS/USDT due to low liquidity: exchange1 asks: 293.3897, exchange2 bids: 1901.0700000000002, required: 300
+2025-02-20 21:05:55,440 - INFO - Skipping ORAI/USDT due to low liquidity: exchange1 asks: 69.5604, exchange2 bids: 227.75, required: 300
+2025-02-20 21:05:56,965 - INFO - Skipping BTC/USDT due to low liquidity: exchange1 asks: 0.94554858, exchange2 bids: 1.126245, required: 300
+2025-02-20 21:05:59,914 - INFO - Skipping MORPHO/USDT due to low liquidity: exchange1 asks: 181.44, exchange2 bids: 1726.58, required: 300
+2025-02-20 21:06:02,273 - INFO - Skipping METIS/USDT due to low liquidity: exchange1 asks: 138.0405, exchange2 bids: 40.4675, required: 300
+2025-02-20 21:06:03,766 - INFO - Skipping SOL/USDT due to low liquidity: exchange1 asks: 24.5523, exchange2 bids: 339.6596, required: 300
+2025-02-20 21:06:04,516 - INFO - Skipping ATOM/USDT due to low liquidity: exchange1 asks: 201.51760000000002, exchange2 bids: 658.8958, required: 300
+2025-02-20 21:06:08,242 - INFO - Skipping ICP/USDT due to low liquidity: exchange1 asks: 140.79070000000002, exchange2 bids: 420.399, required: 300
+2025-02-20 21:06:11,250 - INFO - Skipping ETH/EUR due to low liquidity: exchange1 asks: 6.5081999999999995, exchange2 bids: 5.9184, required: 300
+2025-02-20 21:06:27,400 - INFO - Skipping TWT/USDT due to low liquidity: exchange1 asks: 3762.9878999999996, exchange2 bids: 196.5, required: 300
+2025-02-20 21:06:29,638 - INFO - Skipping EGLD/USDT due to low liquidity: exchange1 asks: 263.9199, exchange2 bids: 193.76600000000002, required: 300
+2025-02-20 21:06:38,803 - INFO - Skipping STNK/USDT due to low liquidity: exchange1 asks: 8.632, exchange2 bids: 56.3861, required: 300
+2025-02-20 21:06:39,601 - INFO - Skipping FTT/USDT due to low liquidity: exchange1 asks: 1771.2867999999999, exchange2 bids: 129.18, required: 300
+2025-02-20 21:07:04,121 - INFO - Skipping ALPINE/USDT due to low liquidity: exchange1 asks: 2.9415, exchange2 bids: 3372.5442999999996, required: 300
+2025-02-20 21:07:21,801 - INFO - Skipping CTC/USDT due to low liquidity: exchange1 asks: 851.747, exchange2 bids: 210.58999999999997, required: 300
+2025-02-20 21:07:24,049 - INFO - Skipping WEMIX/USDT due to low liquidity: exchange1 asks: 202.3807, exchange2 bids: 52.762800000000006, required: 300
+2025-02-20 21:07:29,200 - INFO - Skipping BTC/EUR due to low liquidity: exchange1 asks: 0.05851, exchange2 bids: 0.17926, required: 300
+2025-02-20 21:07:33,131 - INFO - Skipping TRB/USDT due to low liquidity: exchange1 asks: 19.5791, exchange2 bids: 135.179, required: 300
+2025-02-20 21:07:51,790 - INFO - Skipping SLN/USDT due to low liquidity: exchange1 asks: 4.0019, exchange2 bids: 0, required: 300
+2025-02-20 21:07:53,257 - INFO - Skipping GAS/USDT due to low liquidity: exchange1 asks: 182.3844, exchange2 bids: 5065.15, required: 300
+2025-02-20 21:07:53,955 - INFO - Skipping BERA/USDT due to low liquidity: exchange1 asks: 328.41999999999996, exchange2 bids: 287.22, required: 300
+2025-02-20 21:07:58,344 - INFO - Skipping HYPE/USDT due to low liquidity: exchange1 asks: 101.81, exchange2 bids: 2423.79, required: 300
+2025-02-20 21:08:10,336 - INFO - Skipping TAO/USDT due to low liquidity: exchange1 asks: 1.8749, exchange2 bids: 24.456, required: 300
+2025-02-20 21:08:35,128 - INFO - Skipping GMX/USDT due to low liquidity: exchange1 asks: 103.43, exchange2 bids: 1041.8000000000002, required: 300
+2025-02-20 21:08:38,170 - INFO - Skipping HOLD/USDT due to low liquidity: exchange1 asks: 272.34, exchange2 bids: 254.85, required: 300
+2025-02-20 21:08:39,000 - INFO - Skipping BSV/USDT due to low liquidity: exchange1 asks: 63.271, exchange2 bids: 56.96000000000001, required: 300
+2025-02-20 21:08:50,980 - INFO - Skipping ZEN/USDT due to low liquidity: exchange1 asks: 189.09879999999998, exchange2 bids: 276.89, required: 300
+2025-02-20 21:08:53,882 - INFO - Skipping WBTC/USDT due to low liquidity: exchange1 asks: 0.1812, exchange2 bids: 0.0106, required: 300
+2025-02-20 21:08:57,631 - INFO - Skipping QNT/USDT due to low liquidity: exchange1 asks: 23.558, exchange2 bids: 592.7502000000001, required: 300
+2025-02-20 21:08:59,777 - INFO - Skipping PROM/USDT due to low liquidity: exchange1 asks: 474.3003, exchange2 bids: 288.585, required: 300
+2025-02-20 21:09:06,444 - INFO - Skipping XEM/USDT due to low liquidity: exchange1 asks: 251.79470000000003, exchange2 bids: 70235.0, required: 300
+2025-02-20 21:09:08,780 - INFO - Skipping COMP/USDT due to low liquidity: exchange1 asks: 36.912800000000004, exchange2 bids: 180.2437, required: 300
+2025-02-20 21:09:11,811 - INFO - Skipping BNB/USDT due to low liquidity: exchange1 asks: 3.6539, exchange2 bids: 34.1144, required: 300
+2025-02-20 21:09:14,062 - INFO - Skipping TRUMP/USDT due to low liquidity: exchange1 asks: 120.28, exchange2 bids: 224.28, required: 300
+2025-02-20 21:09:18,842 - INFO - Skipping AUCTION/USDT due to low liquidity: exchange1 asks: 140.2461, exchange2 bids: 263.9042, required: 300
+2025-02-20 21:09:20,406 - INFO - Skipping PAXG/USDT due to low liquidity: exchange1 asks: 0.5229, exchange2 bids: 8.7277, required: 300
+2025-02-20 21:09:26,520 - INFO - Skipping KSM/USDT due to low liquidity: exchange1 asks: 210.44, exchange2 bids: 1201.4, required: 300
+2025-02-20 21:09:30,242 - INFO - Skipping ETHW/USDT due to low liquidity: exchange1 asks: 70.8373, exchange2 bids: 3759.452, required: 300
+2025-02-20 21:09:32,412 - INFO - Skipping ELA/USDT due to low liquidity: exchange1 asks: 170.42759999999998, exchange2 bids: 247.12, required: 300
+2025-02-20 21:09:41,076 - INFO - Skipping LTC/USDT due to low liquidity: exchange1 asks: 12.709999999999999, exchange2 bids: 29.048299999999998, required: 300
+2025-02-20 21:09:42,527 - INFO - 436 common symbols remain for kucoin and bitget after liquidity filtering
+2025-02-20 21:09:42,529 - INFO - Comparing assets for pair: kucoin - bitstamp
+2025-02-20 21:09:42,529 - INFO - Loading markets for: KucoinExchange
+2025-02-20 21:09:42,532 - INFO - Loading markets for: BitstampExchange
+2025-02-20 21:09:42,534 - INFO - Found 8 common symbols for kucoin and bitstamp before liquidity filtering
+2025-02-20 21:09:43,989 - INFO - Skipping BTC/EUR due to low liquidity: exchange1 asks: 0.04849, exchange2 bids: 1.3186833999999998, required: 300
+2025-02-20 21:09:44,478 - INFO - Skipping ETH/USDT due to low liquidity: exchange1 asks: 11.012621, exchange2 bids: 5.39439475, required: 300
+2025-02-20 21:09:46,013 - INFO - Skipping ETH/EUR due to low liquidity: exchange1 asks: 3.1064000000000003, exchange2 bids: 40.14071318, required: 300
+2025-02-20 21:09:47,092 - INFO - Skipping BTC/USDT due to low liquidity: exchange1 asks: 1.20762313, exchange2 bids: 0.39620556, required: 300
+2025-02-20 21:09:47,092 - INFO - 4 common symbols remain for kucoin and bitstamp after liquidity filtering
+2025-02-20 21:09:47,093 - INFO - Comparing assets for pair: bitget - bitstamp
+2025-02-20 21:09:47,093 - INFO - Loading markets for: BitgetExchange
+2025-02-20 21:09:47,095 - INFO - Loading markets for: BitstampExchange
+2025-02-20 21:09:47,095 - INFO - Found 21 common symbols for bitget and bitstamp before liquidity filtering
+2025-02-20 21:09:48,644 - INFO - Skipping SOL/EUR due to low liquidity: exchange1 asks: 21.5441, exchange2 bids: 144.08, required: 300
+2025-02-20 21:09:51,721 - INFO - Skipping ETH/USDT due to low liquidity: exchange1 asks: 61.9272, exchange2 bids: 18.66136198, required: 300
+2025-02-20 21:09:52,235 - INFO - Skipping ETH/EUR due to low liquidity: exchange1 asks: 2.7678000000000003, exchange2 bids: 17.6483775, required: 300
+2025-02-20 21:09:52,753 - INFO - Skipping AVAX/EUR due to low liquidity: exchange1 asks: 1186.66, exchange2 bids: 155.74601601, required: 300
+2025-02-20 21:09:53,338 - INFO - Skipping BTC/EUR due to low liquidity: exchange1 asks: 0.27273, exchange2 bids: 0.9013123599999999, required: 300
+2025-02-20 21:09:56,339 - INFO - Skipping LTC/EUR due to low liquidity: exchange1 asks: 525.414, exchange2 bids: 29.65946298, required: 300
+2025-02-20 21:09:57,844 - INFO - Skipping BTC/USDT due to low liquidity: exchange1 asks: 1.0362829999999998, exchange2 bids: 0.34232072, required: 300
+2025-02-20 21:09:57,845 - INFO - 14 common symbols remain for bitget and bitstamp after liquidity filtering
+2025-02-20 21:09:57,862 - INFO - Loaded assets to remove from assets_to_remove.json.
+2025-02-20 21:09:57,876 - INFO - Loaded assets to add from assets_to_add.json.
+2025-02-20 21:09:57,878 - INFO - Configuration binance-kucoin: removed 4 assets.
+2025-02-20 21:09:57,879 - INFO - Configuration binance-kucoin: added asset {'source': 'XYZ', 'dest': 'kXYZ', 'normalized': 'XYZ'}.
+2025-02-20 21:09:57,880 - INFO - Configuration binance-bitget: removed 0 assets.
+2025-02-20 21:09:57,880 - INFO - Configuration binance-bitstamp: removed 0 assets.
+2025-02-20 21:09:57,882 - INFO - Configuration kucoin-bitget: removed 5 assets.
+2025-02-20 21:09:57,883 - INFO - Configuration kucoin-bitstamp: removed 0 assets.
+2025-02-20 21:09:57,883 - INFO - Configuration bitget-bitstamp: removed 0 assets.
+2025-02-20 21:09:57,939 - INFO - Common assets list saved to common_assets.json
+2025-02-20 21:09:57,939 - INFO - Pair binance-kucoin has 247 common assets.
+2025-02-20 21:09:57,940 - INFO - Pair binance-bitget has 307 common assets.
+2025-02-20 21:09:57,940 - INFO - Pair binance-bitstamp has 19 common assets.
+2025-02-20 21:09:57,941 - INFO - Pair kucoin-bitget has 431 common assets.
+2025-02-20 21:09:57,941 - INFO - Pair kucoin-bitstamp has 4 common assets.
+2025-02-20 21:09:57,942 - INFO - Pair bitget-bitstamp has 14 common assets.

@@ -18,7 +18,7 @@ CONFIG = {
     "ALLOWED_QUOTES": ["USDT", "EUR"],
     
     # Domyślna kwota inwestycji (w USDT)
-    "INVESTMENT_AMOUNT": 500,
+    "INVESTMENT_AMOUNT": 200,
     
     # Dla których quote należy przeliczać inwestycję (z USDT) na jednostki danej waluty
     "CONVERT_INVESTMENT": {
@@ -34,7 +34,7 @@ CONFIG = {
     "MIN_LIQUIDITY": {
          "USDT": 300,   # np. 1000 USDT wolumenu
          "EUR": 300,      # np. 50 EUR wolumenu
-         "BTC": 0.005     # np. 0.05 BTC wolumenu
+         "BTC": 0.002    # np. 0.05 BTC wolumenu
     },
     
     # Liczba pierwszych poziomów order booka, z których sumujemy wolumen
