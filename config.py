@@ -41,8 +41,13 @@ CONFIG = {
     "LIQUIDITY_LEVELS_TO_CHECK": 5,
     
     # Ustawienia arbitrażu:
+   
     # Minimalny procentowy zysk, przy którym okazja jest rozpatrywana
     "ARBITRAGE_THRESHOLD": 1,
+    
     # Jeśli procentowy zysk przekracza tę wartość (np. 100%), okazja jest traktowana jako absurdalna i ignorowana
     "ABSURD_THRESHOLD": 100,
+    
+    # liczba poziomów order booka do agregacji
+    "ORDERBOOK_LEVELS": 3,
 }
