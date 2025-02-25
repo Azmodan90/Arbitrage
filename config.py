@@ -49,5 +49,5 @@ CONFIG = {
     "ABSURD_THRESHOLD": 100,
     
     # liczba poziomów order booka do agregacji
-    "ORDERBOOK_LEVELS": 3,
+    "ORDERBOOK_LEVELS": 3
 }

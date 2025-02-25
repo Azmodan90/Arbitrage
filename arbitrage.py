@@ -6,15 +6,13 @@ from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 from tabulate import tabulate
-
-# ----------------------
-# Konfiguracja loggerów z RotatingFileHandler
 from logging.handlers import RotatingFileHandler
 
+# Setup loggerów przy użyciu RotatingFileHandler
 def setup_logger(logger_name, log_file, level=logging.INFO):
     logger = logging.getLogger(logger_name)
     if not logger.hasHandlers():
-        handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5, encoding="utf-8")
+        handler = RotatingFileHandler(log_file, maxBytes=10 * 1024 * 1024, backupCount=5, encoding="utf-8")
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
         logger.addHandler(handler)
@@ -27,13 +25,12 @@ opp_logger = setup_logger("arbitrage_opportunities", "arbitrage_opportunities.lo
 unprofitable_logger = setup_logger("unprofitable_opportunities", "unprofitable_opportunities.log")
 absurd_logger = setup_logger("absurd_opportunities", "absurd_opportunities.log")
 
-# ----------------------
 def normalize_symbol(symbol):
     if ":" in symbol:
         return symbol.split(":")[0]
     return symbol
 
-# Asynchroniczny rate limiter – działający przy użyciu asyncio.sleep()
+# Asynchroniczny rate limiter – działa przy użyciu asyncio.sleep()
 class RateLimiter:
     def __init__(self, delay):
         self.delay = delay  # minimalny odstęp między zapytaniami (sekundy)
@@ -64,10 +61,10 @@ async def fetch_ticker_rate_limited_async(exchange, symbol):
     limiter.last_request = time.monotonic()
     return ticker
 
+# Zaktualizowana funkcja pobierająca pełny order book
 async def get_liquidity_info_async(exchange, symbol):
     try:
         order_book = await exchange.fetch_order_book(symbol)
-        # Zwracamy całą listę, aby móc agregować kilka poziomów
         bids = order_book.get('bids', [])
         asks = order_book.get('asks', [])
         return {"bids": bids, "asks": asks}
@@ -75,49 +72,14 @@ async def get_liquidity_info_async(exchange, symbol):
         arbitrage_logger.error(f"Error fetching order book for {symbol} on {exchange.__class__.__name__}: {e}")
         return None
 
-# Funkcje pomocnicze do obliczania średniej ceny wykonania na podstawie kilku poziomów order booka
-
-def calculate_execution_for_buy(asks, investment, fee_rate):
-    """Oblicza, ile jednostek można kupić za podaną inwestycję oraz średnią cenę wykonania.
-       Dla stron kupna (asks) – ceny rosnące."""
-    total_cost = 0.0
-    total_qty = 0.0
-    for price, volume in asks:
-        effective_price = price * (1 + fee_rate/100)
-        level_cost = effective_price * volume
-        if total_cost + level_cost >= investment:
-            remaining = investment - total_cost
-            qty_needed = remaining / effective_price
-            total_qty += qty_needed
-            total_cost += qty_needed * effective_price
-            break
-        else:
-            total_cost += level_cost
-            total_qty += volume
-    if total_qty == 0:
+# Funkcja pomocnicza do agregacji kilku poziomów order booka – oblicza ważoną średnią cenę i łączny wolumen z pierwszych N poziomów
+def aggregate_orderbook_side(side, levels):
+    selected_levels = side[:levels]
+    total_volume = sum(volume for price, volume in selected_levels)
+    if total_volume == 0:
         return None, 0
-    avg_price = total_cost / total_qty
-    return avg_price, total_qty
-
-def calculate_execution_for_sell(bids, qty, fee_rate):
-    """Oblicza średnią cenę wykonania dla sprzedaży określonej ilości jednostek.
-       Dla stron sprzedaży (bids) – ceny malejące."""
-    total_revenue = 0.0
-    total_qty = 0.0
-    for price, volume in bids:
-        effective_price = price * (1 - fee_rate/100)
-        if total_qty + volume >= qty:
-            remaining = qty - total_qty
-            total_revenue += remaining * effective_price
-            total_qty = qty
-            break
-        else:
-            total_revenue += volume * effective_price
-            total_qty += volume
-    if total_qty == 0:
-        return None, 0
-    avg_price = total_revenue / total_qty
-    return avg_price, total_qty
+    weighted_price = sum(price * volume for price, volume in selected_levels) / total_volume
+    return weighted_price, total_volume
 
 # Funkcja konwersji inwestycji – przelicza INVESTMENT_AMOUNT (w USDT) na jednostki quote
 async def convert_investment(quote, investment_usdt, conversion_exchange):
@@ -132,12 +94,13 @@ class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        # assets – słownik z pełnymi symbolami, np. { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
+        # assets – słownik z pełnymi symbolami, np. {"ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"}}
         self.assets = assets
         self.pair_name = pair_name  # np. "binance-bitget"
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
+        # Jeśli asset nie jest dict-em, zakładamy, że zawiera już '/' i stosujemy go dla obu giełd
         if not isinstance(asset, dict):
             if "/" in asset:
                 asset = {names[0]: asset, names[1]: asset}
@@ -153,7 +116,6 @@ class PairArbitrageStrategy:
 
         arbitrage_logger.info(f"{self.pair_name} - Checking arbitrage for symbols: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
 
-        # Szybkie sprawdzenie tickerów do filtrowania okazji
         try:
             ticker1 = await fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
             ticker2 = await fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
@@ -161,17 +123,20 @@ class PairArbitrageStrategy:
             return
 
         tickers = {}
-        if ticker1 and ticker1.get('last') is not None:
-            tickers[names[0]] = ticker1.get('last')
-            arbitrage_logger.info(f"{self.pair_name} - Ticker {names[0]}: {tickers[names[0]]}")
-        else:
-            arbitrage_logger.warning(f"{self.pair_name} - Missing ticker price for {names[0]}, skipping {asset}")
-        if ticker2 and ticker2.get('last') is not None:
-            tickers[names[1]] = ticker2.get('last')
-            arbitrage_logger.info(f"{self.pair_name} - Ticker {names[1]}: {tickers[names[1]]}")
-        else:
-            arbitrage_logger.warning(f"{self.pair_name} - Missing ticker price for {names[1]}, skipping {asset}")
-
+        if ticker1:
+            price1 = ticker1.get('last')
+            if price1 is None:
+                arbitrage_logger.warning(f"{self.pair_name} - Ticker price for {names[0]} is None, skipping asset {asset}")
+            else:
+                tickers[names[0]] = price1
+                arbitrage_logger.info(f"{self.pair_name} - Ticker {names[0]}: {price1}")
+        if ticker2:
+            price2 = ticker2.get('last')
+            if price2 is None:
+                arbitrage_logger.warning(f"{self.pair_name} - Ticker price for {names[1]} is None, skipping asset {asset}")
+            else:
+                tickers[names[1]] = price2
+                arbitrage_logger.info(f"{self.pair_name} - Ticker {names[1]}: {price2}")
         if names[0] not in tickers or names[1] not in tickers:
             arbitrage_logger.warning(f"{self.pair_name} - Insufficient ticker data for {asset}, skipping.")
             return
@@ -179,76 +144,96 @@ class PairArbitrageStrategy:
         fee1 = self.exchange1.fee_rate
         fee2 = self.exchange2.fee_rate
 
-        # Wstępne obliczenia na podstawie tickerów (do filtrowania)
-        effective_buy_ticker = tickers[names[0]] * (1 + fee1 / 100)
-        effective_sell_ticker = tickers[names[1]] * (1 - fee2 / 100)
-        ticker_profit = ((effective_sell_ticker - effective_buy_ticker) / effective_buy_ticker) * 100
+        effective_buy_ex1 = tickers[names[0]] * (1 + fee1 / 100)
+        effective_sell_ex2 = tickers[names[1]] * (1 - fee2 / 100)
+        profit1 = ((effective_sell_ex2 - effective_buy_ex1) / effective_buy_ex1) * 100
 
-        # Ustalanie quote – zakładamy format "XYZ/QUOTE"
+        effective_buy_ex2 = tickers[names[1]] * (1 + fee2 / 100)
+        effective_sell_ex1 = tickers[names[0]] * (1 - fee1 / 100)
+        profit2 = ((effective_sell_ex1 - effective_buy_ex2) / effective_buy_ex2) * 100
+
         try:
             quote = symbol_ex1.split("/")[1]
         except Exception as e:
-            arbitrage_logger.error(f"{self.pair_name} - Error determining quote from {symbol_ex1}: {e}")
+            arbitrage_logger.error(f"{self.pair_name} - Error determining quote from symbol {symbol_ex1}: {e}")
             return
 
         base_investment = CONFIG.get("INVESTMENT_AMOUNT", 100)
         investment = base_investment
         if CONFIG.get("CONVERT_INVESTMENT", {}).get(quote, False):
-            from exchanges.binance import BinanceExchange  # exchange referencyjny do konwersji
+            from exchanges.binance import BinanceExchange
             conversion_exchange = BinanceExchange()
             investment = await convert_investment(quote, base_investment, conversion_exchange)
             await conversion_exchange.close()
-            arbitrage_logger.info(f"Converted investment for {quote}: {base_investment} USDT -> {investment:.6f} {quote}")
+            arbitrage_logger.info(f"Converted investment for quote {quote}: {base_investment} USDT -> {investment:.6f} {quote}")
+
+        profit_liq = None
+        invested_amount = None
+        actual_qty = None
+        liquidity_info = "N/D"
+        extra_info = ""
+        # Używamy kilku poziomów orderbooka – liczba poziomów pobierana z CONFIG
+        levels = CONFIG.get("ORDERBOOK_LEVELS", 3)
+        if (profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]) or (profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]):
+            liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol_ex1)
+            liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2)
+            liquidity_info = ""
+            effective_buy_price, total_buy = None, 0
+            effective_sell_price, total_sell = None, 0
+            if liq_ex1 and "asks" in liq_ex1:
+                effective_buy_price, total_buy = aggregate_orderbook_side(liq_ex1["asks"], levels)
+                liquidity_info += f"{names[0]} Aggregated Ask: {effective_buy_price:.4f} (vol: {total_buy}); "
+            if liq_ex2 and "bids" in liq_ex2:
+                effective_sell_price, total_sell = aggregate_orderbook_side(liq_ex2["bids"], levels)
+                liquidity_info += f"{names[1]} Aggregated Bid: {effective_sell_price:.4f} (vol: {total_sell})"
+            if liq_ex1 and liq_ex2 and effective_buy_price is not None and effective_sell_price is not None:
+                effective_order_buy = effective_buy_price * (1 + fee1 / 100)
+                desired_qty = investment / effective_order_buy
+                actual_qty = min(desired_qty, total_buy, total_sell)
+                effective_order_sell = effective_sell_price * (1 - fee2 / 100)
+                potential_proceeds = actual_qty * effective_order_sell
+                invested_amount = actual_qty * effective_order_buy
+                profit_liq = potential_proceeds - invested_amount
+                profit_liq_percent = (profit_liq / invested_amount * 100) if invested_amount else 0
+                extra_info += f"Qty: {actual_qty:.4f}; Invested: {invested_amount:.6f} {quote}; Proceeds: {potential_proceeds:.6f} {quote}; "
+                if total_buy < desired_qty:
+                    extra_info += f"Insufficient aggregated liquidity on {names[0]} (available: {total_buy}); "
+                if total_sell < desired_qty:
+                    extra_info += f"Insufficient aggregated liquidity on {names[1]} (available: {total_sell}); "
         else:
-            arbitrage_logger.info(f"Using base investment for {quote}: {investment} USDT")
+            extra_info = "No liquidity check (threshold not met)."
 
-        # Pobieramy pełne order booki dla obu symboli
-        liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol_ex1)
-        liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2)
-        if not liq_ex1 or not liq_ex2:
-            arbitrage_logger.warning(f"{self.pair_name} - Missing liquidity data for {asset}, skipping.")
+        try:
+            log_line = (
+                f"Pair: {self.pair_name} | Asset: {asset} | "
+                f"Buy ({names[0]} eff.): {effective_buy_ex1:.4f} | Sell ({names[1]} eff.): {effective_sell_ex2:.4f} | "
+                f"Ticker Profit: {profit1:.2f}% | Liquidity Profit: {f'{profit_liq_percent:.2f}' if 'profit_liq_percent' in locals() and profit_liq_percent is not None else 'N/A'}% | "
+                f"Profit ({quote}): {f'{profit_liq:.6f}' if profit_liq is not None else 'N/A'} | "
+                f"Invested ({quote}): {f'{invested_amount:.6f}' if invested_amount is not None else 'N/A'} | "
+                f"Qty Purchased: {f'{actual_qty:.4f}' if actual_qty is not None else 'N/A'} | "
+                f"Liquidity Info: {liquidity_info} | Extra: {extra_info}"
+            )
+        except Exception as format_e:
+            arbitrage_logger.error(f"{self.pair_name} - Formatting error: {format_e}")
             return
 
-        # Dla kupna – agregujemy kilka poziomów z asks; dla sprzedaży – kilka poziomów z bids
-        avg_buy_price, qty_buy_available = calculate_execution_for_buy(liq_ex1['asks'], investment, fee1)
-        if avg_buy_price is None:
-            arbitrage_logger.warning(f"{self.pair_name} - Could not calculate execution for buy for {asset}, skipping.")
-            return
-
-        # Zakładamy, że chcemy sprzedać tyle samo jednostek, ile możemy kupić
-        avg_sell_price, qty_sell_available = calculate_execution_for_sell(liq_ex2['bids'], qty_buy_available, fee2)
-        if avg_sell_price is None:
-            arbitrage_logger.warning(f"{self.pair_name} - Could not calculate execution for sell for {asset}, skipping.")
-            return
-
-        # Kalkulujemy finalne wartości na podstawie order booka
-        invested_amount = qty_buy_available * avg_buy_price
-        potential_proceeds = qty_buy_available * avg_sell_price
-        profit_orderbook = potential_proceeds - invested_amount
-        profit_orderbook_percent = (profit_orderbook / invested_amount * 100) if invested_amount else 0
-
-        extra_info = (f"Qty: {qty_buy_available:.4f}; Invested: {invested_amount:.6f} {quote}; "
-                      f"Proceeds: {potential_proceeds:.6f} {quote}; ")
-
-        # Przygotowanie loga – informacje końcowe
-        log_line = (
-            f"Pair: {self.pair_name} | Asset: {asset} | "
-            f"Buy Price (order book eff.): {avg_buy_price:.4f} | Sell Price (order book eff.): {avg_sell_price:.4f} | "
-            f"Ticker Profit: {ticker_profit:.2f}% | Orderbook Profit: {profit_orderbook_percent:.2f}% | "
-            f"Profit ({quote}): {profit_orderbook:.6f} | Invested ({quote}): {invested_amount:.6f} | "
-            f"Qty Purchased: {qty_buy_available:.4f} | Extra: {extra_info}"
-        )
-
-        if profit_orderbook > 0:
+        if profit_liq is not None and profit_liq > 0:
             opp_logger.info(log_line)
         else:
             unprofitable_logger.info(log_line)
 
-        arbitrage_logger.info(
-            f"{self.pair_name} - Opportunity: Buy on {self.exchange1.__class__.__name__} at {avg_buy_price:.4f} {quote} | "
-            f"Sell on {self.exchange2.__class__.__name__} at {avg_sell_price:.4f} {quote} | "
-            f"Orderbook Profit: {profit_orderbook_percent:.2f}% ({profit_orderbook:.6f} {quote})"
-        )
+        if profit1 >= CONFIG["ARBITRAGE_THRESHOLD"]:
+            arbitrage_logger.info(
+                f"{self.pair_name} - Opportunity: Buy on {self.exchange1.__class__.__name__} (price: {tickers[names[0]]}, eff.: {effective_buy_ex1:.4f}) | "
+                f"Sell on {self.exchange2.__class__.__name__} (price: {tickers[names[1]]}, eff.: {effective_sell_ex2:.4f}) | "
+                f"Ticker Profit: {profit1:.2f}% | Profit: {f'{profit_liq:.6f}' if profit_liq is not None else 'N/A'} {quote}"
+            )
+        if profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
+            arbitrage_logger.info(
+                f"{self.pair_name} - Opportunity: Buy on {self.exchange2.__class__.__name__} (price: {tickers[names[1]]}, eff.: {effective_buy_ex2:.4f}) | "
+                f"Sell on {self.exchange1.__class__.__name__} (price: {tickers[names[0]]}, eff.: {effective_sell_ex1:.4f}) | "
+                f"Ticker Profit: {profit2:.2f}%"
+            )
 
     async def run(self):
         arbitrage_logger.info(f"{self.pair_name} - Starting arbitrage strategy for {len(self.assets)} assets.")
@@ -261,45 +246,5 @@ class PairArbitrageStrategy:
             arbitrage_logger.info(f"{self.pair_name} - Arbitrage strategy cancelled.")
             return
 
-# Dodatkowe funkcje pomocnicze do obliczeń z order booka
-def calculate_execution_for_buy(asks, investment, fee_rate):
-    total_cost = 0.0
-    total_qty = 0.0
-    for price, volume in asks:
-        effective_price = price * (1 + fee_rate / 100)
-        level_cost = effective_price * volume
-        if total_cost + level_cost >= investment:
-            remaining = investment - total_cost
-            qty_at_level = remaining / effective_price
-            total_qty += qty_at_level
-            total_cost += qty_at_level * effective_price
-            break
-        else:
-            total_cost += level_cost
-            total_qty += volume
-    if total_qty == 0:
-        return None, 0
-    avg_price = total_cost / total_qty
-    return avg_price, total_qty
-
-def calculate_execution_for_sell(bids, required_qty, fee_rate):
-    total_revenue = 0.0
-    total_qty = 0.0
-    for price, volume in bids:
-        effective_price = price * (1 - fee_rate / 100)
-        if total_qty + volume >= required_qty:
-            remaining = required_qty - total_qty
-            total_revenue += remaining * effective_price
-            total_qty = required_qty
-            break
-        else:
-            total_revenue += volume * effective_price
-            total_qty += volume
-    if total_qty == 0:
-        return None, 0
-    avg_price = total_revenue / total_qty
-    return avg_price, total_qty
-
 if __name__ == '__main__':
-    # For testing purposes – normally the strategy is launched via common_assets
     asyncio.run(PairArbitrageStrategy(None, None, None).run())
