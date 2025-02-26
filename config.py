@@ -22,8 +22,8 @@ CONFIG = {
     
     # Dla których quote należy przeliczać inwestycję (z USDT) na jednostki danej waluty
     "CONVERT_INVESTMENT": {
-         "BTC": True,
-         "ETH": True
+         "BTC": False,
+         "ETH": False
          # Dodaj inne, jeśli potrzebujesz
     },
     
@@ -32,8 +32,8 @@ CONFIG = {
     
     # Minimalne wymagane wolumeny (sumarycznie z pierwszych N pozycji order booka) dla danego quote
     "MIN_LIQUIDITY": {
-         "USDT": 300,   # np. 1000 USDT wolumenu
-         "EUR": 300,      # np. 50 EUR wolumenu
+         "USDT": 200,   # np. 1000 USDT wolumenu
+         "EUR": 200,      # np. 50 EUR wolumenu
          "BTC": 0.002    # np. 0.05 BTC wolumenu
     },
     
