@@ -1629,3 +1629,451 @@
 2025-02-27 19:37:42,517 - INFO - binance-bitstamp - Ticker bitstamp: 0.01916
 2025-02-27 19:37:42,594 - INFO - bitget-bitstamp - Ticker bitget: 0.9611
 2025-02-27 19:37:42,595 - INFO - bitget-bitstamp - Ticker bitstamp: 0.96078
+2025-02-27 19:37:42,741 - INFO - binance-kucoin - Ticker binance: 0.649
+2025-02-27 19:37:42,741 - INFO - binance-kucoin - Ticker kucoin: 0.654
+2025-02-27 19:37:42,818 - INFO - kucoin-bitget - Checking arbitrage for symbols: ROOT/USDT (kucoin), ROOT/USDT (bitget)
+2025-02-27 19:37:42,993 - INFO - binance-bitstamp - Checking arbitrage for symbols: XRP/USDT (binance), XRP/USDT (bitstamp)
+2025-02-27 19:37:43,086 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/USDT (bitget), XRP/USDT (bitstamp)
+2025-02-27 19:37:43,127 - INFO - binance-bitget - Checking arbitrage for symbols: AMP/USDT (binance), AMP/USDT (bitget)
+2025-02-27 19:37:43,565 - INFO - binance-kucoin - Checking arbitrage for symbols: SHIB/USDT (binance), SHIB/USDT (kucoin)
+2025-02-27 19:37:43,688 - INFO - kucoin-bitget - Ticker kucoin: 0.01209
+2025-02-27 19:37:43,689 - INFO - kucoin-bitget - Ticker bitget: 0.01214
+2025-02-27 19:37:43,817 - INFO - binance-bitget - Ticker binance: 0.004558
+2025-02-27 19:37:43,818 - INFO - binance-bitget - Ticker bitget: 0.004568
+2025-02-27 19:37:43,931 - INFO - bitget-bitstamp - Ticker bitget: 2.188
+2025-02-27 19:37:43,932 - INFO - bitget-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:37:43,985 - INFO - binance-bitstamp - Ticker binance: 2.1878
+2025-02-27 19:37:43,986 - INFO - binance-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:37:44,187 - INFO - binance-kucoin - Ticker binance: 1.441e-05
+2025-02-27 19:37:44,188 - INFO - binance-kucoin - Ticker kucoin: 1.441e-05
+2025-02-27 19:37:44,192 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-27 19:37:44,403 - INFO - binance-bitstamp - Checking arbitrage for symbols: USDC/USDT (binance), USDC/USDT (bitstamp)
+2025-02-27 19:37:44,407 - INFO - kucoin-bitget - Checking arbitrage for symbols: MEMEFI/USDT (kucoin), MEMEFI/USDT (bitget)
+2025-02-27 19:37:44,458 - INFO - binance-bitget - Checking arbitrage for symbols: JUV/USDT (binance), JUV/USDT (bitget)
+2025-02-27 19:37:44,472 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/USDT (bitget), USDC/USDT (bitstamp)
+2025-02-27 19:37:45,056 - INFO - binance-bitget - Ticker binance: 1.288
+2025-02-27 19:37:45,056 - INFO - binance-bitget - Ticker bitget: 1.289
+2025-02-27 19:37:45,327 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9628
+2025-02-27 19:37:45,329 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95938
+2025-02-27 19:37:45,351 - INFO - binance-kucoin - Checking arbitrage for symbols: ARB/USDT (binance), ARB/USDT (kucoin)
+2025-02-27 19:37:45,404 - INFO - bitget-bitstamp - Ticker bitget: 1.0013
+2025-02-27 19:37:45,406 - INFO - bitget-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:37:45,464 - INFO - binance-bitstamp - Ticker binance: 1.0013
+2025-02-27 19:37:45,465 - INFO - binance-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:37:45,705 - INFO - binance-bitget - Checking arbitrage for symbols: THE/USDT (binance), THE/USDT (bitget)
+2025-02-27 19:37:45,725 - INFO - kucoin-bitget - Ticker kucoin: 0.0014
+2025-02-27 19:37:45,726 - INFO - kucoin-bitget - Ticker bitget: 0.001392
+2025-02-27 19:37:45,838 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-27 19:37:45,911 - INFO - binance-bitstamp - Checking arbitrage for symbols: NEAR/EUR (binance), NEAR/EUR (bitstamp)
+2025-02-27 19:37:45,976 - INFO - bitget-bitstamp - Checking arbitrage for symbols: NEAR/EUR (bitget), NEAR/EUR (bitstamp)
+2025-02-27 19:37:46,029 - INFO - binance-kucoin - Ticker binance: 0.4205
+2025-02-27 19:37:46,030 - INFO - binance-kucoin - Ticker kucoin: 0.4206
+2025-02-27 19:37:46,412 - INFO - binance-bitget - Ticker binance: 0.5974
+2025-02-27 19:37:46,414 - INFO - binance-bitget - Ticker bitget: 0.5971
+2025-02-27 19:37:46,627 - INFO - kucoin-bitget - Checking arbitrage for symbols: TON/USDT (kucoin), TON/USDT (bitget)
+2025-02-27 19:37:46,801 - INFO - bitget-bitstamp - Ticker bitget: 2.934
+2025-02-27 19:37:46,803 - INFO - bitget-bitstamp - Ticker bitstamp: 2.963
+2025-02-27 19:37:46,824 - INFO - binance-kucoin - Checking arbitrage for symbols: RPL/USDT (binance), RPL/USDT (kucoin)
+2025-02-27 19:37:46,878 - INFO - kucoin-bitstamp - Ticker kucoin: 1.0009
+2025-02-27 19:37:46,879 - INFO - kucoin-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:37:46,932 - INFO - binance-bitstamp - Ticker binance: 2.93
+2025-02-27 19:37:46,934 - INFO - binance-bitstamp - Ticker bitstamp: 2.963
+2025-02-27 19:37:47,082 - INFO - binance-bitget - Checking arbitrage for symbols: LISTA/USDT (binance), LISTA/USDT (bitget)
+2025-02-27 19:37:47,306 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ADA/EUR (bitget), ADA/EUR (bitstamp)
+2025-02-27 19:37:47,361 - INFO - binance-bitstamp - Checking arbitrage for symbols: ICP/EUR (binance), ICP/EUR (bitstamp)
+2025-02-27 19:37:47,366 - INFO - kucoin-bitget - Ticker kucoin: 3.374
+2025-02-27 19:37:47,367 - INFO - kucoin-bitget - Ticker bitget: 3.374
+2025-02-27 19:37:47,530 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-27 19:37:47,565 - INFO - binance-kucoin - Ticker binance: 6.41
+2025-02-27 19:37:47,566 - INFO - binance-kucoin - Ticker kucoin: 6.48
+2025-02-27 19:37:48,001 - INFO - binance-bitget - Ticker binance: 0.2363
+2025-02-27 19:37:48,004 - INFO - binance-bitget - Ticker bitget: 0.2368
+2025-02-27 19:37:48,264 - INFO - kucoin-bitget - Checking arbitrage for symbols: NFP/USDT (kucoin), NFP/USDT (bitget)
+2025-02-27 19:37:48,278 - INFO - binance-bitstamp - Ticker binance: 6.292
+2025-02-27 19:37:48,279 - INFO - binance-bitstamp - Ticker bitstamp: 6.4
+2025-02-27 19:37:48,344 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9627
+2025-02-27 19:37:48,346 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.96078
+2025-02-27 19:37:48,375 - INFO - binance-kucoin - Checking arbitrage for symbols: AMP/USDT (binance), AMP/USDT (kucoin)
+2025-02-27 19:37:48,431 - INFO - bitget-bitstamp - Ticker bitget: 0.6205
+2025-02-27 19:37:48,432 - INFO - bitget-bitstamp - Ticker bitstamp: 0.61978
+2025-02-27 19:37:48,659 - INFO - binance-bitget - Checking arbitrage for symbols: CELO/USDT (binance), CELO/USDT (bitget)
+2025-02-27 19:37:48,733 - INFO - binance-bitstamp - Opportunity: Buy on BinanceExchange (price: 6.292, eff.: 6.2983) | Sell on BitstampExchange (price: 6.4, eff.: 6.3840) | Ticker Profit: 1.36% | Weighted Profit: -1.60% | Profit: -3.187625 EUR
+2025-02-27 19:37:48,734 - INFO - binance-bitstamp - Checking arbitrage for symbols: ADA/EUR (binance), ADA/EUR (bitstamp)
+2025-02-27 19:37:48,944 - INFO - bitget-bitstamp - Checking arbitrage for symbols: WIF/EUR (bitget), WIF/EUR (bitstamp)
+2025-02-27 19:37:48,970 - INFO - kucoin-bitget - Ticker kucoin: 0.1147
+2025-02-27 19:37:48,971 - INFO - kucoin-bitget - Ticker bitget: 0.1131
+2025-02-27 19:37:49,028 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-27 19:37:49,184 - INFO - binance-kucoin - Ticker binance: 0.004558
+2025-02-27 19:37:49,185 - INFO - binance-kucoin - Ticker kucoin: 0.004556
+2025-02-27 19:37:49,329 - INFO - binance-bitget - Ticker binance: 0.3862
+2025-02-27 19:37:49,330 - INFO - binance-bitget - Ticker bitget: 0.3863
+2025-02-27 19:37:49,781 - INFO - binance-bitstamp - Ticker binance: 0.6204
+2025-02-27 19:37:49,782 - INFO - binance-bitstamp - Ticker bitstamp: 0.61978
+2025-02-27 19:37:49,845 - INFO - kucoin-bitget - Opportunity: Buy on BitgetExchange (price: 0.1131, eff.: 0.1132) | Sell on KucoinExchange (price: 0.1147, eff.: 0.1146) | Ticker Profit: 1.21%
+2025-02-27 19:37:49,846 - INFO - kucoin-bitget - Checking arbitrage for symbols: STX/USDT (kucoin), STX/USDT (bitget)
+2025-02-27 19:37:49,847 - INFO - bitget-bitstamp - Ticker bitget: 0.554
+2025-02-27 19:37:49,848 - INFO - bitget-bitstamp - Ticker bitstamp: 0.574
+2025-02-27 19:37:49,926 - INFO - kucoin-bitstamp - Ticker kucoin: 2.18764
+2025-02-27 19:37:49,927 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:37:49,975 - INFO - binance-kucoin - Checking arbitrage for symbols: CELO/USDT (binance), CELO/USDT (kucoin)
+2025-02-27 19:37:49,986 - INFO - binance-bitget - Checking arbitrage for symbols: ACA/USDT (binance), ACA/USDT (bitget)
+2025-02-27 19:37:50,258 - INFO - binance-bitstamp - Checking arbitrage for symbols: BOME/EUR (binance), BOME/EUR (bitstamp)
+2025-02-27 19:37:50,338 - INFO - bitget-bitstamp - Opportunity: Buy on BitgetExchange (price: 0.554, eff.: 0.5546) | Sell on BitstampExchange (price: 0.574, eff.: 0.5726) | Ticker Profit: 3.25% | Weighted Profit: -0.79% | Profit: -1.576802 EUR
+2025-02-27 19:37:50,339 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SHIB/EUR (bitget), SHIB/EUR (bitstamp)
+2025-02-27 19:37:50,580 - INFO - kucoin-bitget - Ticker kucoin: 0.835
+2025-02-27 19:37:50,580 - INFO - kucoin-bitget - Ticker bitget: 0.834
+2025-02-27 19:37:50,654 - INFO - binance-bitget - Ticker binance: 0.0472
+2025-02-27 19:37:50,656 - INFO - binance-bitget - Ticker bitget: 0.04733
+2025-02-27 19:37:50,810 - INFO - binance-kucoin - Ticker binance: 0.3863
+2025-02-27 19:37:50,812 - INFO - binance-kucoin - Ticker kucoin: 0.3865
+2025-02-27 19:37:51,272 - INFO - binance-bitget - Checking arbitrage for symbols: PEPE/EUR (binance), PEPE/EUR (bitget)
+2025-02-27 19:37:51,301 - INFO - bitget-bitstamp - Ticker bitget: 1.382e-05
+2025-02-27 19:37:51,302 - INFO - bitget-bitstamp - Ticker bitstamp: 1.384e-05
+2025-02-27 19:37:51,333 - INFO - binance-bitstamp - Ticker binance: 0.001796
+2025-02-27 19:37:51,334 - INFO - binance-bitstamp - Ticker bitstamp: 0.001777
+2025-02-27 19:37:51,452 - INFO - kucoin-bitget - Checking arbitrage for symbols: JAILSTOOL/USDT (kucoin), JAILSTOOL/USDT (bitget)
+2025-02-27 19:37:51,492 - INFO - binance-kucoin - Checking arbitrage for symbols: RAY/USDT (binance), RAY/USDT (kucoin)
+2025-02-27 19:37:51,579 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-27 19:37:51,745 - INFO - binance-bitstamp - Checking arbitrage for symbols: WIF/EUR (binance), WIF/EUR (bitstamp)
+2025-02-27 19:37:52,009 - INFO - binance-bitget - Ticker binance: 7.94e-06
+2025-02-27 19:37:52,010 - INFO - binance-bitget - Ticker bitget: 7.94e-06
+2025-02-27 19:37:52,175 - INFO - kucoin-bitget - Ticker kucoin: 0.00928
+2025-02-27 19:37:52,176 - INFO - kucoin-bitget - Ticker bitget: 0.0093
+2025-02-27 19:37:52,320 - INFO - binance-kucoin - Ticker binance: 2.271
+2025-02-27 19:37:52,320 - INFO - binance-kucoin - Ticker kucoin: 2.2709
+2025-02-27 19:37:52,627 - INFO - binance-bitget - Checking arbitrage for symbols: RAY/USDT (binance), RAY/USDT (bitget)
+2025-02-27 19:37:52,674 - INFO - binance-bitstamp - Ticker binance: 0.552
+2025-02-27 19:37:52,675 - INFO - binance-bitstamp - Ticker bitstamp: 0.574
+2025-02-27 19:37:52,762 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9629
+2025-02-27 19:37:52,764 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95938
+2025-02-27 19:37:52,836 - INFO - bitget-bitstamp - Checking arbitrage for symbols: LINK/EUR (bitget), LINK/EUR (bitstamp)
+2025-02-27 19:37:53,066 - INFO - kucoin-bitget - Checking arbitrage for symbols: ZEREBRO/USDT (kucoin), ZEREBRO/USDT (bitget)
+2025-02-27 19:37:53,307 - INFO - binance-bitstamp - Opportunity: Buy on BinanceExchange (price: 0.552, eff.: 0.5526) | Sell on BitstampExchange (price: 0.574, eff.: 0.5726) | Ticker Profit: 3.62% | Weighted Profit: -0.86% | Profit: -1.714545 EUR
+2025-02-27 19:37:53,308 - INFO - binance-bitstamp - Checking arbitrage for symbols: SHIB/EUR (binance), SHIB/EUR (bitstamp)
+2025-02-27 19:37:53,311 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-27 19:37:53,534 - INFO - binance-bitget - Ticker binance: 2.271
+2025-02-27 19:37:53,536 - INFO - binance-bitget - Ticker bitget: 2.27
+2025-02-27 19:37:53,547 - INFO - binance-kucoin - Checking arbitrage for symbols: OXT/USDT (binance), OXT/USDT (kucoin)
+2025-02-27 19:37:53,883 - INFO - kucoin-bitget - Ticker kucoin: 0.0396
+2025-02-27 19:37:53,902 - INFO - kucoin-bitget - Ticker bitget: 0.04
+2025-02-27 19:37:54,145 - INFO - kucoin-bitstamp - Ticker kucoin: 1.0009
+2025-02-27 19:37:54,147 - INFO - kucoin-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:37:54,166 - INFO - bitget-bitstamp - Ticker bitget: 14.46
+2025-02-27 19:37:54,168 - INFO - bitget-bitstamp - Ticker bitstamp: 14.46
+2025-02-27 19:37:54,260 - INFO - binance-bitget - Checking arbitrage for symbols: BADGER/USDT (binance), BADGER/USDT (bitget)
+2025-02-27 19:37:54,263 - INFO - binance-bitstamp - Ticker binance: 1.383e-05
+2025-02-27 19:37:54,264 - INFO - binance-bitstamp - Ticker bitstamp: 1.384e-05
+2025-02-27 19:37:54,564 - INFO - binance-kucoin - Ticker binance: 0.0895
+2025-02-27 19:37:54,565 - INFO - binance-kucoin - Ticker kucoin: 0.08976
+2025-02-27 19:37:54,753 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDT/EUR (bitget), USDT/EUR (bitstamp)
+2025-02-27 19:37:54,846 - INFO - kucoin-bitget - Checking arbitrage for symbols: LMWR/USDT (kucoin), LMWR/USDT (bitget)
+2025-02-27 19:37:54,960 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-27 19:37:54,972 - INFO - binance-bitget - Ticker binance: 3.295
+2025-02-27 19:37:54,974 - INFO - binance-bitget - Ticker bitget: 3.294
+2025-02-27 19:37:55,504 - INFO - binance-kucoin - Checking arbitrage for symbols: ADX/USDT (binance), ADX/USDT (kucoin)
+2025-02-27 19:37:55,611 - INFO - bitget-bitstamp - Ticker bitget: 0.9602
+2025-02-27 19:37:55,613 - INFO - bitget-bitstamp - Ticker bitstamp: 0.95938
+2025-02-27 19:37:55,648 - INFO - binance-bitget - Checking arbitrage for symbols: SUI/EUR (binance), SUI/EUR (bitget)
+2025-02-27 19:37:55,690 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9627
+2025-02-27 19:37:55,691 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.96078
+2025-02-27 19:37:55,763 - INFO - kucoin-bitget - Ticker kucoin: 0.1122
+2025-02-27 19:37:55,765 - INFO - kucoin-bitget - Ticker bitget: 0.11284
+2025-02-27 19:37:55,882 - INFO - binance-bitstamp - Checking arbitrage for symbols: LINK/EUR (binance), LINK/EUR (bitstamp)
+2025-02-27 19:37:56,160 - INFO - bitget-bitstamp - Checking arbitrage for symbols: DOGE/EUR (bitget), DOGE/EUR (bitstamp)
+2025-02-27 19:37:56,348 - INFO - binance-kucoin - Ticker binance: 0.1278
+2025-02-27 19:37:56,349 - INFO - binance-kucoin - Ticker kucoin: 0.1276
+2025-02-27 19:37:56,400 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-27 19:37:56,403 - INFO - binance-bitget - Ticker binance: 2.6814
+2025-02-27 19:37:56,404 - INFO - binance-bitget - Ticker bitget: 2.6792
+2025-02-27 19:37:56,667 - INFO - kucoin-bitget - Checking arbitrage for symbols: CARV/USDT (kucoin), CARV/USDT (bitget)
+2025-02-27 19:37:57,054 - INFO - binance-bitstamp - Ticker binance: 14.48
+2025-02-27 19:37:57,055 - INFO - binance-bitstamp - Ticker bitstamp: 14.46
+2025-02-27 19:37:57,115 - INFO - binance-bitget - Checking arbitrage for symbols: OXT/USDT (binance), OXT/USDT (bitget)
+2025-02-27 19:37:57,120 - INFO - bitget-bitstamp - Ticker bitget: 0.19707
+2025-02-27 19:37:57,121 - INFO - bitget-bitstamp - Ticker bitstamp: 0.19716
+2025-02-27 19:37:57,321 - INFO - binance-kucoin - Checking arbitrage for symbols: OGN/USDT (binance), OGN/USDT (kucoin)
+2025-02-27 19:37:57,547 - INFO - binance-bitstamp - Checking arbitrage for symbols: DOGE/EUR (binance), DOGE/EUR (bitstamp)
+2025-02-27 19:37:57,676 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/EUR (bitget), XRP/EUR (bitstamp)
+2025-02-27 19:37:57,720 - INFO - kucoin-bitget - Ticker kucoin: 0.4991
+2025-02-27 19:37:57,721 - INFO - kucoin-bitget - Ticker bitget: 0.5005
+2025-02-27 19:37:58,126 - INFO - binance-kucoin - Ticker binance: 0.0707
+2025-02-27 19:37:58,127 - INFO - binance-kucoin - Ticker kucoin: 0.0707
+2025-02-27 19:37:58,376 - INFO - binance-bitget - Ticker binance: 0.0895
+2025-02-27 19:37:58,378 - INFO - binance-bitget - Ticker bitget: 0.08946
+2025-02-27 19:37:58,431 - INFO - kucoin-bitstamp - Ticker kucoin: 2.18897
+2025-02-27 19:37:58,432 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:37:58,568 - INFO - binance-bitstamp - Ticker binance: 0.1971
+2025-02-27 19:37:58,570 - INFO - binance-bitstamp - Ticker bitstamp: 0.19716
+2025-02-27 19:37:58,629 - INFO - bitget-bitstamp - Ticker bitget: 2.0994
+2025-02-27 19:37:58,629 - INFO - bitget-bitstamp - Ticker bitstamp: 2.1
+2025-02-27 19:37:58,766 - INFO - binance-kucoin - Checking arbitrage for symbols: KDA/USDT (binance), KDA/USDT (kucoin)
+2025-02-27 19:37:58,895 - INFO - kucoin-bitget - Checking arbitrage for symbols: HOLDCOIN/USDT (kucoin), HOLDCOIN/USDT (bitget)
+2025-02-27 19:37:59,055 - INFO - binance-bitstamp - Checking arbitrage for symbols: ARB/EUR (binance), ARB/EUR (bitstamp)
+2025-02-27 19:37:59,064 - INFO - binance-bitget - Checking arbitrage for symbols: HOOK/USDT (binance), HOOK/USDT (bitget)
+2025-02-27 19:37:59,219 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ONDO/EUR (bitget), ONDO/EUR (bitstamp)
+2025-02-27 19:37:59,643 - INFO - binance-kucoin - Ticker binance: 0.4926
+2025-02-27 19:37:59,645 - INFO - binance-kucoin - Ticker kucoin: 0.4929
+2025-02-27 19:37:59,647 - INFO - kucoin-bitget - Ticker kucoin: 0.000387
+2025-02-27 19:37:59,649 - INFO - kucoin-bitget - Ticker bitget: 0.00039
+2025-02-27 19:37:59,774 - INFO - binance-bitget - Ticker binance: 0.1824
+2025-02-27 19:37:59,776 - INFO - binance-bitget - Ticker bitget: 0.1823
+2025-02-27 19:37:59,970 - INFO - binance-bitstamp - Ticker binance: 0.4047
+2025-02-27 19:37:59,973 - INFO - binance-bitstamp - Ticker bitstamp: 0.4035
+2025-02-27 19:38:00,026 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-27 19:38:00,049 - INFO - bitget-bitstamp - Ticker bitget: 0.9251
+2025-02-27 19:38:00,051 - INFO - bitget-bitstamp - Ticker bitstamp: 0.9497
+2025-02-27 19:38:00,281 - INFO - binance-kucoin - Checking arbitrage for symbols: REZ/USDT (binance), REZ/USDT (kucoin)
+2025-02-27 19:38:00,451 - INFO - binance-bitget - Checking arbitrage for symbols: OGN/USDT (binance), OGN/USDT (bitget)
+2025-02-27 19:38:00,461 - INFO - binance-bitstamp - Checking arbitrage for symbols: XLM/EUR (binance), XLM/EUR (bitstamp)
+2025-02-27 19:38:00,539 - INFO - kucoin-bitget - Checking arbitrage for symbols: ENA/USDT (kucoin), ENA/USDT (bitget)
+2025-02-27 19:38:00,621 - INFO - bitget-bitstamp - Opportunity: Buy on BitgetExchange (price: 0.9251, eff.: 0.9260) | Sell on BitstampExchange (price: 0.9497, eff.: 0.9473) | Ticker Profit: 2.30% | Weighted Profit: -0.48% | Profit: -0.963352 EUR
+2025-02-27 19:38:00,622 - INFO - bitget-bitstamp - Checking arbitrage for symbols: PEPE/EUR (bitget), PEPE/EUR (bitstamp)
+2025-02-27 19:38:01,081 - INFO - binance-bitget - Ticker binance: 0.0707
+2025-02-27 19:38:01,082 - INFO - binance-bitget - Ticker bitget: 0.0707
+2025-02-27 19:38:01,207 - INFO - binance-kucoin - Ticker binance: 0.02073
+2025-02-27 19:38:01,209 - INFO - binance-kucoin - Ticker kucoin: 0.0207
+2025-02-27 19:38:01,418 - INFO - bitget-bitstamp - Ticker bitget: 7.94e-06
+2025-02-27 19:38:01,420 - INFO - bitget-bitstamp - Ticker bitstamp: 7.93e-06
+2025-02-27 19:38:01,464 - INFO - binance-bitstamp - Ticker binance: 0.2712
+2025-02-27 19:38:01,466 - INFO - binance-bitstamp - Ticker bitstamp: 0.27139
+2025-02-27 19:38:01,544 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9629
+2025-02-27 19:38:01,546 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95938
+2025-02-27 19:38:01,761 - INFO - binance-bitget - Checking arbitrage for symbols: KDA/USDT (binance), KDA/USDT (bitget)
+2025-02-27 19:38:01,816 - INFO - kucoin-bitget - Ticker kucoin: 0.4223
+2025-02-27 19:38:01,817 - INFO - kucoin-bitget - Ticker bitget: 0.422
+2025-02-27 19:38:01,922 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SUI/EUR (bitget), SUI/EUR (bitstamp)
+2025-02-27 19:38:02,030 - INFO - binance-bitstamp - Checking arbitrage for symbols: OP/EUR (binance), OP/EUR (bitstamp)
+2025-02-27 19:38:02,086 - INFO - binance-kucoin - Checking arbitrage for symbols: ADA/USDT (binance), ADA/USDT (kucoin)
+2025-02-27 19:38:02,311 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-27 19:38:02,466 - INFO - binance-bitget - Ticker binance: 0.4926
+2025-02-27 19:38:02,467 - INFO - binance-bitget - Ticker bitget: 0.4927
+2025-02-27 19:38:02,629 - INFO - kucoin-bitget - Checking arbitrage for symbols: XRD/USDT (kucoin), XRD/USDT (bitget)
+2025-02-27 19:38:02,899 - INFO - kucoin-bitstamp - Ticker kucoin: 1.0009
+2025-02-27 19:38:02,901 - INFO - kucoin-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:38:02,934 - INFO - binance-kucoin - Ticker binance: 0.6463
+2025-02-27 19:38:02,935 - INFO - binance-kucoin - Ticker kucoin: 0.6459
+2025-02-27 19:38:02,970 - INFO - bitget-bitstamp - Ticker bitget: 2.6798
+2025-02-27 19:38:02,971 - INFO - bitget-bitstamp - Ticker bitstamp: 2.699
+2025-02-27 19:38:03,063 - INFO - binance-bitstamp - Ticker binance: 1.06
+2025-02-27 19:38:03,064 - INFO - binance-bitstamp - Ticker bitstamp: 1.0776
+2025-02-27 19:38:03,160 - INFO - binance-bitget - Checking arbitrage for symbols: REZ/USDT (binance), REZ/USDT (bitget)
+2025-02-27 19:38:03,473 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/EUR (bitget), USDC/EUR (bitstamp)
+2025-02-27 19:38:03,528 - INFO - kucoin-bitget - Ticker kucoin: 0.00883
+2025-02-27 19:38:03,529 - INFO - kucoin-bitget - Ticker bitget: 0.00889
+2025-02-27 19:38:03,536 - INFO - binance-bitstamp - Opportunity: Buy on BinanceExchange (price: 1.06, eff.: 1.0611) | Sell on BitstampExchange (price: 1.0776, eff.: 1.0749) | Ticker Profit: 1.30% | Weighted Profit: -0.20% | Profit: -0.405411 EUR
+2025-02-27 19:38:03,536 - INFO - binance-bitstamp - Checking arbitrage for symbols: GRT/EUR (binance), GRT/EUR (bitstamp)
+2025-02-27 19:38:03,624 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-27 19:38:03,651 - INFO - binance-kucoin - Checking arbitrage for symbols: 1INCH/USDT (binance), 1INCH/USDT (kucoin)
+2025-02-27 19:38:03,879 - INFO - binance-bitget - Ticker binance: 0.02073
+2025-02-27 19:38:03,881 - INFO - binance-bitget - Ticker bitget: 0.02077
+2025-02-27 19:38:04,267 - INFO - kucoin-bitget - Checking arbitrage for symbols: GRASS/USDT (kucoin), GRASS/USDT (bitget)
+2025-02-27 19:38:04,435 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9627
+2025-02-27 19:38:04,436 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.96078
+2025-02-27 19:38:04,479 - INFO - binance-kucoin - Ticker binance: 0.2438
+2025-02-27 19:38:04,480 - INFO - binance-kucoin - Ticker kucoin: 0.24368
+2025-02-27 19:38:04,541 - INFO - binance-bitstamp - Ticker binance: 0.1172
+2025-02-27 19:38:04,542 - INFO - binance-bitstamp - Ticker bitstamp: 0.11787
+2025-02-27 19:38:04,555 - INFO - bitget-bitstamp - Ticker bitget: 0.961
+2025-02-27 19:38:04,556 - INFO - bitget-bitstamp - Ticker bitstamp: 0.96078
+2025-02-27 19:38:04,569 - INFO - binance-bitget - Checking arbitrage for symbols: ADA/USDT (binance), ADA/USDT (bitget)
+2025-02-27 19:38:05,020 - INFO - binance-bitstamp - Checking arbitrage for symbols: PEPE/EUR (binance), PEPE/EUR (bitstamp)
+2025-02-27 19:38:05,068 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/USDT (bitget), XRP/USDT (bitstamp)
+2025-02-27 19:38:05,146 - INFO - kucoin-bitget - Ticker kucoin: 1.9646
+2025-02-27 19:38:05,147 - INFO - kucoin-bitget - Ticker bitget: 1.9662
+2025-02-27 19:38:05,178 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-27 19:38:05,204 - INFO - binance-kucoin - Checking arbitrage for symbols: CTSI/USDT (binance), CTSI/USDT (kucoin)
+2025-02-27 19:38:05,317 - INFO - binance-bitget - Ticker binance: 0.6463
+2025-02-27 19:38:05,318 - INFO - binance-bitget - Ticker bitget: 0.6463
+2025-02-27 19:38:05,908 - INFO - kucoin-bitget - Checking arbitrage for symbols: DOGE/USDT (kucoin), DOGE/USDT (bitget)
+2025-02-27 19:38:05,911 - INFO - binance-bitstamp - Ticker binance: 7.94e-06
+2025-02-27 19:38:05,913 - INFO - binance-bitstamp - Ticker bitstamp: 7.93e-06
+2025-02-27 19:38:05,967 - INFO - binance-bitget - Checking arbitrage for symbols: 1INCH/USDT (binance), 1INCH/USDT (bitget)
+2025-02-27 19:38:05,971 - INFO - bitget-bitstamp - Ticker bitget: 2.1898
+2025-02-27 19:38:05,972 - INFO - bitget-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:38:06,006 - INFO - binance-kucoin - Ticker binance: 0.0897
+2025-02-27 19:38:06,007 - INFO - binance-kucoin - Ticker kucoin: 0.0895
+2025-02-27 19:38:06,039 - INFO - kucoin-bitstamp - Ticker kucoin: 2.18997
+2025-02-27 19:38:06,041 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:38:06,487 - INFO - binance-bitstamp - Checking arbitrage for symbols: SUI/EUR (binance), SUI/EUR (bitstamp)
+2025-02-27 19:38:06,592 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/USDT (bitget), USDC/USDT (bitstamp)
+2025-02-27 19:38:06,653 - INFO - binance-bitget - Ticker binance: 0.2438
+2025-02-27 19:38:06,654 - INFO - binance-bitget - Ticker bitget: 0.2438
+2025-02-27 19:38:06,741 - INFO - binance-kucoin - Checking arbitrage for symbols: IMX/USDT (binance), IMX/USDT (kucoin)
+2025-02-27 19:38:06,845 - INFO - kucoin-bitget - Ticker kucoin: 0.20542
+2025-02-27 19:38:06,847 - INFO - kucoin-bitget - Ticker bitget: 0.20541
+2025-02-27 19:38:07,289 - INFO - binance-bitget - Checking arbitrage for symbols: CTSI/USDT (binance), CTSI/USDT (bitget)
+2025-02-27 19:38:07,378 - INFO - binance-bitstamp - Ticker binance: 2.6814
+2025-02-27 19:38:07,381 - INFO - binance-bitstamp - Ticker bitstamp: 2.699
+2025-02-27 19:38:07,427 - INFO - binance-kucoin - Ticker binance: 0.687
+2025-02-27 19:38:07,428 - INFO - binance-kucoin - Ticker kucoin: 0.6861
+2025-02-27 19:38:07,449 - INFO - bitget-bitstamp - Ticker bitget: 1.0013
+2025-02-27 19:38:07,450 - INFO - bitget-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:38:07,565 - INFO - kucoin-bitget - Checking arbitrage for symbols: MAPO/USDT (kucoin), MAPO/USDT (bitget)
+2025-02-27 19:38:07,798 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-27 19:38:07,876 - INFO - binance-bitstamp - Checking arbitrage for symbols: GALA/EUR (binance), GALA/EUR (bitstamp)
+2025-02-27 19:38:07,927 - INFO - binance-bitget - Ticker binance: 0.0897
+2025-02-27 19:38:07,928 - INFO - binance-bitget - Ticker bitget: 0.0895
+2025-02-27 19:38:07,974 - INFO - bitget-bitstamp - Checking arbitrage for symbols: NEAR/EUR (bitget), NEAR/EUR (bitstamp)
+2025-02-27 19:38:08,426 - INFO - binance-kucoin - Checking arbitrage for symbols: SAND/USDT (binance), SAND/USDT (kucoin)
+2025-02-27 19:38:08,553 - INFO - binance-bitget - Checking arbitrage for symbols: IMX/USDT (binance), IMX/USDT (bitget)
+2025-02-27 19:38:08,619 - INFO - kucoin-bitget - Ticker kucoin: 0.006468
+2025-02-27 19:38:08,620 - INFO - kucoin-bitget - Ticker bitget: 0.006458
+2025-02-27 19:38:08,805 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9629
+2025-02-27 19:38:08,806 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95938
+2025-02-27 19:38:08,894 - INFO - binance-bitstamp - Ticker binance: 0.01913
+2025-02-27 19:38:08,896 - INFO - binance-bitstamp - Ticker bitstamp: 0.01916
+2025-02-27 19:38:08,938 - INFO - bitget-bitstamp - Ticker bitget: 2.933
+2025-02-27 19:38:08,939 - INFO - bitget-bitstamp - Ticker bitstamp: 2.963
+2025-02-27 19:38:09,317 - INFO - binance-bitget - Ticker binance: 0.687
+2025-02-27 19:38:09,319 - INFO - binance-bitget - Ticker bitget: 0.688
+2025-02-27 19:38:09,338 - INFO - binance-bitstamp - Checking arbitrage for symbols: XRP/USDT (binance), XRP/USDT (bitstamp)
+2025-02-27 19:38:09,383 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-27 19:38:09,459 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ADA/EUR (bitget), ADA/EUR (bitstamp)
+2025-02-27 19:38:09,544 - INFO - binance-kucoin - Ticker binance: 0.3118
+2025-02-27 19:38:09,545 - INFO - binance-kucoin - Ticker kucoin: 0.31136
+2025-02-27 19:38:09,583 - INFO - kucoin-bitget - Checking arbitrage for symbols: LSK/USDT (kucoin), LSK/USDT (bitget)
+2025-02-27 19:38:10,013 - INFO - binance-bitget - Checking arbitrage for symbols: VIB/USDT (binance), VIB/USDT (bitget)
+2025-02-27 19:38:10,314 - INFO - bitget-bitstamp - Ticker bitget: 0.6199
+2025-02-27 19:38:10,316 - INFO - bitget-bitstamp - Ticker bitstamp: 0.61978
+2025-02-27 19:38:10,380 - INFO - binance-bitstamp - Ticker binance: 2.1914
+2025-02-27 19:38:10,381 - INFO - binance-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:38:10,456 - INFO - kucoin-bitstamp - Ticker kucoin: 1.0009
+2025-02-27 19:38:10,457 - INFO - kucoin-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:38:10,530 - INFO - binance-kucoin - Checking arbitrage for symbols: FLUX/USDT (binance), FLUX/USDT (kucoin)
+2025-02-27 19:38:10,630 - INFO - kucoin-bitget - Ticker kucoin: 0.6703
+2025-02-27 19:38:10,631 - INFO - kucoin-bitget - Ticker bitget: 0.67
+2025-02-27 19:38:10,717 - INFO - binance-bitget - Ticker binance: 0.05313
+2025-02-27 19:38:10,719 - INFO - binance-bitget - Ticker bitget: 0.05312
+2025-02-27 19:38:10,833 - INFO - binance-bitstamp - Checking arbitrage for symbols: USDC/USDT (binance), USDC/USDT (bitstamp)
+2025-02-27 19:38:10,906 - INFO - bitget-bitstamp - Checking arbitrage for symbols: WIF/EUR (bitget), WIF/EUR (bitstamp)
+2025-02-27 19:38:10,984 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-27 19:38:11,194 - INFO - binance-kucoin - Ticker binance: 0.3532
+2025-02-27 19:38:11,196 - INFO - binance-kucoin - Ticker kucoin: 0.3539
+2025-02-27 19:38:11,377 - INFO - kucoin-bitget - Checking arbitrage for symbols: GODS/USDT (kucoin), GODS/USDT (bitget)
+2025-02-27 19:38:11,397 - INFO - binance-bitget - Checking arbitrage for symbols: BNT/USDT (binance), BNT/USDT (bitget)
+2025-02-27 19:38:11,824 - INFO - bitget-bitstamp - Ticker bitget: 0.554
+2025-02-27 19:38:11,825 - INFO - bitget-bitstamp - Ticker bitstamp: 0.574
+2025-02-27 19:38:11,920 - INFO - binance-bitstamp - Ticker binance: 1.0012
+2025-02-27 19:38:11,922 - INFO - binance-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:38:11,980 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9627
+2025-02-27 19:38:11,981 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.96078
+2025-02-27 19:38:12,106 - INFO - binance-bitget - Ticker binance: 0.4513
+2025-02-27 19:38:12,107 - INFO - binance-bitget - Ticker bitget: 0.4518
+2025-02-27 19:38:12,175 - INFO - binance-kucoin - Checking arbitrage for symbols: BAT/USDT (binance), BAT/USDT (kucoin)
+2025-02-27 19:38:12,235 - INFO - kucoin-bitget - Ticker kucoin: 0.1334
+2025-02-27 19:38:12,237 - INFO - kucoin-bitget - Ticker bitget: 0.1331
+2025-02-27 19:38:12,390 - INFO - binance-bitstamp - Checking arbitrage for symbols: NEAR/EUR (binance), NEAR/EUR (bitstamp)
+2025-02-27 19:38:12,456 - INFO - bitget-bitstamp - Opportunity: Buy on BitgetExchange (price: 0.554, eff.: 0.5546) | Sell on BitstampExchange (price: 0.574, eff.: 0.5726) | Ticker Profit: 3.25% | Weighted Profit: -0.79% | Profit: -1.576802 EUR
+2025-02-27 19:38:12,457 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SHIB/EUR (bitget), SHIB/EUR (bitstamp)
+2025-02-27 19:38:12,546 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-27 19:38:12,781 - INFO - binance-bitget - Checking arbitrage for symbols: SAND/USDT (binance), SAND/USDT (bitget)
+2025-02-27 19:38:12,836 - INFO - binance-kucoin - Ticker binance: 0.1657
+2025-02-27 19:38:12,837 - INFO - binance-kucoin - Ticker kucoin: 0.166
+2025-02-27 19:38:12,999 - INFO - kucoin-bitget - Checking arbitrage for symbols: NOT/USDT (kucoin), NOT/USDT (bitget)
+2025-02-27 19:38:13,339 - INFO - kucoin-bitstamp - Ticker kucoin: 2.19132
+2025-02-27 19:38:13,340 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:38:13,421 - INFO - bitget-bitstamp - Ticker bitget: 1.384e-05
+2025-02-27 19:38:13,422 - INFO - bitget-bitstamp - Ticker bitstamp: 1.384e-05
+2025-02-27 19:38:13,488 - INFO - binance-bitstamp - Ticker binance: 2.93
+2025-02-27 19:38:13,490 - INFO - binance-bitstamp - Ticker bitstamp: 2.963
+2025-02-27 19:38:13,536 - INFO - binance-bitget - Ticker binance: 0.3118
+2025-02-27 19:38:13,537 - INFO - binance-bitget - Ticker bitget: 0.3116
+2025-02-27 19:38:13,820 - INFO - binance-kucoin - Checking arbitrage for symbols: XRP/USDT (binance), XRP/USDT (kucoin)
+2025-02-27 19:38:14,061 - INFO - binance-bitstamp - Checking arbitrage for symbols: ICP/EUR (binance), ICP/EUR (bitstamp)
+2025-02-27 19:38:14,210 - INFO - kucoin-bitget - Ticker kucoin: 0.0026419
+2025-02-27 19:38:14,211 - INFO - kucoin-bitget - Ticker bitget: 0.002643
+2025-02-27 19:38:14,270 - INFO - binance-bitget - Checking arbitrage for symbols: FLUX/USDT (binance), FLUX/USDT (bitget)
+2025-02-27 19:38:14,539 - INFO - binance-kucoin - Ticker binance: 2.1905
+2025-02-27 19:38:14,541 - INFO - binance-kucoin - Ticker kucoin: 2.19132
+2025-02-27 19:38:14,854 - INFO - binance-bitstamp - Ticker binance: 6.292
+2025-02-27 19:38:14,855 - INFO - binance-bitstamp - Ticker bitstamp: 6.4
+2025-02-27 19:38:14,923 - INFO - binance-bitget - Ticker binance: 0.3532
+2025-02-27 19:38:14,925 - INFO - binance-bitget - Ticker bitget: 0.3529
+2025-02-27 19:38:14,950 - INFO - bitget-bitstamp - Checking arbitrage for symbols: LINK/EUR (bitget), LINK/EUR (bitstamp)
+2025-02-27 19:38:15,135 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-27 19:38:15,195 - INFO - kucoin-bitget - Checking arbitrage for symbols: KOMA/USDT (kucoin), KOMA/USDT (bitget)
+2025-02-27 19:38:15,244 - INFO - binance-kucoin - Checking arbitrage for symbols: S/USDT (binance), S/USDT (kucoin)
+2025-02-27 19:38:15,335 - INFO - binance-bitstamp - Opportunity: Buy on BinanceExchange (price: 6.292, eff.: 6.2983) | Sell on BitstampExchange (price: 6.4, eff.: 6.3840) | Ticker Profit: 1.36% | Weighted Profit: -0.58% | Profit: -1.155459 EUR
+2025-02-27 19:38:15,336 - INFO - binance-bitstamp - Checking arbitrage for symbols: ADA/EUR (binance), ADA/EUR (bitstamp)
+2025-02-27 19:38:15,669 - INFO - binance-bitget - Checking arbitrage for symbols: BAT/USDT (binance), BAT/USDT (bitget)
+2025-02-27 19:38:16,202 - INFO - binance-kucoin - Ticker binance: 0.7009
+2025-02-27 19:38:16,204 - INFO - binance-kucoin - Ticker kucoin: 0.7014
+2025-02-27 19:38:16,222 - INFO - kucoin-bitget - Ticker kucoin: 0.05007
+2025-02-27 19:38:16,223 - INFO - kucoin-bitget - Ticker bitget: 0.0503
+2025-02-27 19:38:16,225 - INFO - bitget-bitstamp - Ticker bitget: 14.48
+2025-02-27 19:38:16,225 - INFO - bitget-bitstamp - Ticker bitstamp: 14.46
+2025-02-27 19:38:16,289 - INFO - binance-bitstamp - Ticker binance: 0.6204
+2025-02-27 19:38:16,290 - INFO - binance-bitstamp - Ticker bitstamp: 0.61978
+2025-02-27 19:38:16,345 - INFO - binance-bitget - Ticker binance: 0.1657
+2025-02-27 19:38:16,346 - INFO - binance-bitget - Ticker bitget: 0.1658
+2025-02-27 19:38:16,374 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9629
+2025-02-27 19:38:16,375 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.95938
+2025-02-27 19:38:16,751 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDT/EUR (bitget), USDT/EUR (bitstamp)
+2025-02-27 19:38:16,828 - INFO - binance-bitstamp - Checking arbitrage for symbols: BOME/EUR (binance), BOME/EUR (bitstamp)
+2025-02-27 19:38:16,896 - INFO - binance-kucoin - Checking arbitrage for symbols: ARPA/USDT (binance), ARPA/USDT (kucoin)
+2025-02-27 19:38:16,942 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/USDT (kucoin), USDC/USDT (bitstamp)
+2025-02-27 19:38:17,013 - INFO - binance-bitget - Checking arbitrage for symbols: FDUSD/USDT (binance), FDUSD/USDT (bitget)
+2025-02-27 19:38:17,168 - INFO - kucoin-bitget - Checking arbitrage for symbols: L3/USDT (kucoin), L3/USDT (bitget)
+2025-02-27 19:38:17,729 - INFO - kucoin-bitstamp - Ticker kucoin: 1.0009
+2025-02-27 19:38:17,731 - INFO - kucoin-bitstamp - Ticker bitstamp: 1.00115
+2025-02-27 19:38:17,734 - INFO - binance-kucoin - Ticker binance: 0.03414
+2025-02-27 19:38:17,734 - INFO - binance-kucoin - Ticker kucoin: 0.034109
+2025-02-27 19:38:17,809 - INFO - binance-bitget - Ticker binance: 0.9983
+2025-02-27 19:38:17,810 - INFO - binance-bitget - Ticker bitget: 0.9988
+2025-02-27 19:38:17,814 - INFO - bitget-bitstamp - Ticker bitget: 0.9601
+2025-02-27 19:38:17,816 - INFO - bitget-bitstamp - Ticker bitstamp: 0.95938
+2025-02-27 19:38:17,890 - INFO - binance-bitstamp - Ticker binance: 0.001796
+2025-02-27 19:38:17,891 - INFO - binance-bitstamp - Ticker bitstamp: 0.001777
+2025-02-27 19:38:18,341 - INFO - bitget-bitstamp - Checking arbitrage for symbols: DOGE/EUR (bitget), DOGE/EUR (bitstamp)
+2025-02-27 19:38:18,406 - INFO - binance-bitstamp - Checking arbitrage for symbols: WIF/EUR (binance), WIF/EUR (bitstamp)
+2025-02-27 19:38:18,413 - INFO - binance-kucoin - Checking arbitrage for symbols: RENDER/USDT (binance), RENDER/USDT (kucoin)
+2025-02-27 19:38:18,442 - INFO - kucoin-bitget - Ticker kucoin: 0.05599
+2025-02-27 19:38:18,444 - INFO - kucoin-bitget - Ticker bitget: 0.05607
+2025-02-27 19:38:18,515 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDC/EUR (kucoin), USDC/EUR (bitstamp)
+2025-02-27 19:38:18,523 - INFO - binance-bitget - Checking arbitrage for symbols: XRP/USDT (binance), XRP/USDT (bitget)
+2025-02-27 19:38:19,169 - INFO - kucoin-bitget - Checking arbitrage for symbols: G/USDT (kucoin), G/USDT (bitget)
+2025-02-27 19:38:19,260 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9629
+2025-02-27 19:38:19,261 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.96087
+2025-02-27 19:38:19,326 - INFO - binance-kucoin - Ticker binance: 3.689
+2025-02-27 19:38:19,327 - INFO - binance-kucoin - Ticker kucoin: 3.685
+2025-02-27 19:38:19,341 - INFO - binance-bitstamp - Ticker binance: 0.552
+2025-02-27 19:38:19,343 - INFO - binance-bitstamp - Ticker bitstamp: 0.574
+2025-02-27 19:38:19,353 - INFO - binance-bitget - Ticker binance: 2.1919
+2025-02-27 19:38:19,354 - INFO - binance-bitget - Ticker bitget: 2.1915
+2025-02-27 19:38:19,370 - INFO - bitget-bitstamp - Ticker bitget: 0.19711
+2025-02-27 19:38:19,372 - INFO - bitget-bitstamp - Ticker bitstamp: 0.19716
+2025-02-27 19:38:19,797 - INFO - binance-bitstamp - Opportunity: Buy on BinanceExchange (price: 0.552, eff.: 0.5526) | Sell on BitstampExchange (price: 0.574, eff.: 0.5726) | Ticker Profit: 3.62% | Weighted Profit: -0.86% | Profit: -1.714545 EUR
+2025-02-27 19:38:19,799 - INFO - binance-bitstamp - Checking arbitrage for symbols: SHIB/EUR (binance), SHIB/EUR (bitstamp)
+2025-02-27 19:38:19,908 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/EUR (bitget), XRP/EUR (bitstamp)
+2025-02-27 19:38:20,004 - INFO - binance-kucoin - Checking arbitrage for symbols: QI/USDT (binance), QI/USDT (kucoin)
+2025-02-27 19:38:20,022 - INFO - kucoin-bitget - Ticker kucoin: 0.02005
+2025-02-27 19:38:20,023 - INFO - kucoin-bitget - Ticker bitget: 0.02007
+2025-02-27 19:38:20,121 - INFO - binance-bitget - Checking arbitrage for symbols: S/USDT (binance), S/USDT (bitget)
+2025-02-27 19:38:20,131 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-27 19:38:20,737 - INFO - kucoin-bitstamp - Ticker kucoin: 2.19115
+2025-02-27 19:38:20,738 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.19596
+2025-02-27 19:38:20,765 - INFO - kucoin-bitget - Checking arbitrage for symbols: CATI/USDT (kucoin), CATI/USDT (bitget)
+2025-02-27 19:38:20,813 - INFO - bitget-bitstamp - Ticker bitget: 2.1025
+2025-02-27 19:38:20,814 - INFO - bitget-bitstamp - Ticker bitstamp: 2.1
+2025-02-27 19:38:20,841 - INFO - binance-kucoin - Ticker binance: 0.00892
+2025-02-27 19:38:20,844 - INFO - binance-kucoin - Ticker kucoin: 0.008921
+2025-02-27 19:38:20,881 - INFO - binance-bitstamp - Ticker binance: 1.383e-05
+2025-02-27 19:38:20,937 - INFO - binance-bitstamp - Ticker bitstamp: 1.384e-05
+2025-02-27 19:38:21,002 - INFO - binance-bitget - Ticker binance: 0.7013
+2025-02-27 19:38:21,025 - INFO - binance-bitget - Ticker bitget: 0.7011
+2025-02-27 19:38:21,420 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ONDO/EUR (bitget), ONDO/EUR (bitstamp)
+2025-02-27 19:38:21,666 - INFO - kucoin-bitget - Ticker kucoin: 0.14395
+2025-02-27 19:38:21,666 - INFO - kucoin-bitget - Ticker bitget: 0.1442
+2025-02-27 19:38:21,766 - INFO - binance-kucoin - Checking arbitrage for symbols: MANTA/USDT (binance), MANTA/USDT (kucoin)
+2025-02-27 19:38:21,773 - INFO - binance-bitget - Checking arbitrage for symbols: ARPA/USDT (binance), ARPA/USDT (bitget)
+2025-02-27 19:38:22,223 - INFO - bitget-bitstamp - Ticker bitget: 0.9252
+2025-02-27 19:38:22,225 - INFO - bitget-bitstamp - Ticker bitstamp: 0.9497
+2025-02-27 19:38:22,406 - INFO - kucoin-bitget - Checking arbitrage for symbols: XTZ/USDT (kucoin), XTZ/USDT (bitget)
+2025-02-27 19:38:22,446 - INFO - binance-bitstamp - Checking arbitrage for symbols: LINK/EUR (binance), LINK/EUR (bitstamp)
+2025-02-27 19:38:22,449 - INFO - binance-kucoin - Ticker binance: 0.357
+2025-02-27 19:38:22,450 - INFO - binance-kucoin - Ticker kucoin: 0.357
+2025-02-27 19:38:22,486 - INFO - binance-bitget - Ticker binance: 0.03414
+2025-02-27 19:38:22,488 - INFO - binance-bitget - Ticker bitget: 0.03413
+2025-02-27 19:38:22,524 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-27 19:38:22,813 - INFO - bitget-bitstamp - Opportunity: Buy on BitgetExchange (price: 0.9252, eff.: 0.9261) | Sell on BitstampExchange (price: 0.9497, eff.: 0.9473) | Ticker Profit: 2.29% | Weighted Profit: -0.57% | Profit: -1.146168 EUR
+2025-02-27 19:38:22,814 - INFO - bitget-bitstamp - Checking arbitrage for symbols: PEPE/EUR (bitget), PEPE/EUR (bitstamp)
