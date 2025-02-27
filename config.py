@@ -38,16 +38,16 @@ CONFIG = {
     },
     
     # Liczba pierwszych poziomów order booka, z których sumujemy wolumen
-    "LIQUIDITY_LEVELS_TO_CHECK": 10,
+    "LIQUIDITY_LEVELS_TO_CHECK": 5,
     
     # Ustawienia arbitrażu:
    
     # Minimalny procentowy zysk, przy którym okazja jest rozpatrywana
-    "ARBITRAGE_THRESHOLD": 2,
+    "ARBITRAGE_THRESHOLD": 5,
     
     # Jeśli procentowy zysk przekracza tę wartość (np. 100%), okazja jest traktowana jako absurdalna i ignorowana
     "ABSURD_THRESHOLD": 100,
     
     # liczba poziomów order booka do agregacji
-    "ORDERBOOK_LEVELS": 10
+    "ORDERBOOK_LEVELS": 5
 }

@@ -7,16 +7,24 @@
     "VOLT",
     "LAYER"
   ],
+  
   "binance-kucoin": [
     "ACE",
     "TST",
     "NEIRO",
     "LAYER"
   ],
+  
   "binance-bitget": [
     "FARM"
   ],
   "binance-bitstamp": [],
-  "kucoin-bitstamp": [],
-  "bitget-bitstamp": []
+ 
+  "kucoin-bitstamp": [
+    "USDC"
+  ],
+ 
+  "bitget-bitstamp": [
+    
+  ]
 }
