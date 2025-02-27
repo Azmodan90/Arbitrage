@@ -1,0 +1,27 @@
+root@e5d78e2c1e1d:/workspaces/Arbitrage#  /usr/bin/env /workspaces/Arbitrage/.venv/bin/python /root/.vscode-server/extensions/ms-python.debugpy-2025.0.1-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 51029 -- /workspaces/Arbitrage/main.py 
+
+Choose an option:
+1. Create common assets list
+2. Start arbitrage (using assets from common_assets.json)
+3. Exit
+Your choice (1/2/3): 1
+
+Choose an option:
+1. Create common assets list
+2. Start arbitrage (using assets from common_assets.json)
+3. Exit
+Your choice (1/2/3): 2
+Error fetching ticker from Bitstamp: bitstamp GET https://www.bitstamp.net/api/v2/ticker/xrpusdt/
+Error fetching ticker from Bitget: bitget GET https://api.bitget.com/api/v2/spot/market/tickers?symbol=ONDOEUR
+Error fetching ticker from Bitget: bitget GET https://api.bitget.com/api/v2/spot/market/tickers?symbol=APEUSDT
+Error fetching ticker from Bitget: bitget GET https://api.bitget.com/api/v2/spot/market/tickers?symbol=VELOUSDT
+Error fetching ticker from Bitget: bitget GET https://api.bitget.com/api/v2/spot/market/tickers?symbol=ATOMUSDT
+Error fetching ticker from Kucoin: kucoin GET https://api.kucoin.com/api/v1/market/stats?symbol=KDA-USDT
+Error fetching ticker from Kucoin: kucoin GET https://api.kucoin.com/api/v1/market/stats?symbol=USDC-EUR
+Error fetching ticker from Kucoin: kucoin GET https://api.kucoin.com/api/v1/market/stats?symbol=ORCA-USDT
+Error fetching ticker from Kucoin: kucoin GET https://api.kucoin.com/api/v1/market/stats?symbol=ZOO-USDT
+Error fetching ticker from Bitstamp: bitstamp GET https://www.bitstamp.net/api/v2/ticker/neareur/
+Error fetching ticker from Bitstamp: bitstamp GET https://www.bitstamp.net/api/v2/ticker/adaeur/
+Error fetching ticker from Bitstamp: bitstamp GET https://www.bitstamp.net/api/v2/ticker/grteur/
+Error fetching ticker from Bitstamp: bitstamp GET https://www.bitstamp.net/api/v2/ticker/xrpeur/
+Error fetching ticker from Bitstamp: bitstamp GET https://www.bitstamp.net/api/v2/ticker/xrpeur/
