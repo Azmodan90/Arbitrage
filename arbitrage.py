@@ -8,7 +8,7 @@ from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 from tabulate import tabulate
 
-# Konfiguracja loggerów z RotatingFileHandler
+# Ustawienie loggerów z RotatingFileHandler
 def setup_logger(logger_name, log_file, level=logging.INFO):
     logger = logging.getLogger(logger_name)
     if not logger.hasHandlers():
@@ -30,7 +30,7 @@ def normalize_symbol(symbol):
         return symbol.split(":")[0]
     return symbol
 
-# Asynchroniczny rate limiter – oparty o asyncio.sleep()
+# Asynchroniczny rate limiter
 class RateLimiter:
     def __init__(self, delay):
         self.delay = delay
@@ -61,40 +61,12 @@ async def fetch_ticker_rate_limited_async(exchange, symbol):
     limiter.last_request = time.monotonic()
     return ticker
 
-# Funkcja obliczająca ważoną średnią cenę z kilku poziomów order booka
-def compute_weighted_average_price(order_book, desired_qty, side='ask', fee=0):
-    orders = order_book.get('asks', []) if side=='ask' else order_book.get('bids', [])
-    total_qty = 0
-    weighted_sum = 0
-    breakdown = []  # lista (price, qty_used) dla każdego poziomu
-    max_levels = CONFIG.get("ORDERBOOK_LEVELS", len(orders))
-    for order in orders[:max_levels]:
-        price, vol = order
-        if total_qty + vol >= desired_qty:
-            vol_used = desired_qty - total_qty
-            weighted_sum += price * vol_used
-            breakdown.append((price, vol_used))
-            total_qty = desired_qty
-            break
-        else:
-            weighted_sum += price * vol
-            breakdown.append((price, vol))
-            total_qty += vol
-    if total_qty == 0:
-        return None, []
-    weighted_price = weighted_sum / total_qty
-    # Uwzględnienie opłaty: przy kupnie (asks) dodajemy fee, przy sprzedaży (bids) odejmujemy fee
-    weighted_price *= (1 + fee/100) if side=='ask' else (1 - fee/100)
-    return weighted_price, breakdown
-
-async def get_liquidity_info_async(exchange, symbol):
+async def get_liquidity_info_async(exchange, symbol, levels_to_fetch=None):
     try:
         order_book = await exchange.fetch_order_book(symbol)
-        # Ograniczenie liczby poziomów z order booka, jeśli ustawiono
-        max_levels = CONFIG.get("ORDERBOOK_LEVELS", None)
-        if max_levels is not None:
-            order_book['asks'] = order_book.get('asks', [])[:max_levels]
-            order_book['bids'] = order_book.get('bids', [])[:max_levels]
+        if levels_to_fetch is not None:
+            order_book['bids'] = order_book.get('bids', [])[:levels_to_fetch]
+            order_book['asks'] = order_book.get('asks', [])[:levels_to_fetch]
         return order_book
     except Exception as e:
         arbitrage_logger.error(f"Error fetching order book for {symbol} on {exchange.__class__.__name__}: {e}")
@@ -107,6 +79,23 @@ async def convert_investment(quote, investment_usdt, conversion_exchange):
         return investment_usdt
     price = ticker.get("last")
     return investment_usdt / price
+
+def compute_weighted_average_price(levels, required_qty):
+    total_cost = 0.0
+    total_qty = 0.0
+    breakdown = []
+    for price, volume in levels:
+        if total_qty >= required_qty:
+            break
+        remaining = required_qty - total_qty
+        used_volume = min(volume, remaining)
+        total_cost += used_volume * price
+        total_qty += used_volume
+        breakdown.append((price, used_volume))
+    if total_qty == 0:
+        return None, breakdown
+    weighted_avg_price = total_cost / total_qty
+    return weighted_avg_price, breakdown
 
 class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
@@ -131,7 +120,6 @@ class PairArbitrageStrategy:
             return
 
         arbitrage_logger.info(f"{self.pair_name} - Checking arbitrage for symbols: {symbol_ex1} ({names[0]}), {symbol_ex2} ({names[1]})")
-
         try:
             ticker1 = await fetch_ticker_rate_limited_async(self.exchange1, symbol_ex1)
             ticker2 = await fetch_ticker_rate_limited_async(self.exchange2, symbol_ex2)
@@ -183,70 +171,72 @@ class PairArbitrageStrategy:
             await conversion_exchange.close()
             arbitrage_logger.info(f"Converted investment for quote {quote}: {base_investment} USDT -> {investment:.6f} {quote}")
 
-        # Pobieramy order booki ograniczone do kilku poziomów
-        liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol_ex1)
-        liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2)
-
-        weighted_buy_price = None
-        weighted_sell_price = None
-        breakdown_buy = []
-        breakdown_sell = []
+        # Pobieramy order book tylko dla określonej liczby poziomów
+        levels_to_fetch = CONFIG.get("ORDERBOOK_LEVELS", 5)
+        liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol_ex1, levels_to_fetch=levels_to_fetch)
+        liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2, levels_to_fetch=levels_to_fetch)
+        liquidity_info = ""
+        extra_info = ""
+        profit_liq = None
+        invested_amount = None
+        actual_qty = None
+        # Nowe logowanie: wyliczenie weighted average ceny z minimalną liczbą poziomów
         if liq_ex1 and liq_ex2:
-            # Ustalamy początkowo zamawianą ilość (na podstawie tickerowej ceny)
-            desired_qty = investment / effective_buy_ex1
-            # Dla kupna (asks) obliczamy ważoną średnią z wykorzystaniem kilku poziomów:
-            weighted_buy_price, breakdown_buy = compute_weighted_average_price(liq_ex1, desired_qty, side='ask', fee=fee1)
-            # Dla sprzedaży (bids):
-            weighted_sell_price, breakdown_sell = compute_weighted_average_price(liq_ex2, desired_qty, side='bid', fee=fee2)
-        else:
-            arbitrage_logger.warning(f"{self.pair_name} - Missing liquidity data for {asset}, skipping liquidity check.")
-
-        final_buy_price = weighted_buy_price if weighted_buy_price is not None else effective_buy_ex1
-        final_sell_price = weighted_sell_price if weighted_sell_price is not None else effective_sell_ex2
-        final_profit = ((final_sell_price - final_buy_price) / final_buy_price) * 100
-
-        if liq_ex1 and liq_ex2 and weighted_buy_price is not None and weighted_sell_price is not None:
-            # Przeliczamy zamawianą ilość na podstawie ceny z order booka
-            desired_qty = investment / weighted_buy_price
-            total_qty = 0
-            total_cost = 0
-            level_details = []
-            for price, vol in breakdown_buy:
-                if total_qty + vol >= desired_qty:
-                    qty_from_level = desired_qty - total_qty
-                    total_cost += qty_from_level * price
-                    level_details.append((price, qty_from_level))
-                    total_qty = desired_qty
-                    break
+            # Pobieramy pełne listy poziomów
+            asks = liq_ex1.get("asks", [])
+            bids = liq_ex2.get("bids", [])
+            # Obliczamy przybliżoną wymaganą ilość na podstawie ceny z pierwszego poziomu
+            first_buy_price = asks[0][0] if asks else None
+            if first_buy_price is None:
+                extra_info += "No ask data available; "
+            else:
+                required_qty = investment / (first_buy_price * (1 + fee1 / 100))
+                # Sprawdzamy, czy pierwszy poziom wystarcza
+                if asks[0][1] >= required_qty:
+                    weighted_buy_price = asks[0][0]
+                    buy_breakdown = [(asks[0][0], required_qty)]
                 else:
-                    total_cost += vol * price
-                    level_details.append((price, vol))
-                    total_qty += vol
-            final_invested = total_cost
-            final_proceeds = desired_qty * weighted_sell_price
-            final_profit_amount = final_proceeds - final_invested
-            final_profit_percent = (final_profit_amount / final_invested * 100) if final_invested else 0
+                    weighted_buy_price, buy_breakdown = compute_weighted_average_price(asks, required_qty)
+            # Analogicznie dla sprzedaży – korzystamy z listy bids
+            first_sell_price = bids[0][0] if bids else None
+            if first_sell_price is None:
+                extra_info += "No bid data available; "
+            else:
+                if bids[0][1] >= required_qty:
+                    weighted_sell_price = bids[0][0]
+                    sell_breakdown = [(bids[0][0], required_qty)]
+                else:
+                    weighted_sell_price, sell_breakdown = compute_weighted_average_price(bids, required_qty)
+            if weighted_buy_price is None or weighted_sell_price is None:
+                extra_info += "Insufficient liquidity levels for weighted average calculation."
+            else:
+                actual_qty = required_qty  # przyjmujemy, że kupujemy wymaganą ilość
+                invested_amount = actual_qty * weighted_buy_price
+                potential_proceeds = actual_qty * weighted_sell_price
+                profit_liq = potential_proceeds - invested_amount
+                profit_liq_percent = (profit_liq / invested_amount * 100) if invested_amount else 0
+                extra_info += f"Weighted Buy Price: {weighted_buy_price:.6f}, Weighted Sell Price: {weighted_sell_price:.6f}; "
+                extra_info += f"Breakdown Buy: {buy_breakdown}; Breakdown Sell: {sell_breakdown}; "
+            liquidity_info = f"Buy Levels: {asks}; Sell Levels: {bids}"
         else:
-            final_invested = investment
-            final_proceeds = investment * (final_sell_price / final_buy_price)
-            final_profit_amount = final_proceeds - final_invested
-            final_profit_percent = final_profit
+            extra_info = "No liquidity data available."
 
         try:
             log_line = (
                 f"Pair: {self.pair_name} | Asset: {asset} | "
                 f"Buy ({names[0]} eff.): {effective_buy_ex1:.4f} | Sell ({names[1]} eff.): {effective_sell_ex2:.4f} | "
-                f"Ticker Profit: {profit1:.2f}% | Weighted Profit: {final_profit_percent:.2f}% | "
-                f"Profit ({quote}): {final_profit_amount:.6f} | Invested ({quote}): {final_invested:.6f} | "
-                f"Qty Purchased: {desired_qty:.4f} | Liquidity Info: "
-                f"{liq_ex1.get('asks', [])[:3]} / {liq_ex2.get('bids', [])[:3]} | "
-                f"Buy Levels: {breakdown_buy} | Sell Levels: {breakdown_sell}"
+                f"Ticker Profit: {profit1:.2f}% | "
+                f"Weighted Profit: {f'{profit_liq_percent:.2f}' if profit_liq is not None else 'N/A'}% | "
+                f"Profit ({quote}): {f'{profit_liq:.6f}' if profit_liq is not None else 'N/A'} | "
+                f"Invested ({quote}): {f'{invested_amount:.6f}' if invested_amount is not None else 'N/A'} | "
+                f"Qty Purchased: {f'{actual_qty:.4f}' if actual_qty is not None else 'N/A'} | "
+                f"Liquidity Info: {liquidity_info} | Extra: {extra_info}"
             )
         except Exception as format_e:
             arbitrage_logger.error(f"{self.pair_name} - Formatting error: {format_e}")
             return
 
-        if final_profit_amount > 0:
+        if profit_liq is not None and profit_liq > 0:
             opp_logger.info(log_line)
         else:
             unprofitable_logger.info(log_line)
@@ -255,7 +245,7 @@ class PairArbitrageStrategy:
             arbitrage_logger.info(
                 f"{self.pair_name} - Opportunity: Buy on {self.exchange1.__class__.__name__} (price: {tickers[names[0]]}, eff.: {effective_buy_ex1:.4f}) | "
                 f"Sell on {self.exchange2.__class__.__name__} (price: {tickers[names[1]]}, eff.: {effective_sell_ex2:.4f}) | "
-                f"Ticker Profit: {profit1:.2f}% | Weighted Profit: {final_profit_percent:.2f}% | Profit: {final_profit_amount:.6f} {quote}"
+                f"Ticker Profit: {profit1:.2f}% | Profit: {f'{profit_liq:.6f}' if profit_liq is not None else 'N/A'} {quote}"
             )
         if profit2 >= CONFIG["ARBITRAGE_THRESHOLD"]:
             arbitrage_logger.info(
