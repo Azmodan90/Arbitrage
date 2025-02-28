@@ -1,38 +1,37 @@
-2025-02-28 18:47:50,961 - INFO - Starting arbitrage program
-2025-02-28 19:13:58,497 - ERROR - Task was destroyed but it is pending!
+2025-02-28 19:38:48,099 - INFO - Starting arbitrage program
+2025-02-28 19:40:34,815 - ERROR - Task was destroyed but it is pending!
 task: <Task cancelling name='Task-1' coro=<main() done, defined at /workspaces/Arbitrage/main.py:67> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
-2025-02-28 19:13:58,500 - WARNING - bitstamp requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
-2025-02-28 19:13:58,501 - ERROR - Task was destroyed but it is pending!
-task: <Task cancelling name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:279> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
-2025-02-28 19:13:58,501 - ERROR - Task was destroyed but it is pending!
-task: <Task cancelling name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:279> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
-2025-02-28 19:13:58,502 - ERROR - Task was destroyed but it is pending!
-task: <Task cancelling name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:279> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
-2025-02-28 19:13:58,502 - ERROR - Task was destroyed but it is pending!
-task: <Task cancelling name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:279> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
-2025-02-28 19:13:58,503 - ERROR - Task was destroyed but it is pending!
-task: <Task cancelling name='Task-6' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:279> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
-2025-02-28 19:13:58,503 - ERROR - Task was destroyed but it is pending!
-task: <Task cancelling name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:279> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
-2025-02-28 19:13:58,504 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
-2025-02-28 19:13:58,509 - ERROR - Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x7f7e9ca916d0>
-2025-02-28 19:13:58,510 - ERROR - Unclosed connector
-connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f7e9bb3a7b0>, 2524.883471608), (<aiohttp.client_proto.ResponseHandler object at 0x7f7e9bb3a890>, 2525.593887744), (<aiohttp.client_proto.ResponseHandler object at 0x7f7e9bb399b0>, 2525.77592808)]']
-connector: <aiohttp.connector.TCPConnector object at 0x7f7e9d3358d0>
-2025-02-28 19:13:58,536 - WARNING - kucoin requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
-2025-02-28 19:13:58,538 - ERROR - Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x7f7e9ef79950>
-2025-02-28 19:13:58,544 - WARNING - bitget requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
-2025-02-28 19:13:58,546 - ERROR - Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x7f7e9ca90190>
-2025-02-28 19:13:58,547 - ERROR - Unclosed connector
-connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f7e9c984590>, 2525.717850148)]']
-connector: <aiohttp.connector.TCPConnector object at 0x7f7e9ef79d10>
-2025-02-28 19:13:58,554 - ERROR - Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x7f7e99169950>
-2025-02-28 19:13:58,555 - ERROR - Unclosed connector
-connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f7e9bb3b930>, 2509.958028932), (<aiohttp.client_proto.ResponseHandler object at 0x7f7e9c984440>, 2522.137438294), (<aiohttp.client_proto.ResponseHandler object at 0x7f7e9c985be0>, 2525.024633182)]']
-connector: <aiohttp.connector.TCPConnector object at 0x7f7e99169bd0>
-2025-02-28 19:13:58,557 - ERROR - Task was destroyed but it is pending!
-task: <Task pending name='Task-27749' coro=<Throttler.looper() done, defined at /workspaces/Arbitrage/.venv/lib/python3.11/site-packages/ccxt/async_support/base/throttler.py:21> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-02-28 19:40:34,818 - WARNING - bitstamp requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-28 19:40:34,818 - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-2' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:228> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+2025-02-28 19:40:34,819 - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-3' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:228> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+2025-02-28 19:40:34,819 - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-4' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:228> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+2025-02-28 19:40:34,820 - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-5' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:228> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+2025-02-28 19:40:34,820 - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-7' coro=<PairArbitrageStrategy.run() running at /workspaces/Arbitrage/arbitrage.py:228> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764, gather.<locals>._done_callback() at /usr/local/lib/python3.11/asyncio/tasks.py:764]>
+2025-02-28 19:40:34,821 - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-28 19:40:34,825 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f9cb5f60190>
+2025-02-28 19:40:34,825 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f9cb58396a0>, 4118.429995994), (<aiohttp.client_proto.ResponseHandler object at 0x7f9cb5f648a0>, 4121.925649512), (<aiohttp.client_proto.ResponseHandler object at 0x7f9cb57fcc20>, 4121.927880066)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f9cb5f57d90>
+2025-02-28 19:40:34,850 - WARNING - kucoin requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-28 19:40:34,852 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f9ccc6aded0>
+2025-02-28 19:40:34,852 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f9cb57fea50>, 4118.863121359)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f9cb5f42f90>
+2025-02-28 19:40:34,860 - WARNING - bitget requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add `await exchange.close()` to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2025-02-28 19:40:34,861 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f9cb5f56b90>
+2025-02-28 19:40:34,862 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f9cb5f647c0>, 4116.62310267)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f9cb5f56850>
+2025-02-28 19:40:34,870 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f9cb4c31490>
+2025-02-28 19:40:34,871 - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f9cb58391d0>, 4116.041649017), (<aiohttp.client_proto.ResponseHandler object at 0x7f9cb57fc9f0>, 4121.609824319)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f9cb60d9310>
