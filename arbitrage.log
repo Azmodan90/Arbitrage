@@ -1,0 +1,847 @@
+2025-02-28 20:22:07,675 - INFO - binance-kucoin - Starting arbitrage strategy for 261 assets.
+2025-02-28 20:22:07,676 - INFO - binance-kucoin - Checking arbitrage for symbols: SLF/USDT (binance), SLF/USDT (kucoin)
+2025-02-28 20:22:07,677 - INFO - binance-bitget - Starting arbitrage strategy for 310 assets.
+2025-02-28 20:22:07,678 - INFO - binance-bitget - Checking arbitrage for symbols: KNC/USDT (binance), KNC/USDT (bitget)
+2025-02-28 20:22:07,679 - INFO - binance-bitstamp - Starting arbitrage strategy for 18 assets.
+2025-02-28 20:22:07,680 - INFO - binance-bitstamp - Checking arbitrage for symbols: OP/EUR (binance), OP/EUR (bitstamp)
+2025-02-28 20:22:07,681 - INFO - kucoin-bitget - Starting arbitrage strategy for 454 assets.
+2025-02-28 20:22:07,682 - INFO - kucoin-bitget - Checking arbitrage for symbols: KAS/USDT (kucoin), KAS/USDT (bitget)
+2025-02-28 20:22:07,683 - INFO - kucoin-bitstamp - Starting arbitrage strategy for 2 assets.
+2025-02-28 20:22:07,684 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-28 20:22:07,685 - INFO - bitget-bitstamp - Starting arbitrage strategy for 14 assets.
+2025-02-28 20:22:07,686 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/EUR (bitget), USDC/EUR (bitstamp)
+2025-02-28 20:22:12,393 - INFO - kucoin-bitget - Ticker kucoin: 0.07963
+2025-02-28 20:22:12,394 - INFO - kucoin-bitget - Ticker bitget: 0.0797
+2025-02-28 20:22:12,395 - INFO - kucoin-bitget - Ticker profits (-0.11%, -0.29%) below threshold, skipping order book check.
+2025-02-28 20:22:12,396 - INFO - kucoin-bitget - Checking arbitrage for symbols: KNC/USDT (kucoin), KNC/USDT (bitget)
+2025-02-28 20:22:12,957 - INFO - bitget-bitstamp - Ticker bitget: 0.9653
+2025-02-28 20:22:12,960 - INFO - bitget-bitstamp - Ticker bitstamp: 0.96473
+2025-02-28 20:22:12,962 - INFO - bitget-bitstamp - Ticker profits (-0.41%, -0.29%) below threshold, skipping order book check.
+2025-02-28 20:22:12,964 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SUI/EUR (bitget), SUI/EUR (bitstamp)
+2025-02-28 20:22:13,039 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9683
+2025-02-28 20:22:13,040 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.9647
+2025-02-28 20:22:13,041 - INFO - kucoin-bitstamp - Ticker profits (-0.72%, 0.02%) below threshold, skipping order book check.
+2025-02-28 20:22:13,042 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-28 20:22:13,103 - INFO - binance-bitstamp - Ticker binance: 1.045
+2025-02-28 20:22:13,106 - INFO - binance-bitstamp - Ticker bitstamp: 1.0256
+2025-02-28 20:22:13,170 - INFO - binance-bitget - Ticker binance: 0.3928
+2025-02-28 20:22:13,172 - INFO - binance-bitget - Ticker bitget: 0.3926
+2025-02-28 20:22:13,174 - INFO - binance-bitget - Ticker profits (-0.25%, -0.15%) below threshold, skipping order book check.
+2025-02-28 20:22:13,175 - INFO - binance-bitget - Checking arbitrage for symbols: HIVE/USDT (binance), HIVE/USDT (bitget)
+2025-02-28 20:22:13,318 - INFO - binance-kucoin - Ticker binance: 0.2232
+2025-02-28 20:22:13,319 - INFO - binance-kucoin - Ticker kucoin: 0.2228
+2025-02-28 20:22:13,320 - INFO - binance-kucoin - Ticker profits (-0.38%, -0.02%) below threshold, skipping order book check.
+2025-02-28 20:22:13,321 - INFO - binance-kucoin - Checking arbitrage for symbols: KNC/USDT (binance), KNC/USDT (kucoin)
+2025-02-28 20:22:13,548 - INFO - Pair: binance-bitstamp | Asset: {'binance': 'OP/EUR', 'bitstamp': 'OP/EUR'} | Buy (binance eff.): 1.0440 | Sell (bitstamp eff.): 1.0275 | Ticker Profit: -2.20% | Liquidity Profit: -1.58% | Profit (EUR): -3.158240 | Invested (EUR): 200.000000 | Qty Purchased: 191.5655 | Extra: Weighted Buy Price: 1.042987, Weighted Sell Price: 1.030118; Levels Buy: [[1.038, 90.46], [1.039, 250.84], [1.04, 92.98], [1.041, 447.5], [1.043, 115.08], [1.044, 259.51], [1.045, 92.54], [1.046, 92.37], [1.047, 92.37], [1.048, 302.76]]; Levels Sell: [[1.0346, 596.95], [1.0345, 261.593], [1.034, 2790.0], [1.0313, 1017.964], [1.0312, 216.405], [1.031, 543.49], [1.0297, 525.607], [1.0257, 1198.781], [1.0256, 990.642], [1.0239, 1057.267]]
+2025-02-28 20:22:13,551 - INFO - binance-bitstamp - Checking arbitrage for symbols: LINK/EUR (binance), LINK/EUR (bitstamp)
+2025-02-28 20:22:13,967 - INFO - kucoin-bitget - Ticker kucoin: 0.393
+2025-02-28 20:22:13,969 - INFO - kucoin-bitget - Ticker bitget: 0.3926
+2025-02-28 20:22:13,971 - INFO - kucoin-bitget - Ticker profits (-0.30%, -0.10%) below threshold, skipping order book check.
+2025-02-28 20:22:13,973 - INFO - kucoin-bitget - Checking arbitrage for symbols: AERO/USDT (kucoin), AERO/USDT (bitget)
+2025-02-28 20:22:13,992 - INFO - binance-bitget - Ticker binance: 0.2793
+2025-02-28 20:22:13,994 - INFO - binance-bitget - Ticker bitget: 0.2794
+2025-02-28 20:22:13,997 - INFO - binance-bitget - Ticker profits (-0.16%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:22:13,999 - INFO - binance-bitget - Checking arbitrage for symbols: IQ/USDT (binance), IQ/USDT (bitget)
+2025-02-28 20:22:14,292 - INFO - binance-kucoin - Ticker binance: 0.3928
+2025-02-28 20:22:14,294 - INFO - binance-kucoin - Ticker kucoin: 0.393
+2025-02-28 20:22:14,295 - INFO - binance-kucoin - Ticker profits (-0.15%, -0.25%) below threshold, skipping order book check.
+2025-02-28 20:22:14,296 - INFO - binance-kucoin - Checking arbitrage for symbols: ONE/USDT (binance), ONE/USDT (kucoin)
+2025-02-28 20:22:14,627 - INFO - kucoin-bitstamp - Ticker kucoin: 2.1253
+2025-02-28 20:22:14,629 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.14353
+2025-02-28 20:22:14,631 - INFO - kucoin-bitstamp - Ticker profits (0.51%, -1.20%) below threshold, skipping order book check.
+2025-02-28 20:22:14,647 - INFO - binance-bitget - Ticker binance: 0.004994
+2025-02-28 20:22:14,650 - INFO - binance-bitget - Ticker bitget: 0.004987
+2025-02-28 20:22:14,652 - INFO - binance-bitget - Ticker profits (-0.34%, -0.06%) below threshold, skipping order book check.
+2025-02-28 20:22:14,655 - INFO - binance-bitget - Checking arbitrage for symbols: ANKR/USDT (binance), ANKR/USDT (bitget)
+2025-02-28 20:22:14,693 - INFO - bitget-bitstamp - Ticker bitget: 2.6925
+2025-02-28 20:22:14,696 - INFO - bitget-bitstamp - Ticker bitstamp: 2.705
+2025-02-28 20:22:14,698 - INFO - bitget-bitstamp - Ticker profits (0.11%, -0.81%) below threshold, skipping order book check.
+2025-02-28 20:22:14,700 - INFO - bitget-bitstamp - Checking arbitrage for symbols: LINK/EUR (bitget), LINK/EUR (bitstamp)
+2025-02-28 20:22:14,887 - INFO - kucoin-bitget - Ticker kucoin: 0.602
+2025-02-28 20:22:14,888 - INFO - kucoin-bitget - Ticker bitget: 0.603
+2025-02-28 20:22:14,889 - INFO - kucoin-bitget - Ticker profits (-0.03%, -0.37%) below threshold, skipping order book check.
+2025-02-28 20:22:14,890 - INFO - kucoin-bitget - Checking arbitrage for symbols: ZKF/USDT (kucoin), ZKF/USDT (bitget)
+2025-02-28 20:22:14,894 - INFO - binance-bitstamp - Ticker binance: 14.12
+2025-02-28 20:22:14,895 - INFO - binance-bitstamp - Ticker bitstamp: 14.17
+2025-02-28 20:22:14,896 - INFO - binance-bitstamp - Ticker profits (0.00%, -0.70%) below threshold, skipping order book check.
+2025-02-28 20:22:14,897 - INFO - binance-bitstamp - Checking arbitrage for symbols: XRP/EUR (binance), XRP/EUR (bitstamp)
+2025-02-28 20:22:15,264 - INFO - binance-kucoin - Ticker binance: 0.01446
+2025-02-28 20:22:15,265 - INFO - binance-kucoin - Ticker kucoin: 0.014445
+2025-02-28 20:22:15,266 - INFO - binance-kucoin - Ticker profits (-0.30%, -0.10%) below threshold, skipping order book check.
+2025-02-28 20:22:15,267 - INFO - binance-kucoin - Checking arbitrage for symbols: XNO/USDT (binance), XNO/USDT (kucoin)
+2025-02-28 20:22:15,527 - INFO - binance-bitget - Ticker binance: 0.02081
+2025-02-28 20:22:15,530 - INFO - binance-bitget - Ticker bitget: 0.0208
+2025-02-28 20:22:15,533 - INFO - binance-bitget - Ticker profits (-0.25%, -0.15%) below threshold, skipping order book check.
+2025-02-28 20:22:15,535 - INFO - binance-bitget - Checking arbitrage for symbols: NTRN/USDT (binance), NTRN/USDT (bitget)
+2025-02-28 20:22:15,633 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-28 20:22:15,944 - INFO - kucoin-bitget - Ticker kucoin: 0.00027
+2025-02-28 20:22:15,946 - INFO - kucoin-bitget - Ticker bitget: 0.000272
+2025-02-28 20:22:15,948 - INFO - kucoin-bitget - Ticker profits (0.54%, -0.93%) below threshold, skipping order book check.
+2025-02-28 20:22:15,950 - INFO - kucoin-bitget - Checking arbitrage for symbols: ANKR/USDT (kucoin), ANKR/USDT (bitget)
+2025-02-28 20:22:16,199 - INFO - binance-bitget - Ticker binance: 0.1712
+2025-02-28 20:22:16,201 - INFO - binance-bitget - Ticker bitget: 0.1711
+2025-02-28 20:22:16,203 - INFO - binance-bitget - Ticker profits (-0.26%, -0.14%) below threshold, skipping order book check.
+2025-02-28 20:22:16,204 - INFO - binance-bitget - Checking arbitrage for symbols: KDA/USDT (binance), KDA/USDT (bitget)
+2025-02-28 20:22:16,225 - INFO - binance-kucoin - Ticker binance: 1.105
+2025-02-28 20:22:16,227 - INFO - binance-kucoin - Ticker kucoin: 1.1049
+2025-02-28 20:22:16,229 - INFO - binance-kucoin - Ticker profits (-0.21%, -0.19%) below threshold, skipping order book check.
+2025-02-28 20:22:16,229 - INFO - binance-kucoin - Checking arbitrage for symbols: BSW/USDT (binance), BSW/USDT (kucoin)
+2025-02-28 20:22:16,243 - INFO - bitget-bitstamp - Ticker bitget: 14.12
+2025-02-28 20:22:16,245 - INFO - bitget-bitstamp - Ticker bitstamp: 14.17
+2025-02-28 20:22:16,246 - INFO - bitget-bitstamp - Ticker profits (0.00%, -0.70%) below threshold, skipping order book check.
+2025-02-28 20:22:16,247 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/EUR (bitget), XRP/EUR (bitstamp)
+2025-02-28 20:22:16,310 - INFO - binance-bitstamp - Ticker binance: 2.0531
+2025-02-28 20:22:16,313 - INFO - binance-bitstamp - Ticker bitstamp: 2.04912
+2025-02-28 20:22:16,315 - INFO - binance-bitstamp - Ticker profits (-0.54%, -0.16%) below threshold, skipping order book check.
+2025-02-28 20:22:16,318 - INFO - binance-bitstamp - Checking arbitrage for symbols: ADA/EUR (binance), ADA/EUR (bitstamp)
+2025-02-28 20:22:16,913 - INFO - binance-bitget - Ticker binance: 0.5001
+2025-02-28 20:22:16,914 - INFO - binance-bitget - Ticker bitget: 0.5001
+2025-02-28 20:22:16,915 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:16,916 - INFO - binance-bitget - Checking arbitrage for symbols: ID/USDT (binance), ID/USDT (bitget)
+2025-02-28 20:22:17,044 - INFO - kucoin-bitget - Ticker kucoin: 0.02079
+2025-02-28 20:22:17,045 - INFO - kucoin-bitget - Ticker bitget: 0.0208
+2025-02-28 20:22:17,045 - INFO - kucoin-bitget - Ticker profits (-0.15%, -0.25%) below threshold, skipping order book check.
+2025-02-28 20:22:17,046 - INFO - kucoin-bitget - Checking arbitrage for symbols: NTRN/USDT (kucoin), NTRN/USDT (bitget)
+2025-02-28 20:22:17,190 - INFO - binance-kucoin - Ticker binance: 0.043
+2025-02-28 20:22:17,191 - INFO - binance-kucoin - Ticker kucoin: 0.0428
+2025-02-28 20:22:17,192 - INFO - binance-kucoin - Ticker profits (-0.66%, 0.27%) below threshold, skipping order book check.
+2025-02-28 20:22:17,192 - INFO - binance-kucoin - Checking arbitrage for symbols: TUSD/USDT (binance), TUSD/USDT (kucoin)
+2025-02-28 20:22:17,639 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9683
+2025-02-28 20:22:17,640 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.9647
+2025-02-28 20:22:17,640 - INFO - kucoin-bitstamp - Ticker profits (-0.72%, 0.02%) below threshold, skipping order book check.
+2025-02-28 20:22:17,641 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-28 20:22:17,709 - INFO - binance-bitget - Ticker binance: 0.271
+2025-02-28 20:22:17,712 - INFO - binance-bitget - Ticker bitget: 0.2709
+2025-02-28 20:22:17,713 - INFO - binance-bitget - Ticker profits (-0.24%, -0.16%) below threshold, skipping order book check.
+2025-02-28 20:22:17,715 - INFO - binance-bitget - Checking arbitrage for symbols: BAKE/USDT (binance), BAKE/USDT (bitget)
+2025-02-28 20:22:17,772 - INFO - binance-bitstamp - Ticker binance: 0.6071
+2025-02-28 20:22:17,773 - INFO - binance-bitstamp - Ticker bitstamp: 0.60638
+2025-02-28 20:22:17,774 - INFO - binance-bitstamp - Ticker profits (-0.47%, -0.23%) below threshold, skipping order book check.
+2025-02-28 20:22:17,776 - INFO - binance-bitstamp - Checking arbitrage for symbols: XRP/USDT (binance), XRP/USDT (bitstamp)
+2025-02-28 20:22:17,801 - INFO - bitget-bitstamp - Ticker bitget: 2.0508
+2025-02-28 20:22:17,802 - INFO - bitget-bitstamp - Ticker bitstamp: 2.04912
+2025-02-28 20:22:17,802 - INFO - bitget-bitstamp - Ticker profits (-0.43%, -0.27%) below threshold, skipping order book check.
+2025-02-28 20:22:17,803 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ADA/EUR (bitget), ADA/EUR (bitstamp)
+2025-02-28 20:22:17,923 - INFO - kucoin-bitget - Ticker kucoin: 0.1713
+2025-02-28 20:22:17,925 - INFO - kucoin-bitget - Ticker bitget: 0.1711
+2025-02-28 20:22:17,928 - INFO - kucoin-bitget - Ticker profits (-0.32%, -0.08%) below threshold, skipping order book check.
+2025-02-28 20:22:17,930 - INFO - kucoin-bitget - Checking arbitrage for symbols: NC/USDT (kucoin), NC/USDT (bitget)
+2025-02-28 20:22:18,036 - INFO - binance-kucoin - Ticker binance: 0.9975
+2025-02-28 20:22:18,039 - INFO - binance-kucoin - Ticker kucoin: 0.9944
+2025-02-28 20:22:18,041 - INFO - binance-kucoin - Ticker profits (-0.51%, 0.11%) below threshold, skipping order book check.
+2025-02-28 20:22:18,043 - INFO - binance-kucoin - Checking arbitrage for symbols: IO/USDT (binance), IO/USDT (kucoin)
+2025-02-28 20:22:18,563 - INFO - binance-bitget - Ticker binance: 0.1795
+2025-02-28 20:22:18,565 - INFO - binance-bitget - Ticker bitget: 0.1794
+2025-02-28 20:22:18,566 - INFO - binance-bitget - Ticker profits (-0.26%, -0.14%) below threshold, skipping order book check.
+2025-02-28 20:22:18,568 - INFO - binance-bitget - Checking arbitrage for symbols: STPT/USDT (binance), STPT/USDT (bitget)
+2025-02-28 20:22:19,008 - INFO - binance-kucoin - Ticker binance: 1.232
+2025-02-28 20:22:19,011 - INFO - binance-kucoin - Ticker kucoin: 1.2309
+2025-02-28 20:22:19,013 - INFO - binance-kucoin - Ticker profits (-0.29%, -0.11%) below threshold, skipping order book check.
+2025-02-28 20:22:19,016 - INFO - binance-kucoin - Checking arbitrage for symbols: JTO/USDT (binance), JTO/USDT (kucoin)
+2025-02-28 20:22:19,019 - INFO - kucoin-bitget - Ticker kucoin: 0.07247
+2025-02-28 20:22:19,020 - INFO - kucoin-bitget - Ticker bitget: 0.07227
+2025-02-28 20:22:19,021 - INFO - kucoin-bitget - Ticker profits (-0.48%, 0.08%) below threshold, skipping order book check.
+2025-02-28 20:22:19,022 - INFO - kucoin-bitget - Checking arbitrage for symbols: PGC/USDT (kucoin), PGC/USDT (bitget)
+2025-02-28 20:22:19,146 - INFO - kucoin-bitstamp - Ticker kucoin: 2.12582
+2025-02-28 20:22:19,147 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.14353
+2025-02-28 20:22:19,147 - INFO - kucoin-bitstamp - Ticker profits (0.48%, -1.17%) below threshold, skipping order book check.
+2025-02-28 20:22:19,196 - INFO - binance-bitstamp - Ticker binance: 2.1253
+2025-02-28 20:22:19,198 - INFO - binance-bitstamp - Ticker bitstamp: 2.14353
+2025-02-28 20:22:19,199 - INFO - binance-bitstamp - Ticker profits (0.51%, -1.20%) below threshold, skipping order book check.
+2025-02-28 20:22:19,200 - INFO - binance-bitstamp - Checking arbitrage for symbols: DOT/EUR (binance), DOT/EUR (bitstamp)
+2025-02-28 20:22:19,257 - INFO - binance-bitget - Ticker binance: 0.11616
+2025-02-28 20:22:19,259 - INFO - binance-bitget - Ticker bitget: 0.11623
+2025-02-28 20:22:19,260 - INFO - binance-bitget - Ticker profits (-0.14%, -0.26%) below threshold, skipping order book check.
+2025-02-28 20:22:19,262 - INFO - binance-bitget - Checking arbitrage for symbols: BADGER/USDT (binance), BADGER/USDT (bitget)
+2025-02-28 20:22:19,300 - INFO - bitget-bitstamp - Ticker bitget: 0.6064
+2025-02-28 20:22:19,301 - INFO - bitget-bitstamp - Ticker bitstamp: 0.60638
+2025-02-28 20:22:19,301 - INFO - bitget-bitstamp - Ticker profits (-0.35%, -0.35%) below threshold, skipping order book check.
+2025-02-28 20:22:19,302 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/USDT (bitget), XRP/USDT (bitstamp)
+2025-02-28 20:22:19,917 - INFO - binance-bitget - Ticker binance: 3.279
+2025-02-28 20:22:19,920 - INFO - binance-bitget - Ticker bitget: 3.28
+2025-02-28 20:22:19,922 - INFO - binance-bitget - Ticker profits (-0.17%, -0.23%) below threshold, skipping order book check.
+2025-02-28 20:22:19,924 - INFO - binance-bitget - Checking arbitrage for symbols: LPT/USDT (binance), LPT/USDT (bitget)
+2025-02-28 20:22:19,959 - INFO - binance-kucoin - Ticker binance: 2.491
+2025-02-28 20:22:19,960 - INFO - binance-kucoin - Ticker kucoin: 2.493
+2025-02-28 20:22:19,961 - INFO - binance-kucoin - Ticker profits (-0.12%, -0.28%) below threshold, skipping order book check.
+2025-02-28 20:22:19,961 - INFO - binance-kucoin - Checking arbitrage for symbols: ANKR/USDT (binance), ANKR/USDT (kucoin)
+2025-02-28 20:22:20,074 - INFO - kucoin-bitget - Ticker kucoin: 0.000258
+2025-02-28 20:22:20,075 - INFO - kucoin-bitget - Ticker bitget: 0.000257
+2025-02-28 20:22:20,076 - INFO - kucoin-bitget - Ticker profits (-0.59%, 0.19%) below threshold, skipping order book check.
+2025-02-28 20:22:20,076 - INFO - kucoin-bitget - Checking arbitrage for symbols: KDA/USDT (kucoin), KDA/USDT (bitget)
+2025-02-28 20:22:20,150 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-28 20:22:20,647 - INFO - binance-bitstamp - Ticker binance: 4.527
+2025-02-28 20:22:20,650 - INFO - binance-bitstamp - Ticker bitstamp: 4.566
+2025-02-28 20:22:20,651 - INFO - binance-bitstamp - Ticker profits (0.51%, -1.20%) below threshold, skipping order book check.
+2025-02-28 20:22:20,652 - INFO - binance-bitstamp - Checking arbitrage for symbols: BOME/EUR (binance), BOME/EUR (bitstamp)
+2025-02-28 20:22:20,720 - INFO - binance-bitget - Ticker binance: 6.589
+2025-02-28 20:22:20,722 - INFO - binance-bitget - Ticker bitget: 6.59
+2025-02-28 20:22:20,723 - INFO - binance-bitget - Ticker profits (-0.18%, -0.21%) below threshold, skipping order book check.
+2025-02-28 20:22:20,724 - INFO - binance-bitget - Checking arbitrage for symbols: LINK/USDT (binance), LINK/USDT (bitget)
+2025-02-28 20:22:20,727 - INFO - bitget-bitstamp - Ticker bitget: 2.1252
+2025-02-28 20:22:20,728 - INFO - bitget-bitstamp - Ticker bitstamp: 2.14353
+2025-02-28 20:22:20,729 - INFO - bitget-bitstamp - Ticker profits (0.51%, -1.20%) below threshold, skipping order book check.
+2025-02-28 20:22:20,729 - INFO - bitget-bitstamp - Checking arbitrage for symbols: WIF/EUR (bitget), WIF/EUR (bitstamp)
+2025-02-28 20:22:21,156 - INFO - binance-kucoin - Ticker binance: 0.0208
+2025-02-28 20:22:21,158 - INFO - binance-kucoin - Ticker kucoin: 0.02079
+2025-02-28 20:22:21,160 - INFO - binance-kucoin - Ticker profits (-0.25%, -0.15%) below threshold, skipping order book check.
+2025-02-28 20:22:21,160 - INFO - binance-kucoin - Checking arbitrage for symbols: NFP/USDT (binance), NFP/USDT (kucoin)
+2025-02-28 20:22:21,390 - INFO - kucoin-bitget - Ticker kucoin: 0.4997
+2025-02-28 20:22:21,391 - INFO - kucoin-bitget - Ticker bitget: 0.4997
+2025-02-28 20:22:21,392 - INFO - kucoin-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:21,393 - INFO - kucoin-bitget - Checking arbitrage for symbols: ANYONE/USDT (kucoin), ANYONE/USDT (bitget)
+2025-02-28 20:22:21,469 - INFO - binance-bitget - Ticker binance: 14.63
+2025-02-28 20:22:21,470 - INFO - binance-bitget - Ticker bitget: 14.63
+2025-02-28 20:22:21,471 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:21,471 - INFO - binance-bitget - Checking arbitrage for symbols: STRK/USDT (binance), STRK/USDT (bitget)
+2025-02-28 20:22:22,067 - INFO - bitget-bitstamp - Ticker bitget: 0.596
+2025-02-28 20:22:22,070 - INFO - bitget-bitstamp - Ticker bitstamp: 0.597
+2025-02-28 20:22:22,072 - INFO - bitget-bitstamp - Ticker profits (-0.18%, -0.52%) below threshold, skipping order book check.
+2025-02-28 20:22:22,074 - INFO - bitget-bitstamp - Checking arbitrage for symbols: NEAR/EUR (bitget), NEAR/EUR (bitstamp)
+2025-02-28 20:22:22,104 - INFO - binance-bitget - Ticker binance: 0.2153
+2025-02-28 20:22:22,107 - INFO - binance-bitget - Ticker bitget: 0.2155
+2025-02-28 20:22:22,109 - INFO - binance-bitget - Ticker profits (-0.11%, -0.29%) below threshold, skipping order book check.
+2025-02-28 20:22:22,110 - INFO - binance-bitget - Checking arbitrage for symbols: HBAR/USDT (binance), HBAR/USDT (bitget)
+2025-02-28 20:22:22,130 - INFO - binance-kucoin - Ticker binance: 0.1158
+2025-02-28 20:22:22,132 - INFO - binance-kucoin - Ticker kucoin: 0.1161
+2025-02-28 20:22:22,134 - INFO - binance-kucoin - Ticker profits (0.06%, -0.46%) below threshold, skipping order book check.
+2025-02-28 20:22:22,135 - INFO - binance-kucoin - Checking arbitrage for symbols: NTRN/USDT (binance), NTRN/USDT (kucoin)
+2025-02-28 20:22:22,137 - INFO - binance-bitstamp - Ticker binance: 0.001849
+2025-02-28 20:22:22,138 - INFO - binance-bitstamp - Ticker bitstamp: 0.001691
+2025-02-28 20:22:22,212 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9683
+2025-02-28 20:22:22,214 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.9647
+2025-02-28 20:22:22,216 - INFO - kucoin-bitstamp - Ticker profits (-0.72%, 0.02%) below threshold, skipping order book check.
+2025-02-28 20:22:22,218 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-28 20:22:22,235 - INFO - kucoin-bitget - Ticker kucoin: 0.399
+2025-02-28 20:22:22,236 - INFO - kucoin-bitget - Ticker bitget: 0.396
+2025-02-28 20:22:22,237 - INFO - kucoin-bitget - Ticker profits (-0.95%, 0.56%) below threshold, skipping order book check.
+2025-02-28 20:22:22,238 - INFO - kucoin-bitget - Checking arbitrage for symbols: DEFI/USDT (kucoin), DEFI/USDT (bitget)
+2025-02-28 20:22:22,556 - INFO - Pair: binance-bitstamp | Asset: {'binance': 'BOME/EUR', 'bitstamp': 'BOME/EUR'} | Buy (binance eff.): 0.0019 | Sell (bitstamp eff.): 0.0001 | Ticker Profit: -8.86% | Liquidity Profit: -97.00% | Profit (EUR): -194.003537 | Invested (EUR): 200.000000 | Qty Purchased: 107547.5163 | Extra: Weighted Buy Price: 0.001858, Weighted Sell Price: 0.000056; Levels Buy: [[0.001849, 37345.0], [0.00185, 58348.0], [0.001851, 89550.0], [0.001852, 11699.0], [0.00186, 251246.0], [0.001912, 2734.0], [0.001923, 3289.0], [0.001931, 1234.0], [0.001935, 2702.0], [0.001947, 2685.0]]; Levels Sell: [[0.001837, 121362.0], [0.001809, 489145.0], [0.001781, 561731.0], [0.001756, 734854.0], [0.001628, 8578.0], [0.001627, 934054.0], [1e-06, 86946613.0]]
+2025-02-28 20:22:22,557 - INFO - binance-bitstamp - Checking arbitrage for symbols: ICP/EUR (binance), ICP/EUR (bitstamp)
+2025-02-28 20:22:22,875 - INFO - binance-bitget - Ticker binance: 0.21421
+2025-02-28 20:22:22,877 - INFO - binance-bitget - Ticker bitget: 0.2143
+2025-02-28 20:22:22,878 - INFO - binance-bitget - Ticker profits (-0.16%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:22:22,880 - INFO - binance-bitget - Checking arbitrage for symbols: XRP/EUR (binance), XRP/EUR (bitget)
+2025-02-28 20:22:23,310 - INFO - binance-kucoin - Ticker binance: 0.1712
+2025-02-28 20:22:23,311 - INFO - binance-kucoin - Ticker kucoin: 0.1713
+2025-02-28 20:22:23,311 - INFO - binance-kucoin - Ticker profits (-0.14%, -0.26%) below threshold, skipping order book check.
+2025-02-28 20:22:23,312 - INFO - binance-kucoin - Checking arbitrage for symbols: IOST/USDT (binance), IOST/USDT (kucoin)
+2025-02-28 20:22:23,533 - INFO - kucoin-bitget - Ticker kucoin: 0.0086
+2025-02-28 20:22:23,535 - INFO - kucoin-bitget - Ticker bitget: 0.00871
+2025-02-28 20:22:23,562 - INFO - binance-bitget - Ticker binance: 2.05
+2025-02-28 20:22:23,565 - INFO - binance-bitget - Ticker bitget: 2.0508
+2025-02-28 20:22:23,567 - INFO - binance-bitget - Ticker profits (-0.16%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:22:23,567 - INFO - binance-bitget - Checking arbitrage for symbols: ENA/USDT (binance), ENA/USDT (bitget)
+2025-02-28 20:22:23,570 - INFO - bitget-bitstamp - Ticker bitget: 2.952
+2025-02-28 20:22:23,571 - INFO - bitget-bitstamp - Ticker bitstamp: 2.927
+2025-02-28 20:22:23,571 - INFO - bitget-bitstamp - Ticker profits (-1.19%, 0.50%) below threshold, skipping order book check.
+2025-02-28 20:22:23,572 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SHIB/EUR (bitget), SHIB/EUR (bitstamp)
+2025-02-28 20:22:23,637 - INFO - kucoin-bitstamp - Ticker kucoin: 2.12517
+2025-02-28 20:22:23,639 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.14353
+2025-02-28 20:22:23,640 - INFO - kucoin-bitstamp - Ticker profits (0.51%, -1.20%) below threshold, skipping order book check.
+2025-02-28 20:22:23,701 - INFO - binance-bitstamp - Ticker binance: 6.216
+2025-02-28 20:22:23,702 - INFO - binance-bitstamp - Ticker bitstamp: 6.229
+2025-02-28 20:22:23,702 - INFO - binance-bitstamp - Ticker profits (-0.14%, -0.56%) below threshold, skipping order book check.
+2025-02-28 20:22:23,703 - INFO - binance-bitstamp - Checking arbitrage for symbols: GALA/EUR (binance), GALA/EUR (bitstamp)
+2025-02-28 20:22:24,123 - INFO - binance-kucoin - Ticker binance: 0.004603
+2025-02-28 20:22:24,124 - INFO - binance-kucoin - Ticker kucoin: 0.004599
+2025-02-28 20:22:24,125 - INFO - binance-kucoin - Ticker profits (-0.29%, -0.11%) below threshold, skipping order book check.
+2025-02-28 20:22:24,126 - INFO - binance-kucoin - Checking arbitrage for symbols: KDA/USDT (binance), KDA/USDT (kucoin)
+2025-02-28 20:22:24,264 - INFO - binance-bitget - Ticker binance: 0.4175
+2025-02-28 20:22:24,267 - INFO - binance-bitget - Ticker bitget: 0.418
+2025-02-28 20:22:24,269 - INFO - binance-bitget - Ticker profits (-0.08%, -0.32%) below threshold, skipping order book check.
+2025-02-28 20:22:24,271 - INFO - binance-bitget - Checking arbitrage for symbols: VTHO/USDT (binance), VTHO/USDT (bitget)
+2025-02-28 20:22:24,401 - INFO - Pair: kucoin-bitget | Asset: {'kucoin': 'DEFI/USDT', 'bitget': 'DEFI/USDT'} | Buy (kucoin eff.): 0.0090 | Sell (bitget eff.): 0.0086 | Ticker Profit: 1.08% | Liquidity Profit: -4.99% | Profit (USDT): -9.974199 | Invested (USDT): 200.000000 | Qty Purchased: 22174.4335 | Extra: Weighted Buy Price: 0.009010, Weighted Sell Price: 0.008578; Levels Buy: [[0.0087, 114233.6333], [0.0088, 134394.1144], [0.0089, 62918.3409], [0.009, 59238.9671], [0.0091, 70517.5095], [0.0092, 29012.7088], [0.0093, 20082.0551], [0.0094, 47638.5131], [0.0095, 39971.6396], [0.0096, 26328.4806]]; Levels Sell: [[0.00861, 51014.83], [0.00859, 15213.89], [0.00858, 5942.0], [0.00857, 10524.56], [0.00856, 7309.15], [0.00854, 2930.19], [0.00852, 22828.41], [0.00851, 203.61], [0.00846, 888.55], [0.00842, 236.7]]
+2025-02-28 20:22:24,403 - INFO - kucoin-bitget - Checking arbitrage for symbols: ID/USDT (kucoin), ID/USDT (bitget)
+2025-02-28 20:22:24,642 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-28 20:22:24,920 - INFO - binance-bitget - Ticker binance: 0.00296
+2025-02-28 20:22:24,922 - INFO - binance-bitget - Ticker bitget: 0.002966
+2025-02-28 20:22:24,923 - INFO - binance-bitget - Ticker profits (0.00%, -0.40%) below threshold, skipping order book check.
+2025-02-28 20:22:24,925 - INFO - binance-bitget - Checking arbitrage for symbols: ACT/USDT (binance), ACT/USDT (bitget)
+2025-02-28 20:22:25,045 - INFO - binance-bitstamp - Ticker binance: 0.0192
+2025-02-28 20:22:25,046 - INFO - binance-bitstamp - Ticker bitstamp: 0.01927
+2025-02-28 20:22:25,047 - INFO - binance-bitstamp - Ticker profits (0.01%, -0.71%) below threshold, skipping order book check.
+2025-02-28 20:22:25,047 - INFO - binance-bitstamp - Checking arbitrage for symbols: WIF/EUR (binance), WIF/EUR (bitstamp)
+2025-02-28 20:22:25,132 - INFO - bitget-bitstamp - Ticker bitget: 1.327e-05
+2025-02-28 20:22:25,134 - INFO - bitget-bitstamp - Ticker bitstamp: 1.33e-05
+2025-02-28 20:22:25,136 - INFO - bitget-bitstamp - Ticker profits (-0.12%, -0.57%) below threshold, skipping order book check.
+2025-02-28 20:22:25,138 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/USDT (bitget), USDC/USDT (bitstamp)
+2025-02-28 20:22:25,164 - INFO - binance-kucoin - Ticker binance: 0.5004
+2025-02-28 20:22:25,166 - INFO - binance-kucoin - Ticker kucoin: 0.4997
+2025-02-28 20:22:25,169 - INFO - binance-kucoin - Ticker profits (-0.34%, -0.06%) below threshold, skipping order book check.
+2025-02-28 20:22:25,171 - INFO - binance-kucoin - Checking arbitrage for symbols: REQ/USDT (binance), REQ/USDT (kucoin)
+2025-02-28 20:22:25,562 - INFO - kucoin-bitget - Ticker kucoin: 0.2729
+2025-02-28 20:22:25,565 - INFO - kucoin-bitget - Ticker bitget: 0.271
+2025-02-28 20:22:25,567 - INFO - kucoin-bitget - Ticker profits (-0.89%, 0.50%) below threshold, skipping order book check.
+2025-02-28 20:22:25,570 - INFO - kucoin-bitget - Checking arbitrage for symbols: SUNDOG/USDT (kucoin), SUNDOG/USDT (bitget)
+2025-02-28 20:22:25,624 - INFO - binance-bitget - Ticker binance: 0.2424
+2025-02-28 20:22:25,627 - INFO - binance-bitget - Ticker bitget: 0.2422
+2025-02-28 20:22:25,630 - INFO - binance-bitget - Ticker profits (-0.28%, -0.12%) below threshold, skipping order book check.
+2025-02-28 20:22:25,632 - INFO - binance-bitget - Checking arbitrage for symbols: XLM/USDT (binance), XLM/USDT (bitget)
+2025-02-28 20:22:26,099 - INFO - binance-kucoin - Ticker binance: 0.1081
+2025-02-28 20:22:26,101 - INFO - binance-kucoin - Ticker kucoin: 0.10838
+2025-02-28 20:22:26,102 - INFO - binance-kucoin - Ticker profits (0.06%, -0.46%) below threshold, skipping order book check.
+2025-02-28 20:22:26,103 - INFO - binance-kucoin - Checking arbitrage for symbols: DEGO/USDT (binance), DEGO/USDT (kucoin)
+2025-02-28 20:22:26,295 - INFO - binance-bitget - Ticker binance: 0.2831
+2025-02-28 20:22:26,297 - INFO - binance-bitget - Ticker bitget: 0.2831
+2025-02-28 20:22:26,297 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:26,298 - INFO - binance-bitget - Checking arbitrage for symbols: PHA/USDT (binance), PHA/USDT (bitget)
+2025-02-28 20:22:26,472 - INFO - kucoin-bitstamp - Ticker kucoin: 0.9683
+2025-02-28 20:22:26,473 - INFO - kucoin-bitstamp - Ticker bitstamp: 0.9647
+2025-02-28 20:22:26,474 - INFO - kucoin-bitstamp - Ticker profits (-0.72%, 0.02%) below threshold, skipping order book check.
+2025-02-28 20:22:26,474 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-28 20:22:26,576 - INFO - binance-bitstamp - Ticker binance: 0.598
+2025-02-28 20:22:26,578 - INFO - binance-bitstamp - Ticker bitstamp: 0.597
+2025-02-28 20:22:26,579 - INFO - binance-bitstamp - Ticker profits (-0.52%, -0.18%) below threshold, skipping order book check.
+2025-02-28 20:22:26,581 - INFO - binance-bitstamp - Checking arbitrage for symbols: NEAR/EUR (binance), NEAR/EUR (bitstamp)
+2025-02-28 20:22:26,614 - INFO - bitget-bitstamp - Ticker bitget: 1.0002
+2025-02-28 20:22:26,617 - INFO - bitget-bitstamp - Ticker bitstamp: 1.00026
+2025-02-28 20:22:26,619 - INFO - bitget-bitstamp - Ticker profits (-0.34%, -0.36%) below threshold, skipping order book check.
+2025-02-28 20:22:26,622 - INFO - bitget-bitstamp - Checking arbitrage for symbols: PEPE/EUR (bitget), PEPE/EUR (bitstamp)
+2025-02-28 20:22:27,004 - INFO - binance-bitget - Ticker binance: 0.1534
+2025-02-28 20:22:27,007 - INFO - binance-bitget - Ticker bitget: 0.1533
+2025-02-28 20:22:27,010 - INFO - binance-bitget - Ticker profits (-0.26%, -0.13%) below threshold, skipping order book check.
+2025-02-28 20:22:27,013 - INFO - binance-bitget - Checking arbitrage for symbols: BAR/USDT (binance), BAR/USDT (bitget)
+2025-02-28 20:22:27,080 - INFO - kucoin-bitget - Ticker kucoin: 0.04807
+2025-02-28 20:22:27,083 - INFO - kucoin-bitget - Ticker bitget: 0.0481
+2025-02-28 20:22:27,085 - INFO - kucoin-bitget - Ticker profits (-0.14%, -0.26%) below threshold, skipping order book check.
+2025-02-28 20:22:27,086 - INFO - kucoin-bitget - Checking arbitrage for symbols: LPT/USDT (kucoin), LPT/USDT (bitget)
+2025-02-28 20:22:27,272 - INFO - binance-kucoin - Ticker binance: 1.524
+2025-02-28 20:22:27,275 - INFO - binance-kucoin - Ticker kucoin: 1.5246
+2025-02-28 20:22:27,277 - INFO - binance-kucoin - Ticker profits (-0.16%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:22:27,280 - INFO - binance-kucoin - Checking arbitrage for symbols: PNUT/USDT (binance), PNUT/USDT (kucoin)
+2025-02-28 20:22:27,949 - INFO - binance-bitstamp - Ticker binance: 2.966
+2025-02-28 20:22:27,952 - INFO - binance-bitstamp - Ticker bitstamp: 2.927
+2025-02-28 20:22:27,955 - INFO - binance-bitstamp - Ticker profits (-1.66%, 0.98%) below threshold, skipping order book check.
+2025-02-28 20:22:27,957 - INFO - binance-bitstamp - Checking arbitrage for symbols: XLM/EUR (binance), XLM/EUR (bitstamp)
+2025-02-28 20:22:28,039 - INFO - bitget-bitstamp - Ticker bitget: 7.63e-06
+2025-02-28 20:22:28,040 - INFO - bitget-bitstamp - Ticker bitstamp: 7.67e-06
+2025-02-28 20:22:28,041 - INFO - bitget-bitstamp - Ticker profits (0.17%, -0.87%) below threshold, skipping order book check.
+2025-02-28 20:22:28,042 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDT/EUR (bitget), USDT/EUR (bitstamp)
+2025-02-28 20:22:28,060 - INFO - binance-bitget - Ticker binance: 1.688
+2025-02-28 20:22:28,061 - INFO - binance-bitget - Ticker bitget: 1.689
+2025-02-28 20:22:28,062 - INFO - binance-bitget - Ticker profits (-0.14%, -0.26%) below threshold, skipping order book check.
+2025-02-28 20:22:28,063 - INFO - binance-bitget - Checking arbitrage for symbols: ILV/USDT (binance), ILV/USDT (bitget)
+2025-02-28 20:22:28,075 - INFO - binance-kucoin - Ticker binance: 0.2812
+2025-02-28 20:22:28,076 - INFO - binance-kucoin - Ticker kucoin: 0.2813
+2025-02-28 20:22:28,077 - INFO - binance-kucoin - Ticker profits (-0.16%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:22:28,077 - INFO - binance-kucoin - Checking arbitrage for symbols: ADX/USDT (binance), ADX/USDT (kucoin)
+2025-02-28 20:22:28,106 - INFO - kucoin-bitstamp - Ticker kucoin: 2.12606
+2025-02-28 20:22:28,108 - INFO - kucoin-bitstamp - Ticker bitstamp: 2.14353
+2025-02-28 20:22:28,109 - INFO - kucoin-bitstamp - Ticker profits (0.47%, -1.16%) below threshold, skipping order book check.
+2025-02-28 20:22:28,121 - INFO - kucoin-bitget - Ticker kucoin: 6.5925
+2025-02-28 20:22:28,121 - INFO - kucoin-bitget - Ticker bitget: 6.595
+2025-02-28 20:22:28,122 - INFO - kucoin-bitget - Ticker profits (-0.16%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:22:28,123 - INFO - kucoin-bitget - Checking arbitrage for symbols: LINK/USDT (kucoin), LINK/USDT (bitget)
+2025-02-28 20:22:28,760 - INFO - binance-bitget - Ticker binance: 17.62
+2025-02-28 20:22:28,763 - INFO - binance-bitget - Ticker bitget: 17.62
+2025-02-28 20:22:28,765 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:28,765 - INFO - binance-bitget - Checking arbitrage for symbols: PEPE/USDT (binance), PEPE/USDT (bitget)
+2025-02-28 20:22:29,031 - INFO - binance-kucoin - Ticker binance: 0.1285
+2025-02-28 20:22:29,034 - INFO - binance-kucoin - Ticker kucoin: 0.12853
+2025-02-28 20:22:29,036 - INFO - binance-kucoin - Ticker profits (-0.18%, -0.22%) below threshold, skipping order book check.
+2025-02-28 20:22:29,037 - INFO - binance-kucoin - Checking arbitrage for symbols: BB/USDT (binance), BB/USDT (kucoin)
+2025-02-28 20:22:29,110 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-28 20:22:29,243 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ONDO/EUR (bitget), ONDO/EUR (bitstamp)
+2025-02-28 20:22:29,247 - INFO - binance-kucoin - Checking arbitrage for symbols: ID/USDT (binance), ID/USDT (kucoin)
+2025-02-28 20:22:29,249 - INFO - kucoin-bitget - Checking arbitrage for symbols: STRK/USDT (kucoin), STRK/USDT (bitget)
+2025-02-28 20:22:29,251 - INFO - binance-bitget - Checking arbitrage for symbols: SKL/USDT (binance), SKL/USDT (bitget)
+2025-02-28 20:22:29,253 - INFO - binance-bitstamp - Checking arbitrage for symbols: SHIB/EUR (binance), SHIB/EUR (bitstamp)
+2025-02-28 20:22:29,254 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-28 20:22:29,742 - INFO - bitget-bitstamp - Ticker bitget: 0.9526
+2025-02-28 20:22:29,744 - INFO - bitget-bitstamp - Ticker bitstamp: 0.9849
+2025-02-28 20:22:29,838 - INFO - binance-bitstamp - Ticker binance: 1.329e-05
+2025-02-28 20:22:29,841 - INFO - binance-bitstamp - Ticker bitstamp: 1.33e-05
+2025-02-28 20:22:29,843 - INFO - binance-bitstamp - Ticker profits (-0.27%, -0.42%) below threshold, skipping order book check.
+2025-02-28 20:22:29,846 - INFO - binance-bitstamp - Checking arbitrage for symbols: USDC/USDT (binance), USDC/USDT (bitstamp)
+2025-02-28 20:22:29,987 - INFO - binance-bitget - Ticker binance: 0.03251
+2025-02-28 20:22:29,988 - INFO - binance-bitget - Ticker bitget: 0.03254
+2025-02-28 20:22:29,990 - INFO - binance-bitget - Ticker profits (-0.11%, -0.29%) below threshold, skipping order book check.
+2025-02-28 20:22:29,991 - INFO - binance-bitget - Checking arbitrage for symbols: MASK/USDT (binance), MASK/USDT (bitget)
+2025-02-28 20:22:30,341 - INFO - Pair: bitget-bitstamp | Asset: {'bitget': 'ONDO/EUR', 'bitstamp': 'ONDO/EUR'} | Buy (bitget eff.): 0.9551 | Sell (bitstamp eff.): 0.9095 | Ticker Profit: 3.03% | Liquidity Profit: -4.78% | Profit (EUR): -9.553707 | Invested (EUR): 200.000000 | Qty Purchased: 209.3938 | Extra: Weighted Buy Price: 0.954184, Weighted Sell Price: 0.911792; Levels Buy: [[0.9531, 129.08], [0.9532, 179.08], [0.9533, 114.54], [0.9534, 114.54], [0.9535, 64.54], [0.9536, 1366.56], [0.9541, 64.54], [0.9542, 81135.9], [0.9543, 64.54], [0.9546, 64.54]]; Levels Sell: [[0.9849, 0.017], [0.9482, 686.0], [0.9481, 456.29], [0.9251, 1128.83], [0.9006, 15.506], [0.9005, 16.112], [0.9003, 14.092], [0.9, 1107.783], [0.874, 572.082], [0.84, 297.619]]
+2025-02-28 20:22:30,343 - INFO - bitget-bitstamp - Checking arbitrage for symbols: DOGE/EUR (bitget), DOGE/EUR (bitstamp)
+2025-02-28 20:22:30,632 - INFO - binance-bitget - Ticker binance: 2.205
+2025-02-28 20:22:30,635 - INFO - binance-bitget - Ticker bitget: 2.212
+2025-02-28 20:22:30,638 - INFO - binance-bitget - Ticker profits (0.12%, -0.52%) below threshold, skipping order book check.
+2025-02-28 20:22:30,640 - INFO - binance-bitget - Checking arbitrage for symbols: OSMO/USDT (binance), OSMO/USDT (bitget)
+2025-02-28 20:22:31,185 - INFO - bitget-bitstamp - Ticker bitget: 0.19227
+2025-02-28 20:22:31,187 - INFO - bitget-bitstamp - Ticker bitstamp: 0.19255
+2025-02-28 20:22:31,188 - INFO - bitget-bitstamp - Ticker profits (-0.20%, -0.49%) below threshold, skipping order book check.
+2025-02-28 20:22:31,247 - INFO - binance-bitstamp - Ticker binance: 1.0002
+2025-02-28 20:22:31,250 - INFO - binance-bitstamp - Ticker bitstamp: 1.00026
+2025-02-28 20:22:31,253 - INFO - binance-bitstamp - Ticker profits (-0.34%, -0.36%) below threshold, skipping order book check.
+2025-02-28 20:22:31,256 - INFO - binance-bitstamp - Checking arbitrage for symbols: GRT/EUR (binance), GRT/EUR (bitstamp)
+2025-02-28 20:22:31,305 - INFO - binance-bitget - Ticker binance: 0.3037
+2025-02-28 20:22:31,308 - INFO - binance-bitget - Ticker bitget: 0.304
+2025-02-28 20:22:31,309 - INFO - binance-bitget - Ticker profits (-0.10%, -0.30%) below threshold, skipping order book check.
+2025-02-28 20:22:31,310 - INFO - binance-bitget - Checking arbitrage for symbols: PYR/USDT (binance), PYR/USDT (bitget)
+2025-02-28 20:22:31,951 - INFO - binance-bitget - Ticker binance: 1.81
+2025-02-28 20:22:31,954 - INFO - binance-bitget - Ticker bitget: 1.81
+2025-02-28 20:22:31,956 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:31,957 - INFO - binance-bitget - Checking arbitrage for symbols: ASTR/USDT (binance), ASTR/USDT (bitget)
+2025-02-28 20:22:32,191 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/EUR (bitget), USDC/EUR (bitstamp)
+2025-02-28 20:22:32,590 - INFO - binance-bitstamp - Ticker binance: 0.1165
+2025-02-28 20:22:32,593 - INFO - binance-bitstamp - Ticker bitstamp: 0.11542
+2025-02-28 20:22:32,596 - INFO - binance-bitstamp - Ticker profits (-1.27%, 0.58%) below threshold, skipping order book check.
+2025-02-28 20:22:32,598 - INFO - binance-bitstamp - Checking arbitrage for symbols: PEPE/EUR (binance), PEPE/EUR (bitstamp)
+2025-02-28 20:22:32,612 - INFO - binance-bitget - Ticker binance: 0.0379
+2025-02-28 20:22:32,614 - INFO - binance-bitget - Ticker bitget: 0.0381
+2025-02-28 20:22:32,616 - INFO - binance-bitget - Ticker profits (0.33%, -0.72%) below threshold, skipping order book check.
+2025-02-28 20:22:32,617 - INFO - binance-bitget - Checking arbitrage for symbols: AVA/USDT (binance), AVA/USDT (bitget)
+2025-02-28 20:22:33,285 - INFO - binance-bitget - Ticker binance: 0.6506
+2025-02-28 20:22:33,288 - INFO - binance-bitget - Ticker bitget: 0.6496
+2025-02-28 20:22:33,291 - INFO - binance-bitget - Ticker profits (-0.35%, -0.05%) below threshold, skipping order book check.
+2025-02-28 20:22:33,294 - INFO - binance-bitget - Checking arbitrage for symbols: RUNE/USDT (binance), RUNE/USDT (bitget)
+2025-02-28 20:22:33,949 - INFO - binance-bitget - Ticker binance: 1.317
+2025-02-28 20:22:33,952 - INFO - binance-bitget - Ticker bitget: 1.318
+2025-02-28 20:22:33,954 - INFO - binance-bitget - Ticker profits (-0.12%, -0.28%) below threshold, skipping order book check.
+2025-02-28 20:22:33,954 - INFO - binance-bitget - Checking arbitrage for symbols: SNX/USDT (binance), SNX/USDT (bitget)
+2025-02-28 20:22:33,956 - INFO - bitget-bitstamp - Ticker bitget: 0.9656
+2025-02-28 20:22:33,957 - INFO - bitget-bitstamp - Ticker bitstamp: 0.96473
+2025-02-28 20:22:33,958 - INFO - bitget-bitstamp - Ticker profits (-0.44%, -0.26%) below threshold, skipping order book check.
+2025-02-28 20:22:33,959 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SUI/EUR (bitget), SUI/EUR (bitstamp)
+2025-02-28 20:22:34,008 - INFO - binance-bitstamp - Ticker binance: 7.61e-06
+2025-02-28 20:22:34,010 - INFO - binance-bitstamp - Ticker bitstamp: 7.67e-06
+2025-02-28 20:22:34,013 - INFO - binance-bitstamp - Ticker profits (0.44%, -1.13%) below threshold, skipping order book check.
+2025-02-28 20:22:34,015 - INFO - binance-bitstamp - Checking arbitrage for symbols: ARB/EUR (binance), ARB/EUR (bitstamp)
+2025-02-28 20:22:34,634 - INFO - binance-bitget - Ticker binance: 0.902
+2025-02-28 20:22:34,636 - INFO - binance-bitget - Ticker bitget: 0.903
+2025-02-28 20:22:34,637 - INFO - binance-bitget - Ticker profits (-0.09%, -0.31%) below threshold, skipping order book check.
+2025-02-28 20:22:34,638 - INFO - binance-bitget - Checking arbitrage for symbols: CHR/USDT (binance), CHR/USDT (bitget)
+2025-02-28 20:22:35,313 - INFO - binance-bitget - Ticker binance: 0.1195
+2025-02-28 20:22:35,316 - INFO - binance-bitget - Ticker bitget: 0.1194
+2025-02-28 20:22:35,317 - INFO - binance-bitget - Ticker profits (-0.28%, -0.12%) below threshold, skipping order book check.
+2025-02-28 20:22:35,319 - INFO - binance-bitget - Checking arbitrage for symbols: CVX/USDT (binance), CVX/USDT (bitget)
+2025-02-28 20:22:35,362 - INFO - binance-bitstamp - Ticker binance: 0.4063
+2025-02-28 20:22:35,363 - INFO - binance-bitstamp - Ticker bitstamp: 0.4061
+2025-02-28 20:22:35,364 - INFO - binance-bitstamp - Ticker profits (-0.40%, -0.30%) below threshold, skipping order book check.
+2025-02-28 20:22:35,365 - INFO - binance-bitstamp - Checking arbitrage for symbols: DOGE/EUR (binance), DOGE/EUR (bitstamp)
+2025-02-28 20:22:35,419 - INFO - bitget-bitstamp - Ticker bitget: 2.6965
+2025-02-28 20:22:35,420 - INFO - bitget-bitstamp - Ticker bitstamp: 2.705
+2025-02-28 20:22:35,420 - INFO - bitget-bitstamp - Ticker profits (-0.04%, -0.66%) below threshold, skipping order book check.
+2025-02-28 20:22:35,421 - INFO - bitget-bitstamp - Checking arbitrage for symbols: LINK/EUR (bitget), LINK/EUR (bitstamp)
+2025-02-28 20:22:35,974 - INFO - binance-bitget - Ticker binance: 2.228
+2025-02-28 20:22:35,977 - INFO - binance-bitget - Ticker bitget: 2.225
+2025-02-28 20:22:35,980 - INFO - binance-bitget - Ticker profits (-0.33%, -0.07%) below threshold, skipping order book check.
+2025-02-28 20:22:35,983 - INFO - binance-bitget - Checking arbitrage for symbols: CTSI/USDT (binance), CTSI/USDT (bitget)
+2025-02-28 20:22:36,672 - INFO - binance-bitget - Ticker binance: 0.0905
+2025-02-28 20:22:36,675 - INFO - binance-bitget - Ticker bitget: 0.0905
+2025-02-28 20:22:36,677 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:36,678 - INFO - binance-bitget - Checking arbitrage for symbols: JUP/USDT (binance), JUP/USDT (bitget)
+2025-02-28 20:22:36,780 - INFO - binance-bitstamp - Ticker binance: 0.1923
+2025-02-28 20:22:36,781 - INFO - binance-bitstamp - Ticker bitstamp: 0.19255
+2025-02-28 20:22:36,782 - INFO - binance-bitstamp - Ticker profits (-0.22%, -0.48%) below threshold, skipping order book check.
+2025-02-28 20:22:36,843 - INFO - bitget-bitstamp - Ticker bitget: 14.11
+2025-02-28 20:22:36,844 - INFO - bitget-bitstamp - Ticker bitstamp: 14.17
+2025-02-28 20:22:36,845 - INFO - bitget-bitstamp - Ticker profits (0.07%, -0.77%) below threshold, skipping order book check.
+2025-02-28 20:22:36,846 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/EUR (bitget), XRP/EUR (bitstamp)
+2025-02-28 20:22:37,357 - INFO - binance-bitget - Ticker binance: 0.7345
+2025-02-28 20:22:37,361 - INFO - binance-bitget - Ticker bitget: 0.7356
+2025-02-28 20:22:37,363 - INFO - binance-bitget - Ticker profits (-0.05%, -0.35%) below threshold, skipping order book check.
+2025-02-28 20:22:37,365 - INFO - binance-bitget - Checking arbitrage for symbols: CATI/USDT (binance), CATI/USDT (bitget)
+2025-02-28 20:22:37,785 - INFO - binance-bitstamp - Checking arbitrage for symbols: OP/EUR (binance), OP/EUR (bitstamp)
+2025-02-28 20:22:38,033 - INFO - binance-bitget - Ticker binance: 0.1579
+2025-02-28 20:22:38,035 - INFO - binance-bitget - Ticker bitget: 0.1581
+2025-02-28 20:22:38,037 - INFO - binance-bitget - Ticker profits (-0.07%, -0.33%) below threshold, skipping order book check.
+2025-02-28 20:22:38,039 - INFO - binance-bitget - Checking arbitrage for symbols: VET/USDT (binance), VET/USDT (bitget)
+2025-02-28 20:22:38,189 - INFO - bitget-bitstamp - Ticker bitget: 2.0537
+2025-02-28 20:22:38,190 - INFO - bitget-bitstamp - Ticker bitstamp: 2.04912
+2025-02-28 20:22:38,190 - INFO - bitget-bitstamp - Ticker profits (-0.57%, -0.13%) below threshold, skipping order book check.
+2025-02-28 20:22:38,191 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ADA/EUR (bitget), ADA/EUR (bitstamp)
+2025-02-28 20:22:38,259 - INFO - binance-bitstamp - Ticker binance: 1.045
+2025-02-28 20:22:38,262 - INFO - binance-bitstamp - Ticker bitstamp: 1.0256
+2025-02-28 20:22:38,711 - INFO - Pair: binance-bitstamp | Asset: {'binance': 'OP/EUR', 'bitstamp': 'OP/EUR'} | Buy (binance eff.): 1.0433 | Sell (bitstamp eff.): 1.0277 | Ticker Profit: -2.20% | Liquidity Profit: -1.49% | Profit (EUR): -2.983373 | Invested (EUR): 200.000000 | Qty Purchased: 191.7078 | Extra: Weighted Buy Price: 1.042212, Weighted Sell Price: 1.030268; Levels Buy: [[1.037, 250.84], [1.038, 90.46], [1.039, 146.71], [1.04, 168.6], [1.041, 300.79], [1.043, 92.8], [1.044, 259.51], [1.045, 92.54], [1.046, 92.37], [1.048, 302.76]]; Levels Sell: [[1.0353, 596.95], [1.0352, 215.569], [1.0345, 3056.619], [1.0323, 525.115], [1.0297, 525.607], [1.0275, 1073.758], [1.0244, 32.182], [1.0243, 1200.054], [1.0242, 117.989], [1.0239, 1057.267]]
+2025-02-28 20:22:38,712 - INFO - binance-bitstamp - Checking arbitrage for symbols: LINK/EUR (binance), LINK/EUR (bitstamp)
+2025-02-28 20:22:38,718 - INFO - binance-bitget - Ticker binance: 0.02786
+2025-02-28 20:22:38,719 - INFO - binance-bitget - Ticker bitget: 0.02785
+2025-02-28 20:22:38,720 - INFO - binance-bitget - Ticker profits (-0.24%, -0.16%) below threshold, skipping order book check.
+2025-02-28 20:22:38,721 - INFO - binance-bitget - Checking arbitrage for symbols: IOTX/USDT (binance), IOTX/USDT (bitget)
+2025-02-28 20:22:39,392 - INFO - binance-bitget - Ticker binance: 0.01857
+2025-02-28 20:22:39,395 - INFO - binance-bitget - Ticker bitget: 0.01862
+2025-02-28 20:22:39,398 - INFO - binance-bitget - Ticker profits (0.07%, -0.47%) below threshold, skipping order book check.
+2025-02-28 20:22:39,400 - INFO - binance-bitget - Checking arbitrage for symbols: FLOKI/USDT (binance), FLOKI/USDT (bitget)
+2025-02-28 20:22:39,601 - INFO - binance-bitstamp - Ticker binance: 14.12
+2025-02-28 20:22:39,604 - INFO - binance-bitstamp - Ticker bitstamp: 14.17
+2025-02-28 20:22:39,606 - INFO - binance-bitstamp - Ticker profits (0.00%, -0.70%) below threshold, skipping order book check.
+2025-02-28 20:22:39,607 - INFO - binance-bitstamp - Checking arbitrage for symbols: XRP/EUR (binance), XRP/EUR (bitstamp)
+2025-02-28 20:22:39,672 - INFO - bitget-bitstamp - Ticker bitget: 0.6052
+2025-02-28 20:22:39,675 - INFO - bitget-bitstamp - Ticker bitstamp: 0.60638
+2025-02-28 20:22:39,676 - INFO - bitget-bitstamp - Ticker profits (-0.16%, -0.54%) below threshold, skipping order book check.
+2025-02-28 20:22:39,676 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/USDT (bitget), XRP/USDT (bitstamp)
+2025-02-28 20:22:40,036 - INFO - binance-bitget - Ticker binance: 8.125e-05
+2025-02-28 20:22:40,038 - INFO - binance-bitget - Ticker bitget: 8.13e-05
+2025-02-28 20:22:40,041 - INFO - binance-bitget - Ticker profits (-0.14%, -0.26%) below threshold, skipping order book check.
+2025-02-28 20:22:40,043 - INFO - binance-bitget - Checking arbitrage for symbols: KAITO/USDT (binance), KAITO/USDT (bitget)
+2025-02-28 20:22:41,006 - INFO - bitget-bitstamp - Ticker bitget: 2.1249
+2025-02-28 20:22:41,007 - INFO - bitget-bitstamp - Ticker bitstamp: 2.14353
+2025-02-28 20:22:41,008 - INFO - bitget-bitstamp - Ticker profits (0.52%, -1.22%) below threshold, skipping order book check.
+2025-02-28 20:22:41,009 - INFO - bitget-bitstamp - Checking arbitrage for symbols: WIF/EUR (bitget), WIF/EUR (bitstamp)
+2025-02-28 20:22:41,091 - INFO - binance-bitstamp - Ticker binance: 2.0498
+2025-02-28 20:22:41,094 - INFO - binance-bitstamp - Ticker bitstamp: 2.04912
+2025-02-28 20:22:41,096 - INFO - binance-bitstamp - Ticker profits (-0.38%, -0.32%) below threshold, skipping order book check.
+2025-02-28 20:22:41,099 - INFO - binance-bitstamp - Checking arbitrage for symbols: ADA/EUR (binance), ADA/EUR (bitstamp)
+2025-02-28 20:22:41,134 - INFO - binance-bitget - Ticker binance: 2.0644
+2025-02-28 20:22:41,136 - INFO - binance-bitget - Ticker bitget: 2.0642
+2025-02-28 20:22:41,139 - INFO - binance-bitget - Ticker profits (-0.21%, -0.19%) below threshold, skipping order book check.
+2025-02-28 20:22:41,141 - INFO - binance-bitget - Checking arbitrage for symbols: BNX/USDT (binance), BNX/USDT (bitget)
+2025-02-28 20:22:42,074 - INFO - binance-bitget - Ticker binance: 1.1995
+2025-02-28 20:22:42,077 - INFO - binance-bitget - Ticker bitget: 1.1996
+2025-02-28 20:22:42,080 - INFO - binance-bitget - Ticker profits (-0.19%, -0.21%) below threshold, skipping order book check.
+2025-02-28 20:22:42,082 - INFO - binance-bitget - Checking arbitrage for symbols: FLOW/USDT (binance), FLOW/USDT (bitget)
+2025-02-28 20:22:42,433 - INFO - bitget-bitstamp - Ticker bitget: 0.598
+2025-02-28 20:22:42,435 - INFO - bitget-bitstamp - Ticker bitstamp: 0.597
+2025-02-28 20:22:42,437 - INFO - bitget-bitstamp - Ticker profits (-0.52%, -0.18%) below threshold, skipping order book check.
+2025-02-28 20:22:42,438 - INFO - bitget-bitstamp - Checking arbitrage for symbols: NEAR/EUR (bitget), NEAR/EUR (bitstamp)
+2025-02-28 20:22:42,518 - INFO - binance-bitstamp - Ticker binance: 0.6071
+2025-02-28 20:22:42,519 - INFO - binance-bitstamp - Ticker bitstamp: 0.60638
+2025-02-28 20:22:42,520 - INFO - binance-bitstamp - Ticker profits (-0.47%, -0.23%) below threshold, skipping order book check.
+2025-02-28 20:22:42,521 - INFO - binance-bitstamp - Checking arbitrage for symbols: XRP/USDT (binance), XRP/USDT (bitstamp)
+2025-02-28 20:22:42,726 - INFO - binance-bitget - Ticker binance: 0.478
+2025-02-28 20:22:42,729 - INFO - binance-bitget - Ticker bitget: 0.4777
+2025-02-28 20:22:42,731 - INFO - binance-bitget - Ticker profits (-0.26%, -0.14%) below threshold, skipping order book check.
+2025-02-28 20:22:42,732 - INFO - binance-bitget - Checking arbitrage for symbols: FXS/USDT (binance), FXS/USDT (bitget)
+2025-02-28 20:22:43,823 - INFO - binance-bitget - Ticker binance: 1.618
+2025-02-28 20:22:43,825 - INFO - binance-bitget - Ticker bitget: 1.619
+2025-02-28 20:22:43,825 - INFO - binance-bitget - Ticker profits (-0.14%, -0.26%) below threshold, skipping order book check.
+2025-02-28 20:22:43,826 - INFO - binance-bitget - Checking arbitrage for symbols: QUICK/USDT (binance), QUICK/USDT (bitget)
+2025-02-28 20:22:43,871 - INFO - bitget-bitstamp - Ticker bitget: 2.957
+2025-02-28 20:22:43,872 - INFO - bitget-bitstamp - Ticker bitstamp: 2.927
+2025-02-28 20:22:43,873 - INFO - bitget-bitstamp - Ticker profits (-1.36%, 0.67%) below threshold, skipping order book check.
+2025-02-28 20:22:43,874 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SHIB/EUR (bitget), SHIB/EUR (bitstamp)
+2025-02-28 20:22:43,935 - INFO - binance-bitstamp - Ticker binance: 2.1243
+2025-02-28 20:22:43,935 - INFO - binance-bitstamp - Ticker bitstamp: 2.14353
+2025-02-28 20:22:43,936 - INFO - binance-bitstamp - Ticker profits (0.55%, -1.24%) below threshold, skipping order book check.
+2025-02-28 20:22:43,937 - INFO - binance-bitstamp - Checking arbitrage for symbols: DOT/EUR (binance), DOT/EUR (bitstamp)
+2025-02-28 20:22:44,470 - INFO - binance-bitget - Ticker binance: 0.02489
+2025-02-28 20:22:44,471 - INFO - binance-bitget - Ticker bitget: 0.02484
+2025-02-28 20:22:44,472 - INFO - binance-bitget - Ticker profits (-0.40%, 0.00%) below threshold, skipping order book check.
+2025-02-28 20:22:44,473 - INFO - binance-bitget - Checking arbitrage for symbols: QTUM/USDT (binance), QTUM/USDT (bitget)
+2025-02-28 20:22:45,192 - INFO - binance-bitget - Ticker binance: 2.536
+2025-02-28 20:22:45,195 - INFO - binance-bitget - Ticker bitget: 2.537
+2025-02-28 20:22:45,198 - INFO - binance-bitget - Ticker profits (-0.16%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:22:45,199 - INFO - binance-bitget - Checking arbitrage for symbols: ANIME/USDT (binance), ANIME/USDT (bitget)
+2025-02-28 20:22:45,272 - INFO - bitget-bitstamp - Ticker bitget: 1.331e-05
+2025-02-28 20:22:45,275 - INFO - bitget-bitstamp - Ticker bitstamp: 1.33e-05
+2025-02-28 20:22:45,278 - INFO - bitget-bitstamp - Ticker profits (-0.42%, -0.27%) below threshold, skipping order book check.
+2025-02-28 20:22:45,280 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/USDT (bitget), USDC/USDT (bitstamp)
+2025-02-28 20:22:45,349 - INFO - binance-bitstamp - Ticker binance: 4.527
+2025-02-28 20:22:45,351 - INFO - binance-bitstamp - Ticker bitstamp: 4.566
+2025-02-28 20:22:45,352 - INFO - binance-bitstamp - Ticker profits (0.51%, -1.20%) below threshold, skipping order book check.
+2025-02-28 20:22:45,353 - INFO - binance-bitstamp - Checking arbitrage for symbols: BOME/EUR (binance), BOME/EUR (bitstamp)
+2025-02-28 20:22:45,880 - INFO - binance-bitget - Ticker binance: 0.0259
+2025-02-28 20:22:45,882 - INFO - binance-bitget - Ticker bitget: 0.026
+2025-02-28 20:22:45,885 - INFO - binance-bitget - Ticker profits (0.19%, -0.58%) below threshold, skipping order book check.
+2025-02-28 20:22:45,887 - INFO - binance-bitget - Checking arbitrage for symbols: WLD/EUR (binance), WLD/EUR (bitget)
+2025-02-28 20:22:46,043 - INFO - bitget-bitstamp - Checking arbitrage for symbols: PEPE/EUR (bitget), PEPE/EUR (bitstamp)
+2025-02-28 20:22:46,044 - INFO - binance-kucoin - Checking arbitrage for symbols: LINA/USDT (binance), LINA/USDT (kucoin)
+2025-02-28 20:22:46,046 - INFO - kucoin-bitget - Checking arbitrage for symbols: OMG/USDT (kucoin), OMG/USDT (bitget)
+2025-02-28 20:22:46,047 - INFO - binance-bitget - Checking arbitrage for symbols: WIN/USDT (binance), WIN/USDT (bitget)
+2025-02-28 20:22:46,049 - INFO - binance-bitstamp - Checking arbitrage for symbols: ICP/EUR (binance), ICP/EUR (bitstamp)
+2025-02-28 20:22:46,722 - INFO - binance-bitstamp - Ticker binance: 6.216
+2025-02-28 20:22:46,723 - INFO - binance-bitstamp - Ticker bitstamp: 6.229
+2025-02-28 20:22:46,724 - INFO - binance-bitstamp - Ticker profits (-0.14%, -0.56%) below threshold, skipping order book check.
+2025-02-28 20:22:46,725 - INFO - binance-bitstamp - Checking arbitrage for symbols: GALA/EUR (binance), GALA/EUR (bitstamp)
+2025-02-28 20:22:46,760 - INFO - bitget-bitstamp - Ticker bitget: 7.63e-06
+2025-02-28 20:22:46,761 - INFO - bitget-bitstamp - Ticker bitstamp: 7.67e-06
+2025-02-28 20:22:46,762 - INFO - bitget-bitstamp - Ticker profits (0.17%, -0.87%) below threshold, skipping order book check.
+2025-02-28 20:22:46,763 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDT/EUR (bitget), USDT/EUR (bitstamp)
+2025-02-28 20:22:46,816 - INFO - binance-bitget - Ticker binance: 6.5e-05
+2025-02-28 20:22:46,818 - INFO - binance-bitget - Ticker bitget: 6.499e-05
+2025-02-28 20:22:46,818 - INFO - binance-bitget - Ticker profits (-0.22%, -0.18%) below threshold, skipping order book check.
+2025-02-28 20:22:46,819 - INFO - binance-bitget - Checking arbitrage for symbols: FIS/USDT (binance), FIS/USDT (bitget)
+2025-02-28 20:22:47,051 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitstamp)
+2025-02-28 20:22:47,473 - INFO - binance-bitget - Ticker binance: 0.2015
+2025-02-28 20:22:47,476 - INFO - binance-bitget - Ticker bitget: 0.2015
+2025-02-28 20:22:47,477 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:47,480 - INFO - binance-bitget - Checking arbitrage for symbols: AVAX/USDT (binance), AVAX/USDT (bitget)
+2025-02-28 20:22:48,102 - INFO - bitget-bitstamp - Ticker bitget: 0.9649
+2025-02-28 20:22:48,103 - INFO - bitget-bitstamp - Ticker bitstamp: 0.9647
+2025-02-28 20:22:48,104 - INFO - bitget-bitstamp - Ticker profits (-0.37%, -0.33%) below threshold, skipping order book check.
+2025-02-28 20:22:48,104 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ONDO/EUR (bitget), ONDO/EUR (bitstamp)
+2025-02-28 20:22:48,126 - INFO - binance-bitget - Ticker binance: 21.81
+2025-02-28 20:22:48,127 - INFO - binance-bitget - Ticker bitget: 21.81
+2025-02-28 20:22:48,128 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:48,129 - INFO - binance-bitget - Checking arbitrage for symbols: SOL/USDT (binance), SOL/USDT (bitget)
+2025-02-28 20:22:48,182 - INFO - binance-bitstamp - Ticker binance: 0.0192
+2025-02-28 20:22:48,183 - INFO - binance-bitstamp - Ticker bitstamp: 0.01927
+2025-02-28 20:22:48,183 - INFO - binance-bitstamp - Ticker profits (0.01%, -0.71%) below threshold, skipping order book check.
+2025-02-28 20:22:48,184 - INFO - binance-bitstamp - Checking arbitrage for symbols: WIF/EUR (binance), WIF/EUR (bitstamp)
+2025-02-28 20:22:48,773 - INFO - binance-bitget - Ticker binance: 144.98
+2025-02-28 20:22:48,776 - INFO - binance-bitget - Ticker bitget: 144.97
+2025-02-28 20:22:48,779 - INFO - binance-bitget - Ticker profits (-0.21%, -0.19%) below threshold, skipping order book check.
+2025-02-28 20:22:48,781 - INFO - binance-bitget - Checking arbitrage for symbols: NEO/USDT (binance), NEO/USDT (bitget)
+2025-02-28 20:22:49,441 - INFO - binance-bitget - Ticker binance: 9.52
+2025-02-28 20:22:49,444 - INFO - binance-bitget - Ticker bitget: 9.53
+2025-02-28 20:22:49,447 - INFO - binance-bitget - Ticker profits (-0.09%, -0.30%) below threshold, skipping order book check.
+2025-02-28 20:22:49,450 - INFO - binance-bitget - Checking arbitrage for symbols: XAI/USDT (binance), XAI/USDT (bitget)
+2025-02-28 20:22:49,518 - INFO - bitget-bitstamp - Ticker bitget: 0.9514
+2025-02-28 20:22:49,521 - INFO - bitget-bitstamp - Ticker bitstamp: 0.9849
+2025-02-28 20:22:49,591 - INFO - binance-bitstamp - Ticker binance: 0.598
+2025-02-28 20:22:49,592 - INFO - binance-bitstamp - Ticker bitstamp: 0.597
+2025-02-28 20:22:49,594 - INFO - binance-bitstamp - Ticker profits (-0.52%, -0.18%) below threshold, skipping order book check.
+2025-02-28 20:22:49,595 - INFO - binance-bitstamp - Checking arbitrage for symbols: NEAR/EUR (binance), NEAR/EUR (bitstamp)
+2025-02-28 20:22:50,029 - INFO - Pair: bitget-bitstamp | Asset: {'bitget': 'ONDO/EUR', 'bitstamp': 'ONDO/EUR'} | Buy (bitget eff.): 0.9544 | Sell (bitstamp eff.): 0.9095 | Ticker Profit: 3.16% | Liquidity Profit: -4.70% | Profit (EUR): -9.406041 | Invested (EUR): 200.000000 | Qty Purchased: 209.5562 | Extra: Weighted Buy Price: 0.953444, Weighted Sell Price: 0.911792; Levels Buy: [[0.9526, 129.08], [0.9527, 179.08], [0.9528, 114.54], [0.9529, 114.54], [0.953, 114.54], [0.9531, 1366.56], [0.9532, 81226.52], [0.9534, 64.54], [0.9535, 64.54], [0.9537, 81226.52]]; Levels Sell: [[0.9849, 0.017], [0.9482, 686.0], [0.9481, 456.29], [0.9251, 1128.83], [0.9006, 15.506], [0.9005, 16.112], [0.9003, 14.092], [0.9, 1107.783], [0.874, 572.082], [0.84, 297.619]]
+2025-02-28 20:22:50,032 - INFO - bitget-bitstamp - Checking arbitrage for symbols: DOGE/EUR (bitget), DOGE/EUR (bitstamp)
+2025-02-28 20:22:50,082 - INFO - binance-bitget - Ticker binance: 0.0882
+2025-02-28 20:22:50,084 - INFO - binance-bitget - Ticker bitget: 0.0883
+2025-02-28 20:22:50,086 - INFO - binance-bitget - Ticker profits (-0.09%, -0.31%) below threshold, skipping order book check.
+2025-02-28 20:22:50,087 - INFO - binance-bitget - Checking arbitrage for symbols: SAGA/USDT (binance), SAGA/USDT (bitget)
+2025-02-28 20:22:50,796 - INFO - binance-bitget - Ticker binance: 0.5433
+2025-02-28 20:22:50,799 - INFO - binance-bitget - Ticker bitget: 0.544
+2025-02-28 20:22:50,803 - INFO - binance-bitget - Ticker profits (-0.07%, -0.33%) below threshold, skipping order book check.
+2025-02-28 20:22:50,806 - INFO - binance-bitget - Checking arbitrage for symbols: GLMR/USDT (binance), GLMR/USDT (bitget)
+2025-02-28 20:22:50,944 - INFO - binance-bitstamp - Ticker binance: 2.966
+2025-02-28 20:22:50,947 - INFO - binance-bitstamp - Ticker bitstamp: 2.927
+2025-02-28 20:22:50,949 - INFO - binance-bitstamp - Ticker profits (-1.66%, 0.98%) below threshold, skipping order book check.
+2025-02-28 20:22:50,951 - INFO - binance-bitstamp - Checking arbitrage for symbols: XLM/EUR (binance), XLM/EUR (bitstamp)
+2025-02-28 20:22:51,025 - INFO - bitget-bitstamp - Ticker bitget: 0.19212
+2025-02-28 20:22:51,028 - INFO - bitget-bitstamp - Ticker bitstamp: 0.19255
+2025-02-28 20:22:51,031 - INFO - bitget-bitstamp - Ticker profits (-0.13%, -0.57%) below threshold, skipping order book check.
+2025-02-28 20:22:51,473 - INFO - binance-bitget - Ticker binance: 0.116
+2025-02-28 20:22:51,476 - INFO - binance-bitget - Ticker bitget: 0.1158
+2025-02-28 20:22:51,479 - INFO - binance-bitget - Ticker profits (-0.37%, -0.03%) below threshold, skipping order book check.
+2025-02-28 20:22:51,481 - INFO - binance-bitget - Checking arbitrage for symbols: JUV/USDT (binance), JUV/USDT (bitget)
+2025-02-28 20:22:52,035 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/EUR (bitget), USDC/EUR (bitstamp)
+2025-02-28 20:22:52,125 - INFO - binance-bitget - Ticker binance: 1.255
+2025-02-28 20:22:52,127 - INFO - binance-bitget - Ticker bitget: 1.255
+2025-02-28 20:22:52,129 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:52,131 - INFO - binance-bitget - Checking arbitrage for symbols: GNS/USDT (binance), GNS/USDT (bitget)
+2025-02-28 20:22:52,359 - INFO - binance-bitstamp - Ticker binance: 0.2741
+2025-02-28 20:22:52,361 - INFO - binance-bitstamp - Ticker bitstamp: 0.27354
+2025-02-28 20:22:52,363 - INFO - binance-bitstamp - Ticker profits (-0.55%, -0.15%) below threshold, skipping order book check.
+2025-02-28 20:22:52,365 - INFO - binance-bitstamp - Checking arbitrage for symbols: SHIB/EUR (binance), SHIB/EUR (bitstamp)
+2025-02-28 20:22:53,028 - INFO - binance-bitget - Ticker binance: 1.53
+2025-02-28 20:22:53,029 - INFO - binance-bitget - Ticker bitget: 1.529
+2025-02-28 20:22:53,029 - INFO - binance-bitget - Ticker profits (-0.27%, -0.13%) below threshold, skipping order book check.
+2025-02-28 20:22:53,030 - INFO - binance-bitget - Checking arbitrage for symbols: REZ/USDT (binance), REZ/USDT (bitget)
+2025-02-28 20:22:53,692 - INFO - binance-bitget - Ticker binance: 0.02183
+2025-02-28 20:22:53,694 - INFO - binance-bitget - Ticker bitget: 0.02181
+2025-02-28 20:22:53,695 - INFO - binance-bitget - Ticker profits (-0.29%, -0.11%) below threshold, skipping order book check.
+2025-02-28 20:22:53,696 - INFO - binance-bitget - Checking arbitrage for symbols: GALA/USDT (binance), GALA/USDT (bitget)
+2025-02-28 20:22:53,713 - INFO - bitget-bitstamp - Ticker bitget: 0.9658
+2025-02-28 20:22:53,713 - INFO - bitget-bitstamp - Ticker bitstamp: 0.96477
+2025-02-28 20:22:53,714 - INFO - bitget-bitstamp - Ticker profits (-0.46%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:22:53,715 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SUI/EUR (bitget), SUI/EUR (bitstamp)
+2025-02-28 20:22:53,775 - INFO - binance-bitstamp - Ticker binance: 1.329e-05
+2025-02-28 20:22:53,776 - INFO - binance-bitstamp - Ticker bitstamp: 1.33e-05
+2025-02-28 20:22:53,777 - INFO - binance-bitstamp - Ticker profits (-0.27%, -0.42%) below threshold, skipping order book check.
+2025-02-28 20:22:53,778 - INFO - binance-bitstamp - Checking arbitrage for symbols: USDC/USDT (binance), USDC/USDT (bitstamp)
+2025-02-28 20:22:54,325 - INFO - binance-bitget - Ticker binance: 0.0198
+2025-02-28 20:22:54,327 - INFO - binance-bitget - Ticker bitget: 0.01984
+2025-02-28 20:22:54,328 - INFO - binance-bitget - Ticker profits (0.00%, -0.40%) below threshold, skipping order book check.
+2025-02-28 20:22:54,329 - INFO - binance-bitget - Checking arbitrage for symbols: BLUR/USDT (binance), BLUR/USDT (bitget)
+2025-02-28 20:22:55,025 - INFO - binance-bitget - Ticker binance: 0.1314
+2025-02-28 20:22:55,026 - INFO - binance-bitget - Ticker bitget: 0.1317
+2025-02-28 20:22:55,026 - INFO - binance-bitget - Ticker profits (0.03%, -0.43%) below threshold, skipping order book check.
+2025-02-28 20:22:55,027 - INFO - binance-bitget - Checking arbitrage for symbols: DOT/USDT (binance), DOT/USDT (bitget)
+2025-02-28 20:22:55,122 - INFO - binance-bitstamp - Ticker binance: 1.0002
+2025-02-28 20:22:55,123 - INFO - binance-bitstamp - Ticker bitstamp: 1.00026
+2025-02-28 20:22:55,124 - INFO - binance-bitstamp - Ticker profits (-0.34%, -0.36%) below threshold, skipping order book check.
+2025-02-28 20:22:55,124 - INFO - binance-bitstamp - Checking arbitrage for symbols: GRT/EUR (binance), GRT/EUR (bitstamp)
+2025-02-28 20:22:55,190 - INFO - bitget-bitstamp - Ticker bitget: 2.6924
+2025-02-28 20:22:55,192 - INFO - bitget-bitstamp - Ticker bitstamp: 2.705
+2025-02-28 20:22:55,192 - INFO - bitget-bitstamp - Ticker profits (0.12%, -0.81%) below threshold, skipping order book check.
+2025-02-28 20:22:55,193 - INFO - bitget-bitstamp - Checking arbitrage for symbols: LINK/EUR (bitget), LINK/EUR (bitstamp)
+2025-02-28 20:22:55,668 - INFO - binance-bitget - Ticker binance: 4.68
+2025-02-28 20:22:55,669 - INFO - binance-bitget - Ticker bitget: 4.679
+2025-02-28 20:22:55,670 - INFO - binance-bitget - Ticker profits (-0.22%, -0.18%) below threshold, skipping order book check.
+2025-02-28 20:22:55,671 - INFO - binance-bitget - Checking arbitrage for symbols: NEAR/USDT (binance), NEAR/USDT (bitget)
+2025-02-28 20:22:56,389 - INFO - binance-bitget - Ticker binance: 3.058
+2025-02-28 20:22:56,391 - INFO - binance-bitget - Ticker bitget: 3.058
+2025-02-28 20:22:56,398 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:22:56,400 - INFO - binance-bitget - Checking arbitrage for symbols: JASMY/USDT (binance), JASMY/USDT (bitget)
+2025-02-28 20:22:56,542 - INFO - binance-bitstamp - Ticker binance: 0.1165
+2025-02-28 20:22:56,544 - INFO - binance-bitstamp - Ticker bitstamp: 0.11542
+2025-02-28 20:22:56,545 - INFO - binance-bitstamp - Ticker profits (-1.27%, 0.58%) below threshold, skipping order book check.
+2025-02-28 20:22:56,545 - INFO - binance-bitstamp - Checking arbitrage for symbols: PEPE/EUR (binance), PEPE/EUR (bitstamp)
+2025-02-28 20:22:56,613 - INFO - bitget-bitstamp - Ticker bitget: 14.1
+2025-02-28 20:22:56,614 - INFO - bitget-bitstamp - Ticker bitstamp: 14.1
+2025-02-28 20:22:56,614 - INFO - bitget-bitstamp - Ticker profits (-0.35%, -0.35%) below threshold, skipping order book check.
+2025-02-28 20:22:56,615 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/EUR (bitget), XRP/EUR (bitstamp)
+2025-02-28 20:22:57,030 - INFO - binance-bitget - Ticker binance: 0.01816
+2025-02-28 20:22:57,032 - INFO - binance-bitget - Ticker bitget: 0.01819
+2025-02-28 20:22:57,033 - INFO - binance-bitget - Ticker profits (-0.03%, -0.36%) below threshold, skipping order book check.
+2025-02-28 20:22:57,035 - INFO - binance-bitget - Checking arbitrage for symbols: PORTAL/USDT (binance), PORTAL/USDT (bitget)
+2025-02-28 20:22:57,791 - INFO - binance-bitget - Ticker binance: 0.1343
+2025-02-28 20:22:57,794 - INFO - binance-bitget - Ticker bitget: 0.1356
+2025-02-28 20:22:57,797 - INFO - binance-bitget - Ticker profits (0.77%, -1.16%) below threshold, skipping order book check.
+2025-02-28 20:22:57,799 - INFO - binance-bitget - Checking arbitrage for symbols: NEAR/EUR (binance), NEAR/EUR (bitget)
+2025-02-28 20:22:57,954 - INFO - binance-bitstamp - Ticker binance: 7.6e-06
+2025-02-28 20:22:57,956 - INFO - binance-bitstamp - Ticker bitstamp: 7.67e-06
+2025-02-28 20:22:57,957 - INFO - binance-bitstamp - Ticker profits (0.57%, -1.26%) below threshold, skipping order book check.
+2025-02-28 20:22:57,958 - INFO - binance-bitstamp - Checking arbitrage for symbols: ARB/EUR (binance), ARB/EUR (bitstamp)
+2025-02-28 20:22:58,008 - INFO - bitget-bitstamp - Ticker bitget: 2.05
+2025-02-28 20:22:58,011 - INFO - bitget-bitstamp - Ticker bitstamp: 2.04754
+2025-02-28 20:22:58,014 - INFO - bitget-bitstamp - Ticker profits (-0.47%, -0.23%) below threshold, skipping order book check.
+2025-02-28 20:22:58,017 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ADA/EUR (bitget), ADA/EUR (bitstamp)
+2025-02-28 20:22:58,423 - INFO - binance-bitget - Ticker binance: 2.966
+2025-02-28 20:22:58,425 - INFO - binance-bitget - Ticker bitget: 2.947
+2025-02-28 20:22:58,428 - INFO - binance-bitget - Ticker profits (-0.84%, 0.44%) below threshold, skipping order book check.
+2025-02-28 20:22:58,429 - INFO - binance-bitget - Checking arbitrage for symbols: COOKIE/USDT (binance), COOKIE/USDT (bitget)
+2025-02-28 20:22:59,152 - INFO - binance-bitget - Ticker binance: 0.2313
+2025-02-28 20:22:59,154 - INFO - binance-bitget - Ticker bitget: 0.23151
+2025-02-28 20:22:59,157 - INFO - binance-bitget - Ticker profits (-0.11%, -0.29%) below threshold, skipping order book check.
+2025-02-28 20:22:59,159 - INFO - binance-bitget - Checking arbitrage for symbols: CELR/USDT (binance), CELR/USDT (bitget)
+2025-02-28 20:22:59,354 - INFO - bitget-bitstamp - Ticker bitget: 0.6043
+2025-02-28 20:22:59,356 - INFO - bitget-bitstamp - Ticker bitstamp: 0.60638
+2025-02-28 20:22:59,357 - INFO - bitget-bitstamp - Ticker profits (-0.01%, -0.69%) below threshold, skipping order book check.
+2025-02-28 20:22:59,359 - INFO - bitget-bitstamp - Checking arbitrage for symbols: XRP/USDT (bitget), XRP/USDT (bitstamp)
+2025-02-28 20:22:59,423 - INFO - binance-bitstamp - Ticker binance: 0.4063
+2025-02-28 20:22:59,426 - INFO - binance-bitstamp - Ticker bitstamp: 0.4061
+2025-02-28 20:22:59,429 - INFO - binance-bitstamp - Ticker profits (-0.40%, -0.30%) below threshold, skipping order book check.
+2025-02-28 20:22:59,432 - INFO - binance-bitstamp - Checking arbitrage for symbols: DOGE/EUR (binance), DOGE/EUR (bitstamp)
+2025-02-28 20:22:59,830 - INFO - binance-bitget - Ticker binance: 0.01181
+2025-02-28 20:22:59,833 - INFO - binance-bitget - Ticker bitget: 0.01182
+2025-02-28 20:22:59,836 - INFO - binance-bitget - Ticker profits (-0.12%, -0.28%) below threshold, skipping order book check.
+2025-02-28 20:22:59,840 - INFO - binance-bitget - Checking arbitrage for symbols: CELO/USDT (binance), CELO/USDT (bitget)
+2025-02-28 20:23:00,447 - INFO - bitget-bitstamp - Checking arbitrage for symbols: WIF/EUR (bitget), WIF/EUR (bitstamp)
+2025-02-28 20:23:00,450 - INFO - binance-kucoin - Checking arbitrage for symbols: RVN/USDT (binance), RVN/USDT (kucoin)
+2025-02-28 20:23:00,453 - INFO - kucoin-bitget - Checking arbitrage for symbols: HBAR/USDT (kucoin), HBAR/USDT (bitget)
+2025-02-28 20:23:00,456 - INFO - binance-bitget - Checking arbitrage for symbols: S/USDT (binance), S/USDT (bitget)
+2025-02-28 20:23:00,459 - INFO - kucoin-bitstamp - Checking arbitrage for symbols: XRP/USDT (kucoin), XRP/USDT (bitstamp)
+2025-02-28 20:23:00,928 - INFO - bitget-bitstamp - Ticker bitget: 0.597
+2025-02-28 20:23:00,931 - INFO - bitget-bitstamp - Ticker bitstamp: 0.597
+2025-02-28 20:23:00,934 - INFO - bitget-bitstamp - Ticker profits (-0.35%, -0.35%) below threshold, skipping order book check.
+2025-02-28 20:23:00,937 - INFO - bitget-bitstamp - Checking arbitrage for symbols: NEAR/EUR (bitget), NEAR/EUR (bitstamp)
+2025-02-28 20:23:01,119 - INFO - binance-bitget - Ticker binance: 0.6722
+2025-02-28 20:23:01,121 - INFO - binance-bitget - Ticker bitget: 0.6725
+2025-02-28 20:23:01,122 - INFO - binance-bitget - Ticker profits (-0.16%, -0.24%) below threshold, skipping order book check.
+2025-02-28 20:23:01,122 - INFO - binance-bitget - Checking arbitrage for symbols: SHIB/USDT (binance), SHIB/USDT (bitget)
+2025-02-28 20:23:01,460 - INFO - binance-bitstamp - Checking arbitrage for symbols: OP/EUR (binance), OP/EUR (bitstamp)
+2025-02-28 20:23:01,769 - INFO - binance-bitget - Ticker binance: 1.376e-05
+2025-02-28 20:23:01,773 - INFO - binance-bitget - Ticker bitget: 1.375e-05
+2025-02-28 20:23:01,776 - INFO - binance-bitget - Ticker profits (-0.27%, -0.13%) below threshold, skipping order book check.
+2025-02-28 20:23:01,779 - INFO - binance-bitget - Checking arbitrage for symbols: METIS/USDT (binance), METIS/USDT (bitget)
+2025-02-28 20:23:02,262 - INFO - binance-bitstamp - Ticker binance: 1.045
+2025-02-28 20:23:02,264 - INFO - binance-bitstamp - Ticker bitstamp: 1.0256
+2025-02-28 20:23:02,360 - INFO - bitget-bitstamp - Ticker bitget: 2.952
+2025-02-28 20:23:02,362 - INFO - bitget-bitstamp - Ticker bitstamp: 2.927
+2025-02-28 20:23:02,365 - INFO - bitget-bitstamp - Ticker profits (-1.19%, 0.50%) below threshold, skipping order book check.
+2025-02-28 20:23:02,367 - INFO - bitget-bitstamp - Checking arbitrage for symbols: SHIB/EUR (bitget), SHIB/EUR (bitstamp)
+2025-02-28 20:23:02,429 - INFO - binance-bitget - Ticker binance: 22.28
+2025-02-28 20:23:02,430 - INFO - binance-bitget - Ticker bitget: 22.28
+2025-02-28 20:23:02,431 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:23:02,432 - INFO - binance-bitget - Checking arbitrage for symbols: GTC/USDT (binance), GTC/USDT (bitget)
+2025-02-28 20:23:02,694 - INFO - Pair: binance-bitstamp | Asset: {'binance': 'OP/EUR', 'bitstamp': 'OP/EUR'} | Buy (binance eff.): 1.0428 | Sell (bitstamp eff.): 1.0280 | Ticker Profit: -2.20% | Liquidity Profit: -1.42% | Profit (EUR): -2.842885 | Invested (EUR): 200.000000 | Qty Purchased: 191.7942 | Extra: Weighted Buy Price: 1.041743, Weighted Sell Price: 1.030538; Levels Buy: [[1.036, 104.13], [1.037, 237.17], [1.038, 93.15], [1.039, 146.71], [1.04, 115.26], [1.041, 300.79], [1.043, 92.8], [1.044, 259.51], [1.045, 92.54], [1.048, 302.76]]; Levels Sell: [[1.0345, 596.95], [1.0344, 215.736], [1.0334, 3045.212], [1.0312, 931.407], [1.0311, 526.045], [1.0283, 502.843], [1.0275, 1073.758], [1.0245, 32.179], [1.0244, 123.045], [1.0243, 1200.054]]
+2025-02-28 20:23:02,698 - INFO - binance-bitstamp - Checking arbitrage for symbols: LINK/EUR (binance), LINK/EUR (bitstamp)
+2025-02-28 20:23:03,086 - INFO - binance-bitget - Ticker binance: 0.437
+2025-02-28 20:23:03,087 - INFO - binance-bitget - Ticker bitget: 0.437
+2025-02-28 20:23:03,088 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:23:03,089 - INFO - binance-bitget - Checking arbitrage for symbols: USDC/USDT (binance), USDC/USDT (bitget)
+2025-02-28 20:23:03,712 - INFO - binance-bitstamp - Ticker binance: 14.09
+2025-02-28 20:23:03,714 - INFO - binance-bitstamp - Ticker bitstamp: 14.1
+2025-02-28 20:23:03,716 - INFO - binance-bitstamp - Ticker profits (-0.28%, -0.42%) below threshold, skipping order book check.
+2025-02-28 20:23:03,717 - INFO - binance-bitstamp - Checking arbitrage for symbols: XRP/EUR (binance), XRP/EUR (bitstamp)
+2025-02-28 20:23:03,736 - INFO - binance-bitget - Ticker binance: 1.0002
+2025-02-28 20:23:03,736 - INFO - binance-bitget - Ticker bitget: 1.0002
+2025-02-28 20:23:03,737 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:23:03,738 - INFO - binance-bitget - Checking arbitrage for symbols: ACM/USDT (binance), ACM/USDT (bitget)
+2025-02-28 20:23:03,785 - INFO - bitget-bitstamp - Ticker bitget: 1.329e-05
+2025-02-28 20:23:03,788 - INFO - bitget-bitstamp - Ticker bitstamp: 1.33e-05
+2025-02-28 20:23:03,791 - INFO - bitget-bitstamp - Ticker profits (-0.27%, -0.42%) below threshold, skipping order book check.
+2025-02-28 20:23:03,793 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDC/USDT (bitget), USDC/USDT (bitstamp)
+2025-02-28 20:23:04,379 - INFO - binance-bitget - Ticker binance: 1.042
+2025-02-28 20:23:04,380 - INFO - binance-bitget - Ticker bitget: 1.043
+2025-02-28 20:23:04,381 - INFO - binance-bitget - Ticker profits (-0.10%, -0.30%) below threshold, skipping order book check.
+2025-02-28 20:23:04,382 - INFO - binance-bitget - Checking arbitrage for symbols: RIF/USDT (binance), RIF/USDT (bitget)
+2025-02-28 20:23:05,068 - INFO - binance-bitget - Ticker binance: 0.0488
+2025-02-28 20:23:05,070 - INFO - binance-bitget - Ticker bitget: 0.0488
+2025-02-28 20:23:05,072 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:23:05,072 - INFO - binance-bitget - Checking arbitrage for symbols: NOT/USDT (binance), NOT/USDT (bitget)
+2025-02-28 20:23:05,124 - INFO - bitget-bitstamp - Ticker bitget: 1.0002
+2025-02-28 20:23:05,127 - INFO - bitget-bitstamp - Ticker bitstamp: 1.00026
+2025-02-28 20:23:05,129 - INFO - bitget-bitstamp - Ticker profits (-0.34%, -0.36%) below threshold, skipping order book check.
+2025-02-28 20:23:05,131 - INFO - bitget-bitstamp - Checking arbitrage for symbols: PEPE/EUR (bitget), PEPE/EUR (bitstamp)
+2025-02-28 20:23:05,197 - INFO - binance-bitstamp - Ticker binance: 2.0488
+2025-02-28 20:23:05,198 - INFO - binance-bitstamp - Ticker bitstamp: 2.04754
+2025-02-28 20:23:05,199 - INFO - binance-bitstamp - Ticker profits (-0.41%, -0.29%) below threshold, skipping order book check.
+2025-02-28 20:23:05,199 - INFO - binance-bitstamp - Checking arbitrage for symbols: ADA/EUR (binance), ADA/EUR (bitstamp)
+2025-02-28 20:23:05,707 - INFO - binance-bitget - Ticker binance: 0.00284
+2025-02-28 20:23:05,708 - INFO - binance-bitget - Ticker bitget: 0.002842
+2025-02-28 20:23:05,709 - INFO - binance-bitget - Ticker profits (-0.13%, -0.27%) below threshold, skipping order book check.
+2025-02-28 20:23:05,710 - INFO - binance-bitget - Checking arbitrage for symbols: ZRX/USDT (binance), ZRX/USDT (bitget)
+2025-02-28 20:23:06,467 - INFO - binance-bitget - Ticker binance: 0.2949
+2025-02-28 20:23:06,470 - INFO - binance-bitget - Ticker bitget: 0.2951
+2025-02-28 20:23:06,472 - INFO - binance-bitget - Ticker profits (-0.13%, -0.27%) below threshold, skipping order book check.
+2025-02-28 20:23:06,473 - INFO - binance-bitget - Checking arbitrage for symbols: AUDIO/USDT (binance), AUDIO/USDT (bitget)
+2025-02-28 20:23:06,538 - INFO - binance-bitstamp - Ticker binance: 0.6061
+2025-02-28 20:23:06,541 - INFO - binance-bitstamp - Ticker bitstamp: 0.60638
+2025-02-28 20:23:06,542 - INFO - binance-bitstamp - Ticker profits (-0.30%, -0.40%) below threshold, skipping order book check.
+2025-02-28 20:23:06,543 - INFO - binance-bitstamp - Checking arbitrage for symbols: XRP/USDT (binance), XRP/USDT (bitstamp)
+2025-02-28 20:23:06,613 - INFO - bitget-bitstamp - Ticker bitget: 7.58e-06
+2025-02-28 20:23:06,615 - INFO - bitget-bitstamp - Ticker bitstamp: 7.67e-06
+2025-02-28 20:23:06,617 - INFO - bitget-bitstamp - Ticker profits (0.83%, -1.52%) below threshold, skipping order book check.
+2025-02-28 20:23:06,620 - INFO - bitget-bitstamp - Checking arbitrage for symbols: USDT/EUR (bitget), USDT/EUR (bitstamp)
+2025-02-28 20:23:07,109 - INFO - bitget-bitstamp - Checking arbitrage for symbols: ONDO/EUR (bitget), ONDO/EUR (bitstamp)
+2025-02-28 20:23:07,112 - INFO - binance-kucoin - Checking arbitrage for symbols: LUNC/USDT (binance), LUNC/USDT (kucoin)
+2025-02-28 20:23:07,114 - INFO - kucoin-bitget - Checking arbitrage for symbols: ENA/USDT (kucoin), ENA/USDT (bitget)
+2025-02-28 20:23:07,116 - INFO - binance-bitget - Checking arbitrage for symbols: XRP/USDT (binance), XRP/USDT (bitget)
+2025-02-28 20:23:07,118 - INFO - binance-bitstamp - Checking arbitrage for symbols: DOT/EUR (binance), DOT/EUR (bitstamp)
+2025-02-28 20:23:07,763 - INFO - bitget-bitstamp - Checking arbitrage for symbols: DOGE/EUR (bitget), DOGE/EUR (bitstamp)
+2025-02-28 20:23:07,764 - INFO - binance-kucoin - Checking arbitrage for symbols: LSK/USDT (binance), LSK/USDT (kucoin)
+2025-02-28 20:23:07,764 - INFO - kucoin-bitget - Checking arbitrage for symbols: VTHO/USDT (kucoin), VTHO/USDT (bitget)
+2025-02-28 20:23:07,765 - INFO - binance-bitget - Checking arbitrage for symbols: CHESS/USDT (binance), CHESS/USDT (bitget)
+2025-02-28 20:23:07,766 - INFO - binance-bitstamp - Checking arbitrage for symbols: BOME/EUR (binance), BOME/EUR (bitstamp)
+2025-02-28 20:23:07,767 - INFO - kucoin-bitstamp - Arbitrage strategy cancelled.
+2025-02-28 20:23:08,226 - INFO - binance-bitstamp - Ticker binance: 0.001849
+2025-02-28 20:23:08,228 - INFO - binance-bitstamp - Ticker bitstamp: 0.001691
+2025-02-28 20:23:08,322 - INFO - bitget-bitstamp - Ticker bitget: 0.19212
+2025-02-28 20:23:08,324 - INFO - bitget-bitstamp - Ticker bitstamp: 0.19255
+2025-02-28 20:23:08,326 - INFO - bitget-bitstamp - Ticker profits (-0.13%, -0.57%) below threshold, skipping order book check.
+2025-02-28 20:23:08,462 - INFO - binance-bitget - Ticker binance: 0.1101
+2025-02-28 20:23:08,463 - INFO - binance-bitget - Ticker bitget: 0.1101
+2025-02-28 20:23:08,463 - INFO - binance-bitget - Ticker profits (-0.20%, -0.20%) below threshold, skipping order book check.
+2025-02-28 20:23:08,464 - INFO - binance-bitget - Checking arbitrage for symbols: STX/USDT (binance), STX/USDT (bitget)
+2025-02-28 20:23:08,520 - INFO - bitget-bitstamp - Arbitrage strategy cancelled.
+2025-02-28 20:23:08,521 - INFO - binance-kucoin - Checking arbitrage for symbols: RDNT/USDT (binance), RDNT/USDT (kucoin)
+2025-02-28 20:23:08,523 - INFO - kucoin-bitget - Checking arbitrage for symbols: XCN/USDT (kucoin), XCN/USDT (bitget)
+2025-02-28 20:23:08,524 - INFO - binance-bitget - Checking arbitrage for symbols: ROSE/USDT (binance), ROSE/USDT (bitget)
+2025-02-28 20:23:08,525 - INFO - binance-bitstamp - Arbitrage strategy cancelled.
+2025-02-28 20:23:09,132 - INFO - binance-kucoin - Checking arbitrage for symbols: KMD/USDT (binance), KMD/USDT (kucoin)
+2025-02-28 20:23:09,134 - INFO - kucoin-bitget - Checking arbitrage for symbols: JAILSTOOL/USDT (kucoin), JAILSTOOL/USDT (bitget)
+2025-02-28 20:23:09,136 - INFO - binance-bitget - Checking arbitrage for symbols: RPL/USDT (binance), RPL/USDT (bitget)
+2025-02-28 20:23:09,309 - INFO - binance-kucoin - Checking arbitrage for symbols: LPT/USDT (binance), LPT/USDT (kucoin)
+2025-02-28 20:23:09,310 - INFO - kucoin-bitget - Checking arbitrage for symbols: BTT/USDT (kucoin), BTT/USDT (bitget)
+2025-02-28 20:23:09,312 - INFO - binance-bitget - Checking arbitrage for symbols: BICO/USDT (binance), BICO/USDT (bitget)
+2025-02-28 20:23:09,448 - INFO - binance-kucoin - Checking arbitrage for symbols: AUCTION/USDT (binance), AUCTION/USDT (kucoin)
+2025-02-28 20:23:09,450 - INFO - kucoin-bitget - Checking arbitrage for symbols: XLM/USDT (kucoin), XLM/USDT (bitget)
+2025-02-28 20:23:09,451 - INFO - binance-bitget - Checking arbitrage for symbols: STG/USDT (binance), STG/USDT (bitget)
+2025-02-28 20:23:09,581 - INFO - binance-kucoin - Checking arbitrage for symbols: STRK/USDT (binance), STRK/USDT (kucoin)
+2025-02-28 20:23:09,585 - INFO - kucoin-bitget - Checking arbitrage for symbols: PHA/USDT (kucoin), PHA/USDT (bitget)
+2025-02-28 20:23:09,588 - INFO - binance-bitget - Checking arbitrage for symbols: 1INCH/USDT (binance), 1INCH/USDT (bitget)
+2025-02-28 20:23:10,143 - INFO - binance-kucoin - Checking arbitrage for symbols: DIA/USDT (binance), DIA/USDT (kucoin)
+2025-02-28 20:23:10,146 - INFO - kucoin-bitget - Checking arbitrage for symbols: USDT/EUR (kucoin), USDT/EUR (bitget)
+2025-02-28 20:23:10,150 - INFO - binance-bitget - Checking arbitrage for symbols: KAVA/USDT (binance), KAVA/USDT (bitget)
+2025-02-28 20:23:10,358 - INFO - binance-kucoin - Checking arbitrage for symbols: TRX/USDT (binance), TRX/USDT (kucoin)
+2025-02-28 20:23:10,361 - INFO - kucoin-bitget - Checking arbitrage for symbols: CHILLGUY/USDT (kucoin), CHILLGUY/USDT (bitget)
+2025-02-28 20:23:10,365 - INFO - binance-bitget - Checking arbitrage for symbols: MANTA/USDT (binance), MANTA/USDT (bitget)
+2025-02-28 20:23:10,503 - INFO - binance-kucoin - Checking arbitrage for symbols: AIXBT/USDT (binance), AIXBT/USDT (kucoin)
+2025-02-28 20:23:10,504 - INFO - kucoin-bitget - Checking arbitrage for symbols: PEPE/USDT (kucoin), PEPE/USDT (bitget)
+2025-02-28 20:23:10,505 - INFO - binance-bitget - Checking arbitrage for symbols: SHELL/USDT (binance), SHELL/USDT (bitget)
+2025-02-28 20:23:11,301 - INFO - binance-kucoin - Checking arbitrage for symbols: LTO/USDT (binance), LTO/USDT (kucoin)
+2025-02-28 20:23:11,303 - INFO - kucoin-bitget - Checking arbitrage for symbols: SEAM/USDT (kucoin), SEAM/USDT (bitget)
+2025-02-28 20:23:11,305 - INFO - binance-bitget - Checking arbitrage for symbols: CGPT/USDT (binance), CGPT/USDT (bitget)
+2025-02-28 20:23:11,490 - INFO - binance-kucoin - Checking arbitrage for symbols: MBL/USDT (binance), MBL/USDT (kucoin)
+2025-02-28 20:23:11,492 - INFO - kucoin-bitget - Checking arbitrage for symbols: TSUGT/USDT (kucoin), TSUGT/USDT (bitget)
+2025-02-28 20:23:11,493 - INFO - binance-bitget - Checking arbitrage for symbols: MAV/USDT (binance), MAV/USDT (bitget)
+2025-02-28 20:23:11,678 - INFO - binance-kucoin - Checking arbitrage for symbols: SCR/USDT (binance), SCR/USDT (kucoin)
+2025-02-28 20:23:11,679 - INFO - kucoin-bitget - Checking arbitrage for symbols: SKL/USDT (kucoin), SKL/USDT (bitget)
+2025-02-28 20:23:11,680 - INFO - binance-bitget - Checking arbitrage for symbols: ZK/USDT (binance), ZK/USDT (bitget)
+2025-02-28 20:23:12,038 - INFO - binance-kucoin - Checking arbitrage for symbols: DODO/USDT (binance), DODO/USDT (kucoin)
+2025-02-28 20:23:12,040 - INFO - kucoin-bitget - Checking arbitrage for symbols: LUCE/USDT (kucoin), LUCE/USDT (bitget)
+2025-02-28 20:23:12,041 - INFO - binance-bitget - Checking arbitrage for symbols: QKC/USDT (binance), QKC/USDT (bitget)
+2025-02-28 20:23:12,685 - INFO - binance-kucoin - Checking arbitrage for symbols: ELF/USDT (binance), ELF/USDT (kucoin)
+2025-02-28 20:23:12,687 - INFO - kucoin-bitget - Checking arbitrage for symbols: MASK/USDT (kucoin), MASK/USDT (bitget)
+2025-02-28 20:23:12,689 - INFO - binance-bitget - Checking arbitrage for symbols: SNT/USDT (binance), SNT/USDT (bitget)
+2025-02-28 20:23:14,057 - INFO - binance-kucoin - Checking arbitrage for symbols: HBAR/USDT (binance), HBAR/USDT (kucoin)
+2025-02-28 20:23:14,059 - INFO - kucoin-bitget - Checking arbitrage for symbols: X/USDT (kucoin), X/USDT (bitget)
+2025-02-28 20:23:14,060 - INFO - binance-bitget - Checking arbitrage for symbols: W/USDT (binance), W/USDT (bitget)
+2025-02-28 20:23:16,476 - INFO - binance-kucoin - Checking arbitrage for symbols: ALGO/USDT (binance), ALGO/USDT (kucoin)
+2025-02-28 20:23:16,477 - INFO - kucoin-bitget - Checking arbitrage for symbols: OSMO/USDT (kucoin), OSMO/USDT (bitget)
+2025-02-28 20:23:16,479 - INFO - binance-bitget - Checking arbitrage for symbols: ONE/USDT (binance), ONE/USDT (bitget)
+2025-02-28 20:23:21,186 - INFO - binance-kucoin - Checking arbitrage for symbols: MANA/USDT (binance), MANA/USDT (kucoin)
+2025-02-28 20:23:21,188 - INFO - kucoin-bitget - Checking arbitrage for symbols: PYR/USDT (kucoin), PYR/USDT (bitget)
+2025-02-28 20:23:21,190 - INFO - binance-bitget - Checking arbitrage for symbols: ALPACA/USDT (binance), ALPACA/USDT (bitget)
+2025-02-28 20:23:30,188 - INFO - binance-kucoin - Checking arbitrage for symbols: ENA/USDT (binance), ENA/USDT (kucoin)
+2025-02-28 20:23:30,191 - INFO - kucoin-bitget - Checking arbitrage for symbols: ASTR/USDT (kucoin), ASTR/USDT (bitget)
+2025-02-28 20:23:30,193 - INFO - binance-bitget - Checking arbitrage for symbols: BSW/USDT (binance), BSW/USDT (bitget)
