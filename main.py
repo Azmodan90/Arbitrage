@@ -14,26 +14,27 @@ def setup_logging():
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    # Usuwamy istniejące handlery, żeby nie dublować logów
     if logger.hasHandlers():
         logger.handlers.clear()
     file_handler = logging.FileHandler('app.log', mode='a', encoding='utf-8')
-    file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
-async def shutdown(signal_name, loop):
-    logging.info(f"\nReceived signal {signal_name}. Shutting down...")
+async def shutdown(loop):
+    logging.info("Shutdown initiated, cancelling tasks...")
     tasks = [t for t in asyncio.all_tasks(loop) if t is not asyncio.current_task(loop)]
-    logging.info("Cancelling tasks: %s", tasks)
-    for task in tasks:
-        task.cancel()
-    await asyncio.gather(*tasks, return_exceptions=True)
-    await asyncio.sleep(0.2)
-    await loop.shutdown_asyncgens()
+    if tasks:
+        for task in tasks:
+            task.cancel()
+        await asyncio.gather(*tasks, return_exceptions=True)
+    logging.info("All tasks cancelled. Shutting down loop.")
+    loop.stop()
 
-def setup_signal_handlers(loop):
+def install_signal_handlers(loop):
+    # Rejestrujemy sygnały do wywołania shutdown
     for sig in (signal.SIGINT, signal.SIGTERM):
-        loop.add_signal_handler(sig, lambda s=sig: asyncio.create_task(shutdown(s.name, loop)))
+        loop.add_signal_handler(sig, lambda: asyncio.create_task(shutdown(loop)))
 
 async def run_arbitrage_for_all_pairs(exchanges):
     try:
@@ -67,16 +68,18 @@ async def run_arbitrage_for_all_pairs(exchanges):
 async def main():
     setup_logging()
     logging.info("Starting arbitrage program")
-    
+
+    # Inicjalizacja giełd
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
-    
-    setup_signal_handlers(asyncio.get_running_loop())
-    
+
+    loop = asyncio.get_running_loop()
+    install_signal_handlers(loop)
+
     while True:
         print("\nChoose an option:")
         print("1. Create common assets list")
@@ -93,11 +96,16 @@ async def main():
         else:
             logging.error("Invalid choice!")
             print("Invalid choice!")
-    
+
+    # Zamykamy instancje giełd
     await exchanges["binance"].close()
     await exchanges["kucoin"].close()
     await exchanges["bitget"].close()
     await exchanges["bitstamp"].close()
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        # Jeśli z jakiegoś powodu pozostały niewyłapane KeyboardInterrupty, wychodzimy
+        logging.info("Program interrupted by user (KeyboardInterrupt).")
