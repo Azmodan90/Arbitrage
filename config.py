@@ -43,7 +43,7 @@ CONFIG = {
     # Ustawienia arbitrażu:
    
     # Minimalny procentowy zysk, przy którym okazja jest rozpatrywana
-    "ARBITRAGE_THRESHOLD": 5,
+    "ARBITRAGE_THRESHOLD": 2,
     
     # Jeśli procentowy zysk przekracza tę wartość (np. 100%), okazja jest traktowana jako absurdalna i ignorowana
     "ABSURD_THRESHOLD": 100,
