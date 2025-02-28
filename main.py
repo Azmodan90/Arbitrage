@@ -8,6 +8,8 @@ from exchanges.bitget import BitgetExchange
 from exchanges.bitstamp import BitstampExchange
 from arbitrage import PairArbitrageStrategy
 import common_assets
+import json
+
 
 logger = logging.getLogger("app")
 
