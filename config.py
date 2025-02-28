@@ -38,7 +38,7 @@ CONFIG = {
     },
     
     # Liczba pierwszych poziomów order booka, z których sumujemy wolumen
-    "LIQUIDITY_LEVELS_TO_CHECK": 5,
+    "LIQUIDITY_LEVELS_TO_CHECK": 10,
     
     # Ustawienia arbitrażu:
    
@@ -49,5 +49,5 @@ CONFIG = {
     "ABSURD_THRESHOLD": 100,
     
     # liczba poziomów order booka do agregacji
-    "ORDERBOOK_LEVELS": 5
+    "ORDERBOOK_LEVELS": 10
 }

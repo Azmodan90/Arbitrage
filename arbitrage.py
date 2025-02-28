@@ -2,16 +2,30 @@ import asyncio
 import logging
 import json
 import time
+from logging.handlers import RotatingFileHandler
 from config import CONFIG
 from functools import partial
 from utils import calculate_effective_buy, calculate_effective_sell
 from tabulate import tabulate
 
-# Ustawienie loggerów (możesz korzystać z RotatingFileHandler – tutaj wykorzystujemy już skonfigurowane loggery)
-arbitrage_logger = logging.getLogger("arbitrage")
-opp_logger = logging.getLogger("arbitrage_opportunities")
-unprofitable_logger = logging.getLogger("unprofitable_opportunities")
-absurd_logger = logging.getLogger("absurd_opportunities")
+# Ustawienie oddzielnych loggerów przy użyciu RotatingFileHandler
+def setup_logger(logger_name, log_file, level=logging.INFO):
+    logger = logging.getLogger(logger_name)
+    if not logger.handlers:
+        handler = RotatingFileHandler(log_file, maxBytes=10 * 1024 * 1024, backupCount=5, encoding="utf-8")
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(level)
+        logger.propagate = False
+    return logger
+
+# Oddzielne logi:
+app_logger = setup_logger("app", "app.log")
+arbitrage_logger = setup_logger("arbitrage", "arbitrage.log")
+opp_logger = setup_logger("arbitrage_opportunities", "arbitrage_opportunities.log")
+unprofitable_logger = setup_logger("unprofitable_opportunities", "unprofitable_opportunities.log")
+absurd_logger = setup_logger("absurd_opportunities", "absurd_opportunities.log")
 
 def normalize_symbol(symbol):
     if ":" in symbol:
@@ -49,7 +63,7 @@ async def fetch_ticker_rate_limited_async(exchange, symbol):
     limiter.last_request = time.monotonic()
     return ticker
 
-# Funkcja pomocnicza do obliczenia ważonej średniej ceny przy realizacji zamówienia
+# Funkcja pomocnicza do obliczenia ważonej średniej ceny (wielopoziomowe przetwarzanie order booka)
 def compute_weighted_average_price(levels, desired_qty):
     total_cost = 0
     total_qty = 0
@@ -68,7 +82,7 @@ def compute_weighted_average_price(levels, desired_qty):
     weighted_price = total_cost / total_qty
     return weighted_price, breakdown
 
-# Pobieranie order booka – z opcjonalnym ograniczeniem liczby poziomów (ustalanym w CONFIG)
+# Pobieranie order booka z ograniczeniem liczby poziomów – ustawianym w CONFIG (ORDERBOOK_LEVELS)
 async def get_liquidity_info_async(exchange, symbol, levels_limit=None):
     try:
         order_book = await exchange.fetch_order_book(symbol)
@@ -82,7 +96,7 @@ async def get_liquidity_info_async(exchange, symbol, levels_limit=None):
         arbitrage_logger.error(f"Error fetching order book for {symbol} on {exchange.__class__.__name__}: {e}")
         return None
 
-# Funkcja konwersji inwestycji z USDT na jednostki quote (np. BTC)
+# Funkcja konwersji inwestycji – przelicza INVESTMENT_AMOUNT (w USDT) na jednostki quote (np. BTC)
 async def convert_investment(quote, investment_usdt, conversion_exchange):
     pair = f"{quote}/USDT"
     ticker = await conversion_exchange.fetch_ticker(pair)
@@ -95,13 +109,13 @@ class PairArbitrageStrategy:
     def __init__(self, exchange1, exchange2, assets, pair_name=""):
         self.exchange1 = exchange1
         self.exchange2 = exchange2
-        # assets – słownik z pełnymi symbolami, np. { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
+        # assets – słownik z pełnymi symbolami, np.
+        # { "ABC/USDT": {"binance": "ABC/USDT", "bitget": "ABC/USDT"} }
         self.assets = assets
         self.pair_name = pair_name  # np. "binance-bitget"
 
     async def check_opportunity(self, asset):
         names = self.pair_name.split("-")
-        # Jeśli asset nie jest słownikiem, zakładamy, że zawiera już '/' – inaczej pomijamy.
         if not isinstance(asset, dict):
             if "/" in asset:
                 asset = {names[0]: asset, names[1]: asset}
@@ -153,7 +167,7 @@ class PairArbitrageStrategy:
         effective_sell_ex1 = tickers[names[0]] * (1 - fee1 / 100)
         profit2 = ((effective_sell_ex1 - effective_buy_ex2) / effective_buy_ex2) * 100
 
-        # Jeśli żaden z profity tickerowych nie spełnia progu, przerywamy dalsze obliczenia
+        # Jeżeli żaden z ticker profitów nie spełnia progu, dalsze obliczenia nie są wykonywane
         if profit1 < CONFIG["ARBITRAGE_THRESHOLD"] and profit2 < CONFIG["ARBITRAGE_THRESHOLD"]:
             arbitrage_logger.info(f"{self.pair_name} - Ticker profit below threshold for asset {asset} (profit1: {profit1:.2f}%, profit2: {profit2:.2f}%), skipping further calculations.")
             return
@@ -173,40 +187,49 @@ class PairArbitrageStrategy:
             await conversion_exchange.close()
             arbitrage_logger.info(f"Converted investment for quote {quote}: {base_investment} USDT -> {investment:.6f} {quote}")
 
-        # Pobieramy wielopoziomowe dane order booka (ograniczone do LEVELS_LIMIT poziomów, ustawionych w config)
+        # Pobieramy wielopoziomowe dane order booka – tylko określona liczba poziomów (ORDERBOOK_LEVELS)
         levels_limit = CONFIG.get("ORDERBOOK_LEVELS", 5)
         liq_ex1 = await get_liquidity_info_async(self.exchange1, symbol_ex1, levels_limit)
         liq_ex2 = await get_liquidity_info_async(self.exchange2, symbol_ex2, levels_limit)
         liquidity_info = ""
         if liq_ex1 and 'asks' in liq_ex1:
-            liquidity_info += f"{names[0]} Asks: {liq_ex1['asks']}; "
+            liquidity_info += f"{names[0]} Levels: {liq_ex1['asks']}; "
         if liq_ex2 and 'bids' in liq_ex2:
-            liquidity_info += f"{names[1]} Bids: {liq_ex2['bids']}"
-        
+            liquidity_info += f"{names[1]} Levels: {liq_ex2['bids']}"
+
         profit_liq = None
         invested_amount = None
         actual_qty = None
         extra_info = ""
-        # Jeśli mamy dane z order booków, wykonujemy obliczenia wielopoziomowe
+        # Wielopoziomowe obliczenia: najpierw sprawdzamy, czy poziom pierwszy wystarcza. Jeśli nie – liczymy ważoną średnią z kolejnych poziomów.
         if liq_ex1 and liq_ex2:
-            # Dla strony kupna: wykorzystujemy listę asks
             asks = liq_ex1.get('asks', [])
-            # Dla strony sprzedaży: wykorzystujemy listę bids
             bids = liq_ex2.get('bids', [])
-            # Ustalamy "desired_qty" na podstawie inwestycji i efektywnej ceny kupna z tickerów (używając efektywnej ceny z poziomu 1)
-            effective_order_buy_level1 = liq_ex1['asks'][0][0] * (1 + fee1 / 100)
-            desired_qty = investment / effective_order_buy_level1
-            # Obliczamy weighted average price dla kupna (dla wymaganej ilości)
-            weighted_buy_price, breakdown_buy = compute_weighted_average_price(asks, desired_qty)
-            weighted_sell_price, breakdown_sell = compute_weighted_average_price(bids, desired_qty)
+            # Poziom 1
+            level1_buy_qty = asks[0][1] if asks else 0
+            desired_qty = investment / (asks[0][0] * (1 + fee1 / 100)) if asks else 0
+            if level1_buy_qty >= desired_qty:
+                # Używamy ceny z poziomu 1
+                weighted_buy_price = asks[0][0]
+                breakdown_buy = [(asks[0][0], desired_qty)]
+            else:
+                weighted_buy_price, breakdown_buy = compute_weighted_average_price(asks, desired_qty)
+            
+            # Analogicznie dla sprzedaży
+            level1_sell_qty = bids[0][1] if bids else 0
+            if level1_sell_qty >= desired_qty:
+                weighted_sell_price = bids[0][0]
+                breakdown_sell = [(bids[0][0], desired_qty)]
+            else:
+                weighted_sell_price, breakdown_sell = compute_weighted_average_price(bids, desired_qty)
+            
             if weighted_buy_price is None or weighted_sell_price is None:
                 extra_info = "Insufficient liquidity levels."
             else:
                 effective_order_buy = weighted_buy_price * (1 + fee1 / 100)
                 effective_order_sell = weighted_sell_price * (1 - fee2 / 100)
-                # Przyjmujemy, że faktycznie można zrealizować całe zamówienie, jeśli łączny wolumen jest wystarczający:
-                total_buy_vol = sum([vol for _, vol in asks])
-                total_sell_vol = sum([vol for _, vol in bids])
+                total_buy_vol = sum(vol for _, vol in asks)
+                total_sell_vol = sum(vol for _, vol in bids)
                 actual_qty = min(desired_qty, total_buy_vol, total_sell_vol)
                 potential_proceeds = actual_qty * effective_order_sell
                 invested_amount = actual_qty * effective_order_buy
