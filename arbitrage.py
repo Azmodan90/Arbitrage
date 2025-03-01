@@ -70,7 +70,7 @@ async def get_liquidity_info_async(exchange, symbol):
     try:
         order_book = await exchange.fetch_order_book(symbol)
         # Tutaj można ograniczyć listę do pierwszych N poziomów (N definiujemy w CONFIG, np. CONFIG["ORDERBOOK_LEVELS"])
-        levels = CONFIG.get("ORDERBOOK_LEVELS", 5)
+        levels = CONFIG.get("ORDERBOOK_LEVELS")
         bids = order_book.get('bids', [])[:levels]
         asks = order_book.get('asks', [])[:levels]
         top_bid = bids[0] if bids else [None, None]
@@ -172,7 +172,7 @@ class PairArbitrageStrategy:
             arbitrage_logger.error(f"{self.pair_name} - Error determining quote from symbol {symbol_ex1}: {e}")
             return
 
-        base_investment = CONFIG.get("INVESTMENT_AMOUNT", 100)
+        base_investment = CONFIG.get("INVESTMENT_AMOUNT")
         investment = base_investment
         if CONFIG.get("CONVERT_INVESTMENT", {}).get(quote, False):
             from exchanges.binance import BinanceExchange  # używamy Binance jako exchange konwersyjny

@@ -14,7 +14,6 @@ def setup_logging():
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    # Usuwamy istniejące handlery, żeby nie dublować logów
     if logger.hasHandlers():
         logger.handlers.clear()
     file_handler = logging.FileHandler('app.log', mode='a', encoding='utf-8')
@@ -32,7 +31,6 @@ async def shutdown(loop):
     loop.stop()
 
 def install_signal_handlers(loop):
-    # Rejestrujemy sygnały do wywołania shutdown
     for sig in (signal.SIGINT, signal.SIGTERM):
         loop.add_signal_handler(sig, lambda: asyncio.create_task(shutdown(loop)))
 
@@ -68,26 +66,26 @@ async def run_arbitrage_for_all_pairs(exchanges):
 async def main():
     setup_logging()
     logging.info("Starting arbitrage program")
-
-    # Inicjalizacja giełd
+    
     exchanges = {
         "binance": BinanceExchange(),
         "kucoin": KucoinExchange(),
         "bitget": BitgetExchange(),
         "bitstamp": BitstampExchange()
     }
-
+    
     loop = asyncio.get_running_loop()
     install_signal_handlers(loop)
-
+    
     while True:
         print("\nChoose an option:")
         print("1. Create common assets list")
         print("2. Start arbitrage (using assets from common_assets.json)")
         print("3. Exit")
-        choice = input("Your choice (1/2/3): ").strip()
+        # Używamy asyncio.to_thread, aby asynchronicznie pobrać input
+        choice = await asyncio.to_thread(input, "Your choice (1/2/3): ")
         if choice == "1":
-            await common_assets.main()
+            await common_assets.main()  # common_assets.main() musi być asynchroniczne
         elif choice == "2":
             await run_arbitrage_for_all_pairs(exchanges)
         elif choice == "3":
@@ -96,7 +94,7 @@ async def main():
         else:
             logging.error("Invalid choice!")
             print("Invalid choice!")
-
+    
     # Zamykamy instancje giełd
     await exchanges["binance"].close()
     await exchanges["kucoin"].close()
@@ -107,5 +105,4 @@ if __name__ == '__main__':
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
-        # Jeśli z jakiegoś powodu pozostały niewyłapane KeyboardInterrupty, wychodzimy
-        logging.info("Program interrupted by user (KeyboardInterrupt).")
+        logging.info("Program interrupted by user.")
